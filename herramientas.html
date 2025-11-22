@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es" data-layout="center" data-theme="earth" data-modules="hero,features,transparency,testimonials,cta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+       <!-- Favicon -->
+    <link rel="icon" href="imagenes/preview.png" type="image/png">
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+    <!-- HEADER CON MENÚ HAMBURGUESA -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+
+            <div class="flex items-center space-x-2">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span class="text-2xl font-bold">Código Millonario</span>
+            </div>
+
+            <!-- Menú escritorio -->
+            <div class="hidden md:flex items-center space-x-8">
+    <a href="./index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+    <a href="./educacionfinanciera.html" class="text-stone-600 hover:text-green-600 transition-colors">Educación Financiera</a>
+    <a href="./herramientas.html" class="text-stone-900 font-semibold">Herramientas</a>
+    <a href="./opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+    <a href="./contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+</div>
+
+
+            </div>
+
+            <!-- Botón hamburguesa -->
+            <button class="md:hidden navbar-toggler" id="menu-toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div id="mobileMenu">
+            <div class="menu-header">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span class="text-2xl font-bold">Código Millonario</span>
+            </div>
+
+            <a href="./index.html">Inicio</a>
+            <a href="educacionfinanciera.html">Educación Financiera</a>
+            <a href="herramientas.html">Herramientas</a>
+            <a href="opiniones.html">Opiniones</a>
+            <a href="contacto.html">Contacto</a>
+
+            <div class="menu-footer">
+                <a href="contacto.html">Más información</a>
+            </div>
+        </div>
+
+        <style>
+          .navbar-toggler {
+            border: none;
+            background: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 1100;
+          }
+          .navbar-toggler-icon {
+            width: 25px;
+            height: 2px;
+            background: #000;
+            display: block;
+            position: relative;
+            transition: all 0.3s ease;
+          }
+          .navbar-toggler-icon::before,
+          .navbar-toggler-icon::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background: #000;
+            left: 0;
+            transition: all 0.3s ease;
+          }
+          .navbar-toggler-icon::before { top: -7px; }
+          .navbar-toggler-icon::after { top: 7px; }
+          .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+          .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+          .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+          #mobileMenu {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 1000;
+            padding-top: 0;
+            overflow-y: auto;
+          }
+          #mobileMenu.show { display: block; }
+
+          #mobileMenu .menu-header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1rem;
+            border-bottom: 1px solid #ddd;
+            z-index: 1050;
+          }
+          #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
+          #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
+
+          #mobileMenu a {
+            display: block;
+            font-size: 1.25rem;
+            padding: 1rem 1rem;
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+          }
+          #mobileMenu a:hover { color: #22c55e; }
+
+          #mobileMenu .menu-footer {
+            padding: 2rem;
+            text-align: center;
+          }
+          #mobileMenu .menu-footer a {
+            display: inline-block;
+            background: #3b82f6;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+          }
+          #mobileMenu .menu-footer a:hover { background: #2563eb; }
+
+          @media(min-width: 768px) { #mobileMenu { display: none !important; } }
+        </style>
+
+        <script>
+          lucide.createIcons();
+          const menuToggle = document.getElementById('menu-toggle');
+          const mobileMenu = document.getElementById('mobileMenu');
+          menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('show');
+          });
+          document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+              menuToggle.classList.remove('active');
+              mobileMenu.classList.remove('show');
+            });
+          });
+        </script>
+    </header>
+
+    <!-- HERO ESPECIAL -->
+    <section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+            Herramientas <span class="text-green-600">Financieras</span>
+        </h1>
+        <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
+            Accede a calculadoras, recursos y sistemas diseñados para ayudarte a tomar decisiones inteligentes con tu dinero.
+        </p>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- INTERÉS COMPUESTO -->
+            <div class="bg-stone-50 p-8 rounded-2xl shadow">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                    <i data-lucide="calculator" class="w-8 h-8 text-green-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-stone-900 mb-4">Calculadora de Interés Compuesto</h3>
+                <p class="text-stone-600 mb-4">Descubre cuánto crecerá tu dinero con aportes mensuales o inversión inicial.</p>
+                <a href="interescompuesto.html">
+                    <button class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors">Abrir</button>
+                </a>
+            </div>
+
+            <!-- PRESUPUESTO -->
+            <div class="bg-stone-50 p-8 rounded-2xl shadow">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                    <i data-lucide="pie-chart" class="w-8 h-8 text-blue-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-stone-900 mb-4">Planificador de Presupuesto</h3>
+                <p class="text-stone-600 mb-4">Organiza tus gastos, detecta fugas de dinero y mejora tu control financiero.</p>
+                <a href="presupuesto.html">
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Abrir</button>
+                </a>
+            </div>
+
+            <!-- SIMULADOR DE INVERSIÓN -->
+            <div class="bg-stone-50 p-8 rounded-2xl shadow">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                    <i data-lucide="trending-up" class="w-8 h-8 text-purple-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-stone-900 mb-4">Simulador de Inversión</h3>
+                <p class="text-stone-600 mb-4">Simula rendimientos de acciones, ETFs, criptos y más.</p>
+                <a href="simulador.html">
+                    <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">Abrir</button>
+                </a>
+            </div>
+
+            <!-- NUEVO: LIBERTAD FINANCIERA -->
+            <div class="bg-stone-50 p-8 rounded-2xl shadow">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                    <i data-lucide="goal" class="w-8 h-8 text-green-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-stone-900 mb-4">Calculadora de Libertad Financiera</h3>
+                <p class="text-stone-600 mb-4">Descubre cuánto necesitas invertir para vivir sin depender de un empleo.</p>
+                <a href="libertadfinanciera.html">
+                    <button class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors">Abrir</button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-12"></section>
+
+    <!-- FOOTER -->
+    <footer class="bg-green-600 py-6 text-center text-white mt-20">
+        <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

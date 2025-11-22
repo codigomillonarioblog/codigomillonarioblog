@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Millonario - Finanzas Personales y Libertad Financiera</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/preview.png" type="image/png">
+
+    <!-- SEO -->
+    <meta name="description" content="Aprende finanzas personales, inversión inteligente y hábitos para construir libertad financiera.">
+    <meta name="keywords" content="finanzas personales, inversión, libertad financiera, ahorro, ingresos pasivos">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://codigomillonario.com/">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      /* ======== BOTÓN HAMBURGUESA ======== */
+      .navbar-toggler {
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 1100;
+      }
+      .navbar-toggler-icon {
+        width: 25px;
+        height: 2px;
+        background: #000;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      .navbar-toggler-icon::before,
+      .navbar-toggler-icon::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: #000;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+      .navbar-toggler-icon::before { top: -7px; }
+      .navbar-toggler-icon::after { top: 7px; }
+      .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+      .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+      .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+      /* ======== MENU RESPONSIVO ======== */
+      #mobileMenu {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 1000;
+        padding-top: 0;
+        overflow-y: auto;
+      }
+      #mobileMenu.show { display: block; }
+
+      #mobileMenu .menu-header {
+        position: sticky;
+        top: 0;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 1rem; 
+        border-bottom: 1px solid #ddd;
+        z-index: 1050;
+      }
+
+      #mobileMenu a {
+        display: block;
+        font-size: 1.25rem;
+        padding: 1rem 1rem;
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #eee;
+      }
+      #mobileMenu a:hover { color: #22c55e; }
+
+      #mobileMenu .menu-footer {
+        padding: 2rem;
+        text-align: center;
+      }
+      #mobileMenu .menu-footer a {
+        display: inline-block;
+        background: #3b82f6;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      #mobileMenu .menu-footer a:hover { background: #2563eb; }
+
+      @media(min-width: 768px) {
+        #mobileMenu { display: none !important; }
+      }
+
+      /* ========= SACUDÓN ÚNICO AL ENTRAR ========= */
+      @keyframes shake3 {
+        0%, 100% { transform: translateX(0); }
+        10% { transform: translateX(-4px); }
+        20% { transform: translateX(4px); }
+        30% { transform: translateX(-4px); }
+        40% { transform: translateX(4px); }
+        50% { transform: translateX(-4px); }
+        60% { transform: translateX(0); }
+      }
+
+      .shake-button {
+        animation: shake3 0.8s ease-in-out;
+      }
+
+    </style>
+</head>
+
+<body class="bg-stone-50 text-stone-900">
+
+<!-- ===================== HEADER ===================== -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+
+        <div class="flex items-center space-x-2">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold">Código Millonario</span>
+        </div>
+        
+<div class="hidden md:flex items-center space-x-8">
+    <a href="./index.html" class="text-stone-900 font-semibold">Inicio</a>
+    <a href="./educacionfinanciera.html" class="text-stone-600 hover:text-green-600 transition-colors">Educación Financiera</a>
+    <a href="./herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
+    <a href="./opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+    <a href="./contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+</div>
+
+
+        <button class="md:hidden navbar-toggler" id="menu-toggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <!-- MENU MÓVIL -->
+    <div id="mobileMenu">
+        <div class="menu-header">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold">Código Millonario</span>
+        </div>
+
+        <a href="./index.html">Inicio</a>
+        <a href="./educacionfinanciera.html">Educación Financiera</a>
+        <a href="./herramientas.html">Herramientas</a>
+        <a href="./opiniones.html">Opiniones</a>
+        <a href="./contacto.html">Contacto</a>
+
+        <div class="menu-footer">
+            <a href="./contacto.html">Más información</a>
+        </div>
+    </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<main>
+<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+
+        <div class="space-y-8">
+            <div class="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span>Nueva Guía Financiera</span>
+            </div>
+
+            <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
+                Aprende a <span class="text-green-600">Multiplicar tu Dinero</span> desde Cero
+            </h1>
+
+            <p class="text-xl text-stone-600 leading-relaxed">
+                Estrategias simples y prácticas para ahorrar, invertir, eliminar deudas y construir estabilidad financiera.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+
+                <!-- 🔥 DESCARGA DIRECTA -->
+                <a href="https://drive.google.com/uc?export=download&id=1kbH7-4NTOAAH2hloky_GE_aj53fir5fv"
+                   target="_blank"
+                   class="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 shadow-lg text-center shake-button">
+                    Descargar Guía Gratis
+                </a>
+
+                <a href="./tienda.html" class="border-2 border-stone-300 text-stone-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-green-600 hover:text-green-600 flex items-center justify-center">
+                    Ver Cursos
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-8 text-sm text-stone-600">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="trending-up" class="w-5 h-5 text-green-600"></i>
+                    <span>Consejos probados</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-green-600"></i>
+                    <span>Contenido verificado</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img src="./imagenes/image.png" alt="Finanzas Personales" class="rounded-3xl shadow-xl w-full h-auto">
+        </div>
+
+    </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-green-600 py-6 text-center text-white mt-20">
+    <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+</footer>
+
+<!-- ===================== SCRIPT MENU ===================== -->
+<script>
+  lucide.createIcons();
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobileMenu.classList.toggle('show');
+  });
+
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      mobileMenu.classList.remove('show');
+    });
+  });
+</script>
+
+</body>
+</html>
