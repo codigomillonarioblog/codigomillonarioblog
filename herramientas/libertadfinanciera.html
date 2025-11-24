@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Libertad Financiera - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+     <!-- Favicon -->
+    <link rel="icon" href="../assets/img/ahorro-inteligente.png" type="image/png">
+
+    <style>
+        @keyframes modalShow {
+            0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* MENÚ HAMBURGUESA */
+        .navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
+        .navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before, .navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before { top: -7px; }
+        .navbar-toggler-icon::after { top: 7px; }
+        .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+        .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+        .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+        #mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; padding-top: 0; overflow-y: auto; }
+        #mobileMenu.show { display: block; }
+
+        #mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
+        #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
+        #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
+
+        #mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; text-align: left; }
+        #mobileMenu a:hover { color: #22c55e; }
+
+        #mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+        #mobileMenu .menu-footer a { display: inline-block; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+        #mobileMenu .menu-footer a:hover { background: #2563eb; }
+
+        @media(min-width: 768px) { #mobileMenu { display: none !important; } }
+    </style>
+</head>
+
+<body class="bg-stone-50 text-stone-900">
+
+    <!-- HEADER CON MENÚ HAMBURGUESA -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span class="text-2xl font-bold text-stone-900">Código Millonario</span>
+            </div>
+
+             <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+                <a href="../educacionfinanciera.html" class="text-stone-600 hover:text-green-600 transition-colors">Educación Financiera</a>
+                <a href="../herramientas.html" class="text-stone-900 font-semibold">Herramientas</a>
+                <a href="../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+                <a href="../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+            </div>
+
+            <button class="md:hidden navbar-toggler" id="menu-toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div id="mobileMenu">
+            <div class="menu-header">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span>Código Millonario</span>
+            </div>
+
+            <a href="../index.html">Inicio</a>
+            <a href="../educacionfinanciera.html">Educación Financiera</a>
+            <a href="../herramientas.html">Herramientas</a>
+            <a href="../opiniones.html">Opiniones</a>
+            <a href="../contacto.html">Contacto</a>
+
+            <div class="menu-footer">
+                <a href="../contacto.html">Más información</a>
+            </div>
+        </div>
+
+        <script>
+            lucide.createIcons();
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('show');
+            });
+
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('show');
+                });
+            });
+        </script>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+            Calculadora de <span class="text-green-600">Libertad Financiera</span>
+        </h1>
+        <p class="max-w-2xl mx-auto mt-6 text-lg text-stone-700">
+            Descubre cuánto dinero necesitas invertir para vivir de tus rendimientos sin volver a preocuparte por el dinero.
+        </p>
+    </section>
+
+    <!-- CONTENIDO -->
+    <main>
+        <section class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10">
+
+            <form id="calcForm" class="space-y-6">
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Tus gastos mensuales (COP)</label>
+                    <input type="text" id="gastos" class="inputNumber w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Rendimiento anual estimado (%)</label>
+                    <input type="text" id="rendimiento" class="inputPercent w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
+                </div>
+
+                <button type="button" onclick="calcularLibertad()"
+                    class="w-full bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition-colors">
+                    Calcular
+                </button>
+
+                <button type="button" onclick="reiniciarCalc()"
+                    class="w-full bg-stone-200 text-stone-700 py-3 rounded-xl text-lg font-semibold hover:bg-stone-300 transition-colors">
+                    Reiniciar Calculadora
+                </button>
+
+            </form>
+
+        </section>
+    </main>
+
+    <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-[999]">
+        <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl animate-[modalShow_.3s_ease]">
+
+            <h3 class="text-3xl font-bold text-center mb-6">Resultado</h3>
+
+            <p class="text-lg text-stone-700">
+                Gastos anuales: <span id="m_gastosAnuales" class="font-semibold"></span>
+            </p>
+
+            <p class="text-lg text-stone-700 mt-2">
+                Rendimiento anual estimado: <span id="m_rendimiento" class="font-semibold"></span>
+            </p>
+
+            <p class="text-xl font-bold text-green-600 text-center mt-6">Capital necesario:</p>
+
+            <p class="text-4xl text-green-700 font-extrabold text-center mt-2" id="m_capital"></p>
+
+            <button onclick="cerrarModal()" 
+                class="w-full mt-8 bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition">
+                Cerrar
+            </button>
+
+        </div>
+    </div>
+
+    <section class="py-12"></section>
+
+    <footer class="bg-green-600 py-6 text-center text-white">
+        <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function cleanNumberFormat(value) {
+            return parseFloat(value.replace(/\./g, '').replace(/,/g, '').replace(/%/g, '')) || 0;
+        }
+
+        document.querySelectorAll('.inputNumber').forEach(input => {
+            input.addEventListener('input', function() {
+                let raw = this.value.replace(/\D/g, '');
+                this.value = raw === '' ? '' : parseInt(raw).toLocaleString('es-CO');
+            });
+        });
+
+        document.querySelectorAll('.inputPercent').forEach(input => {
+            input.addEventListener('input', function() {
+                let raw = this.value.replace(/\D/g, '');
+                this.value = raw === '' ? '' : raw + '%';
+            });
+        });
+
+        function calcularLibertad() {
+            const gastos = cleanNumberFormat(document.getElementById("gastos").value);
+            const rendimiento = cleanNumberFormat(document.getElementById("rendimiento").value) / 100;
+
+            if (!gastos || !rendimiento) {
+                alert("Por favor llena todos los campos.");
+                return;
+            }
+
+            const gastosAnuales = gastos * 12;
+            const capitalNecesario = gastosAnuales / rendimiento;
+
+            document.getElementById("m_gastosAnuales").textContent = gastosAnuales.toLocaleString("es-CO") + " COP";
+            document.getElementById("m_rendimiento").textContent = (rendimiento * 100).toFixed(2) + "%";
+            document.getElementById("m_capital").textContent = capitalNecesario.toLocaleString("es-CO") + " COP";
+
+            document.getElementById("modal").classList.remove("hidden");
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal").classList.add("hidden");
+        }
+
+        function reiniciarCalc() {
+            document.getElementById("gastos").value = "";
+            document.getElementById("rendimiento").value = "";
+            cerrarModal();
+        }
+    </script>
+
+</body>
+</html>

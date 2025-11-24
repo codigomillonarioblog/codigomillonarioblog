@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pon a Prueba tus Conocimientos Financieros y Mejora tus Decisiones - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="../assets/img/ahorro-inteligente.png" type="image/png">
+
+    <style>
+        @keyframes modalShow {
+            0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* MENÚ HAMBURGUESA */
+        .navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
+        .navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before, .navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before { top: -7px; }
+        .navbar-toggler-icon::after { top: 7px; }
+        .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+        .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+        .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+        #mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; overflow-y: auto; }
+        #mobileMenu.show { display: block; }
+        #mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
+        #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
+        #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
+        #mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; }
+        #mobileMenu a:hover { color: #22c55e; }
+        #mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+        #mobileMenu .menu-footer a { display: inline-block; background: #22c55e; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+        #mobileMenu .menu-footer a:hover { background: #16a34a; }
+        @media(min-width: 768px) { #mobileMenu { display: none !important; } }
+    </style>
+</head>
+
+<body class="bg-stone-50 text-stone-900">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span class="text-2xl font-bold">Código Millonario</span>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+                <a href="../educacionfinanciera.html" class="text-stone-600 hover:text-green-600 transition-colors">Educación Financiera</a>
+                <a href="../herramientas.html" class="text-stone-900 font-semibold">Herramientas</a>
+                <a href="../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+                <a href="../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+            </div>
+
+            <button class="md:hidden navbar-toggler" id="menu-toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div id="mobileMenu">
+            <div class="menu-header">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span>Código Millonario</span>
+            </div>
+
+            <a href="../index.html">Inicio</a>
+            <a href="../educacionfinanciera.html">Educación Financiera</a>
+            <a href="../herramientas.html">Herramientas</a>
+            <a href="../opiniones.html">Opiniones</a>
+            <a href="../contacto.html">Contacto</a>
+
+            <div class="menu-footer">
+                <a href="../contacto.html">Más información</a>
+            </div>
+        </div>
+
+        <script>
+            lucide.createIcons();
+
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('show');
+            });
+
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('show');
+                });
+            });
+        </script>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+          Pon a Prueba tus <span class="text-green-600">Conocimientos Financieros y </span> Mejora tus Decisiones
+        </h1>
+        <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
+            Evalúa tu nivel de conocimiento financiero y tomar decisiones inteligentes que impulsen tu economía personal
+        </p>
+        <p class="text-stone-500 mt-4">📅 Actualizado: Noviembre 2025</p>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="py-12 max-w-4xl mx-auto">
+        <div id="quizContainer" class="bg-white p-8 rounded-3xl shadow-lg relative">
+            <span id="questionIndicator" class="absolute top-4 left-4 font-semibold text-stone-700">Pregunta 1/10</span>
+            <div id="quizQuestions" class="mb-6 mt-8"></div>
+
+            <div class="flex justify-between items-center mb-4">
+                <button id="nextQuestionBtn" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 transition">Siguiente</button>
+                <button id="submitQuiz" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition" disabled>Ver resultados</button>
+            </div>
+
+            <button id="newQuiz" class="w-full mt-4 bg-yellow-500 text-white py-3 rounded-full shadow hover:bg-yellow-600 transition">Nuevo examen</button>
+        </div>
+    </section>
+
+    <!-- Modal Resultados -->
+    <div id="quizModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full relative shadow-lg">
+            <button id="closeModal" class="absolute top-4 right-4 text-stone-700 font-bold text-xl hover:text-red-600">&times;</button>
+            <h2 class="text-2xl font-semibold text-green-600 mb-4">Resultados del Examen</h2>
+            <p id="quizResult" class="text-stone-700 leading-relaxed text-center text-lg"></p>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            { q: "¿Qué es un presupuesto?", a: ["Plan de gastos", "Ingresos futuros", "Dinero ahorrado", "Inversión en acciones"], correct: 0 },
+            { q: "¿Qué porcentaje se recomienda ahorrar del ingreso mensual?", a: ["5%", "10%", "20%", "50%"], correct: 2 },
+            { q: "¿Cuál es una buena estrategia para salir de deudas?", a: ["Ignorarlas", "Pagar la más pequeña primero", "Pedir más crédito", "Comprar más a crédito"], correct: 1 },
+            { q: "¿Qué es un fondo de emergencia?", a: ["Dinero para inversión", "Dinero para vacaciones", "Dinero guardado para imprevistos", "Dinero para regalos"], correct: 2 },
+            { q: "¿Cuál es un activo financiero?", a: ["Casa propia", "Crédito de tarjeta", "Acción en bolsa", "Deuda con banco"], correct: 2 },
+            { q: "¿Qué es interés compuesto?", a: ["Interés solo sobre capital", "Interés sobre capital + interés previo", "Interés fijo mensual", "Interés de banco personal"], correct: 1 },
+            { q: "¿Qué es liquidez?", a: ["Facilidad de convertir en efectivo", "Valor de inversión", "Tiempo para pagar deuda", "Número de cuentas bancarias"], correct: 0 },
+            { q: "¿Qué significa diversificación?", a: ["Poner todo el dinero en un activo", "Repartir inversiones en varios activos", "Ahorrar solo en efectivo", "Invertir solo en acciones"], correct: 1 },
+            { q: "¿Qué es una meta financiera SMART?", a: ["Específica, Medible, Alcanzable, Relevante, Temporal", "Simple, Moderna, Asequible, Realista, Temporal", "Segura, Mínima, Aceptable, Realista, Técnica", "Sin riesgo, Medible, Alta, Rentable, Temporal"], correct: 0 },
+            { q: "¿Qué se recomienda antes de invertir?", a: ["Pagar deudas y tener fondo de emergencia", "Invertir todo el dinero", "Gastar en bienes de lujo", "Pedir crédito adicional"], correct: 0 },
+        ];
+
+        const quizQuestionsEl = document.getElementById("quizQuestions");
+        const indicator = document.getElementById("questionIndicator");
+        const nextQuestionBtn = document.getElementById("nextQuestionBtn");
+        const submitBtn = document.getElementById("submitQuiz");
+        const newQuizBtn = document.getElementById("newQuiz");
+        const quizModal = document.getElementById("quizModal");
+        const closeModal = document.getElementById("closeModal");
+        const resultContainer = document.getElementById("quizResult");
+
+        let quizQuestions = [];
+        let currentIndex = 0;
+        let userAnswers = [];
+
+        function getRandomQuestions(num) {
+            const shuffled = [...questions].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, Math.min(num, shuffled.length));
+        }
+
+        function renderQuestion() {
+            const q = quizQuestions[currentIndex];
+            quizQuestionsEl.innerHTML = `
+                <p class="font-semibold mb-4">${q.q}</p>
+                ${q.a.map((option, idx) => `
+                    <label class="flex items-center gap-2 cursor-pointer py-2 px-4 rounded hover:bg-green-50 transition">
+                        <input type="radio" name="q${currentIndex}" value="${idx}" class="accent-green-600" ${userAnswers[currentIndex] == idx ? 'checked' : ''}>
+                        <span>${option}</span>
+                    </label>
+                `).join('')}
+            `;
+
+            indicator.textContent = `Pregunta ${currentIndex + 1}/${quizQuestions.length}`;
+
+            nextQuestionBtn.style.display = currentIndex < quizQuestions.length - 1 ? "inline-block" : "none";
+            submitBtn.style.display = currentIndex === quizQuestions.length - 1 ? "inline-block" : "none";
+            submitBtn.disabled = currentIndex === quizQuestions.length - 1 && userAnswers[currentIndex] == null;
+
+            document.querySelectorAll(`input[name="q${currentIndex}"]`).forEach(radio => {
+                radio.onchange = () => {
+                    userAnswers[currentIndex] = parseInt(radio.value);
+                    if (currentIndex === quizQuestions.length - 1) submitBtn.disabled = false;
+                };
+            });
+        }
+
+        function calculateScore() {
+            return quizQuestions.reduce((score, q, i) => score + (userAnswers[i] === q.correct ? 1 : 0), 0);
+        }
+
+        function showResults() {
+            const score = calculateScore();
+            resultContainer.textContent = `Obtuviste ${score} de ${quizQuestions.length} respuestas correctas`;
+            quizModal.classList.remove("hidden");
+        }
+
+        function initQuiz() {
+            quizQuestions = getRandomQuestions(10);
+            currentIndex = 0;
+            userAnswers = new Array(quizQuestions.length);
+            submitBtn.disabled = true;
+            renderQuestion();
+        }
+
+        nextQuestionBtn.addEventListener("click", () => {
+            if (userAnswers[currentIndex] == null) {
+                alert("Selecciona una respuesta antes de continuar.");
+                return;
+            }
+            currentIndex++;
+            renderQuestion();
+        });
+
+        submitBtn.addEventListener("click", showResults);
+        newQuizBtn.addEventListener("click", initQuiz);
+
+        closeModal.addEventListener("click", () => quizModal.classList.add("hidden"));
+        quizModal.addEventListener("click", e => { if (e.target === quizModal) quizModal.classList.add("hidden"); });
+
+        initQuiz();
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="bg-green-600 py-6 text-center text-white mt-20">
+        <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

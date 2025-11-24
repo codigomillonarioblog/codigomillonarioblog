@@ -6,8 +6,9 @@
     <title>Contacto - Código Millonario</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+
        <!-- Favicon -->
-    <link rel="icon" href="imagenes/preview.png" type="image/png">
+    <link rel="icon" href="./assets/img/ahorro-inteligente.png" type="image/png">
 </head>
 
 <body class="bg-stone-50 text-stone-900">
@@ -223,24 +224,111 @@
     </section>
 </main>
 
-    
-
-
-
-
-
-
-
-
 
     <!-- ESPACIO FINAL -->
     <section class="py-12"></section>
 
 
-    <!-- FOOTER -->
+
+
+    <!-- ===================== FOOTER ===================== -->
 <footer class="bg-green-600 py-6 text-center text-white mt-20">
     <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+    <p class="mt-2 space-x-4">
+        <a href="#" id="openAbout" class="underline hover:text-green-200 cursor-pointer">Sobre el Blog</a>
+        <a href="#" id="openPrivacy" class="underline hover:text-green-200 cursor-pointer">Políticas de Privacidad</a>
+        <a href="#" id="openContact" class="underline hover:text-green-200 cursor-pointer">Contacto</a>
+    </p>
 </footer>
+
+<!-- ===================== MODAL SOBRE EL BLOG ===================== -->
+<div id="aboutModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 max-w-3xl mx-4 relative overflow-auto max-h-[90vh]">
+        <button id="closeAbout" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4">Sobre el Blog</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Bienvenido a Código Millonario, un espacio pensado para quienes buscan tomar control real de sus finanzas y crecer económicamente de manera inteligente. 
+            Aquí encontrarás estrategias claras y prácticas para ahorrar, invertir y gestionar tu dinero con seguridad, aplicables a tu vida diaria y a tus decisiones financieras más importantes.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Cada artículo y recurso está diseñado para ayudarte a identificar oportunidades, evitar errores comunes y generar resultados tangibles en tu economía personal, profesional o empresarial. 
+            Con consejos basados en experiencia y conocimientos sólidos, podrás transformar la información en acciones efectivas que potencien tu libertad financiera y tu tranquilidad económica.
+        </p>
+    </div>
+</div>
+
+<!-- ===================== MODAL DE POLÍTICAS ===================== -->
+<div id="privacyModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 max-w-3xl mx-4 relative overflow-auto max-h-[90vh]">
+        <button id="closePrivacy" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4">Políticas de Privacidad</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            En este espacio, nos comprometemos a proteger tu privacidad y la seguridad de tu información personal. Toda la información que puedas proporcionar, como tu nombre, correo electrónico o cualquier otro dato, será utilizada únicamente para los fines establecidos y nunca será compartida con terceros sin tu consentimiento explícito.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Recopilamos información únicamente para mejorar la experiencia de quienes acceden a este espacio, incluyendo estadísticas sobre visitas y el uso de recursos disponibles. No utilizamos técnicas invasivas y no vendemos tus datos bajo ninguna circunstancia.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Este sitio puede contener enlaces a otros recursos o sitios externos. No nos hacemos responsables de las políticas de privacidad de esos sitios, por lo que te recomendamos revisar sus términos antes de proporcionar información personal.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este espacio, aceptas la recolección y el uso de tus datos según lo descrito en estas políticas. Nos reservamos el derecho de actualizar esta política en cualquier momento, y te animamos a revisarla periódicamente para estar al tanto de cualquier cambio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Si tienes preguntas o deseas más información sobre cómo manejamos tu información, puedes contactarnos directamente.
+        </p>
+    </div>
+</div>
+
+<!-- ===================== MODAL CONTACTO ===================== -->
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 max-w-3xl mx-4 relative overflow-auto max-h-[90vh]">
+        <button id="closeContact" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4">Contacto</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Puedes comunicarte con nosotros a través de:<br>
+            Email: codigomillonarioblog@gmail.com
+        </p>
+    </div>
+</div>
+
+<!-- ===================== SCRIPT ===================== -->
+<script>
+    // Función general para abrir/cerrar modales
+    function setupModal(openId, closeId, modalId) {
+        const openBtn = document.getElementById(openId);
+        const closeBtn = document.getElementById(closeId);
+        const modal = document.getElementById(modalId);
+
+        openBtn.addEventListener('click', e => {
+            e.preventDefault();
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+
+        modal.addEventListener('click', e => {
+            if(e.target === modal){
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        });
+    }
+
+    // Configurar todos los modales
+    setupModal('openPrivacy', 'closePrivacy', 'privacyModal');
+    setupModal('openAbout', 'closeAbout', 'aboutModal');
+    setupModal('openContact', 'closeContact', 'contactModal');
+</script>
+
+
+
+
+
 
     <script>
         lucide.createIcons();
