@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En qué no invertir en 2025: señales de alerta para evitar estafas digitales - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+      <!-- Favicon -->
+    <link rel="icon" href="../../../assets/img/ahorro-inteligente.png" type="image/png">
+</head>
+
+
+    <!-- ESTILOS MENÚ HAMBURGUESA -->
+    <style>
+        .navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
+        .navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before, .navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before { top: -7px; }
+        .navbar-toggler-icon::after { top: 7px; }
+        .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+        .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+        .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+        #mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; padding-top: 0; overflow-y: auto; }
+        #mobileMenu.show { display: block; }
+
+        #mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
+        #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
+        #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
+
+        #mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; text-align: left; }
+        #mobileMenu a:hover { color: #22c55e; }
+
+        #mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+        #mobileMenu .menu-footer a { display: inline-block; background: #22c55e; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+        #mobileMenu .menu-footer a:hover { background: #16a34a; }
+
+        @media(min-width: 768px) { #mobileMenu { display: none !important; } }
+    </style>
+</head>
+
+<body class="bg-stone-50 text-stone-900">
+
+    <!-- HEADER CON MENÚ HAMBURGUESA -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span class="text-2xl font-bold">Código Millonario</span>
+            </div>
+
+            <!-- Menú escritorio -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+                <a href="../../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
+                <a href="../../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
+                <a href="../../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+                <a href="../../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+            </div>
+
+            <!-- Botón hamburguesa -->
+            <button class="md:hidden navbar-toggler" id="menu-toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div id="mobileMenu">
+            <div class="menu-header">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span class="text-2xl font-bold">Código Millonario</span>
+            </div>
+
+            <a href="../../../index.html">Inicio</a>
+            <a href="../../../educacionfinanciera.html">Educación Financiera</a>
+            <a href="../../../herramientas.html">Herramientas</a>
+            <a href="../../../opiniones.html">Opiniones</a>
+            <a href="../../../contacto.html">Contacto</a>
+
+            <div class="menu-footer">
+                <a href="../../../contacto.html">Más información</a>
+            </div>
+        </div>
+
+        <script>
+            lucide.createIcons();
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('show');
+            });
+
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('show');
+                });
+            });
+        </script>
+    </header>
+
+ 
+
+<!-- HERO -->
+    <section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+            En qué no invertir en 2025:<span class="text-green-600">  señales de alerta para evitar </span> estafas digitales
+        </h1>       
+        <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
+            Descubre qué inversiones evitar en 2025 y aprende a reconocer las señales de estafas digitales.
+        </p>
+        <p class="text-stone-500 mt-4">📅 Actualizado: Noviembre 2025</p>
+    </section>
+
+
+    <!-- CONTENIDO DEL ARTÍCULO -->
+    <main class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<!-- ALERTAS DE INVERSIONES 2025 -->
+<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
+    <h2 class="text-3xl font-semibold text-green-700 mb-4">⚠️ Riesgos y señales de alerta en inversiones digitales</h2>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        El crecimiento de las inversiones online en Colombia ha traído muchas oportunidades… pero también ha multiplicado las estafas. En 2025, cualquier persona con un celular puede invertir, y eso hace que los estafadores creen plataformas falsas, rendimientos imposibles y sistemas diseñados para robar datos o dinero.
+    </p>
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Aquí tienes una guía clara para identificar en qué <strong>NO debes invertir</strong> y cómo detectar señales de alerta antes de caer en una trampa digital.
+    </p>
+</section>
+
+<!-- PLATAFORMAS SIN REGULACIÓN -->
+<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
+    <h2 class="text-3xl font-semibold text-green-700 mb-4">💸Plataformas sin regulación en Colombia o sin soporte legal</h2>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Antes de invertir un peso en cualquier plataforma digital, siempre revisa lo siguiente:
+    </p>
+
+    <ul class="list-disc pl-6 text-stone-700 mb-4">
+        <li>Si está autorizada por la Superintendencia Financiera.</li>
+        <li>Si aparece en listas de advertencia oficiales.</li>
+        <li>Si tiene políticas claras de retiro, privacidad y tratamiento de datos.</li>
+    </ul>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Si la empresa no aparece en ninguna entidad reguladora o se niega a mostrar información legal, es una clara señal de alerta.
+    </p>
+</section>
+
+
+
+<!-- INVERSIONES SOSPECHOSAS -->
+<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
+    <h2 class="text-3xl font-semibold text-green-700 mb-4">📉Inversiones que prometen altas ganancias sin riesgo</h2>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Esta es la regla de oro: si una inversión promete mucho dinero sin ningún riesgo, probablemente sea una estafa.
+    </p>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Ejemplos comunes en 2025:
+    </p>
+
+    <ul class="list-disc pl-6 text-stone-700 mb-4">
+        <li>“Gana 20% mensual sin hacer nada”.</li>
+        <li>“Duplicamos tu dinero en 30 días”.</li>
+        <li>“Rentabilidad garantizada”.</li>
+    </ul>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        En inversiones reales, no existe la garantía total, y los rendimientos altos siempre vienen acompañados de volatilidad.
+    </p>
+</section>
+
+
+<!-- ESQUEMAS PIRAMIDALES -->
+<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
+    <h2 class="text-3xl font-semibold text-green-700 mb-4">👥Empresas que exigen invitar personas para “ganar más”</h2>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Si tus ganancias dependen de:
+    </p>
+
+    <ul class="list-disc pl-6 text-stone-700 mb-4">
+        <li>Referidos</li>
+        <li>Crear equipos</li>
+        <li>Subir de nivel trayendo gente</li>
+    </ul>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Entonces no se trata de una inversión legítima: es un esquema piramidal.
+    </p>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        En 2025, muchas estafas disfrazan este modelo bajo nombres como “marketing digital”, “network trading” o “ecosistema financiero”, pero funcionan igual que una pirámide, mucho cuidado.
+    </p>
+</section>
+
+
+<!-- APPS Y PÁGINAS SOSPECHOSAS -->
+<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
+    <h2 class="text-3xl font-semibold text-green-700 mb-4">🕵️Apps o páginas web que desaparecen, cambian de nombre o no tienen historial</h2>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Otro patrón muy frecuente de plataformas poco confiables incluye:
+    </p>
+
+ <ul class="list-disc pl-6 text-stone-700 mb-4">
+    <li>No tienen redes sociales reales.</li>
+    <li>No muestran a los fundadores.</li>
+    <li>No tienen años de historial.</li>
+    <li>Cambian de nombre cada año.</li>
+    <li>No existen en Google más allá de su propia página.</li>
+    <li>Tienen menos de un año y ya prometen hacerte rico.</li>
+    <li>URL de dudosa procedencia que no es conocida o asociada con ninguna empresa real.</li>
+    <li>Casi siempre, la persona que te contacta busca convencerte.</li>
+    <li>No te explican reglas, normas, políticas, riesgos o tu seguridad como inversor. Solo te muestran las grandes cifras que puedes ganar y, sí o sí, debes seguir lo que te ordenen.</li>
+    <li>Te mostrarán cifras extremadamente accesibles para generar confianza y que escales a una mayor inversión. Al invertir, se caerá el sistema o te pedirán invertir más para retirar todas tus ganancias, así, hasta que termines en la calle.</li>
+</ul>
+  <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Si no puedes verificar la trayectoria, la empresa probablemente no sea confiable. Si estás en apuros económicos, lo aconsejable es no invertir: la urgencia puede cegarte y no dejarte ver las trampas o malos procedimientos. Tu cerebro solo verá, dinero fácil y rápido, sin hacer mayor esfuerzo.
+    </p>
+</section>
+
+
+<!-- PROYECTOS CRIPTO SOSPECHOSOS -->
+<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
+    <h2 class="text-3xl font-semibold text-green-700 mb-4">📊Proyectos cripto sin utilidad real o tokens inventados</h2>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        En 2025 sigue fuerte la tendencia de:
+    </p>
+
+    <ul class="list-disc pl-6 text-stone-700 mb-4">
+        <li>“Nuevas monedas milagro”</li>
+        <li>“Tokens exclusivos”</li>
+        <li>“Proyectos que apenas están por lanzarse”</li>
+    </ul>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Si no tienen un uso claro, comunidad real o respaldo tecnológico, lo más probable es que desaparezcan en semanas.
+    </p>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Las criptos serias existen, pero los tokens inventados para “multiplicar tu plata” son riesgosos o directamente estafas.
+    </p>
+</section>
+
+<!-- CURSOS DE INVERSIÓN SOSPECHOSOS -->
+<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
+    <h2 class="text-3xl font-semibold text-green-700 mb-4">🚫Cursos de inversión que ofrecen señales garantizadas</h2>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Muchos grupos de “trading” venden:
+    </p>
+
+    <ul class="list-disc pl-6 text-stone-700 mb-4">
+        <li>Señales infalibles</li>
+        <li>Bots que nunca pierden</li>
+        <li>Rentabilidad segura</li>
+        <li>Acceso VIP con ganancias garantizadas</li>
+    </ul>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Ningún trader profesional garantiza resultados. Si te prometen ganancias fijas o te presionan para entrar rápido, evita ese servicio.
+    </p>
+</section>
+
+<!-- PLATAFORMAS CON BLOQUEO DE Retiros -->
+<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
+    <h2 class="text-3xl font-semibold text-green-700 mb-4">🔒Plataformas que bloquean retiros o piden más dinero para liberarlos</h2>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Una señal crítica de estafa es cuando:
+    </p>
+
+    <ul class="list-disc pl-6 text-stone-700 mb-4">
+        <li>No te dejan retirar.</li>
+        <li>Te dicen que necesitas pagar “impuestos” para sacar tu dinero.</li>
+        <li>Te exigen una recarga mínima para liberar tus ganancias.</li>
+        <li>Cambian reglas cada vez que intentas retirar.</li>
+    </ul>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Si no puedes retirar fácil desde el inicio, es un fraude disfrazado de inversión.
+    </p>
+</section>
+
+
+
+
+
+          <!-- INTRODUCCIÓN -->
+<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
+    <h2 class="text-3xl font-semibold text-green-700 mb-4">🧠Cierre útil        </h2>
+
+    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Proteger tu dinero este año es tan importante como hacerlo crecer. Siempre investiga, verifica, compara y duda de todo lo que suene demasiado perfecto o beneficioso solo para ti, como si fuera un regalo. Tu mejor defensa es la información y la prudencia.
+    </p>
+</section>
+
+      </div>
+    </main>
+
+
+
+
+
+
+
+    <!-- BOTÓN FLOTANTE DE COMPARTIR -->
+<div class="fixed bottom-6 right-6 z-50">
+
+    <!-- Botones desplegables -->
+    <div id="shareButtons" class="flex flex-col items-center gap-3 mb-4 opacity-0 pointer-events-none transition-all duration-300">
+        
+        <!-- Facebook -->
+        <a id="facebookShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a id="twitterShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-900 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2zm-2.377 17.5h1.64L8.29 4.39H6.57l9.297 15.11z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a id="linkedinShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a id="whatsappShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
+            </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a id="tiktokShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-800 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 48 48" fill="currentColor">
+                <path d="M41.5 14.1c-3.3-.1-6.5-1.7-8.6-4.4-1.1-1.3-1.8-3-2.2-4.7h-.1v-.4c-.1-.6-.1-1.1-.1-1.7H24v30.2c0 2-.8 3.9-2.2 5.3-1.4 1.4-3.3 2.2-5.3 2.2-4.1 0-7.5-3.4-7.5-7.5S12.4 25.7 16.5 25.7c1.1 0 2.2.3 3.2.8V18c-1-.1-2-.2-3-.2-8.3 0-15 6.7-15 15s6.7 15 15 15c4 0 7.8-1.6 10.6-4.4 2.8-2.8 4.4-6.6 4.4-10.6V18.2c2.5 1.8 5.5 2.8 8.6 2.9v-7z"/>
+            </svg>
+        </a>
+
+        <!-- Copiar enlace -->
+        <button id="copyLink"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-500 hover:bg-gray-600 text-white shadow-lg transition hover:-translate-y-1"
+            title="Copiar enlace">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.414-1.414m7.778-7.778a4 4 0 015.656 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.536-1.536"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- BOTÓN FLOTANTE PRINCIPAL -->
+    <button id="toggleShare"
+        class="w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center shadow-xl transition-all hover:-translate-y-1">
+        <i data-lucide="share-2" class="w-6 h-6"></i>
+    </button>
+
+</div>
+
+<script>
+    const toggleShare = document.getElementById("toggleShare");
+    const shareButtons = document.getElementById("shareButtons");
+    const copyLink = document.getElementById("copyLink");
+
+    const facebookShare = document.getElementById("facebookShare");
+    const twitterShare = document.getElementById("twitterShare");
+    const linkedinShare = document.getElementById("linkedinShare");
+    const whatsappShare = document.getElementById("whatsappShare");
+    const tiktokShare = document.getElementById("tiktokShare");
+
+    let open = false;
+
+    // Función para abrir/cerrar botones
+    function toggleButtons(show) {
+        open = show;
+        if (open) {
+            shareButtons.classList.remove("opacity-0", "pointer-events-none");
+            shareButtons.classList.add("opacity-100");
+        } else {
+            shareButtons.classList.add("opacity-0", "pointer-events-none");
+            shareButtons.classList.remove("opacity-100");
+        }
+    }
+
+    toggleShare.onclick = (e) => {
+        toggleButtons(!open);
+        e.stopPropagation(); // Evita que el clic se propague
+    };
+
+    // Asignar URLs dinámicamente según la página actual
+    const currentURL = encodeURIComponent(window.location.href);
+    facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+    twitterShare.href = `https://twitter.com/intent/tweet?url=${currentURL}`;
+    linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}`;
+    whatsappShare.href = `https://api.whatsapp.com/send?text=${currentURL}`;
+    tiktokShare.href = `https://www.tiktok.com/share?url=${currentURL}`;
+
+    // Copiar enlace dinámico
+    copyLink.onclick = (e) => {
+        navigator.clipboard.writeText(window.location.href)
+            .then(() => alert("Enlace copiado al portapapeles"))
+            .catch(() => alert("No se pudo copiar el enlace"));
+        e.stopPropagation(); // Evita cerrar menú
+    };
+
+    // Evitar cerrar al hacer clic dentro del contenedor de botones
+    shareButtons.addEventListener("click", (e) => e.stopPropagation());
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener("click", () => {
+        if (open) toggleButtons(false);
+    });
+
+    // Cerrar al hacer scroll
+    window.addEventListener("scroll", () => {
+        if (open) toggleButtons(false);
+    });
+
+    lucide.createIcons();
+</script>
+
+
+
+
+
+
+
+
+    <!-- ===================== FOOTER ===================== -->
+<footer class="bg-green-600 py-6 text-center text-white mt-20">
+    <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+</footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
