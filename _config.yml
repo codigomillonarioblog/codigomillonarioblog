@@ -1,13 +1,1 @@
-title: "Codigo Millonario"
-markdown: kramdown
-collections:
-  paginas:
-    output: true
-    permalink: /:title/
-defaults:
-  -
-    scope:
-      path: ""
-      type: "paginas"
-    values:
-      layout: "default"
+permalink: /:path/:title/
