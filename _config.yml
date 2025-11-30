@@ -1,3 +1,13 @@
-title: Codigo Millonario
-description: Blog
-permalink: /:title/
+title: "Codigo Millonario"
+markdown: kramdown
+collections:
+  paginas:
+    output: true
+    permalink: /:title/
+defaults:
+  -
+    scope:
+      path: ""
+      type: "paginas"
+    values:
+      layout: "default"
