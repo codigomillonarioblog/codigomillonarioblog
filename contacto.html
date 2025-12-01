@@ -180,14 +180,17 @@
 <main style="font-family: 'Lora', serif;">
     <section class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10">
 
-        <!-- AQUI SÍ ESTÁ EL FORMULARIO CON method="POST" -->
-        <form method="POST" action="https://formsubmit.co/codigomillonarioblog@gmail.com" class="space-y-6">
+        <!-- FORMULARIO LISTO Y FUNCIONAL -->
+        <form method="POST" action="https://formsubmit.co/el/pijeze" class="space-y-6">
 
-            <!-- FormSubmit: evita captcha -->
+            <!-- Desactivar captcha -->
             <input type="hidden" name="_captcha" value="false">
 
-            <!-- Mensaje de redirección -->
+            <!-- Redirección después del envío -->
             <input type="hidden" name="_next" value="https://codigomillonario.blog/gracias.html">
+
+            <!-- Correo donde recibirás el mensaje (opcional pero recomendado) -->
+            <input type="hidden" name="_cc" value="codigomillonarioblog@gmail.com">
 
             <div>
                 <label class="block text-sm font-medium mb-2">Nombre</label>
@@ -219,6 +222,7 @@
 
     </section>
 </main>
+
 
 
 
