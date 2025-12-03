@@ -1,20 +1,47 @@
 <!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deudas Bajo Control | Guía para Ordenar tus Finanzas – Código Millonario</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Deudas Bajo Control | Guía para Ordenar tus Finanzas – Código Millonario</title>
 
-        <!-- Favicon -->
-    <link rel="icon" href="../../../assets/img/favicon.png" type="image/png">
+<!-- Tailwind y Lucide -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link rel="icon" href="../../../assets/img/favicon.png" type="image/png">
+
+<style>
+/* ===================== PAGINACIÓN ===================== */
+.pager-container { background: #ffffff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); padding: 12px; margin-bottom: 2rem; }
+.page-box { min-width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; user-select: none; font-weight: 600; color: #0f172a; transition: all 0.2s ease; }
+.page-box:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.06); transform: translateY(-1px); }
+.page-box.active { border-color: #94a3b8; box-shadow: 0 0 0 3px rgba(14,165,233,0.06); background: #f8fafc; }
+.compact-btn { min-width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; transition: all 0.2s ease; }
+.compact-btn[disabled] { opacity: 0.45; cursor: default; pointer-events: none; }
+.select-pages { border: 1px solid #e6e6e6; background: #fff; height: 40px; border-radius: 6px; padding: 6px 10px; }
+input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border-radius: 6px; padding: 6px 10px; width: 80px; background: #fff; }
+
+#articlesGrid { transition: all 0.5s ease; }
+.article { transition: opacity 0.4s ease; }
+
+@media (max-width: 640px) {
+  .pager-grid { grid-template-columns: 1fr; gap: 8px; }
+  .page-box { min-width: 34px; height: 34px; }
+  .compact-btn { min-width: 34px; height: 34px; }
+  input[type="number"].goto-page { width: 64px; }
+}
+</style>
 
 </head>
 
 <body class="bg-stone-50 text-stone-900">
 
-  <!-- HEADER CON MENÚ HAMBURGUESA -->
+<!-- HEADER CON MENÚ HAMBURGUESA -->
+<header class="bg-white shadow-sm sticky top-0 z-50" style="font-family: 'Lora', serif;">
+    <!-- tu código de header y menú igual que antes -->
+
+ <!-- HEADER CON MENÚ HAMBURGUESA -->
 <header class="bg-white shadow-sm sticky top-0 z-50" style="font-family: 'Lora', serif;">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         
@@ -24,14 +51,13 @@
         </div>
 
             <!-- Menú escritorio -->
-      <div class="hidden md:flex items-center space-x-8">
-    <a href="../../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
-    <a href="../../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
-    <a href="../../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
-    <a href="../../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
-    <a href="../../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
-</div>
-    </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+                <a href="../../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
+                <a href="../../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
+                <a href="../../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+                <a href="../../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+            </div>
 
             <!-- Botón hamburguesa -->
             <button class="md:hidden navbar-toggler" id="menu-toggle">
@@ -41,27 +67,24 @@
 
         <!-- Menú móvil -->
         <div id="mobileMenu">
-            <!-- Header con logo y título fijo igual que el principal -->
             <div class="menu-header">
                 <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
                 <span class="text-2xl font-bold">Código Millonario</span>
             </div>
 
-            <!-- Enlaces del menú -->
             <a href="../../../index.html">Inicio</a>
             <a href="../../../educacionfinanciera.html">Educación Financiera</a>
             <a href="../../../herramientas.html">Herramientas</a>
             <a href="../../../opiniones.html">Opiniones</a>
             <a href="../../../contacto.html">Contacto</a>
 
-            <!-- Botón centrado -->
             <div class="menu-footer">
                 <a href="../../../contacto.html">Más información</a>
             </div>
         </div>
 
+        <!-- ESTILOS DEL MENÚ HAMBURGUESA -->
         <style>
-          /* ======== BOTÓN HAMBURGUESA ======== */
           .navbar-toggler {
             border: none;
             background: none;
@@ -93,7 +116,6 @@
           .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
           .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
 
-          /* ======== MENU RESPONSIVO ======== */
           #mobileMenu {
             display: none;
             position: fixed;
@@ -107,7 +129,6 @@
           }
           #mobileMenu.show { display: block; }
 
-          /* Mantener logo y título fijo en el menú exactamente igual al header */
           #mobileMenu .menu-header {
             position: sticky;
             top: 0;
@@ -119,16 +140,9 @@
             border-bottom: 1px solid #ddd;
             z-index: 1050;
           }
-          #mobileMenu .menu-header i {
-            width: 2rem;
-            height: 2rem;
-          }
-          #mobileMenu .menu-header span {
-            font-weight: bold;
-            font-size: 1.5rem;
-          }
+          #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
+          #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
 
-          /* Enlaces del menú */
           #mobileMenu a {
             display: block;
             font-size: 1.25rem;
@@ -140,7 +154,6 @@
           }
           #mobileMenu a:hover { color: #22c55e; }
 
-          /* Botón centrado al final */
           #mobileMenu .menu-footer {
             padding: 2rem;
             text-align: center;
@@ -156,15 +169,13 @@
           }
           #mobileMenu .menu-footer a:hover { background: #2563eb; }
 
-          @media(min-width: 768px) {
-            #mobileMenu { display: none !important; }
-          }
+          @media(min-width: 768px) { #mobileMenu { display: none !important; } }
         </style>
 
+        <!-- SCRIPT DEL MENÚ HAMBURGUESA -->
         <script>
           lucide.createIcons();
 
-          // Script hamburguesa
           const menuToggle = document.getElementById('menu-toggle');
           const mobileMenu = document.getElementById('mobileMenu');
 
@@ -173,7 +184,6 @@
             mobileMenu.classList.toggle('show');
           });
 
-          // Cerrar menú al hacer clic en enlace
           document.querySelectorAll('#mobileMenu a').forEach(link => {
             link.addEventListener('click', () => {
               menuToggle.classList.remove('active');
@@ -192,14 +202,11 @@
     <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
         Transforma la presión de las deudas en oportunidades: aprende a gestionarlas de manera efectiva y construye una economía personal sólida y tranquila.
     </p> 
-  </section>
+</section>
 
-
-
- <!-- INTRODUCCIÓN GENERAL -->
+<!-- INTRODUCCIÓN GENERAL -->
 <main class="py-20" style="font-family: 'Lora', serif;">
     <section class="mb-16">
-
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <section class="mb-16 bg-white p-10 rounded-none shadow hover:shadow-lg transition text-left cursor-pointer">
                 <h2 class="text-3xl font-semibold text-green-700 mb-4">
@@ -209,163 +216,265 @@
                     Tener deudas no significa perder el control. Con una buena organización y decisiones claras, es posible manejarlas de forma inteligente y recuperar estabilidad. Esta guía te ayudará a entender el panorama, ordenar tus compromisos y avanzar hacia una vida financiera más tranquila y equilibrada.
                 </p>
             </section>
-            </section>
-    
+        </div>
+    </section>
 
-
-         <div class="space-y-4 text-stone-800">
-    <!-- BLOQUE DE ARTÍCULOS DEUDAS - 3 CUADRITOS POR FILA -->
+    <!-- Artículos con paginación -->
     <section class="mb-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-green-700 mb-8 text-center">Artículos de Finanzas y Deudas</h2>
 
-            <!-- ESPACIO FINAL -->
-            <section class="py-12"></section>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-               <!-- Cuadro 1 -->
-                <a href="./habitos-financieros-sanos.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/riqueza-abundante.png" alt="Hábitos financieros sanos" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Hábitos financieros sanos</h3>
-                            <p class="text-stone-700">Mantén tus finanzas sanas después de pagar tus obligaciones.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            <!-- PAGINACIÓN -->
+            <div class="pager-container">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4 px-2">
+                        <div class="text-sm text-stone-700">
+                            Total <span id="totalResults" class="font-semibold">0</span> resultados
+                        </div>
+                        <div class="hidden sm:inline-block text-sm text-stone-700">
+                            Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
                         </div>
                     </div>
-                </a>
-
-                <!-- Cuadro 2 -->
-                <a href="./banco-reporte-mora.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/libertad-economica.png" alt="Reporte por mora" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Reporte por mora</h3>
-                            <p class="text-stone-700">Qué hacer si tu banco te reporta y cómo protegerte.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
+                    <div class="flex justify-center items-center gap-2 px-2">
+                        <button id="firstBtn" class="compact-btn">«</button>
+                        <button id="prevBtn" class="compact-btn">‹</button>
+                        <div id="pageNumbers" class="flex items-center gap-2"></div>
+                        <button id="nextBtn" class="compact-btn">›</button>
+                        <button id="lastBtn" class="compact-btn">»</button>
                     </div>
-                </a>
-
-                <!-- Cuadro 3 -->
-                <a href="./evitar-creditos-peligrosos.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/ingresos-pasivos.png" alt="Evitar créditos peligrosos" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Evita créditos peligrosos</h3>
-                            <p class="text-stone-700">Lo que nadie te cuenta sobre créditos que arruinan tu bolsillo.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
+                    <div class="flex justify-end items-center gap-3 px-2">
+                        <select id="perPageSelect" class="select-pages">
+                            <option value="6" selected>6 / página</option>
+                            <option value="9">9 / página</option>
+                            <option value="12">12 / página</option>
+                            <option value="20">20 / página</option>
+                        </select>
+                        <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
+                        <button id="gotoBtn" class="page-box">Ir</button>
                     </div>
-                </a>
+                </div>
+            </div>
 
-                <!-- Cuadro 4 -->
-                <a href="./refinanciar-reestructurar.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/patrimonio-personal.png" alt="Refinanciar vs reestructurar" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Refinanciar vs reestructurar</h3>
-                            <p class="text-stone-700">Lo que nadie te explica sobre tus pagos.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
-                    </div>
-                </a>
+            <!-- GRID DE ARTÍCULOS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="articlesGrid">
+                <!-- Aquí van tus 11 artículos, cada uno con la clase 'article' -->
+                <!-- Ejemplo de un artículo: -->
+               <!-- Artículo 1 -->
+<div class="article">
+    <a href="./habitos-financieros-sanos.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/riqueza-abundante.png" alt="Hábitos financieros sanos" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Hábitos financieros sanos</h3>
+                <p class="text-stone-700">Mantén tus finanzas sanas después de pagar tus obligaciones.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
 
-                <!-- Cuadro 5 -->
-                <a href="./alertas-financieras.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/inversion-inteligente.png" alt="Alertas financieras" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Alertas financieras</h3>
-                            <p class="text-stone-700">Detecta problemas antes de que sea demasiado tarde.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
-                    </div>
-                </a>
+<!-- Artículo 2 -->
+<div class="article">
+    <a href="./banco-reporte-mora.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/libertad-economica.png" alt="Reporte por mora" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Reporte por mora</h3>
+                <p class="text-stone-700">Qué hacer si tu banco te reporta y cómo protegerte.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
 
-                <!-- Cuadro 6 -->
-                <a href="./pagar-deudas-rapido.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/crecimiento-de-riqueza.png" alt="Método bola de nieve" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Método bola de nieve</h3>
-                            <p class="text-stone-700">Acelera tus pagos y elimina deudas más rápido.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
-                    </div>
-                </a>
+<!-- Artículo 3 -->
+<div class="article">
+    <a href="./evitar-creditos-peligrosos.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/ingresos-pasivos.png" alt="Evitar créditos peligrosos" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Evita créditos peligrosos</h3>
+                <p class="text-stone-700">Lo que nadie te cuenta sobre créditos que arruinan tu bolsillo.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
 
-                <!-- Cuadro 7 -->
-                <a href="./consolidar-deudas.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/activos-inteligentes.png" alt="Consolidar deudas" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Consolidar deudas</h3>
-                            <p class="text-stone-700">Unifica tus deudas y toma decisiones informadas.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
-                    </div>
-                </a>
+<!-- Artículo 4 -->
+<div class="article">
+    <a href="./refinanciar-reestructurar.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/patrimonio-personal.png" alt="Refinanciar vs reestructurar" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Refinanciar vs reestructurar</h3>
+                <p class="text-stone-700">Lo que nadie te explica sobre tus pagos.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
 
-                <!-- Cuadro 8 -->
-                <a href="./renegociar-pagos.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/oportunidades-de-inversion.png" alt="Renegociar pagos" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Renegociar pagos</h3>
-                            <p class="text-stone-700">Negocia con bancos y reduce tus pagos sin estrés.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
-                    </div>
-                </a>
+<!-- Artículo 5 -->
+<div class="article">
+    <a href="./alertas-financieras.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/inversion-inteligente.png" alt="Alertas financieras" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Alertas financieras</h3>
+                <p class="text-stone-700">Detecta problemas antes de que sea demasiado tarde.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
 
-                <!-- Cuadro 9 -->
-                <a href="./mejorar-historial-crediticio.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/generar-riqueza.png" alt="Mejorar historial crediticio" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Mejorar historial crediticio</h3>
-                            <p class="text-stone-700">Secretos para impulsar tu crédito rápidamente.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
-                    </div>
-                </a>
+<!-- Artículo 6 -->
+<div class="article">
+    <a href="./pagar-deudas-rapido.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/crecimiento-de-riqueza.png" alt="Método bola de nieve" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Método bola de nieve</h3>
+                <p class="text-stone-700">Acelera tus pagos y elimina deudas más rápido.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
 
-                <!-- Cuadro 10 -->
-                <a href="./salir-obligaciones.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/acumulacion-de-dinero.png" alt="Salir de obligaciones" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Salir de obligaciones</h3>
-                            <p class="text-stone-700">Guía práctica para recuperar tu tranquilidad financiera.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
-                    </div>
-                </a>
+<!-- Artículo 7 -->
+<div class="article">
+    <a href="./consolidar-deudas.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/activos-inteligentes.png" alt="Consolidar deudas" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Consolidar deudas</h3>
+                <p class="text-stone-700">Unifica tus deudas y toma decisiones informadas.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
 
-                <!-- Cuadro 11 -->
-                <a href="./consecuencias-prestamo.html" class="block">
-                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                        <img src="../../../assets/png/exito-economico.png" alt="Consecuencias de préstamos" class="w-full h-1/2 object-cover">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-xl font-semibold text-stone-900 mb-2">Préstamos y riesgos</h3>
-                            <p class="text-stone-700">Riesgos de no pagar y cómo evitarlos a tiempo.</p>
-                            <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-                        </div>
-                    </div>
-                </a>
+<!-- Artículo 8 -->
+<div class="article">
+    <a href="./renegociar-pagos.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/oportunidades-de-inversion.png" alt="Renegociar pagos" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Renegociar pagos</h3>
+                <p class="text-stone-700">Negocia con bancos y reduce tus pagos sin estrés.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
+
+<!-- Artículo 9 -->
+<div class="article">
+    <a href="./mejorar-historial-crediticio.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/generar-riqueza.png" alt="Mejorar historial crediticio" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Mejorar historial crediticio</h3>
+                <p class="text-stone-700">Secretos para impulsar tu crédito rápidamente.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
+
+<!-- Artículo 10 -->
+<div class="article">
+    <a href="./salir-obligaciones.html" class="block">
+        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+            <img src="../../../assets/png/acumulacion-de-dinero.png" alt="Salir de obligaciones" class="w-full h-1/2 object-cover">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-semibold text-stone-900 mb-2">Salir de obligaciones</h3>
+                <p class="text-stone-700">Guía práctica para recuperar tu tranquilidad financiera.</p>
+                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+            </div>
+        </div>
+    </a>
+</div>
+
             </div>
         </div>
     </section>
-</div>
-
-
-              <!-- ESPACIO FINAL -->
-       <section class="py-12"></section>
-
-
-    </div>
 </main>
+
+<!-- SCRIPT DE PAGINACIÓN -->
+<script>
+const articlesGrid = document.getElementById('articlesGrid');
+const articles = Array.from(articlesGrid.children);
+const perPageSelect = document.getElementById('perPageSelect');
+const currentPageText = document.getElementById('currentPageText');
+const totalPagesText = document.getElementById('totalPagesText');
+const totalResults = document.getElementById('totalResults');
+const firstBtn = document.getElementById('firstBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const lastBtn = document.getElementById('lastBtn');
+const gotoInput = document.getElementById('gotoInput');
+const gotoBtn = document.getElementById('gotoBtn');
+const pageNumbers = document.getElementById('pageNumbers');
+
+let currentPage = 1;
+let perPage = parseInt(perPageSelect.value);
+
+function renderArticles() {
+    const total = articles.length;
+    totalResults.textContent = total;
+
+    const totalPages = Math.ceil(total / perPage);
+    totalPagesText.textContent = totalPages;
+    currentPageText.textContent = currentPage;
+
+    const start = (currentPage - 1) * perPage;
+    const end = start + perPage;
+
+    articles.forEach((article, index) => {
+        article.style.display = (index >= start && index < end) ? 'block' : 'none';
+    });
+
+    renderPageNumbers(totalPages);
+}
+
+function renderPageNumbers(totalPages) {
+    pageNumbers.innerHTML = '';
+    for(let i = 1; i <= totalPages; i++){
+        const btn = document.createElement('div');
+        btn.className = 'page-box' + (i === currentPage ? ' active' : '');
+        btn.textContent = i;
+        btn.addEventListener('click', () => {
+            currentPage = i;
+            renderArticles();
+        });
+        pageNumbers.appendChild(btn);
+    }
+}
+
+firstBtn.addEventListener('click', () => { currentPage = 1; renderArticles(); });
+prevBtn.addEventListener('click', () => { if(currentPage>1) currentPage--; renderArticles(); });
+nextBtn.addEventListener('click', () => { if(currentPage<Math.ceil(articles.length/perPage)) currentPage++; renderArticles(); });
+lastBtn.addEventListener('click', () => { currentPage = Math.ceil(articles.length/perPage); renderArticles(); });
+perPageSelect.addEventListener('change', () => { perPage = parseInt(perPageSelect.value); currentPage = 1; renderArticles(); });
+gotoBtn.addEventListener('click', () => {
+    const page = parseInt(gotoInput.value);
+    if(page >=1 && page <= Math.ceil(articles.length/perPage)) {
+        currentPage = page;
+        renderArticles();
+    }
+});
+
+// Inicializar
+renderArticles();
+</script>
+
+</body>
+</html>
+
 
 
 

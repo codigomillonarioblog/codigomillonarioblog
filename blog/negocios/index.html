@@ -1,279 +1,285 @@
 <!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrategias de Negocios Rentables para el Crecimiento Financiero | Código Millonario</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estrategias de Negocios Rentables para el Crecimiento Financiero | Código Millonario</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="icon" href="../../assets/img/favicon.png" type="image/png">
 
-        <!-- Favicon -->
-    <link rel="icon" href="../../assets/img/favicon.png" type="image/png">
+<style>
+/* ===================== PAGINACIÓN ===================== */
+.pager-container { background: #ffffff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); padding: 12px; margin-bottom: 24px; }
+.page-box { min-width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; user-select: none; font-weight: 600; color: #0f172a; transition: all 0.2s ease; }
+.page-box:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.06); transform: translateY(-1px); }
+.page-box.active { border-color: #94a3b8; box-shadow: 0 0 0 3px rgba(14,165,233,0.06); background: #f8fafc; }
+.compact-btn { min-width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; transition: all 0.2s ease; }
+.compact-btn[disabled] { opacity: 0.45; cursor: default; pointer-events: none; }
+.select-pages { border: 1px solid #e6e6e6; background: #fff; height: 40px; border-radius: 6px; padding: 6px 10px; }
+input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border-radius: 6px; padding: 6px 10px; width: 80px; background: #fff; }
 
+#articlesGrid { transition: all 0.5s ease; }
+.article { transition: opacity 0.4s ease; }
+
+@media (max-width: 640px) {
+  .pager-grid { grid-template-columns: 1fr; gap: 8px; }
+  .page-box { min-width: 34px; height: 34px; }
+  .compact-btn { min-width: 34px; height: 34px; }
+  input[type="number"].goto-page { width: 64px; }
+}
+</style>
 </head>
 
 <body class="bg-stone-50 text-stone-900">
 
-     <!-- HEADER CON MENÚ HAMBURGUESA -->
+<!-- HEADER CON MENÚ HAMBURGUESA -->
 <header class="bg-white shadow-sm sticky top-0 z-50" style="font-family: 'Lora', serif;">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        
-         <div class="flex items-center space-x-2">
-            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-            <span class="text-2xl font-bold">Código Millonario</span>
-        </div>
-
-
-            <!-- Menú escritorio -->
-      <div class="hidden md:flex items-center space-x-8">
-    <a href="../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
-    <a href="../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
-    <a href="../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
-    <a href="../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
-    <a href="../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+    <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+    <span class="text-2xl font-bold">Código Millonario</span>
 </div>
 
+<!-- Menú escritorio -->
+<div class="hidden md:flex items-center space-x-8">
+<a href="../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+<a href="../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
+<a href="../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
+<a href="../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+<a href="../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+</div>
 
+<button class="md:hidden navbar-toggler" id="menu-toggle">
+    <span class="navbar-toggler-icon"></span>
+</button>
+</nav>
 
-            </div>
+<!-- Menú móvil -->
+<div id="mobileMenu">
+<div class="menu-header">
+    <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+    <span class="text-2xl font-bold">Código Millonario</span>
+</div>
+<a href="../../index.html">Inicio</a>
+<a href="../../educacionfinanciera.html">Educación Financiera</a>
+<a href="../../herramientas.html">Herramientas</a>
+<a href="../../opiniones.html">Opiniones</a>
+<a href="../../contacto.html">Contacto</a>
+<div class="menu-footer">
+    <a href="../../contacto.html">Más información</a>
+</div>
+</div>
 
-            <!-- Botón hamburguesa -->
-            <button class="md:hidden navbar-toggler" id="menu-toggle">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
+<style>
+/* Botón hamburguesa y responsive (igual que tu código original) */
+.navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
+.navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
+.navbar-toggler-icon::before, .navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+.navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+#mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; padding-top: 0; overflow-y: auto; }
+#mobileMenu.show { display: block; }
+#mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
+#mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; text-align: left; }
+#mobileMenu a:hover { color: #22c55e; }
+#mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+#mobileMenu .menu-footer a { display: inline-block; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+#mobileMenu .menu-footer a:hover { background: #2563eb; }
+@media(min-width: 768px) { #mobileMenu { display: none !important; } }
+</style>
 
-        <!-- Menú móvil -->
-        <div id="mobileMenu">
-            <!-- Header con logo y título fijo igual que el principal -->
-            <div class="menu-header">
-                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-                <span class="text-2xl font-bold">Código Millonario</span>
-            </div>
-
-            <!-- Enlaces del menú -->
-            <a href="../../index.html">Inicio</a>
-            <a href="../../educacionfinanciera.html">Educación Financiera</a>
-            <a href="../../herramientas.html">Herramientas</a>
-            <a href="../../opiniones.html">Opiniones</a>
-            <a href="../../contacto.html">Contacto</a>
-
-            <!-- Botón centrado -->
-            <div class="menu-footer">
-                <a href="../../contacto.html">Más información</a>
-            </div>
-        </div>
-
-        <style>
-          /* ======== BOTÓN HAMBURGUESA ======== */
-          .navbar-toggler {
-            border: none;
-            background: none;
-            outline: none;
-            cursor: pointer;
-            z-index: 1100;
-          }
-          .navbar-toggler-icon {
-            width: 25px;
-            height: 2px;
-            background: #000;
-            display: block;
-            position: relative;
-            transition: all 0.3s ease;
-          }
-          .navbar-toggler-icon::before,
-          .navbar-toggler-icon::after {
-            content: "";
-            position: absolute;
-            width: 25px;
-            height: 2px;
-            background: #000;
-            left: 0;
-            transition: all 0.3s ease;
-          }
-          .navbar-toggler-icon::before { top: -7px; }
-          .navbar-toggler-icon::after { top: 7px; }
-          .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
-          .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
-          .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
-
-          /* ======== MENU RESPONSIVO ======== */
-          #mobileMenu {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            z-index: 1000;
-            padding-top: 0;
-            overflow-y: auto;
-          }
-          #mobileMenu.show { display: block; }
-
-          /* Mantener logo y título fijo en el menú exactamente igual al header */
-          #mobileMenu .menu-header {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 1rem;
-            border-bottom: 1px solid #ddd;
-            z-index: 1050;
-          }
-          #mobileMenu .menu-header i {
-            width: 2rem;
-            height: 2rem;
-          }
-          #mobileMenu .menu-header span {
-            font-weight: bold;
-            font-size: 1.5rem;
-          }
-
-          /* Enlaces del menú */
-          #mobileMenu a {
-            display: block;
-            font-size: 1.25rem;
-            padding: 1rem 1rem;
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #eee;
-            text-align: left;
-          }
-          #mobileMenu a:hover { color: #22c55e; }
-
-          /* Botón centrado al final */
-          #mobileMenu .menu-footer {
-            padding: 2rem;
-            text-align: center;
-          }
-          #mobileMenu .menu-footer a {
-            display: inline-block;
-            background: #3b82f6;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: bold;
-          }
-          #mobileMenu .menu-footer a:hover { background: #2563eb; }
-
-          @media(min-width: 768px) {
-            #mobileMenu { display: none !important; }
-          }
-        </style>
-
-        <script>
-          lucide.createIcons();
-
-          // Script hamburguesa
-          const menuToggle = document.getElementById('menu-toggle');
-          const mobileMenu = document.getElementById('mobileMenu');
-
-          menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            mobileMenu.classList.toggle('show');
-          });
-
-          // Cerrar menú al hacer clic en enlace
-          document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-              menuToggle.classList.remove('active');
-              mobileMenu.classList.remove('show');
-            });
-          });
-        </script>
-    </header>
-
+<script>
+lucide.createIcons();
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobileMenu.classList.toggle('show');
+});
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('show');
+    });
+});
+</script>
+</header>
 
 <!-- HERO -->
 <section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
-    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
-        Emprendimientos   <br>
+<h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
+    Emprendimientos   <br>
     <span class="text-green-600">  Oportunidades  y </span>    Negocios  <br>   
-    </h1>   
-    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6" style="font-family: 'Lora', serif;">
-      Convierte tu creatividad en ingresos: sistemas reales para triunfar en el mundo del emprendimiento.  
-    </p>
+</h1>   
+<p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6" style="font-family: 'Lora', serif;">
+  Convierte tu creatividad en ingresos: sistemas reales para triunfar en el mundo del emprendimiento.  
+</p>
 </section>
 
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-20" style="font-family: 'Lora', serif;">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-               <!-- INTRODUCCIÓN GENERAL -->
-    <main class="py-20" style="font-family: 'Lora', serif;">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <section class="mb-16 bg-white p-10 shadow hover:shadow-lg transition text-left cursor-pointer">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">💼 Emprende y Crece:</h2>
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Bienvenido a la sección de Negocios. Aquí descubrirás estrategias, ideas y herramientas prácticas para crear, crecer y optimizar tus negocios, aprovechar oportunidades y maximizar tus ingresos. Aprende a tomar decisiones inteligentes y a construir un camino sólido hacia la libertad financiera y el éxito empresarial.
-    </p>
+<section class="mb-16 bg-white p-10 shadow hover:shadow-lg transition text-left cursor-pointer">
+<h2 class="text-3xl font-semibold text-green-700 mb-4">💼 Emprende y Crece:</h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Bienvenido a la sección de Negocios. Aquí descubrirás estrategias, ideas y herramientas prácticas para crear, crecer y optimizar tus negocios, aprovechar oportunidades y maximizar tus ingresos. Aprende a tomar decisiones inteligentes y a construir un camino sólido hacia la libertad financiera y el éxito empresarial.
+</p>
 </section>
 
+<div class="space-y-4 text-stone-800">
+    <section class="mb-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-green-700 mb-8 text-center"> Negocios y Ideas </h2>
 
-        <div class="space-y-4 text-stone-800">
-            <!-- BLOQUE DE CUADRITO PRÓXIMAMENTE -->
-            <section class="mb-16">
-                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-green-700 mb-8 text-center"> Negocios y Ideas </h2>
-
-                    <!-- ESPACIO FINAL -->
-                    <section class="py-12"></section>
-
-
-
-
-
-
-                        <!-- ARTÍCULO 1 -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <a href="./ideas-de-negocios/index.html" class="block">
-                <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-                    
-                    <div class="w-full h-1/2">
-                        <img src="../../assets/png/negocio-rentable.png"
-                            alt="Estrategias de Ahorro para Principiantes"
-                            class="w-full h-full object-cover">
+            <!-- PAGINACIÓN ARRIBA -->
+            <div class="max-w-5xl mx-auto mb-6">
+                <div class="pager-container">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4 px-2">
+                            <div class="text-sm text-stone-700">
+                                Total <span id="totalResults" class="font-semibold">0</span> resultados
+                            </div>
+                            <div class="hidden sm:inline-block text-sm text-stone-700">
+                                Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center gap-2 px-2">
+                            <button id="firstBtn" class="compact-btn">«</button>
+                            <button id="prevBtn" class="compact-btn">‹</button>
+                            <div id="pageNumbers" class="flex items-center gap-2"></div>
+                            <button id="nextBtn" class="compact-btn">›</button>
+                            <button id="lastBtn" class="compact-btn">»</button>
+                        </div>
+                        <div class="flex justify-end items-center gap-3 px-2">
+                            <select id="perPageSelect" class="select-pages">
+                                <option value="6" selected>6 / página</option>
+                                <option value="9">9 / página</option>
+                                <option value="12">12 / página</option>
+                                <option value="20">20 / página</option>
+                            </select>
+                            <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
+                            <button id="gotoBtn" class="page-box">Ir</button>
+                        </div>
                     </div>
-                    <div class="p-4 flex flex-col flex-1">
-                        <h3 class="text-lg font-semibold text-stone-900 mb-1"> Negocios Simples    </h3>
-                        <p class="text-stone-700 flex-1 text-sm">
-                         Prepárate para empezar tu negocio rentable hoy en Colombia.
-                        </p>
-                        <span class="mt-3 inline-block text-green-600 font-semibold hover:underline">
-                            Leer Artículos →
-                        </span>
-                    </div>
-
                 </div>
-            </a>
+            </div>
 
+            <!-- GRID DE ARTÍCULOS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="articlesGrid">
+                <!-- ARTÍCULO 1 -->
+                <div class="article">
+                    <a href="./ideas-de-negocios/index.html" class="block">
+                        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+                            <div class="w-full h-1/2">
+                                <img src="../../assets/png/negocio-rentable.png" alt="Negocios Simples" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4 flex flex-col flex-1">
+                                <h3 class="text-lg font-semibold text-stone-900 mb-1"> Negocios Simples </h3>
+                                <p class="text-stone-700 flex-1 text-sm">
+                                    Prepárate para empezar tu negocio rentable hoy en Colombia.
+                                </p>
+                                <span class="mt-3 inline-block text-green-600 font-semibold hover:underline">
+                                    Leer Artículos →
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Puedes duplicar más artículos aquí con la clase "article" -->
+            </div>
         </div>
-          </section>
+    </section>
 
+    <section class="py-12"></section>
 
-
-
-
-
-
-
-
-            <!-- ESPACIO FINAL -->
-            <section class="py-12">     
-
-           <section class="mb-16 bg-white p-10 shadow hover:shadow-lg transition text-left cursor-pointer"> 
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">Recomendaciones finales 💡</h2>
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        No dejes que esta oportunidad pase de largo. Cada artículo y guía que encuentras aquí es una pieza clave para impulsar tu negocio, mejorar tus ingresos y tomar decisiones financieras inteligentes. Explora, aprende y aplica lo que descubres: tu camino hacia la independencia económica y el éxito empresarial comienza ahora. ¡Sigue leyendo y transforma tu futuro hoy mismo!
-    </p>
-</section>
-
-          
-        </div>
-    </div>
+    <section class="mb-16 bg-white p-10 shadow hover:shadow-lg transition text-left cursor-pointer"> 
+        <h2 class="text-3xl font-semibold text-green-700 mb-4">Recomendaciones finales 💡</h2>
+        <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+            No dejes que esta oportunidad pase de largo. Cada artículo y guía que encuentras aquí es una pieza clave para impulsar tu negocio, mejorar tus ingresos y tomar decisiones financieras inteligentes. Explora, aprende y aplica lo que descubres: tu camino hacia la independencia económica y el éxito empresarial comienza ahora. ¡Sigue leyendo y transforma tu futuro hoy mismo!
+        </p>
+    </section>
+</div>
+</div>
 </main>
+
+<!-- SCRIPT DE PAGINACIÓN -->
+<script>
+const articles = document.querySelectorAll('.article');
+const articlesGrid = document.getElementById('articlesGrid');
+const perPageSelect = document.getElementById('perPageSelect');
+const currentPageText = document.getElementById('currentPageText');
+const totalPagesText = document.getElementById('totalPagesText');
+const totalResults = document.getElementById('totalResults');
+const pageNumbers = document.getElementById('pageNumbers');
+const firstBtn = document.getElementById('firstBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const lastBtn = document.getElementById('lastBtn');
+const gotoInput = document.getElementById('gotoInput');
+const gotoBtn = document.getElementById('gotoBtn');
+
+let currentPage = 1;
+let perPage = parseInt(perPageSelect.value);
+let totalArticles = articles.length;
+let totalPages = Math.ceil(totalArticles / perPage);
+
+function renderArticles() {
+    articles.forEach((article, index) => {
+        const start = (currentPage - 1) * perPage;
+        const end = start + perPage;
+        article.style.display = (index >= start && index < end) ? 'block' : 'none';
+    });
+    currentPageText.textContent = currentPage;
+    totalPagesText.textContent = totalPages;
+    totalResults.textContent = totalArticles;
+    renderPageNumbers();
+}
+
+function renderPageNumbers() {
+    pageNumbers.innerHTML = '';
+    for(let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('div');
+        btn.textContent = i;
+        btn.className = 'page-box' + (i === currentPage ? ' active' : '');
+        btn.addEventListener('click', () => {
+            currentPage = i;
+            renderArticles();
+        });
+        pageNumbers.appendChild(btn);
+    }
+}
+
+firstBtn.addEventListener('click', () => { currentPage = 1; renderArticles(); });
+prevBtn.addEventListener('click', () => { if(currentPage > 1){ currentPage--; renderArticles(); } });
+nextBtn.addEventListener('click', () => { if(currentPage < totalPages){ currentPage++; renderArticles(); } });
+lastBtn.addEventListener('click', () => { currentPage = totalPages; renderArticles(); });
+
+perPageSelect.addEventListener('change', () => {
+    perPage = parseInt(perPageSelect.value);
+    totalPages = Math.ceil(totalArticles / perPage);
+    currentPage = 1;
+    renderArticles();
+});
+
+gotoBtn.addEventListener('click', () => {
+    let page = parseInt(gotoInput.value);
+    if(page >= 1 && page <= totalPages){
+        currentPage = page;
+        renderArticles();
+    }
+});
+
+renderArticles();
+</script>
+
+</body>
+</html>
+
 
 
 <!-- ===================== FOOTER PROFESIONAL CON ICONOS ===================== -->
