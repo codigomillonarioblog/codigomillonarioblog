@@ -110,7 +110,6 @@
     #mobileMenu { display: none !important; }
   }
 
-  /* ========= SACUDÓN ÚNICO AL ENTRAR ========= */
   @keyframes shake3 {
     0%, 100% { transform: translateX(0); }
     10% { transform: translateX(-4px); }
@@ -125,7 +124,6 @@
     animation: shake3 0.8s ease-in-out;
   }
 
-  /* ===== POPUP ===== */
   #popupOverlay {
     display: none;
     position: fixed;
@@ -154,7 +152,6 @@
     <h2 class="text-2xl font-bold mb-4">Descargar Guía Gratis</h2>
     <p class="text-stone-600 mb-6">Ingresa tu correo para recibir la guía inmediata.</p>
 
-    <!-- ⭐ FORMULARIO MODIFICADO ⭐ -->
     <form action="https://formsubmit.co/codigomillonarioblog@gmail.com" method="POST" class="space-y-4">
 
       <input type="email" name="email" required
@@ -164,7 +161,6 @@
       <!-- ⭐ REDIRECCIÓN ACTUALIZADA ⭐ -->
       <input type="hidden" name="_next" value="https://codigomillonario.com/gracias2.html">
 
-      <!-- No captcha -->
       <input type="hidden" name="_captcha" value="false">
 
       <button type="submit"
@@ -177,7 +173,6 @@
   </div>
 </div>
 
-<!-- ===================== HEADER ===================== -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
 
@@ -186,7 +181,6 @@
             <span class="text-2xl font-bold">Código Millonario</span>
         </div>
 
-        
 <div class="hidden md:flex items-center space-x-8">
     <a href="./index.html" class="text-stone-900 font-semibold">Inicio</a>
     <a href="./educacionfinanciera.html" class="text-stone-600 hover:text-green-600 transition-colors">Educación Financiera</a>
@@ -195,13 +189,11 @@
     <a href="./contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
 </div>
 
-
         <button class="md:hidden navbar-toggler" id="menu-toggle">
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
 
-    <!-- MENU MÓVIL -->
     <div id="mobileMenu">
         <div class="menu-header">
             <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
@@ -220,7 +212,6 @@
     </div>
 </header>
 
-<!-- ===================== HERO ===================== -->
 <main>
 <section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
@@ -241,7 +232,6 @@
 
             <div class="flex flex-col sm:flex-row gap-4">
 
-                <!-- 🔥 BOTÓN QUE ABRE EL POPUP -->
                 <button onclick="openPopup()"
                    class="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 shadow-lg text-center shake-button">
                     Descargar Guía Gratis
@@ -272,7 +262,6 @@
 </section>
 </main>
 
-<!-- ========= POPUP SCRIPT ========= -->
 <script>
 function openPopup() {
     document.getElementById("popupOverlay").style.display = "flex";
@@ -284,6 +273,7 @@ function closePopup() {
 
 </body>
 </html>
+
 
 
 
