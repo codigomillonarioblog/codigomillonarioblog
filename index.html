@@ -7,145 +7,155 @@
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/img/favicon.png" type="image/png">
+
+    <!-- SEO -->
+    <meta name="description" content="Aprende finanzas personales, inversión inteligente y hábitos para construir libertad financiera.">
+    <meta name="keywords" content="finanzas personales, inversión, libertad financiera, ahorro, ingresos pasivos">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://codigomillonario.com/">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      /* ======== BOTÓN HAMBURGUESA ======== */
+      .navbar-toggler {
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 1100;
+      }
+      .navbar-toggler-icon {
+        width: 25px;
+        height: 2px;
+        background: #000;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      .navbar-toggler-icon::before,
+      .navbar-toggler-icon::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: #000;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+      .navbar-toggler-icon::before { top: -7px; }
+      .navbar-toggler-icon::after { top: 7px; }
+      .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+      .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+      .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+      /* ======== MENU RESPONSIVO ======== */
+      #mobileMenu {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 1000;
+        padding-top: 0;
+        overflow-y: auto;
+      }
+      #mobileMenu.show { display: block; }
+
+      #mobileMenu .menu-header {
+        position: sticky;
+        top: 0;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 1rem; 
+        border-bottom: 1px solid #ddd;
+        z-index: 1050;
+      }
+
+      #mobileMenu a {
+        display: block;
+        font-size: 1.25rem;
+        padding: 1rem 1rem;
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #eee;
+      }
+      #mobileMenu a:hover { color: #22c55e; }
+
+      #mobileMenu .menu-footer {
+        padding: 2rem;
+        text-align: center;
+      }
+      #mobileMenu .menu-footer a {
+        display: inline-block;
+        background: #3b82f6;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      #mobileMenu .menu-footer a:hover { background: #2563eb; }
+
+      @media(min-width: 768px) {
+        #mobileMenu { display: none !important; }
+      }
+
+      @keyframes shake3 {
+        0%, 100% { transform: translateX(0); }
+        10% { transform: translateX(-4px); }
+        20% { transform: translateX(4px); }
+        30% { transform: translateX(-4px); }
+        40% { transform: translateX(4px); }
+        50% { transform: translateX(-4px); }
+        60% { transform: translateX(0); }
+      }
+
+      .shake-button {
+        animation: shake3 0.8s ease-in-out;
+      }
+
+      #popupOverlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+      }
+      #popupBox {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        max-width: 420px;
+        width: 90%;
+        text-align: center;
+      }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0826LEMPPY');
+    </script>
+
 </head>
-
-<!-- SEO -->
-<meta name="description" content="Aprende finanzas personales, inversión inteligente y hábitos para construir libertad financiera.">
-<meta name="keywords" content="finanzas personales, inversión, libertad financiera, ahorro, ingresos pasivos">
-
-<!-- Canonical -->
-<link rel="canonical" href="https://codigomillonario.com/">
-
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Lucide Icons -->
-<script src="https://unpkg.com/lucide@latest"></script>
-
-<style>
-  /* ======== BOTÓN HAMBURGUESA ======== */
-  .navbar-toggler {
-    border: none;
-    background: none;
-    outline: none;
-    cursor: pointer;
-    z-index: 1100;
-  }
-  .navbar-toggler-icon {
-    width: 25px;
-    height: 2px;
-    background: #000;
-    display: block;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-  .navbar-toggler-icon::before,
-  .navbar-toggler-icon::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 2px;
-    background: #000;
-    left: 0;
-    transition: all 0.3s ease;
-  }
-  .navbar-toggler-icon::before { top: -7px; }
-  .navbar-toggler-icon::after { top: 7px; }
-  .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
-  .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
-  .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
-
-  /* ======== MENU RESPONSIVO ======== */
-  #mobileMenu {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    z-index: 1000;
-    padding-top: 0;
-    overflow-y: auto;
-  }
-  #mobileMenu.show { display: block; }
-
-  #mobileMenu .menu-header {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 1rem; 
-    border-bottom: 1px solid #ddd;
-    z-index: 1050;
-  }
-
-  #mobileMenu a {
-    display: block;
-    font-size: 1.25rem;
-    padding: 1rem 1rem;
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #eee;
-  }
-  #mobileMenu a:hover { color: #22c55e; }
-
-  #mobileMenu .menu-footer {
-    padding: 2rem;
-    text-align: center;
-  }
-  #mobileMenu .menu-footer a {
-    display: inline-block;
-    background: #3b82f6;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  #mobileMenu .menu-footer a:hover { background: #2563eb; }
-
-  @media(min-width: 768px) {
-    #mobileMenu { display: none !important; }
-  }
-
-  @keyframes shake3 {
-    0%, 100% { transform: translateX(0); }
-    10% { transform: translateX(-4px); }
-    20% { transform: translateX(4px); }
-    30% { transform: translateX(-4px); }
-    40% { transform: translateX(4px); }
-    50% { transform: translateX(-4px); }
-    60% { transform: translateX(0); }
-  }
-
-  .shake-button {
-    animation: shake3 0.8s ease-in-out;
-  }
-
-  #popupOverlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-  }
-  #popupBox {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 420px;
-    width: 90%;
-    text-align: center;
-  }
-</style>
-</head>
+<body>
+<!-- Aquí empieza tu contenido -->
 
 <body class="bg-stone-50 text-stone-900" style="font-family: 'Lora', serif;">
-
 <!-- ========= POPUP ========= -->
 <div id="popupOverlay">
   <div id="popupBox">
