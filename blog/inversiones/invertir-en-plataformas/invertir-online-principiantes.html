@@ -360,13 +360,160 @@
     </main>
 
 
-    <div class="text-center mt-12" style="font-family: 'Lora', serif;">
-    <a href="./index.html"
-       class="inline-block bg-green-600 text-white px-8 py-3 rounded-xl text-lg font-semibold 
-              hover:bg-green-700 transition shadow">
-        Más artículos similares →
+<div class="interlink-container mx-auto my-12 max-w-3xl p-4 bg-white shadow rounded-lg" style="font-family: 'Lora', serif;">
+
+  <!-- FRASE GUIA -->
+  <p class="text-stone-700 text-sm mb-2 text-center font-bold">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir".
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+    <!-- SELECT DE ARTÍCULOS -->
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+
+    <!-- BUSCADOR -->
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+
+    <!-- BOTÓN IR -->
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2">Ir</button>
+
+    <!-- BOTÓN VER TODOS -->
+    <a id="viewAllBtn" href="./index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline">
+      Ver todos
     </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-700 text-sm">
+    Total <span id="totalArticles" class="font-semibold mx-1">0</span> artículos
+  </div>
 </div>
+
+<style>
+.interlink-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.select-pages, .goto-page, .page-box {
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  height: 40px;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-pages, .goto-page {
+  width: 100%;
+}
+
+.select-pages:hover, .goto-page:hover, .page-box:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+
+.page-box {
+  min-width: 80px;
+}
+
+.page-box:disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}
+</style>
+
+<script>
+// ELEMENTOS
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const viewAllBtn = document.getElementById("viewAllBtn");
+const perPage = 6;
+
+let articles = [];
+
+// MEZCLAR ALEATORIAMENTE
+function shuffleArray(array) {
+  return array
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a,b) => a.sort - b.sort)
+    .map(({value}) => value);
+}
+
+// MOSTRAR HASTA 6 ARTÍCULOS
+function fillSelect(list) {
+  select.innerHTML = "";
+  const paginated = shuffleArray(list).slice(0, perPage);
+
+  if (paginated.length === 0) {
+    const option = document.createElement("option");
+    option.textContent = "No se encontraron artículos";
+    option.disabled = true;
+    select.appendChild(option);
+  } else {
+    paginated.forEach(a => {
+      const option = document.createElement("option");
+      option.value = a.url;
+      option.textContent = a.title;
+      select.appendChild(option);
+    });
+  }
+
+  totalArticles.textContent = list.length;
+}
+
+// BOTÓN IR
+goBtn.addEventListener("click", () => {
+  const url = select.value;
+  if (url) window.location.href = url;
+});
+
+// BUSCADOR
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  const filtered = articles.filter(a => a.title.toLowerCase().includes(query));
+  fillSelect(filtered);
+});
+
+// ---------------------------
+// RUTA REAL AJUSTADA
+// ---------------------------
+// Carga todos los artículos desde:
+// blog/inversiones/invertir-en-plataformas/index.html
+// ---------------------------
+
+fetch('../invertir-en-plataformas/index.html')
+  .then(response => response.text())
+  .then(html => {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+
+    // Extraer enlaces
+    const articleLinks = Array.from(tempDiv.querySelectorAll('.article a'));
+
+    articles = articleLinks.map(a => {
+      const t = a.querySelector('h3');
+      return {
+        title: t ? t.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href")
+      };
+    });
+
+    fillSelect(articles);
+
+    // Botón ver todos
+    viewAllBtn.href = "../invertir-en-plataformas/index.html";
+  })
+  .catch(err => console.error('Error al cargar artículos:', err));
+</script>
+
+
 
 
 
