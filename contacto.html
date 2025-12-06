@@ -7,199 +7,140 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
-       <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="./assets/img/favicon.png" type="image/png">
 
-
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0826LEMPPY');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0826LEMPPY');
+    </script>
 </head>
 
 <body class="bg-stone-50 text-stone-900">
 
-    <!-- HEADER CON MENÚ HAMBURGUESA -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+<!-- HEADER -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
 
-    <div class="flex items-center space-x-2" style="font-family: 'Lora', serif;">
-    <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-    <span class="text-2xl font-bold text-stone-900">Código Millonario</span>
-</div>
+        <div class="flex items-center space-x-2" style="font-family: 'Lora', serif;">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold text-stone-900">Código Millonario</span>
+        </div>
 
-<!-- Menú escritorio -->
-<div class="hidden md:flex items-center space-x-8" style="font-family: 'Lora', serif;">
-    <a href="./index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
-    <a href="./educacionfinanciera.html" class="text-stone-600 hover:text-green-600 transition-colors">Educación Financiera</a>
-    <a href="./herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
-    <a href="./opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
-    <a href="./contacto.html" class="text-stone-900 font-semibold">Contacto</a>
-</div>
-   </div>
+        <!-- Menú escritorio -->
+        <div class="hidden md:flex items-center space-x-8" style="font-family: 'Lora', serif;">
+            <a href="./index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+            <a href="./educacionfinanciera.html" class="text-stone-600 hover:text-green-600 transition-colors">Educación Financiera</a>
+            <a href="./herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
+            <a href="./opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+            <a href="./contacto.html" class="text-stone-900 font-semibold">Contacto</a>
+        </div>
 
-            <!-- Botón hamburguesa -->
-            <button class="md:hidden navbar-toggler" id="menu-toggle">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
+        <!-- Botón hamburguesa -->
+        <button class="md:hidden navbar-toggler" id="menu-toggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
 
-     <!-- Menú móvil -->
-<div id="mobileMenu" style="font-family: 'Lora', serif;">
-    <div class="menu-header">
-        <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-        <span class="text-2xl font-bold">Código Millonario</span>
+    <!-- Menú móvil -->
+    <div id="mobileMenu" style="font-family: 'Lora', serif;">
+        <div class="menu-header">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold">Código Millonario</span>
+        </div>
+
+        <a href="./index.html">Inicio</a>
+        <a href="./educacionfinanciera.html">Educación Financiera</a>
+        <a href="./herramientas.html">Herramientas</a>
+        <a href="./opiniones.html">Opiniones</a>
+        <a href="./contacto.html">Contacto</a>
+
+        <div class="menu-footer">
+            <a href="./contacto.html">Más información</a>
+        </div>
     </div>
 
-    <a href="./index.html">Inicio</a>
-    <a href="./educacionfinanciera.html">Educación Financiera</a>
-    <a href="./herramientas.html">Herramientas</a>
-    <a href="./opiniones.html">Opiniones</a>
-    <a href="./contacto.html">Contacto</a>
+    <style>
+        .navbar-toggler { border: none; background: none; cursor: pointer; z-index: 1100; }
+        .navbar-toggler-icon {
+            width: 25px; height: 2px; background: #000; display: block; position: relative;
+            transition: 0.3s;
+        }
+        .navbar-toggler-icon::before, .navbar-toggler-icon::after {
+            content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0;
+            transition: 0.3s;
+        }
+        .navbar-toggler-icon::before { top: -7px; }
+        .navbar-toggler-icon::after { top: 7px; }
+        .navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+        .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+        .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
 
-    <div class="menu-footer">
-        <a href="./contacto.html">Más información</a>
-    </div>
-</div>
+        #mobileMenu {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #fff; z-index: 1000; overflow-y: auto;
+        }
+        #mobileMenu.show { display: block; }
+        #mobileMenu .menu-header {
+            position: sticky; top: 0; background: #fff; display: flex; align-items: center;
+            gap: 0.5rem; padding: 1rem; border-bottom: 1px solid #ddd;
+        }
+        #mobileMenu a {
+            display: block; padding: 1rem; font-size: 1.25rem; border-bottom: 1px solid #eee;
+            text-decoration: none; color: #000;
+        }
+        #mobileMenu a:hover { color: #22c55e; }
+        #mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+        #mobileMenu .menu-footer a {
+            display: inline-block; background: #3b82f6; color: #fff;
+            padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: bold;
+        }
+    </style>
 
-
-        <style>
-          .navbar-toggler {
-            border: none;
-            background: none;
-            outline: none;
-            cursor: pointer;
-            z-index: 1100;
-          }
-          .navbar-toggler-icon {
-            width: 25px;
-            height: 2px;
-            background: #000;
-            display: block;
-            position: relative;
-            transition: all 0.3s ease;
-          }
-          .navbar-toggler-icon::before,
-          .navbar-toggler-icon::after {
-            content: "";
-            position: absolute;
-            width: 25px;
-            height: 2px;
-            background: #000;
-            left: 0;
-            transition: all 0.3s ease;
-          }
-          .navbar-toggler-icon::before { top: -7px; }
-          .navbar-toggler-icon::after { top: 7px; }
-          .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
-          .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
-          .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
-
-          #mobileMenu {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            z-index: 1000;
-            padding-top: 0;
-            overflow-y: auto;
-          }
-          #mobileMenu.show { display: block; }
-
-          #mobileMenu .menu-header {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 1rem;
-            border-bottom: 1px solid #ddd;
-            z-index: 1050;
-          }
-          #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
-          #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
-
-          #mobileMenu a {
-            display: block;
-            font-size: 1.25rem;
-            padding: 1rem 1rem;
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #eee;
-          }
-          #mobileMenu a:hover { color: #22c55e; }
-
-          #mobileMenu .menu-footer {
-            padding: 2rem;
-            text-align: center;
-          }
-          #mobileMenu .menu-footer a {
-            display: inline-block;
-            background: #3b82f6;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: bold;
-          }
-          #mobileMenu .menu-footer a:hover { background: #2563eb; }
-
-          @media(min-width: 768px) { #mobileMenu { display: none !important; } }
-        </style>
-
-        <script>
-          lucide.createIcons();
-          const menuToggle = document.getElementById('menu-toggle');
-          const mobileMenu = document.getElementById('mobileMenu');
-          menuToggle.addEventListener('click', () => {
+    <script>
+        lucide.createIcons();
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             mobileMenu.classList.toggle('show');
-          });
-          document.querySelectorAll('#mobileMenu a').forEach(link => {
+        });
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
             link.addEventListener('click', () => {
-              menuToggle.classList.remove('active');
-              mobileMenu.classList.remove('show');
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('show');
             });
-          });
-        </script>
-    </header>
+        });
+    </script>
+</header>
 
-    <!-- HERO -->
-    <section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
-        <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
-    <span class="text-green-600"> Contáctame</span> Ahora
-        </h1>
-      <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6" style="font-family: 'Lora', serif; line-height: 1.7;">
+<!-- HERO -->
+<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
+        <span class="text-green-600">Contáctame</span> Ahora
+    </h1>
+    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6" style="font-family: 'Lora', serif;">
         ¿Tienes preguntas, propuestas o quieres asesoría? Escríbeme y te responderé lo más pronto posible.
-      </p>
-    </section>
+    </p>
+</section>
 
-    <!-- SEPARADOR -->
-    <section class="py-12"></section>
+<section class="py-12"></section>
 
-
-
-<!-- FORMULARIO FUNCIONAL CON FORMSUBMIT -->
+<!-- FORMULARIO -->
 <main style="font-family: 'Lora', serif;">
     <section class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10">
 
-        <!-- AQUI SÍ ESTÁ EL FORMULARIO CON method="POST" -->
-         <form method="POST" action="https://formsubmit.co/codigomillonarioblog@gmail.com" class="space-y-6">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
 
-            <!-- FormSubmit: evita captcha -->
-            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
 
-            <!-- Mensaje de redirección -->
-            <input type="hidden" name="_next" value="https://codigomillonario.blog/gracias.html">
+            <input type="hidden" name="subject" value="Nuevo mensaje desde Código Millonario">
+
+            <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
 
             <div>
                 <label class="block text-sm font-medium mb-2">Nombre</label>
@@ -231,6 +172,8 @@
 
     </section>
 </main>
+</body>
+
 
 
 
