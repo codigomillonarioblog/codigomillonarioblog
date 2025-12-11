@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Oráculo Financiero para Tomar Decisiones Inteligentes y Multiplicar Tu Fortuna - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+     <!-- Favicon -->
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+
+    <style>
+        @keyframes modalShow {
+            0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* MENÚ HAMBURGUESA */
+        .navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
+        .navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before, .navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before { top: -7px; }
+        .navbar-toggler-icon::after { top: 7px; }
+        .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+        .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+        .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+        #mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; padding-top: 0; overflow-y: auto; }
+        #mobileMenu.show { display: block; }
+
+        #mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
+        #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
+        #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
+
+        #mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; text-align: left; }
+        #mobileMenu a:hover { color: #22c55e; }
+
+        #mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+        #mobileMenu .menu-footer a { display: inline-block; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+        #mobileMenu .menu-footer a:hover { background: #2563eb; }
+
+        @media(min-width: 768px) { #mobileMenu { display: none !important; } }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+</head>
+
+<body class="bg-stone-50 text-stone-900" style="font-family: 'Lora', serif;">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span class="text-2xl font-bold">Código Millonario</span>
+            </div>
+
+             <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+                <a href="../educacionfinanciera.html" class="text-stone-600 hover:text-green-600 transition-colors">Educación Financiera</a>
+                <a href="../herramientas.html" class="text-stone-900 font-semibold">Herramientas</a>
+                <a href="../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+                <a href="../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+            </div>
+
+            <button class="md:hidden navbar-toggler" id="menu-toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div id="mobileMenu">
+            <div class="menu-header">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span>Código Millonario</span>
+            </div>
+
+            <a href="../index.html">Inicio</a>
+            <a href="../educacionfinanciera.html">Educación Financiera</a>
+            <a href="../herramientas.html">Herramientas</a>
+            <a href="../opiniones.html">Opiniones</a>
+            <a href="../contacto.html">Contacto</a>
+
+            <div class="menu-footer">
+                <a href="../contacto.html">Más información</a>
+            </div>
+        </div>
+
+        <script>
+            lucide.createIcons();
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('show');
+            });
+
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('show');
+                });
+            });
+        </script>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+             Oráculo <span class="text-green-600"> Financiero </span>
+        </h1>   
+        <p class="max-w-2xl mx-auto mt-6 text-lg text-stone-700">
+            Consejo práctico al azar para mejorar tus finanzas, tomar decisiones inteligentes y atraer buena suerte.
+        </p>
+    </section>
+
+
+
+
+<!-- ===================== ORÁCULO FINANCIERO COMPLETO ===================== -->
+<section id="oracle" class="p-8 bg-white rounded-3xl shadow max-w-xl mx-auto my-12 relative">
+  <h2 class="text-3xl font-bold mb-4 text-green-700 text-center"> Bola de Cristal Financiera </h2>
+  
+  <!-- Bola de cristal con animación permanente -->
+  <div id="crystalBall" class="animate-pulse mx-auto mb-4 w-32 h-32 rounded-full bg-gradient-to-br from-green-200 via-white to-green-400 shadow-lg flex items-center justify-center text-4xl text-white font-bold opacity-50">🔮</div>
+  
+  <div id="oracleAnswer" class="mt-4 p-4 bg-gray-100 rounded text-stone-800 font-semibold min-h-[80px] text-center text-lg"></div>
+
+  <!-- Botón para recibir conocimiento -->
+  <div class="text-center mt-6">
+    <button id="receiveKnowledgeBtn" class="bg-green-700 text-white px-6 py-3 rounded font-bold hover:bg-green-800 transition">
+      Recibir conocimiento Ancestral
+    </button>
+  </div>
+</section>
+
+<style>
+  #oracleAnswer {
+    min-height: 80px;
+    font-family: 'Lora', serif;
+  }
+
+  #crystalBall {
+    transition: all 0.5s ease;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.6; }
+  }
+  .animate-pulse {
+    animation: pulse 1.5s infinite;
+  }
+
+  #receiveKnowledgeBtn {
+    cursor: pointer;
+    font-weight: 700;
+  }
+</style>
+
+<script>
+const oracleAnswer = document.getElementById("oracleAnswer");
+const crystalBall = document.getElementById("crystalBall");
+const receiveBtn = document.getElementById("receiveKnowledgeBtn");
+
+// 100 respuestas únicas del Oráculo
+const allAnswers = [
+  "Ahorra, pequeño saltamontes financiero.",
+  "No gastes hoy lo que tu yo del futuro agradecería.",
+  "Tu libertad depende de tu disciplina.",
+  "Si no entiendes lo que compras, mejor no lo compres.",
+  "Cripto puede ser divertido, pero no pongas tu arriendo en riesgo.",
+  "La paciencia es la inversión más rentable.",
+  "Si quieres libertad, evita las cuotas eternas.",
+  "Cada compra debe responder a un plan, no al impulso.",
+  "Antes de gastar, pregúntate: ¿me acerca a mi objetivo financiero?",
+  "El dinero dormido en el bolsillo nunca te dará intereses.",
+  "Invierte solo en lo que entiendas, no en rumores de amigos.",
+  "El ahorro pequeño de hoy es el capital grande de mañana.",
+  "Gastar con conciencia es un superpoder que pocos tienen.",
+  "No pongas todo tu oro en una sola canasta.",
+  "El mejor momento para invertir es cuando lo entiendes, no cuando todos lo hacen.",
+  "Si el corazón compra, la cabeza paga.",
+  "No dejes que las modas financieras dicten tu futuro.",
+  "Cada peso cuenta, incluso los que parecen insignificantes.",
+  "La libertad financiera empieza con una decisión y un plan.",
+  "No compres por impulso, compra con intención.",
+  "Lo barato puede salir caro, pero lo caro no siempre es sabio.",
+  "Invierte como si fueras a vivir 100 años, pero gasta como si mañana no existiera.",
+  "No todo lo que brilla es oro, sobre todo en finanzas.",
+  "Ahorrar es como plantar árboles: tu yo futuro lo agradecerá.",
+  "Los errores financieros son lecciones disfrazadas.",
+  "Si compras hoy, asegúrate de no arrepentirte mañana.",
+  "La mejor inversión es la que protege tu tranquilidad.",
+  "No pongas tu felicidad en ventas pasajeras.",
+  "Cada deuda que evitas es un paso hacia la libertad.",
+  "El dinero bien pensado nunca se pierde.",
+  "Un plan sin acción es solo un sueño financiero.",
+  "Gastar menos de lo que ganas es la regla de oro.",
+  "Si quieres ganar, primero aprende a conservar.",
+  "El interés compuesto es tu amigo más poderoso.",
+  "Evita compras que te hagan decir '¿y por qué lo hice?'.",
+  "La educación financiera es el mejor patrimonio.",
+  "No sigas a la multitud, sigue tu plan.",
+  "Invertir sin estrategia es como navegar sin mapa.",
+  "Si algo parece demasiado bueno para ser verdad, probablemente lo sea.",
+  "Un presupuesto bien hecho es libertad disfrazada.",
+  "El dinero inteligente trabaja incluso mientras duermes.",
+  "Ahorrar no es sacrificio, es inversión en ti.",
+  "El exceso de deuda es el enemigo silencioso de la felicidad.",
+  "Invierte en conocimientos, no solo en activos.",
+  "Tu futuro te agradecerá cada peso que controles hoy.",
+  "El mejor gasto es el que tiene propósito.",
+  "No sacrifiques tu tranquilidad por apariencias.",
+  "Aprende a decir no a compras innecesarias.",
+  "El ahorro no es castigo, es poder.",
+  "El dinero se va rápido si no tiene reglas.",
+  "La paciencia en inversiones multiplica resultados.",
+  "Gastar menos es más difícil que ganar más, pero más seguro.",
+  "No pongas tu seguridad financiera en apuestas riesgosas.",
+  "Invertir es como cocinar: sigue la receta y tendrás éxito.",
+  "No compares tu progreso financiero con otros.",
+  "El dinero debe servirte, no controlarte.",
+  "Aprende a diferenciar deseo de necesidad.",
+  "La libertad financiera se construye un paso a la vez.",
+  "No todas las oportunidades son realmente oportunidades.",
+  "Si te estresas por dinero, algo va mal en tu plan.",
+  "Ahorrar ahora evita preocupaciones mañana.",
+  "Invertir sin educación es jugar a la ruleta rusa.",
+  "Cada vez que dices 'no puedo', tu libertad financiera se aleja.",
+  "El dinero no da felicidad, pero la mala gestión sí da problemas.",
+  "Diversifica para dormir tranquilo.",
+  "La disciplina vence al impulso todos los días.",
+  "Cada meta financiera merece un plan.",
+  "Si compras sin pensar, vendes tu paz interior.",
+  "No pongas todos los huevos en la inversión de moda.",
+  "La riqueza real es tranquilidad, no lujos.",
+  "Tu futuro se construye con cada decisión de hoy.",
+  "Gasta en experiencias, no en cosas que se olvidan.",
+  "El ahorro constante supera la ganancia ocasional.",
+  "Evita deudas que te encadenen.",
+  "El conocimiento financiero es más valioso que el dinero mismo.",
+  "Si tu presupuesto sangra, revisa tus hábitos.",
+  "Las oportunidades vienen para quienes están preparados.",
+  "El tiempo es el activo más poderoso en finanzas.",
+  "Si compras sin necesidad, tu cartera llora.",
+  "Invierte en proyectos que entiendas y apoyes.",
+  "El dinero ama la claridad y la estrategia.",
+  "No compres con miedo ni con envidia.",
+  "Aprender a ahorrar es aprender a vivir libre.",
+  "Cada gasto impulsivo es una pequeña derrota.",
+  "Invierte como un sabio, gasta como un niño consciente.",
+  "No todas las inversiones prometen lo que muestran.",
+  "La seguridad financiera es un estado mental.",
+  "El dinero que guardas hoy puede ser tu superpoder mañana.",
+  "Si algo no suma a tu tranquilidad, mejor no lo hagas.",
+  "La riqueza se construye con constancia, no con suerte.",
+  "Evita consejos financieros de quien nunca los practica.",
+  "Gastar sin intención es regalar tu futuro.",
+  "El ahorro inteligente no duele, libera.",
+  "Cada decisión financiera es un voto a tu futuro.",
+  "No te endeudes para impresionar a nadie.",
+  "Invierte en ti mismo, siempre es rentable.",
+  "El dinero es herramienta, no objetivo.",
+  "Si no controlas tus gastos, tus gastos te controlan.",
+  "Cada peso cuenta, incluso los más pequeños.",
+  "No compres emociones, compra tranquilidad.",
+  "Aprender a manejar dinero es aprender a vivir mejor.",
+  "La riqueza comienza en tu mente y tu plan."
+];
+
+// Función efecto de máquina de escribir
+function typeWriter(text, element, speed=30){
+  element.textContent = "";
+  let i = 0;
+  const interval = setInterval(() => {
+    element.textContent += text.charAt(i);
+    i++;
+    if(i >= text.length) clearInterval(interval);
+  }, speed);
+}
+
+// Función para mostrar una respuesta cuando se hace clic
+function showAnswer() {
+  // Elegir respuesta aleatoria
+  const randomAnswer = allAnswers[Math.floor(Math.random() * allAnswers.length)];
+
+  // Mostrar respuesta con efecto de máquina de escribir
+  typeWriter(randomAnswer, oracleAnswer, 40);
+}
+
+// Evento del botón
+receiveBtn.addEventListener("click", showAnswer);
+</script>
+
+
+
+
+
+        </section>
+    </main>
+
+
+
+
+
+
+    <!-- BOTÓN FLOTANTE DE COMPARTIR -->
+<div class="fixed bottom-6 right-6 z-50">
+
+    <!-- Botones desplegables -->
+    <div id="shareButtons" class="flex flex-col items-center gap-3 mb-4 opacity-0 pointer-events-none transition-all duration-300">
+        
+        <!-- Facebook -->
+        <a id="facebookShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a id="twitterShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-900 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2zm-2.377 17.5h1.64L8.29 4.39H6.57l9.297 15.11z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a id="linkedinShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a id="whatsappShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
+            </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a id="tiktokShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-800 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 48 48" fill="currentColor">
+                <path d="M41.5 14.1c-3.3-.1-6.5-1.7-8.6-4.4-1.1-1.3-1.8-3-2.2-4.7h-.1v-.4c-.1-.6-.1-1.1-.1-1.7H24v30.2c0 2-.8 3.9-2.2 5.3-1.4 1.4-3.3 2.2-5.3 2.2-4.1 0-7.5-3.4-7.5-7.5S12.4 25.7 16.5 25.7c1.1 0 2.2.3 3.2.8V18c-1-.1-2-.2-3-.2-8.3 0-15 6.7-15 15s6.7 15 15 15c4 0 7.8-1.6 10.6-4.4 2.8-2.8 4.4-6.6 4.4-10.6V18.2c2.5 1.8 5.5 2.8 8.6 2.9v-7z"/>
+            </svg>
+        </a>
+
+        <!-- Copiar enlace -->
+        <button id="copyLink"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-500 hover:bg-gray-600 text-white shadow-lg transition hover:-translate-y-1"
+            title="Copiar enlace">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.414-1.414m7.778-7.778a4 4 0 015.656 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.536-1.536"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- BOTÓN FLOTANTE PRINCIPAL -->
+    <button id="toggleShare"
+        class="w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center shadow-xl transition-all hover:-translate-y-1">
+        <i data-lucide="share-2" class="w-6 h-6"></i>
+    </button>
+
+</div>
+
+<script>
+    const toggleShare = document.getElementById("toggleShare");
+    const shareButtons = document.getElementById("shareButtons");
+    const copyLink = document.getElementById("copyLink");
+
+    const facebookShare = document.getElementById("facebookShare");
+    const twitterShare = document.getElementById("twitterShare");
+    const linkedinShare = document.getElementById("linkedinShare");
+    const whatsappShare = document.getElementById("whatsappShare");
+    const tiktokShare = document.getElementById("tiktokShare");
+
+    let open = false;
+
+    // Función para abrir/cerrar botones
+    function toggleButtons(show) {
+        open = show;
+        if (open) {
+            shareButtons.classList.remove("opacity-0", "pointer-events-none");
+            shareButtons.classList.add("opacity-100");
+        } else {
+            shareButtons.classList.add("opacity-0", "pointer-events-none");
+            shareButtons.classList.remove("opacity-100");
+        }
+    }
+
+    toggleShare.onclick = (e) => {
+        toggleButtons(!open);
+        e.stopPropagation(); // Evita que el clic se propague
+    };
+
+    // Asignar URLs dinámicamente según la página actual
+    const currentURL = encodeURIComponent(window.location.href);
+    facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+    twitterShare.href = `https://twitter.com/intent/tweet?url=${currentURL}`;
+    linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}`;
+    whatsappShare.href = `https://api.whatsapp.com/send?text=${currentURL}`;
+    tiktokShare.href = `https://www.tiktok.com/share?url=${currentURL}`;
+
+    // Copiar enlace dinámico
+    copyLink.onclick = (e) => {
+        navigator.clipboard.writeText(window.location.href)
+            .then(() => alert("Enlace copiado al portapapeles"))
+            .catch(() => alert("No se pudo copiar el enlace"));
+        e.stopPropagation(); // Evita cerrar menú
+    };
+
+    // Evitar cerrar al hacer clic dentro del contenedor de botones
+    shareButtons.addEventListener("click", (e) => e.stopPropagation());
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener("click", () => {
+        if (open) toggleButtons(false);
+    });
+
+    // Cerrar al hacer scroll
+    window.addEventListener("scroll", () => {
+        if (open) toggleButtons(false);
+    });
+
+    lucide.createIcons();
+</script>
+
+
+
+
+<!-- ETIQUETA FLOTANTE MODERNA (tipo <<) -->
+<div id="floatingTab" style="
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background:#ffffff;
+  color:#0f172a;
+  padding:12px 14px;
+  border-top-right-radius:12px;
+  border-bottom-right-radius:12px;
+  cursor:pointer;
+  font-weight:700;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 4px 6px rgba(15,23,42,0.1), 0 2px 4px rgba(15,23,42,0.06);
+  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  user-select: none; /* ← Previene selección */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+">
+  »
+</div>
+
+<!-- CAJÓN FLOTANTE DEL BOTÓN -->
+<div id="floatingBtnContainer" style="
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  z-index:998;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity:0;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding-left: 14px;
+">
+  <button id="goToSectionBtn">Sección anterior</button>
+</div>
+
+<!-- ESTILOS DEL BOTÓN MODERNO -->
+<style>
+#goToSectionBtn {
+  border: none;
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(15,23,42,0.1), 0 2px 4px rgba(15,23,42,0.06);
+  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  font-family: 'Lora', serif;
+  letter-spacing: 0.5px;
+  user-select: none; /* ← Previene selección del botón */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#goToSectionBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(15,23,42,0.15), 0 4px 6px rgba(15,23,42,0.1);
+  background: #f8f9fa;
+}
+
+#goToSectionBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(15,23,42,0.06);
+  background: #ffffff;
+}
+
+#floatingTab:hover {
+  transform: translateY(-50%) translateX(2px);
+  box-shadow: 0 8px 12px rgba(15,23,42,0.15), 0 4px 6px rgba(15,23,42,0.1);
+  background: #f8f9fa;
+}
+
+#floatingTab:active {
+  transform: translateY(-50%) translateX(0);
+  box-shadow: 0 2px 4px rgba(15,23,42,0.06);
+  background: #ffffff;
+}
+</style>
+
+<!-- JAVASCRIPT PARA FUNCIONAMIENTO -->
+<script>
+const goToSectionBtn = document.getElementById("goToSectionBtn");
+const floatingBtnContainer = document.getElementById("floatingBtnContainer");
+const floatingTab = document.getElementById("floatingTab");
+
+// URL de destino
+const targetURL = "../herramientas.html";
+
+// Redirección al hacer clic
+goToSectionBtn.addEventListener("click", () => {
+  window.location.href = targetURL;
+});
+
+// Evitar selección de texto con el mouse
+floatingTab.addEventListener("mousedown", (e) => e.preventDefault());
+
+// Estado del cajón
+let isOpen = false;
+
+// Función para mostrar el cajón
+function showFloatingBtn() {
+  floatingBtnContainer.style.transform = "translate(0, -50%)";
+  floatingBtnContainer.style.opacity = "1";
+  floatingTab.textContent = "«";
+  isOpen = true;
+}
+
+// Función para ocultar el cajón
+function hideFloatingBtn() {
+  floatingBtnContainer.style.transform = "translate(-100%, -50%)";
+  floatingBtnContainer.style.opacity = "0";
+  floatingTab.textContent = "»";
+  isOpen = false;
+}
+
+// Abrir o cerrar el cajón al hacer clic en la pestaña
+floatingTab.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (isOpen) {
+    hideFloatingBtn();
+  } else {
+    showFloatingBtn();
+  }
+});
+
+// Cerrar al hacer clic fuera del botón y de la pestaña
+document.addEventListener("click", (e) => {
+  if (!floatingBtnContainer.contains(e.target) && e.target !== floatingTab) {
+    hideFloatingBtn();
+  }
+});
+
+// Cerrar al hacer scroll
+window.addEventListener("scroll", () => {
+  hideFloatingBtn();
+});
+</script>
+
+
+
+
+<!-- ===================== FOOTER PROFESIONAL CON ICONOS ===================== -->
+<footer class="bg-green-600 py-6 text-center text-white mt-20">
+    <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+    <div class="mt-2 flex justify-center gap-6 text-white text-2xl">
+        <!-- Sobre el Blog -->
+        <span id="openAbout" class="cursor-pointer hover:scale-110 transition-transform" title="Sobre el Blog">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-7-9-7-9 7 9 7z" />
+            </svg>
+        </span>
+        <!-- Políticas de Privacidad -->
+        <span id="openPrivacy" class="cursor-pointer hover:scale-110 transition-transform" title="Políticas de Privacidad">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM12 11v10m0-10h10M12 11H2" />
+            </svg>
+        </span>
+        <!-- Términos y Condiciones -->
+        <span id="openTerms" class="cursor-pointer hover:scale-110 transition-transform" title="Términos y Condiciones">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+        </span>
+        <!-- Contacto -->
+        <span id="openContact" class="cursor-pointer hover:scale-110 transition-transform" title="Contacto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4m0 0v4m0-4l-8-8-8 8h4v4h8v-4z" />
+            </svg>
+        </span>
+    </div>
+</footer>
+
+<!-- ===================== ESTILOS DE ANIMACIÓN ===================== -->
+<style>
+    .modal-enter {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.3s ease-out;
+    }
+    .modal-enter-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+</style>
+
+<!-- ===================== MODALES ===================== -->
+<!-- Modal Sobre el Blog -->
+<div id="aboutModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeAbout" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Sobre el Blog</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Bienvenido a Código Millonario, un espacio pensado para quienes buscan tomar control real de sus finanzas y crecer económicamente de manera inteligente. 
+            Aquí encontrarás estrategias claras y prácticas para ahorrar, invertir y gestionar tu dinero con seguridad, aplicables a tu vida diaria y a tus decisiones financieras más importantes.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Cada artículo y recurso está diseñado para ayudarte a identificar oportunidades, evitar errores comunes y generar resultados tangibles en tu economía personal, profesional o empresarial. 
+            Con consejos basados en experiencia y conocimientos sólidos, podrás transformar la información en acciones efectivas que potencien tu libertad financiera y tu tranquilidad económica.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Políticas de Privacidad -->
+<div id="privacyModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closePrivacy" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Políticas de Privacidad</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            En este espacio, nos comprometemos a proteger tu privacidad y la seguridad de tu información personal. Toda la información que puedas proporcionar, como tu nombre, correo electrónico o cualquier otro dato, será utilizada únicamente para los fines establecidos y nunca será compartida con terceros sin tu consentimiento explícito.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Recopilamos información únicamente para mejorar la experiencia de quienes acceden a este espacio, incluyendo estadísticas sobre visitas y el uso de recursos disponibles. No utilizamos técnicas invasivas y no vendemos tus datos bajo ninguna circunstancia.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Este sitio puede contener enlaces a otros recursos o sitios externos. No nos hacemos responsables de las políticas de privacidad de esos sitios, por lo que te recomendamos revisar sus términos antes de proporcionar información personal.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este espacio, aceptas la recolección y el uso de tus datos según lo descrito en estas políticas. Nos reservamos el derecho de actualizar esta política en cualquier momento, y te animamos a revisarla periódicamente para estar al tanto de cualquier cambio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Si tienes preguntas o deseas más información sobre cómo manejamos tu información, puedes contactarnos directamente.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Términos y Condiciones -->
+<div id="termsModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeTerms" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Términos y Condiciones</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Al utilizar este blog de finanzas, aceptas cumplir con los términos y condiciones establecidos a continuación. Esto incluye el uso responsable de la información, el respeto por los derechos de autor y la prohibición de distribuir contenido sin autorización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Todos los recursos, artículos y herramientas se proporcionan únicamente con fines educativos e informativos. No garantizamos resultados financieros específicos y cualquier acción tomada con base en el contenido es responsabilidad exclusiva del usuario.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Está prohibido copiar, distribuir, modificar o usar el contenido de este sitio con fines comerciales sin autorización expresa del propietario. Los usuarios deben aplicar la información con criterio propio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Te recomendamos revisarlos periódicamente para estar al tanto de cualquier actualización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este blog, aceptas cumplir con estos términos y condiciones. El uso del sitio implica la aceptación total de estas normas.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Contacto -->
+<div id="contactModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeContact" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Contacto</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Puedes comunicarte con nosotros a través de:<br>
+            Email: codigomillonarioblog@gmail.com
+        </p>
+    </div>
+</div>
+
+<!-- ===================== SCRIPT PARA MODALES PROFESIONALES ===================== -->
+<script>
+function setupModal(openId, closeId, modalId){
+    const openBtn = document.getElementById(openId);
+    const closeBtn = document.getElementById(closeId);
+    const modal = document.getElementById(modalId);
+    const content = modal.querySelector('div');
+
+    openBtn.addEventListener('click', e=>{
+        e.preventDefault();
+        modal.classList.remove('hidden');
+        modal.classList.add('grid');
+        content.classList.add('modal-enter-active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', ()=>{
+        modal.classList.add('hidden');
+        modal.classList.remove('grid');
+        content.classList.remove('modal-enter-active');
+        document.body.style.overflow = 'auto';
+    });
+
+    modal.addEventListener('click', e=>{
+        if(e.target === modal){
+            modal.classList.add('hidden');
+            modal.classList.remove('grid');
+            content.classList.remove('modal-enter-active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Configurar todos los modales
+setupModal('openAbout','closeAbout','aboutModal');
+setupModal('openPrivacy','closePrivacy','privacyModal');
+setupModal('openTerms','closeTerms','termsModal');
+setupModal('openContact','closeContact','contactModal');
+</script>
+
+
+
+</body>
+</html>

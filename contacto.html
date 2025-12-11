@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/favicon.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0826LEMPPY');
+    </script>
+</head>
+
+<body class="bg-stone-50 text-stone-900">
+
+<!-- HEADER -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+
+        <div class="flex items-center space-x-2" style="font-family: 'Lora', serif;">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold text-stone-900">Código Millonario</span>
+        </div>
+
+        <!-- Menú escritorio -->
+        <div class="hidden md:flex items-center space-x-8" style="font-family: 'Lora', serif;">
+            <a href="./index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+            <a href="./educacionfinanciera.html" class="text-stone-600 hover:text-green-600 transition-colors">Educación Financiera</a>
+            <a href="./herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
+            <a href="./opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+            <a href="./contacto.html" class="text-stone-900 font-semibold">Contacto</a>
+        </div>
+
+        <!-- Botón hamburguesa -->
+        <button class="md:hidden navbar-toggler" id="menu-toggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" style="font-family: 'Lora', serif;">
+        <div class="menu-header">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold">Código Millonario</span>
+        </div>
+
+        <a href="./index.html">Inicio</a>
+        <a href="./educacionfinanciera.html">Educación Financiera</a>
+        <a href="./herramientas.html">Herramientas</a>
+        <a href="./opiniones.html">Opiniones</a>
+        <a href="./contacto.html">Contacto</a>
+
+        <div class="menu-footer">
+            <a href="./contacto.html">Más información</a>
+        </div>
+    </div>
+
+    <style>
+        .navbar-toggler { border: none; background: none; cursor: pointer; z-index: 1100; }
+        .navbar-toggler-icon {
+            width: 25px; height: 2px; background: #000; display: block; position: relative;
+            transition: 0.3s;
+        }
+        .navbar-toggler-icon::before, .navbar-toggler-icon::after {
+            content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0;
+            transition: 0.3s;
+        }
+        .navbar-toggler-icon::before { top: -7px; }
+        .navbar-toggler-icon::after { top: 7px; }
+        .navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+        .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+        .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+        #mobileMenu {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #fff; z-index: 1000; overflow-y: auto;
+        }
+        #mobileMenu.show { display: block; }
+        #mobileMenu .menu-header {
+            position: sticky; top: 0; background: #fff; display: flex; align-items: center;
+            gap: 0.5rem; padding: 1rem; border-bottom: 1px solid #ddd;
+        }
+        #mobileMenu a {
+            display: block; padding: 1rem; font-size: 1.25rem; border-bottom: 1px solid #eee;
+            text-decoration: none; color: #000;
+        }
+        #mobileMenu a:hover { color: #22c55e; }
+        #mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+        #mobileMenu .menu-footer a {
+            display: inline-block; background: #3b82f6; color: #fff;
+            padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: bold;
+        }
+    </style>
+
+    <script>
+        lucide.createIcons();
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('show');
+        });
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('show');
+            });
+        });
+    </script>
+</header>
+
+<!-- HERO -->
+<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
+        <span class="text-green-600">Contáctame</span> Ahora
+    </h1>
+    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6" style="font-family: 'Lora', serif;">
+        ¿Tienes preguntas, propuestas o quieres asesoría? Escríbeme y te responderé lo más pronto posible.
+    </p>
+</section>
+
+<section class="py-12"></section>
+
+<!-- FORMULARIO -->
+<main style="font-family: 'Lora', serif;">
+    <section class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10">
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+
+            <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+
+            <input type="hidden" name="subject" value="Nuevo mensaje desde Código Millonario">
+
+            <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+            <div>
+                <label class="block text-sm font-medium mb-2">Nombre</label>
+                <input type="text" name="name"
+                    class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
+                    required>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-2">Correo electrónico</label>
+                <input type="email" name="email"
+                    class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
+                    required>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-2">Mensaje</label>
+                <textarea rows="5" name="message"
+                    class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
+                    required></textarea>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+    </section>
+</main>
+</body>
+
+
+
+
+        <!-- ESPACIO FINAL -->
+    <section class="py-12"></section>
+
+
+
+
+<!-- ===================== FOOTER PROFESIONAL CON ICONOS ===================== -->
+
+<footer class="bg-green-600 py-6 text-center text-white mt-20" style="font-family: 'Lora', serif;">
+    <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+    <div class="mt-2 flex justify-center gap-6 text-white text-2xl">
+        <!-- Sobre el Blog -->
+        <span id="openAbout" class="cursor-pointer hover:scale-110 transition-transform" title="Sobre el Blog">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-7-9-7-9 7 9 7z" />
+            </svg>
+        </span>
+        <!-- Políticas de Privacidad -->
+        <span id="openPrivacy" class="cursor-pointer hover:scale-110 transition-transform" title="Políticas de Privacidad">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM12 11v10m0-10h10M12 11H2" />
+            </svg>
+        </span>
+        <!-- Términos y Condiciones -->
+        <span id="openTerms" class="cursor-pointer hover:scale-110 transition-transform" title="Términos y Condiciones">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+        </span>
+        <!-- Contacto -->
+        <span id="openContact" class="cursor-pointer hover:scale-110 transition-transform" title="Contacto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4m0 0v4m0-4l-8-8-8 8h4v4h8v-4z" />
+            </svg>
+        </span>
+    </div>
+</footer>
+
+<!-- ===================== ESTILOS DE ANIMACIÓN ===================== -->
+<style>
+    .modal-enter {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.3s ease-out;
+    }
+    .modal-enter-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+</style>
+
+<!-- ===================== MODALES ===================== -->
+<!-- Modal Sobre el Blog -->
+<div id="aboutModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeAbout" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Sobre el Blog</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Bienvenido a Código Millonario, un espacio pensado para quienes buscan tomar control real de sus finanzas y crecer económicamente de manera inteligente. 
+            Aquí encontrarás estrategias claras y prácticas para ahorrar, invertir y gestionar tu dinero con seguridad, aplicables a tu vida diaria y a tus decisiones financieras más importantes.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Cada artículo y recurso está diseñado para ayudarte a identificar oportunidades, evitar errores comunes y generar resultados tangibles en tu economía personal, profesional o empresarial. 
+            Con consejos basados en experiencia y conocimientos sólidos, podrás transformar la información en acciones efectivas que potencien tu libertad financiera y tu tranquilidad económica.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Políticas de Privacidad -->
+<div id="privacyModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closePrivacy" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Políticas de Privacidad</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            En este espacio, nos comprometemos a proteger tu privacidad y la seguridad de tu información personal. Toda la información que puedas proporcionar, como tu nombre, correo electrónico o cualquier otro dato, será utilizada únicamente para los fines establecidos y nunca será compartida con terceros sin tu consentimiento explícito.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Recopilamos información únicamente para mejorar la experiencia de quienes acceden a este espacio, incluyendo estadísticas sobre visitas y el uso de recursos disponibles. No utilizamos técnicas invasivas y no vendemos tus datos bajo ninguna circunstancia.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Este sitio puede contener enlaces a otros recursos o sitios externos. No nos hacemos responsables de las políticas de privacidad de esos sitios, por lo que te recomendamos revisar sus términos antes de proporcionar información personal.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este espacio, aceptas la recolección y el uso de tus datos según lo descrito en estas políticas. Nos reservamos el derecho de actualizar esta política en cualquier momento, y te animamos a revisarla periódicamente para estar al tanto de cualquier cambio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Si tienes preguntas o deseas más información sobre cómo manejamos tu información, puedes contactarnos directamente.
+        </p>
+    </div>
+</div>
+
+
+<!-- Modal Términos y Condiciones -->
+<div id="termsModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeTerms" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Términos y Condiciones</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Al utilizar este blog de finanzas, aceptas cumplir con los términos y condiciones establecidos a continuación. Esto incluye el uso responsable de la información, el respeto por los derechos de autor y la prohibición de distribuir contenido sin autorización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Todos los recursos, artículos y herramientas se proporcionan únicamente con fines educativos e informativos. No garantizamos resultados financieros específicos y cualquier acción tomada con base en el contenido es responsabilidad exclusiva del usuario.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Está prohibido copiar, distribuir, modificar o usar el contenido de este sitio con fines comerciales sin autorización expresa del propietario. Los usuarios deben aplicar la información con criterio propio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Te recomendamos revisarlos periódicamente para estar al tanto de cualquier actualización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este blog, aceptas cumplir con estos términos y condiciones. El uso del sitio implica la aceptación total de estas normas.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Contacto -->
+<div id="contactModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeContact" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Contacto</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Puedes comunicarte con nosotros a través de:<br>
+            Email: codigomillonarioblog@gmail.com
+        </p>
+    </div>
+</div>
+
+
+<!-- ===================== SCRIPT PARA MODALES PROFESIONALES ===================== -->
+<script>
+function setupModal(openId, closeId, modalId){
+    const openBtn = document.getElementById(openId);
+    const closeBtn = document.getElementById(closeId);
+    const modal = document.getElementById(modalId);
+    const content = modal.querySelector('div');
+
+    openBtn.addEventListener('click', e=>{
+        e.preventDefault();
+        modal.classList.remove('hidden');
+        modal.classList.add('grid');
+        content.classList.add('modal-enter-active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', ()=>{
+        modal.classList.add('hidden');
+        modal.classList.remove('grid');
+        content.classList.remove('modal-enter-active');
+        document.body.style.overflow = 'auto';
+    });
+
+    modal.addEventListener('click', e=>{
+        if(e.target === modal){
+            modal.classList.add('hidden');
+            modal.classList.remove('grid');
+            content.classList.remove('modal-enter-active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Configurar todos los modales
+setupModal('openAbout','closeAbout','aboutModal');
+setupModal('openPrivacy','closePrivacy','privacyModal');
+setupModal('openTerms','closeTerms','termsModal');
+setupModal('openContact','closeContact','contactModal');
+</script>
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

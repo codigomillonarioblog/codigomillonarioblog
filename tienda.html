@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Millonario - Finanzas Personales y Libertad Financiera</title>
+
+    <meta name="description" content="Tienda de eBooks y cursos prácticos para mejorar tu mentalidad financiera, multiplicar ingresos y aprender a invertir en Colombia.">
+
+    <link rel="icon" href="./assets/img/favicon.png" type="image/png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+body { background: #f9fafb; color: #111; font-family: 'Inter', sans-serif; }
+
+/* ===== MENÚ HAMBURGUESA ===== */
+.navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
+.navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+.navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+#mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; padding-top: 0; overflow-y: auto; }
+#mobileMenu.show { display: block; }
+#mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
+#mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; }
+#mobileMenu a:hover { color: #22c55e; }
+#mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+#mobileMenu .menu-footer a { display: inline-block; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+#mobileMenu .menu-footer a:hover { background: #2563eb; }
+@media(min-width: 768px) { #mobileMenu { display: none !important; } }
+
+/* ===== TIENDA ===== */
+.inner { max-width: 1200px; margin: 0 auto; padding: 4em 1em; }
+.grid-tienda { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5em; }
+
+/* ===== TARJETAS ===== */
+.card { position: relative; background: #fff; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column; min-height: 450px; transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(34,197,94,0.2); }
+.card img { flex: 1; width: 100%; object-fit: cover; display: block; background: #e5e7eb; border-bottom: 1px solid #eee; border-radius: 20px 20px 0 0; }
+.card-content { padding: 1.5em; }
+.card-content h3 { color: #111; font-size: 1.25em; margin-bottom: 0.8em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.card-content p { color: #555; font-size: 0.95em; margin-bottom: 0.5em; }
+.price { color: #22c55e; font-size: 1.1em; font-weight: bold; margin-bottom: 1em; }
+
+/* ===== BOTONES ===== */
+.button.primary { background: #22c55e; color: #fff; border: none; font-weight: bold; padding: 0.7em 1.2em; border-radius: 10px; display: inline-block; text-decoration: none; transition: transform 0.2s ease, background 0.2s; }
+.button.primary:hover { transform: scale(1.05); background: #16a34a; }
+.button.disabled { background: #cbd5e1; cursor: not-allowed; transform: none; }
+
+/* ===== ANIMACIÓN SHAKE ===== */
+@keyframes shake3 { 0%,100%{transform:translateX(0);}10%{transform:translateX(-4px);}20%{transform:translateX(4px);}30%{transform:translateX(-4px);}40%{transform:translateX(4px);}50%{transform:translateX(-4px);}60%{transform:translateX(0);} }
+.shake-button { animation: shake3 0.8s ease-in-out infinite; animation-delay: 2s; }
+
+/* ===== DESCRIPCIÓN ===== */
+.toggle-desc { color: #111; background: none; border: none; cursor: pointer; font-size: 0.95em; font-weight: 500; display: flex; flex-direction: column; align-items: center; margin-bottom: 0.8em; transition: color 0.2s ease; }
+.toggle-desc:hover { color: #22c55e; }
+.description { display: none; background: rgba(34,197,94,0.05); color: #111; padding: 1em; border-radius: 10px; font-size: 0.95em; margin-top: 0.8em; line-height: 1.5em; text-align: justify; max-height: 200px; overflow-y: auto; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+<!-- Google tag (gtag.js) - SOLO UNA VEZ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+</head>
+
+<body class="bg-stone-50 text-stone-900" style="font-family: 'Lora', serif;">
+
+<!-- ===================== HEADER ===================== -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+
+        <div class="flex items-center space-x-2">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold">Código Millonario</span>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html">Inicio</a>
+            <a href="educacionfinanciera.html">Educación Financiera</a>
+            <a href="herramientas.html">Herramientas</a>
+            <a href="opiniones.html">Opiniones</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+
+        <button class="md:hidden navbar-toggler" id="menu-toggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div id="mobileMenu">
+        <div class="menu-header">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold">Código Millonario</span>
+        </div>
+
+        <a href="index.html">Inicio</a>
+        <a href="educacionfinanciera.html">Educación Financiera</a>
+        <a href="herramientas.html">Herramientas</a>
+        <a href="opiniones.html">Opiniones</a>
+        <a href="contacto.html">Contacto</a>
+
+        <div class="menu-footer">
+            <a href="contacto.html">Más información</a>
+        </div>
+    </div>
+</header>
+
+
+<!-- ======================= HERO ======================= -->
+<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+        Tienda <span class="text-green-600">eBooks y Cursos</span>
+    </h1>
+    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
+        Formación práctica para multiplicar tus ingresos, mejorar tu mentalidad financiera y construir nuevas fuentes de dinero desde cero.
+    </p>
+</section>
+
+
+
+
+    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
+Próximamente
+    </p>
+
+
+
+
+
+<script>
+lucide.createIcons();
+
+// Toggle descripción
+document.querySelectorAll('.toggle-desc').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const desc = btn.nextElementSibling;
+    const isOpen = desc.style.display === 'block';
+    desc.style.display = isOpen ? 'none' : 'block';
+    btn.innerHTML = isOpen ? '&gt; Leer descripción' : 'Cerrar descripción';
+  });
+});
+
+// Menú hamburguesa
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+});
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+  });
+});
+
+
+
+
+</script>
+</body>
+</html>
