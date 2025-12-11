@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cómo avanzar en tu carrera mientras mantienes tu empleo - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+      <!-- Favicon -->
+    <link rel="icon" href="../../../assets/img/favicon.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+</head>
+
+
+    <!-- ESTILOS MENÚ HAMBURGUESA -->
+    <style>
+        .navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
+        .navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before, .navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before { top: -7px; }
+        .navbar-toggler-icon::after { top: 7px; }
+        .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+        .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+        .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+        #mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; padding-top: 0; overflow-y: auto; }
+        #mobileMenu.show { display: block; }
+
+        #mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
+        #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
+        #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
+
+        #mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; text-align: left; }
+        #mobileMenu a:hover { color: #22c55e; }
+
+        #mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+        #mobileMenu .menu-footer a { display: inline-block; background: #22c55e; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+        #mobileMenu .menu-footer a:hover { background: #16a34a; }
+
+        @media(min-width: 768px) { #mobileMenu { display: none !important; } }
+    </style>
+</head>
+
+<body class="bg-stone-50 text-stone-900">
+
+     <!-- HEADER CON MENÚ HAMBURGUESA -->
+<header class="bg-white shadow-sm sticky top-0 z-50" style="font-family: 'Lora', serif;">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        
+         <div class="flex items-center space-x-2">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold">Código Millonario</span>
+        </div>
+
+            <!-- Menú escritorio -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+                <a href="../../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
+                <a href="../../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
+                <a href="../../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+                <a href="../../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+            </div>
+
+            <!-- Botón hamburguesa -->
+            <button class="md:hidden navbar-toggler" id="menu-toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div id="mobileMenu">
+            <div class="menu-header">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span class="text-2xl font-bold">Código Millonario</span>
+            </div>
+
+            <a href="../../../index.html">Inicio</a>
+            <a href="../../../educacionfinanciera.html">Educación Financiera</a>
+            <a href="../../../herramientas.html">Herramientas</a>
+            <a href="../../../opiniones.html">Opiniones</a>
+            <a href="../../../contacto.html">Contacto</a>
+
+            <div class="menu-footer">
+                <a href="../../../contacto.html">Más información</a>
+            </div>
+        </div>
+
+        <script>
+            lucide.createIcons();
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('show');
+            });
+
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('show');
+                });
+            });
+        </script>
+    </header>
+
+ 
+<!-- HERO -->
+<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center" style="font-family: 'Lora', serif;">
+    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+             Avanza en tu carrera <br>
+    <span class="text-green-600">  sin renunciar a </span> tu trabajo actual  <br>   
+    </h1>        
+    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
+    Claves que te permiten avanzar en tu carrera mientras mantienes tu empleo y aprende estrategias prácticas para destacar sin poner en riesgo tu puesto actual.
+    </p>
+    <p class="text-stone-500 mt-4">📅 Actualizado: Diciembre 2025</p>
+</section>
+
+
+
+                 <!-- INTRODUCCIÓN GENERAL -->
+      <main class="py-20" style="font-family: 'Lora', serif;">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+
+<!-- INTRODUCCIÓN -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-12">Cómo avanzar en tu carrera mientras mantienes tu empleo 🚀 </h2>
+<div class="mb-6">
+<p class="text-stone-700 leading-relaxed mb-4 text-justify relative">
+    <img src="../../../assets/png/avanzar-carrera-trabajo.png" alt="" 
+         class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-none shadow">
+        Muchos profesionales sienten la urgencia de crecer, pero temen perder la seguridad de su empleo actual. La verdad es que puedes construir tu carrera paso a paso mientras mantienes estabilidad. Cada proyecto que asumes, cada contacto que generas y cada habilidad que desarrollas hoy es un escalón que te acerca a un futuro donde tu carrera es el centro de tu éxito profesional, con evidencia tangible de tu progreso y capacidad para liderar tu propio camino.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Antes de invertir tiempo y energía, necesitas claridad absoluta sobre lo que quieres construir. Saber por qué y hacia dónde vas te permite priorizar acciones con impacto real y evitar la trampa de dispersarte en actividades que no suman. Por ejemplo, alguien que quiere convertirse en consultor estratégico puede decidir enfocarse en proyectos de análisis y en la creación de contenido profesional que evidencie su conocimiento, sin distraerse en tareas que solo consumen tiempo.
+</p>
+</div>
+
+<!-- CONSTRUYE UNA BASE SÓLIDA -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-12">Fortalece tu base profesional actual 🏗️</h2>
+<div class="mb-6">
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        El trabajo que tienes hoy no es un simple lugar donde cumples horarios: es el espacio donde construyes tu disciplina, tu reputación y tu criterio profesional. Cuando haces las cosas bien, aun en tareas que parecen rutinarias, estás creando una base que te servirá para todo lo que viene después. Tomar responsabilidades que otros evitan, proponer soluciones cuando nadie las pide y aprender de cada proyecto te permite crecer sin anunciarlo. Y con el tiempo, esa constancia queda registrada en resultados reales: procesos que mejoraste, problemas que resolviste y personas que confían en ti. Esa evidencia silenciosa es la que te da peso cuando quieras avanzar, cambiar de rumbo o emprender un camino propio.
+</p>
+</div>
+
+<!-- CREA FUENTES DE INGRESO PROPIAS -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-12">Genera ingresos con tus ideas 💡</h2>
+<div class="mb-6">
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Convertir una idea en una fuente de ingreso es uno de los movimientos más inteligentes que puedes hacer hoy. No se trata solo de “crear algo”, sino de entender que cada proyecto por pequeño que parezca puede funcionar como una pieza de tu patrimonio. Cuando construyes una herramienta, un servicio o un contenido con intención, estás levantando algo que trabaja por ti incluso cuando no estás presente. Ese proceso te obliga a pensar como creador, a descubrir cómo entregar valor y a identificar oportunidades que la mayoría pasa por alto. Y lo mejor es que, con el tiempo, cada proyecto bien hecho se vuelve un activo que suma: te posiciona, te abre puertas y, sobre todo, te permite generar dinero desde tu propio talento sin depender de nadie.
+</p>
+<ul class="list-disc pl-6 text-stone-700 leading-relaxed space-y-2 text-justify">
+        <li>Crear guías digitales o plantillas útiles para personas que estudian lo mismo que tú y venderlas a bajo costo.</li>
+        <li>Ofrecer microservicios relacionados con habilidades que ya dominas, como edición, tutorías o diseño básico.</li>
+        <li>Lanzar un pequeño proyecto web donde compartas soluciones a problemas que ya enfrentas en tu carrera o trabajo.</li>
+        <li>Montar un mini emprendimiento de productos sencillos que puedas gestionar en tus tiempos libres sin descuidar tus estudios.</li>
+</ul>
+</div>
+
+<!-- DIVERSIFICA -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-12">Expande tu caja de herramientas profesional 🛠️</h2>
+<div class="mb-6">
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        No basta con ser bueno en una sola área; diversificar tus habilidades es la estrategia que separa a los profesionales promedio de los que lideran. Mientras mantienes tu empleo para subsistir, puedes invertir tiempo en aprender competencias que se complementen entre sí y te permitan adaptarte a oportunidades inesperadas. Por ejemplo, combinar conocimientos financieros con manejo de datos, o habilidades de comunicación con gestión de proyectos, te da ventaja al tomar decisiones y ejecutar iniciativas en cualquier entorno económico.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        La diversificación no significa dispersión: se trata de elegir habilidades que sumen valor real a tu perfil y generen retorno tangible. Cada nueva capacidad que adquieres funciona como un activo que puedes aplicar inmediatamente en tu empleo actual, en proyectos personales o en oportunidades futuras. Esto te permite avanzar profesionalmente sin sacrificar estabilidad financiera y, al mismo tiempo, estar preparado para asumir roles más estratégicos cuando llegue el momento de dar el salto.
+</p>
+<ul class="list-disc list-inside mb-4 text-stone-700 text-justify">
+        <li>Aprende herramientas digitales que complementen tu área principal, como análisis de datos, software financiero o plataformas de productividad.</li>
+        <li>Desarrolla habilidades de comunicación y negociación que te permitan destacar en equipos y proyectos complejos.</li>
+        <li>Explora conceptos básicos de finanzas, inversiones o economía para tomar decisiones más inteligentes en tu trabajo y proyectos personales.</li>
+        <li>Participa en talleres prácticos o simulaciones que pongan a prueba tus nuevas competencias de manera tangible.</li>
+        <li>Aplica lo aprendido en mini-proyectos internos o personales, midiendo resultados y ajustando estrategias.</li>
+        <li>Crea un portafolio de logros diversificados que respalde tu preparación y aumente tu valor frente a futuros empleadores o clientes.</li>
+</ul>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Al expandir tu caja de herramientas profesional de manera estratégica, cada habilidad nueva se convierte en un activo que aumenta tu confianza, tu capacidad de adaptación y tu potencial económico. Esto transforma tu empleo actual y tu estudio en una plataforma real de crecimiento y preparación para la carrera que deseas liderar.
+</p>
+</div>
+
+<!-- CONSTRUYE RED DE APOYO -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-12">Construye tu red de apoyo como un ecosistema de oportunidades 🌐</h2>
+<div class="mb-6">
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Imagina tu red profesional como un tablero de inversión: cada conexión es un activo que puede rendir conocimiento, oportunidades o respaldo estratégico. Mientras estudias y mantienes tu empleo, algunas relaciones pueden enseñarte atajos que ningún libro o curso cubre, otras pueden abrir puertas inesperadas o simplemente servir como referencia cuando necesites validar ideas o decisiones importantes.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        No se trata de sumar contactos, sino de crear un ecosistema donde cada vínculo aporta valor. Puedes aprender de colegas que dominan áreas que tú apenas estás explorando, colaborar con mentores que te desafíen a pensar distinto o incluso interactuar con profesionales de industrias relacionadas para entender cómo funcionan los flujos de dinero, inversión y recursos en la práctica.
+</p>
+<ul class="list-disc list-inside mb-4 text-stone-700 text-justify">
+        <li>Identifica expertos que puedan enseñarte cómo tomar decisiones financieras inteligentes en tu futura carrera.</li>
+        <li>Busca compañeros de estudio o trabajo con los que puedas intercambiar conocimientos y proyectos prácticos.</li>
+        <li>Conecta con personas que gestionen presupuestos o recursos, para observar y aprender cómo se toman decisiones económicas reales.</li>
+        <li>Participa en grupos de discusión o comunidades profesionales donde se compartan estrategias y oportunidades concretas.</li>
+        <li>Establece relaciones con personas que ya hayan dado el salto profesional que tú buscas, y aprende de sus errores y aciertos.</li>
+        <li>Aplica lo aprendido de tus contactos directamente en tus proyectos, para transformar la teoría en experiencia tangible.</li>
+</ul>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Con esta visión, tu red de apoyo deja de ser un concepto abstracto y se convierte en un ecosistema activo de aprendizaje, estrategia y oportunidades. Cada conexión es un recurso que potencia tu carrera y tu capacidad de tomar decisiones financieras y profesionales acertadas, haciendo que tu empleo actual y tu estudio trabajen juntos para construir tu futuro.
+</p>
+</div>
+
+<!-- ADMINISTRA TUS RECURSOS -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-12">Administra tus recursos estratégicamente 💰</h2>
+<div class="mb-6">
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Cuando estudias y trabajas al mismo tiempo, tu tiempo y tu dinero se vuelven tus recursos más valiosos. Cada decisión financiera y cada hora invertida en proyectos personales debe generar un retorno tangible: experiencia, habilidades o conexiones que impulsen tu carrera futura. No se trata solo de ahorrar o cumplir horarios, sino de planear cada movimiento como una inversión estratégica en tu desarrollo profesional. Por ejemplo, destinar parte de tu salario a cursos que realmente agreguen valor a tu área de estudio o dedicar bloques específicos de tiempo a proyectos que puedan generar resultados medibles es mucho más efectivo que dispersarte en múltiples actividades sin rumbo.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        También es clave medir el impacto de tus acciones. Cada proyecto, cada práctica o cada iniciativa paralela debe responder a la pregunta: “¿Esto me acerca a la carrera que quiero o solo consume mis recursos?”. Establecer indicadores claros como habilidades adquiridas, contactos relevantes o resultados cuantificables te permite ajustar tu enfoque constantemente y asegurarte de que cada esfuerzo realmente sume. De esta manera, tu empleo deja de ser solo un medio de subsistencia y se convierte en una plataforma donde construyes experiencia, disciplina y capacidad de decisión estratégica.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Además, administrar tus recursos de manera inteligente implica anticipar oportunidades y riesgos. Ahorrar para invertir en herramientas, libros, cursos o incluso pequeños proyectos rentables te da margen de maniobra y libertad para probar ideas sin comprometer tu estabilidad económica. Priorizar actividades de alto retorno, aprender de tus errores y documentar tus avances convierte cada día en una inversión consciente que fortalece tu carrera y tu independencia financiera. En otras palabras, mientras mantienes tu empleo para subsistir, cada acción calculada y cada decisión estratégica construyen la base para que tu futuro profesional y económico sea sólido y escalable.
+</p>
+</div>
+
+<!-- PREPARA EL SALTO -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-12">Prepara el salto hacia tu carrera 🏁</h2>
+<div class="mb-6">
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Estás en tu empleo actual porque necesitas cubrir tus gastos, pero tu mente no deja de imaginar tu futuro profesional. Cada día es una mezcla de obligaciones inmediatas y ambiciones personales, y sabes que el salto hacia tu carrera no puede ser improvisado. Prepararlo requiere ingenio: transformar tu tiempo limitado en avances concretos que te acerquen a tu meta. No es suficiente soñar; necesitas un plan que te permita avanzar sin arriesgar tu sustento. Cada acción cuenta, y lo que hagas hoy debe acercarte a la persona que quieres ser mañana.
+</p>
+<ul class="list-disc list-inside mb-4 text-stone-700 text-justify">
+        <li>Identifica qué habilidades te faltan para tu carrera ideal y dedica bloques pequeños de tiempo a dominarlas sin descuidar tu empleo.</li>
+        <li>Construye proyectos paralelos que demuestren tu capacidad: aunque sean pequeños, deben tener resultados medibles.</li>
+        <li>Conecta con personas que ya estén donde tú quieres llegar; aprende de ellos y busca oportunidades para colaborar o recibir mentoría.</li>
+        <li>Documenta todo: logros, aprendizajes y mejoras; esto será tu evidencia tangible cuando decidas dar el salto.</li>
+        <li>Evalúa riesgos y planifica tus pasos: define cuándo y cómo podrás hacer la transición, teniendo siempre un colchón financiero y estratégico.</li>
+</ul>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Este enfoque transforma tu empleo actual en una plataforma, no un límite. Cada tarea, cada proyecto y cada hora invertida se convierte en una inversión en tu futuro profesional. El salto dejará de ser un riesgo incierto y se volverá un movimiento calculado, inevitable y preparado, donde tu preparación y constancia te colocan en el lugar que siempre quisiste alcanzar.
+</p>
+</div>
+
+<!-- CIERRE -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-12">Convierte tu empleo en la base de tu éxito 🏆</h2>
+<div class="mb-6">
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Tu empleo actual no es solo un ingreso: es el terreno donde puedes experimentar, probar estrategias y acumular ventaja real. Cada día es una oportunidad para ganar experiencia que te hará destacar en tu carrera y, de paso, mejorar tu relación con el dinero y la toma de decisiones. Aquí tienes ideas originales que pocos considerarían, pero que realmente te entrenan para ser un profesional más valioso y estratégico.
+</p>
+<ul class="list-disc list-inside mb-4 text-stone-700 text-justify">
+        <li>Invierte tus horas extra como si fueran acciones: mide cuánto tiempo te da retorno en habilidades y resultados concretos, igual que un portafolio financiero.</li>
+        <li>Aplica la lógica de los casinos y apuestas: analiza riesgos y beneficios antes de proponer cambios o liderar proyectos, para que cada decisión sea calculada.</li>
+        <li>Usa la regla del caballo ganador: identifica a colegas o mentores que “corren primero” en proyectos estratégicos y aprende directamente de ellos.</li>
+        <li>Transforma problemas en “perros guardianes”: identifica obstáculos que nadie enfrenta y conviértelos en oportunidades para demostrar liderazgo y creatividad.</li>
+        <li>Crea un mini “banco de proyectos”: guarda ideas, prototipos y mejoras, y decide cuál lanzar según la oportunidad y el impacto potencial, como un trader de innovación.</li>
+        <li>Observa la dinámica de tu oficina como un mercado: quién mueve recursos, cómo se toman decisiones y dónde están los cuellos de botella; aprende a navegarlo estratégicamente para posicionarte.</li>
+</ul>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+        Con estas estrategias, tu empleo deja de ser un límite y se convierte en un campo de entrenamiento financiero y profesional. Cada movimiento que hagas hoy te da ventaja, experiencia y control para cuando decidas dar el salto hacia la carrera y la vida que realmente deseas.
+</p>
+</div>
+
+
+
+
+      </div>
+    </main>
+
+
+
+<div class="interlink-container mx-auto my-12 max-w-3xl p-4 bg-white shadow rounded-lg" style="font-family: 'Lora', serif;">
+
+  <!-- FRASE GUIA -->
+  <p class="text-stone-700 text-sm mb-2 text-center font-bold">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir".
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+    <!-- SELECT DE ARTÍCULOS -->
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+
+    <!-- BUSCADOR -->
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+
+    <!-- BOTÓN IR -->
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2">Ir</button>
+
+    <!-- BOTÓN VER TODOS -->
+    <a id="viewAllBtn" href="./index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-700 text-sm">
+    Total <span id="totalArticles" class="font-semibold mx-1">0</span> artículos
+  </div>
+</div>
+
+<style>
+.interlink-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.select-pages, .goto-page, .page-box {
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  height: 40px;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-pages, .goto-page {
+  width: 100%;
+}
+
+.select-pages:hover, .goto-page:hover, .page-box:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+
+.page-box {
+  min-width: 80px;
+}
+
+.page-box:disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}
+</style>
+
+<script>
+// ELEMENTOS
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const viewAllBtn = document.getElementById("viewAllBtn");
+const perPage = 6;
+
+let articles = [];
+
+// MEZCLAR ALEATORIAMENTE
+function shuffleArray(array) {
+  return array
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a,b) => a.sort - b.sort)
+    .map(({value}) => value);
+}
+
+// MOSTRAR HASTA 6 ARTÍCULOS
+function fillSelect(list) {
+  select.innerHTML = "";
+  const paginated = shuffleArray(list).slice(0, perPage);
+
+  if (paginated.length === 0) {
+    const option = document.createElement("option");
+    option.textContent = "No se encontraron artículos";
+    option.disabled = true;
+    select.appendChild(option);
+  } else {
+    paginated.forEach(a => {
+      const option = document.createElement("option");
+      option.value = a.url;
+      option.textContent = a.title;
+      select.appendChild(option);
+    });
+  }
+
+  totalArticles.textContent = list.length;
+}
+
+// BOTÓN IR
+goBtn.addEventListener("click", () => {
+  const url = select.value;
+  if (url) window.location.href = url;
+});
+
+// BUSCADOR
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  const filtered = articles.filter(a => a.title.toLowerCase().includes(query));
+  fillSelect(filtered);
+});
+
+// ---------------------------
+// RUTA REAL AJUSTADA
+// ---------------------------
+// Carga todos los artículos desde:
+// blog/inversiones/invertir-en-plataformas/index.html
+// ---------------------------
+
+fetch('../mejorar-tu-empleo/index.html')
+  .then(response => response.text())
+  .then(html => {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+
+    // Extraer enlaces
+    const articleLinks = Array.from(tempDiv.querySelectorAll('.article a'));
+
+    articles = articleLinks.map(a => {
+      const t = a.querySelector('h3');
+      return {
+        title: t ? t.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href")
+      };
+    });
+
+    fillSelect(articles);
+
+    // Botón ver todos
+    viewAllBtn.href = "../mejorar-tu-empleo/index.html";
+  })
+  .catch(err => console.error('Error al cargar artículos:', err));
+</script>
+
+
+
+
+    <!-- BOTÓN FLOTANTE DE COMPARTIR -->
+<div class="fixed bottom-6 right-6 z-50">
+
+    <!-- Botones desplegables -->
+    <div id="shareButtons" class="flex flex-col items-center gap-3 mb-4 opacity-0 pointer-events-none transition-all duration-300">
+        
+        <!-- Facebook -->
+        <a id="facebookShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a id="twitterShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-900 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2zm-2.377 17.5h1.64L8.29 4.39H6.57l9.297 15.11z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a id="linkedinShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a id="whatsappShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
+            </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a id="tiktokShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-800 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 48 48" fill="currentColor">
+                <path d="M41.5 14.1c-3.3-.1-6.5-1.7-8.6-4.4-1.1-1.3-1.8-3-2.2-4.7h-.1v-.4c-.1-.6-.1-1.1-.1-1.7H24v30.2c0 2-.8 3.9-2.2 5.3-1.4 1.4-3.3 2.2-5.3 2.2-4.1 0-7.5-3.4-7.5-7.5S12.4 25.7 16.5 25.7c1.1 0 2.2.3 3.2.8V18c-1-.1-2-.2-3-.2-8.3 0-15 6.7-15 15s6.7 15 15 15c4 0 7.8-1.6 10.6-4.4 2.8-2.8 4.4-6.6 4.4-10.6V18.2c2.5 1.8 5.5 2.8 8.6 2.9v-7z"/>
+            </svg>
+        </a>
+
+        <!-- Copiar enlace -->
+        <button id="copyLink"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-500 hover:bg-gray-600 text-white shadow-lg transition hover:-translate-y-1"
+            title="Copiar enlace">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.414-1.414m7.778-7.778a4 4 0 015.656 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.536-1.536"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- BOTÓN FLOTANTE PRINCIPAL -->
+    <button id="toggleShare"
+        class="w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center shadow-xl transition-all hover:-translate-y-1">
+        <i data-lucide="share-2" class="w-6 h-6"></i>
+    </button>
+
+</div>
+
+<script>
+    const toggleShare = document.getElementById("toggleShare");
+    const shareButtons = document.getElementById("shareButtons");
+    const copyLink = document.getElementById("copyLink");
+
+    const facebookShare = document.getElementById("facebookShare");
+    const twitterShare = document.getElementById("twitterShare");
+    const linkedinShare = document.getElementById("linkedinShare");
+    const whatsappShare = document.getElementById("whatsappShare");
+    const tiktokShare = document.getElementById("tiktokShare");
+
+    let open = false;
+
+    // Función para abrir/cerrar botones
+    function toggleButtons(show) {
+        open = show;
+        if (open) {
+            shareButtons.classList.remove("opacity-0", "pointer-events-none");
+            shareButtons.classList.add("opacity-100");
+        } else {
+            shareButtons.classList.add("opacity-0", "pointer-events-none");
+            shareButtons.classList.remove("opacity-100");
+        }
+    }
+
+    toggleShare.onclick = (e) => {
+        toggleButtons(!open);
+        e.stopPropagation(); // Evita que el clic se propague
+    };
+
+    // Asignar URLs dinámicamente según la página actual
+    const currentURL = encodeURIComponent(window.location.href);
+    facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+    twitterShare.href = `https://twitter.com/intent/tweet?url=${currentURL}`;
+    linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}`;
+    whatsappShare.href = `https://api.whatsapp.com/send?text=${currentURL}`;
+    tiktokShare.href = `https://www.tiktok.com/share?url=${currentURL}`;
+
+    // Copiar enlace dinámico
+    copyLink.onclick = (e) => {
+        navigator.clipboard.writeText(window.location.href)
+            .then(() => alert("Enlace copiado al portapapeles"))
+            .catch(() => alert("No se pudo copiar el enlace"));
+        e.stopPropagation(); // Evita cerrar menú
+    };
+
+    // Evitar cerrar al hacer clic dentro del contenedor de botones
+    shareButtons.addEventListener("click", (e) => e.stopPropagation());
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener("click", () => {
+        if (open) toggleButtons(false);
+    });
+
+    // Cerrar al hacer scroll
+    window.addEventListener("scroll", () => {
+        if (open) toggleButtons(false);
+    });
+
+    lucide.createIcons();
+</script>
+
+
+
+
+<!-- ETIQUETA FLOTANTE MODERNA (tipo <<) -->
+<div id="floatingTab" style="
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background:#ffffff;
+  color:#0f172a;
+  padding:12px 14px;
+  border-top-right-radius:12px;
+  border-bottom-right-radius:12px;
+  cursor:pointer;
+  font-weight:700;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 4px 6px rgba(15,23,42,0.1), 0 2px 4px rgba(15,23,42,0.06);
+  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  user-select: none; /* ← Previene selección */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+">
+  »
+</div>
+
+<!-- CAJÓN FLOTANTE DEL BOTÓN -->
+<div id="floatingBtnContainer" style="
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  z-index:998;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity:0;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding-left: 14px;
+">
+  <button id="goToSectionBtn">Sección anterior</button>
+</div>
+
+<!-- ESTILOS DEL BOTÓN MODERNO -->
+<style>
+#goToSectionBtn {
+  border: none;
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(15,23,42,0.1), 0 2px 4px rgba(15,23,42,0.06);
+  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  font-family: 'Lora', serif;
+  letter-spacing: 0.5px;
+  user-select: none; /* ← Previene selección del botón */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#goToSectionBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(15,23,42,0.15), 0 4px 6px rgba(15,23,42,0.1);
+  background: #f8f9fa;
+}
+
+#goToSectionBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(15,23,42,0.06);
+  background: #ffffff;
+}
+
+#floatingTab:hover {
+  transform: translateY(-50%) translateX(2px);
+  box-shadow: 0 8px 12px rgba(15,23,42,0.15), 0 4px 6px rgba(15,23,42,0.1);
+  background: #f8f9fa;
+}
+
+#floatingTab:active {
+  transform: translateY(-50%) translateX(0);
+  box-shadow: 0 2px 4px rgba(15,23,42,0.06);
+  background: #ffffff;
+}
+</style>
+
+<!-- JAVASCRIPT PARA FUNCIONAMIENTO -->
+<script>
+const goToSectionBtn = document.getElementById("goToSectionBtn");
+const floatingBtnContainer = document.getElementById("floatingBtnContainer");
+const floatingTab = document.getElementById("floatingTab");
+
+// URL de destino
+const targetURL = "./index.html";
+
+// Redirección al hacer clic
+goToSectionBtn.addEventListener("click", () => {
+  window.location.href = targetURL;
+});
+
+// Evitar selección de texto con el mouse
+floatingTab.addEventListener("mousedown", (e) => e.preventDefault());
+
+// Estado del cajón
+let isOpen = false;
+
+// Función para mostrar el cajón
+function showFloatingBtn() {
+  floatingBtnContainer.style.transform = "translate(0, -50%)";
+  floatingBtnContainer.style.opacity = "1";
+  floatingTab.textContent = "«";
+  isOpen = true;
+}
+
+// Función para ocultar el cajón
+function hideFloatingBtn() {
+  floatingBtnContainer.style.transform = "translate(-100%, -50%)";
+  floatingBtnContainer.style.opacity = "0";
+  floatingTab.textContent = "»";
+  isOpen = false;
+}
+
+// Abrir o cerrar el cajón al hacer clic en la pestaña
+floatingTab.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (isOpen) {
+    hideFloatingBtn();
+  } else {
+    showFloatingBtn();
+  }
+});
+
+// Cerrar al hacer clic fuera del botón y de la pestaña
+document.addEventListener("click", (e) => {
+  if (!floatingBtnContainer.contains(e.target) && e.target !== floatingTab) {
+    hideFloatingBtn();
+  }
+});
+
+// Cerrar al hacer scroll
+window.addEventListener("scroll", () => {
+  hideFloatingBtn();
+});
+</script>
+
+
+
+
+<!-- ===================== FOOTER PROFESIONAL CON ICONOS ===================== -->
+<footer class="bg-green-600 py-6 text-center text-white mt-20" style="font-family: 'Lora', serif;">
+    <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+    <div class="mt-2 flex justify-center gap-6 text-white text-2xl">
+        <!-- Sobre el Blog -->
+        <span id="openAbout" class="cursor-pointer hover:scale-110 transition-transform" title="Sobre el Blog">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-7-9-7-9 7 9 7z" />
+            </svg>
+        </span>
+        <!-- Políticas de Privacidad -->
+        <span id="openPrivacy" class="cursor-pointer hover:scale-110 transition-transform" title="Políticas de Privacidad">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM12 11v10m0-10h10M12 11H2" />
+            </svg>
+        </span>
+        <!-- Términos y Condiciones -->
+        <span id="openTerms" class="cursor-pointer hover:scale-110 transition-transform" title="Términos y Condiciones">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+        </span>
+        <!-- Contacto -->
+        <span id="openContact" class="cursor-pointer hover:scale-110 transition-transform" title="Contacto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4m0 0v4m0-4l-8-8-8 8h4v4h8v-4z" />
+            </svg>
+        </span>
+    </div>
+</footer>
+
+<!-- ===================== ESTILOS DE ANIMACIÓN ===================== -->
+<style>
+    .modal-enter {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.3s ease-out;
+    }
+    .modal-enter-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+</style>
+
+<!-- ===================== MODALES ===================== -->
+<!-- Modal Sobre el Blog -->
+<div id="aboutModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeAbout" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Sobre el Blog</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Bienvenido a Código Millonario, un espacio pensado para quienes buscan tomar control real de sus finanzas y crecer económicamente de manera inteligente. 
+            Aquí encontrarás estrategias claras y prácticas para ahorrar, invertir y gestionar tu dinero con seguridad, aplicables a tu vida diaria y a tus decisiones financieras más importantes.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Cada artículo y recurso está diseñado para ayudarte a identificar oportunidades, evitar errores comunes y generar resultados tangibles en tu economía personal, profesional o empresarial. 
+            Con consejos basados en experiencia y conocimientos sólidos, podrás transformar la información en acciones efectivas que potencien tu libertad financiera y tu tranquilidad económica.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Políticas de Privacidad -->
+<div id="privacyModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closePrivacy" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Políticas de Privacidad</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            En este espacio, nos comprometemos a proteger tu privacidad y la seguridad de tu información personal. Toda la información que puedas proporcionar, como tu nombre, correo electrónico o cualquier otro dato, será utilizada únicamente para los fines establecidos y nunca será compartida con terceros sin tu consentimiento explícito.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Recopilamos información únicamente para mejorar la experiencia de quienes acceden a este espacio, incluyendo estadísticas sobre visitas y el uso de recursos disponibles. No utilizamos técnicas invasivas y no vendemos tus datos bajo ninguna circunstancia.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Este sitio puede contener enlaces a otros recursos o sitios externos. No nos hacemos responsables de las políticas de privacidad de esos sitios, por lo que te recomendamos revisar sus términos antes de proporcionar información personal.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este espacio, aceptas la recolección y el uso de tus datos según lo descrito en estas políticas. Nos reservamos el derecho de actualizar esta política en cualquier momento, y te animamos a revisarla periódicamente para estar al tanto de cualquier cambio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Si tienes preguntas o deseas más información sobre cómo manejamos tu información, puedes contactarnos directamente.
+        </p>
+    </div>
+</div>
+
+
+<!-- Modal Términos y Condiciones -->
+<div id="termsModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeTerms" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Términos y Condiciones</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Al utilizar este blog de finanzas, aceptas cumplir con los términos y condiciones establecidos a continuación. Esto incluye el uso responsable de la información, el respeto por los derechos de autor y la prohibición de distribuir contenido sin autorización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Todos los recursos, artículos y herramientas se proporcionan únicamente con fines educativos e informativos. No garantizamos resultados financieros específicos y cualquier acción tomada con base en el contenido es responsabilidad exclusiva del usuario.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Está prohibido copiar, distribuir, modificar o usar el contenido de este sitio con fines comerciales sin autorización expresa del propietario. Los usuarios deben aplicar la información con criterio propio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Te recomendamos revisarlos periódicamente para estar al tanto de cualquier actualización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este blog, aceptas cumplir con estos términos y condiciones. El uso del sitio implica la aceptación total de estas normas.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Contacto -->
+<div id="contactModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeContact" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Contacto</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Puedes comunicarte con nosotros a través de:<br>
+            Email: codigomillonarioblog@gmail.com
+        </p>
+    </div>
+</div>
+
+
+<!-- ===================== SCRIPT PARA MODALES PROFESIONALES ===================== -->
+<script>
+function setupModal(openId, closeId, modalId){
+    const openBtn = document.getElementById(openId);
+    const closeBtn = document.getElementById(closeId);
+    const modal = document.getElementById(modalId);
+    const content = modal.querySelector('div');
+
+    openBtn.addEventListener('click', e=>{
+        e.preventDefault();
+        modal.classList.remove('hidden');
+        modal.classList.add('grid');
+        content.classList.add('modal-enter-active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', ()=>{
+        modal.classList.add('hidden');
+        modal.classList.remove('grid');
+        content.classList.remove('modal-enter-active');
+        document.body.style.overflow = 'auto';
+    });
+
+    modal.addEventListener('click', e=>{
+        if(e.target === modal){
+            modal.classList.add('hidden');
+            modal.classList.remove('grid');
+            content.classList.remove('modal-enter-active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Configurar todos los modales
+setupModal('openAbout','closeAbout','aboutModal');
+setupModal('openPrivacy','closePrivacy','privacyModal');
+setupModal('openTerms','closeTerms','termsModal');
+setupModal('openContact','closeContact','contactModal');
+</script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

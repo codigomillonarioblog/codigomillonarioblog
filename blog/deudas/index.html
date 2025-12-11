@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zona de Deudas | Aprende, Organiza y Avanza con Guías Prácticas – Código Millonario</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="icon" href="../../assets/img/favicon.png" type="image/png">
+
+<style>
+/* ===================== PAGINACIÓN ===================== */
+.pager-container { background: #ffffff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); padding: 12px; }
+.page-box { min-width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; user-select: none; font-weight: 600; color: #0f172a; transition: all 0.2s ease; }
+.page-box:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.06); transform: translateY(-1px); }
+.page-box.active { border-color: #94a3b8; box-shadow: 0 0 0 3px rgba(14,165,233,0.06); background: #f8fafc; }
+.compact-btn { min-width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; transition: all 0.2s ease; }
+.compact-btn[disabled] { opacity: 0.45; cursor: default; pointer-events: none; }
+.select-pages { border: 1px solid #e6e6e6; background: #fff; height: 40px; border-radius: 6px; padding: 6px 10px; }
+input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border-radius: 6px; padding: 6px 10px; width: 80px; background: #fff; }
+
+#articlesGrid { transition: all 0.5s ease; }
+.article { transition: opacity 0.4s ease; }
+
+@media (max-width: 640px) {
+  .pager-grid { grid-template-columns: 1fr; gap: 8px; }
+  .page-box { min-width: 34px; height: 34px; }
+  .compact-btn { min-width: 34px; height: 34px; }
+  input[type="number"].goto-page { width: 64px; }
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+</head>
+
+<body class="bg-stone-50 text-stone-900">
+
+<!-- HEADER CON MENÚ HAMBURGUESA -->
+<header class="bg-white shadow-sm sticky top-0 z-50" style="font-family: 'Lora', serif;">
+<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-2">
+        <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+        <span class="text-2xl font-bold">Código Millonario</span>
+    </div>
+
+    <div class="hidden md:flex items-center space-x-8">
+        <a href="../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+        <a href="../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
+        <a href="../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
+        <a href="../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+        <a href="../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+    </div>
+
+    <button class="md:hidden navbar-toggler" id="menu-toggle">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+
+<div id="mobileMenu">
+    <div class="menu-header">
+        <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+        <span class="text-2xl font-bold">Código Millonario</span>
+    </div>
+    <a href="../../index.html">Inicio</a>
+    <a href="../../educacionfinanciera.html">Educación Financiera</a>
+    <a href="../../herramientas.html">Herramientas</a>
+    <a href="../../opiniones.html">Opiniones</a>
+    <a href="../../contacto.html">Contacto</a>
+
+    <div class="menu-footer">
+        <a href="../../contacto.html">Más información</a>
+    </div>
+</div>
+
+<style>
+/* BOTÓN HAMBURGUESA */
+.navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
+.navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
+.navbar-toggler-icon::before, .navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+.navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+#mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; padding-top: 0; overflow-y: auto; }
+#mobileMenu.show { display: block; }
+#mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
+#mobileMenu .menu-header i { width: 2rem; height: 2rem; }
+#mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
+#mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; text-align: left; }
+#mobileMenu a:hover { color: #22c55e; }
+#mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+#mobileMenu .menu-footer a { display: inline-block; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+#mobileMenu .menu-footer a:hover { background: #2563eb; }
+@media(min-width: 768px) { #mobileMenu { display: none !important; } }
+</style>
+
+<script>
+lucide.createIcons();
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); mobileMenu.classList.toggle('show'); });
+document.querySelectorAll('#mobileMenu a').forEach(link => { link.addEventListener('click', () => { menuToggle.classList.remove('active'); mobileMenu.classList.remove('show'); }); });
+</script>
+</header>
+
+<!-- HERO -->
+<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center" style="font-family: 'Lora', serif;">
+    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+        Zona de Deudas: <br>
+        <span class="text-green-600">Aprende, Elimina, Organiza</span> y Avanza
+    </h1>
+    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
+        Tu ruta clara para comprender, organizar y superar tus deudas sin estrés.
+    </p>
+</section>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="py-20" style="font-family: 'Lora', serif;">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- INTRO CUADRADA -->
+    <section class="mb-16 bg-white p-10 shadow hover:shadow-lg transition text-left cursor-pointer rounded-none">
+        <h2 class="text-3xl font-semibold text-green-700 mb-4">Ordena y Recupera tu Economía 🧾</h2>
+        <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+         Para recuperar la economía, primero debemos recuperar nuestra mentalidad. Adquirir una visión clara, ambición y la capacidad de tomar decisiones radicales no significa ser malo; no se trata de pasar por encima de los demás para ganar, sino de asumir responsabilidad por tu vida y tu dinero.
+         Ser buena persona con mala cabeza es la combinación perfecta para la ruina. Una mentalidad sólida no garantiza el éxito, pero sí es un punto de partida. No llega lejos quien carece de conocimientos, ni quien tiene conocimientos y no actúa.
+        </p>
+         <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+          El manejo de tu cartera está directamente ligado a tus pensamientos, creencias y hábitos culturales desde el nacimiento. Muchos esperan a “tener más” para sentirse completos: esperar un aumento para ahorrar, gastar ahora y dejar para después, llenarse con compras que no llenan nada.
+          Recuperar tu economía es simple, aunque difícil de aceptar: pregúntate siempre si realmente necesitas gastar más. Lo necesario es suficiente; todo lo demás solo distrae y puede arruinarte. La libertad financiera empieza cuando tus decisiones dependen de claridad, no de impulsos ni de vacío emocional.
+        </p>
+    </section>
+
+    <!-- ARTÍCULOS CON PAGINACIÓN -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold text-green-700 mb-8 text-center"> Tu dinero primero </h2>
+
+        <!-- PAGINACIÓN ARRIBA -->
+        <div class="max-w-5xl mx-auto mb-6">
+            <div class="pager-container">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4 px-2">
+                        <div class="text-sm text-stone-700">
+                            Total <span id="totalResults" class="font-semibold">0</span> resultados
+                        </div>
+                        <div class="hidden sm:inline-block text-sm text-stone-700">
+                            Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center gap-2 px-2">
+                        <button id="firstBtn" class="compact-btn">«</button>
+                        <button id="prevBtn" class="compact-btn">‹</button>
+                        <div id="pageNumbers" class="flex items-center gap-2"></div>
+                        <button id="nextBtn" class="compact-btn">›</button>
+                        <button id="lastBtn" class="compact-btn">»</button>
+                    </div>
+                    <div class="flex justify-end items-center gap-3 px-2">
+                        <select id="perPageSelect" class="select-pages">
+                            <option value="6" selected>6 / página</option>
+                            <option value="9">9 / página</option>
+                            <option value="12">12 / página</option>
+                            <option value="20">20 / página</option>
+                        </select>
+                        <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
+                        <button id="gotoBtn" class="page-box">Ir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="articlesGrid">
+            <!-- Ejemplo de artículos -->
+            <div class="article">
+                <a href="./deudas-bajo-control/index.html" class="block">
+                    <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
+                        <div class="w-full h-1/2">
+                            <img src="../../assets/png/crecimiento-economico.png" alt="Deudas Bajo Control" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 flex flex-col flex-1">
+                            <h3 class="text-lg font-semibold text-stone-900 mb-1">Deudas Bajo Control</h3>
+                            <p class="text-stone-700 flex-1 text-sm">Guía práctica para organizar tus finanzas y eliminar estrés financiero.</p>
+                            <span class="mt-3 inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Duplica este bloque para los demás artículos -->
+
+        </div>
+    </section>
+
+   
+
+    <!-- INTRO CUADRADA -->
+   <section class="mb-16 bg-white p-10 shadow hover:shadow-lg transition text-left cursor-pointer">
+  <h2 class="text-3xl font-semibold text-green-700 mb-4">
+    ⛓️ Rompe el Ciclo y Recupera tu Libertad Financiera
+  </h2>
+  <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    La idea de la libertad financiera se vuelve real para las mentes que la desean desde una perspectiva de dolor, sufrimiento o un mal momento. Sin embargo, ¿por qué no pensar en adquirir fortaleza en los mejores momentos y liberarnos de ataduras mentales?
+    Una mala interpretación de un mal momento puede hacer creer a algunas personas que el dinero es malo: alguien roba a otra persona y el dinero es malo; alguien roba un banco y el dinero es malo; no hay suficiente progreso en un país y el problema es el dinero.
+    Debemos liberarnos de estas ideologías que distorsionan la percepción de cómo se comporta realmente el mundo. La sensación de que tu entorno no avanza no significa que así sea; que tu economía esté en caída no implica que la de los demás esté igual.
+  </p>
+  <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Esa sensación de que “si mi vecino está mal y yo estoy igual, entonces no hagamos nada y quedémonos sentados a ver qué pasa”, o “un amigo no tiene trabajo y yo me quedé sin trabajo también, así que quedémonos así”, nos hace sentir una falsa igualdad. Esta ilusión nos aprisiona a una idea errónea de lo que es el mundo en realidad.
+    Hoy en día hay montañas de dinero, miles de millones en transacciones que muchas veces no percibimos. Liberarnos no significa que estemos realmente presos, aunque la mayoría parece estarlo mentalmente. Lo que no ves no significa que no esté ocurriendo.
+  </p>
+</section>
+
+
+</div>
+</main>
+
+<!-- SCRIPT DE PAGINACIÓN -->
+<script>
+const articlesGrid = document.getElementById('articlesGrid');
+const articles = Array.from(articlesGrid.querySelectorAll('.article'));
+const perPageSelect = document.getElementById('perPageSelect');
+const currentPageText = document.getElementById('currentPageText');
+const totalPagesText = document.getElementById('totalPagesText');
+const totalResults = document.getElementById('totalResults');
+const firstBtn = document.getElementById('firstBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const lastBtn = document.getElementById('lastBtn');
+const pageNumbers = document.getElementById('pageNumbers');
+const gotoInput = document.getElementById('gotoInput');
+const gotoBtn = document.getElementById('gotoBtn');
+
+let currentPage = 1;
+let perPage = parseInt(perPageSelect.value);
+
+function renderPagination() {
+    const totalPages = Math.ceil(articles.length / perPage);
+    totalPagesText.textContent = totalPages;
+    currentPageText.textContent = currentPage;
+    totalResults.textContent = articles.length;
+    pageNumbers.innerHTML = '';
+
+    for(let i=1;i<=totalPages;i++){
+        const page = document.createElement('div');
+        page.className='page-box'+(i===currentPage?' active':'');
+        page.textContent=i;
+        page.addEventListener('click',()=>{currentPage=i; renderArticles();});
+        pageNumbers.appendChild(page);
+    }
+
+    firstBtn.disabled = currentPage===1;
+    prevBtn.disabled = currentPage===1;
+    nextBtn.disabled = currentPage===totalPages;
+    lastBtn.disabled = currentPage===totalPages;
+}
+
+function renderArticles() {
+    articles.forEach((a,i)=>{
+        a.style.display = (i >= (currentPage-1)*perPage && i < currentPage*perPage)?'block':'none';
+    });
+    renderPagination();
+}
+
+perPageSelect.addEventListener('change', ()=>{
+    perPage = parseInt(perPageSelect.value);
+    currentPage=1;
+    renderArticles();
+});
+
+firstBtn.addEventListener('click', ()=>{ currentPage=1; renderArticles(); });
+prevBtn.addEventListener('click', ()=>{ if(currentPage>1){ currentPage--; renderArticles(); } });
+nextBtn.addEventListener('click', ()=>{ const totalPages=Math.ceil(articles.length/perPage); if(currentPage<totalPages){ currentPage++; renderArticles(); } });
+lastBtn.addEventListener('click', ()=>{ currentPage=Math.ceil(articles.length/perPage); renderArticles(); });
+
+gotoBtn.addEventListener('click', ()=>{
+    let page = parseInt(gotoInput.value);
+    const totalPages = Math.ceil(articles.length/perPage);
+    if(page>=1 && page<=totalPages){ currentPage=page; renderArticles(); }
+});
+
+renderArticles();
+</script>
+
+</body>
+</html>
+
+
+
+
+<!-- ETIQUETA FLOTANTE MODERNA (tipo <<) -->
+<div id="floatingTab" style="
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background:#ffffff;
+  color:#0f172a;
+  padding:12px 14px;
+  border-top-right-radius:12px;
+  border-bottom-right-radius:12px;
+  cursor:pointer;
+  font-weight:700;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 4px 6px rgba(15,23,42,0.1), 0 2px 4px rgba(15,23,42,0.06);
+  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  user-select: none; /* ← Previene selección */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+">
+  »
+</div>
+
+<!-- CAJÓN FLOTANTE DEL BOTÓN -->
+<div id="floatingBtnContainer" style="
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  z-index:998;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity:0;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding-left: 14px;
+">
+  <button id="goToSectionBtn">Sección anterior</button>
+</div>
+
+<!-- ESTILOS DEL BOTÓN MODERNO -->
+<style>
+#goToSectionBtn {
+  border: none;
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(15,23,42,0.1), 0 2px 4px rgba(15,23,42,0.06);
+  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  font-family: 'Lora', serif;
+  letter-spacing: 0.5px;
+  user-select: none; /* ← Previene selección del botón */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#goToSectionBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(15,23,42,0.15), 0 4px 6px rgba(15,23,42,0.1);
+  background: #f8f9fa;
+}
+
+#goToSectionBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(15,23,42,0.06);
+  background: #ffffff;
+}
+
+#floatingTab:hover {
+  transform: translateY(-50%) translateX(2px);
+  box-shadow: 0 8px 12px rgba(15,23,42,0.15), 0 4px 6px rgba(15,23,42,0.1);
+  background: #f8f9fa;
+}
+
+#floatingTab:active {
+  transform: translateY(-50%) translateX(0);
+  box-shadow: 0 2px 4px rgba(15,23,42,0.06);
+  background: #ffffff;
+}
+</style>
+
+<!-- JAVASCRIPT PARA FUNCIONAMIENTO -->
+<script>
+const goToSectionBtn = document.getElementById("goToSectionBtn");
+const floatingBtnContainer = document.getElementById("floatingBtnContainer");
+const floatingTab = document.getElementById("floatingTab");
+
+// URL de destino
+const targetURL = "../../educacionfinanciera.html";
+
+// Redirección al hacer clic
+goToSectionBtn.addEventListener("click", () => {
+  window.location.href = targetURL;
+});
+
+// Evitar selección de texto con el mouse
+floatingTab.addEventListener("mousedown", (e) => e.preventDefault());
+
+// Estado del cajón
+let isOpen = false;
+
+// Función para mostrar el cajón
+function showFloatingBtn() {
+  floatingBtnContainer.style.transform = "translate(0, -50%)";
+  floatingBtnContainer.style.opacity = "1";
+  floatingTab.textContent = "«";
+  isOpen = true;
+}
+
+// Función para ocultar el cajón
+function hideFloatingBtn() {
+  floatingBtnContainer.style.transform = "translate(-100%, -50%)";
+  floatingBtnContainer.style.opacity = "0";
+  floatingTab.textContent = "»";
+  isOpen = false;
+}
+
+// Abrir o cerrar el cajón al hacer clic en la pestaña
+floatingTab.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (isOpen) {
+    hideFloatingBtn();
+  } else {
+    showFloatingBtn();
+  }
+});
+
+// Cerrar al hacer clic fuera del botón y de la pestaña
+document.addEventListener("click", (e) => {
+  if (!floatingBtnContainer.contains(e.target) && e.target !== floatingTab) {
+    hideFloatingBtn();
+  }
+});
+
+// Cerrar al hacer scroll
+window.addEventListener("scroll", () => {
+  hideFloatingBtn();
+});
+</script>
+
+
+
+
+ <!-- ===================== FOOTER PROFESIONAL CON ICONOS ===================== -->
+<footer class="bg-green-600 py-6 text-center text-white mt-20" style="font-family: 'Lora', serif;">
+    <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+    <div class="mt-2 flex justify-center gap-6 text-white text-2xl">
+        <!-- Sobre el Blog -->
+        <span id="openAbout" class="cursor-pointer hover:scale-110 transition-transform" title="Sobre el Blog">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-7-9-7-9 7 9 7z" />
+            </svg>
+        </span>
+        <!-- Políticas de Privacidad -->
+        <span id="openPrivacy" class="cursor-pointer hover:scale-110 transition-transform" title="Políticas de Privacidad">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM12 11v10m0-10h10M12 11H2" />
+            </svg>
+        </span>
+        <!-- Términos y Condiciones -->
+        <span id="openTerms" class="cursor-pointer hover:scale-110 transition-transform" title="Términos y Condiciones">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+        </span>
+        <!-- Contacto -->
+        <span id="openContact" class="cursor-pointer hover:scale-110 transition-transform" title="Contacto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4m0 0v4m0-4l-8-8-8 8h4v4h8v-4z" />
+            </svg>
+        </span>
+    </div>
+</footer>
+
+<!-- ===================== ESTILOS DE ANIMACIÓN ===================== -->
+<style>
+    .modal-enter {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.3s ease-out;
+    }
+    .modal-enter-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+</style>
+
+<!-- ===================== MODALES ===================== -->
+<!-- Modal Sobre el Blog -->
+<div id="aboutModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeAbout" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Sobre el Blog</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Bienvenido a Código Millonario, un espacio pensado para quienes buscan tomar control real de sus finanzas y crecer económicamente de manera inteligente. 
+            Aquí encontrarás estrategias claras y prácticas para ahorrar, invertir y gestionar tu dinero con seguridad, aplicables a tu vida diaria y a tus decisiones financieras más importantes.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Cada artículo y recurso está diseñado para ayudarte a identificar oportunidades, evitar errores comunes y generar resultados tangibles en tu economía personal, profesional o empresarial. 
+            Con consejos basados en experiencia y conocimientos sólidos, podrás transformar la información en acciones efectivas que potencien tu libertad financiera y tu tranquilidad económica.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Políticas de Privacidad -->
+<div id="privacyModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closePrivacy" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Políticas de Privacidad</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            En este espacio, nos comprometemos a proteger tu privacidad y la seguridad de tu información personal. Toda la información que puedas proporcionar, como tu nombre, correo electrónico o cualquier otro dato, será utilizada únicamente para los fines establecidos y nunca será compartida con terceros sin tu consentimiento explícito.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Recopilamos información únicamente para mejorar la experiencia de quienes acceden a este espacio, incluyendo estadísticas sobre visitas y el uso de recursos disponibles. No utilizamos técnicas invasivas y no vendemos tus datos bajo ninguna circunstancia.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Este sitio puede contener enlaces a otros recursos o sitios externos. No nos hacemos responsables de las políticas de privacidad de esos sitios, por lo que te recomendamos revisar sus términos antes de proporcionar información personal.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este espacio, aceptas la recolección y el uso de tus datos según lo descrito en estas políticas. Nos reservamos el derecho de actualizar esta política en cualquier momento, y te animamos a revisarla periódicamente para estar al tanto de cualquier cambio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Si tienes preguntas o deseas más información sobre cómo manejamos tu información, puedes contactarnos directamente.
+        </p>
+    </div>
+</div>
+
+
+<!-- Modal Términos y Condiciones -->
+<div id="termsModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeTerms" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Términos y Condiciones</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Al utilizar este blog de finanzas, aceptas cumplir con los términos y condiciones establecidos a continuación. Esto incluye el uso responsable de la información, el respeto por los derechos de autor y la prohibición de distribuir contenido sin autorización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Todos los recursos, artículos y herramientas se proporcionan únicamente con fines educativos e informativos. No garantizamos resultados financieros específicos y cualquier acción tomada con base en el contenido es responsabilidad exclusiva del usuario.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Está prohibido copiar, distribuir, modificar o usar el contenido de este sitio con fines comerciales sin autorización expresa del propietario. Los usuarios deben aplicar la información con criterio propio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Te recomendamos revisarlos periódicamente para estar al tanto de cualquier actualización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este blog, aceptas cumplir con estos términos y condiciones. El uso del sitio implica la aceptación total de estas normas.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Contacto -->
+<div id="contactModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeContact" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Contacto</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Puedes comunicarte con nosotros a través de:<br>
+            Email: codigomillonarioblog@gmail.com
+        </p>
+    </div>
+</div>
+
+
+<!-- ===================== SCRIPT PARA MODALES PROFESIONALES ===================== -->
+<script>
+function setupModal(openId, closeId, modalId){
+    const openBtn = document.getElementById(openId);
+    const closeBtn = document.getElementById(closeId);
+    const modal = document.getElementById(modalId);
+    const content = modal.querySelector('div');
+
+    openBtn.addEventListener('click', e=>{
+        e.preventDefault();
+        modal.classList.remove('hidden');
+        modal.classList.add('grid');
+        content.classList.add('modal-enter-active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', ()=>{
+        modal.classList.add('hidden');
+        modal.classList.remove('grid');
+        content.classList.remove('modal-enter-active');
+        document.body.style.overflow = 'auto';
+    });
+
+    modal.addEventListener('click', e=>{
+        if(e.target === modal){
+            modal.classList.add('hidden');
+            modal.classList.remove('grid');
+            content.classList.remove('modal-enter-active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Configurar todos los modales
+setupModal('openAbout','closeAbout','aboutModal');
+setupModal('openPrivacy','closePrivacy','privacyModal');
+setupModal('openTerms','closeTerms','termsModal');
+setupModal('openContact','closeContact','contactModal');
+</script>
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

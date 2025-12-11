@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Evita estos 7 errores que detienen tu progreso profesional - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+      <!-- Favicon -->
+    <link rel="icon" href="../../../assets/img/favicon.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+</head>
+
+
+    <!-- ESTILOS MENÚ HAMBURGUESA -->
+    <style>
+        .navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
+        .navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before, .navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
+        .navbar-toggler-icon::before { top: -7px; }
+        .navbar-toggler-icon::after { top: 7px; }
+        .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
+        .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+        .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+        #mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; padding-top: 0; overflow-y: auto; }
+        #mobileMenu.show { display: block; }
+
+        #mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
+        #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
+        #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
+
+        #mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; text-align: left; }
+        #mobileMenu a:hover { color: #22c55e; }
+
+        #mobileMenu .menu-footer { padding: 2rem; text-align: center; }
+        #mobileMenu .menu-footer a { display: inline-block; background: #22c55e; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+        #mobileMenu .menu-footer a:hover { background: #16a34a; }
+
+        @media(min-width: 768px) { #mobileMenu { display: none !important; } }
+    </style>
+</head>
+
+<body class="bg-stone-50 text-stone-900">
+
+     <!-- HEADER CON MENÚ HAMBURGUESA -->
+<header class="bg-white shadow-sm sticky top-0 z-50" style="font-family: 'Lora', serif;">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        
+         <div class="flex items-center space-x-2">
+            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+            <span class="text-2xl font-bold">Código Millonario</span>
+        </div>
+
+            <!-- Menú escritorio -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
+                <a href="../../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
+                <a href="../../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
+                <a href="../../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
+                <a href="../../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
+            </div>
+
+            <!-- Botón hamburguesa -->
+            <button class="md:hidden navbar-toggler" id="menu-toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div id="mobileMenu">
+            <div class="menu-header">
+                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+                <span class="text-2xl font-bold">Código Millonario</span>
+            </div>
+
+            <a href="../../../index.html">Inicio</a>
+            <a href="../../../educacionfinanciera.html">Educación Financiera</a>
+            <a href="../../../herramientas.html">Herramientas</a>
+            <a href="../../../opiniones.html">Opiniones</a>
+            <a href="../../../contacto.html">Contacto</a>
+
+            <div class="menu-footer">
+                <a href="../../../contacto.html">Más información</a>
+            </div>
+        </div>
+
+        <script>
+            lucide.createIcons();
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('show');
+            });
+
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('show');
+                });
+            });
+        </script>
+    </header>
+
+ 
+<!-- HERO -->
+<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center" style="font-family: 'Lora', serif;">
+    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+            Cómo superar los <br>
+    <span class="text-green-600"> obstáculos que frenan </span> tu carrera  <br>   
+    </h1>     
+    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
+      Conoce los 7 errores más comunes que afectan tu crecimiento profesional y aprende estrategias efectivas para avanzar sin tropiezos.  
+    </p>
+    <p class="text-stone-500 mt-4">
+  📅 Publicado: Noviembre 2025 · Mejorado: Diciembre 2025
+</p>
+</section>
+
+
+
+                 <!-- INTRODUCCIÓN GENERAL -->
+      <main class="py-20" style="font-family: 'Lora', serif;">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+<!-- INTRODUCCIÓN -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-12"> Evita los errores que frenan tu carrera ⚠️ </h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify relative">
+    <img src="../../../assets/png/errores-en-tu-carrera.png" alt="" 
+         class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-none shadow">
+No se puede predecir con exactitud cuándo llegarán las consecuencias de los errores; sin embargo, sí se puede actuar de manera que evitemos acciones que afecten nuestros compromisos, actividades diarias o vida personal. No se puede brillar todos los días, y tampoco es necesario que la oscuridad esté presente constantemente.
+A veces, un mal error puede derribar oportunidades que parecían ya estar en tus manos, ya sea por decisiones propias o por factores externos: personas, momentos inapropiados o circunstancias inesperadas. No obstante, en un mundo tan cambiante, nada se pierde realmente si aprendemos a encontrar lo positivo en cada experiencia. Alejarse de un movimiento riesgoso puede ser, de hecho, una forma de evitar consecuencias peores.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+En este apartado conoceremos los errores más comunes y algunos menos evidentes que siempre están presentes, esperando que alguien caiga en ellos, y que probablemente hayas pasado por alto. En el mundo laboral colombiano, muchos profesionales se topan con obstáculos que limitan su crecimiento sin darse cuenta. Identificar estos errores a tiempo y aprender a corregirlos es clave para avanzar, destacar y potenciar tu carrera de manera positiva. Estos obstáculos pueden ir desde la falta de actualización en habilidades, la mala gestión del tiempo, hasta no saber cómo construir relaciones estratégicas dentro de la empresa.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Reconocerlos te permitirá tomar decisiones más acertadas, aprovechar oportunidades de desarrollo y mejorar tu posición profesional de forma constante. Además, entender cómo se mueve el mercado laboral colombiano y qué buscan los empleadores te dará una ventaja competitiva frente a otros profesionales.
+
+Muchos suelen buscar la perfección a costa de otros, tratando de sobresalir por encima de los demás, aprovecharse de las buenas obras o esperar a que los demás tropiecen. En este apartado llamaremos a estas personas “los entrometidos”: son quienes siempre quieren tener más, causar daño o beneficiarse, no de oportunidades propias, sino de cada situación; por pequeña que les parezca, piensan que es algo grande, aunque solo sean migajas.
+</p>
+
+
+
+
+
+
+<!-- NO ACTUALIZAR TUS HABILIDADES PROFESIONALES -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">
+  ❌ No actualizar tus habilidades profesionales
+</h2>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+  La esencia de todo en el planeta Tierra siempre apunta hacia tres cosas: evolución, expansión y adaptación.
+  Y no hablo de evolución como un tema biológico, sino como ese proceso natural donde lo que no avanza se queda
+  atrás y termina por desaparecer. Todo se mueve, todo cambia; es parte de la supervivencia.  
+  Por eso quiero que entiendas la importancia del crecimiento constante en el ser humano. Quedarse quieto en un
+  mundo que cambia casi a cada rato puede sentirse cómodo, pero también es la ruta más rápida a quedarse estancado.
+  Mantener la zona de confort no es malo si buscas tranquilidad… pero cuando hablamos de desarrollo profesional,
+  mental y económico, evolucionar es obligatorio. Tus conocimientos, habilidades, metas, planes e incluso la
+  mentalidad que tenías sobre el dinero necesitan actualización si quieres avanzar.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+  Esto no significa que debas cambiar cada día como un camaleón. No es una obligación, es una ventaja para quien
+  decide tomarla. Quien empezó hace cinco años su camino de crecimiento no es igual a quien comenzó hace cuatro meses.
+  Y si quieres adquirir esos mismos cinco años de experiencia, inevitablemente tendrás que recorrer ese tiempo.
+  Cuando intentes llegar a ese punto, esa persona ya irá por diez.  
+  No es una competencia, es simplemente la realidad: cada día que no avanzas se acumula, y lo de ayer deja de servir
+  cuando el mundo sigue moviéndose. Quedarse quieto tiene un costo, y a largo plazo es más alto de lo que parece.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+  Evitar mantenerse con conocimientos frescos suele venir de la falta de motivación, de no sentir competitividad en el entorno,
+  de caídas personales, decepciones o ilusiones falsas. Y esto no solo ocurre en lo laboral, también en cualquier área de la vida.
+  Matar el progreso es matar el futuro; sin embargo, el futuro siempre puede retomarse y volver al camino que un día llevabas.
+  Solo que, en ese caso, va a tomar más tiempo alcanzar los resultados que antes tenías más cerca.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+  A medida que el crecimiento avanza, ahora se necesitan más horas y más enfoque para escalar lo que hace 10 o 15 años era más sencillo.
+  Antes se decía que se necesitaban 10.000 horas para volverte un profesional en lo que haces. Hoy, el crecimiento es tan acelerado
+  que esas mismas 10.000 horas ya no son suficientes, incluso con todas las herramientas que facilitan aprender más rápido.
+  La información es más accesible, sí, pero la competencia es mucho mayor.  
+  He aquí un listado de las posibles causas que te mantienen estancado y no te dejan avanzar en tu progreso.
+</p>
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2 mb-6">
+  <li>🔄 Te quedaste con los mismos conocimientos de siempre. Piensas que lo que aprendiste hace años todavía te alcanza hoy, pero el mundo cambió y tú no te actualizaste al mismo ritmo.</li>
+  <li>🛑 Te acomodas demasiado a la zona de confort. No tomas riesgos, no aprendes algo nuevo y te dices “luego lo hago”. Ese “luego” ya lleva meses… o años.</li>
+  <li>⚡ No tienes un objetivo claro ni un rumbo definido. Avanzas a medias, sin dirección, y cualquier distracción te saca del camino porque no tienes un destino firme.</li>
+  <li>📉 Te falta disciplina y constancia. Sabes lo que tienes que hacer, pero no lo haces todos los días. Avanzas un rato, te detienes otro, y así nunca construyes verdadero progreso.</li>
+  <li>👥 Te rodeas de gente que no impulsa tu crecimiento. Personas negativas, conformistas o “entrometidos” que frenan tus ideas, te siembran dudas o te jalan hacia abajo.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<!-- ESTRATEGIAS DETALLADAS -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">⏰ Mala gestión del tiempo</h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+El tiempo es uno de los recursos más valiosos que existen, pero también es uno de los más incomprendidos. Muchas personas pasan años creyendo que existen “buenos momentos” y “malos momentos”, como si el universo distinguiera entre lo conveniente y lo inconveniente para cada quien. La realidad es otra: el tiempo no siente, no piensa, no juzga y no decide por ti. El tiempo no se detiene a esperar que estés listo, pero tampoco te castiga cuando te tomas un respiro. Es un medidor neutral que simplemente avanza, y lo único que realmente importa es cómo eliges moverte dentro de él.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Esta neutralidad hace que muchas personas caigan en dos extremos: o se obsesionan con aprovechar cada segundo, al punto de agotar su salud mental, o se dejan llevar por la comodidad, creyendo que siempre habrá un “mañana” perfecto para comenzar. Ambas posturas pueden llevar al estancamiento, y lo peor es que la mayoría no se da cuenta de que están gestionando mal su tiempo hasta que sienten que la vida comenzó a moverse sin ellos.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+La mala gestión del tiempo no es simplemente “perder horas”, sino tomar decisiones que te alejan de tus objetivos, ignorar lo que te acerca a tus metas y postergar lo que realmente importa. Muchas veces esta mala gestión nace del autosabotaje, el miedo al fracaso, la falta de claridad mental o la creencia de que siempre habrá otra oportunidad. Pero tarde o temprano se convierte en una cadena de consecuencias: retrasos, estrés, oportunidades perdidas, y la sensación de que la vida avanza más rápido que tú.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+No obstante, es importante entender que el tiempo que no usas “bien” no siempre se pierde por completo. Vivir también incluye descansar, equivocarse, distraerse e incluso detenerse. Lo que verdaderamente marca la diferencia es la capacidad de reconocer qué actividades te construyen y cuáles te frenan. No se trata de vivir obsesionado, sino consciente. La clave está en aprender a detectar cuándo te estás alejando de tus metas y cuándo realmente estás recargando tu energía para avanzar con más fuerza.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+En el mundo financiero y profesional, una buena gestión del tiempo es tan valiosa como una habilidad técnica. Tomar decisiones en el momento adecuado puede ahorrarte años de desgaste, mientras que actuar tarde puede costarte dinero, alianzas, oportunidades y crecimiento personal. Saber cuándo estudiar, cuándo leer, cuándo invertir, cuándo dejar una relación profesional o cuándo comenzar un proyecto es parte fundamental del progreso. No es brujería: es claridad mental, disciplina, enfoque y disposición para actuar incluso cuando no tienes garantías absolutas.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+El problema es que la mayoría tiene las piezas, pero no sabe cómo encajarlas. Tienen ideas, sueños y motivación, pero no un sistema que les permita avanzar. La confusión empieza cuando no sabes por dónde empezar, cuándo continuar o cuándo detenerte. En ese estado, el tiempo sigue avanzando, pero tus resultados no. Y lo más frustrante es que, en el fondo, sabes que podrías estar haciendo más, pero no encuentras la manera de organizarte para lograrlo.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+No gestionar bien el tiempo no significa que estés haciendo todo mal, sino que quizás no has aprendido a reconocer qué te acerca a tus objetivos y qué te aleja. La desorganización, la procrastinación, la falta de prioridades y la ausencia de claridad mental transforman una vida productiva en una llena de estrés y arrepentimientos. Y lo más importante: siempre puedes mejorar. Nunca es tarde para aprender a administrar el tiempo de manera consciente y estratégica.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Aquí es donde aparece un elemento del que casi nadie habla: el valor del esfuerzo adicional. El crecimiento real ocurre en esas horas extras que la mayoría no quiere dar. Y para ilustrarlo mejor, quiero contarte un ejemplo que refleja con claridad cómo opera la mentalidad promedio frente al tiempo.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Una vez, una mujer que estaba estudiando una carrera altamente especializada para empresas comentó algo que reveló una verdad profunda sobre la gestión del tiempo. Ella dijo: “El profesor quiere que lleguemos de clases y sigamos estudiando los libros, pero eso es demasiado pesado”. Y lo dijo con una naturalidad que demuestra cómo la mayoría piensa: creen que el esfuerzo normal es suficiente. Lo irónico es que quienes más avanzan en la vida no se quedan con lo que ven en clase. Leen más. Estudian más. Investigan más. Aplican más. No porque el profesor lo pida, sino porque entienden que su futuro depende directamente de cuánto estén dispuestos a profundizar.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Ese tipo de mentalidad la que rechaza el “estudiar un poco más”, el “leer un capítulo extra”, o el “dar una hora adicional” es la misma que mantiene estancadas a miles de personas. No es que no tengan talento o inteligencia: es que no se permiten avanzar más allá del mínimo necesario. En cambio, quienes deciden invertir ese tiempo extra, incluso cuando están cansados o saturados, son quienes terminan en posiciones donde no todos pueden llegar. Ese pequeño sacrificio repetido a lo largo de los años se convierte en un músculo que muy pocos desarrollan.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Ese tiempo extra, esa voluntad de profundizar, ese deseo de ir un poco más allá es el ingrediente secreto del éxito real. No se trata de vivir estresado ni de sacrificar tu paz mental, sino de comprender que el crecimiento no llega por casualidad: llega porque te sientas, te enfocas, repites, mejoras y vuelves a intentarlo incluso cuando te sientes cansado. Ese es el nivel al que muchos no están dispuestos a llegar, y justamente por eso quienes sí lo hacen se destacan tanto.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Si no reconoces tus patrones de tiempo, caerás una y otra vez en el mismo ciclo: comienzas motivado, avanzas un poco, te distraes, lo dejas, vuelves después de meses, reinicias desde cero y terminas frustrado porque nada cambia. Y aunque ese ciclo parezca normal, no lo es. Es una señal clara de que hay que trabajar en la disciplina, la claridad y la organización.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Para ayudarte a entender mejor cómo la mala gestión del tiempo puede frenar tu crecimiento, aquí tienes una lista clara y directa sobre los errores más comunes que afectan tu vida laboral, económica y personal:
+</p>
+<ul class="list-disc pl-6 text-stone-700 space-y-2 mb-6">
+  <li>⏳ No priorizar tareas importantes y urgentes, lo que genera retrasos que se acumulan y afectan tus resultados.</li>
+  <li>🐌 Procrastinar actividades fundamentales que podrían cambiar tu situación actual, postergándolas por miedo, pereza o falta de claridad.</li>
+  <li>📅 No planificar tu día con intención, permitiendo que el azar decida tu productividad y creando un ciclo de estrés constante.</li>
+  <li>📉 Enfocarte en tareas pequeñas que no impactan tu futuro, mientras ignoras las que realmente hacen avanzar tu vida profesional o financiera.</li>
+  <li>🔕 Dejar que distracciones externas controlen tu atención: redes sociales, conversaciones sin sentido, ambientes negativos o personas que frenan tu crecimiento.</li>
+  <li>🧠 Vivir sin un sistema personal de organización, dependiendo de la improvisación y perdiendo horas valiosas cada semana.</li>
+  <li>💤 Confundir descanso con abandono: parar es sano, pero detener tu progreso por semanas o meses siempre tendrá un costo.</li>
+</ul>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+La buena noticia es que mejorar tu gestión del tiempo no requiere ser perfecto, sino consciente. Necesitas claridad mental, un plan, prioridades definidas y la voluntad de actuar incluso cuando no tienes ganas. Si puedes dominar eso, puedes cambiar el rumbo de tu vida laboral, económica y personal en menos tiempo del que imaginas.
+</p>
+
+
+
+
+
+
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">💬 Falta de networking y visibilidad</h2>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    En algún momento todos pasamos por alto esa oportunidad de fortalecer la conexión con alguien que tiene más facilidad que nosotros mismos para ayudarnos en caso de perder un empleo, quedarnos sin oportunidades o no tener a quién acudir. Yo, por ejemplo, cuando inicié mi trayectoria laboral, muchas veces dejaba pasar la posibilidad de fortalecer relaciones con personas que podrían haberme brindado oportunidades más adelante. Quizás en ese momento no lo veía como algo importante, igual que a muchos de ustedes puede estarles ocurriendo ahora.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Esto no significa convertirse en el “favorito” de alguien, ni llegar a un nivel de amistad profunda. Quienes lo logran, excelente. Pero para los que somos más reservados, poco sociables y no por ser antisociales, sino simplemente porque nos cuesta abrirnos el networking se convierte en un desafío real. También fue una dificultad para mí. Y créeme, siempre llega ese día en el que te quedas corto de oportunidades y deseas haber tenido al menos una mano que te ayudara a salir del agujero donde estabas.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Cuando puedes ofrecer algo a alguien, así sea pequeño, o cuando alguien te ayuda a ti sin esperar nada a cambio, nace un agradecimiento profundo de ambas partes. En mi caso, jamás olvidé a quienes vieron por mí cuando yo no podía ver nada. Y eso es algo clave en este tema: las conexiones humanas tienen un valor incalculable.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Ser visible tampoco es fácil. Muchas personas que buscan empleados o colaboradores siempre prefieren a alguien recomendado o con un historial laboral sólido. Incluso para trabajos básicos aquí en Colombia es difícil conseguir un buen puesto o un buen salario. A veces creemos que la falta de oportunidades es por falta de experiencia; en algunos casos sí, en otros no. En mi caso, por ejemplo, viví saltando de empleo en empleo, de labor en labor, y cada una era diferente.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Si tuviste la suerte de mantenerte siempre en el mismo camino laboral, eso te da mucha fuerza. No porque quienes cambiamos de rumbo seamos menos capaces, sino porque para las empresas, a simple vista, puede parecerlo. Moverse de un lado a otro minimiza tus posibilidades de éxito al buscar una fuente sólida de ingresos, no solo laboralmente, sino en cualquier aspecto.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Hacerse visible no debería ser tan difícil si ya tienes bases, trayectoria y tiempo de experiencia en un campo. Pero todo se complica cuando dejamos un camino a mitad y tomamos otro, ya sea por necesidad, falta de visión o buscando algo más grande. Eso puede dejarnos fuera del carril por un buen tiempo, hasta que aparezca una pequeña oportunidad que funcione como señal de ayuda.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Hacernos visibles de forma positiva implica, además de crear conexiones interpersonales, entrar un poco en el mundo de los demás. No significa imitar lo que hacen o intentar ser iguales a ellos. La empatía juega un papel crucial, pero también la autenticidad. Ser uno mismo aumenta las probabilidades de conectar con personas que comparten valores, metas o mentalidades similares. Por eso, quiero dejarte algunos ejemplos precisos que aclaran mejor esta intención.
+</p>
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2 mb-6">
+    <li>No construir relaciones estratégicas dentro y fuera de la empresa, lo que reduce las oportunidades de colaboración, aprendizaje y crecimiento profesional.</li>
+    
+    <li>No participar en eventos, conferencias o comunidades del sector, limitando tu visibilidad y restringiendo las conexiones que podrían abrirte puertas.</li>
+    
+    <li>Desaprovechar ocasiones para mostrar tu trabajo, proyectos o logros, dificultando que otros reconozcan tu valor y te consideren para mejores oportunidades.</li>
+    
+    <li>Mantener conversaciones superficiales sin buscar crear vínculos genuinos, lo que impide formar relaciones que realmente aporten apoyo mutuo.</li>
+    
+    <li>No pedir retroalimentación a personas con más experiencia, perdiendo la oportunidad de mejorar, aprender y crear conexiones con quienes podrían recomendarte.</li>
+    
+    <li>Aislarte en tu rutina laboral sin interactuar con otros equipos o áreas, disminuyendo tu reputación interna y tu reconocimiento dentro de la organización.</li>
+    
+    <li>Rechazar invitaciones o espacios sociales relacionados con el trabajo por timidez o incomodidad, lo que te deja fuera de círculos donde nacen oportunidades.</li>
+    
+    <li>No compartir tus conocimientos o habilidades con otros, lo que te priva de ser visto como alguien valioso, confiable y dispuesto a aportar.</li>
+    
+    <li>No mantener el contacto con antiguos compañeros, jefes o colaboradores, perdiendo una red que podría ayudarte en momentos de cambio o necesidad.</li>
+    
+    <li>No construir una presencia profesional mínima (como un perfil actualizado en plataformas laborales), dificultando que otros te encuentren o consideren para proyectos o empleos.</li>
+</ul>
+
+
+
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">📝 ¿Qué vas a hacer?</h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Hay personas que están bien y aun así no tienen idea de qué hacer, qué paso seguir o hacia dónde ir. Lo mismo ocurre con quienes no están viviendo de la mejor manera. Es una pregunta totalmente natural que cualquier ser humano se hace sin importar sus condiciones o su situación actual: ¿qué sigue ahora? “Rayos, no sé qué hacer con mi vida”. Simplemente llega esa incertidumbre de: ¿ahora qué sigue?
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Mi intención es hacerte ver que esto le pasa a todos, desde la persona más exitosa hasta quien se encuentra en la ruina. Lo único que los diferencia es que, cuando a una persona exitosa le llegan estos interrogantes existenciales, logra detenerse, calcular y elaborar un plan maestro. En cambio, una persona que está arruinada o perdida suele preocuparse, angustiarse y luego busca cualquier distracción que la haga olvidar su preocupación, apagando por un momento esa inquietud interna. Pero esa preocupación siempre vuelve, y cada vez con más fuerza, porque no se le está buscando una solución real.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Cuando todas estas preguntas aparecen en un momento crucial, es una señal de que debes tomar decisiones. Y lo peor que puedes hacer es evitarlas. Tu alma te está gritando que debes hacer algo. No necesariamente que te conviertas en el próximo Albert Einstein, pero sí que salgas de esa burbuja donde te estás apagando poco a poco.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Ahora, la mayoría piensa que debe correr a hacer cualquier cosa, y eso puede resultar más dañino que beneficioso. Me atrevería a decir que las mejores decisiones se toman cuando sientes que ya te cansaste de esa vida; cuando dices: “me tengo que ir ya”, “tengo que hacer esto ya”. Es una acción urgente, no desesperada.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+En la naturaleza, todo se ve obligado a cambiar por urgencia. La “necesidad” es solo la palabra bonita para describir esa fuerza. Cuando alguien resulta gravemente herido en un accidente, debe ir al hospital por urgencia. De lo contrario, la mayoría nunca tocaría un hospital solo porque su salud decayó un poco. Nadie iría al mecánico si no fuera urgente reparar su vehículo. Nadie compraría alimentos si no fuera urgente la posibilidad de morir de hambre.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Todo aquello que no represente ese color rojo de urgencia en nuestras vidas es algo a lo que rara vez le prestamos atención. Sin embargo, esto aplica especialmente para quienes aún no conocen el verdadero valor de la urgencia. Quienes sí lo han entendido no se mueven por urgencias, sino porque ven que necesitan ajustar, innovar o mantener su estilo de vida antes de que algo estalle.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Resumen de causas:
+</p>
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2 mb-6">
+    <li>Seguir posponiendo una decisión importante porque “no es el momento perfecto”.</li>
+    <li>Quedarte en un trabajo que te está agotando, aun sabiendo que necesitas un cambio urgente.</li>
+    <li>Ignorar señales internas que te dicen que debes avanzar, aprender o mejorar en algo específico.</li>
+    <li>Hacer cualquier cosa al azar solo para sentir que “estás haciendo algo”, en lugar de planear con claridad.</li>
+    <li>Evitar hacer ajustes necesarios en tu vida por miedo a incomodar a otros o salir de tu rutina.</li>
+    <li>Buscar distracciones para no enfrentar la realidad de que necesitas un cambio profundo y consciente.</li>
+</ul>
+
+
+
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">🚫 Evitar responsabilidades nuevas</h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+En la mayoría de los casos las personas evitan asumir nuevas responsabilidades porque no quieren más trabajo ni esfuerzo adicional. Suelen pensar: “Si así como estoy ya gano mi sueldo, ¿para qué esforzarme más?”, o “No quiero complicar mi vida si por ahora estoy bien”. Es común escuchar frases como: “Si no me pagan, no estudio”, “Si no me pagan por lo que voy a hacer, no hago nada”, “Si no me dan esto desde el principio, no lo quiero”.  
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Una mentalidad así termina llevando a la gente a hacer lo que no quiere o, en el peor de los casos, a aceptar cualquier cosa a cambio de unas pocas monedas. No todo en la vida será de nuestro agrado, pero evitar responsabilidades incluso las que no son pagas limita por completo la adquisición de experiencias, conocimientos y habilidades. No se trata de trabajar gratis, sino de aprender a ver lo positivo de situaciones que tu mente cataloga como “carga”, solo porque intenta protegerte de un posible agotamiento en un mundo laboral y emprendedor cada vez más exigente.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+En una etapa de mi vida, como empleado, trabajé para un hombre que distribuía agua potable en zonas rurales. Mi labor consistía en cargar los garrafones, subirlos al vehículo y llevarlos a los campesinos que necesitaban el agua para seguir trabajando. Sin embargo, este señor dueño de la empresa no conocía realmente el valor de su negocio. No tenía oficina, no llevaba registros de ingresos y gastos, y cuando el vehículo se dañaba, debía pedir dinero prestado para repararlo. Nunca invirtió en un mejor vehículo ni en organización.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Lo más grave ocurrió cuando uno de sus empleados vendió en secreto el <strong>50% de la empresa</strong>. Días después él se enteró, pero lo peor es que yo mismo intenté advertirle semanas antes que había alguien tomando recursos que no le correspondían. Su respuesta siempre era: “No tengo nada que hablar contigo”. Y tiempo después… sorpresa: su empresa fue vendida sin que lo notara, además de que le habían robado durante años.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Evitar responsabilidades puede causar situaciones como esta o incluso peores. Las responsabilidades son acciones que debes ejecutar a tiempo; evitarlas casi siempre trae consecuencias devastadoras. No podemos culpar al anciano de haber perdido la mitad de su empresa y de haber sido robado por su propio empleado: él mismo se negó a asumir el control y la responsabilidad que le correspondían.
+</p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+Otros aspectos en los que puedes estar fallando al evitar responsabilidades, y que tarde o temprano te van a pasar factura.
+</p>
+<ul class="list-disc pl-6 text-stone-700 space-y-2 mb-6">
+    <li>Gente que se estanca porque nunca aprende nada nuevo y luego llora cuando la reemplazan por alguien más preparado.</li>
+    <li>Personas que le huyen a liderar tareas simples, pero se indignan cuando jamás los ascienden ni les suben el sueldo.</li>
+    <li>Hijos o familiares que rechazan pequeñas labores en un negocio y después viven dependiendo de otros porque nunca aprendieron a manejar nada.</li>
+    <li>Emprendedores que evaden revisar números, y solo despiertan cuando ya están endeudados o con el negocio medio quebrado.</li>
+    <li>Trabajadores que hacen lo mínimo, creen que “ya cumplen”, y luego se sorprenden cuando llega alguien joven, sí toma responsabilidades y termina ganando el doble.</li>
+</ul>
+
+
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32"> 🐍 No alejarse de los entrometidos </h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+A estas personas se les reconoce rápido: siempre están vigilando, metiéndose en todo, burlándose y aparentando inocencia. No hacen daño “de frente”, pero quieren saberlo todo de todos, no por curiosidad, sino para almacenar información que puedan usar a su favor cuando se sientan amenazados.
+Cuando perciben a alguien como competencia, intentan sabotearlo de forma silenciosa. Nadie los ve como oponentes porque fingen estar tranquilos, amables y neutrales, mientras observan, escuchan y se adelantan a cualquier situación en la que otro pueda destacar.
+</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+No quieren que nadie avance, pero tampoco avanzan ellos mismos. Su mentalidad no les permite construir, solo destruir. Hacen bromas malintencionadas cuando nadie los ve, actúan a escondidas y siempre buscan quedar libres de culpa, aunque provoquen caídas, retrasos o conflictos.
+Son un verdadero dolor de cabeza cuando fijan su atención en alguien. Su estrategia es simple: atacar sin ser vistos, manipular sin dejar huella y sabotear sin que nadie pueda responsabilizarlos. Estos actos y principios psicológicos describen claramente a quienes se comportan como saboteadores:
+</p>
+
+<p style="margin-bottom:20px;">🧠 <strong>1. Inseguridad crónica</strong></p>
+<p>Estas personas sienten que no son suficientes.<br>
+Sienten miedo a ser superadas, a perder su lugar o a quedar en evidencia.<br>
+Entonces, en vez de mejorar, prefieren vigilar, criticar y sabotear.</p>
+<p>👉 <strong>Su lógica interna:</strong><br>
+“Si yo no subo… que nadie más suba tampoco.”</p>
+
+<p style="margin-top:30px; margin-bottom:20px;">🐍 <strong>2. Necesidad de control</strong></p>
+<p>Hay personas que necesitan estar enteradas de todo para sentir que tienen el control.<br>
+Son las que preguntan por todo, se meten en todo, revisan todo.</p>
+<p>No lo hacen por curiosidad sana, sino por miedo a quedar fuera de algo.</p>
+<p>👉 Controlar es su forma de sentirse seguros en un entorno que los asusta.</p>
+
+<p style="margin-top:30px; margin-bottom:20px;">🎭 <strong>3. Envidia silenciosa</strong></p>
+<p>La envidia es una emoción que no aceptan.<br>
+Pero sí la sienten.</p>
+<p>Cuando ven a alguien avanzar, crecer o destacarse, sienten una mezcla de:</p>
+
+<ul style="margin-top:15px; margin-bottom:25px;">
+    <li>→ frustración</li>
+    <li>→ rabia</li>
+    <li>→ miedo</li>
+    <li>→ comparación dolorosa</li>
+</ul>
+
+<p>Entonces atacan como pueden: información, chismes, sabotaje o críticas disfrazadas de broma.</p>
+
+<p style="margin-top:30px; margin-bottom:20px;">🔍 <strong>4. Complejo de inferioridad</strong></p>
+<p>Aunque se comporten como superiores, por dentro se sienten menos.<br>
+Y esta inferioridad la compensan intentando:</p>
+
+<ul style="margin-top:15px; margin-bottom:25px;">
+    <li>→ parecer necesarios</li>
+    <li>→ parece útiles</li>
+    <li>→ parecer atentos</li>
+    <li>→ parecer “los que saben todo”</li>
+</ul>
+
+<p>Pero todo es fachada.<br>
+La necesidad de “enterarse de todo” es un parche para su baja autoestima.</p>
+
+<p style="margin-top:30px; margin-bottom:20px;">🧩 <strong>5. Falta de responsabilidad emocional</strong></p>
+<p>Estas personas no admiten errores.<br>
+No se disculpan.<br>
+No se hacen cargo de nada.</p>
+<p>Por eso actúan ocultos:<br>
+No pueden tolerar la idea de que alguien los señale o descubra su falta de madurez.</p>
+
+<p style="margin-top:30px; margin-bottom:20px;">🎯 <strong>6. Miedo a competir limpiamente</strong></p>
+<p>Ellos no compiten con esfuerzo o resultados.<br>
+Compiten con manipulación, rumores, pellizcos invisibles y detalles escondidos.</p>
+<p>👉 Saben que perderían en un terreno justo.</p>
+
+<p style="margin-top:30px; margin-bottom:20px;">🧨 <strong>7. Patrón aprendido desde casa o trabajos anteriores</strong></p>
+<p>Muchos crecieron en ambientes donde:</p>
+
+<ul style="margin-top:15px; margin-bottom:25px;">
+    <li>→ había chismes</li>
+    <li>→ nadie confiaba en nadie</li>
+    <li>→ había manipulación constante</li>
+    <li>→ se premiaba “ser vivo”, no ser honesto</li>
+</ul>
+
+<p>Y terminan repitiendo ese modelo.</p>
+
+<p style="margin-top:40px; margin-bottom:20px;">🧠 <strong>Conclusión</strong></p>
+<p>Estas personas actúan así por una mezcla de:</p>
+
+<ul style="margin-top:15px; margin-bottom:25px;">
+    <li>→ inseguridad</li>
+    <li>→ envidia</li>
+    <li>→ necesidad de control</li>
+    <li>→ miedo al fracaso</li>
+    <li>→ falta de madurez emocional</li>
+    <li>→ modelos tóxicos aprendidos</li>
+</ul>
+
+<p>No tienen la capacidad ni el valor de construir, así que se dedican a observar y destruir en silencio.</p>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify mt-10">
+La mejor defensa es detectarlos a tiempo en cualquier ambiente laboral y actuar con más astucia que ellos. Pueden causar muchos problemas antes de que alguien note lo que realmente están haciendo.
+Hay dos tipos de entrometidos: los que solo quieren saberlo todo de los demás, y los que además buscan impedir que otros avancen. A continuación dejo una lista de lo que es capaz de hacer el entrometido que actúa a escondidas.
+</p>
+
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2 mb-6">
+    <li>Preguntar de forma insistente detalles personales o laborales solo para usar esa información en tu contra después.</li>
+    <li>Escuchar conversaciones ajenas a escondidas para luego distorsionar lo que escucharon y sembrar chismes.</li>
+    <li>Advertirle a otros sobre “supuestos errores tuyos” sin que existan, solo para crear dudas sobre tu trabajo.</li>
+    <li>Hacerse pasar por aliados mientras reportan o comentan tus fallas pequeñas para quedar como “los observadores responsables”.</li>
+    <li>Meterse en tareas que no les corresponden para controlar procesos o manipular resultados sin que nadie se dé cuenta.</li>
+    <li>Tratar de ridiculizarte delante de otros con bromas disfrazadas de humor, pero con intención de bajarte la moral.</li>
+    <li>Exagerar problemas que tú no causaste para que parezca que eres incompetente o descuidado.</li>
+    <li>Crear malentendidos entre compañeros para generar conflicto y posicionarse como “los únicos neutrales”.</li>
+    <li>Robar ideas o propuestas tuyas y presentarlas antes que tú para quedar como los creativos o diligentes.</li>
+    <li>Sabotear pequeñas tareas (no entregar algo, mover un archivo, omitir un dato) y luego actuar sorprendidos fingiendo inocencia.</li>
+</ul>
+
+
+
+
+
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">🔒 Falta de adaptabilidad </h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+
+</p>
+<ul class="list-disc pl-6 text-stone-700 space-y-2 mb-6">
+    <li>Resistirse a cambios en procesos o tecnologías, lo que puede hacerte menos competitivo en el mercado laboral.</li>
+    <li>No ajustar estrategias frente a nuevas oportunidades o desafíos, limitando tu crecimiento profesional.</li>
+    <li>Perder relevancia frente a profesionales más adaptables y preparados para la evolución del sector.</li>
+</ul>
+
+<!-- INTRODUCCIÓN FINAL-->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">Cierre y Próximos Pasos 💼</h2>
+<p class="text-stone-700 leading-relaxed mb-8 text-justify">
+     Evitar estos errores es solo el primer paso para avanzar en tu carrera. Lo importante es aplicar lo aprendido, ajustar tu enfoque cuando sea necesario y mantener una actitud proactiva frente a cada oportunidad. Cada acción que tomes para mejorar tus habilidades, organizar tu tiempo y construir relaciones estratégicas te acercará a tu crecimiento profesional. Recuerda que el desarrollo laboral es un proceso constante: identifica, corrige y potencia tu carrera día a día.
+</p>
+
+      </div>
+    </main>
+
+
+
+<div class="interlink-container mx-auto my-12 max-w-3xl p-4 bg-white shadow rounded-lg" style="font-family: 'Lora', serif;">
+
+  <!-- FRASE GUIA -->
+  <p class="text-stone-700 text-sm mb-2 text-center font-bold">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir".
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+    <!-- SELECT DE ARTÍCULOS -->
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+
+    <!-- BUSCADOR -->
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+
+    <!-- BOTÓN IR -->
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2">Ir</button>
+
+    <!-- BOTÓN VER TODOS -->
+    <a id="viewAllBtn" href="./index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-700 text-sm">
+    Total <span id="totalArticles" class="font-semibold mx-1">0</span> artículos
+  </div>
+</div>
+
+<style>
+.interlink-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.select-pages, .goto-page, .page-box {
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  height: 40px;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-pages, .goto-page {
+  width: 100%;
+}
+
+.select-pages:hover, .goto-page:hover, .page-box:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+
+.page-box {
+  min-width: 80px;
+}
+
+.page-box:disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}
+</style>
+
+<script>
+// ELEMENTOS
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const viewAllBtn = document.getElementById("viewAllBtn");
+const perPage = 6;
+
+let articles = [];
+
+// MEZCLAR ALEATORIAMENTE
+function shuffleArray(array) {
+  return array
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a,b) => a.sort - b.sort)
+    .map(({value}) => value);
+}
+
+// MOSTRAR HASTA 6 ARTÍCULOS
+function fillSelect(list) {
+  select.innerHTML = "";
+  const paginated = shuffleArray(list).slice(0, perPage);
+
+  if (paginated.length === 0) {
+    const option = document.createElement("option");
+    option.textContent = "No se encontraron artículos";
+    option.disabled = true;
+    select.appendChild(option);
+  } else {
+    paginated.forEach(a => {
+      const option = document.createElement("option");
+      option.value = a.url;
+      option.textContent = a.title;
+      select.appendChild(option);
+    });
+  }
+
+  totalArticles.textContent = list.length;
+}
+
+// BOTÓN IR
+goBtn.addEventListener("click", () => {
+  const url = select.value;
+  if (url) window.location.href = url;
+});
+
+// BUSCADOR
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  const filtered = articles.filter(a => a.title.toLowerCase().includes(query));
+  fillSelect(filtered);
+});
+
+// ---------------------------
+// RUTA REAL AJUSTADA
+// ---------------------------
+// Carga todos los artículos desde:
+// blog/inversiones/invertir-en-plataformas/index.html
+// ---------------------------
+
+fetch('../mejorar-tu-empleo/index.html')
+  .then(response => response.text())
+  .then(html => {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+
+    // Extraer enlaces
+    const articleLinks = Array.from(tempDiv.querySelectorAll('.article a'));
+
+    articles = articleLinks.map(a => {
+      const t = a.querySelector('h3');
+      return {
+        title: t ? t.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href")
+      };
+    });
+
+    fillSelect(articles);
+
+    // Botón ver todos
+    viewAllBtn.href = "../mejorar-tu-empleo/index.html";
+  })
+  .catch(err => console.error('Error al cargar artículos:', err));
+</script>
+
+
+
+
+    <!-- BOTÓN FLOTANTE DE COMPARTIR -->
+<div class="fixed bottom-6 right-6 z-50">
+
+    <!-- Botones desplegables -->
+    <div id="shareButtons" class="flex flex-col items-center gap-3 mb-4 opacity-0 pointer-events-none transition-all duration-300">
+        
+        <!-- Facebook -->
+        <a id="facebookShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a id="twitterShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-900 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2zm-2.377 17.5h1.64L8.29 4.39H6.57l9.297 15.11z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a id="linkedinShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a id="whatsappShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
+            </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a id="tiktokShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-800 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 48 48" fill="currentColor">
+                <path d="M41.5 14.1c-3.3-.1-6.5-1.7-8.6-4.4-1.1-1.3-1.8-3-2.2-4.7h-.1v-.4c-.1-.6-.1-1.1-.1-1.7H24v30.2c0 2-.8 3.9-2.2 5.3-1.4 1.4-3.3 2.2-5.3 2.2-4.1 0-7.5-3.4-7.5-7.5S12.4 25.7 16.5 25.7c1.1 0 2.2.3 3.2.8V18c-1-.1-2-.2-3-.2-8.3 0-15 6.7-15 15s6.7 15 15 15c4 0 7.8-1.6 10.6-4.4 2.8-2.8 4.4-6.6 4.4-10.6V18.2c2.5 1.8 5.5 2.8 8.6 2.9v-7z"/>
+            </svg>
+        </a>
+
+        <!-- Copiar enlace -->
+        <button id="copyLink"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-500 hover:bg-gray-600 text-white shadow-lg transition hover:-translate-y-1"
+            title="Copiar enlace">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.414-1.414m7.778-7.778a4 4 0 015.656 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.536-1.536"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- BOTÓN FLOTANTE PRINCIPAL -->
+    <button id="toggleShare"
+        class="w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center shadow-xl transition-all hover:-translate-y-1">
+        <i data-lucide="share-2" class="w-6 h-6"></i>
+    </button>
+
+</div>
+
+<script>
+    const toggleShare = document.getElementById("toggleShare");
+    const shareButtons = document.getElementById("shareButtons");
+    const copyLink = document.getElementById("copyLink");
+
+    const facebookShare = document.getElementById("facebookShare");
+    const twitterShare = document.getElementById("twitterShare");
+    const linkedinShare = document.getElementById("linkedinShare");
+    const whatsappShare = document.getElementById("whatsappShare");
+    const tiktokShare = document.getElementById("tiktokShare");
+
+    let open = false;
+
+    // Función para abrir/cerrar botones
+    function toggleButtons(show) {
+        open = show;
+        if (open) {
+            shareButtons.classList.remove("opacity-0", "pointer-events-none");
+            shareButtons.classList.add("opacity-100");
+        } else {
+            shareButtons.classList.add("opacity-0", "pointer-events-none");
+            shareButtons.classList.remove("opacity-100");
+        }
+    }
+
+    toggleShare.onclick = (e) => {
+        toggleButtons(!open);
+        e.stopPropagation(); // Evita que el clic se propague
+    };
+
+    // Asignar URLs dinámicamente según la página actual
+    const currentURL = encodeURIComponent(window.location.href);
+    facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+    twitterShare.href = `https://twitter.com/intent/tweet?url=${currentURL}`;
+    linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}`;
+    whatsappShare.href = `https://api.whatsapp.com/send?text=${currentURL}`;
+    tiktokShare.href = `https://www.tiktok.com/share?url=${currentURL}`;
+
+    // Copiar enlace dinámico
+    copyLink.onclick = (e) => {
+        navigator.clipboard.writeText(window.location.href)
+            .then(() => alert("Enlace copiado al portapapeles"))
+            .catch(() => alert("No se pudo copiar el enlace"));
+        e.stopPropagation(); // Evita cerrar menú
+    };
+
+    // Evitar cerrar al hacer clic dentro del contenedor de botones
+    shareButtons.addEventListener("click", (e) => e.stopPropagation());
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener("click", () => {
+        if (open) toggleButtons(false);
+    });
+
+    // Cerrar al hacer scroll
+    window.addEventListener("scroll", () => {
+        if (open) toggleButtons(false);
+    });
+
+    lucide.createIcons();
+</script>
+
+
+
+<!-- ETIQUETA FLOTANTE MODERNA (tipo <<) -->
+<div id="floatingTab" style="
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background:#ffffff;
+  color:#0f172a;
+  padding:12px 14px;
+  border-top-right-radius:12px;
+  border-bottom-right-radius:12px;
+  cursor:pointer;
+  font-weight:700;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 4px 6px rgba(15,23,42,0.1), 0 2px 4px rgba(15,23,42,0.06);
+  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  user-select: none; /* ← Previene selección */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+">
+  »
+</div>
+
+<!-- CAJÓN FLOTANTE DEL BOTÓN -->
+<div id="floatingBtnContainer" style="
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  z-index:998;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity:0;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding-left: 14px;
+">
+  <button id="goToSectionBtn">Sección anterior</button>
+</div>
+
+<!-- ESTILOS DEL BOTÓN MODERNO -->
+<style>
+#goToSectionBtn {
+  border: none;
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(15,23,42,0.1), 0 2px 4px rgba(15,23,42,0.06);
+  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  font-family: 'Lora', serif;
+  letter-spacing: 0.5px;
+  user-select: none; /* ← Previene selección del botón */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#goToSectionBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(15,23,42,0.15), 0 4px 6px rgba(15,23,42,0.1);
+  background: #f8f9fa;
+}
+
+#goToSectionBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(15,23,42,0.06);
+  background: #ffffff;
+}
+
+#floatingTab:hover {
+  transform: translateY(-50%) translateX(2px);
+  box-shadow: 0 8px 12px rgba(15,23,42,0.15), 0 4px 6px rgba(15,23,42,0.1);
+  background: #f8f9fa;
+}
+
+#floatingTab:active {
+  transform: translateY(-50%) translateX(0);
+  box-shadow: 0 2px 4px rgba(15,23,42,0.06);
+  background: #ffffff;
+}
+</style>
+
+<!-- JAVASCRIPT PARA FUNCIONAMIENTO -->
+<script>
+const goToSectionBtn = document.getElementById("goToSectionBtn");
+const floatingBtnContainer = document.getElementById("floatingBtnContainer");
+const floatingTab = document.getElementById("floatingTab");
+
+// URL de destino
+const targetURL = "./index.html";
+
+// Redirección al hacer clic
+goToSectionBtn.addEventListener("click", () => {
+  window.location.href = targetURL;
+});
+
+// Evitar selección de texto con el mouse
+floatingTab.addEventListener("mousedown", (e) => e.preventDefault());
+
+// Estado del cajón
+let isOpen = false;
+
+// Función para mostrar el cajón
+function showFloatingBtn() {
+  floatingBtnContainer.style.transform = "translate(0, -50%)";
+  floatingBtnContainer.style.opacity = "1";
+  floatingTab.textContent = "«";
+  isOpen = true;
+}
+
+// Función para ocultar el cajón
+function hideFloatingBtn() {
+  floatingBtnContainer.style.transform = "translate(-100%, -50%)";
+  floatingBtnContainer.style.opacity = "0";
+  floatingTab.textContent = "»";
+  isOpen = false;
+}
+
+// Abrir o cerrar el cajón al hacer clic en la pestaña
+floatingTab.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (isOpen) {
+    hideFloatingBtn();
+  } else {
+    showFloatingBtn();
+  }
+});
+
+// Cerrar al hacer clic fuera del botón y de la pestaña
+document.addEventListener("click", (e) => {
+  if (!floatingBtnContainer.contains(e.target) && e.target !== floatingTab) {
+    hideFloatingBtn();
+  }
+});
+
+// Cerrar al hacer scroll
+window.addEventListener("scroll", () => {
+  hideFloatingBtn();
+});
+</script>
+
+
+
+
+
+<!-- ===================== FOOTER PROFESIONAL CON ICONOS ===================== -->
+<footer class="bg-green-600 py-6 text-center text-white mt-20" style="font-family: 'Lora', serif;">
+    <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
+    <div class="mt-2 flex justify-center gap-6 text-white text-2xl">
+        <!-- Sobre el Blog -->
+        <span id="openAbout" class="cursor-pointer hover:scale-110 transition-transform" title="Sobre el Blog">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-7-9-7-9 7 9 7z" />
+            </svg>
+        </span>
+        <!-- Políticas de Privacidad -->
+        <span id="openPrivacy" class="cursor-pointer hover:scale-110 transition-transform" title="Políticas de Privacidad">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM12 11v10m0-10h10M12 11H2" />
+            </svg>
+        </span>
+        <!-- Términos y Condiciones -->
+        <span id="openTerms" class="cursor-pointer hover:scale-110 transition-transform" title="Términos y Condiciones">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+        </span>
+        <!-- Contacto -->
+        <span id="openContact" class="cursor-pointer hover:scale-110 transition-transform" title="Contacto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4m0 0v4m0-4l-8-8-8 8h4v4h8v-4z" />
+            </svg>
+        </span>
+    </div>
+</footer>
+
+<!-- ===================== ESTILOS DE ANIMACIÓN ===================== -->
+<style>
+    .modal-enter {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.3s ease-out;
+    }
+    .modal-enter-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+</style>
+
+<!-- ===================== MODALES ===================== -->
+<!-- Modal Sobre el Blog -->
+<div id="aboutModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeAbout" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Sobre el Blog</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Bienvenido a Código Millonario, un espacio pensado para quienes buscan tomar control real de sus finanzas y crecer económicamente de manera inteligente. 
+            Aquí encontrarás estrategias claras y prácticas para ahorrar, invertir y gestionar tu dinero con seguridad, aplicables a tu vida diaria y a tus decisiones financieras más importantes.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Cada artículo y recurso está diseñado para ayudarte a identificar oportunidades, evitar errores comunes y generar resultados tangibles en tu economía personal, profesional o empresarial. 
+            Con consejos basados en experiencia y conocimientos sólidos, podrás transformar la información en acciones efectivas que potencien tu libertad financiera y tu tranquilidad económica.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Políticas de Privacidad -->
+<div id="privacyModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closePrivacy" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Políticas de Privacidad</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            En este espacio, nos comprometemos a proteger tu privacidad y la seguridad de tu información personal. Toda la información que puedas proporcionar, como tu nombre, correo electrónico o cualquier otro dato, será utilizada únicamente para los fines establecidos y nunca será compartida con terceros sin tu consentimiento explícito.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Recopilamos información únicamente para mejorar la experiencia de quienes acceden a este espacio, incluyendo estadísticas sobre visitas y el uso de recursos disponibles. No utilizamos técnicas invasivas y no vendemos tus datos bajo ninguna circunstancia.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Este sitio puede contener enlaces a otros recursos o sitios externos. No nos hacemos responsables de las políticas de privacidad de esos sitios, por lo que te recomendamos revisar sus términos antes de proporcionar información personal.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este espacio, aceptas la recolección y el uso de tus datos según lo descrito en estas políticas. Nos reservamos el derecho de actualizar esta política en cualquier momento, y te animamos a revisarla periódicamente para estar al tanto de cualquier cambio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Si tienes preguntas o deseas más información sobre cómo manejamos tu información, puedes contactarnos directamente.
+        </p>
+    </div>
+</div>
+
+
+<!-- Modal Términos y Condiciones -->
+<div id="termsModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeTerms" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Términos y Condiciones</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Al utilizar este blog de finanzas, aceptas cumplir con los términos y condiciones establecidos a continuación. Esto incluye el uso responsable de la información, el respeto por los derechos de autor y la prohibición de distribuir contenido sin autorización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Todos los recursos, artículos y herramientas se proporcionan únicamente con fines educativos e informativos. No garantizamos resultados financieros específicos y cualquier acción tomada con base en el contenido es responsabilidad exclusiva del usuario.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Está prohibido copiar, distribuir, modificar o usar el contenido de este sitio con fines comerciales sin autorización expresa del propietario. Los usuarios deben aplicar la información con criterio propio.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Te recomendamos revisarlos periódicamente para estar al tanto de cualquier actualización.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-justify mt-4">
+            Al interactuar con este blog, aceptas cumplir con estos términos y condiciones. El uso del sitio implica la aceptación total de estas normas.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Contacto -->
+<div id="contactModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
+        <button id="closeContact" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
+        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Contacto</h2>
+        <p class="text-stone-700 leading-relaxed text-justify">
+            Puedes comunicarte con nosotros a través de:<br>
+            Email: codigomillonarioblog@gmail.com
+        </p>
+    </div>
+</div>
+
+
+<!-- ===================== SCRIPT PARA MODALES PROFESIONALES ===================== -->
+<script>
+function setupModal(openId, closeId, modalId){
+    const openBtn = document.getElementById(openId);
+    const closeBtn = document.getElementById(closeId);
+    const modal = document.getElementById(modalId);
+    const content = modal.querySelector('div');
+
+    openBtn.addEventListener('click', e=>{
+        e.preventDefault();
+        modal.classList.remove('hidden');
+        modal.classList.add('grid');
+        content.classList.add('modal-enter-active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', ()=>{
+        modal.classList.add('hidden');
+        modal.classList.remove('grid');
+        content.classList.remove('modal-enter-active');
+        document.body.style.overflow = 'auto';
+    });
+
+    modal.addEventListener('click', e=>{
+        if(e.target === modal){
+            modal.classList.add('hidden');
+            modal.classList.remove('grid');
+            content.classList.remove('modal-enter-active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Configurar todos los modales
+setupModal('openAbout','closeAbout','aboutModal');
+setupModal('openPrivacy','closePrivacy','privacyModal');
+setupModal('openTerms','closeTerms','termsModal');
+setupModal('openContact','closeContact','contactModal');
+</script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
