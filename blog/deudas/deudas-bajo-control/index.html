@@ -42,165 +42,275 @@ input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+<style>
+/* TARJETA ENVOLVENTE */
+.article-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CARD PREMIUM */
+.article-card {
+    width: 100%;
+    max-width: 380px;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(0,0,0,0.22);
+}
+
+/* IMAGEN */
+.article-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+/* ETIQUETA */
+.badge {
+    position: relative;
+    display: inline-block;
+    background: #1E5BFF;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: -32px;
+    margin-left: 12px;
+}
+
+/* TÍTULO */
+.article-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+/* FECHA + COMENTARIOS */
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 8px;
+}
+
+.meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+/* BOTÓN */
+.arrow-btn {
+    margin-left: auto;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    background: #1E5BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.25s ease;
+}
+
+.article-card:hover .arrow-btn {
+    transform: scale(1.15);
+}
+</style>
+
 </head>
 
 <body class="bg-stone-50 text-stone-900">
 
-<!-- HEADER CON MENÚ HAMBURGUESA -->
-<header class="bg-white shadow-sm sticky top-0 z-50" style="font-family: 'Lora', serif;">
-    <!-- tu código de header y menú igual que antes -->
 
- <!-- HEADER CON MENÚ HAMBURGUESA -->
-<header class="bg-white shadow-sm sticky top-0 z-50" style="font-family: 'Lora', serif;">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        
-         <div class="flex items-center space-x-2">
-            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-            <span class="text-2xl font-bold">Código Millonario</span>
-        </div>
+<!-- MENU FLOTANTE UNIVERSAL -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-            <!-- Menú escritorio -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="../../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
-                <a href="../../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
-                <a href="../../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
-                <a href="../../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
-                <a href="../../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
-            </div>
+<header class="fixed inset-x-0 top-6 z-50 flex justify-center pointer-events-none">
 
-            <!-- Botón hamburguesa -->
-            <button class="md:hidden navbar-toggler" id="menu-toggle">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
+  <!-- MENÚ DE ESCRITORIO (PC) -->
+  <nav class="hidden md:flex bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] px-8 py-4 w-full max-w-5xl flex items-center justify-between pointer-events-auto transition-all duration-300" style="font-family: 'Poppins', sans-serif;">
+    <div class="flex items-center space-x-3">
+      <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+      <span class="text-xl font-bold text-stone-900">Código Millonario</span>
+    </div>
 
-        <!-- Menú móvil -->
-        <div id="mobileMenu">
-            <div class="menu-header">
-                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-                <span class="text-2xl font-bold">Código Millonario</span>
-            </div>
+    <div class="flex-1 flex justify-center items-center space-x-6 text-sm">
+      <a href="../../../index.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Inicio
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
 
-            <a href="../../../index.html">Inicio</a>
-            <a href="../../../educacionfinanciera.html">Educación Financiera</a>
-            <a href="../../../herramientas.html">Herramientas</a>
-            <a href="../../../opiniones.html">Opiniones</a>
-            <a href="../../../contacto.html">Contacto</a>
+      <a href="../../../educacionfinanciera.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Educación Financiera
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
 
-            <div class="menu-footer">
-                <a href="../../../contacto.html">Más información</a>
-            </div>
-        </div>
+      <a href="../../../herramientas.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Herramientas
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
 
-        <!-- ESTILOS DEL MENÚ HAMBURGUESA -->
-        <style>
-          .navbar-toggler {
-            border: none;
-            background: none;
-            outline: none;
-            cursor: pointer;
-            z-index: 1100;
-          }
-          .navbar-toggler-icon {
-            width: 25px;
-            height: 2px;
-            background: #000;
-            display: block;
-            position: relative;
-            transition: all 0.3s ease;
-          }
-          .navbar-toggler-icon::before,
-          .navbar-toggler-icon::after {
-            content: "";
-            position: absolute;
-            width: 25px;
-            height: 2px;
-            background: #000;
-            left: 0;
-            transition: all 0.3s ease;
-          }
-          .navbar-toggler-icon::before { top: -7px; }
-          .navbar-toggler-icon::after { top: 7px; }
-          .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
-          .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
-          .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+      <a href="../../../opiniones.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Opiniones
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
 
-          #mobileMenu {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            z-index: 1000;
-            padding-top: 0;
-            overflow-y: auto;
-          }
-          #mobileMenu.show { display: block; }
+      <a href="../../../contacto.html" class="ml-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-200">
+        Contacto
+      </a>
+    </div>
+  </nav>
 
-          #mobileMenu .menu-header {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 1rem;
-            border-bottom: 1px solid #ddd;
-            z-index: 1050;
-          }
-          #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
-          #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
+  <!-- MENÚ MÓVIL -->
+  <nav class="md:hidden bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] w-full flex items-center justify-between pointer-events-auto transition-all duration-300" style="font-family: 'Poppins', sans-serif; max-width: 95vw; padding: 0.5rem 1rem;">
+    <div class="flex items-center space-x-2">
+      <i data-lucide="wallet" class="w-5 h-5 text-green-600"></i>
+      <span class="text-base font-bold text-stone-900">Código Millonario</span>
+    </div>
 
-          #mobileMenu a {
-            display: block;
-            font-size: 1.25rem;
-            padding: 1rem 1rem;
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #eee;
-            text-align: left;
-          }
-          #mobileMenu a:hover { color: #22c55e; }
+    <!-- HAMBURGUESA -->
+    <button id="menu-toggle" class="relative w-6 h-6 flex flex-col justify-center items-center">
+      <span class="line top-line"></span>
+      <span class="line mid-line"></span>
+      <span class="line bottom-line"></span>
+    </button>
+  </nav>
 
-          #mobileMenu .menu-footer {
-            padding: 2rem;
-            text-align: center;
-          }
-          #mobileMenu .menu-footer a {
-            display: inline-block;
-            background: #3b82f6;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: bold;
-          }
-          #mobileMenu .menu-footer a:hover { background: #2563eb; }
+  <!-- MENU MOVIL DESPLEGABLE -->
+  <div id="mobileMenu" class="fixed top-20 left-1/2 -translate-x-1/2 w-11/12 max-w-xs bg-white rounded-2xl shadow-lg p-4 flex flex-col space-y-2 scale-0 opacity-0 pointer-events-none transition-all duration-300 z-50">
+    <a href="../../../index.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Inicio</a>
+    <a href="../../../educacionfinanciera.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Educación Financiera</a>
+    <a href="../../../herramientas.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Herramientas</a>
+    <a href="../../../opiniones.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Opiniones</a>
+    <a href="../../../contacto.html" class="mobile-item px-4 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors">Contacto</a>
+  </div>
 
-          @media(min-width: 768px) { #mobileMenu { display: none !important; } }
-        </style>
+</header>
 
-        <!-- SCRIPT DEL MENÚ HAMBURGUESA -->
-        <script>
-          lucide.createIcons();
+<style>
+  /* --- X PERFECTA --- */
+  #menu-toggle .line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #1c1c1c;
+    border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .top-line { transform: translateY(-6px); }
+  .mid-line { opacity: 1; }
+  .bottom-line { transform: translateY(6px); }
+  #menu-toggle.open .top-line { transform: translateY(0) rotate(45deg); }
+  #menu-toggle.open .mid-line { opacity: 0; }
+  #menu-toggle.open .bottom-line { transform: translateY(0) rotate(-45deg); }
 
-          const menuToggle = document.getElementById('menu-toggle');
-          const mobileMenu = document.getElementById('mobileMenu');
+  /* MOBILE MENU ANIMATIONS */
+  #mobileMenu { transform-origin: top center; }
+  #mobileMenu.scale-100 { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
+  #mobileMenu.scale-0 { transform: translateX(-50%) scale(0); opacity: 0; pointer-events: none; }
+</style>
 
-          menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            mobileMenu.classList.toggle('show');
-          });
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-          document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-              menuToggle.classList.remove('active');
-              mobileMenu.classList.remove('show');
-            });
-          });
-        </script>
-    </header>
+    if(menuToggle && mobileMenu){
+      function closeMobileMenu() {
+        mobileMenu.classList.remove('scale-100','opacity-100','pointer-events-auto');
+        mobileMenu.classList.add('scale-0','opacity-0','pointer-events-none');
+        menuToggle.classList.remove('open');
+      }
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('scale-100');
+        if(isOpen) closeMobileMenu();
+        else {
+          mobileMenu.classList.remove('scale-0','opacity-0','pointer-events-none');
+          mobileMenu.classList.add('scale-100','opacity-100','pointer-events-auto');
+          menuToggle.classList.add('open');
+        }
+      });
+
+      document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      window.addEventListener('resize', () => { if(window.innerWidth >= 768) closeMobileMenu(); });
+      document.addEventListener('click', (e) => {
+        if(window.innerWidth < 768){
+          if(!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) closeMobileMenu();
+        }
+      });
+      document.addEventListener('scroll', () => {
+        if(window.innerWidth < 768 && mobileMenu.classList.contains('scale-100')) closeMobileMenu();
+      }, { passive: true });
+    }
+
+
+// MARCAR LINK ACTIVO FORZADO
+const forcedPage = "educacionfinanciera.html"; // Página que siempre quieres marcar
+
+function getFileName(href) {
+  return href.split("/").pop(); // Obtiene solo el nombre del archivo
+}
+
+document.querySelectorAll(".nav-item").forEach(link => {
+  const href = link.getAttribute("href");
+  if(getFileName(href) === forcedPage){
+    link.style.color = "#1c1c1c";
+    link.style.fontWeight = "700";
+  }
+});
+
+document.querySelectorAll(".mobile-item").forEach(link => {
+  const href = link.getAttribute("href");
+  if(getFileName(href) === forcedPage){
+    link.style.background = "#f0f0f0";
+    link.style.fontWeight = "700";
+  }
+});
+
+
+
+    document.querySelectorAll(".mobile-item").forEach(link => {
+      const href = link.getAttribute("href")?.replace("./", "");
+      if(href === currentPage){
+        link.style.background = "#f0f0f0";
+        link.style.fontWeight = "700";
+      }
+    });
+  });
+</script>
+
+
+  <!-- HERO PRINCIPAL -->
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
 
 <!-- HERO PRINCIPAL -->
 <section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center" style="font-family: 'Lora', serif;">
@@ -271,161 +381,285 @@ input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border
 
             <!-- GRID DE ARTÍCULOS -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="articlesGrid">
-                <!-- Aquí van tus 11 artículos, cada uno con la clase 'article' -->
-                <!-- Ejemplo de un artículo: -->
-               <!-- Artículo 1 -->
+
 <div class="article">
-    <a href="./habitos-financieros-sanos.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/riqueza-abundante.png" alt="Hábitos financieros sanos" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Hábitos financieros sanos</h3>
-                <p class="text-stone-700">Mantén tus finanzas sanas después de pagar tus obligaciones.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./habitos-financieros-sanos.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/riqueza-abundante.png" alt="Hábitos financieros sanos">
+          <div class="badge">#¿Por qué castigas tu dinero?</div>
         </div>
+
+        <h2 class="article-title">
+          ¿Listo para no volver a endeudarte?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 2 -->
 <div class="article">
-    <a href="./banco-reporte-mora.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/libertad-economica.png" alt="Reporte por mora" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Reporte por mora</h3>
-                <p class="text-stone-700">Qué hacer si tu banco te reporta y cómo protegerte.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./banco-reporte-mora.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/libertad-economica.png" alt="Reporte por mora">
+          <div class="badge">#¿Te han Reportado por mora?</div>
         </div>
+
+        <h2 class="article-title">
+          ¿Cómo limpiar tu nombre tras ese antecedente?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 3 -->
 <div class="article">
-    <a href="./evitar-creditos-peligrosos.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/ingresos-pasivos.png" alt="Evitar créditos peligrosos" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Evita créditos peligrosos</h3>
-                <p class="text-stone-700">Lo que nadie te cuenta sobre créditos que arruinan tu bolsillo.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./evitar-creditos-peligrosos.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/ingresos-pasivos.png" alt="Evitar créditos peligrosos">
+          <div class="badge">#¿Tu crédito te traiciona?</div>
         </div>
+
+        <h2 class="article-title">
+           ¿Qué créditos arruinan tu bolsillo?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 4 -->
 <div class="article">
-    <a href="./refinanciar-reestructurar.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/patrimonio-personal.png" alt="Refinanciar vs reestructurar" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Refinanciar vs reestructurar</h3>
-                <p class="text-stone-700">Lo que nadie te explica sobre tus pagos.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./refinanciar-reestructurar.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/patrimonio-personal.png" alt="Refinanciar vs reestructurar">
+          <div class="badge">#¿Qué debes saber?</div>
         </div>
+
+        <h2 class="article-title">
+          ¿Qué pasa si tomas otra deuda?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 5 -->
 <div class="article">
-    <a href="./alertas-financieras.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/inversion-inteligente.png" alt="Alertas financieras" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Alertas financieras</h3>
-                <p class="text-stone-700">Detecta problemas antes de que sea demasiado tarde.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./alertas-financieras.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/inversion-inteligente.png" alt="Alertas financieras">
+          <div class="badge">#¿Ya perdiste el control?</div>
         </div>
+
+        <h2 class="article-title">
+          ¿Cómo saber si mi dinero está en orden?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 6 -->
 <div class="article">
-    <a href="./pagar-deudas-rapido.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/crecimiento-de-riqueza.png" alt="Método bola de nieve" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Método bola de nieve</h3>
-                <p class="text-stone-700">Acelera tus pagos y elimina deudas más rápido.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./pagar-deudas-rapido.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/crecimiento-de-riqueza.png" alt="Método bola de nieve">
+          <div class="badge">#¿Quieres eliminar deudas? </div>
         </div>
+
+        <h2 class="article-title">
+          ¿Para qué sirve el método Bola de Nieve?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 7 -->
 <div class="article">
-    <a href="./consolidar-deudas.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/activos-inteligentes.png" alt="Consolidar deudas" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Consolidar deudas</h3>
-                <p class="text-stone-700">Unifica tus deudas y toma decisiones informadas.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./consolidar-deudas.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/activos-inteligentes.png" alt="Consolidar deudas">
+          <div class="badge">#¿Te ahogan las deudas?</div>
         </div>
+
+        <h2 class="article-title">
+          ¿Se puede pagar cinco deudas en una sola?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 8 -->
 <div class="article">
-    <a href="./renegociar-pagos.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/oportunidades-de-inversion.png" alt="Renegociar pagos" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Renegociar pagos</h3>
-                <p class="text-stone-700">Negocia con bancos y reduce tus pagos sin estrés.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./renegociar-pagos.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/oportunidades-de-inversion.png" alt="Renegociar pagos">
+          <div class="badge">#¿Tienes altas cuotas?</div>
         </div>
+
+        <h2 class="article-title">
+          ¿Es posible reducir el monto mensual?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 9 -->
 <div class="article">
-    <a href="./mejorar-historial-crediticio.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/generar-riqueza.png" alt="Mejorar historial crediticio" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Mejorar historial crediticio</h3>
-                <p class="text-stone-700">Secretos para impulsar tu crédito rápidamente.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./mejorar-historial-crediticio.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/generar-riqueza.png" alt="Mejorar historial crediticio">
+          <div class="badge">#¿Bajo historial crediticio?</div>
         </div>
+
+        <h2 class="article-title">
+          ¿Es posible impulsar tu puntaje rápidamente?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 10 -->
 <div class="article">
-    <a href="./salir-obligaciones.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/acumulacion-de-dinero.png" alt="Salir de obligaciones" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2">Salir de obligaciones</h3>
-                <p class="text-stone-700">Guía práctica para recuperar tu tranquilidad financiera.</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./salir-obligaciones.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/acumulacion-de-dinero.png" alt="Salir de obligaciones">
+          <div class="badge">#¿Altas preocupaciones?</div>
         </div>
+
+        <h2 class="article-title">
+          ¿Deseas dejar de ser prisionero de tus dudas?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 13/10/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
 
-<!-- Artículo 11 -->
 <div class="article">
-    <a href="./consecuencias-prestamo.html" class="block">
-        <div class="bg-white shadow hover:shadow-lg transition overflow-hidden flex flex-col aspect-square cursor-pointer">
-            <img src="../../../assets/png/consecuencias-prestamo.png" alt="Salir de obligaciones" class="w-full h-1/2 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-                <h3 class="text-xl font-semibold text-stone-900 mb-2"> Hacer un mal prestamo </h3>
-                <p class="text-stone-700">Tomar decisiones inteligentes antes de hacer un mal préstamo.”</p>
-                <span class="mt-auto inline-block text-green-600 font-semibold hover:underline">Leer Artículo →</span>
-            </div>
+  <article>
+    <a href="./consecuencias-prestamo.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/consecuencias-prestamo.png" alt="Hacer un mal préstamo">
+          <div class="badge">#¿Evitas malos préstamos?</div>
         </div>
+
+        <h2 class="article-title">
+            ¿Cómo saber si haces buenos préstamos?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 14/12/2025</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
     </a>
+  </article>
 </div>
+
+
+
+
 
             </div>
         </div>

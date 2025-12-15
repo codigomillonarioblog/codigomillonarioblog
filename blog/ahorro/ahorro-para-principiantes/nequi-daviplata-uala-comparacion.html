@@ -22,98 +22,174 @@
 </head>
 
 
-    <!-- ESTILOS MENÚ HAMBURGUESA -->
-    <style>
-        .navbar-toggler { border: none; background: none; outline: none; cursor: pointer; z-index: 1100; }
-        .navbar-toggler-icon { width: 25px; height: 2px; background: #000; display: block; position: relative; transition: all 0.3s ease; }
-        .navbar-toggler-icon::before, .navbar-toggler-icon::after { content: ""; position: absolute; width: 25px; height: 2px; background: #000; left: 0; transition: all 0.3s ease; }
-        .navbar-toggler-icon::before { top: -7px; }
-        .navbar-toggler-icon::after { top: 7px; }
-        .navbar-toggler.active .navbar-toggler-icon { background: transparent !important; }
-        .navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
-        .navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
-
-        #mobileMenu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; padding-top: 0; overflow-y: auto; }
-        #mobileMenu.show { display: block; }
-
-        #mobileMenu .menu-header { position: sticky; top: 0; background: #fff; display: flex; align-items: center; gap: 0.5rem; padding: 1rem 1rem; border-bottom: 1px solid #ddd; z-index: 1050; }
-        #mobileMenu .menu-header i { width: 2rem; height: 2rem; }
-        #mobileMenu .menu-header span { font-weight: bold; font-size: 1.5rem; }
-
-        #mobileMenu a { display: block; font-size: 1.25rem; padding: 1rem 1rem; color: #000; text-decoration: none; border-bottom: 1px solid #eee; text-align: left; }
-        #mobileMenu a:hover { color: #22c55e; }
-
-        #mobileMenu .menu-footer { padding: 2rem; text-align: center; }
-        #mobileMenu .menu-footer a { display: inline-block; background: #22c55e; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
-        #mobileMenu .menu-footer a:hover { background: #16a34a; }
-
-        @media(min-width: 768px) { #mobileMenu { display: none !important; } }
-    </style>
-</head>
-
 <body class="bg-stone-50 text-stone-900">
 
-     <!-- HEADER CON MENÚ HAMBURGUESA -->
-<header class="bg-white shadow-sm sticky top-0 z-50" style="font-family: 'Lora', serif;">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        
-         <div class="flex items-center space-x-2">
-            <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-            <span class="text-2xl font-bold">Código Millonario</span>
-        </div>
+
+<!-- MENU FLOTANTE UNIVERSAL -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<header class="fixed inset-x-0 top-6 z-50 flex justify-center pointer-events-none">
+
+  <!-- MENÚ DE ESCRITORIO (PC) -->
+  <nav class="hidden md:flex bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] px-8 py-4 w-full max-w-5xl flex items-center justify-between pointer-events-auto transition-all duration-300" style="font-family: 'Poppins', sans-serif;">
+    <div class="flex items-center space-x-3">
+      <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+      <span class="text-xl font-bold text-stone-900">Código Millonario</span>
+    </div>
+
+    <div class="flex-1 flex justify-center items-center space-x-6 text-sm">
+      <a href="../../../index.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Inicio
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="../../../educacionfinanciera.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Educación Financiera
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="../../../herramientas.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Herramientas
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="../../../opiniones.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Opiniones
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="../../../contacto.html" class="ml-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-200">
+        Contacto
+      </a>
+    </div>
+  </nav>
+
+  <!-- MENÚ MÓVIL -->
+  <nav class="md:hidden bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] w-full flex items-center justify-between pointer-events-auto transition-all duration-300" style="font-family: 'Poppins', sans-serif; max-width: 95vw; padding: 0.5rem 1rem;">
+    <div class="flex items-center space-x-2">
+      <i data-lucide="wallet" class="w-5 h-5 text-green-600"></i>
+      <span class="text-base font-bold text-stone-900">Código Millonario</span>
+    </div>
+
+    <!-- HAMBURGUESA -->
+    <button id="menu-toggle" class="relative w-6 h-6 flex flex-col justify-center items-center">
+      <span class="line top-line"></span>
+      <span class="line mid-line"></span>
+      <span class="line bottom-line"></span>
+    </button>
+  </nav>
+
+  <!-- MENU MOVIL DESPLEGABLE -->
+  <div id="mobileMenu" class="fixed top-20 left-1/2 -translate-x-1/2 w-11/12 max-w-xs bg-white rounded-2xl shadow-lg p-4 flex flex-col space-y-2 scale-0 opacity-0 pointer-events-none transition-all duration-300 z-50">
+    <a href="../../../index.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Inicio</a>
+    <a href="../../../educacionfinanciera.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Educación Financiera</a>
+    <a href="../../../herramientas.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Herramientas</a>
+    <a href="../../../opiniones.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Opiniones</a>
+    <a href="../../../contacto.html" class="mobile-item px-4 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors">Contacto</a>
+  </div>
+
+</header>
+
+<style>
+  /* --- X PERFECTA --- */
+  #menu-toggle .line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #1c1c1c;
+    border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .top-line { transform: translateY(-6px); }
+  .mid-line { opacity: 1; }
+  .bottom-line { transform: translateY(6px); }
+  #menu-toggle.open .top-line { transform: translateY(0) rotate(45deg); }
+  #menu-toggle.open .mid-line { opacity: 0; }
+  #menu-toggle.open .bottom-line { transform: translateY(0) rotate(-45deg); }
+
+  /* MOBILE MENU ANIMATIONS */
+  #mobileMenu { transform-origin: top center; }
+  #mobileMenu.scale-100 { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
+  #mobileMenu.scale-0 { transform: translateX(-50%) scale(0); opacity: 0; pointer-events: none; }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if(menuToggle && mobileMenu){
+      function closeMobileMenu() {
+        mobileMenu.classList.remove('scale-100','opacity-100','pointer-events-auto');
+        mobileMenu.classList.add('scale-0','opacity-0','pointer-events-none');
+        menuToggle.classList.remove('open');
+      }
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('scale-100');
+        if(isOpen) closeMobileMenu();
+        else {
+          mobileMenu.classList.remove('scale-0','opacity-0','pointer-events-none');
+          mobileMenu.classList.add('scale-100','opacity-100','pointer-events-auto');
+          menuToggle.classList.add('open');
+        }
+      });
+
+      document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      window.addEventListener('resize', () => { if(window.innerWidth >= 768) closeMobileMenu(); });
+      document.addEventListener('click', (e) => {
+        if(window.innerWidth < 768){
+          if(!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) closeMobileMenu();
+        }
+      });
+      document.addEventListener('scroll', () => {
+        if(window.innerWidth < 768 && mobileMenu.classList.contains('scale-100')) closeMobileMenu();
+      }, { passive: true });
+    }
 
 
-            <!-- Menú escritorio -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="../../../index.html" class="text-stone-600 hover:text-green-600 transition-colors">Inicio</a>
-                <a href="../../../educacionfinanciera.html" class="text-stone-900 font-semibold">Educación Financiera</a>
-                <a href="../../../herramientas.html" class="text-stone-600 hover:text-green-600 transition-colors">Herramientas</a>
-                <a href="../../../opiniones.html" class="text-stone-600 hover:text-green-600 transition-colors">Opiniones</a>
-                <a href="../../../contacto.html" class="text-stone-600 hover:text-green-600 transition-colors">Contacto</a>
-            </div>
+// MARCAR LINK ACTIVO FORZADO
+const forcedPage = "educacionfinanciera.html"; // Página que siempre quieres marcar
 
-            <!-- Botón hamburguesa -->
-            <button class="md:hidden navbar-toggler" id="menu-toggle">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
+function getFileName(href) {
+  return href.split("/").pop(); // Obtiene solo el nombre del archivo
+}
 
-        <!-- Menú móvil -->
-        <div id="mobileMenu">
-            <div class="menu-header">
-                <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-                <span class="text-2xl font-bold">Código Millonario</span>
-            </div>
+document.querySelectorAll(".nav-item").forEach(link => {
+  const href = link.getAttribute("href");
+  if(getFileName(href) === forcedPage){
+    link.style.color = "#1c1c1c";
+    link.style.fontWeight = "700";
+  }
+});
 
-            <a href="../../../index.html">Inicio</a>
-            <a href="../../../educacionfinanciera.html">Educación Financiera</a>
-            <a href="../../../herramientas.html">Herramientas</a>
-            <a href="../../../opiniones.html">Opiniones</a>
-            <a href="../../../contacto.html">Contacto</a>
+document.querySelectorAll(".mobile-item").forEach(link => {
+  const href = link.getAttribute("href");
+  if(getFileName(href) === forcedPage){
+    link.style.background = "#f0f0f0";
+    link.style.fontWeight = "700";
+  }
+});
 
-            <div class="menu-footer">
-                <a href="../../../contacto.html">Más información</a>
-            </div>
-        </div>
 
-        <script>
-            lucide.createIcons();
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobileMenu');
 
-            menuToggle.addEventListener('click', () => {
-                menuToggle.classList.toggle('active');
-                mobileMenu.classList.toggle('show');
-            });
+    document.querySelectorAll(".mobile-item").forEach(link => {
+      const href = link.getAttribute("href")?.replace("./", "");
+      if(href === currentPage){
+        link.style.background = "#f0f0f0";
+        link.style.fontWeight = "700";
+      }
+    });
+  });
+</script>
 
-            document.querySelectorAll('#mobileMenu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    menuToggle.classList.remove('active');
-                    mobileMenu.classList.remove('show');
-                });
-            });
-        </script>
-    </header>
+
+  <!-- HERO PRINCIPAL -->
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
 
 
   <!-- HERO -->
