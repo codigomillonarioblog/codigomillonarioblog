@@ -856,166 +856,234 @@ window.addEventListener("scroll", () => {
 
 
 
-<!-- ===================== FOOTER PROFESIONAL CON ICONOS ===================== -->
-<footer class="bg-green-600 py-6 text-center text-white mt-20" style="font-family: 'Lora', serif;">
-    <p class="text-sm">© 2025 Código Millonario — Todos los derechos reservados.</p>
-    <div class="mt-2 flex justify-center gap-6 text-white text-2xl">
-        <!-- Sobre el Blog -->
-        <span id="openAbout" class="cursor-pointer hover:scale-110 transition-transform" title="Sobre el Blog">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-7-9-7-9 7 9 7z" />
-            </svg>
-        </span>
-        <!-- Políticas de Privacidad -->
-        <span id="openPrivacy" class="cursor-pointer hover:scale-110 transition-transform" title="Políticas de Privacidad">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM12 11v10m0-10h10M12 11H2" />
-            </svg>
-        </span>
-        <!-- Términos y Condiciones -->
-        <span id="openTerms" class="cursor-pointer hover:scale-110 transition-transform" title="Términos y Condiciones">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-        </span>
-        <!-- Contacto -->
-        <span id="openContact" class="cursor-pointer hover:scale-110 transition-transform" title="Contacto">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4m0 0v4m0-4l-8-8-8 8h4v4h8v-4z" />
-            </svg>
-        </span>
+<!-- ===================== FOOTER PROFESIONAL DEFINITIVO ===================== -->
+<footer class="bg-[#1e1e1e] text-gray-300 pt-12 pb-6 px-6 mt-20" style="font-family: 'Inter', sans-serif;">
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+    <!-- COLUMNA 1: NEWSLETTER -->
+    <div>
+      <h3 class="text-white text-xl font-semibold mb-3 tracking-wide">
+        ¿Quieres recibir noticias cada semana?
+      </h3>
+      <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+        Recibe consejos exclusivos sobre dinero, ahorro e inversión directamente en tu correo.
+      </p>
+
+<form action="https://api.web3forms.com/submit" method="POST"
+      class="flex rounded overflow-hidden border border-gray-600">
+  <!-- 🔐 WEB3FORMS CONFIG -->
+  <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+  <input type="hidden" name="subject" value="Nueva suscripción desde Código Millonario">
+  <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+  <!-- 📧 EMAIL -->
+  <input type="email" name="email" required
+    placeholder="Tu correo electrónico"
+    class="w-full px-3 py-2 bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none text-sm">
+  <!-- 🚀 BOTÓN -->
+  <button type="submit"
+    class="bg-green-500 hover:bg-green-600 px-4 flex items-center justify-center transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white mr-1" fill="none"
+      viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M5 12h14m0 0l-6-6m6 6l-6 6"/>
+    </svg>
+    <span class="text-white text-sm font-medium">Enviar</span>
+  </button>
+</form>
+
+      <p class="text-gray-500 text-xs mt-2 italic">
+        Podrás cancelar tu suscripción en cualquier momento.
+      </p>
     </div>
+
+    <!-- COLUMNA 2 -->
+    <div>
+      <h3 class="text-white text-lg font-semibold mb-3 tracking-wide">Sobre</h3>
+      <ul class="space-y-2">
+        <li><span data-modal="aboutModal" class="cursor-pointer hover:text-green-500 transition font-medium">Sobre el Blog</span></li>
+        <li><span data-modal="privacyModal" class="cursor-pointer hover:text-green-500 transition font-medium">Política de Privacidad</span></li>
+        <li><span data-modal="termsModal" class="cursor-pointer hover:text-green-500 transition font-medium">Términos y Condiciones</span></li>
+        <li><a href="/educacionfinanciera.html" class="hover:text-green-500 transition font-medium">Artículos</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMNA 3 -->
+    <div>
+      <h3 class="text-white text-lg font-semibold mb-3 tracking-wide">Recursos</h3>
+      <ul class="space-y-2">
+        <li><a href="/herramientas.html" class="hover:text-green-500 transition font-medium">Calculadoras</a></li>
+        <li><a href="/opiniones.html" class="hover:text-green-500 transition font-medium">Historias</a></li>
+        <li><a href="/blog/negocios/index.html" class="hover:text-green-500 transition font-medium">Emprendimiento</a></li>
+        <li><a href="/blog/inversiones/index.html" class="hover:text-green-500 transition font-medium">Guías de inversión</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-white text-lg font-semibold mb-3 tracking-wide">Contacto</h3>
+      <p class="text-sm">Colombia — Online</p>
+      <p class="text-sm">codigomillonarioblog@gmail.com</p>
+     </div>
+
+  </div>
+
+  <!-- BARRA INFERIOR -->
+  <div class="border-t border-gray-700 mt-10 pt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+ <p class="text-gray-500 text-[10px] sm:text-sm font-medium whitespace-nowrap text-center">
+  © 2025 Código Millonario — Todos los derechos reservados.
+</p>
+
+    <!-- ICONOS SOCIALES (NO TOCADOS) -->
+      <!-- ICONOS SOCIALES OFICIALES -->
+    <div class="flex gap-4">
+
+      <!-- Facebook (OFICIAL) -->
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://codigomillonario.blog/educacionfinanciera" target="_blank"
+        class="hover:text-green-500 transition">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.49 0-1.953.925-1.953 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+
+      <!-- WhatsApp (OFICIAL) -->
+      <a href="https://api.whatsapp.com/send?text=Visita%20https://codigomillonario.blog/educacionfinanciera" target="_blank"
+        class="hover:text-green-500 transition">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.52 3.48A11.91 11.91 0 0 0 12.01 0C5.39 0 .02 5.37.02 11.99c0 2.11.55 4.17 1.6 6L0 24l6.18-1.62a11.94 11.94 0 0 0 5.83 1.49h.01c6.62 0 11.99-5.37 11.99-11.99a11.9 11.9 0 0 0-3.49-8.4zM12.01 21.8a9.8 9.8 0 0 1-5-1.38l-.36-.21-3.67.96.98-3.58-.23-.37a9.79 9.79 0 1 1 8.28 4.58zm5.36-7.34c-.29-.14-1.7-.84-1.96-.93-.26-.1-.45-.14-.64.14-.19.29-.73.93-.9 1.12-.16.19-.33.21-.62.07a8.04 8.04 0 0 1-2.37-1.46 8.9 8.9 0 0 1-1.64-2.04c-.17-.29-.02-.45.13-.6.14-.14.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36s-1 1-1 2.43 1.02 2.8 1.17 3c.14.19 2.01 3.07 4.87 4.3.68.29 1.21.46 1.63.59.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z"/>
+        </svg>
+      </a>
+
+      <!-- X / Twitter (OFICIAL) -->
+      <a href="https://twitter.com/intent/tweet?url=https://codigomillonario.blog/educacionfinanciera" target="_blank"
+        class="hover:text-green-500 transition">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26L22.75 21.75h-6.63l-5.19-6.8-5.95 6.8H1.672l7.73-8.84L1.25 2.25h6.797l4.694 6.145L18.244 2.25z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn (OFICIAL) -->
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://codigomillonario.blog/educacionfinanciera" target="_blank"
+        class="hover:text-green-500 transition">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.813 20.452H3.861V9h2.952v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.545C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.273V1.727C24 .774 23.2 0 22.222 0z"/>
+        </svg>
+      </a>
+
+    </div>
+  </div>
 </footer>
 
-<!-- ===================== ESTILOS DE ANIMACIÓN ===================== -->
+<!-- ===================== ESTILOS MODAL ===================== -->
 <style>
-    .modal-enter {
-        opacity: 0;
-        transform: scale(0.95);
-        transition: all 0.3s ease-out;
-    }
-    .modal-enter-active {
-        opacity: 1;
-        transform: scale(1);
-    }
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease-out;
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
 </style>
 
 <!-- ===================== MODALES ===================== -->
-<!-- Modal Sobre el Blog -->
-<div id="aboutModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
-    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
-        <button id="closeAbout" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
-        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Sobre el Blog</h2>
-        <p class="text-stone-700 leading-relaxed text-justify">
-            Bienvenido a Código Millonario, un espacio pensado para quienes buscan tomar control real de sus finanzas y crecer económicamente de manera inteligente. 
-            Aquí encontrarás estrategias claras y prácticas para ahorrar, invertir y gestionar tu dinero con seguridad, aplicables a tu vida diaria y a tus decisiones financieras más importantes.
-        </p>
-        <p class="text-stone-700 leading-relaxed text-justify mt-4">
-            Cada artículo y recurso está diseñado para ayudarte a identificar oportunidades, evitar errores comunes y generar resultados tangibles en tu economía personal, profesional o empresarial. 
-            Con consejos basados en experiencia y conocimientos sólidos, podrás transformar la información en acciones efectivas que potencien tu libertad financiera y tu tranquilidad económica.
-        </p>
-    </div>
+<div id="aboutModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl p-6 max-w-3xl w-full relative modal-enter max-h-[80vh] overflow-auto">
+    <button class="absolute top-4 right-4 font-bold modal-close">✕</button>
+    <h2 class="text-2xl font-bold text-green-700 mb-4">Sobre el Blog</h2>
+    <p class="text-stone-700 leading-relaxed text-justify">
+      Bienvenido a Código Millonario, un espacio pensado para quienes buscan tomar control real de sus finanzas y crecer económicamente de manera inteligente. 
+      Aquí encontrarás estrategias claras y prácticas para ahorrar, invertir y gestionar tu dinero con seguridad, aplicables a tu vida diaria y a tus decisiones financieras más importantes.
+    </p>
+    <p class="text-stone-700 leading-relaxed text-justify mt-4">
+      Cada artículo y recurso está diseñado para ayudarte a identificar oportunidades, evitar errores comunes y generar resultados tangibles en tu economía personal, profesional o empresarial. 
+      Con consejos basados en experiencia y conocimientos sólidos, podrás transformar la información en acciones efectivas que potencien tu libertad financiera y tu tranquilidad económica.
+    </p>
+  </div>
 </div>
 
-<!-- Modal Políticas de Privacidad -->
-<div id="privacyModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
-    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
-        <button id="closePrivacy" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
-        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Políticas de Privacidad</h2>
-        <p class="text-stone-700 leading-relaxed text-justify">
-            En este espacio, nos comprometemos a proteger tu privacidad y la seguridad de tu información personal. Toda la información que puedas proporcionar, como tu nombre, correo electrónico o cualquier otro dato, será utilizada únicamente para los fines establecidos y nunca será compartida con terceros sin tu consentimiento explícito.
-        </p>
-        <p class="text-stone-700 leading-relaxed text-justify mt-4">
-            Recopilamos información únicamente para mejorar la experiencia de quienes acceden a este espacio, incluyendo estadísticas sobre visitas y el uso de recursos disponibles. No utilizamos técnicas invasivas y no vendemos tus datos bajo ninguna circunstancia.
-        </p>
-        <p class="text-stone-700 leading-relaxed text-justify mt-4">
-            Este sitio puede contener enlaces a otros recursos o sitios externos. No nos hacemos responsables de las políticas de privacidad de esos sitios, por lo que te recomendamos revisar sus términos antes de proporcionar información personal.
-        </p>
-        <p class="text-stone-700 leading-relaxed text-justify mt-4">
-            Al interactuar con este espacio, aceptas la recolección y el uso de tus datos según lo descrito en estas políticas. Nos reservamos el derecho de actualizar esta política en cualquier momento, y te animamos a revisarla periódicamente para estar al tanto de cualquier cambio.
-        </p>
-        <p class="text-stone-700 leading-relaxed text-justify mt-4">
-            Si tienes preguntas o deseas más información sobre cómo manejamos tu información, puedes contactarnos directamente.
-        </p>
-    </div>
+<div id="privacyModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl p-6 max-w-3xl w-full relative modal-enter max-h-[80vh] overflow-auto">
+    <button class="absolute top-4 right-4 font-bold modal-close">✕</button>
+    <h2 class="text-2xl font-bold text-green-700 mb-4">Política de Privacidad</h2>
+    <p class="text-stone-700 leading-relaxed text-justify">
+      En este espacio, nos comprometemos a proteger tu privacidad y la seguridad de tu información personal. Toda la información que puedas proporcionar, como tu nombre, correo electrónico o cualquier otro dato, será utilizada únicamente para los fines establecidos y nunca será compartida con terceros sin tu consentimiento explícito.
+    </p>
+    <p class="text-stone-700 leading-relaxed text-justify mt-4">
+      Recopilamos información únicamente para mejorar la experiencia de quienes acceden a este espacio, incluyendo estadísticas sobre visitas y el uso de recursos disponibles. No utilizamos técnicas invasivas y no vendemos tus datos bajo ninguna circunstancia.
+    </p>
+    <p class="text-stone-700 leading-relaxed text-justify mt-4">
+      Este sitio puede contener enlaces a otros recursos o sitios externos. No nos hacemos responsables de las políticas de privacidad de esos sitios, por lo que te recomendamos revisar sus términos antes de proporcionar información personal.
+    </p>
+    <p class="text-stone-700 leading-relaxed text-justify mt-4">
+      Al interactuar con este espacio, aceptas la recolección y el uso de tus datos según lo descrito en estas políticas. Nos reservamos el derecho de actualizar esta política en cualquier momento, y te animamos a revisarla periódicamente para estar al tanto de cualquier cambio.
+    </p>
+    <p class="text-stone-700 leading-relaxed text-justify mt-4">
+      Si tienes preguntas o deseas más información sobre cómo manejamos tu información, puedes contactarnos directamente.
+    </p>
+  </div>
 </div>
 
-
-<!-- Modal Términos y Condiciones -->
-<div id="termsModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
-    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
-        <button id="closeTerms" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
-        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Términos y Condiciones</h2>
-        <p class="text-stone-700 leading-relaxed text-justify">
-            Al utilizar este blog de finanzas, aceptas cumplir con los términos y condiciones establecidos a continuación. Esto incluye el uso responsable de la información, el respeto por los derechos de autor y la prohibición de distribuir contenido sin autorización.
-        </p>
-        <p class="text-stone-700 leading-relaxed text-justify mt-4">
-            Todos los recursos, artículos y herramientas se proporcionan únicamente con fines educativos e informativos. No garantizamos resultados financieros específicos y cualquier acción tomada con base en el contenido es responsabilidad exclusiva del usuario.
-        </p>
-        <p class="text-stone-700 leading-relaxed text-justify mt-4">
-            Está prohibido copiar, distribuir, modificar o usar el contenido de este sitio con fines comerciales sin autorización expresa del propietario. Los usuarios deben aplicar la información con criterio propio.
-        </p>
-        <p class="text-stone-700 leading-relaxed text-justify mt-4">
-            Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Te recomendamos revisarlos periódicamente para estar al tanto de cualquier actualización.
-        </p>
-        <p class="text-stone-700 leading-relaxed text-justify mt-4">
-            Al interactuar con este blog, aceptas cumplir con estos términos y condiciones. El uso del sitio implica la aceptación total de estas normas.
-        </p>
-    </div>
+<div id="termsModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl p-6 max-w-3xl w-full relative modal-enter max-h-[80vh] overflow-auto">
+    <button class="absolute top-4 right-4 font-bold modal-close">✕</button>
+    <h2 class="text-2xl font-bold text-green-700 mb-4">Términos y Condiciones</h2>
+    <p class="text-stone-700 leading-relaxed text-justify">
+      Al utilizar este blog de finanzas, aceptas cumplir con los términos y condiciones establecidos a continuación. Esto incluye el uso responsable de la información, el respeto por los derechos de autor y la prohibición de distribuir contenido sin autorización.
+    </p>
+    <p class="text-stone-700 leading-relaxed text-justify mt-4">
+      Todos los recursos, artículos y herramientas se proporcionan únicamente con fines educativos e informativos. No garantizamos resultados financieros específicos y cualquier acción tomada con base en el contenido es responsabilidad exclusiva del usuario.
+    </p>
+    <p class="text-stone-700 leading-relaxed text-justify mt-4">
+      Está prohibido copiar, distribuir, modificar o usar el contenido de este sitio con fines comerciales sin autorización expresa del propietario. Los usuarios deben aplicar la información con criterio propio.
+    </p>
+    <p class="text-stone-700 leading-relaxed text-justify mt-4">
+      Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Te recomendamos revisarlos periódicamente para estar al tanto de cualquier actualización.
+    </p>
+    <p class="text-stone-700 leading-relaxed text-justify mt-4">
+      Al interactuar con este blog, aceptas cumplir con estos términos y condiciones. El uso del sitio implica la aceptación total de estas normas.
+    </p>
+  </div>
 </div>
 
-<!-- Modal Contacto -->
-<div id="contactModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 grid place-items-center overflow-auto p-4" style="font-family: 'Lora', serif;">
-    <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-3xl mx-auto relative max-h-[90vh] overflow-auto modal-enter">
-        <button id="closeContact" class="absolute top-4 right-4 text-stone-600 hover:text-stone-900 font-bold">X</button>
-        <h2 class="text-2xl font-bold text-green-700 my-4 text-center sm:text-left">Contacto</h2>
-        <p class="text-stone-700 leading-relaxed text-justify">
-            Puedes comunicarte con nosotros a través de:<br>
-            Email: codigomillonarioblog@gmail.com
-        </p>
-    </div>
-</div>
-
-
-<!-- ===================== SCRIPT PARA MODALES PROFESIONALES ===================== -->
+<!-- ===================== SCRIPT ===================== -->
 <script>
-function setupModal(openId, closeId, modalId){
-    const openBtn = document.getElementById(openId);
-    const closeBtn = document.getElementById(closeId);
-    const modal = document.getElementById(modalId);
-    const content = modal.querySelector('div');
+document.addEventListener("DOMContentLoaded", () => {
 
-    openBtn.addEventListener('click', e=>{
-        e.preventDefault();
-        modal.classList.remove('hidden');
-        modal.classList.add('grid');
-        content.classList.add('modal-enter-active');
-        document.body.style.overflow = 'hidden';
+  const openModal = modal => {
+    modal.classList.remove("hidden");
+    modal.classList.add("grid");
+    modal.querySelector(".modal-enter").classList.add("modal-enter-active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = modal => {
+    modal.classList.add("hidden");
+    modal.classList.remove("grid");
+    modal.querySelector(".modal-enter").classList.remove("modal-enter-active");
+    document.body.style.overflow = "";
+  };
+
+  document.querySelectorAll("[data-modal]").forEach(el => {
+    el.addEventListener("click", () => {
+      const modal = document.getElementById(el.dataset.modal);
+      if (modal) openModal(modal);
     });
+  });
 
-    closeBtn.addEventListener('click', ()=>{
-        modal.classList.add('hidden');
-        modal.classList.remove('grid');
-        content.classList.remove('modal-enter-active');
-        document.body.style.overflow = 'auto';
+  document.querySelectorAll(".modal-close").forEach(btn => {
+    btn.addEventListener("click", () => closeModal(btn.closest(".fixed")));
+  });
+
+  document.querySelectorAll(".fixed").forEach(modal => {
+    modal.addEventListener("click", e => {
+      if (e.target === modal) closeModal(modal);
     });
+  });
 
-    modal.addEventListener('click', e=>{
-        if(e.target === modal){
-            modal.classList.add('hidden');
-            modal.classList.remove('grid');
-            content.classList.remove('modal-enter-active');
-            document.body.style.overflow = 'auto';
-        }
-    });
-}
-
-// Configurar todos los modales
-setupModal('openAbout','closeAbout','aboutModal');
-setupModal('openPrivacy','closePrivacy','privacyModal');
-setupModal('openTerms','closeTerms','termsModal');
-setupModal('openContact','closeContact','contactModal');
+});
 </script>
+
+
 
     <script>
         lucide.createIcons();
