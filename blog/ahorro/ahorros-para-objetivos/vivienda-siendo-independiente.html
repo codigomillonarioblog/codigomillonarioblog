@@ -19,107 +19,6 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
-
-
-
-<style>
-/* TARJETA ENVOLVENTE */
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* CARD PREMIUM */
-.article-card {
-    width: 100%;
-    max-width: 380px;
-    background: #ffffff;
-    border-radius: 28px;
-    padding: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    font-family: 'Arial', sans-serif;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.article-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 38px rgba(0,0,0,0.22);
-}
-
-/* IMAGEN */
-.article-card img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    border-radius: 22px;
-}
-
-/* ETIQUETA */
-.badge {
-    position: relative;
-    display: inline-block;
-    background: #1E5BFF;
-    color: white;
-    padding: 6px 14px;
-    border-radius: 14px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-top: -32px;
-    margin-left: 12px;
-}
-
-/* TÍTULO */
-.article-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #222;
-    margin-top: 16px;
-    margin-bottom: 10px;
-    line-height: 1.3;
-}
-
-/* FECHA + COMENTARIOS */
-.meta {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    font-size: 11px;
-    color: rgba(0, 0, 0, 0.5);
-    margin-top: 8px;
-}
-
-.meta span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-}
-
-/* BOTÓN */
-.arrow-btn {
-    margin-left: auto;
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    min-height: 42px;
-    background: #1E5BFF;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 18px;
-    transition: transform 0.25s ease;
-}
-
-.article-card:hover .arrow-btn {
-    transform: scale(1.15);
-}
-</style>
-
-
 </head>
 
 <body class="bg-stone-50 text-stone-900">
@@ -440,179 +339,160 @@ document.querySelectorAll(".mobile-item").forEach(link => {
     </main>
 
    
+ 
 
-<!-- ================= INTERLINK VISUAL PROFESIONAL ================= -->
-<div class="max-w-3xl mx-auto my-12 interlink-wrapper">
+<div class="interlink-container mx-auto my-12 max-w-3xl p-4 bg-white shadow rounded-lg" style="font-family: 'Lora', serif;">
 
-  <p class="interlink-heading">
-    Artículos relacionados que pueden interesarte
+  <!-- FRASE GUIA -->
+  <p class="text-stone-700 text-sm mb-2 text-center font-bold">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir".
   </p>
 
-  <div id="interlinkGrid" style="display:flex; flex-direction:column; gap:8px;"></div>
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+    <!-- SELECT DE ARTÍCULOS -->
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
 
+    <!-- BUSCADOR -->
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+
+    <!-- BOTÓN IR -->
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2">Ir</button>
+
+    <!-- BOTÓN VER TODOS -->
+    <a id="viewAllBtn" href="./index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-700 text-sm">
+    Total <span id="totalArticles" class="font-semibold mx-1">0</span> artículos
+  </div>
 </div>
 
-<!-- ================= ESTILOS ================= -->
 <style>
-.interlink-wrapper{
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+.interlink-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.interlink-heading{
-  color:#444;
-  font-size:13px;
-  margin-bottom:12px;
-  text-align:center;
-  font-weight:600;
+.select-pages, .goto-page, .page-box {
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  height: 40px;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.interlink-card{
-  background:#fff;
-  padding:6px;
-  border-radius:12px;
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
+.select-pages, .goto-page {
+  width: 100%;
 }
 
-.interlink-card a{
-  display:block;
-  text-decoration:none;
-  color:inherit;
+.select-pages:hover, .goto-page:hover, .page-box:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
 }
 
-.interlink-inner{
-  display:flex;
-  align-items:center;
-  gap:10px;
+.page-box {
+  min-width: 80px;
 }
 
-.interlink-img{
-  width:80px;
-  height:48px;
-  overflow:hidden;
-  border-radius:6px;
-  flex-shrink:0;
-  position:relative;
-}
-
-.interlink-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.interlink-badge{
-  position:absolute;
-  bottom:2px;
-  left:2px;
-  font-size:9px;
-  padding:1px 6px;
-  background:#000;
-  color:#fff;
-  border-radius:999px;
-}
-
-.interlink-title{
-  font-size:14px;
-  font-weight:600;
-  line-height:1.25;
-  margin-bottom:4px;
-  color:#111;
-}
-
-.meta{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:12px;
-  color:#666;
-}
-
-.arrow-btn{
-  font-size:14px;
+.page-box:disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
 }
 </style>
 
-<!-- ================= SCRIPT ================= -->
 <script>
-const interlinkGrid = document.getElementById("interlinkGrid");
+// ELEMENTOS
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const viewAllBtn = document.getElementById("viewAllBtn");
 const perPage = 6;
 
-function shuffleArray(arr){
-  return arr.sort(() => Math.random() - 0.5);
+let articles = [];
+
+// MEZCLAR ALEATORIAMENTE
+function shuffleArray(array) {
+  return array
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a,b) => a.sort - b.sort)
+    .map(({value}) => value);
 }
 
-function createInterlinkCard(article){
-  return `
-    <section class="interlink-card">
-      <a href="${article.url}">
-        <div class="interlink-inner">
+// MOSTRAR HASTA 6 ARTÍCULOS
+function fillSelect(list) {
+  select.innerHTML = "";
+  const paginated = shuffleArray(list).slice(0, perPage);
 
-          <div class="interlink-img">
-            <img src="${article.image}" alt="">
-            <div class="interlink-badge">${article.badge}</div>
-          </div>
+  if (paginated.length === 0) {
+    const option = document.createElement("option");
+    option.textContent = "No se encontraron artículos";
+    option.disabled = true;
+    select.appendChild(option);
+  } else {
+    paginated.forEach(a => {
+      const option = document.createElement("option");
+      option.value = a.url;
+      option.textContent = a.title;
+      select.appendChild(option);
+    });
+  }
 
-          <div style="flex:1;">
-            <div class="interlink-title">${article.title}</div>
-
-            <div class="meta">
-              <span>⏱ 5 min de lectura</span>
-              <span><i>💬</i> 0</span>
-              <div class="arrow-btn">➜</div>
-            </div>
-
-          </div>
-
-        </div>
-      </a>
-    </section>
-  `;
+  totalArticles.textContent = list.length;
 }
 
-fetch('../ahorro-para-principiantes/index.html')
-  .then(res => res.text())
+// BOTÓN IR
+goBtn.addEventListener("click", () => {
+  const url = select.value;
+  if (url) window.location.href = url;
+});
+
+// BUSCADOR
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  const filtered = articles.filter(a => a.title.toLowerCase().includes(query));
+  fillSelect(filtered);
+});
+
+// ---------------------------
+// RUTA REAL AJUSTADA
+// ---------------------------
+// Carga todos los artículos desde:
+// blog/inversiones/invertir-en-plataformas/index.html
+// ---------------------------
+
+fetch('../ahorros-para-objetivos/index.html')
+  .then(response => response.text())
   .then(html => {
-    const temp = document.createElement("div");
-    temp.innerHTML = html;
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
 
-    const links = Array.from(temp.querySelectorAll("a"))
-      .filter(a => {
-        const href = a.getAttribute("href");
-        return (
-          href &&
-          !href.startsWith("http") &&
-          !href.startsWith("#") &&
-          !href.startsWith("/") &&
-          href !== "index.html"
-        );
-      })
-      .map(a => {
-        // 🔥 LIMPIEZA TOTAL DE FECHAS EMBEBIDAS
-        a.querySelectorAll("time, .meta, .date, span")
-          .forEach(el => {
-            if (el.textContent.includes("📅")) el.remove();
-          });
-        return a;
-      });
+    // Extraer enlaces
+    const articleLinks = Array.from(tempDiv.querySelectorAll('.article a'));
 
-    const articles = shuffleArray(
-      links.filter(a => a.textContent.trim().length > 15)
-    )
-    .slice(0, perPage)
-    .map(a => ({
-      title: a.textContent.trim(),
-      url: a.getAttribute("href"),
-      image: a.querySelector("img")?.src || "./assets/png/default.png",
-      badge: "#Relacionado"
-    }));
+    articles = articleLinks.map(a => {
+      const t = a.querySelector('h3');
+      return {
+        title: t ? t.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href")
+      };
+    });
 
-    interlinkGrid.innerHTML = articles.map(createInterlinkCard).join("");
+    fillSelect(articles);
+
+    // Botón ver todos
+    viewAllBtn.href = "../ahorros-para-objetivos/index.html";
   })
-  .catch(err => console.error("Error interlink:", err));
-
+  .catch(err => console.error('Error al cargar artículos:', err));
 </script>
-<!-- ================= FIN INTERLINK ================= -->
 
 
 
