@@ -277,157 +277,265 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-<div class="interlink-container mx-auto my-12 max-w-3xl p-4 bg-white shadow rounded-lg" style="font-family: 'Lora', serif;">
-
-  <!-- FRASE GUIA -->
-  <p class="text-stone-700 text-sm mb-2 text-center font-bold">
+<!-- ================= INTERLINK FUNCIONAL (SELECT + BUSCADOR) ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center font-semibold text-sm mb-4">
     ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir".
   </p>
-
-  <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-    <!-- SELECT DE ARTÍCULOS -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
     <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
-
-    <!-- BUSCADOR -->
     <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
-
-    <!-- BOTÓN IR -->
-    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2">Ir</button>
-
-    <!-- BOTÓN VER TODOS -->
-    <a id="viewAllBtn" href="./index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline">
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button">Ir</button>
+    <a id="viewAllBtn" href="../ahorro-para-principiantes/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button">
       Ver todos
     </a>
   </div>
-
   <div class="flex justify-end items-center mt-4 text-stone-700 text-sm">
     Total <span id="totalArticles" class="font-semibold mx-1">0</span> artículos
   </div>
 </div>
 
+<!-- ================= INTERLINK VISUAL PROFESIONAL ================= -->
+<div class="max-w-3xl mx-auto my-12 interlink-wrapper">
+  <p class="interlink-heading text-center font-semibold text-sm mb-4">
+    Artículos relacionados que pueden interesarte
+  </p>
+  <div id="interlinkGrid" style="display:flex; flex-direction:column; gap:10px;"></div>
+</div>
+
+<!-- ================= ESTILOS ================= -->
 <style>
-.interlink-container {
+/* Tarjeta grande con animación */
+.interlink-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  overflow: hidden;
+}
+.interlink-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.interlink-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.interlink-content {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+.interlink-img {
+  position: relative;
+  flex-shrink: 0;
+  width: 90px;
+  height: 55px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.interlink-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+.interlink-card:hover .interlink-img img {
+  transform: scale(1.05);
+}
+/* Badge azul */
+.interlink-badge {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  background: #007BFF;
+  color: #fff;
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+.interlink-text {
+  flex: 1;
+}
+.interlink-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.25;
+  color: #111;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #666;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-.select-pages, .goto-page, .page-box {
+/* BOTÓN FLECHA “PRO” INTEGRADO */
+.arrow-btn {
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  background: #1E5BFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-family: inherit;
+  transition: transform 0.25s ease;
+}
+.interlink-card:hover .arrow-btn {
+  transform: scale(1.15);
+}
+
+/* Modernización del cuadro principal */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.interlink-container p {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: #1f2937;
+}
+.select-pages, .goto-page {
   border: 1px solid #c0c0c0;
   background: #fff;
-  height: 40px;
-  border-radius: 6px;
+  height: 42px;
+  border-radius: 8px;
   padding: 6px 10px;
-  font-weight: 600;
-  color: #0f172a;
-  cursor: pointer;
+  font-weight: 500;
+  color: #111827;
   transition: all 0.2s ease;
 }
-
-.select-pages, .goto-page {
-  width: 100%;
-}
-
-.select-pages:hover, .goto-page:hover, .page-box:hover {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+.select-pages:hover, .goto-page:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   transform: translateY(-1px);
 }
 
-.page-box {
-  min-width: 80px;
+/* Botones Ir y Ver todos */
+.interlink-button {
+  font-family: 'Lora', serif;
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-
-.page-box:disabled {
-  opacity: 0.45;
-  cursor: default;
-  pointer-events: none;
+.interlink-button:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
 }
 </style>
 
+<!-- ================= SCRIPT ÚNICO ================= -->
 <script>
-// ELEMENTOS
 const select = document.getElementById("articleSelect");
 const searchInput = document.getElementById("searchInput");
 const goBtn = document.getElementById("goBtn");
 const totalArticles = document.getElementById("totalArticles");
-const viewAllBtn = document.getElementById("viewAllBtn");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
 const perPage = 6;
+let allArticles = [];
 
-let articles = [];
-
-// MEZCLAR ALEATORIAMENTE
-function shuffleArray(array) {
-  return array
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a,b) => a.sort - b.sort)
-    .map(({value}) => value);
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
 }
 
-// MOSTRAR HASTA 6 ARTÍCULOS
-function fillSelect(list) {
+function renderSelect(list){
   select.innerHTML = "";
-  const paginated = shuffleArray(list).slice(0, perPage);
-
-  if (paginated.length === 0) {
-    const option = document.createElement("option");
-    option.textContent = "No se encontraron artículos";
-    option.disabled = true;
-    select.appendChild(option);
-  } else {
-    paginated.forEach(a => {
-      const option = document.createElement("option");
-      option.value = a.url;
-      option.textContent = a.title;
-      select.appendChild(option);
-    });
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
   }
-
-  totalArticles.textContent = list.length;
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = a.title;
+    select.appendChild(opt);
+  });
 }
 
-// BOTÓN IR
-goBtn.addEventListener("click", () => {
-  const url = select.value;
-  if (url) window.location.href = url;
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <section class="interlink-card">
+        <a href="${a.url}">
+          <div class="interlink-content">
+            <div class="interlink-img">
+              <img src="${a.image}" alt="">
+              <div class="interlink-badge">#Relacionado</div>
+            </div>
+            <div class="interlink-text">
+              <div class="interlink-title">${a.title}</div>
+              <div class="meta">
+                <span>⏱ 5 min de lectura</span>
+                <span><i>💬</i> 0</span>
+                <div class="arrow-btn">➜</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
 });
 
-// BUSCADOR
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.toLowerCase();
-  const filtered = articles.filter(a => a.title.toLowerCase().includes(query));
-  fillSelect(filtered);
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
 });
 
-// ---------------------------
-// RUTA REAL AJUSTADA
-// ---------------------------
-// Carga todos los artículos desde:
-// blog/inversiones/invertir-en-plataformas/index.html
-// ---------------------------
-
-fetch('../ahorro-para-principiantes/index.html')
-  .then(response => response.text())
-  .then(html => {
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
-
-    // Extraer enlaces
-    const articleLinks = Array.from(tempDiv.querySelectorAll('.article a'));
-
-    articles = articleLinks.map(a => {
-      const t = a.querySelector('h3');
+fetch("../ahorro-para-principiantes/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+  temp.querySelectorAll("time, .date, .meta, span").forEach(el=>{
+    if(el.textContent.includes("📅") || el.textContent.includes("Sin Comentarios") || /\d{2}\/\d{2}\/\d{4}/.test(el.textContent)){
+      el.remove();
+    }
+  });
+  const links = Array.from(temp.querySelectorAll(".article a"));
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
       return {
-        title: t ? t.textContent.trim() : a.textContent.trim(),
-        url: a.getAttribute("href")
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
       };
-    });
-
-    fillSelect(articles);
-
-    // Botón ver todos
-    viewAllBtn.href = "../ahorro-para-principiantes/index.html";
-  })
-  .catch(err => console.error('Error al cargar artículos:', err));
+    }).filter(a => a.title.length > 15)
+  );
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
 </script>
 
 
