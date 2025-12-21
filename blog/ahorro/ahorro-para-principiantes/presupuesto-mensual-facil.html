@@ -193,131 +193,147 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- HERO -->
-<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center" style="font-family: 'Lora', serif;">
+ <section class="relative flex flex-col justify-center bg-gradient-to-br from-green-50 to-stone-100 text-center min-h-[auto] pt-24 sm:min-h-screen sm:py-20 lg:py-32" style="font-family: 'Lora', serif;">
     <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
            Cómo hacer un <br>
     <span class="text-green-600"> presupuesto mensual </span>  fácil y práctico <br>   
     </h1>    
-    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6">
-        Descubre por qué tu dinero se va sin darte cuenta y aprende a controlarlo con un presupuesto simple para principiantes.
+   <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-6">
+    Descubre por qué tu dinero se va sin darte cuenta y aprende a controlarlo con un presupuesto simple para principiantes.
     </p>
-    <p class="text-stone-500 mt-4">📅 Actualizado: Noviembre 2025</p>
+  <div class="mt-6 text-xs text-stone-500 flex justify-center">
+  <span class="border-b border-stone-300 pb-1">
+    Actualizado en diciembre de 2025
+  </span>
+</div>
 </section>
+
 
 
                  <!-- INTRODUCCIÓN GENERAL -->
        <main class="py-20" style="font-family: 'Lora', serif;">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- INTRODUCCIÓN -->
-            <section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-                <h2 class="text-3xl font-semibold text-green-700 mb-4">📝 Introducción</h2>
-                <p class="text-stone-700 leading-relaxed mb-4">
-                    Crear un presupuesto mensual no tiene por qué ser complicado. Incluso si eres principiante, seguir unos pasos claros te permitirá conocer exactamente cuánto ganas, cuánto gastas y cómo puedes ahorrar. Con un buen presupuesto, podrás tomar decisiones financieras inteligentes y avanzar hacia tus metas sin estrés ni preocupaciones.
+
+
+<div class="flex flex-wrap justify-center items-center gap-6 text-xs sm:text-sm text-stone-700 mb-1">
+  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
+    <i data-lucide="trending-up" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
+    <span class="font-semibold">Consejos aprobados</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
+    <i data-lucide="shield-check" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
+    <span class="font-semibold">Contenido verificado</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
+    <i data-lucide="lightbulb" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
+    <span class="font-semibold">Ideas inteligentes</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
+    <i data-lucide="bar-chart-2" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
+    <span class="font-semibold">Realidad actual</span>
+  </div>
+</div>
+
+
+    
+<meta name="description" content="Guía paso a paso para crear un presupuesto personal efectivo en Colombia. Aprende a registrar ingresos, controlar gastos y ahorrar de forma inteligente.">
+
+
+
+<!-- INTRODUCCIÓN -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">Introducción</h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify relative">
+  <img src="../../../assets/png/finanzas-jovenes.png" alt="" 
+       class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+              Crear un presupuesto mensual no tiene por qué ser complicado. Incluso si eres principiante, seguir unos pasos claros te permitirá conocer exactamente cuánto ganas, cuánto gastas y cómo puedes ahorrar. Con un buen presupuesto, podrás tomar decisiones financieras inteligentes y avanzar hacia tus metas sin estrés ni preocupaciones.
                 </p>
                 <p class="text-stone-700 leading-relaxed">
                     A continuación, encontrarás una guía práctica y sencilla que te enseñará a organizar tus ingresos, controlar tus gastos y planificar tu ahorro de manera efectiva.
                 </p>
-            </section>
 
-            <!-- ARTÍCULO 1 -->
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">💰 Paso 1: Registra todos tus ingresos</h2>
-    <p class="text-stone-700 leading-relaxed mb-4">
-        Antes de crear un presupuesto, es vital tener un registro claro de todo el dinero que recibes cada mes.
-    </p>
 
-    <ul class="list-disc pl-6 text-stone-700 space-y-2">
-        <li>Incluye salario, ingresos extra, ventas o freelance.</li>
-        <li>Considera ingresos variables y fecha de recepción.</li>
-        <li>Esto te ayudará a planificar cuánto puedes destinar a cada categoría de gasto.</li>
-    </ul>
-</section>
 
-<!-- RESTO DE ARTÍCULOS -->
-<!-- ARTÍCULO 2 -->
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">📌 Paso 2: Lista tus gastos esenciales</h2>
-    <p class="text-stone-700 leading-relaxed mb-4">
-        Identificar los gastos imprescindibles te permitirá asignarles prioridad en tu presupuesto.
-    </p>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Paso 1: Registra todos tus ingresos</h2>
+<p class="text-stone-700 leading-relaxed mb-4">
+    Antes de crear un presupuesto, es vital tener un registro claro de todo el dinero que recibes cada mes.
+</p>
 
-    <ul class="list-disc pl-6 text-stone-700 space-y-2">
-        <li>Incluye arriendo, servicios públicos, transporte y alimentación.</li>
-        <li>Registra los pagos recurrentes como suscripciones o seguros.</li>
-        <li>Esto asegura que tus necesidades básicas estén cubiertas antes de gastar en otros rubros.</li>
-    </ul>
-</section>
+<ul class="list-disc pl-6 text-stone-700 space-y-2">
+    <li>Incluye salario, ingresos extra, ventas o freelance.</li>
+    <li>Considera ingresos variables y fecha de recepción.</li>
+    <li>Esto te ayudará a planificar cuánto puedes destinar a cada categoría de gasto.</li>
+</ul>
 
-<!-- ARTÍCULO 3 -->
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">💡 Paso 3: Asigna presupuesto para ahorro</h2>
-    <p class="text-stone-700 leading-relaxed mb-4">
-        Incluso con ingresos bajos, destinar dinero al ahorro debe ser una prioridad mensual.
-    </p>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Paso 2: Lista tus gastos esenciales</h2>
+<p class="text-stone-700 leading-relaxed mb-4">
+    Identificar los gastos imprescindibles te permitirá asignarles prioridad en tu presupuesto.
+</p>
 
-    <ul class="list-disc pl-6 text-stone-700 space-y-2">
-        <li>Define un porcentaje fijo de tus ingresos para el fondo de emergencia.</li>
-        <li>Considera ahorros para metas a corto y mediano plazo.</li>
-        <li>Automatiza transferencias a cuentas de ahorro o apps financieras.</li>
-    </ul>
-</section>
+<ul class="list-disc pl-6 text-stone-700 space-y-2">
+    <li>Incluye arriendo, servicios públicos, transporte y alimentación.</li>
+    <li>Registra los pagos recurrentes como suscripciones o seguros.</li>
+    <li>Esto asegura que tus necesidades básicas estén cubiertas antes de gastar en otros rubros.</li>
+</ul>
 
-<!-- ARTÍCULO 4 -->
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">🔍 Paso 4: Controla gastos variables y caprichos</h2>
-    <p class="text-stone-700 leading-relaxed mb-4">
-        Los gastos variables como ocio, ropa o comidas fuera de casa deben ser monitoreados para no afectar tu presupuesto.
-    </p>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Paso 3: Asigna presupuesto para ahorro</h2>
+<p class="text-stone-700 leading-relaxed mb-4">
+    Incluso con ingresos bajos, destinar dinero al ahorro debe ser una prioridad mensual.
+</p>
 
-    <ul class="list-disc pl-6 text-stone-700 space-y-2">
-        <li>Registra cada compra durante el mes.</li>
-        <li>Establece límites semanales para entretenimiento o caprichos.</li>
-        <li>Evalúa si cada gasto aporta valor a tu vida antes de ejecutarlo.</li>
-    </ul>
-</section>
+<ul class="list-disc pl-6 text-stone-700 space-y-2">
+    <li>Define un porcentaje fijo de tus ingresos para el fondo de emergencia.</li>
+    <li>Considera ahorros para metas a corto y mediano plazo.</li>
+    <li>Automatiza transferencias a cuentas de ahorro o apps financieras.</li>
+</ul>
 
-<!-- ARTÍCULO 5 -->
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">📊 Paso 5: Revisa y ajusta tu presupuesto</h2>
-    <p class="text-stone-700 leading-relaxed mb-4">
-        Un presupuesto efectivo se ajusta según tus ingresos y gastos reales cada mes.
-    </p>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Paso 4: Controla gastos variables y caprichos</h2>
+<p class="text-stone-700 leading-relaxed mb-4">
+    Los gastos variables como ocio, ropa o comidas fuera de casa deben ser monitoreados para no afectar tu presupuesto.
+</p>
 
-    <ul class="list-disc pl-6 text-stone-700 space-y-2">
-        <li>Analiza las diferencias entre lo presupuestado y lo realmente gastado.</li>
-        <li>Ajusta los montos para próximos meses según tus necesidades y objetivos.</li>
-        <li>Mantén disciplina y constancia para mejorar tu salud financiera en Colombia.</li>
-    </ul>
-</section>
+<ul class="list-disc pl-6 text-stone-700 space-y-2">
+    <li>Registra cada compra durante el mes.</li>
+    <li>Establece límites semanales para entretenimiento o caprichos.</li>
+    <li>Evalúa si cada gasto aporta valor a tu vida antes de ejecutarlo.</li>
+</ul>
 
-<!-- ARTÍCULO 6 -->
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">📦 Paso 6: Presupuesto por “sobres virtuales”</h2>
-    <p class="text-stone-700 leading-relaxed mb-4">
-        Divide tu dinero en categorías como si fueran sobres, pero de forma digital. Esto te ayuda a no gastar de más y ver exactamente cuánto puedes usar en cada área.
-    </p>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Paso 5: Revisa y ajusta tu presupuesto</h2>
+<p class="text-stone-700 leading-relaxed mb-4">
+    Un presupuesto efectivo se ajusta según tus ingresos y gastos reales cada mes.
+</p>
 
-    <ul class="list-disc pl-6 text-stone-700 space-y-2">
-        <li>Crea “sobres” para alimentación, transporte, entretenimiento y ahorro en tu app de finanzas o cuenta bancaria.</li>
-        <li>Asigna un monto fijo mensual a cada sobre y no uses dinero de otro sobre.</li>
-        <li>Esta técnica aumenta la disciplina y la visibilidad de tus gastos, evitando gastos innecesarios.</li>
-    </ul>
-</section>
+<ul class="list-disc pl-6 text-stone-700 space-y-2">
+    <li>Analiza las diferencias entre lo presupuestado y lo realmente gastado.</li>
+    <li>Ajusta los montos para próximos meses según tus necesidades y objetivos.</li>
+    <li>Mantén disciplina y constancia para mejorar tu salud financiera en Colombia.</li>
+</ul>
 
-<!-- ARTÍCULO 7 -->
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">📈 Paso 7: Presupuesto dinámico según ingresos variables</h2>
-    <p class="text-stone-700 leading-relaxed mb-4">
-        Muchos colombianos reciben ingresos variables por freelance, ventas o comisiones. Aprender a presupuestar con dinero fluctuante es clave para no descuadrar tus finanzas.
-    </p>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Paso 6: Presupuesto por “sobres virtuales”</h2>
+<p class="text-stone-700 leading-relaxed mb-4">
+    Divide tu dinero en categorías como si fueran sobres, pero de forma digital. Esto te ayuda a no gastar de más y ver exactamente cuánto puedes usar en cada área.
+</p>
 
-    <ul class="list-disc pl-6 text-stone-700 space-y-2">
-        <li>Establece un mínimo garantizado para gastos esenciales basado en tu ingreso promedio.</li>
-        <li>Destina el excedente a ahorro, inversión o metas específicas.</li>
-        <li>Revisa tu presupuesto semanalmente y ajusta categorías según lo que realmente ingresó en la semana.</li>
-    </ul>
-</section>
+<ul class="list-disc pl-6 text-stone-700 space-y-2">
+    <li>Crea “sobres” para alimentación, transporte, entretenimiento y ahorro en tu app de finanzas o cuenta bancaria.</li>
+    <li>Asigna un monto fijo mensual a cada sobre y no uses dinero de otro sobre.</li>
+    <li>Esta técnica aumenta la disciplina y la visibilidad de tus gastos, evitando gastos innecesarios.</li>
+</ul>
+
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Paso 7: Presupuesto dinámico según ingresos variables</h2>
+<p class="text-stone-700 leading-relaxed mb-4">
+    Muchos colombianos reciben ingresos variables por freelance, ventas o comisiones. Aprender a presupuestar con dinero fluctuante es clave para no descuadrar tus finanzas.
+</p>
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2">
+    <li>Establece un mínimo garantizado para gastos esenciales basado en tu ingreso promedio.</li>
+    <li>Destina el excedente a ahorro, inversión o metas específicas.</li>
+    <li>Revisa tu presupuesto semanalmente y ajusta categorías según lo que realmente ingresó en la semana.</li>
+</ul>
+
+
+
+
         </div>
     </main>
 

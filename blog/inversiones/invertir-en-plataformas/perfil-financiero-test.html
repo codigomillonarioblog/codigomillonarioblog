@@ -186,22 +186,23 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 </script>
 
 
-  <!-- HERO PRINCIPAL -->
-   <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
 
 
 <!-- HERO -->
-<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+<section class="relative flex flex-col justify-center bg-gradient-to-br from-green-50 to-stone-100 text-center min-h-[auto] pt-24 sm:min-h-screen sm:py-20 lg:py-32" style="font-family: 'Lora', serif;">
     <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
              Qué opción se adapta   <br>
     <span class="text-green-600">mejor a tu forma de  </span>  manejar el dinero     <br>   
-    </h1>     
-    <p class="text-xl text-stone-600 max-w-2xl mx-auto mt-6" style="font-family: 'Lora', serif;">
-     Realiza un test rápido para conocer qué tipo de estrategia financiera se ajusta a tu perfil y maximiza tus resultados de manera inteligente.   
+    </h1>   
+   <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-6">
+     Realiza un test rápido para conocer qué tipo de estrategia financiera se ajusta a tu perfil y maximiza tus resultados de manera inteligente.     
     </p>
-    <p class="text-stone-500 mt-4" style="font-family: 'Lora', serif;">📅 Actualizado: Noviembre 2025</p>
-</section>
+  <div class="mt-6 text-xs text-stone-500 flex justify-center">
+  <span class="border-b border-stone-300 pb-1">
+    Actualizado en diciembre de 2025
+  </span>
+</div>
+    </section>
 
 
                <!-- INTRODUCCIÓN GENERAL -->
@@ -210,163 +211,174 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-        <!-- INTRODUCCIÓN -->
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">💡 Descubre tu perfil de inversionista</h2>
+<div class="flex flex-wrap justify-center items-center gap-6 text-xs sm:text-sm text-stone-700 mb-1">
+  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
+    <i data-lucide="trending-up" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
+    <span class="font-semibold">Consejos aprobados</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
+    <i data-lucide="shield-check" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
+    <span class="font-semibold">Contenido verificado</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
+    <i data-lucide="lightbulb" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
+    <span class="font-semibold">Ideas inteligentes</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
+    <i data-lucide="bar-chart-2" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
+    <span class="font-semibold">Realidad actual</span>
+  </div>
+</div>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
+
+<!-- INTRODUCCIÓN -->
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">Descubre tu perfil de inversionista</h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify relative">
+  <img src="../../../assets/png/perfil-financiero.png" alt="" 
+       class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
         No todas las inversiones sirven para todas las personas. Tu forma de manejar el dinero, tu nivel de paciencia y tu tolerancia al riesgo influyen más que la cantidad que tengas para invertir.
     </p>
 
     <p class="text-stone-700 leading-relaxed mb-4 text-justify">
         Por eso, antes de elegir plataformas o montos, es clave conocer qué perfil de inversionista eres. Aquí tienes un test rápido versión 2025 para descubrirlo y elegir la estrategia que mejor encaja contigo.
     </p>
-</section>
 
 
+<meta name="description" content="Realiza un test rápido para identificar tu perfil de inversionista y descubrir qué tipo de inversiones se adaptan mejor a tu nivel de riesgo, objetivos y plazo.">
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">📝 Test rápido: Identifica tu perfil en 5 preguntas</h2>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Test rápido: Identifica tu perfil en 5 preguntas</h2>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Responde marcando la opción que más se parezca a ti.
-    </p>
-</section>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Responde marcando la opción que más se parezca a ti.
+</p>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">📉 ¿Qué tan cómodo te sientes cuando tu dinero sube y baja?</h2>
 
-    <ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
-        <li>A. Me incomoda mucho, prefiero estabilidad.</li>
-        <li>B. Me preocupa un poco, pero lo tolero.</li>
-        <li>C. Me da igual, entiendo que es parte del proceso.</li>
-    </ul>
-</section>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">¿Qué tan cómodo te sientes cuando tu dinero sube y baja?</h2>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">⏳ ¿Para qué plazo quieres invertir?</h2>
+<ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
+    <li>A. Me incomoda mucho, prefiero estabilidad.</li>
+    <li>B. Me preocupa un poco, pero lo tolero.</li>
+    <li>C. Me da igual, entiendo que es parte del proceso.</li>
+</ul>
 
-    <ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
-        <li>A. Menos de 1 año.</li>
-        <li>B. Entre 1 y 3 años.</li>
-        <li>C. Más de 3 años.</li>
-    </ul>
-</section>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">⚠️ Si tu inversión bajara un 5% este mes, tú…</h2>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">¿Para qué plazo quieres invertir?</h2>
 
-    <ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
-        <li>A. La retiro de inmediato.</li>
-        <li>B. Esperaría un tiempo para ver si se recupera.</li>
-        <li>C. Mantengo la inversión sin dudar.</li>
-    </ul>
-</section>
+<ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
+    <li>A. Menos de 1 año.</li>
+    <li>B. Entre 1 y 3 años.</li>
+    <li>C. Más de 3 años.</li>
+</ul>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">🎯 ¿Qué esperas de tu inversión?</h2>
 
-    <ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
-        <li>A. Seguridad y poca variación.</li>
-        <li>B. Crecimiento moderado con algo de riesgo.</li>
-        <li>C. Alto crecimiento aunque suba y baje.</li>
-    </ul>
-</section>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Si tu inversión bajara un 5% este mes, tú…</h2>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">📆 ¿Qué tan frecuente quieres revisar tu inversión?</h2>
+<ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
+    <li>A. La retiro de inmediato.</li>
+    <li>B. Esperaría un tiempo para ver si se recupera.</li>
+    <li>C. Mantengo la inversión sin dudar.</li>
+</ul>
 
-    <ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
-        <li>A. Casi nunca, prefiero que sea estable.</li>
-        <li>B. Una vez al mes.</li>
-        <li>C. No me molesta revisarla seguido.</li>
-    </ul>
-</section>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">📊 Resultados del test</h2>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">¿Qué esperas de tu inversión?</h2>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify"><strong>Mayoría A: Perfil Conservador</strong></p>
+<ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
+    <li>A. Seguridad y poca variación.</li>
+    <li>B. Crecimiento moderado con algo de riesgo.</li>
+    <li>C. Alto crecimiento aunque suba y baje.</li>
+</ul>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Te convienen inversiones estables, poco volátiles y fáciles de entender. Opciones recomendadas:
-    </p>
 
-    <ul class="list-disc pl-6 text-stone-700 mb-4">
-        <li>CDT digital</li>
-        <li>Fondos de renta fija</li>
-        <li>Ahorro programado</li>
-        <li>Plataformas de bajo riesgo reguladas por bancos</li>
-    </ul>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">¿Qué tan frecuente quieres revisar tu inversión?</h2>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Son ideales si buscas seguridad y no quieres sorpresas.
-    </p>
-</section>
+<ul class="list-disc pl-6 text-stone-700 mb-4 text-justify">
+    <li>A. Casi nunca, prefiero que sea estable.</li>
+    <li>B. Una vez al mes.</li>
+    <li>C. No me molesta revisarla seguido.</li>
+</ul>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">⚖️ Mayoría B: Perfil Moderado</h2>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Buscas crecimiento, pero con control. Puedes asumir pequeñas variaciones sin estrés. Opciones recomendadas:
-    </p>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Resultados del test</h2>
 
-    <ul class="list-disc pl-6 text-stone-700 mb-4">
-        <li>Fondos de inversión moderados</li>
-        <li>Acciones fraccionadas de empresas sólidas</li>
-        <li>ETFs diversificados</li>
-        <li>Plataformas con portafolios mixtos</li>
-    </ul>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Mayoría A: Perfil Conservador</strong>
+</p>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Este perfil combina estabilidad con proyección.
-    </p>
-</section>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Te convienen inversiones estables, poco volátiles y fáciles de entender. Opciones recomendadas:
+</p>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">🔥 Mayoría C: Perfil Arriesgado</h2>
+<ul class="list-disc pl-6 text-stone-700 mb-4">
+    <li>CDT digital</li>
+    <li>Fondos de renta fija</li>
+    <li>Ahorro programado</li>
+    <li>Plataformas de bajo riesgo reguladas por bancos</li>
+</ul>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Tienes tolerancia al riesgo y piensas en crecimiento de largo plazo. Opciones recomendadas:
-    </p>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Son ideales si buscas seguridad y no quieres sorpresas.
+</p>
 
-    <ul class="list-disc pl-6 text-stone-700 mb-4">
-        <li>Acciones de alto crecimiento</li>
-        <li>ETFs internacionales</li>
-        <li>Crowdlending diversificado</li>
-        <li>Criptomonedas (solo un porcentaje pequeño)</li>
-    </ul>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        No te asustan las caídas temporales porque priorizas el resultado final.
-    </p>
-</section>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Mayoría B: Perfil Moderado</h2>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">🛠️ Cómo usar tu perfil para invertir mejor</h2>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Buscas crecimiento, pero con control. Puedes asumir pequeñas variaciones sin estrés. Opciones recomendadas:
+</p>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Una vez identificas tu perfil, la clave es mantener coherencia:
-    </p>
+<ul class="list-disc pl-6 text-stone-700 mb-4">
+    <li>Fondos de inversión moderados</li>
+    <li>Acciones fraccionadas de empresas sólidas</li>
+    <li>ETFs diversificados</li>
+    <li>Plataformas con portafolios mixtos</li>
+</ul>
 
-    <ul class="list-disc pl-6 text-stone-700 mb-4">
-        <li>No elijas inversiones que te generen ansiedad.</li>
-        <li>No copies estrategias ajenas.</li>
-        <li>No inviertas en plataformas que no van con tu tolerancia al riesgo.</li>
-    </ul>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Este perfil combina estabilidad con proyección.
+</p>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Tu perfil no es una etiqueta fija: puede cambiar con el tiempo, tus ingresos o tus objetivos.
-    </p>
-</section>
 
-<section class="mb-16 bg-white p-10 rounded-3xl shadow hover:shadow-lg transition">
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">✅ Conclusión rápida</h2>
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Mayoría C: Perfil Arriesgado</h2>
 
-    <p class="text-stone-700 leading-relaxed mb-4 text-justify">
-        Conocer tu perfil es el primer paso para tomar decisiones más seguras y evitar inversiones que no encajan contigo. Este test te permite identificar el camino que mejor te funciona y construir una estrategia clara para 2025.
-    </p>
-</section>
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Tienes tolerancia al riesgo y piensas en crecimiento de largo plazo. Opciones recomendadas:
+</p>
+
+<ul class="list-disc pl-6 text-stone-700 mb-4">
+    <li>Acciones de alto crecimiento</li>
+    <li>ETFs internacionales</li>
+    <li>Crowdlending diversificado</li>
+    <li>Criptomonedas (solo un porcentaje pequeño)</li>
+</ul>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    No te asustan las caídas temporales porque priorizas el resultado final.
+</p>
+
+
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Cómo usar tu perfil para invertir mejor</h2>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Una vez identificas tu perfil, la clave es mantener coherencia:
+</p>
+
+<ul class="list-disc pl-6 text-stone-700 mb-4">
+    <li>No elijas inversiones que te generen ansiedad.</li>
+    <li>No copies estrategias ajenas.</li>
+    <li>No inviertas en plataformas que no van con tu tolerancia al riesgo.</li>
+</ul>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Tu perfil no es una etiqueta fija: puede cambiar con el tiempo, tus ingresos o tus objetivos.
+</p>
+
+
+<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Conclusión rápida</h2>
+
+<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+    Conocer tu perfil es el primer paso para tomar decisiones más seguras y evitar inversiones que no encajan contigo. Este test te permite identificar el camino que mejor te funciona y construir una estrategia clara para 2025.
+</p>
+
 
         </div>
     </main>
