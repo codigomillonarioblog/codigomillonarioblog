@@ -232,21 +232,24 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-<!-- ================= TABLA DE CONTENIDOS 100% AISLADA ================= -->
+<!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
 <style>
-.toc-francisco-container {
+/* ================= CONTENEDOR ================= */
+.toc-container {
   border: 1px solid #6b7280;
   border-radius: 0;
   max-width: 650px;
   width: 100%;
   margin: 20px 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #fff;
+  background-color: #ffffff;
+  box-shadow: none;
   overflow: hidden;
   padding: 0;
 }
 
-.toc-francisco-toggle {
+/* ================= BOTÓN ================= */
+.toc-toggle {
   width: 100%;
   text-align: left;
   padding: 14px 20px;
@@ -260,43 +263,74 @@ document.querySelectorAll(".mobile-item").forEach(link => {
   cursor: pointer;
 }
 
-.toc-francisco-toggle::after {
+.toc-toggle:hover,
+.toc-toggle:focus {
+  background-color: #f9fafb;
+  outline: none;
+}
+
+/* ================= FLECHA ================= */
+.toc-toggle::after {
   content: "▼";
   font-size: 12px;
   transition: transform 0.3s ease;
 }
 
-.toc-francisco-container.open .toc-francisco-toggle::after {
+/* Flecha cuando está abierta */
+.toc-container.open .toc-toggle::after {
   transform: rotate(180deg);
 }
 
-.toc-francisco-list {
+/* ================= LISTA ================= */
+.toc-list {
   list-style: none;
   margin: 0;
+
   max-height: 0;
   opacity: 0;
   overflow: hidden;
+
   padding: 0 20px;
+  border-top: none;
+
   transition: max-height 0.45s ease, opacity 0.35s ease;
+  display: block;
 }
 
-.toc-francisco-container.open .toc-francisco-list {
+/* Lista abierta */
+.toc-container.open .toc-list {
   max-height: 800px;
   opacity: 1;
+
   padding: 12px 20px;
   border-top: 1px solid #6b7280;
 }
 
-.toc-francisco-list li { margin: 10px 0; }
-.toc-francisco-list li a { text-decoration: none; color: #1f2937; font-size: 15px; }
-.toc-francisco-list li a:hover { color: #1f2937; }
+.toc-list li {
+  margin: 10px 0;
+}
 
-h2[id] { scroll-margin-top: 100px; }
+.toc-list li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.toc-list li a:hover {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+/* ================= OFFSET PARA MENÚ FIJO ================= */
+h2[id] {
+  scroll-margin-top: 100px;
+}
 </style>
 
-<div class="toc-francisco-container">
-  <button class="toc-francisco-toggle" type="button">Tabla de contenidos</button>
-  <ul class="toc-francisco-list">
+<!-- ================= HTML ================= -->
+<div class="toc-container">
+  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+  <ul class="toc-list">
     <li><a href="#titulo1">Como Crecer sin Renunciar a tu Trabajo Actual</a></li>
     <li><a href="#titulo2">Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera</a></li>
     <li><a href="#titulo3">Cómo Generar Ingresos con tus Ideas y Habilidades Profesionales</a></li>
@@ -308,26 +342,41 @@ h2[id] { scroll-margin-top: 100px; }
   </ul>
 </div>
 
+<!-- ================= JAVASCRIPT ================= -->
 <script>
-(function() {
-  const tocContainer = document.querySelector(".toc-francisco-container");
-  if (!tocContainer) return;
+const tocContainer = document.querySelector(".toc-container");
+const toggleBtn = tocContainer.querySelector(".toc-toggle");
 
-  const toggleBtn = tocContainer.querySelector(".toc-francisco-toggle");
+let mouseInsideTOC = false;
 
-  toggleBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // No propaga a nada más
-    tocContainer.classList.toggle("open");
-  });
+// Abrir / cerrar SOLO con el botón
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  tocContainer.classList.toggle("open");
+});
 
-  // Opcional: cerrar al hacer click en un enlace interno
-  const links = tocContainer.querySelectorAll(".toc-francisco-list a");
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      tocContainer.classList.remove("open");
-    });
-  });
-})();
+// Detectar si el mouse está dentro del TOC
+tocContainer.addEventListener("mouseenter", () => {
+  mouseInsideTOC = true;
+});
+
+tocContainer.addEventListener("mouseleave", () => {
+  mouseInsideTOC = false;
+});
+
+// Cerrar al hacer click fuera
+document.addEventListener("click", (e) => {
+  if (!tocContainer.contains(e.target)) {
+    tocContainer.classList.remove("open");
+  }
+});
+
+// Cerrar al hacer scroll SOLO si el mouse NO está dentro
+window.addEventListener("scroll", () => {
+  if (!mouseInsideTOC) {
+    tocContainer.classList.remove("open");
+  }
+});
 </script>
 
 
