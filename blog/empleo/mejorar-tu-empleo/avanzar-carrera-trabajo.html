@@ -188,12 +188,11 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- HERO -->
-<section class="relative flex flex-col bg-gradient-to-br from-green-50 to-stone-100 text-center min-h-[auto] pt-10 sm:min-h-screen sm:py-20 lg:py-20">
-  <!-- Contenedor del título -->
-  <div class="flex flex-col justify-center items-center mt-10 md:mt-16 px-4">
+<!-- Contenedor del título -->
+ <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
     <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
       <span class="block">Como Avanzar en</span>
-      <span class="block">tu Carrera sin <span class="text-green-600 font-semibold"> Renunciar </span> al</span>
+      <span class="block">tu Carrera sin Renunciar al</span>
       <span class="block mt-1">Trabajo Actual</span>
     </h1>
   </div>
@@ -218,7 +217,6 @@ document.querySelectorAll(".mobile-item").forEach(link => {
     <!-- Sombra curva -->
     <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
   </div>
-</section>
 
 
 
@@ -285,14 +283,11 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 .toc-list {
   list-style: none;
   margin: 0;
-
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-
   padding: 0 20px;
   border-top: none;
-
   transition: max-height 0.45s ease, opacity 0.35s ease;
   display: block;
 }
@@ -301,13 +296,18 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 .toc-container.open .toc-list {
   max-height: 800px;
   opacity: 1;
-
   padding: 12px 20px;
   border-top: 1px solid #6b7280;
 }
 
 .toc-list li {
   margin: 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
+}
+
+.toc-list li:last-child {
+  border-bottom: none; /* quitar línea del último */
 }
 
 .toc-list li a {
@@ -331,14 +331,14 @@ h2[id] {
 <div class="toc-container">
   <button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
-    <li><a href="#titulo1">Como Crecer sin Renunciar a tu Trabajo Actual</a></li>
-    <li><a href="#titulo2">Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera</a></li>
-    <li><a href="#titulo3">Cómo Generar Ingresos con tus Ideas y Habilidades Profesionales</a></li>
-    <li><a href="#titulo4">Expande tu Caja de Herramientas Profesionales para Generar más Valor</a></li>
-    <li><a href="#titulo5">Tu red Profesional como Motor de Oportunidades</a></li>
-    <li><a href="#titulo6">Administra tus Recursos de forma Estratégica para Crecer</a></li>
-    <li><a href="#titulo7">Prepárate para el Siguiente paso en tu Carrera Profesional</a></li>
-    <li><a href="#titulo8">Convierte tu Empleo en un Trampolín hacia tu éxito Profesional</a></li>
+    <li><a href="#titulo1">1. Como Crecer sin Renunciar a tu Trabajo Actual</a></li>
+    <li><a href="#titulo2">2. Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera</a></li>
+    <li><a href="#titulo3">3. Cómo Generar Ingresos con tus Ideas y Habilidades Profesionales</a></li>
+    <li><a href="#titulo4">4. Expande tu Caja de Herramientas Profesionales para Generar más Valor</a></li>
+    <li><a href="#titulo5">5. Tu red Profesional como Motor de Oportunidades</a></li>
+    <li><a href="#titulo6">6. Administra tus Recursos de forma Estratégica para Crecer</a></li>
+    <li><a href="#titulo7">7. Prepárate para el Siguiente paso en tu Carrera Profesional</a></li>
+    <li><a href="#titulo8">8. Convierte tu Empleo en un Trampolín hacia tu éxito Profesional</a></li>
   </ul>
 </div>
 
@@ -371,14 +371,18 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Cerrar al hacer scroll SOLO si el mouse NO está dentro
+// Cerrar si el TOC sale del viewport
+function isOutOfViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.bottom < 0; // si la parte inferior ya no está visible
+}
+
 window.addEventListener("scroll", () => {
-  if (!mouseInsideTOC) {
+  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
     tocContainer.classList.remove("open");
   }
 });
 </script>
-
 
 
 
@@ -396,7 +400,7 @@ window.addEventListener("scroll", () => {
 
 <!-- INTRODUCCIÓN -->
  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-0" style="font-family: 'Poppins', sans-serif;">Como Crecer sin Renunciar a tu Trabajo Actual</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
  <img src="../../../assets/png/avanzar-carrera-trabajo.png" alt="" 
      class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
 
@@ -480,9 +484,8 @@ Pero en otros casos no hay rutas trazadas de caminos a seguir; esto puede ponert
 
 
 <!-- CONSTRUYE UNA BASE SÓLIDA -->
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera </h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4" style="font-family: 'Lora', serif;">
-
+ <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera </h2>
+ <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Reconociendo tu posición actual</h3>
 <p>
   Para quienes tienen un buen empleo el día de hoy, déjenme decirles que están en el punto donde la mayoría desearía estar. Independientemente de cuál sea tu ocupación, muchos desearían simplemente tener un empleo, una forma de estabilidad que se puede dar de forma rápida, ocasional o profesional. Para quienes no tienen empleo o aún están en busca de trabajo, no son ustedes los del problema y mucho menos su profesión, ya que el mundo laboral está diseñado de manera en la que no todos pueden ocupar el mismo lugar a la vez, no todos pueden hacer lo mismo, no todos ganarán los mismos salarios. 
@@ -524,7 +527,7 @@ Ahora bien, toda esta estructura no promete grandes resultados solo porque sí, 
 
 <!-- CREA FUENTES DE INGRESO PROPIAS -->
 <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Cómo Generar Ingresos con tus Ideas y Habilidades Profesionales</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
 Convertir una idea en una fuente de ingreso es uno de los movimientos más inteligentes que puedes hacer hoy. No se trata solo de “crear algo”, sino de entender que cada proyecto, por pequeño que parezca, puede funcionar como una pieza de tu patrimonio. El tiempo es la base de todo imperio; quien no se mantiene o perdura en el lapso de tiempo necesario o hasta ver resultados, desaparecerá como polvo en el aire. No obstante, no se genera dinero solo con una gran idea: una buena idea es como poner la pluma en la balanza de posibilidades, donde del otro lado pesa más el esfuerzo, constancia y disciplina.
@@ -630,7 +633,7 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 <!-- DIVERSIFICA -->
 <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Expande tu Caja de Herramientas Profesionales para Generar más Valor</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Diversifica tus habilidades para liderar</h3>
 <p>
@@ -646,7 +649,7 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 </a>
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">>Estrategias prácticas para potenciar tu perfil</h3>
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Estrategias prácticas para potenciar tu perfil</h3>
 
 <ul class="list-disc list-inside mb-4 text-stone-700">
         <li>Aprende herramientas digitales que complementen tu área principal, como análisis de datos, software financiero o plataformas de productividad.</li>
@@ -668,7 +671,7 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 <!-- CONSTRUYE RED DE APOYO -->
 <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Tu red Profesional como Motor de Oportunidades </h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
   <img src="../../../assets/png/motor-de-oportunidades.png" alt="" 
      class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
 
@@ -706,7 +709,7 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 <!-- ADMINISTRA TUS RECURSOS -->
 <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Administra tus Recursos de forma Estratégica para Crecer</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Invierte tu tiempo y dinero como un recurso estratégico</h3>
 <p>
@@ -728,7 +731,7 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 <!-- PREPARA EL SALTO -->
 <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Prepárate para el Siguiente paso en tu Carrera Profesional</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Transforma tu empleo en una plataforma de crecimiento</h3>
 <p>
@@ -756,7 +759,7 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 <!-- CIERRE -->
 <h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Convierte tu Empleo en un Trampolín hacia tu éxito Profesional</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Aprovecha tu empleo como plataforma de crecimiento</h3>
 <p>
@@ -1053,6 +1056,8 @@ fetch("../mejorar-tu-empleo/index.html")
 })
 .catch(e=>console.error("Interlink error:", e));
 </script>
+<!-- OTRA SECCION NO BORRAR  -->
+
 
 
 
@@ -1184,8 +1189,6 @@ fetch("../mejorar-tu-empleo/index.html")
 
     lucide.createIcons();
 </script>
-
-
 
 
 
