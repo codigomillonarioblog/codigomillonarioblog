@@ -192,206 +192,391 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 </script>
 
 
-  
 
-   
+
 <!-- HERO -->
- <section class="relative flex flex-col justify-center bg-gradient-to-br from-green-50 to-stone-100 text-center min-h-[auto] pt-24 sm:min-h-screen sm:py-20 lg:py-32" style="font-family: 'Lora', serif;">
-    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
-          Cómo comprar vivienda siendo <br>
-        <span class="text-green-600">  independiente sin depender </span> de un salario fijo <br>
-    </h1>          
-     <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-6">
-      Conoce los pasos clave para obtener tu vivienda propia siendo independiente sin complicarte.
-    </p>
-  <div class="mt-6 text-xs text-stone-500 flex justify-center">
-  <span class="border-b border-stone-300 pb-1">
-    Actualizado en diciembre de 2025
+<!-- Contenedor del título -->
+ <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
+    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
+      <span class="block">Cómo comprar vivienda siendo  </span>
+      <span class="block"> independiente sin depender</span>
+      <span class="block mt-1">de un salario fijo</span>
+    </h1>
+  </div>
+
+<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+  <!-- Fecha -->
+  <span class="text-center text-xs">
+    25/12/2025
+  </span>
+  <!-- Línea separadora -->
+  <span class="h-4 w-px bg-stone-400"></span>
+  <!-- Tiempo de lectura u otro dato -->
+  <span class="text-center text-xs">
+    ⏱ 5 min lectura
   </span>
 </div>
-</section>
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/puedo-comprar-casa-siendo-independiente.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
 
 
                 <!-- INTRODUCCIÓN GENERAL -->
-      <main class="py-20" style="font-family: 'Lora', serif;">
+                    <main class="py-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
 
 
-<div class="flex flex-wrap justify-center items-center gap-6 text-xs sm:text-sm text-stone-700 mb-1">
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="trending-up" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Consejos aprobados</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="shield-check" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Contenido verificado</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="lightbulb" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Ideas inteligentes</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
-    <i data-lucide="bar-chart-2" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Realidad actual</span>
-  </div>
+
+<!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
+<style>
+/* ================= CONTENEDOR ================= */
+.toc-container {
+  border: 1px solid #6b7280;
+  border-radius: 0;
+  max-width: 650px;
+  width: 100%;
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* ================= BOTÓN ================= */
+.toc-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 14px 20px;
+  background-color: #f9fafb;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toc-toggle:hover,
+.toc-toggle:focus {
+  background-color: #f9fafb;
+  outline: none;
+}
+
+/* ================= FLECHA ================= */
+.toc-toggle::after {
+  content: "▼";
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Flecha cuando está abierta */
+.toc-container.open .toc-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* ================= LISTA ================= */
+.toc-list {
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  border-top: none;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
+  display: block;
+}
+
+/* Lista abierta */
+.toc-container.open .toc-list {
+  max-height: 800px;
+  opacity: 1;
+  padding: 12px 20px;
+  border-top: 1px solid #6b7280;
+}
+
+.toc-list li {
+  margin: 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
+}
+
+.toc-list li:last-child {
+  border-bottom: none; /* quitar línea del último */
+}
+
+.toc-list li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.toc-list li a:hover {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+/* ================= OFFSET PARA MENÚ FIJO ================= */
+h2[id] {
+  scroll-margin-top: 100px;
+}
+</style>
+
+<!-- ================= HTML ================= -->
+<div class="toc-container">
+  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Comprar vivienda siendo independiente sin endeudarte de por vida</a></li>
+    <li><a href="#titulo2">2. Conoce tu verdadero margen de ahorro</a></li>
+    <li><a href="#titulo3">3. Diseña metas específicas y por etapas</a></li>
+    <li><a href="#titulo4">4. Protege tu ahorro en una cuenta separada</a></li>
+    <li><a href="#titulo5">5. Multiplica tus ingresos de manera estratégica</a></li>
+    <li><a href="#titulo6">6. Aprovecha beneficios y apoyos disponibles</a></li>
+    <li><a href="#titulo7">7. Mantén disciplina y ajusta tu plan</a></li>
+    <li><a href="#titulo8">8. Beneficios de planificar con precisión siendo independiente</a></li>
+  </ul>
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+const tocContainer = document.querySelector(".toc-container");
+const toggleBtn = tocContainer.querySelector(".toc-toggle");
+
+let mouseInsideTOC = false;
+
+// Abrir / cerrar SOLO con el botón
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  tocContainer.classList.toggle("open");
+});
+
+// Detectar si el mouse está dentro del TOC
+tocContainer.addEventListener("mouseenter", () => {
+  mouseInsideTOC = true;
+});
+
+tocContainer.addEventListener("mouseleave", () => {
+  mouseInsideTOC = false;
+});
+
+// Cerrar al hacer click fuera
+document.addEventListener("click", (e) => {
+  if (!tocContainer.contains(e.target)) {
+    tocContainer.classList.remove("open");
+  }
+});
+
+// Cerrar si el TOC sale del viewport
+function isOutOfViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.bottom < 0; // si la parte inferior ya no está visible
+}
+
+window.addEventListener("scroll", () => {
+  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
+    tocContainer.classList.remove("open");
+  }
+});
+</script>
+
+
+
+
+<div class="relative my-10">
+  <!-- Etiqueta estilo botón encima de la línea -->
+  <span class="absolute -top-4 left-0 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+    Contenido
+  </span>
+  <!-- Línea divisoria -->
+  <div style="width: 100%; height: 2px; background-color: #000;"></div>
 </div>
 
 
 
 
 <!-- INTRODUCCIÓN -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">Comprar vivienda siendo independiente sin endeudarte de por vida</h2>
-<p class="text-stone-700 leading-relaxed mb-4 text-justify relative">
-    <img src="../../../assets/png/vivienda-siendo-independiente.png" alt="Comprar vivienda siendo independiente" 
-         class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
-    Tener una casa propia sin depender de un empleo fijo no es cuestión de suerte; es cuestión de enfoque, planificación y decisiones inteligentes. Muchas personas desean tener su hogar, pero suelen perderse entre consejos genéricos de ahorro o creen que solo con un salario estable es posible lograrlo. La diferencia real está en cómo se administra el dinero, cómo se estructuran los pasos y cómo se transforman pequeñas oportunidades en avances concretos.
+  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Comprar vivienda siendo independiente sin endeudarte de por vida</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;"> 
+<img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.jpg" alt="" 
+class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+
+<p>
+  Tener una casa propia sin depender de un empleo fijo no es cuestión de suerte; es cuestión de enfoque, planificación y decisiones inteligentes. Muchas personas desean tener su hogar, pero suelen perderse entre consejos genéricos de ahorro o creen que solo con un salario estable es posible lograrlo. La diferencia real está en cómo se administra el dinero, cómo se estructuran los pasos y cómo se transforman pequeñas oportunidades en avances concretos.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     Existen casos reales de trabajadores independientes que comenzaron con recursos limitados y avanzaron de forma progresiva. Dividieron su objetivo en etapas claras: primero asegurar una base sólida, luego avanzar paso a paso en la construcción y finalmente completar los detalles conforme aumentaban sus ingresos. Este enfoque les permitió alcanzar estabilidad y tranquilidad financiera en un plazo razonable.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     Este artículo no solo presenta recomendaciones generales; muestra una forma de pensar, planear y ejecutar un proyecto de vivienda siendo independiente, utilizando estrategias prácticas y ejemplos que pueden adaptarse a distintas realidades, paso a paso.
 </p>
+</div>
 
 
 
 <!-- H2: Conoce tu verdadero margen de ahorro -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">
-    Conoce tu verdadero margen de ahorro
-</h2>
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Conoce tu verdadero margen de ahorro</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     Antes de cualquier acción, es fundamental realizar un diagnóstico real de tu situación financiera. No basta con calcular un porcentaje genérico de ingresos. Es necesario observar cada flujo de entrada y salida, incluyendo ingresos variables o esporádicos. Esto permite saber con claridad cuánto puedes destinar a tu objetivo y ajustar expectativas de forma realista.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     → Haz un listado completo de tus ingresos y evalúa su estabilidad y frecuencia.<br>
     → Analiza tus gastos e identifica lo esencial frente a lo prescindible, priorizando lo que aporta a tu objetivo.<br>
     → Estima el tiempo necesario para reunir los recursos de la primera etapa, contemplando imprevistos.<br>
     → Diseña estrategias para incrementar ingresos mediante proyectos adicionales, servicios especializados o actividades complementarias.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     En muchos casos, al analizar con detalle sus finanzas, las personas descubren oportunidades de generar ingresos adicionales que aceleran significativamente su progreso. Medir y optimizar cada ingreso transforma metas que parecían lejanas en objetivos alcanzables.
 </p>
+</div>
 
 
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">
-    Diseña metas específicas y por etapas
-</h2>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Diseña metas específicas y por etapas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+<p>
     Dividir un proyecto grande en fases concretas es clave para evitar la sensación de sobrecarga. Adquirir una vivienda no es solo un gasto, es un plan estratégico que se construye paso a paso. Cada etapa debe contar con objetivos claros, costos definidos y plazos realistas.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     → Investiga opciones que ofrezcan equilibrio entre precio, seguridad y proyección futura.<br>
     → Calcula los costos de cada fase, incluyendo trámites, materiales y mano de obra.<br>
     → Establece plazos claros y ajusta tus ingresos adicionales a cada etapa para mantener el avance constante.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     Cuando un proyecto se divide en etapas bien definidas, se vuelve más manejable. Cada avance refuerza la motivación y permite celebrar logros concretos sin perder el enfoque general.
 </p>
+</div>
 
 
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">
-    Protege tu ahorro en una cuenta separada
-</h2>
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Protege tu ahorro en una cuenta separada</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     Separar los recursos destinados a tu vivienda es una práctica clave de control financiero. Mantener el ahorro aislado evita gastos impulsivos y refuerza el compromiso con el objetivo. Cada ingreso asignado cumple una función específica dentro del plan.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     → Elige cuentas que ofrezcan algún tipo de rendimiento a largo plazo.<br>
     → Programa transferencias automáticas para mantener la constancia.<br>
     → Registra cada aporte por etapa para visualizar el progreso real.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p >
     Con disciplina y constancia, incluso aportes periódicos moderados pueden convertirse en una base sólida para dar los primeros pasos sin comprometer el equilibrio financiero diario.
 </p>
+</div>
 
 
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">
-    Multiplica tus ingresos de manera estratégica
-</h2>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Multiplica tus ingresos de manera estratégica</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+<p>
     Depender únicamente del ahorro puede ralentizar el proceso. Generar ingresos adicionales de forma planificada permite avanzar más rápido y con mayor control. Cada esfuerzo extra debe tener un propósito claro dentro del proyecto.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     → Aprovecha tus habilidades para ofrecer servicios, asesorías o productos.<br>
     → Evalúa proyectos temporales que no afecten tu estabilidad principal.<br>
     → Asigna cada ingreso adicional a una etapa específica del plan.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     Cuando los ingresos adicionales se gestionan con intención, el tiempo total del proyecto se reduce y se evita la dispersión financiera.
 </p>
+</div>
 
 
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">
-    Aprovecha beneficios y apoyos disponibles
-</h2>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Aprovecha beneficios y apoyos disponibles</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+<p>
     Pasar por alto ayudas institucionales o programas de apoyo puede representar una desventaja. Existen opciones que facilitan la compra progresiva y mejoran las condiciones de financiamiento si se integran correctamente al plan.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     → Investiga programas de apoyo aplicables a primeras adquisiciones.<br>
     → Analiza opciones de financiamiento flexibles adaptadas a ingresos variables.<br>
     → Integra estos beneficios dentro de tu planificación general.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     Utilizar estos recursos de forma estratégica puede acelerar etapas clave sin comprometer la estabilidad económica.
 </p>
+</div>
 
 
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">
-    Mantén disciplina y ajusta tu plan
-</h2>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Mantén disciplina y ajusta tu plan</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+<p>
     La disciplina es el factor que sostiene cualquier proyecto a largo plazo. Evaluar periódicamente el avance y realizar ajustes permite adaptarse a cambios sin perder el rumbo.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     → Revisa tu progreso de forma periódica y ajusta aportes cuando sea necesario.<br>
     → Prioriza las fases críticas reduciendo gastos secundarios si es necesario.<br>
     → Documenta el proceso y aprende de cada obstáculo.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     La flexibilidad, combinada con disciplina, permite superar imprevistos sin abandonar el objetivo final.
 </p>
+</div>
 
 
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">
-    Beneficios de planificar con precisión siendo independiente
-</h2>
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Beneficios de planificar con precisión siendo independiente</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     Una planificación estructurada protege la estabilidad financiera y asegura avances constantes. La independencia obliga a tomar decisiones estratégicas basadas en datos reales y no en suposiciones.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     → Reduces el riesgo financiero a largo plazo.<br>
     → Ganas confianza al ver avances reales en cada etapa.<br>
     → Transformas un objetivo abstracto en un resultado tangible.
 </p>
 
-<p class="text-stone-700 leading-relaxed mb-4 text-justify">
+<p>
     Este patrón se repite en todos los proyectos exitosos: análisis realista, metas por etapas, ingresos estratégicos y decisiones conscientes. Así se construye un proyecto sólido siendo independiente.
 </p>
+</div>
+
+
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/puedo-comprar-casa-siendo-independiente.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
+
+
+<p class="text-left text-xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Código Millonario Recomienda</p>
+<div style="width: 100%; height: 2px; background-color: #000; margin-bottom: 40px;"></div>
 
 
 

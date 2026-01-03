@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En 30 días puedes controlar tu dinero siguiendo estos 5 hábitos - Código Millonario</title>
+    <title>5 pasos para dejar de preocuparte por el dinero y empezar a controlarlo en un mes” - Código Millonario</title>
     <meta name="description" content="¿El dinero se te va y nunca logras avanzar? Descubre 5 hábitos simples que pueden transformar tus finanzas en solo 30 días y devolverte el control de tu dinero.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -194,63 +194,224 @@ document.querySelectorAll(".mobile-item").forEach(link => {
   });
 </script>
 
-
-
+  
 
 <!-- HERO -->
-  <section class="relative flex flex-col justify-center bg-gradient-to-br from-green-50 to-stone-100 text-center min-h-[auto] pt-24 sm:min-h-screen sm:py-20 lg:py-32" style="font-family: 'Lora', serif;">
-   <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
-         Cómo transformar tus finanzas <br>
-        <span class="text-green-600"> en solo 30 días con 5 </span> hábitos financieros clave <br>
-    </h1>          
-    <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-6">
-      Pequeños cambios en tus hábitos financieros pueden generar grandes resultados en solo un mes.
-    </p>
-  <div class="mt-6 text-xs text-stone-500 flex justify-center">
-  <span class="border-b border-stone-300 pb-1">
-    Actualizado en diciembre de 2025
+<!-- Contenedor del título -->
+ <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
+    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
+      <span class="block">Transforma tu bolsillo</span>
+      <span class="block">en 30 días con estos</span>
+      <span class="block mt-1">5 hábitos simples</span>
+    </h1>
+  </div>
+
+<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+  <!-- Fecha -->
+  <span class="text-center text-xs">
+    25/12/2025
+  </span>
+  <!-- Línea separadora -->
+  <span class="h-4 w-px bg-stone-400"></span>
+  <!-- Tiempo de lectura u otro dato -->
+  <span class="text-center text-xs">
+    ⏱ 5 min lectura
   </span>
 </div>
-</section>
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/como-hacer-crecer-tu-dinero.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
 
 
  
                  <!-- INTRODUCCIÓN GENERAL -->
-       <main class="py-20" style="font-family: 'Lora', serif;">
+                     <main class="py-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
 
 
-<div class="flex flex-wrap justify-center items-center gap-6 text-xs sm:text-sm text-stone-700 mb-1">
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="trending-up" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Consejos aprobados</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="shield-check" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Contenido verificado</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="lightbulb" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Ideas inteligentes</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
-    <i data-lucide="bar-chart-2" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Realidad actual</span>
-  </div>
+
+
+<!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
+<style>
+/* ================= CONTENEDOR ================= */
+.toc-container {
+  border: 1px solid #6b7280;
+  border-radius: 0;
+  max-width: 650px;
+  width: 100%;
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* ================= BOTÓN ================= */
+.toc-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 14px 20px;
+  background-color: #f9fafb;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toc-toggle:hover,
+.toc-toggle:focus {
+  background-color: #f9fafb;
+  outline: none;
+}
+
+/* ================= FLECHA ================= */
+.toc-toggle::after {
+  content: "▼";
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Flecha cuando está abierta */
+.toc-container.open .toc-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* ================= LISTA ================= */
+.toc-list {
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  border-top: none;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
+  display: block;
+}
+
+/* Lista abierta */
+.toc-container.open .toc-list {
+  max-height: 800px;
+  opacity: 1;
+  padding: 12px 20px;
+  border-top: 1px solid #6b7280;
+}
+
+.toc-list li {
+  margin: 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
+}
+
+.toc-list li:last-child {
+  border-bottom: none; /* quitar línea del último */
+}
+
+.toc-list li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.toc-list li a:hover {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+/* ================= OFFSET PARA MENÚ FIJO ================= */
+h2[id] {
+  scroll-margin-top: 100px;
+}
+</style>
+
+<!-- ================= HTML ================= -->
+<div class="toc-container">
+  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Cómo transformar tu economía en 30 días con hábitos sencillos</a></li>
+    <li><a href="#titulo2">2. HÁBITO 1: Registra todos tus gastos aunque te dé pereza</a></li>
+    <li><a href="#titulo3">3. HÁBITO 2: Separa tu ahorro apenas recibas dinero</a></li>
+    <li><a href="#titulo4">4. HÁBITO 3: Evita las compras impulsivas con la regla de las 48 horas</a></li>
+    <li><a href="#titulo5">5. HÁBITO 4: Usa solo el 30% del cupo de tu tarjeta o menos</a></li>
+    <li><a href="#titulo6">6. HÁBITO 5: Define un presupuesto semanal que sea fácil y no complicado</a></li>
+    <li><a href="#titulo7">7. Tu dinero, tus reglas</a></li>
+  </ul>
 </div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+const tocContainer = document.querySelector(".toc-container");
+const toggleBtn = tocContainer.querySelector(".toc-toggle");
+
+let mouseInsideTOC = false;
+
+// Abrir / cerrar SOLO con el botón
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  tocContainer.classList.toggle("open");
+});
+
+// Detectar si el mouse está dentro del TOC
+tocContainer.addEventListener("mouseenter", () => {
+  mouseInsideTOC = true;
+});
+
+tocContainer.addEventListener("mouseleave", () => {
+  mouseInsideTOC = false;
+});
+
+// Cerrar al hacer click fuera
+document.addEventListener("click", (e) => {
+  if (!tocContainer.contains(e.target)) {
+    tocContainer.classList.remove("open");
+  }
+});
+
+// Cerrar si el TOC sale del viewport
+function isOutOfViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.bottom < 0; // si la parte inferior ya no está visible
+}
+
+window.addEventListener("scroll", () => {
+  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
+    tocContainer.classList.remove("open");
+  }
+});
+</script>
+
+
+
+<div class="relative my-10">
+  <!-- Etiqueta estilo botón encima de la línea -->
+  <span class="absolute -top-4 left-0 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+    Contenido
+  </span>
+  <!-- Línea divisoria -->
+  <div style="width: 100%; height: 2px; background-color: #000;"></div>
+</div>
+
 
 
 
 
 
 <!-- INTRODUCCIÓN CON GANCHO EMOCIONAL -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">
-  Cómo transformar tus finanzas en 30 días con hábitos sencillos
-</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
-<img src="../../../assets/png/finanzas-familiares.png" alt="Finanzas familiares" 
+ <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Cómo transformar tu economía en 30 días con hábitos sencillos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.jpg" alt="Finanzas familiares" 
        class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
 
 <p>
@@ -266,8 +427,8 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 
 
 <!-- HÁBITO 1 -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Registra todos tus gastos (aunque te dé pereza)</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+  <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">HÁBITO 1: Registra todos tus gastos aunque te dé pereza</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
   El primer paso para mejorar tus finanzas es saber exactamente en qué se te va el dinero. Durante 30 días, anota:
@@ -287,15 +448,15 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 </p>
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
-  <li><strong>Nequi:</strong> categorías automáticas</li>
-  <li><strong>Ualá:</strong> control de gastos</li>
+  <li><strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Nequi:</strong> categorías automáticas</li>
+  <li><strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Ualá:</strong> control de gastos</li>
   <li>Una app de finanzas</li>
   <li>Un cuaderno</li>
   <li>Google Sheets</li>
 </ul>
 
 <p>
-  <strong>Beneficio:</strong> En 7–10 días ya sabrás qué recortar y qué mantener, y al final del mes tendrás un mapa completo de tu vida financiera.
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Beneficio:</strong> En 7–10 días ya sabrás qué recortar y qué mantener, y al final del mes tendrás un mapa completo de tu vida financiera.
 </p>
 </div>
 
@@ -304,15 +465,15 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 
 
 <!-- HÁBITO 2 -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Separa tu ahorro apenas recibas dinero</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">HÁBITO 2: Separa tu ahorro apenas recibas dinero</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
   La clave para ahorrar no es la cantidad, sino el hábito. Desde hoy aplica esta regla:
 </p>
 
 <p>
-  <strong>Ahorra primero, gasta después.</strong>
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Ahorra primero, gasta después.</strong>
 </p>
 
 <p>
@@ -326,11 +487,11 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 </ul>
 
 <p>
-  <strong>Apps como Nequi, Daviplata y Ualá</strong> te ayudan mucho porque permiten aislar el ahorro.
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Apps como Nequi, Daviplata y Ualá</strong> te ayudan mucho porque permiten aislar el ahorro.
 </p>
 
 <p>
-  <strong>Beneficio:</strong> En 30 días verás un ahorro real que antes no existía.
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Beneficio:</strong> En 30 días verás un ahorro real que antes no existía.
 </p>
 </div>
 
@@ -338,15 +499,15 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 
 
 <!-- HÁBITO 3 -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Evita las compras impulsivas con la regla de las 48 horas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">  
+    <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">HÁBITO 3: Evita las compras impulsivas con la regla de las 48 horas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
   Las compras impulsivas son uno de los mayores enemigos financieros. Cada vez que sientas ganas de comprar algo que no es urgente, aplica esto:
 </p>
 
 <p>
-  <strong>Espera 48 horas antes de comprar.</strong>
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Espera 48 horas antes de comprar.</strong>
 </p>
 
 <p>
@@ -361,7 +522,7 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 </ul>
 
 <p>
-  <strong>Beneficio:</strong> Notarás que ahorras muchísimo porque la mayoría de compras impulsivas desaparecen al esperar.
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Beneficio:</strong> Notarás que ahorras muchísimo porque la mayoría de compras impulsivas desaparecen al esperar.
 </p>
 </div>
 
@@ -369,8 +530,8 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 
 
 <!-- HÁBITO 4 -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Usa solo el 30% del cupo de tu tarjeta (o menos)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">  
+     <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">HÁBITO 4: Usa solo el 30% del cupo de tu tarjeta o menos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
   Este hábito tiene doble beneficio:
@@ -382,7 +543,7 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 </ul>
 
 <p>
-  <strong>Ejemplo:</strong><br>
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Ejemplo:</strong><br>
   Cupo: $500.000<br>
   Máximo recomendado: $150.000
 </p>
@@ -392,7 +553,7 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 </p>
 
 <p>
-  <strong>Beneficio:</strong> Más control, menos ansiedad por deudas y mejor puntaje crediticio en solo 30 días.
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Beneficio:</strong> Más control, menos ansiedad por deudas y mejor puntaje crediticio en solo 30 días.
 </p>
 </div>
 
@@ -400,15 +561,15 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 
 
 <!-- HÁBITO 5 -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Define un presupuesto semanal fácil (no complicado)</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+      <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">HÁBITO 5: Define un presupuesto semanal que sea fácil y no complicado</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
   Evita presupuestos complejos que nunca se cumplen. Lo ideal es hacerlo por semana, no por mes:
 </p>
 
 <p>
-  <strong>Ejemplo de presupuesto semanal:</strong>
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Ejemplo de presupuesto semanal:</strong>
 </p>
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
@@ -423,7 +584,7 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 </p>
 
 <p>
-  <strong>Beneficio:</strong> Tendrás un sistema claro y una idea real de cuánto puedes gastar sin ahogarte.
+  <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Beneficio:</strong> Tendrás un sistema claro y una idea real de cuánto puedes gastar sin ahogarte.
 </p>
 </div>
 
@@ -432,8 +593,8 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 
 
 <!-- CONCLUSIÓN -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Conclusión</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+       <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Tu dinero, tus reglas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
   Estos 5 hábitos pueden cambiar tus finanzas más rápido de lo que crees. No se trata de esfuerzos extremos, sino de acciones pequeñas y constantes:
@@ -452,13 +613,33 @@ La buena noticia es que no necesitas meses para ver resultados: 30 días son suf
 </p>
 
 <p>
-  <strong>Recuerda:</strong> No necesitas más dinero, necesitas mejores hábitos. Empieza hoy y nota la diferencia en solo un mes.
+<strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Recuerda:</strong> No necesitas más dinero, necesitas mejores hábitos. Empieza hoy y nota la diferencia en solo un mes.
 </p>
 
 <p>
-  ¿Quieres profundizar aún más en cómo controlar tu dinero y ahorrar inteligentemente? Revisa nuestro artículo <a href="/blog/herramientas/presupuesto-inteligente">Presupuesto inteligente: tu guía práctica</a>.
+    ¿Quieres profundizar aún más en cómo controlar tu dinero y ahorrar inteligentemente? Revisa nuestro artículo 
+    <a href="/blog/herramientas/presupuesto-inteligente" class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif; text-decoration: underline; text-decoration-color: black;">Presupuesto inteligente: tu guía práctica</a>.
 </p>
+
 </div>
+
+
+
+
+ <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/como-hacer-crecer-tu-dinero.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
+
+
+<p class="text-left text-xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Código Millonario Recomienda</p>
+<div style="width: 100%; height: 2px; background-color: #000; margin-bottom: 40px;"></div>
+
+
 
 
 
