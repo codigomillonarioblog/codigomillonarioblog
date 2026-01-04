@@ -192,57 +192,224 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
  
-
-
 <!-- HERO -->
-<section class="relative flex flex-col justify-center bg-gradient-to-br from-green-50 to-stone-100 text-center min-h-[auto] pt-24 sm:min-h-screen sm:py-20 lg:py-32" style="font-family: 'Lora', serif;">
-    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
-             Cómo dar tus primeros   <br>
-    <span class="text-green-600">pasos en inversiones   </span> digitales fácilmente    <br>   
-    </h1>     
- <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-6">
-       Aprende a invertir online aunque seas principiante. Descubre estrategias simples para comenzar a hacer crecer tu dinero sin complicaciones.   
-    </p>
-  <div class="mt-6 text-xs text-stone-500 flex justify-center">
-  <span class="border-b border-stone-300 pb-1">
-    Actualizado en diciembre de 2025
+<!-- Contenedor del título -->
+ <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
+    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
+      <span class="block">Cómo dar tus </span>
+      <span class="block">primeros pasos en</span>
+      <span class="block mt-1">inversiones digitales</span>
+    </h1>
+  </div>
+
+<div class="mt-6 text-xs motext-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+  <!-- Fecha -->
+  <span class="text-center text-xs">
+    25/12/2025
+  </span>
+  <!-- Línea separadora -->
+  <span class="h-4 w-px bg-stone-400"></span>
+  <!-- Tiempo de lectura u otro dato -->
+  <span class="text-center text-xs">
+    ⏱ 5 min lectura
   </span>
 </div>
-  </section>
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/como-empezar-a-invertir-por-internet.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
 
 
 
-                <!-- INTRODUCCIÓN GENERAL -->
-    <main class="py-20" style="font-family: 'Lora', serif;">
+            <!-- INTRODUCCIÓN GENERAL -->
+                 <main class="py-20">
      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
 
-<div class="flex flex-wrap justify-center items-center gap-6 text-xs sm:text-sm text-stone-700 mb-1">
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="trending-up" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Consejos aprobados</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="shield-check" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Contenido verificado</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="lightbulb" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Ideas inteligentes</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
-    <i data-lucide="bar-chart-2" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Realidad actual</span>
-  </div>
+
+
+
+
+      <!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
+<style>
+/* ================= CONTENEDOR ================= */
+.toc-container {
+  border: 1px solid #6b7280;
+  border-radius: 0;
+  max-width: 650px;
+  width: 100%;
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* ================= BOTÓN ================= */
+.toc-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 14px 20px;
+  background-color: #f9fafb;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toc-toggle:hover,
+.toc-toggle:focus {
+  background-color: #f9fafb;
+  outline: none;
+}
+
+/* ================= FLECHA ================= */
+.toc-toggle::after {
+  content: "▼";
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Flecha cuando está abierta */
+.toc-container.open .toc-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* ================= LISTA ================= */
+.toc-list {
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  border-top: none;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
+  display: block;
+}
+
+/* Lista abierta */
+.toc-container.open .toc-list {
+  max-height: 800px;
+  opacity: 1;
+  padding: 12px 20px;
+  border-top: 1px solid #6b7280;
+}
+
+.toc-list li {
+  margin: 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
+}
+
+.toc-list li:last-child {
+  border-bottom: none; /* quitar línea del último */
+}
+
+.toc-list li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.toc-list li a:hover {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+/* ================= OFFSET PARA MENÚ FIJO ================= */
+h2[id] {
+  scroll-margin-top: 100px;
+}
+</style>
+
+<!-- ================= HTML ================= -->
+<div class="toc-container">
+  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Primeros pasos para invertir online sin complicaciones</a></li>
+    <li><a href="#titulo2">2. Entiende primero qué significa invertir</a></li>
+    <li><a href="#titulo3">3. Empieza por un objetivo sencillo</a></li>
+    <li><a href="#titulo4">4. Escoge solo una plataforma para comenzar</a></li>
+    <li><a href="#titulo5">5. Invierte un monto pequeño para aprender (no para ganar)</a></li>
+    <li><a href="#titulo6">6. Escoge inversiones que no te compliquen</a></li>
+    <li><a href="#titulo7">7. Revisa tu inversión una vez a la semana (no todos los días)</a></li>
+    <li><a href="#titulo8">8. Aprende lo básico mientras avanzas</a></li>
+    <li><a href="#titulo9">9. Empieza a invertir poco a poco y con claridad</a></li>
+  </ul>
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+const tocContainer = document.querySelector(".toc-container");
+const toggleBtn = tocContainer.querySelector(".toc-toggle");
+
+let mouseInsideTOC = false;
+
+// Abrir / cerrar SOLO con el botón
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  tocContainer.classList.toggle("open");
+});
+
+// Detectar si el mouse está dentro del TOC
+tocContainer.addEventListener("mouseenter", () => {
+  mouseInsideTOC = true;
+});
+
+tocContainer.addEventListener("mouseleave", () => {
+  mouseInsideTOC = false;
+});
+
+// Cerrar al hacer click fuera
+document.addEventListener("click", (e) => {
+  if (!tocContainer.contains(e.target)) {
+    tocContainer.classList.remove("open");
+  }
+});
+
+// Cerrar si el TOC sale del viewport
+function isOutOfViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.bottom < 0; // si la parte inferior ya no está visible
+}
+
+window.addEventListener("scroll", () => {
+  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
+    tocContainer.classList.remove("open");
+  }
+});
+</script>
+
+
+
+<div class="relative my-10">
+  <!-- Etiqueta estilo botón encima de la línea -->
+  <span class="absolute -top-4 left-0 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+    Contenido
+  </span>
+  <!-- Línea divisoria -->
+  <div style="width: 100%; height: 2px; background-color: #000;"></div>
 </div>
 
 
 
+
+
+
       <!-- INTRODUCCIÓN -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">Primeros pasos para invertir online sin complicaciones</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
-<img src="../../../assets/png/invercion-digital.png" alt="" 
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Primeros pasos para invertir online sin complicaciones</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.jpg" alt="" 
        class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
 
     <p>
@@ -257,8 +424,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Entiende primero qué significa invertir</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Entiende primero qué significa invertir</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Antes de abrir cuentas y mover dinero, debes tener claro algo básico: invertir es poner tu dinero en algo que puede crecer con el tiempo. No es magia, no es ganar rápido y no es duplicar plata en una semana.
@@ -282,8 +449,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Empieza por un objetivo sencillo</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Empieza por un objetivo sencillo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     No abras varias plataformas ni busques demasiadas opciones. Define un objetivo fácil como:
@@ -302,7 +469,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Escoge solo una plataforma para comenzar</h2>
+   <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Escoge solo una plataforma para comenzar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <P>
     Como principiante, lo mejor es empezar con una sola app que sea clara y segura. Algunas opciones populares para iniciar en Colombia son:
@@ -322,7 +490,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Invierte un monto pequeño para aprender (no para ganar)</h2>
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Invierte un monto pequeño para aprender (no para ganar)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     La primera inversión no es para hacerte rico, sino para entender cómo funciona:
@@ -352,7 +521,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Escoge inversiones que no te compliquen</h2>
+   <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Escoge inversiones que no te compliquen</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Si estás empezando, evita lo complejo. Comienza con opciones simples:
@@ -373,7 +543,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Revisa tu inversión una vez a la semana (no todos los días)</h2>
+   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Revisa tu inversión una vez a la semana (no todos los días)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Los principiantes cometen el error de revisar sus inversiones cada 5 minutos. Esto solo genera ansiedad.
@@ -393,7 +564,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Aprende lo básico mientras avanzas</h2>
+   <h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Aprende lo básico mientras avanzas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     No necesitas estudiar un curso completo. Solo aprende paso a paso:
@@ -414,12 +586,30 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Reflexión final</h2>
+   <h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Empieza a invertir poco a poco y con claridad</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Invertir online si eres principiante es más simple de lo que parece: empieza pequeño, mantén claridad en tu objetivo y usa herramientas fáciles. Con constancia, esa pequeña inversión se convierte en tu primer paso real hacia construir tu futuro financiero.
 </p>
 </div>
+
+
+
+ <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/como-empezar-a-invertir-por-internet.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
+
+  
+<p class="text-left text-xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Código Millonario Recomienda</p>
+<div style="width: 100%; height: 2px; background-color: #000; margin-bottom: 40px;"></div>
+
+
 
 
         </div>

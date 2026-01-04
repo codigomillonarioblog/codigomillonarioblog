@@ -191,56 +191,225 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 </script>
 
 
-  
+
+
 <!-- HERO -->
- <section class="relative flex flex-col justify-center bg-gradient-to-br from-green-50 to-stone-100 text-center min-h-[auto] pt-24 sm:min-h-screen sm:py-20 lg:py-32" style="font-family: 'Lora', serif;">
-    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
-            Evita los fallos más comunes al <br>
-    <span class="text-green-600"> usar plataformas digitales para </span>  hacer crecer tu dinero <br>   
-    </h1>  
-  <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-6">
-  Descubre los errores frecuentes que muchos cometen en plataformas digitales y aprende cómo proteger tu dinero. Consejos prácticos para operar seguro y con confianza.  
-  </p>
-  <div class="mt-6 text-xs text-stone-500 flex justify-center">
-  <span class="border-b border-stone-300 pb-1">
-    Actualizado en diciembre de 2025
+<!-- Contenedor del título -->
+ <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
+    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
+      <span class="block">Errores Comunes</span>
+      <span class="block">al Invertir de</span>
+      <span class="block mt-1">Forma Digital</span>
+    </h1>
+  </div>
+
+<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+  <!-- Fecha -->
+  <span class="text-center text-xs">
+    25/12/2025
+  </span>
+  <!-- Línea separadora -->
+  <span class="h-4 w-px bg-stone-400"></span>
+  <!-- Tiempo de lectura u otro dato -->
+  <span class="text-center text-xs">
+    ⏱ 5 min lectura
   </span>
 </div>
-</section>
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/seguridad-en-inversiones-digitales.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
 
 
-             <!-- INTRODUCCIÓN GENERAL -->
-      <main class="py-20" style="font-family: 'Lora', serif;">
+
+
+              <!-- INTRODUCCIÓN GENERAL -->
+                    <main class="py-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
 
-<div class="flex flex-wrap justify-center items-center gap-6 text-xs sm:text-sm text-stone-700 mb-1">
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="trending-up" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Consejos aprobados</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="shield-check" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Contenido verificado</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="lightbulb" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Ideas inteligentes</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
-    <i data-lucide="bar-chart-2" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Realidad actual</span>
-  </div>
+
+
+<!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
+<style>
+/* ================= CONTENEDOR ================= */
+.toc-container {
+  border: 1px solid #6b7280;
+  border-radius: 0;
+  max-width: 650px;
+  width: 100%;
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* ================= BOTÓN ================= */
+.toc-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 14px 20px;
+  background-color: #f9fafb;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toc-toggle:hover,
+.toc-toggle:focus {
+  background-color: #f9fafb;
+  outline: none;
+}
+
+/* ================= FLECHA ================= */
+.toc-toggle::after {
+  content: "▼";
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Flecha cuando está abierta */
+.toc-container.open .toc-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* ================= LISTA ================= */
+.toc-list {
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  border-top: none;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
+  display: block;
+}
+
+/* Lista abierta */
+.toc-container.open .toc-list {
+  max-height: 800px;
+  opacity: 1;
+  padding: 12px 20px;
+  border-top: 1px solid #6b7280;
+}
+
+.toc-list li {
+  margin: 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
+}
+
+.toc-list li:last-child {
+  border-bottom: none; /* quitar línea del último */
+}
+
+.toc-list li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.toc-list li a:hover {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+/* ================= OFFSET PARA MENÚ FIJO ================= */
+h2[id] {
+  scroll-margin-top: 100px;
+}
+</style>
+
+<!-- ================= HTML ================= -->
+<div class="toc-container">
+  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Estos son los errores que debes conocer antes de invertir</a></li>
+    <li><a href="#titulo2">2. Invertir sin entender cómo funciona la plataforma</a></li>
+    <li><a href="#titulo3">3. Confiar en promesas de rentabilidad fija</a></li>
+    <li><a href="#titulo4">4. No verificar la seguridad de la cuenta</a></li>
+    <li><a href="#titulo5">5. Invertir todo el dinero en una sola opción</a></li>
+    <li><a href="#titulo6">6. Seguir recomendaciones de desconocidos</a></li>
+    <li><a href="#titulo7">7. No tener un objetivo claro</a></li>
+    <li><a href="#titulo8">8. Retirar o invertir por emociones</a></li>
+    <li><a href="#titulo9">9. Invertir bien empieza por entender dónde pones tu dinero</a></li>
+  </ul>
 </div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+const tocContainer = document.querySelector(".toc-container");
+const toggleBtn = tocContainer.querySelector(".toc-toggle");
+
+let mouseInsideTOC = false;
+
+// Abrir / cerrar SOLO con el botón
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  tocContainer.classList.toggle("open");
+});
+
+// Detectar si el mouse está dentro del TOC
+tocContainer.addEventListener("mouseenter", () => {
+  mouseInsideTOC = true;
+});
+
+tocContainer.addEventListener("mouseleave", () => {
+  mouseInsideTOC = false;
+});
+
+// Cerrar al hacer click fuera
+document.addEventListener("click", (e) => {
+  if (!tocContainer.contains(e.target)) {
+    tocContainer.classList.remove("open");
+  }
+});
+
+// Cerrar si el TOC sale del viewport
+function isOutOfViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.bottom < 0; // si la parte inferior ya no está visible
+}
+
+window.addEventListener("scroll", () => {
+  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
+    tocContainer.classList.remove("open");
+  }
+});
+</script>
+
+
+
+<div class="relative my-10">
+  <!-- Etiqueta estilo botón encima de la línea -->
+  <span class="absolute -top-4 left-0 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+    Contenido
+  </span>
+  <!-- Línea divisoria -->
+  <div style="width: 100%; height: 2px; background-color: #000;"></div>
+</div>
+
+
 
 
 
 
 <!-- INTRODUCCIÓN -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">Estos son los errores que debes conocer antes de invertir</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
-<img src="../../../assets/png/errores-plataformas-digitales.png" alt="" 
+   <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Estos son los errores que debes conocer antes de invertir</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.jpg" alt="" 
        class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
 
     <p>
@@ -252,15 +421,18 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFOS -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Invertir sin entender cómo funciona la plataforma</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+  <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Invertir sin entender cómo funciona la plataforma</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Uno de los errores más comunes es abrir una cuenta y meter dinero sin saber realmente qué estás haciendo.
     Cada plataforma tiene sus propias reglas: comisiones, retiros, riesgos, protecciones y productos disponibles.
 </p>
 <p>
-<strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Cómo evitarlo</strong>
+  <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+ Cómo evitarlo
+  </strong>
+
 <ul class="list-disc pl-6 text-stone-700 space-y-1">
     <li>Revisa los tutoriales oficiales antes de depositar.</li>
     <li>Lee las secciones de “preguntas frecuentes”.</li>
@@ -272,15 +444,19 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFOS -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Confiar en promesas de rentabilidad fija</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Confiar en promesas de rentabilidad fija</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Cuando una plataforma te asegura ganancias garantizadas, multiplicar tu capital o rendimientos “sin riesgo”, toma distancia. 
     Ese tipo de mensajes suelen ser señales de alerta.
 </p>
 <p>
-  <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Cómo evitarlo</strong>
+
+   <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+  Cómo no caer en esto
+  </strong>
+
 <ul class="list-disc pl-6 text-stone-700 space-y-1">
     <li>Desconfía de cualquier rentabilidad superior al 10% mensual.</li>
     <li>Verifica si la empresa está regulada o registrada en tu país.</li>
@@ -292,16 +468,19 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFOS -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">No verificar la seguridad de la cuenta</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
-
+   <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">No verificar la seguridad de la cuenta</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Muchos usuarios se emocionan invirtiendo y olvidan lo básico: proteger su dinero digital.
 </p>
 <p>
-  <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Cómo evitarlo</strong>
-<ul class="list-disc pl-6 text-stone-700 space-y-1">
+
+   <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+Qué hacer para no cometer este error
+  </strong>
+
+  <ul class="list-disc pl-6 text-stone-700 space-y-1">
     <li>Activa la autenticación en dos pasos (2FA).</li>
     <li>Usa contraseñas complejas y distintas a tus redes sociales.</li>
     <li>Evita iniciar sesión desde redes WiFi públicas.</li>
@@ -311,16 +490,19 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFOS -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Invertir todo el dinero en una sola opción</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
-
+   <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Invertir todo el dinero en una sola opción</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     La famosa frase “no poner todos los huevos en la misma canasta” aplica aún más en lo digital. Si un proyecto falla, podrías perderlo todo.
 </p>
 <p>
-  <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Cómo evitarlo</strong>
-<ul class="list-disc pl-6 text-stone-700 space-y-1">
+
+   <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+La forma correcta de evitarlo
+  </strong>
+
+  <ul class="list-disc pl-6 text-stone-700 space-y-1">
     <li>Reparte tu presupuesto entre varias inversiones pequeñas.</li>
     <li>Combina opciones con diferentes niveles de riesgo.</li>
     <li>Empieza con montos mínimos hasta conocer el terreno.</li>
@@ -330,15 +512,18 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFOS -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Seguir recomendaciones de desconocidos</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Seguir recomendaciones de desconocidos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Muchos principiantes invierten porque alguien de un grupo, un amigo o un influencer les dijo que una plataforma “es la mejor”. Eso es peligroso.
 </p>
 <p>
-  <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Cómo evitarlo</strong>
-<ul class="list-disc pl-6 text-stone-700 space-y-1">
+ <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+Cómo protegerte de este fallo
+</strong>
+
+  <ul class="list-disc pl-6 text-stone-700 space-y-1">
     <li>Nunca inviertas solo porque “a otro le funcionó”.</li>
     <li>Analiza tú mismo la información.</li>
     <li>Pregunta: ¿entiendo cómo gana dinero esta plataforma?</li>
@@ -349,15 +534,18 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFOS -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">No tener un objetivo claro</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+  <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">No tener un objetivo claro</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Invertir sin propósito termina en decisiones impulsivas: entrar y salir, mover dinero sin sentido, o caer en el FOMO.
 </p>
 <p>
-  <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Cómo evitarlo</strong>
-<ul class="list-disc pl-6 text-stone-700 space-y-1">
+ <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+Cómo hacerlo bien desde el inicio
+</strong>
+
+  <ul class="list-disc pl-6 text-stone-700 space-y-1">
     <li>Define qué quieres lograr: ahorro, ingresos extra, experiencia, etc.</li>
     <li>Elige la plataforma según tu objetivo.</li>
 </ul>
@@ -367,15 +555,19 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFOS -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Retirar o invertir por emociones</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Retirar o invertir por emociones</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     La ansiedad, el miedo o la euforia llevan a errores graves como vender en pérdidas o comprar sin analizar.
 </p>
 <p>
-  <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Cómo evitarlo</strong>
-<ul class="list-disc pl-6 text-stone-700 space-y-1">
+
+ <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+La manera más segura de actuar
+</strong>
+
+  <ul class="list-disc pl-6 text-stone-700 space-y-1">
     <li>Aplica una regla: “Si estoy dudando, no hago nada”.</li>
     <li>Espera 24 horas antes de decisiones grandes.</li>
     <li>Lleva un registro de tus movimientos para aprender.</li>
@@ -386,14 +578,30 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFOS -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Conclusión</h2>
- <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+  <h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Invertir bien empieza por entender dónde pones tu dinero</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Invertir en plataformas digitales no es difícil, pero sí requiere criterio y calma. La mayoría de los errores se pueden evitar si investigas, analizas y te proteges. 
     No necesitas ser experto: solo tener claro que tu dinero merece una decisión informada. Empieza con pasos pequeños, revisa cada plataforma y recuerda: la mejor inversión es la que entiendes.
 </p>
 </div>
+
+
+
+ <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/seguridad-en-inversiones-digitales.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
+
+  <p class="text-left text-xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Código Millonario Recomienda</p>
+<div style="width: 100%; height: 2px; background-color: #000; margin-bottom: 40px;"></div>
+
+
 
         </div>
     </main>

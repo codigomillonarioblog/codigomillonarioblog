@@ -192,56 +192,227 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 </script>
 
 
- 
+
+
+
 <!-- HERO -->
- <section class="relative flex flex-col justify-center bg-gradient-to-br from-green-50 to-stone-100 text-center min-h-[auto] pt-24 sm:min-h-screen sm:py-20 lg:py-32" style="font-family: 'Lora', serif;">
-    <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
-          Cómo los Millonarios Multiplican <br>
-    <span class="text-green-600">  su Dinero con </span>   Negocios Ocultos <br>   
-    </h1>   
-  <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-6">
-      Multiplica tu dinero siguiendo las estrategias que los millonarios aplican en negocios ocultos.  
-  </p>
-  <div class="mt-6 text-xs text-stone-500 flex justify-center">
-  <span class="border-b border-stone-300 pb-1">
-    Actualizado en diciembre de 2025
+<!-- Contenedor del título -->
+ <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
+    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
+      <span class="block">Cómo los Millonarios</span>
+      <span class="block">Multiplican su Dinero con</span>
+      <span class="block mt-1"> Negocios Ocultos</span>
+    </h1>
+  </div>
+
+<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+  <!-- Fecha -->
+  <span class="text-center text-xs">
+    25/12/2025
+  </span>
+  <!-- Línea separadora -->
+  <span class="h-4 w-px bg-stone-400"></span>
+  <!-- Tiempo de lectura u otro dato -->
+  <span class="text-center text-xs">
+    ⏱ 5 min lectura
   </span>
 </div>
-</section>
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/negocios-que-hacen-ricos-a-millonarios.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
 
 
             <!-- INTRODUCCIÓN GENERAL -->
-<main class="py-20" style="font-family: 'Lora', serif;">
-<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <main class="py-20">
+   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
 
-<div class="flex flex-wrap justify-center items-center gap-6 text-xs sm:text-sm text-stone-700 mb-1">
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="trending-up" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Consejos aprobados</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="shield-check" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Contenido verificado</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center sm:border-r sm:pr-4 last:border-r-0 text-center sm:text-left">
-    <i data-lucide="lightbulb" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Ideas inteligentes</span>
-  </div>
-  <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
-    <i data-lucide="bar-chart-2" class="w-5 h-5 text-green-600 mb-1 sm:mb-0"></i>
-    <span class="font-semibold">Realidad actual</span>
-  </div>
+
+
+<!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
+<style>
+/* ================= CONTENEDOR ================= */
+.toc-container {
+  border: 1px solid #6b7280;
+  border-radius: 0;
+  max-width: 650px;
+  width: 100%;
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* ================= BOTÓN ================= */
+.toc-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 14px 20px;
+  background-color: #f9fafb;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toc-toggle:hover,
+.toc-toggle:focus {
+  background-color: #f9fafb;
+  outline: none;
+}
+
+/* ================= FLECHA ================= */
+.toc-toggle::after {
+  content: "▼";
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Flecha cuando está abierta */
+.toc-container.open .toc-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* ================= LISTA ================= */
+.toc-list {
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  border-top: none;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
+  display: block;
+}
+
+/* Lista abierta */
+.toc-container.open .toc-list {
+  max-height: 800px;
+  opacity: 1;
+  padding: 12px 20px;
+  border-top: 1px solid #6b7280;
+}
+
+.toc-list li {
+  margin: 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
+}
+
+.toc-list li:last-child {
+  border-bottom: none; /* quitar línea del último */
+}
+
+.toc-list li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.toc-list li a:hover {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+/* ================= OFFSET PARA MENÚ FIJO ================= */
+h2[id] {
+  scroll-margin-top: 100px;
+}
+</style>
+
+<!-- ================= HTML ================= -->
+<div class="toc-container">
+  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Negocios Ocultos que los Millonarios Usan</a></li>
+    <li><a href="#titulo2">2. Franquicias de bajo perfil</a></li>
+    <li><a href="#titulo3">3. Importaciones de nicho</a></li>
+    <li><a href="#titulo4">4. Servicios profesionales especializados</a></li>
+    <li><a href="#titulo5">5. Inversiones estratégicas en bienes raíces poco conocidos</a></li>
+    <li><a href="#titulo6">6. Negocios digitales de nicho</a></li>
+    <li><a href="#titulo7">7. Estrategias de reinversión y multiplicación</a></li>
+    <li><a href="#titulo8">8. Micro logística para comercios locales</a></li>
+    <li><a href="#titulo9">9. Alquiler de productos que la gente no compra, solo usa</a></li>
+    <li><a href="#titulo10">10. Venta de bases de datos segmentadas (legales y opt-in)</a></li>
+    <li><a href="#titulo11">11. Restauración y reventa de muebles vintage</a></li>
+    <li><a href="#titulo12">12. Micro centros de contenido para creadores</a></li>
+  </ul>
 </div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+const tocContainer = document.querySelector(".toc-container");
+const toggleBtn = tocContainer.querySelector(".toc-toggle");
+
+let mouseInsideTOC = false;
+
+// Abrir / cerrar SOLO con el botón
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  tocContainer.classList.toggle("open");
+});
+
+// Detectar si el mouse está dentro del TOC
+tocContainer.addEventListener("mouseenter", () => {
+  mouseInsideTOC = true;
+});
+
+tocContainer.addEventListener("mouseleave", () => {
+  mouseInsideTOC = false;
+});
+
+// Cerrar al hacer click fuera
+document.addEventListener("click", (e) => {
+  if (!tocContainer.contains(e.target)) {
+    tocContainer.classList.remove("open");
+  }
+});
+
+// Cerrar si el TOC sale del viewport
+function isOutOfViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.bottom < 0; // si la parte inferior ya no está visible
+}
+
+window.addEventListener("scroll", () => {
+  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
+    tocContainer.classList.remove("open");
+  }
+});
+</script>
+
+
+
+<div class="relative my-10">
+  <!-- Etiqueta estilo botón encima de la línea -->
+  <span class="absolute -top-4 left-0 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+    Contenido
+  </span>
+  <!-- Línea divisoria -->
+  <div style="width: 100%; height: 2px; background-color: #000;"></div>
+</div>
+
 
 
 
 
 <!-- INTRODUCCIÓN -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-32">Negocios Ocultos que los Millonarios Usan</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
-<img src="../../../assets/png/negocios-millonarios-ocultos.png" alt="" 
+   <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Negocios Ocultos que los Millonarios Usan</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.jpg" alt="" 
        class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
 
     <p>
@@ -254,8 +425,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Franquicias de bajo perfil</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Franquicias de bajo perfil</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     No todas las franquicias reconocidas a nivel nacional o internacional generan altos retornos; muchas veces, los millonarios invierten en marcas locales con una clientela estable y productos de alta rotación. La clave es detectar negocios con demanda sostenida y competencia limitada, donde se pueda innovar o mejorar el servicio sin grandes riesgos.
@@ -269,8 +440,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Importaciones de nicho</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Importaciones de nicho</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Identificar productos que no se encuentran fácilmente en el país y atender a clientes selectos es una estrategia común entre millonarios. Esto permite mantener control sobre la cantidad importada y asegurar que la oferta se mantenga exclusiva, aumentando tanto la percepción de valor como el margen de ganancia.
@@ -282,8 +453,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Servicios profesionales especializados</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Servicios profesionales especializados</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     La oferta de servicios únicos y especializados es otra vía poco visible pero altamente rentable. Los millonarios se enfocan en segmentos donde la competencia es limitada y los clientes valoran experiencia, conocimiento y exclusividad por encima del precio.
@@ -298,8 +469,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Inversiones estratégicas en bienes raíces poco conocidos</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Inversiones estratégicas en bienes raíces poco conocidos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     No todos los bienes raíces con alta rentabilidad se encuentran en zonas premium o con publicidad masiva. Algunos millonarios buscan terrenos o propiedades en municipios emergentes, anticipando el desarrollo de infraestructura o la llegada de proyectos comerciales y educativos.
@@ -313,8 +484,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Negocios digitales de nicho</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Negocios digitales de nicho</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     El entorno digital permite detectar micro nichos que la mayoría de personas ignora. Los millonarios identifican necesidades específicas y crean soluciones digitales que generan ingresos recurrentes con inversión mínima. La ventaja es que estos negocios pueden escalar rápidamente y mantener bajos costos operativos.
@@ -326,8 +497,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Estrategias de reinversión y multiplicación</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Estrategias de reinversión y multiplicación</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Una característica común en estos negocios es que los ingresos no se consumen de inmediato. Los millonarios reinvierten constantemente para potenciar crecimiento, expandir mercado y proteger capital. La reinversión estratégica permite multiplicar resultados y reducir riesgos, manteniendo un flujo sólido y predecible.
@@ -342,8 +513,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Micro logística para comercios locales</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Micro logística para comercios locales</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Muchos creen que la logística solo es cosa de grandes empresas, pero la realidad en Colombia es que miles de comercios pequeños necesitan entregas rápidas y no pueden pagar plataformas como Rappi o Logysto. Los millonarios detectan este hueco y montan micro-operadores logísticos para zonas específicas.
@@ -359,8 +530,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Alquiler de productos que la gente no compra, solo usa</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Alquiler de productos que la gente no compra, solo usa</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Los millonarios entienden que no todos los clientes quieren ser dueños; muchos solo buscan resolver una necesidad puntual. Por eso crean micro-negocios de alquiler de objetos caros o difíciles de encontrar.
@@ -377,8 +548,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Venta de bases de datos segmentadas (legales y opt-in)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Venta de bases de datos segmentadas (legales y opt-in)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Este es un negocio silencioso que muchos millonarios utilizan: construir bases de datos totalmente legales y vender acceso mediante suscripción. No se venden datos crudos, sino el acceso a enviar campañas segmentadas a audiencias específicas.
@@ -392,8 +563,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Restauración y reventa de muebles vintage</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo11" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Restauración y reventa de muebles vintage</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Mientras la mayoría compra muebles nuevos, los millonarios saben que restaurar piezas antiguas tiene márgenes altísimos. Buscan sillas, mesas o escritorios en mal estado, los restauran y los venden como muebles premium.
@@ -409,8 +580,8 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-green-700 mb-4 mt-20">Micro centros de contenido para creadores</h2>
-<div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+   <h2 id="titulo12" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Micro centros de contenido para creadores</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
     Cada día más personas crean videos, pero no todos tienen espacio o equipo. Los millonarios discretos están montando mini estudios de grabación: un cuarto pequeño con iluminación profesional, micrófonos y un fondo limpio.
@@ -425,7 +596,21 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 </div>
 
 
-</div>
+ <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../../assets/png/negocios-que-hacen-ricos-a-millonarios.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
+
+
+<p class="text-left text-xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Código Millonario Recomienda</p>
+<div style="width: 100%; height: 2px; background-color: #000; margin-bottom: 40px;"></div>
+
+
+
     </main>
 
 
