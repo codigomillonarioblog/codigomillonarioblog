@@ -1,0 +1,1481 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo J.K. Rowling construyó una fortuna mundial a partir de un manuscrito rechazado - Código Millonario</title>
+    <meta name="description" content="De vivir de ayudas estatales a crear una de las mayores fortunas editoriales del mundo. La historia real de cómo J.K. Rowling convirtió Harry Potter en un imperio global.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+      <!-- Favicon -->
+    <link rel="icon" href="../../assets/img/favicon.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+</head>
+
+<body class="bg-stone-50 text-stone-900">
+
+    
+<!-- MENU FLOTANTE UNIVERSAL -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<header class="fixed inset-x-0 top-6 z-50 flex justify-center pointer-events-none">
+
+  <!-- MENÚ DE ESCRITORIO (PC) -->
+  <nav class="hidden md:flex bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] px-8 py-4 w-full max-w-5xl flex items-center justify-between pointer-events-auto transition-all duration-300" style="font-family: 'Poppins', sans-serif;">
+    <div class="flex items-center space-x-3">
+      <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
+      <span class="text-xl font-bold text-stone-900">Código Millonario</span>
+    </div>
+
+    <div class="flex-1 flex justify-center items-center space-x-6 text-sm">
+      <a href="../../index.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Inicio
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="../../educacionfinanciera.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Educación Financiera
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="../../herramientas.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Herramientas
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="../../opiniones.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Opiniones
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="../../contacto.html" class="ml-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-200">
+        Contacto
+      </a>
+    </div>
+  </nav>
+
+  <!-- MENÚ MÓVIL -->
+  <nav class="md:hidden bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] w-full flex items-center justify-between pointer-events-auto transition-all duration-300" style="font-family: 'Poppins', sans-serif; max-width: 95vw; padding: 0.5rem 1rem;">
+    <div class="flex items-center space-x-2">
+      <i data-lucide="wallet" class="w-5 h-5 text-green-600"></i>
+      <span class="text-base font-bold text-stone-900">Código Millonario</span>
+    </div>
+
+    <!-- HAMBURGUESA -->
+    <button id="menu-toggle" class="relative w-6 h-6 flex flex-col justify-center items-center">
+      <span class="line top-line"></span>
+      <span class="line mid-line"></span>
+      <span class="line bottom-line"></span>
+    </button>
+  </nav>
+
+  <!-- MENU MOVIL DESPLEGABLE -->
+  <div id="mobileMenu" class="fixed top-20 left-1/2 -translate-x-1/2 w-11/12 max-w-xs bg-white rounded-2xl shadow-lg p-4 flex flex-col space-y-2 scale-0 opacity-0 pointer-events-none transition-all duration-300 z-50">
+    <a href="../../index.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Inicio</a>
+    <a href="../../educacionfinanciera.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Educación Financiera</a>
+    <a href="../../herramientas.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Herramientas</a>
+    <a href="../../opiniones.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Opiniones</a>
+    <a href="../../contacto.html" class="mobile-item px-4 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors">Contacto</a>
+  </div>
+
+</header>
+
+<style>
+  /* --- X PERFECTA --- */
+  #menu-toggle .line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #1c1c1c;
+    border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .top-line { transform: translateY(-6px); }
+  .mid-line { opacity: 1; }
+  .bottom-line { transform: translateY(6px); }
+  #menu-toggle.open .top-line { transform: translateY(0) rotate(45deg); }
+  #menu-toggle.open .mid-line { opacity: 0; }
+  #menu-toggle.open .bottom-line { transform: translateY(0) rotate(-45deg); }
+
+  /* MOBILE MENU ANIMATIONS */
+  #mobileMenu { transform-origin: top center; }
+  #mobileMenu.scale-100 { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
+  #mobileMenu.scale-0 { transform: translateX(-50%) scale(0); opacity: 0; pointer-events: none; }
+
+
+  body {
+  background-color: #f5f5f5 !important; /* gris muy claro */
+}
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if(menuToggle && mobileMenu){
+      function closeMobileMenu() {
+        mobileMenu.classList.remove('scale-100','opacity-100','pointer-events-auto');
+        mobileMenu.classList.add('scale-0','opacity-0','pointer-events-none');
+        menuToggle.classList.remove('open');
+      }
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('scale-100');
+        if(isOpen) closeMobileMenu();
+        else {
+          mobileMenu.classList.remove('scale-0','opacity-0','pointer-events-none');
+          mobileMenu.classList.add('scale-100','opacity-100','pointer-events-auto');
+          menuToggle.classList.add('open');
+        }
+      });
+
+      document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      window.addEventListener('resize', () => { if(window.innerWidth >= 768) closeMobileMenu(); });
+      document.addEventListener('click', (e) => {
+        if(window.innerWidth < 768){
+          if(!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) closeMobileMenu();
+        }
+      });
+      document.addEventListener('scroll', () => {
+        if(window.innerWidth < 768 && mobileMenu.classList.contains('scale-100')) closeMobileMenu();
+      }, { passive: true });
+    }
+
+
+// MARCAR LINK ACTIVO FORZADO
+const forcedPage = "educacionfinanciera.html"; // Página que siempre quieres marcar
+
+function getFileName(href) {
+  return href.split("/").pop(); // Obtiene solo el nombre del archivo
+}
+
+document.querySelectorAll(".nav-item").forEach(link => {
+  const href = link.getAttribute("href");
+  if(getFileName(href) === forcedPage){
+    link.style.color = "#1c1c1c";
+    link.style.fontWeight = "700";
+  }
+});
+
+document.querySelectorAll(".mobile-item").forEach(link => {
+  const href = link.getAttribute("href");
+  if(getFileName(href) === forcedPage){
+    link.style.background = "#f0f0f0";
+    link.style.fontWeight = "700";
+  }
+});
+
+
+
+    document.querySelectorAll(".mobile-item").forEach(link => {
+      const href = link.getAttribute("href")?.replace("./", "");
+      if(href === currentPage){
+        link.style.background = "#f0f0f0";
+        link.style.fontWeight = "700";
+      }
+    });
+  });
+</script>
+
+
+
+
+
+<!-- HERO -->
+<!-- Contenedor del título -->
+ <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
+    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
+      <span class="block">Cómo J.K. Rowling   </span>
+      <span class="block"> Construyó una Fortuna a Partir de </span>
+      <span class="block mt-1">un Manuscrito Rechazado</span>
+    </h1>
+  </div>
+
+<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+  <!-- Fecha -->
+  <span class="text-center text-xs">
+    08/01/2026
+  </span>
+  <!-- Línea separadora -->
+  <span class="h-4 w-px bg-stone-400"></span>
+  <!-- Tiempo de lectura u otro dato -->
+  <span class="text-center text-xs">
+    ⏱ 5 min lectura
+  </span>
+</div>
+
+
+<div style="border-left: 2px solid #9ca3af; border-right: 2px solid #9ca3af; 
+            padding: 0 8px; margin: 10px auto; max-width: 90%; width: fit-content; text-align: center;">
+  <p style="font-size: 0.65rem; font-style: italic; transform: skewX(-6deg); color: #6b7280; margin: 0;">
+    Ilustración generada digitalmente para representar a la autora.
+  </p>
+</div>
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../assets/png/jk-rowling-historia-fortuna.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
+
+
+
+                <!-- INTRODUCCIÓN GENERAL -->
+                    <main class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+
+
+
+<!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
+<style>
+/* ================= CONTENEDOR ================= */
+.toc-container {
+  border: 1px solid #6b7280;
+  border-radius: 0;
+  max-width: 650px;
+  width: 100%;
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* ================= BOTÓN ================= */
+.toc-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 14px 20px;
+  background-color: #f9fafb;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toc-toggle:hover,
+.toc-toggle:focus {
+  background-color: #f9fafb;
+  outline: none;
+}
+
+/* ================= FLECHA ================= */
+.toc-toggle::after {
+  content: "▼";
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Flecha cuando está abierta */
+.toc-container.open .toc-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* ================= LISTA ================= */
+.toc-list {
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  border-top: none;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
+  display: block;
+}
+
+/* Lista abierta */
+.toc-container.open .toc-list {
+  max-height: 800px;
+  opacity: 1;
+  padding: 12px 20px;
+  border-top: 1px solid #6b7280;
+}
+
+.toc-list li {
+  margin: 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
+}
+
+.toc-list li:last-child {
+  border-bottom: none; /* quitar línea del último */
+}
+
+.toc-list li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.toc-list li a:hover {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+/* ================= OFFSET PARA MENÚ FIJO ================= */
+h2[id] {
+  scroll-margin-top: 100px;
+}
+</style>
+
+<!-- ================= HTML ================= -->
+<div class="toc-container">
+  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Cómo J.K. Rowling construyó su fortuna</a></li>
+    <li><a href="#titulo2">2. Antes del dinero: una situación límite</a></li>
+    <li><a href="#titulo3">3. El manuscrito que nadie quería publicar</a></li>
+    <li><a href="#titulo4">4. Los rechazos no fueron pocos</a></li>
+    <li><a href="#titulo5">5. El verdadero valor no era el libro, era el universo</a></li>
+    <li><a href="#titulo6">6. La decisión que creó la fortuna (no fue escribir)</a></li>
+    <li><a href="#titulo7">7. De libro a imperio: el efecto bola de nieve</a></li>
+    <li><a href="#titulo8">8. Cuánto dinero generó Harry Potter (sin exagerar)</a></li>
+    <li><a href="#titulo9">9. Qué SÍ es replicable de esta historia</a></li>
+    <li><a href="#titulo10">10. Qué NO es replicable (y no te deben vender)</a></li>
+
+  </ul>
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+const tocContainer = document.querySelector(".toc-container");
+const toggleBtn = tocContainer.querySelector(".toc-toggle");
+
+let mouseInsideTOC = false;
+
+// Abrir / cerrar SOLO con el botón
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  tocContainer.classList.toggle("open");
+});
+
+// Detectar si el mouse está dentro del TOC
+tocContainer.addEventListener("mouseenter", () => {
+  mouseInsideTOC = true;
+});
+
+tocContainer.addEventListener("mouseleave", () => {
+  mouseInsideTOC = false;
+});
+
+// Cerrar al hacer click fuera
+document.addEventListener("click", (e) => {
+  if (!tocContainer.contains(e.target)) {
+    tocContainer.classList.remove("open");
+  }
+});
+
+// Cerrar si el TOC sale del viewport
+function isOutOfViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.bottom < 0; // si la parte inferior ya no está visible
+}
+
+window.addEventListener("scroll", () => {
+  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
+    tocContainer.classList.remove("open");
+  }
+});
+</script>
+
+
+
+
+<div class="relative my-10">
+  <!-- Etiqueta estilo botón encima de la línea -->
+  <span class="absolute -top-4 left-0 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+    Contenido
+  </span>
+  <!-- Línea divisoria -->
+  <div style="width: 100%; height: 2px; background-color: #000;"></div>
+</div>
+
+
+  <blockquote class="border-l-4 border-stone-300 pl-4 italic text-stone-600">
+<p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+Esto es un análisis y enfoque editorial de <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Código Millonario.</strong>
+</p>
+  </blockquote>
+
+
+<!-- INTRODUCCIÓN -->
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">Cómo J.K. Rowling construyó su fortuna</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<img src="../../assets/img/multiplicar-tu-dinero-desde-cero.jpg" alt="" 
+class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+
+<p>
+<strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Joanne Kathleen Rowling</strong> nació en <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">1965</strong> en Yate, Inglaterra, en una familia de clase media-baja. Su padre, <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Peter Rowling,</strong> trabajaba como ingeniero aeronáutico, y su madre, <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Anne Rowling,</strong> era ama de casa y luego enfermera. No crecieron con lujos, pero tampoco en pobreza extrema; vivían modestamente, y desde temprano, Joanne entendió que nada se daba por sentado.
+</p>
+
+<p>
+Desde pequeña, mostró una imaginación desbordante: inventaba historias y mundos completos mientras crecía entre libros y pequeñas aventuras cotidianas. Su curiosidad y creatividad la acompañaron incluso en los momentos más difíciles.
+</p>
+
+<p>
+Ya adolescente, enfrentó pérdidas personales y decisiones complicadas, pero nunca dejó de escribir. Más tarde, como madre soltera en Edimburgo, plasmó las primeras páginas de lo que sería <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">*Harry Potter*</strong> en cafeterías y donde pudiera y la dejaran escribir; llegó incluso a ser expulsada de un empleo, porque también escribía en momentos en que debía cumplir con su trabajo, mientras su pequeña hija dormía a su lado. Cada línea escrita era un paso silencioso hacia un futuro que nadie podía predecir, un futuro que transformaría su vida y el mundo literario.
+</p>
+
+<p>
+La historia de <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">J.K. Rowling</strong> suele contarse como un cuento inspirador: una madre soltera, pobre, escribiendo en cafeterías, que de repente se vuelve millonaria. Pero esa versión omite lo más importante: cómo se construyó realmente la riqueza, lo que tuvo que soportar y la cantidad de años para que eso fuera posible.
+</p>
+
+<p>
+<strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Rowling</strong> no se hizo rica solo por escribir bien. Se hizo rica porque controló su obra, resistió rechazos estratégicamente y convirtió una historia en un activo escalable.
+</p>
+</div>
+
+
+
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Antes del dinero: una situación límite</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+  <p>
+  Antes de que <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Harry Potter</strong> existiera, J.K. Rowling no estaba pensando en fama, contratos millonarios ni éxito editorial. Su realidad era mucho más cruda. Atravesaba uno de los momentos más difíciles de su vida, con una presión constante por sobrevivir día a día.
+  </p>
+
+  <p>
+  En ese periodo, Rowling era madre soltera, no tenía un empleo estable y dependía de ayudas del Estado para cubrir sus necesidades básicas. Vivía en un pequeño apartamento en Edimburgo, con recursos limitados y un futuro incierto.
+  </p>
+
+  <p>
+  Escribía en cafeterías no por romanticismo, sino por necesidad. Permanecer allí le permitía mantenerse en un espacio cálido mientras intentaba dar forma a una historia que aún no sabía si alguien leería alguna vez.
+  </p>
+
+<p>
+No tenía capital, no tenía contactos influyentes ni respaldo editorial. Solo tenía tiempo, una situación límite y una historia que insistía en ser escrita. Como la mayoría, se sentía atrapada y veía en la escritura una posibilidad de mejorar su vida, aunque aún no supiera que el impacto sería exponencial.
+</p>
+
+<p>
+<strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">J.K. Rowling</strong> tardó cerca de siete años en llevar <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Harry Potter</strong> desde una simple idea hasta su publicación. Durante ese periodo, dedicó aproximadamente entre cinco y seis años a escribir y desarrollar la historia. Aunque el tiempo exacto puede variar según las fuentes y las interpretaciones disponibles, este periodo sirve como un estimado general del largo proceso que atravesó antes de ver su libro publicado en <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">1997.</strong>
+</p>
+</div>
+
+
+
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">El manuscrito que nadie quería publicar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+  <p>
+  A mediados de los años noventa, <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">J.K. Rowling</strong> terminó el manuscrito de <em>Harry Potter y la piedra filosofal</em>. Para entonces, la historia ya estaba completa, pero el verdadero desafío apenas comenzaba.
+  </p>
+
+  <p>
+  El manuscrito fue enviado a distintas editoriales y agentes literarios, y las respuestas fueron repetidamente negativas. Algunas cartas de rechazo llegaron sin mayores explicaciones; otras consideraban que la historia era demasiado larga para un público infantil o poco atractiva desde el punto de vista comercial.
+  </p>
+
+  <p>
+  Durante ese periodo, Rowling no tenía garantías de que su libro llegaría alguna vez a publicarse. Aun así, continuó enviando el manuscrito, revisándolo y ajustándolo, mientras enfrentaba la incertidumbre económica y la falta de reconocimiento.
+  </p>
+
+  <p>
+  No fue un <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">rechazo</strong> aislado, sino una sucesión de negativas que pusieron a prueba su constancia. El manuscrito existía, la historia estaba escrita, pero todavía nadie estaba dispuesto a apostar por ella.
+  </p>
+
+</div>
+
+
+
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Los rechazos no fueron pocos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+  <p>
+  El manuscrito de <em>Harry Potter y la piedra filosofal</em> no fue rechazado una sola vez. Antes de encontrar una editorial dispuesta a publicarlo, pasó por numerosas negativas. Diversas fuentes coinciden en que más de una decena de editoriales descartaron el proyecto.
+  </p>
+
+  <p>
+  Los motivos no tenían que ver con la calidad literaria desde un punto de vista emocional, sino con criterios puramente comerciales. Para algunas editoriales, el libro era demasiado largo para el público infantil. Para otras, simplemente no parecía tener un mercado claro ni un potencial de ventas atractivo.
+  </p>
+
+<p>
+<strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">No era un “no” personal, era un “no” de negocio.</strong> Durante años, el manuscrito de <em>Harry Potter y la piedra filosofal</em> fue rechazado no por falta de talento, sino porque no encajaba en los criterios comerciales de su tiempo. Era una historia larga, difícil de clasificar y escrita por una autora desconocida, lo que la convertía en una apuesta que pocos estaban dispuestos a asumir.
+</p>
+
+<p>
+Aun así, Rowling insistió. Durante aproximadamente uno o dos años enfrentó un ciclo constante de envío, rechazo y espera, sin garantías de éxito ni señales claras de que el esfuerzo valdría la pena. Cuando finalmente una pequeña editorial aceptó el libro, lo hizo sin grandes expectativas y con un primer tiraje muy limitado.
+</p>
+
+<p>
+<strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Esta etapa resume una lección clave:</strong> el valor real de una idea no siempre es reconocido de inmediato. A veces, el tiempo, la paciencia y la perseverancia pesan más que la validación del mercado en el corto plazo. Quizás fue su época la que no permitió el éxito inmediato, quizás faltaban más procesos, o tal vez el manuscrito aún no había llegado a las manos correctas. Sin embargo, ella se mantuvo firme porque confiaba en los años dedicados, en su proceso, y sabía que no estaba simplemente jugando a escribir.
+</p>
+</div>
+
+
+
+
+
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">El verdadero valor no era el libro, era el universo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+  <p>
+  Aquí aparece un punto que casi nadie analiza cuando se habla del éxito de <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Harry Potter.</strong> El valor real no estaba únicamente en un libro bien escrito, sino en algo mucho más profundo: el universo que J.K. Rowling había creado alrededor de la historia.
+  </p>
+
+  <p>
+  <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Harry Potter</strong> no era solo un relato con inicio y final. Contaba con personajes reutilizables, relaciones que podían evolucionar y un mundo con reglas propias, historia, conflictos y posibilidades de expansión. Era una base narrativa capaz de crecer, transformarse y sostener múltiples historias sin agotarse.
+  </p>
+
+  <p>
+  En ese momento, Rowling no estaba pensando en franquicias, productos derivados ni imperios multimedia. Sin embargo, sin proponérselo conscientemente, había construido un activo escalable: una idea que podía extenderse en secuelas, adaptaciones y nuevas formas de contar la misma historia.
+  </p>
+
+  <p>
+  Esa fue la diferencia clave frente a miles de buenos libros que nacen, se leen una vez y desaparecen. No era solo la calidad del texto, sino la profundidad del universo lo que permitía que la historia siguiera viva más allá de una sola edición.
+  </p>
+</div>
+
+
+
+
+  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">La decisión que creó la fortuna (no fue escribir)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+   <p>
+  El verdadero dinero no llegó con el primer libro. Ni siquiera con las ventas iniciales. El punto de inflexión estuvo en una decisión menos visible, pero mucho más determinante: el control de los derechos.
+  </p>
+
+  <p>
+  Desde el inicio, <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">J.K. Rowling</strong> conservó un grado inusual de poder sobre su obra. No se limitó a ceder el manuscrito, sino que participó activamente en las decisiones relacionadas con los derechos editoriales y, más adelante, con las adaptaciones cinematográficas.
+  </p>
+
+  <p>
+  A diferencia de muchos autores que, por necesidad inmediata, venden sus derechos a cambio de ingresos rápidos, Rowling optó por pensar en el largo plazo. Mantuvo voz creativa, supervisó acuerdos clave y protegió el universo que había creado.
+  </p>
+
+  <p>
+  Esa elección menos visible que escribir un buen libro fue la que transformó una historia exitosa en <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">una fortuna sostenida en el tiempo.</strong>
+  </p>
+  </div>
+
+
+
+
+
+ <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"> De libro a imperio: el efecto bola de nieve</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+ <p>
+  El crecimiento económico real comenzó cuando <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Harry Potter</strong> dejó de ser únicamente un libro. A partir de ese momento, la historia empezó a expandirse en múltiples direcciones, y cada nueva forma de explotación amplificó el valor de las anteriores.
+  </p>
+
+  <p>
+  Las ventas de libros crecieron de manera masiva, impulsadas por nuevos lectores y por el interés constante que generaba la saga. Más adelante, las adaptaciones cinematográficas llevaron la historia a una audiencia global, generando ingresos <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">multimillonarios</strong> y reforzando el valor de la marca.
+  </p>
+
+  <p>
+  Con el tiempo, el universo de <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Harry Potter</strong> se extendió al merchandising, las licencias comerciales y, finalmente, a los parques temáticos. Cada uno de estos elementos no funcionaba de forma aislada, sino como parte de un sistema donde todo se retroalimentaba.
+  </p>
+
+  <p>
+  Esto no fue solo cuestión de suerte. Fue el resultado de licenciar un activo intelectual bien protegido y correctamente gestionado. Cada nueva versión fortalecía a las anteriores, creando un efecto bola de nieve que transformó una historia en un imperio sostenido en el tiempo.
+  </p>
+    </div>
+
+
+
+
+
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Cuánto dinero generó Harry Potter (sin exagerar)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+  <p>
+  Con el paso de los años, <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">J.K. Rowling</strong> se convirtió en una de las autoras más ricas del mundo. Aunque las cifras exactas pueden variar según las fuentes y los periodos analizados, existe un consenso general sobre la magnitud económica del fenómeno <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Harry Potter.</strong>
+  </p>
+
+  <p>
+  De forma estimada, el universo de Harry Potter ha generado decenas de miles de millones de dólares a nivel global, sumando ventas de libros, adaptaciones cinematográficas, licencias comerciales, merchandising y parques temáticos. No todo ese dinero fue para Rowling, pero su participación en los derechos le permitió beneficiarse de múltiples flujos de ingresos.
+  </p>
+
+  <p>
+  En términos personales, distintas estimaciones sitúan <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">la fortuna de J.K. Rowling en cifras cercanas o superiores a los mil millones de dólares</strong> a lo largo del tiempo, resultado de regalías por libros, contratos cinematográficos, derechos de marca y acuerdos de licencias. Estos números deben entenderse como aproximaciones, no como valores exactos.
+  </p>
+
+  <p>
+  Lo importante no es la cifra puntual, sino el proceso. No fue un “pelotazo” repentino, sino una acumulación progresiva de ingresos durante años, impulsada por decisiones estratégicas, control de derechos y la expansión constante de un activo intelectual bien gestionado.
+  </p>
+
+</div>
+
+
+
+
+<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Qué SÍ es replicable de esta historia</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+  <p>
+  No todos pueden crear un fenómeno global como <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Harry Potter.</strong> La obra, el momento histórico y el alcance cultural no se pueden copiar. Pero las decisiones que transformaron una idea en riqueza sí se repiten, una y otra vez, en distintas industrias y contextos.
+  </p>
+
+  <p>
+  La diferencia no estuvo únicamente en el talento creativo, sino en cómo se gestionó ese talento a lo largo del tiempo. Rowling no solo escribió una historia: protegió su obra, tomó decisiones estratégicas y pensó en el largo plazo, incluso cuando las condiciones no eran ideales.
+  </p>
+
+  <p>
+  Algunas lecciones que sí son replicables:
+  </p>
+
+  <ul class="list-disc pl-6 space-y-2">
+    <li><strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Proteger tu obra:</strong> entender que una idea tiene valor y que ese valor se pierde si no se cuida desde el inicio.</li>
+    <li><strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">No regalar derechos por urgencia:</strong> el dinero rápido suele salir caro cuando se sacrifica el control futuro.</li>
+    <li><strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Pensar en escalabilidad:</strong> crear algo que pueda crecer, adaptarse y generar nuevas versiones con el tiempo.</li>
+    <li><strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Convertir una idea en un activo:</strong> dejar de ver el proyecto como un esfuerzo puntual y empezar a tratarlo como una fuente de valor a largo plazo.</li>
+  </ul>
+
+  <p>
+  Estas decisiones no garantizan un resultado millonario, pero aumentan significativamente las probabilidades de que una buena idea no muera en el corto plazo. Ahí está la verdadera lección replicable: pensar como creador, pero actuar como estratega.
+  </p>
+</div>
+
+
+
+
+
+<h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Qué NO es replicable (y no te deben vender)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+  <p>
+  No todo en la historia de Harry Potter puede copiarse, y venderla como una fórmula exacta es una trampa común. Existen factores que estuvieron completamente fuera del control de la autora y que no dependen del esfuerzo individual.
+  </p>
+
+  <p>
+  <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Factores no copiables:</strong>
+  </p>
+
+  <ul class="list-disc pl-6 space-y-2">
+    <li>El <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">timing cultural</strong>: el momento histórico en el que una obra conecta con una generación.</li>
+    <li>El <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">fenómeno global</strong>: la reacción masiva del público no se puede forzar ni planificar.</li>
+    <li>El <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">alcance mediático</strong>: el efecto multiplicador de prensa, marketing y distribución internacional.</li>
+    <li>El <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">nivel de exposición</strong>: una visibilidad que pocos proyectos alcanzan, incluso siendo buenos.</li>
+  </ul>
+
+  <p>
+  Creer que todo fue únicamente esfuerzo personal es una mentira peligrosa. No porque el esfuerzo no importe, sino porque ignora el papel del contexto, la oportunidad y los factores externos que no se pueden controlar.
+  </p>
+
+  <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+    Para resumir: la riqueza no nació del talento, nació del control
+  </h3>
+
+  <p>
+  J.K. Rowling no se hizo millonaria por escribir en cafeterías ni por sufrir más que otros. Se hizo millonaria porque, cuando su idea empezó a generar valor, <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">no perdió el control de lo que había creado</strong>.
+  </p>
+
+  <p>
+  Su historia no demuestra que cualquiera pueda hacerse rico. Demuestra algo más realista y más incómodo:
+  </p>
+
+  <blockquote class="border-l-4 border-stone-300 pl-4 italic text-stone-600">
+    La riqueza se construye cuando una idea se convierte en un activo que sigues poseyendo. “Rowling no se hizo rica escribiendo.
+Se hizo rica pensando como dueña.”
+  </blockquote>
+
+  <p>
+  Y eso, incluso vendiendo <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">“un botón”,</strong> sigue siendo cierto.
+  </p>
+</div>
+
+
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../assets/png/jk-rowling-historia-fortuna.jpg" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
+
+
+<p class="text-left text-xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Código Millonario Recomienda</p>
+<div style="width: 100%; height: 2px; background-color: #000; margin-bottom: 40px;"></div>
+
+
+    </main>
+
+   
+
+
+    <!-- ================= INTERLINK FUNCIONAL (SELECT + BUSCADOR) ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center font-semibold text-sm mb-4">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir".
+  </p>
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button">Ir</button>
+    <a id="viewAllBtn" href="../ahorros-para-objetivos/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button">
+      Ver todos
+    </a>
+  </div>
+  <div class="flex justify-end items-center mt-4 text-stone-700 text-sm">
+    Total <span id="totalArticles" class="font-semibold mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= INTERLINK VISUAL PROFESIONAL ================= -->
+<div class="max-w-3xl mx-auto my-12 interlink-wrapper">
+  <p class="interlink-heading text-center font-semibold text-sm mb-4">
+    Artículos relacionados que pueden interesarte
+  </p>
+  <div id="interlinkGrid" style="display:flex; flex-direction:column; gap:10px;"></div>
+</div>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* Tarjeta grande con animación */
+.interlink-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  overflow: hidden;
+}
+.interlink-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.interlink-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.interlink-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+.interlink-img {
+  position: relative;
+  flex-shrink: 0;
+  width: 90px;
+  height: 55px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.interlink-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+.interlink-card:hover .interlink-img img {
+  transform: scale(1.05);
+}
+/* Badge azul */
+.interlink-badge {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  background: #007BFF;
+  color: #fff;
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+.interlink-text {
+  flex: 1;
+}
+.interlink-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.25;
+  color: #111;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #666;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* BOTÓN FLECHA “PRO” INTEGRADO */
+.arrow-btn {
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  background: #1E5BFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-family: inherit;
+  transition: transform 0.25s ease;
+}
+.interlink-card:hover .arrow-btn {
+  transform: scale(1.15);
+}
+
+/* Modernización del cuadro principal */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.interlink-container p {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: #1f2937;
+}
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: 500;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+.select-pages:hover, .goto-page:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* Botones Ir y Ver todos */
+.interlink-button {
+  font-family: 'Lora', serif;
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.interlink-button:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+</style>
+
+<!-- ================= SCRIPT ÚNICO ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = a.title;
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <section class="interlink-card">
+        <a href="${a.url}">
+          <div class="interlink-content">
+            <div class="interlink-img">
+              <img src="${a.image}" alt="">
+              <div class="interlink-badge">#Relacionado</div>
+            </div>
+            <div class="interlink-text">
+              <div class="interlink-title">${a.title}</div>
+              <div class="meta">
+                <span>⏱ 5 min de lectura</span>
+                <span><i>💬</i> 0</span>
+                <div class="arrow-btn">➜</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../ahorros-para-objetivos/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+  temp.querySelectorAll("time, .date, .meta, span").forEach(el=>{
+    if(el.textContent.includes("📅") || el.textContent.includes("Sin Comentarios") || /\d{2}\/\d{2}\/\d{4}/.test(el.textContent)){
+      el.remove();
+    }
+  });
+  const links = Array.from(temp.querySelectorAll(".article a"));
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+
+
+
+
+
+
+    <!-- BOTÓN FLOTANTE DE COMPARTIR -->
+<div class="fixed bottom-12 right-6 z-50">
+
+    <!-- Botones desplegables -->
+    <div id="shareButtons" class="flex flex-col items-center gap-3 mb-4 opacity-0 pointer-events-none transition-all duration-300">
+        
+        <!-- Facebook -->
+        <a id="facebookShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a id="twitterShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-900 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2zm-2.377 17.5h1.64L8.29 4.39H6.57l9.297 15.11z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a id="linkedinShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a id="whatsappShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
+            </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a id="tiktokShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-800 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 48 48" fill="currentColor">
+                <path d="M41.5 14.1c-3.3-.1-6.5-1.7-8.6-4.4-1.1-1.3-1.8-3-2.2-4.7h-.1v-.4c-.1-.6-.1-1.1-.1-1.7H24v30.2c0 2-.8 3.9-2.2 5.3-1.4 1.4-3.3 2.2-5.3 2.2-4.1 0-7.5-3.4-7.5-7.5S12.4 25.7 16.5 25.7c1.1 0 2.2.3 3.2.8V18c-1-.1-2-.2-3-.2-8.3 0-15 6.7-15 15s6.7 15 15 15c4 0 7.8-1.6 10.6-4.4 2.8-2.8 4.4-6.6 4.4-10.6V18.2c2.5 1.8 5.5 2.8 8.6 2.9v-7z"/>
+            </svg>
+        </a>
+
+        <!-- Copiar enlace -->
+        <button id="copyLink"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-500 hover:bg-gray-600 text-white shadow-lg transition hover:-translate-y-1"
+            title="Copiar enlace">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.414-1.414m7.778-7.778a4 4 0 015.656 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.536-1.536"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- BOTÓN FLOTANTE PRINCIPAL -->
+    <button id="toggleShare"
+        class="w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center shadow-xl transition-all hover:-translate-y-1">
+        <i data-lucide="share-2" class="w-6 h-6"></i>
+    </button>
+
+</div>
+
+<script>
+    const toggleShare = document.getElementById("toggleShare");
+    const shareButtons = document.getElementById("shareButtons");
+    const copyLink = document.getElementById("copyLink");
+
+    const facebookShare = document.getElementById("facebookShare");
+    const twitterShare = document.getElementById("twitterShare");
+    const linkedinShare = document.getElementById("linkedinShare");
+    const whatsappShare = document.getElementById("whatsappShare");
+    const tiktokShare = document.getElementById("tiktokShare");
+
+    let open = false;
+
+    // Función para abrir/cerrar botones
+    function toggleButtons(show) {
+        open = show;
+        if (open) {
+            shareButtons.classList.remove("opacity-0", "pointer-events-none");
+            shareButtons.classList.add("opacity-100");
+        } else {
+            shareButtons.classList.add("opacity-0", "pointer-events-none");
+            shareButtons.classList.remove("opacity-100");
+        }
+    }
+
+    toggleShare.onclick = (e) => {
+        toggleButtons(!open);
+        e.stopPropagation(); // Evita que el clic se propague
+    };
+
+    // Asignar URLs dinámicamente según la página actual
+    const currentURL = encodeURIComponent(window.location.href);
+    facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+    twitterShare.href = `https://twitter.com/intent/tweet?url=${currentURL}`;
+    linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}`;
+    whatsappShare.href = `https://api.whatsapp.com/send?text=${currentURL}`;
+    tiktokShare.href = `https://www.tiktok.com/share?url=${currentURL}`;
+
+    // Copiar enlace dinámico
+    copyLink.onclick = (e) => {
+        navigator.clipboard.writeText(window.location.href)
+            .then(() => alert("Enlace copiado al portapapeles"))
+            .catch(() => alert("No se pudo copiar el enlace"));
+        e.stopPropagation(); // Evita cerrar menú
+    };
+
+    // Evitar cerrar al hacer clic dentro del contenedor de botones
+    shareButtons.addEventListener("click", (e) => e.stopPropagation());
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener("click", () => {
+        if (open) toggleButtons(false);
+    });
+
+    // Cerrar al hacer scroll
+    window.addEventListener("scroll", () => {
+        if (open) toggleButtons(false);
+    });
+
+    lucide.createIcons();
+</script>
+
+
+
+
+
+
+<!-- ===================== FOOTER PROFESIONAL DEFINITIVO ===================== -->
+<footer class="bg-[#1e1e1e] text-gray-300 pt-12 pb-6 px-6 mt-20" style="font-family: 'Inter', sans-serif;">
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+    <!-- COLUMNA 1: NEWSLETTER -->
+    <div>
+      <h3 class="text-white text-xl font-semibold mb-3 tracking-wide">
+        ¿Quieres recibir noticias cada semana?
+      </h3>
+      <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+        Recibe consejos exclusivos sobre dinero, ahorro e inversión directamente en tu correo.
+      </p>
+
+<form action="https://api.web3forms.com/submit" method="POST"
+      class="flex rounded overflow-hidden border border-gray-600">
+  <!-- 🔐 WEB3FORMS CONFIG -->
+  <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+  <input type="hidden" name="subject" value="Nueva suscripción desde Código Millonario">
+  <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+  <!-- 📧 EMAIL -->
+  <input type="email" name="email" required
+    placeholder="Tu correo electrónico"
+    class="w-full px-3 py-2 bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none text-sm">
+  <!-- 🚀 BOTÓN -->
+  <button type="submit"
+    class="bg-green-500 hover:bg-green-600 px-4 flex items-center justify-center transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white mr-1" fill="none"
+      viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M5 12h14m0 0l-6-6m6 6l-6 6"/>
+    </svg>
+    <span class="text-white text-sm font-medium">Enviar</span>
+  </button>
+</form>
+
+      <p class="text-gray-500 text-xs mt-2 italic">
+        Podrás cancelar tu suscripción en cualquier momento.
+      </p>
+    </div>
+
+    <!-- COLUMNA 2 -->
+    <div>
+      <h3 class="text-white text-lg font-semibold mb-3 tracking-wide">Información Legal</h3>
+      <ul class="space-y-2">
+        <li><span data-modal="aboutModal" class="cursor-pointer hover:text-green-500 transition font-medium">Sobre el Blog</span></li>
+        <li><span data-modal="privacyModal" class="cursor-pointer hover:text-green-500 transition font-medium">Política de Privacidad</span></li>
+        <li><span data-modal="termsModal" class="cursor-pointer hover:text-green-500 transition font-medium">Términos y Condiciones</span></li>
+        <li><span data-modal="avisomodal" class="cursor-pointer hover:text-green-500 transition font-medium"> Aviso legal </span></li>
+      </ul>
+    </div>
+
+    <!-- COLUMNA 3 -->
+    <div>
+      <h3 class="text-white text-lg font-semibold mb-3 tracking-wide">Recursos</h3>
+      <ul class="space-y-2">
+        <li><a href="/educacionfinanciera.html" class="hover:text-green-500 transition font-medium">Artículos</a></li>
+        <li><a href="/herramientas.html" class="hover:text-green-500 transition font-medium">Calculadoras</a></li>
+        <li><a href="/opiniones.html" class="hover:text-green-500 transition font-medium">Historias</a></li>
+        <li><a href="/blog/negocios/index.html" class="hover:text-green-500 transition font-medium">Emprendimiento</a></li>
+        <li><a href="/blog/inversiones/index.html" class="hover:text-green-500 transition font-medium">Guías de inversión</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-white text-lg font-semibold mb-3 tracking-wide">Contacto</h3>
+      <p class="text-sm">Colombia — Online</p>
+      <p class="text-sm">codigomillonarioblog@gmail.com</p>
+     </div>
+
+  </div>
+
+  <!-- BARRA INFERIOR -->
+  <div class="border-t border-gray-700 mt-10 pt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+ <p class="text-gray-500 text-[10px] sm:text-sm font-medium whitespace-nowrap text-center">
+  © 2025 Código Millonario — Todos los derechos reservados.
+</p>
+
+    <!-- ICONOS SOCIALES (NO TOCADOS) -->
+      <!-- ICONOS SOCIALES OFICIALES -->
+    <div class="flex gap-4">
+
+      <!-- Facebook (OFICIAL) -->
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://codigomillonario.blog/educacionfinanciera" target="_blank"
+        class="hover:text-green-500 transition">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.49 0-1.953.925-1.953 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+
+      <!-- WhatsApp (OFICIAL) -->
+      <a href="https://api.whatsapp.com/send?text=Visita%20https://codigomillonario.blog/educacionfinanciera" target="_blank"
+        class="hover:text-green-500 transition">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.52 3.48A11.91 11.91 0 0 0 12.01 0C5.39 0 .02 5.37.02 11.99c0 2.11.55 4.17 1.6 6L0 24l6.18-1.62a11.94 11.94 0 0 0 5.83 1.49h.01c6.62 0 11.99-5.37 11.99-11.99a11.9 11.9 0 0 0-3.49-8.4zM12.01 21.8a9.8 9.8 0 0 1-5-1.38l-.36-.21-3.67.96.98-3.58-.23-.37a9.79 9.79 0 1 1 8.28 4.58zm5.36-7.34c-.29-.14-1.7-.84-1.96-.93-.26-.1-.45-.14-.64.14-.19.29-.73.93-.9 1.12-.16.19-.33.21-.62.07a8.04 8.04 0 0 1-2.37-1.46 8.9 8.9 0 0 1-1.64-2.04c-.17-.29-.02-.45.13-.6.14-.14.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36s-1 1-1 2.43 1.02 2.8 1.17 3c.14.19 2.01 3.07 4.87 4.3.68.29 1.21.46 1.63.59.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z"/>
+        </svg>
+      </a>
+
+      <!-- X / Twitter (OFICIAL) -->
+      <a href="https://twitter.com/intent/tweet?url=https://codigomillonario.blog/educacionfinanciera" target="_blank"
+        class="hover:text-green-500 transition">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26L22.75 21.75h-6.63l-5.19-6.8-5.95 6.8H1.672l7.73-8.84L1.25 2.25h6.797l4.694 6.145L18.244 2.25z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn (OFICIAL) -->
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://codigomillonario.blog/educacionfinanciera" target="_blank"
+        class="hover:text-green-500 transition">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.813 20.452H3.861V9h2.952v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.545C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.273V1.727C24 .774 23.2 0 22.222 0z"/>
+        </svg>
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== ESTILOS MODAL ===================== -->
+<style>
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease-out;
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+</style>
+
+<!-- ===================== MODALES ===================== -->
+
+<div id="aboutModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 flex items-center justify-center p-4" style="font-family: 'Inter', sans-serif;">
+  <div class="bg-white rounded-2xl p-6 max-w-3xl w-full relative modal-enter max-h-[80vh] overflow-auto">
+    <button class="absolute top-4 right-4 font-bold modal-close">✕</button>
+    <h2 class="text-2xl font-bold text-green-700 mb-4">Sobre el Blog</h2>
+    <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+    <p>
+      Bienvenido a Código Millonario, un espacio educativo pensado para quienes desean comprender mejor sus finanzas personales y desarrollar una mentalidad orientada al crecimiento y la mejora continua.
+      Aquí encontrarás contenidos claros y prácticos sobre hábitos financieros, ahorro, inversión y gestión del dinero, presentados desde un enfoque informativo y formativo.
+    </p>
+
+    <p>
+      Cada artículo está diseñado para ayudarte a reflexionar, aprender y tomar decisiones más conscientes, evitando errores comunes y entendiendo mejor cómo funciona el dinero en la vida personal, profesional o empresarial.
+      El contenido se basa en experiencia, aprendizaje continuo y principios generales, con el objetivo de transformar la información en conocimiento útil para tu desarrollo financiero.
+    </p>
+
+     <p>
+      Este contenido está pensado para todas las personas que deseen aprender y mejorar su relación con el dinero, sin distinción de edad, género, nacionalidad, ubicación o experiencia previa.
+     </p>
+    </div>
+
+  </div>
+</div>
+
+<div id="privacyModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 flex items-center justify-center p-4" style="font-family: 'Inter', sans-serif;">
+  <div class="bg-white rounded-2xl p-6 max-w-3xl w-full relative modal-enter max-h-[80vh] overflow-auto">
+    <button class="absolute top-4 right-4 font-bold modal-close">✕</button>
+    <h2 class="text-2xl font-bold text-green-700 mb-4">Política de Privacidad</h2>
+    <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+
+<p>
+  En Código Millonario nos comprometemos a proteger tu privacidad y la seguridad de tu información personal. Cualquier dato que nos proporciones, como tu nombre, correo electrónico o dirección, será utilizado únicamente para los fines establecidos y nunca será compartido con terceros sin tu consentimiento explícito, salvo obligación legal.
+</p>
+
+<strong class="block text-green-700 font-semibold text-lg mt-6 mb-4">Cookies Esenciales</strong>
+
+<p>
+  Recopilamos información únicamente para mejorar la experiencia de los usuarios, procesar transacciones y optimizar nuestros contenidos. Esto incluye estadísticas generales sobre visitas, rendimiento de artículos y el uso de recursos disponibles. No recopilamos información sensible específica sin tu consentimiento, ni tenemos acceso a datos personales detallados de cada lector.
+</p>
+
+<p>
+  Este sitio puede utilizar cookies esenciales para mantener la funcionalidad del newsletter, recordar preferencias básicas o facilitar el procesamiento de compras. No se utiliza la información para publicidad invasiva ni para espiar al usuario. Al continuar navegando, aceptas el uso de cookies esenciales.
+</p>
+
+<strong class="block text-green-700 font-semibold text-lg mt-6 mb-4">Política y seguridad en Compras</strong>
+
+<p>
+  Para procesar compras de productos propios, ya sean físicos, digitales o cualquier otro servicio o recurso ofrecido en este sitio, recopilamos únicamente los datos necesarios, como nombre, correo electrónico y, cuando corresponda, dirección de envío. Esta información se utiliza exclusivamente para completar la transacción y entregar el producto o servicio, y no se comparte con terceros sin tu consentimiento, salvo para el cumplimiento del envío, la entrega digital o por obligación legal.
+</p>
+
+<strong class="block text-green-700 font-semibold text-lg mt-6 mb-4">Política para Afiliados</strong>
+
+<p>
+  Algunos productos o servicios pueden ser promocionados mediante enlaces de afiliados. Esto significa que, si decides realizar una compra a través de estos enlaces, podríamos recibir una comisión, sin costo adicional para ti. El usuario será redirigido a sitios externos, cuyos términos y políticas de privacidad pueden diferir de los nuestros.
+</p>
+
+<p>
+  Código Millonario puede contener enlaces a otros sitios externos. No somos responsables de las prácticas de privacidad ni del contenido de esos sitios, por lo que se recomienda revisarlos antes de proporcionar información personal.
+</p>
+
+<strong class="block text-green-700 font-semibold text-lg mt-6 mb-4">Política de Publicidad</strong>
+
+<p>
+  Para mantener este espacio activo, algunos contenidos pueden incluir publicidad o enlaces a recursos externos. Siempre procuramos recomendar opciones útiles y confiables, aunque cada sitio externo cuenta con sus propias políticas y condiciones.
+</p>
+
+<div class="bg-gray-900 text-gray-200 p-4 rounded-lg mt-4 border border-gray-700">
+  <h4 class="text-green-500 font-semibold mb-2">Nota para lectores</h4>
+  <p class="text-gray-200 text-sm leading-relaxed">
+    Este contenido está disponible para cualquier persona interesada en aprender y mejorar su relación con el dinero, sin distinción de edad, género, nacionalidad, ubicación o condición personal. No necesitas ser un experto para beneficiarte de esta información, pero si ya lo eres, también encontrarás contenido relevante para ti. El acceso a la información es libre y abierto, siempre que se respeten las políticas, términos y condiciones establecidos en este sitio.
+  </p>
+</div>
+
+<p>
+  El uso de este sitio implica la aceptación de esta Política de Privacidad. Nos reservamos el derecho de modificarla en cualquier momento para adaptarla a cambios legales, técnicos o de contenido, recomendando su revisión periódica.
+</p>
+</div>
+
+  </div>
+</div>
+
+
+<div id="termsModal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 flex items-center justify-center p-4" style="font-family: 'Inter', sans-serif;">
+  <div class="bg-white rounded-2xl p-6 max-w-3xl w-full relative modal-enter max-h-[80vh] overflow-auto">
+    <button class="absolute top-4 right-4 font-bold modal-close">✕</button>
+    <h2 class="text-2xl font-bold text-green-700 mb-4">Términos y Condiciones</h2>
+    <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+
+<p>
+  Al acceder y utilizar Código Millonario, aceptas cumplir con los presentes términos y condiciones. El uso del contenido debe realizarse de forma responsable, respetando los derechos de autor y sin reproducir, distribuir o modificar el material sin autorización expresa.
+</p>
+
+<p>
+  Todo el contenido publicado en este blog tiene fines exclusivamente educativos e informativos. No constituye asesoría financiera, legal o profesional personalizada. No garantizamos resultados económicos específicos y cualquier decisión tomada a partir de la información presentada es responsabilidad exclusiva del usuario.
+</p>
+
+<strong class="block text-green-700 font-semibold text-lg mt-6 mb-4">Responsabilidad del Usuario</strong>
+
+<p>
+  El propietario del sitio no se hace responsable por malas prácticas, interpretaciones erróneas, pérdidas, daños o consecuencias derivadas del mal uso del contenido publicado. El usuario acepta que el uso de la información se realiza bajo su propio criterio, experiencia y riesgo. 
+</p>
+
+<p>
+  Si bien la información es confiable y saludable, su difusión puede ser modificada por terceros, con el fin de causar desorientación, mala fama o perjudicar el nombre de este sitio.
+</p>
+
+<strong class="block text-green-700 font-semibold text-lg mt-6 mb-4">Procesamiento de Datos de Compra</strong>
+
+<p>
+  Para la adquisición de productos propios, el usuario acepta que la información proporcionada será utilizada únicamente para procesar la transacción y entrega, respetando la confidencialidad y seguridad de los datos. 
+</p>
+
+<p>
+  No se almacena información sensible de los usuarios más allá de lo estrictamente necesario para procesar la compra. Algunos datos pueden ser gestionados por distribuidores o pasarelas de pago externas para fines fiscales, contables o de verificación de la transacción.
+</p>
+
+
+<p>
+  Algunos productos o servicios pueden estar disponibles mediante enlaces de afiliados. Si decides realizar una compra a través de estos enlaces, podríamos recibir una comisión, sin costo adicional para ti. El usuario reconoce que al ser redirigido a sitios externos, sus políticas y términos pueden diferir de los nuestros.
+</p>
+
+<strong class="block text-green-700 font-semibold text-lg mt-6 mb-4">Terminos de Compras y Devoluciones</strong>
+
+<p>
+  Para productos propios ofrecidos en Código Millonario, las devoluciones y reembolsos se realizan únicamente según nuestras condiciones establecidas al momento de la compra. Recomendamos revisar estas condiciones antes de realizar la transacción. No nos hacemos responsables por devoluciones fuera de estas políticas.
+</p>
+
+<p>
+  Para productos o servicios adquiridos mediante enlaces de afiliados o sitios externos, las políticas de devoluciones y reembolsos dependen del proveedor o distribuidor correspondiente. Código Millonario no se hace responsable de cambios, devoluciones o cancelaciones realizadas en esos sitios externos. Recomendamos revisar cuidadosamente las condiciones de cada compra antes de realizarla.
+</p>
+
+<p>
+  En ambos casos, al realizar una compra, el usuario acepta las políticas de cada producto, respetando la confidencialidad de sus datos y las condiciones establecidas para la transacción.
+</p>
+
+<strong class="block text-green-700 font-semibold text-lg mt-6 mb-4">Condiciones de Uso</strong>
+
+<p>
+  El uso de este sitio implica que la información ofrecida es de carácter educativo e informativo, y que cualquier acción realizada con base en ella se hace bajo responsabilidad propia. No habrá persecuciones, acoso ni acciones legales por parte del propietario del sitio derivadas del uso del contenido, siempre que se respeten las políticas, términos y condiciones establecidos en este sitio. 
+</p>
+
+<p>
+  Está prohibido copiar, reproducir o utilizar el contenido con fines comerciales sin autorización previa; en caso de querer comercializarlo, es necesario llegar a un acuerdo con el propietario del sitio.
+</p>
+
+<div class="bg-gray-900 text-gray-200 p-4 rounded-lg mt-4 border border-gray-700">
+  <h4 class="text-green-500 font-semibold mb-2">Nota para lectores</h4>
+  <p class="text-gray-200 text-sm leading-relaxed">
+    Este contenido está disponible para cualquier persona interesada en aprender y mejorar su relación con el dinero, sin distinción de edad, género, nacionalidad, ubicación o condición personal. No necesitas ser un experto para beneficiarte de esta información, pero si ya lo eres, también encontrarás contenido relevante para ti. El acceso a la información es libre y abierto, siempre que se respeten las políticas, términos y condiciones establecidos en este sitio.
+  </p>
+</div>
+
+<strong class="block text-green-700 font-semibold text-lg mt-6 mb-4">Derechos de Actualización</strong>
+
+<p>
+  Nos reservamos el derecho de modificar, actualizar o eliminar contenido, así como de cambiar estos términos y condiciones en cualquier momento, sin previo aviso. Asimismo, no garantizamos que toda la información publicada permanezca siempre actualizada o disponible de forma continua. Todo se realiza para proteger al usuario y mantenerlo informado de manera transparente.
+</p>
+</div>
+
+  </div>
+</div>
+
+<div id="avisomodal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-50 flex items-center justify-center p-4" style="font-family: 'Inter', sans-serif;">
+  <div class="bg-white rounded-2xl p-6 max-w-3xl w-full relative modal-enter max-h-[80vh] overflow-auto">
+    <button class="absolute top-4 right-4 font-bold modal-close">✕</button>
+    <h2 class="text-2xl font-bold text-green-700 mb-4">Aviso legal</h2>
+    <div class="text-stone-700 leading-relaxed mb-4 text-justify space-y-4">
+
+<p>
+  El contenido de este sitio web tiene fines únicamente educativos e informativos. No constituye asesoría financiera, legal ni de inversión, y no obliga a nadie a tomar decisiones fuera de su voluntad. El sitio se actualiza de manera constante para mejorar la calidad de la información y la experiencia de cada usuario.
+</p>
+
+<p>
+  El uso de la información aquí presentada y las decisiones que se tomen a partir de ella son responsabilidad exclusiva del usuario.
+</p>
+</div>
+
+  </div>
+</div>
+<!-- ===================== SCRIPT ===================== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const openModal = modal => {
+    modal.classList.remove("hidden");
+    modal.classList.add("grid");
+    modal.querySelector(".modal-enter").classList.add("modal-enter-active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = modal => {
+    modal.classList.add("hidden");
+    modal.classList.remove("grid");
+    modal.querySelector(".modal-enter").classList.remove("modal-enter-active");
+    document.body.style.overflow = "";
+  };
+
+  document.querySelectorAll("[data-modal]").forEach(el => {
+    el.addEventListener("click", () => {
+      const modal = document.getElementById(el.dataset.modal);
+      if (modal) openModal(modal);
+    });
+  });
+
+  document.querySelectorAll(".modal-close").forEach(btn => {
+    btn.addEventListener("click", () => closeModal(btn.closest(".fixed")));
+  });
+
+  document.querySelectorAll(".fixed").forEach(modal => {
+    modal.addEventListener("click", e => {
+      if (e.target === modal) closeModal(modal);
+    });
+  });
+
+});
+</script>
+
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
