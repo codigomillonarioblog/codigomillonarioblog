@@ -920,7 +920,7 @@ si te cuesta la paz mental.
     <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
     <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
     <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button">Ir</button>
-    <a id="viewAllBtn" href="../ahorros-para-objetivos/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button">
+    <a id="viewAllBtn" href="../ideas-de-negocios/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button">
       Ver todos
     </a>
   </div>
@@ -1146,7 +1146,7 @@ searchInput.addEventListener("input", ()=>{
   renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
 });
 
-fetch("../ahorros-para-objetivos/index.html")
+fetch("../ideas-de-negocios/index.html")
 .then(r=>r.text())
 .then(html=>{
   const temp = document.createElement("div");
