@@ -356,6 +356,13 @@ document.querySelectorAll(".mobile-item").forEach(link => {
       </span>
     </h2>
 
+    <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Revisa tus decisiones y acércate a lo que realmente importa.
+    </span>
+  </p>
+</blockquote>
 
 
 <!-- BLOQUE EXPLICATIVO 2 -->
@@ -447,6 +454,15 @@ document.querySelectorAll(".mobile-item").forEach(link => {
         Objetivos
       </span>
     </h2>
+
+    <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Descubre en los artículos de abajo cómo alcanzar cada meta con claridad.
+    </span>
+  </p>
+</blockquote>
+
 
       <!-- PAGINACIÓN ARRIBA -->
       <div class="max-w-5xl mx-auto mb-6">
@@ -569,16 +585,89 @@ document.querySelectorAll(".mobile-item").forEach(link => {
       </span>
     </h2>
 
+<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
+    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Organizar tu dinero marca la diferencia entre esperar y avanzar.
+      </span>
+    </p>
+  </blockquote>
 
-        
-<section class="mb-16" style="font-family: 'Poppins', sans-serif;">
+
+
+<section class="mb-16"  style="font-family:'Lora',serif;">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-stone-600 text-sm leading-relaxed mb-4 space-y-4">
-      
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-        Cada peso cuenta para lograr lo que siempre has querido
-        </h3>
-        <p>
+
+    <!-- ================= ACORDEÓN ================= -->
+
+    <style>
+      .cf-accordion {
+        margin-top: 60px;
+      }
+
+      .cf-accordion * {
+        box-sizing: border-box;
+      }
+
+      .cf-accordion-item {
+        background: #ffffff;
+        border-radius: 14px;
+        margin-bottom: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        overflow: hidden;
+      }
+
+      .cf-accordion-header {
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+        user-select: none;
+      }
+
+      .cf-accordion-header:hover {
+        background: #f5f5f5;
+      }
+
+      .cf-accordion-icon {
+        font-size: 18px;
+        color: #000000;
+        transition: transform 0.3s ease;
+      }
+
+      .cf-accordion-item.is-open .cf-accordion-icon {
+        transform: rotate(180deg);
+      }
+
+      .cf-accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+
+      .cf-accordion-content p {
+        padding: 0 24px 24px;
+        margin: 0;
+        color: #000000;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+    </style>
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+Tu dinero responde a lo que haces, no a lo que esperas
+          <span class="cf-accordion-icon">▼</span>
+        </div>
+        <div class="cf-accordion-content">
+  
+         <p>
           Una de las habilidades más demandadas hoy en día está relacionada con manejar el dinero. Incluso en trabajos que no son altamente remunerados, la capacidad de organizar y optimizar recursos se vuelve esencial, porque en cualquier empresa, inversor o persona común, el control financiero es crítico. 
         </p>
    
@@ -598,11 +687,43 @@ document.querySelectorAll(".mobile-item").forEach(link => {
           Lo mismo sucede con tus finanzas personales: un manejo consciente y constante asegura que tus recursos trabajen a tu favor y se multipliquen con el tiempo.
         </p>
 
-  </section>
-  </div>
-</section>
+        </div>
+      </div>
 
-      
+    </div>
+
+    <script>
+    document.querySelectorAll('.cf-accordion').forEach(accordion => {
+  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.cf-accordion-item');
+      const content = item.querySelector('.cf-accordion-content');
+
+      // Solo afecta los items de ESTE acordeón
+      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+        }
+      });
+
+      item.classList.toggle('is-open');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+    </script>
+
+
+ </div>
+</section>
+    <!-- ================= FIN ACORDEÓN ================= -->
+
         
 </main>
 

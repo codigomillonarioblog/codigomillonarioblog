@@ -359,6 +359,14 @@ document.querySelectorAll(".mobile-item").forEach(link => {
       </span>
     </h2>
 
+<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Pequeños ahorros hoy, grandes oportunidades mañana.
+    </span>
+  </p>
+</blockquote>
+
 
 
 <!-- INTRODUCCIÓN GENERAL -->
@@ -452,6 +460,14 @@ document.querySelectorAll(".mobile-item").forEach(link => {
        inteligencia
   </span>
 </h2>
+
+<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Artículos que profundizan en el manejo inteligente del dinero.
+    </span>
+  </p>
+</blockquote>
 
 
         <!-- PAGINACIÓN ARRIBA -->
@@ -564,11 +580,88 @@ document.querySelectorAll(".mobile-item").forEach(link => {
       </span>
     </h2>
 
+<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
+    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Construye paso a paso la tranquilidad de mañana.
+      </span>
+    </p>
+  </blockquote>
 
-<section class="mb-16" style="font-family: 'Poppins', sans-serif;">
+
+ <section class="mb-16"  style="font-family:'Lora',serif;">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-stone-600 text-sm leading-relaxed mb-4 space-y-4">
-      <p>
+
+    <!-- ================= ACORDEÓN ================= -->
+
+    <style>
+      .cf-accordion {
+        margin-top: 60px;
+      }
+
+      .cf-accordion * {
+        box-sizing: border-box;
+      }
+
+      .cf-accordion-item {
+        background: #ffffff;
+        border-radius: 14px;
+        margin-bottom: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        overflow: hidden;
+      }
+
+      .cf-accordion-header {
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+        user-select: none;
+      }
+
+      .cf-accordion-header:hover {
+        background: #f5f5f5;
+      }
+
+      .cf-accordion-icon {
+        font-size: 18px;
+        color: #000000;
+        transition: transform 0.3s ease;
+      }
+
+      .cf-accordion-item.is-open .cf-accordion-icon {
+        transform: rotate(180deg);
+      }
+
+      .cf-accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+
+      .cf-accordion-content p {
+        padding: 0 24px 24px;
+        margin: 0;
+        color: #000000;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+    </style>
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+         El poder del esfuerzo silencioso
+          <span class="cf-accordion-icon">▼</span>
+        </div>
+        <div class="cf-accordion-content">
+  
+            <p>
         En la mayoría de acciones que tomas a favor de tu propósito, no siempre verás resultados inmediatos. Te pasa a ti, y le pasa a la mayoría que quiere lograr algo grande. A veces ahorrar parece lento, aburrido o incluso inútil; sin embargo, ese es el principio que sigue todo esfuerzo constante. Es ese proceso silencioso el que forma la base de cualquier crecimiento real.
      </p>
 
@@ -580,9 +673,44 @@ document.querySelectorAll(".mobile-item").forEach(link => {
         El verdadero camino no necesariamente te hará infeliz, y el camino falso no necesariamente te dará felicidad. Pero sí existe una diferencia clara: uno construye y el otro destruye, aunque al principio no lo parezca.
       </p>
 
-    </section>
-  </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+    document.querySelectorAll('.cf-accordion').forEach(accordion => {
+  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.cf-accordion-item');
+      const content = item.querySelector('.cf-accordion-content');
+
+      // Solo afecta los items de ESTE acordeón
+      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+        }
+      });
+
+      item.classList.toggle('is-open');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+    </script>
+
+
+ </div>
 </section>
+    <!-- ================= FIN ACORDEÓN ================= -->
+
 
 
 </main>
