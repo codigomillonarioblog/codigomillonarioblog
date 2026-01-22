@@ -363,6 +363,18 @@ document.querySelectorAll(".mobile-item").forEach(link => {
       </span>
     </h2>
 
+
+    <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+    Las oportunidades existen donde estás, solo necesitas ampliar tu visión para encontrarlas.
+    </span>
+  </p>
+</blockquote>
+
+ 
+
+
   
     <!-- BLOQUE EXPLICATIVO 7 -->
 <section class="mb-16 text-left cursor-pointer">
@@ -453,6 +465,16 @@ document.querySelectorAll(".mobile-item").forEach(link => {
   </span>
 </h2>
 
+<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+     No te pierdas nuestros artículos sobre cómo hacer crecer tu dinero en distintas regiones.
+    </span>
+  </p>
+</blockquote>
+
+  
+
 
 <!-- PAGINACIÓN ARRIBA -->
 <div class="pager-container max-w-5xl mx-auto">
@@ -539,12 +561,89 @@ document.querySelectorAll(".mobile-item").forEach(link => {
   </span>
 </h2>
 
+   <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
+    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Al mirar más allá de lo cotidiano se descubren oportunidades que desde casa no se perciben.
+      </span>
+    </p>
+  </blockquote>
 
+  
 
-<section class="mb-16" style="font-family: 'Poppins', sans-serif;">
+ <section class="mb-16"  style="font-family:'Lora',serif;">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-stone-600 text-sm leading-relaxed mb-4 space-y-4">
-    <p>
+
+    <!-- ================= ACORDEÓN ================= -->
+
+    <style>
+      .cf-accordion {
+        margin-top: 60px;
+      }
+
+      .cf-accordion * {
+        box-sizing: border-box;
+      }
+
+      .cf-accordion-item {
+        background: #ffffff;
+        border-radius: 14px;
+        margin-bottom: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        overflow: hidden;
+      }
+
+      .cf-accordion-header {
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+        user-select: none;
+      }
+
+      .cf-accordion-header:hover {
+        background: #f5f5f5;
+      }
+
+      .cf-accordion-icon {
+        font-size: 18px;
+        color: #000000;
+        transition: transform 0.3s ease;
+      }
+
+      .cf-accordion-item.is-open .cf-accordion-icon {
+        transform: rotate(180deg);
+      }
+
+      .cf-accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+
+      .cf-accordion-content p {
+        padding: 0 24px 24px;
+        margin: 0;
+        color: #000000;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+    </style>
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        Las oportunidades están más allá de la rutina
+          <span class="cf-accordion-icon">▼</span>
+        </div>
+        <div class="cf-accordion-content">
+  
+        <p>
         La mayoría cree que el mundo termina donde crecieron. Como si no hubiera nada más allá de la calle, la ciudad, la rutina. La verdad: las mejores oportunidades casi nunca están enfrente; están más lejos, esperando a quienes se atreven a mirar más allá, a pensar sin límites, sin paredes.
     </p>
 
@@ -555,9 +654,40 @@ document.querySelectorAll(".mobile-item").forEach(link => {
     <p>
      Las oportunidades no avisan. No llaman. No esperan. Están ahí, moviéndose. Tú decides: ¿te quedas mirando o das el paso que te acerca a la versión de ti que sabe que merece más grandeza?
     </p>
-  </section>
-  </div>
-</section>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+    document.querySelectorAll('.cf-accordion').forEach(accordion => {
+  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.cf-accordion-item');
+      const content = item.querySelector('.cf-accordion-content');
+
+      // Solo afecta los items de ESTE acordeón
+      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+        }
+      });
+
+      item.classList.toggle('is-open');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+    </script>
+
+
 
 </main>
 
