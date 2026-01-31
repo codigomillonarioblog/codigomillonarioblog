@@ -1,44 +1,17 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Cómo pasó de no tener nada a convertirse en millonario | Código Millonario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo J.K. Rowling construyó una fortuna mundial a partir de un manuscrito rechazado - Código Millonario</title>
+    <meta name="description" content="De vivir de ayudas estatales a crear una de las mayores fortunas editoriales del mundo. La historia real de cómo J.K. Rowling convirtió Harry Potter en un imperio global.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-<!-- Tailwind y Lucide -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
+      <!-- Favicon -->
+    <link rel="icon" href="../../assets/img/favicon.png" type="image/png">
 
-<link rel="icon" href="../../assets/img/favicon.png" type="image/png">
-
-<style>
-/* ===================== PAGINACIÓN ===================== */
-.pager-container { background: #ffffff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); padding: 12px; }
-.page-box { min-width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; user-select: none; font-weight: 600; color: #0f172a; transition: all 0.2s ease; }
-.page-box:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.06); transform: translateY(-1px); }
-.page-box.active { border-color: #94a3b8; box-shadow: 0 0 0 3px rgba(14,165,233,0.06); background: #f8fafc; }
-.compact-btn { min-width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; transition: all 0.2s ease; }
-.compact-btn[disabled] { opacity: 0.45; cursor: default; pointer-events: none; }
-.select-pages { border: 1px solid #e6e6e6; background: #fff; height: 40px; border-radius: 6px; padding: 6px 10px; }
-input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border-radius: 6px; padding: 6px 10px; width: 80px; background: #fff; }
-
-#articlesGrid { transition: all 0.5s ease; }
-.article { transition: opacity 0.4s ease; }
-
-@media (max-width: 640px) {
-  .pager-grid { grid-template-columns: 1fr; gap: 8px; }
-  .page-box { min-width: 34px; height: 34px; }
-  .compact-btn { min-width: 34px; height: 34px; }
-  input[type="number"].goto-page { width: 64px; }
-}
-
-
-body {
-  background-color: #f5f5f5 !important; /* gris muy claro */
-}
-</style>
-
-<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -47,110 +20,11 @@ body {
 
   gtag('config', 'G-0826LEMPPY');
 </script>
-
-<style>
-/* TARJETA ENVOLVENTE */
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* CARD PREMIUM */
-.article-card {
-    width: 100%;
-    max-width: 380px;
-    background: #ffffff;
-    border-radius: 28px;
-    padding: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    font-family: 'Arial', sans-serif;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.article-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 38px rgba(0,0,0,0.22);
-}
-
-/* IMAGEN */
-.article-card img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    border-radius: 22px;
-}
-
-/* ETIQUETA */
-.badge {
-    position: relative;
-    display: inline-block;
-    background: #1E5BFF;
-    color: white;
-    padding: 6px 14px;
-    border-radius: 14px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-top: -32px;
-    margin-left: 12px;
-}
-
-/* TÍTULO */
-.article-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #222;
-    margin-top: 16px;
-    margin-bottom: 10px;
-    line-height: 1.3;
-}
-
-/* FECHA + COMENTARIOS */
-.meta {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    font-size: 11px;
-    color: rgba(0, 0, 0, 0.5);
-    margin-top: 8px;
-}
-
-.meta span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-}
-
-/* BOTÓN */
-.arrow-btn {
-    margin-left: auto;
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    min-height: 42px;
-    background: #1E5BFF;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 18px;
-    transition: transform 0.25s ease;
-}
-
-.article-card:hover .arrow-btn {
-    transform: scale(1.15);
-}
-</style>
-
 </head>
 
 <body class="bg-stone-50 text-stone-900">
 
-
-
+    
 <!-- MENU FLOTANTE UNIVERSAL -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
@@ -237,6 +111,11 @@ body {
   #mobileMenu { transform-origin: top center; }
   #mobileMenu.scale-100 { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
   #mobileMenu.scale-0 { transform: translateX(-50%) scale(0); opacity: 0; pointer-events: none; }
+
+
+  body {
+  background-color: #f5f5f5 !important; /* gris muy claro */
+}
 </style>
 
 <script>
@@ -313,32 +192,34 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 </script>
 
 
-  <!-- HERO PRINCIPAL -->
-   <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-  
-
-<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center" style="font-family: 'Lora', serif;">
-  <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
-     La historia real<br>   
-    <span class="text-green-600"> de cómo se hizo </span> millonario  <br>  desde cero
-
-  </h1>     
-  
-   <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
-    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
-      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-      El camino real que siguieron y las grandes decisiones que los hicieron millonarios.
-      </span>
-    </p>
-  </blockquote>
-</section>
 
 
+<!-- HERO -->
+<!-- Contenedor del título -->
+ <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
+    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
+      <span class="block">  </span>
+      <span class="block">  </span>
+      <span class="block mt-1">  </span>
+    </h1>
+  </div>
+
+<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+  <!-- Fecha -->
+  <span class="text-center text-xs">
+    31/01/2026
+  </span>
+  <!-- Línea separadora -->
+  <span class="h-4 w-px bg-stone-400"></span>
+  <!-- Tiempo de lectura u otro dato -->
+  <span class="text-center text-xs">
+    ⏱ 5 min lectura
+  </span>
+</div>
 
   <!-- Imagen principal con sombra curva -->
   <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/como-se-hicieron-millonarios.jpg" alt="" 
+    <img src="../../assets/png/colonel-sanders-historia-de-riqueza.webp" alt="" 
          class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
     <!-- Sombra curva -->
     <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
@@ -346,614 +227,692 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-<main class="py-20" style="font-family: 'Lora', serif;">
 
-
-
-
-    <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
-          style="font-family: 'Poppins', sans-serif;">
-        De cero a 
-        <span class="inline-block mt-1 sm:mt-0"
-        style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
-        Millonario 
-      </span>
-    </h2>
-
-    <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
-  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
-    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-Lo grande no se hace de la noche a la mañana, se construye paso a paso.
-    </span>
-  </p>
-</blockquote>
-
-
-<!-- BLOQUE EXPLICATIVO 3 -->
-<section class="mb-16 text-left cursor-pointer">
-
-  <!-- CONTENEDOR QUE LIMITA EL ANCHO -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <div
-      class="flex gap-6 overflow-x-auto pb-4
-             md:grid md:grid-cols-2
-             lg:grid-cols-4
-             md:gap-6 md:overflow-visible">
-
-      <!-- CUADRO 1 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
-          Punto de partida
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
-          Lo increíble no es el dinero, sino cómo muchos comenzaron sin contactos, sin capital y sin garantías. No hubo atajos ni golpes de suerte permanentes.
-        </p>
-      </div>
-
-      <!-- CUADRO 2 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
-          Decisiones repetidas
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
-          Grandes resultados se construyen con decisiones repetidas durante años: trabajar cuando nadie miraba, fallar más veces de las que se cuentan y seguir avanzando sin certeza de éxito.
-        </p>
-      </div>
-
-      <!-- CUADRO 3 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
-          Lento y constante
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
-          Nada espectacular al inicio, nada viral. La construcción de fortunas es lenta, incómoda y sin aplausos: requiere constancia y disciplina.
-        </p>
-      </div>
-
-      <!-- CUADRO 4 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
-          Comenzar pequeño
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
-          Al igual que el dinero, todo empieza pequeño. Con constancia y dirección, puede crecer y dejar una huella significativa en tu vida y resultados.
-        </p>
-      </div>
-</section>
-
-    </div>
-  </div>
-</section>
+                <!-- INTRODUCCIÓN GENERAL -->
+                    <main class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
 
 
 
-  <section class="mb-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
+<style>
+/* ================= CONTENEDOR ================= */
+.toc-container {
+  border: 1px solid #6b7280;
+  border-radius: 0;
+  max-width: 650px;
+  width: 100%;
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
 
- <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
-          style="font-family: 'Poppins', sans-serif;">
-         Aquí no hay 
-        <span class="inline-block mt-1 sm:mt-0"
-        style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
-        Atajos
-      </span>
-    </h2>
+/* ================= BOTÓN ================= */
+.toc-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 14px 20px;
+  background-color: #f9fafb;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
 
-<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
-  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
-    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-Sin atajos: explora los artículos y ve cómo se hace de verdad.
-    </span>
-  </p>
-</blockquote>
+.toc-toggle:hover,
+.toc-toggle:focus {
+  background-color: #f9fafb;
+  outline: none;
+}
 
+/* ================= FLECHA ================= */
+.toc-toggle::after {
+  content: "▼";
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
 
-      <!-- PAGINACIÓN ARRIBA -->
-      <div class="max-w-5xl mx-auto mb-6">
-        <div class="pager-container">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div class="flex items-center gap-4 px-2">
-              <div class="text-sm text-stone-700">
-                Total <span id="totalResults" class="font-semibold">0</span> resultados
-              </div>
-              <div class="hidden sm:inline-block text-sm text-stone-700">
-                Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
-              </div>
-            </div>
-            <div class="flex justify-center items-center gap-2 px-2">
-              <button id="firstBtn" class="compact-btn">«</button>
-              <button id="prevBtn" class="compact-btn">‹</button>
-              <div id="pageNumbers" class="flex items-center gap-2"></div>
-              <button id="nextBtn" class="compact-btn">›</button>
-              <button id="lastBtn" class="compact-btn">»</button>
-            </div>
-            <div class="flex justify-end items-center gap-3 px-2">
-              <select id="perPageSelect" class="select-pages">
-                <option value="6" selected>6 / página</option>
-                <option value="9">9 / página</option>
-                <option value="12">12 / página</option>
-                <option value="20">20 / página</option>
-              </select>
-              <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
-              <button id="gotoBtn" class="page-box">Ir</button>
-            </div>
-          </div>
-        </div>
-      </div>
+/* Flecha cuando está abierta */
+.toc-container.open .toc-toggle::after {
+  transform: rotate(180deg);
+}
 
+/* ================= LISTA ================= */
+.toc-list {
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  border-top: none;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
+  display: block;
+}
 
+/* Lista abierta */
+.toc-container.open .toc-list {
+  max-height: 800px;
+  opacity: 1;
+  padding: 12px 20px;
+  border-top: 1px solid #6b7280;
+}
 
+.toc-list li {
+  margin: 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
+}
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articlesGrid">
-        <!-- Ejemplo de artículos -->
+.toc-list li:last-child {
+  border-bottom: none; /* quitar línea del último */
+}
 
-<div class="article">
-  <article>
-    <a href="./fundador-de-kfc-construyo-su-fortuna.html" class="article-link">
-      <div class="article-card">
+.toc-list li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 15px;
+}
 
-        <div style="position: relative;">
-          <img src="../../assets/png/colonel-sanders-historia-de-riqueza.webp" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">#Colonel Sanders</div>
-        </div>
+.toc-list li a:hover {
+  text-decoration: none;
+  color: #1f2937;
+}
 
-        <h2 class="article-title">
-           Así nació la fortuna del fundador de KFC
-        </h2>
+/* ================= OFFSET PARA MENÚ FIJO ================= */
+h2[id] {
+  scroll-margin-top: 100px;
+}
+</style>
 
-        <div class="meta">
-          <span><i>📅</i> 31/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
+<!-- ================= HTML ================= -->
+<div class="toc-container">
+  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. </a></li>
+    <li><a href="#titulo2">2. </a></li>
+    <li><a href="#titulo3">3. </a></li>
+    <li><a href="#titulo4">4. </a></li>
+    <li><a href="#titulo5">5. </a></li>
+    <li><a href="#titulo6">6. </a></li>
+    <li><a href="#titulo7">7. </a></li>
+    <li><a href="#titulo8">8. </a></li>
+  </ul>
 </div>
 
-<div class="article">
-  <article>
-    <a href="./oprah-winfrey-multimillonaria.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/riqueza-oprah-winfrey.jpg" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">#Oprah Winfrey</div>
-        </div>
-
-        <h2 class="article-title">
-          Cómo Oprah construyó su riqueza con negocios
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 29/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./jeff-bezos-ceo-amazon.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/jeff-bezos-estrategia-amazon.jpg" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">#Jeff Bezos</div>
-        </div>
-
-        <h2 class="article-title">
-          Sacrificó ganancias tempranas por dominio
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 22/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./como-carlos-slim-se-hizo-rico.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/carlos-slim-millonario-mexicano.jpg" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">#Carlos Slim</div>
-        </div>
-
-        <h2 class="article-title">
-          De decisiones aburridas a riqueza duradera
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 20/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
- <div class="article">
-  <article>
-    <a href="./jack-ma-de-profesor-a-millonario-alibaba.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/jack-ma-de-profesor-a-multimillonario.jpg" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">#Jack Ma</div>
-        </div>
-
-        <h2 class="article-title">
-          Cuando todos dijeron no, él construyó Alibaba
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 15/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
- <div class="article">
-  <article>
-    <a href="./jk-rowling-harry-potter-fortuna.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/jk-rowling-historia-fortuna.jpg" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">#J.K. Rowling</div>
-        </div>
-
-        <h2 class="article-title">
-          De manuscrito rechazado a imperio millonario
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 06/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-
-
-
-
-              <!-- Mas artículos -->
-     </div>
-   </div>
- </section>
-
-
-
- 
-
-
-<h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
-          style="font-family: 'Poppins', sans-serif;">
-         Nada estaba 
-        <span class="inline-block mt-1 sm:mt-0"
-        style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
-        Garantizado
-      </span>
-    </h2>
-
-<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
-    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
-      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-Lo seguro no existía, lo que importaba era seguir.
-      </span>
-    </p>
-  </blockquote>
-
-        
-
-
-
- <section class="mb-16"  style="font-family:'Lora',serif;">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- ================= ACORDEÓN ================= -->
-
-    <style>
-      .cf-accordion {
-        margin-top: 60px;
-      }
-
-      .cf-accordion * {
-        box-sizing: border-box;
-      }
-
-      .cf-accordion-item {
-        background: #ffffff;
-        border-radius: 14px;
-        margin-bottom: 16px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        overflow: hidden;
-      }
-
-      .cf-accordion-header {
-        padding: 20px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000000;
-        user-select: none;
-      }
-
-      .cf-accordion-header:hover {
-        background: #f5f5f5;
-      }
-
-      .cf-accordion-icon {
-        font-size: 18px;
-        color: #000000;
-        transition: transform 0.3s ease;
-      }
-
-      .cf-accordion-item.is-open .cf-accordion-icon {
-        transform: rotate(180deg);
-      }
-
-      .cf-accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-      }
-
-      .cf-accordion-content p {
-        padding: 0 24px 24px;
-        margin: 0;
-        color: #000000;
-        line-height: 1.7;
-        font-size: 16px;
-      }
-    </style>
-
-    <div class="cf-accordion">
-
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-  El fracaso siempre estuvo cerca
-          <span class="cf-accordion-icon">▼</span>
-        </div>
-        <div class="cf-accordion-content">
-  
-        <p>
-  Ninguna de estas historias empezó con certezas. 
-  No había garantías, ni planes perfectos, ni resultados asegurados.
-  Lo único claro era que seguir igual no era una opción.
-</p>
-
-<p>
-  Cada decisión implicó riesgo: perder dinero, tiempo o estabilidad.
-  Muchos pudieron haberse quedado a mitad de camino y nadie los habría notado.
-  Eso es lo que vuelve reales estas historias.
-</p>
-
-<p>
-  Hacerse millonario no fue el resultado de una fórmula mágica,
-  sino de avanzar aun cuando el resultado era incierto.
-  No todos llegan, pero todos empezaron sin garantías.
-</p>
-
-        </div>
-      </div>
-
-    </div>
-
-    <script>
-    document.querySelectorAll('.cf-accordion').forEach(accordion => {
-  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.cf-accordion-item');
-      const content = item.querySelector('.cf-accordion-content');
-
-      // Solo afecta los items de ESTE acordeón
-      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          other.querySelector('.cf-accordion-content').style.maxHeight = null;
-        }
-      });
-
-      item.classList.toggle('is-open');
-
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    });
-  });
-});
-    </script>
-
-
- </div>
-</section>
-    <!-- ================= FIN ACORDEÓN ================= -->
-
-
-</main>
-
-
-
-
+<!-- ================= JAVASCRIPT ================= -->
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const articles = Array.from(document.querySelectorAll('.article'));
-    const articlesGrid = document.getElementById('articlesGrid');
+const tocContainer = document.querySelector(".toc-container");
+const toggleBtn = tocContainer.querySelector(".toc-toggle");
 
-    const totalResultsEl = document.getElementById('totalResults');
-    const currentPageText = document.getElementById('currentPageText');
-    const totalPagesText = document.getElementById('totalPagesText');
-    const perPageSelect = document.getElementById('perPageSelect');
-    const gotoInput = document.getElementById('gotoInput');
-    const gotoBtn = document.getElementById('gotoBtn');
-    const firstBtn = document.getElementById('firstBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const lastBtn = document.getElementById('lastBtn');
-    const pageNumbersContainer = document.getElementById('pageNumbers');
+let mouseInsideTOC = false;
 
-    let perPage = parseInt(perPageSelect.value, 10);
-    let currentPage = 1;
-    let totalPages = Math.max(1, Math.ceil(articles.length / perPage));
+// Abrir / cerrar SOLO con el botón
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  tocContainer.classList.toggle("open");
+});
 
-    function showPage(page) {
-        if (page < 1) page = 1;
-        if (page > totalPages) page = totalPages;
-        currentPage = page;
-        const start = (currentPage - 1) * perPage;
-        const end = start + perPage;
+// Detectar si el mouse está dentro del TOC
+tocContainer.addEventListener("mouseenter", () => {
+  mouseInsideTOC = true;
+});
 
-        articles.forEach((article, idx) => {
-            if (idx >= start && idx < end) {
-                article.style.display = '';
-                setTimeout(() => article.style.opacity = 1, 10);
-            } else {
-                article.style.opacity = 0;
-                setTimeout(() => article.style.display = 'none', 400);
-            }
-        });
+tocContainer.addEventListener("mouseleave", () => {
+  mouseInsideTOC = false;
+});
 
-        currentPageText.textContent = currentPage;
-        totalPagesText.textContent = totalPages;
+// Cerrar al hacer click fuera
+document.addEventListener("click", (e) => {
+  if (!tocContainer.contains(e.target)) {
+    tocContainer.classList.remove("open");
+  }
+});
 
-        updateButtons();
-        renderPageNumbers();
-    }
+// Cerrar si el TOC sale del viewport
+function isOutOfViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.bottom < 0; // si la parte inferior ya no está visible
+}
 
-    function updateButtons() {
-        firstBtn.disabled = currentPage === 1;
-        prevBtn.disabled = currentPage === 1;
-        nextBtn.disabled = currentPage === totalPages;
-        lastBtn.disabled = currentPage === totalPages;
-    }
-
-    function renderPageNumbers() {
-        pageNumbersContainer.innerHTML = '';
-        if (totalPages <= 5) {
-            for (let i = 1; i <= totalPages; i++) {
-                pageNumbersContainer.appendChild(createPageButton(i));
-            }
-            return;
-        }
-        pageNumbersContainer.appendChild(createPageButton(1));
-        let start = Math.max(2, currentPage - 1);
-        let end = Math.min(totalPages - 1, currentPage + 1);
-
-        if (start > 2) {
-            const dots = document.createElement('div');
-            dots.textContent = '...';
-            dots.className = 'text-stone-400 px-1';
-            pageNumbersContainer.appendChild(dots);
-        }
-
-        for (let i = start; i <= end; i++) {
-            pageNumbersContainer.appendChild(createPageButton(i));
-        }
-
-        if (end < totalPages - 1) {
-            const dots = document.createElement('div');
-            dots.textContent = '...';
-            dots.className = 'text-stone-400 px-1';
-            pageNumbersContainer.appendChild(dots);
-        }
-
-        pageNumbersContainer.appendChild(createPageButton(totalPages));
-    }
-
-    function createPageButton(num) {
-        const btn = document.createElement('button');
-        btn.textContent = num;
-        btn.className = 'page-box';
-        if (num === currentPage) btn.classList.add('active');
-        btn.addEventListener('click', () => showPage(num));
-        return btn;
-    }
-
-    perPageSelect.addEventListener('change', () => {
-        perPage = parseInt(perPageSelect.value, 10);
-        totalPages = Math.ceil(articles.length / perPage);
-        currentPage = 1;
-        showPage(currentPage);
-    });
-
-    firstBtn.addEventListener('click', () => showPage(1));
-    prevBtn.addEventListener('click', () => showPage(currentPage - 1));
-    nextBtn.addEventListener('click', () => showPage(currentPage + 1));
-    lastBtn.addEventListener('click', () => showPage(totalPages));
-
-    gotoBtn.addEventListener('click', () => {
-        const val = parseInt(gotoInput.value, 10);
-        if (!isNaN(val)) showPage(val);
-        gotoInput.value = '';
-    });
-
-    gotoInput.addEventListener('keydown', e => {
-        if (e.key === 'Enter') gotoBtn.click();
-    });
-
-    totalResultsEl.textContent = articles.length;
-    totalPages = Math.ceil(articles.length / perPage);
-    showPage(currentPage);
+window.addEventListener("scroll", () => {
+  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
+    tocContainer.classList.remove("open");
+  }
 });
 </script>
 
-</body>
-</html>
+
+
+
+<div class="relative my-10">
+  <!-- Etiqueta estilo botón encima de la línea -->
+  <span class="absolute -top-4 left-0 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+    Contenido
+  </span>
+  <!-- Línea divisoria -->
+  <div style="width: 100%; height: 2px; background-color: #000;"></div>
+</div>
+
+
+
+
+<!-- INTRODUCCIÓN -->
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Próximamente</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<img src="../../assets/img/multiplicar-tu-dinero-desde-cero.jpg" alt="" 
+class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+
+<p>
+
+</p>
+
+</div>
+
+
+<h2 id="titulo" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"></h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+
+<p>
+
+</p>
+
+</div>
+
+
+
+<h2 id="titulo" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"></h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+<p>
+
+</p>
+
+</div>
+
+
+  <h2 id="titulo" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"></h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+<p>
+
+</p>
+
+
+  </div>
+
+
+  <h2 id="titulo" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"></h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+
+  <p>
+
+</p>
+
+    </div>
+
+
+
+  <h2 id="titulo" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"></h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+
+
+  <p>
+
+</p>
+  </div>
+
+
+  <h2 id="titulo" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"></h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+<p>
+
+</p>
+
+
+
+    </div>
+
+
+  <h2 id="titulo" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"></h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+
+
+  <p>
+
+</p>
+
+  </div>
+
+
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../assets/png/colonel-sanders-historia-de-riqueza.webp" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
+
+
+<p class="text-left text-xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Código Millonario Recomienda</p>
+<div style="width: 100%; height: 2px; background-color: #000; margin-bottom: 40px;"></div>
+
+
+
+
+    </main>
+
+   
+
+
+    <!-- ================= INTERLINK FUNCIONAL (SELECT + BUSCADOR) ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center font-semibold text-sm mb-4">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir".
+  </p>
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button">Ir</button>
+    <a id="viewAllBtn" href="../biografia-de-millonarios/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button">
+      Ver todos
+    </a>
+  </div>
+  <div class="flex justify-end items-center mt-4 text-stone-700 text-sm">
+    Total <span id="totalArticles" class="font-semibold mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= INTERLINK VISUAL PROFESIONAL ================= -->
+<div class="max-w-3xl mx-auto my-12 interlink-wrapper">
+  <p class="interlink-heading text-center font-semibold text-sm mb-4">
+    Artículos relacionados que pueden interesarte
+  </p>
+  <div id="interlinkGrid" style="display:flex; flex-direction:column; gap:10px;"></div>
+</div>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* Tarjeta grande con animación */
+.interlink-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  overflow: hidden;
+}
+.interlink-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.interlink-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.interlink-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+.interlink-img {
+  position: relative;
+  flex-shrink: 0;
+  width: 90px;
+  height: 55px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.interlink-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+.interlink-card:hover .interlink-img img {
+  transform: scale(1.05);
+}
+/* Badge azul */
+.interlink-badge {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  background: #007BFF;
+  color: #fff;
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+.interlink-text {
+  flex: 1;
+}
+.interlink-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.25;
+  color: #111;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #666;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* BOTÓN FLECHA “PRO” INTEGRADO */
+.arrow-btn {
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  background: #1E5BFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-family: inherit;
+  transition: transform 0.25s ease;
+}
+.interlink-card:hover .arrow-btn {
+  transform: scale(1.15);
+}
+
+/* Modernización del cuadro principal */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.interlink-container p {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: #1f2937;
+}
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: 500;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+.select-pages:hover, .goto-page:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* Botones Ir y Ver todos */
+.interlink-button {
+  font-family: 'Lora', serif;
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.interlink-button:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+</style>
+
+<!-- ================= SCRIPT ÚNICO ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = a.title;
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <section class="interlink-card">
+        <a href="${a.url}">
+          <div class="interlink-content">
+            <div class="interlink-img">
+              <img src="${a.image}" alt="">
+              <div class="interlink-badge">#Relacionado</div>
+            </div>
+            <div class="interlink-text">
+              <div class="interlink-title">${a.title}</div>
+              <div class="meta">
+                <span>⏱ 5 min de lectura</span>
+                <span><i>💬</i> 0</span>
+                <div class="arrow-btn">➜</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../biografia-de-millonarios/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+  temp.querySelectorAll("time, .date, .meta, span").forEach(el=>{
+    if(el.textContent.includes("📅") || el.textContent.includes("Sin Comentarios") || /\d{2}\/\d{2}\/\d{4}/.test(el.textContent)){
+      el.remove();
+    }
+  });
+  const links = Array.from(temp.querySelectorAll(".article a"));
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+
+
+
+
+
+
+    <!-- BOTÓN FLOTANTE DE COMPARTIR -->
+<div class="fixed bottom-12 right-6 z-50">
+
+    <!-- Botones desplegables -->
+    <div id="shareButtons" class="flex flex-col items-center gap-3 mb-4 opacity-0 pointer-events-none transition-all duration-300">
+        
+        <!-- Facebook -->
+        <a id="facebookShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a id="twitterShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-900 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2zm-2.377 17.5h1.64L8.29 4.39H6.57l9.297 15.11z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a id="linkedinShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition hover:-translate-y-1">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a id="whatsappShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
+            </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a id="tiktokShare"
+           target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-800 text-white shadow-lg transition hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 48 48" fill="currentColor">
+                <path d="M41.5 14.1c-3.3-.1-6.5-1.7-8.6-4.4-1.1-1.3-1.8-3-2.2-4.7h-.1v-.4c-.1-.6-.1-1.1-.1-1.7H24v30.2c0 2-.8 3.9-2.2 5.3-1.4 1.4-3.3 2.2-5.3 2.2-4.1 0-7.5-3.4-7.5-7.5S12.4 25.7 16.5 25.7c1.1 0 2.2.3 3.2.8V18c-1-.1-2-.2-3-.2-8.3 0-15 6.7-15 15s6.7 15 15 15c4 0 7.8-1.6 10.6-4.4 2.8-2.8 4.4-6.6 4.4-10.6V18.2c2.5 1.8 5.5 2.8 8.6 2.9v-7z"/>
+            </svg>
+        </a>
+
+        <!-- Copiar enlace -->
+        <button id="copyLink"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-500 hover:bg-gray-600 text-white shadow-lg transition hover:-translate-y-1"
+            title="Copiar enlace">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.414-1.414m7.778-7.778a4 4 0 015.656 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.536-1.536"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- BOTÓN FLOTANTE PRINCIPAL -->
+    <button id="toggleShare"
+        class="w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center shadow-xl transition-all hover:-translate-y-1">
+        <i data-lucide="share-2" class="w-6 h-6"></i>
+    </button>
+
+</div>
+
+<script>
+    const toggleShare = document.getElementById("toggleShare");
+    const shareButtons = document.getElementById("shareButtons");
+    const copyLink = document.getElementById("copyLink");
+
+    const facebookShare = document.getElementById("facebookShare");
+    const twitterShare = document.getElementById("twitterShare");
+    const linkedinShare = document.getElementById("linkedinShare");
+    const whatsappShare = document.getElementById("whatsappShare");
+    const tiktokShare = document.getElementById("tiktokShare");
+
+    let open = false;
+
+    // Función para abrir/cerrar botones
+    function toggleButtons(show) {
+        open = show;
+        if (open) {
+            shareButtons.classList.remove("opacity-0", "pointer-events-none");
+            shareButtons.classList.add("opacity-100");
+        } else {
+            shareButtons.classList.add("opacity-0", "pointer-events-none");
+            shareButtons.classList.remove("opacity-100");
+        }
+    }
+
+    toggleShare.onclick = (e) => {
+        toggleButtons(!open);
+        e.stopPropagation(); // Evita que el clic se propague
+    };
+
+    // Asignar URLs dinámicamente según la página actual
+    const currentURL = encodeURIComponent(window.location.href);
+    facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+    twitterShare.href = `https://twitter.com/intent/tweet?url=${currentURL}`;
+    linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}`;
+    whatsappShare.href = `https://api.whatsapp.com/send?text=${currentURL}`;
+    tiktokShare.href = `https://www.tiktok.com/share?url=${currentURL}`;
+
+    // Copiar enlace dinámico
+    copyLink.onclick = (e) => {
+        navigator.clipboard.writeText(window.location.href)
+            .then(() => alert("Enlace copiado al portapapeles"))
+            .catch(() => alert("No se pudo copiar el enlace"));
+        e.stopPropagation(); // Evita cerrar menú
+    };
+
+    // Evitar cerrar al hacer clic dentro del contenedor de botones
+    shareButtons.addEventListener("click", (e) => e.stopPropagation());
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener("click", () => {
+        if (open) toggleButtons(false);
+    });
+
+    // Cerrar al hacer scroll
+    window.addEventListener("scroll", () => {
+        if (open) toggleButtons(false);
+    });
+
+    lucide.createIcons();
+</script>
 
 
 
@@ -1311,7 +1270,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-  
+
+
+
     <script>
         lucide.createIcons();
     </script>
