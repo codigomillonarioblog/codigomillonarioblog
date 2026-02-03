@@ -333,7 +333,7 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
  <!-- Imagen principal con sombra curva -->
   <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/oportunidades-financieras-reales.jpg" alt="" 
+    <img src="../../assets/png/oportunidades-financieras-reales.webp" alt="" 
          class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
     <!-- Sombra curva -->
     <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
@@ -559,70 +559,99 @@ El crecimiento profesional depende tanto de la estrategia como de la experiencia
 
     <!-- ================= ACORDEÓN ================= -->
 
-    <style>
-      .cf-accordion {
-        margin-top: 60px;
-      }
+   <style>
+  .cf-accordion {
+    margin-top: 60px;
+  }
 
-      .cf-accordion * {
-        box-sizing: border-box;
-      }
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
 
-      .cf-accordion-item {
-        background: #ffffff;
-        border-radius: 14px;
-        margin-bottom: 16px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        overflow: hidden;
-      }
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco fijo */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transform: translateY(0);
+    will-change: transform; /* optimiza animación */
+    border: 1px solid rgba(0,0,0,0.03);
+  }
 
-      .cf-accordion-header {
-        padding: 20px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000000;
-        user-select: none;
-      }
+  /* Animación tipo card con sombra */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+  }
 
-      .cf-accordion-header:hover {
-        background: #f5f5f5;
-      }
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
 
-      .cf-accordion-icon {
-        font-size: 18px;
-        color: #000000;
-        transition: transform 0.3s ease;
-      }
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
 
-      .cf-accordion-item.is-open .cf-accordion-icon {
-        transform: rotate(180deg);
-      }
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
 
-      .cf-accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-      }
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
 
-      .cf-accordion-content p {
-        padding: 0 24px 24px;
-        margin: 0;
-        color: #000000;
-        line-height: 1.7;
-        font-size: 16px;
-      }
-    </style>
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+</style>
 
     <div class="cf-accordion">
 
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
 Cómo avanzar en tu empleo entendiendo las reglas del juego
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
   

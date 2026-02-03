@@ -504,9 +504,57 @@ Descubre en los artículos de abajo cómo alcanzar cada meta con claridad.
         <!-- Ejemplo de artículos -->
 
 
+ <div class="article">
+  <article>
+    <a href="./ahorrar-para-una-moto-meta.html" class="article-link">
+      <div class="article-card">
 
+        <div style="position: relative;">
+          <img src="../../../assets/png/plan-de-ahorro-para-comprar-una-moto.webp" 
+               alt="Tu casa siendo independiente">
+          <div class="badge">#¿Quieres comprar moto?</div>
+        </div>
 
+        <h2 class="article-title">
+          ¿Cómo comprar tu moto sin endeudarte?
+        </h2>
 
+        <div class="meta">
+          <span><i>📅</i> 03/02/2026</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<div class="article">
+  <article>
+    <a href="./vivienda-siendo-independiente.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../../assets/png/puedo-comprar-casa-siendo-independiente.jpg" 
+               alt="Tu casa siendo independiente">
+          <div class="badge">#¿Trabajas independiente?</div>
+        </div>
+
+        <h2 class="article-title">
+          ¿Es posible tener casa propia sin un empleo?
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 07/01/2026</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
 
  <div class="article">
   <article>
@@ -534,33 +582,8 @@ Descubre en los artículos de abajo cómo alcanzar cada meta con claridad.
   </article>
 </div>
 
-
-
-  <div class="article">
-  <article>
-    <a href="./vivienda-siendo-independiente.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../../assets/png/puedo-comprar-casa-siendo-independiente.jpg" 
-               alt="Tu casa siendo independiente">
-          <div class="badge">#¿Trabajas independiente?</div>
-        </div>
-
-        <h2 class="article-title">
-          ¿Es posible tener casa propia sin un empleo?
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 07/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
+ 
+ 
 
 
 
@@ -600,70 +623,99 @@ Organizar tu dinero marca la diferencia entre esperar y avanzar.
 
     <!-- ================= ACORDEÓN ================= -->
 
-    <style>
-      .cf-accordion {
-        margin-top: 60px;
-      }
+   <style>
+  .cf-accordion {
+    margin-top: 60px;
+  }
 
-      .cf-accordion * {
-        box-sizing: border-box;
-      }
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
 
-      .cf-accordion-item {
-        background: #ffffff;
-        border-radius: 14px;
-        margin-bottom: 16px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        overflow: hidden;
-      }
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco fijo */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transform: translateY(0);
+    will-change: transform; /* optimiza animación */
+    border: 1px solid rgba(0,0,0,0.03);
+  }
 
-      .cf-accordion-header {
-        padding: 20px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000000;
-        user-select: none;
-      }
+  /* Animación tipo card con sombra */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+  }
 
-      .cf-accordion-header:hover {
-        background: #f5f5f5;
-      }
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
 
-      .cf-accordion-icon {
-        font-size: 18px;
-        color: #000000;
-        transition: transform 0.3s ease;
-      }
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
 
-      .cf-accordion-item.is-open .cf-accordion-icon {
-        transform: rotate(180deg);
-      }
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
 
-      .cf-accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-      }
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
 
-      .cf-accordion-content p {
-        padding: 0 24px 24px;
-        margin: 0;
-        color: #000000;
-        line-height: 1.7;
-        font-size: 16px;
-      }
-    </style>
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+</style>
 
     <div class="cf-accordion">
 
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
 Tu dinero responde a lo que haces, no a lo que esperas
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
   

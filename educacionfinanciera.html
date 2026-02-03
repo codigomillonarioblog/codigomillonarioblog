@@ -143,13 +143,10 @@ body {
   background-color: #f5f5f5 !important; /* gris muy claro */
 }
 
-
 </style>
+
 </head>
-
 <body class="bg-stone-50 text-stone-900">
-
-
 
 <!-- MENU FLOTANTE UNIVERSAL -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -504,7 +501,7 @@ Educación <span class="text-green-600">Financiera</span>
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="./assets/png/como-se-hicieron-millonarios.jpg" alt="">
+          <img src="./assets/png/como-se-hicieron-millonarios.webp" alt="">
           <div class="badge">#¿Cómo se hicieron ricos?</div>
         </div>
 
@@ -531,7 +528,7 @@ Educación <span class="text-green-600">Financiera</span>
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="./assets/png/finanzas-personales-inteligentes.jpg" alt="">
+          <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="">
           <div class="badge">#¿Quieres ahorrar fácil?</div>
         </div>
 
@@ -556,7 +553,7 @@ Educación <span class="text-green-600">Financiera</span>
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="./assets/png/inversion-inteligente-segura.jpg" alt="">
+          <img src="./assets/png/inversion-inteligente-segura.webp" alt="">
           <div class="badge">#¿Temes invertir?</div>
         </div>
 
@@ -581,7 +578,7 @@ Educación <span class="text-green-600">Financiera</span>
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="./assets/png/eliminar-deudas-rapido.jpg" alt="">
+          <img src="./assets/png/eliminar-deudas-rapido.webp" alt="">
           <div class="badge">#¿Tus deudas no se van?</div>
         </div>
 
@@ -606,7 +603,7 @@ Educación <span class="text-green-600">Financiera</span>
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="./assets/png/oportunidades-financieras-reales.jpg" alt="">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
           <div class="badge">#¿Nada de progreso?</div>
         </div>
 
@@ -631,7 +628,7 @@ Educación <span class="text-green-600">Financiera</span>
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="./assets/png/negocios-rentables-desde-cero.jpg" alt="">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
           <div class="badge">#¿No triunfas en negocios?</div>
         </div>
 
@@ -656,7 +653,7 @@ Educación <span class="text-green-600">Financiera</span>
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="./assets/png/detectar-oportunidades-de-mercado.jpg" alt="">
+          <img src="./assets/png/detectar-oportunidades-de-mercado.webp" alt="">
           <div class="badge">#Tu futuro aquí</div>
         </div>
 
@@ -712,70 +709,99 @@ Educación <span class="text-green-600">Financiera</span>
 
     <!-- ================= ACORDEÓN ================= -->
 
-    <style>
-      .cf-accordion {
-        margin-top: 60px;
-      }
+   <style>
+  .cf-accordion {
+    margin-top: 60px;
+  }
 
-      .cf-accordion * {
-        box-sizing: border-box;
-      }
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
 
-      .cf-accordion-item {
-        background: #ffffff;
-        border-radius: 14px;
-        margin-bottom: 16px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        overflow: hidden;
-      }
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco fijo */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transform: translateY(0);
+    will-change: transform; /* optimiza animación */
+    border: 1px solid rgba(0,0,0,0.03);
+  }
 
-      .cf-accordion-header {
-        padding: 20px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000000;
-        user-select: none;
-      }
+  /* Animación tipo card con sombra */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+  }
 
-      .cf-accordion-header:hover {
-        background: #f5f5f5;
-      }
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
 
-      .cf-accordion-icon {
-        font-size: 18px;
-        color: #000000;
-        transition: transform 0.3s ease;
-      }
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
 
-      .cf-accordion-item.is-open .cf-accordion-icon {
-        transform: rotate(180deg);
-      }
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
 
-      .cf-accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-      }
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
 
-      .cf-accordion-content p {
-        padding: 0 24px 24px;
-        margin: 0;
-        color: #000000;
-        line-height: 1.7;
-        font-size: 16px;
-      }
-    </style>
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+</style>
 
     <div class="cf-accordion">
 
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           ¿Qué es la educación financiera?
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
           <p>
@@ -804,7 +830,7 @@ Educación <span class="text-green-600">Financiera</span>
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           ¿Por qué es importante aprender sobre finanzas personales?
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
           <p>
@@ -833,7 +859,7 @@ En pocas palabras, aprender sobre finanzas personales es importante porque te pe
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           ¿Para qué sirve la educación financiera en tu vida diaria?
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
           <p>
@@ -866,7 +892,7 @@ En resumen, la educación financiera sirve para mejorar tu relación con el dine
        <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           ¿Cómo empezar a mejorar tu educación financiera?
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
           <p>
@@ -896,10 +922,21 @@ En resumen, empezar a mejorar tu educación financiera es un proceso accesible p
         </div>
       </div>
 
+ </div>
+</section>
+
+
+
+
+
+<section class="mb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
        <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           ¿Cuándo deberías aplicar estos conceptos?
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
           <p>
@@ -924,7 +961,7 @@ La clave no es esperar el momento perfecto, sino empezar con lo que tienes y des
        <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           ¿Para quién es esta sección de educación financiera?
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
           <p>
@@ -949,7 +986,7 @@ Si alguna vez has sentido que nadie te explicó cómo funciona el dinero en la v
        <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           El verdadero inicio de tu libertad financiera
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
          <p>
@@ -971,7 +1008,7 @@ Si alguna vez has sentido que nadie te explicó cómo funciona el dinero en la v
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           ¿Cómo actuar hoy?
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
            <p>
@@ -1019,7 +1056,6 @@ Si alguna vez has sentido que nadie te explicó cómo funciona el dinero en la v
         });
       });
     </script>
-
 
  </div>
 </section>

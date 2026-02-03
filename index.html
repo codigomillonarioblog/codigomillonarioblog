@@ -311,6 +311,88 @@ document.addEventListener("DOMContentLoaded", () => {
 </section>
 
 
+ <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-5 sm:mb-8 mt-5 sm:mt-5 text-center leading-tight"
+          style="font-family: 'Poppins', sans-serif;">
+       Una forma distinta de 
+      <span class="inline-block mt-1 sm:mt-0"
+        style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
+        aprender sobre dinero
+      </span>
+    </h2>
+
+
+<!-- BLOQUE EXPLICATIVO 8 -->
+<section class="mb-16 text-left cursor-pointer">
+
+  <!-- CONTENEDOR QUE LIMITA EL ANCHO -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div
+      class="flex gap-6 overflow-x-auto pb-4
+             md:grid md:grid-cols-2
+             lg:grid-cols-4
+             md:gap-6 md:overflow-visible">
+
+      <!-- CUADRO 1 -->
+      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
+                  bg-white/90 border border-stone-200
+                  shadow-sm
+                  transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
+        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
+          Aprende a pensar
+        </h3>
+        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
+          Tomar control del dinero no es ganar más de inmediato, es entender cómo funciona el sistema y cómo tomar mejores decisiones dentro de él.
+        </p>
+      </div>
+
+      <!-- CUADRO 2 -->
+      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
+                  bg-white/90 border border-stone-200
+                  shadow-sm
+                  transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
+        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
+          Con cabeza fría
+        </h3>
+        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
+         Aquí aprenderás a evaluar ideas, detectar riesgos y entender por qué muchas estrategias fallan antes de copiar lo que otros dicen que funciona.
+        </p>
+      </div>
+
+      <!-- CUADRO 3 -->
+      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
+                  bg-white/90 border border-stone-200
+                  shadow-sm
+                  transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
+        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
+          Construir con tiempo
+        </h3>
+        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
+          El crecimiento financiero no es un golpe de suerte, es el resultado de hábitos, conocimientos y constancia sostenida.
+        </p>
+      </div>
+
+      <!-- CUADRO 4 -->
+      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
+                  bg-white/90 border border-stone-200
+                  shadow-sm
+                  transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
+        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
+          Lo que sí importa
+        </h3>
+        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
+          El dinero es consecuencia. Sin mentalidad, conocimiento y sistemas, cualquier ganancia es frágil y temporal.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -333,75 +415,106 @@ Aprender sobre dinero no es complicado, solo requiere claridad y criterio.
 
 
 
-    <section class="mb-16"  style="font-family:'Lora',serif;">
+<section class="mb-16" style="font-family:'Lora',serif;">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- ================= ACORDEÓN ================= -->
 
-    <style>
-      .cf-accordion {
-        margin-top: 60px;
-      }
+  <style>
+  .cf-accordion {
+    margin-top: 60px;
+  }
 
-      .cf-accordion * {
-        box-sizing: border-box;
-      }
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
 
-      .cf-accordion-item {
-        background: #ffffff;
-        border-radius: 14px;
-        margin-bottom: 16px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        overflow: hidden;
-      }
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco fijo */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transform: translateY(0);
+    will-change: transform; /* optimiza animación */
+    border: 1px solid rgba(0,0,0,0.03);
+  }
 
-      .cf-accordion-header {
-        padding: 20px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000000;
-        user-select: none;
-      }
+  /* Animación tipo card con sombra */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+  }
 
-      .cf-accordion-header:hover {
-        background: #f5f5f5;
-      }
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
 
-      .cf-accordion-icon {
-        font-size: 18px;
-        color: #000000;
-        transition: transform 0.3s ease;
-      }
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
 
-      .cf-accordion-item.is-open .cf-accordion-icon {
-        transform: rotate(180deg);
-      }
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
 
-      .cf-accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-      }
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
 
-      .cf-accordion-content p {
-        padding: 0 24px 24px;
-        margin: 0;
-        color: #000000;
-        line-height: 1.7;
-        font-size: 16px;
-      }
-    </style>
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+</style>
+
+
 
     <div class="cf-accordion">
 
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           El dinero no es el problema
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
          
@@ -419,7 +532,7 @@ Como CEO de Código Millonario, para mí es un honor presentarte un espacio dedi
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
 Una mirada clara sobre el dinero y cómo lo usamos
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
           <p>
@@ -455,7 +568,7 @@ El contenido está pensado para quienes quieren dejar de improvisar con su diner
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           Para quienes ya manejan bien su dinero
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
          
@@ -514,75 +627,19 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
   </blockquote>
 
        
-<section class="mb-16"  style="font-family:'Lora',serif;">
+
+
+<section class="mb-16" style="font-family:'Lora',serif;">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- ================= ACORDEÓN ================= -->
-
-    <style>
-      .cf-accordion {
-        margin-top: 60px;
-      }
-
-      .cf-accordion * {
-        box-sizing: border-box;
-      }
-
-      .cf-accordion-item {
-        background: #ffffff;
-        border-radius: 14px;
-        margin-bottom: 16px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        overflow: hidden;
-      }
-
-      .cf-accordion-header {
-        padding: 20px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000000;
-        user-select: none;
-      }
-
-      .cf-accordion-header:hover {
-        background: #f5f5f5;
-      }
-
-      .cf-accordion-icon {
-        font-size: 18px;
-        color: #000000;
-        transition: transform 0.3s ease;
-      }
-
-      .cf-accordion-item.is-open .cf-accordion-icon {
-        transform: rotate(180deg);
-      }
-
-      .cf-accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-      }
-
-      .cf-accordion-content p {
-        padding: 0 24px 24px;
-        margin: 0;
-        color: #000000;
-        line-height: 1.7;
-        font-size: 16px;
-      }
-    </style>
 
     <div class="cf-accordion">
 
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           Decisiones conscientes, no promesas rápidas
-          <span class="cf-accordion-icon">▼</span>
+          <span class="cf-accordion-icon"></span>
         </div>
         <div class="cf-accordion-content">
   
@@ -779,99 +836,39 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
 
 
 
-
-     <section class="mb-16"  style="font-family:'Lora',serif;">
+<section class="mb-16" style="font-family:'Lora',serif;">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- ================= ACORDEÓN ================= -->
-
-    <style>
-      .cf-accordion {
-        margin-top: 60px;
-      }
-
-      .cf-accordion * {
-        box-sizing: border-box;
-      }
-
-      .cf-accordion-item {
-        background: #ffffff;
-        border-radius: 14px;
-        margin-bottom: 16px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        overflow: hidden;
-      }
-
-      .cf-accordion-header {
-        padding: 20px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000000;
-        user-select: none;
-      }
-
-      .cf-accordion-header:hover {
-        background: #f5f5f5;
-      }
-
-      .cf-accordion-icon {
-        font-size: 18px;
-        color: #000000;
-        transition: transform 0.3s ease;
-      }
-
-      .cf-accordion-item.is-open .cf-accordion-icon {
-        transform: rotate(180deg);
-      }
-
-      .cf-accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-      }
-
-      .cf-accordion-content p {
-        padding: 0 24px 24px;
-        margin: 0;
-        color: #000000;
-        line-height: 1.7;
-        font-size: 16px;
-      }
-    </style>
+    
 
     <div class="cf-accordion">
 
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-         Más pensamiento, menos atajos.
-          <span class="cf-accordion-icon">▼</span>
+          Más pensamiento, menos atajos.
+          <span class="cf-accordion-icon"></span>
         </div>
+
         <div class="cf-accordion-content">
-          
-      <p>
-        Aquí no vas a encontrar frases motivacionales vacías ni consejos genéricos.
+          <p>
+            Cada artículo de Código Millonario está escrito para explicar cómo funciona realmente el dinero, cómo se construye la riqueza y qué decisiones marcan la diferencia a largo plazo.
 
-        Cada artículo de Código Millonario está escrito para ayudarte a entender cómo funciona realmente el dinero, cómo se construye la riqueza y qué decisiones marcan la diferencia a largo plazo.
-      </p>
-
-      <p>
-        Analizamos historias reales, errores comunes y estrategias que sí son replicables, para que no dependas de la suerte, sino del criterio.
-      </p>
-
+            Analizamos historias reales, errores comunes y estrategias replicables, para que no dependas de la suerte, sino del criterio y la realidad económica.
+          </p>
         </div>
       </div>
 
     </div>
 
- </div>
+  </div>
 </section>
-    <!-- ================= FIN ACORDEÓN ================= -->
+<!-- ================= FIN ACORDEÓN ================= -->
 
 
+
+
+    
 
     <!-- GRID RESPONSIVO -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
@@ -882,7 +879,7 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
           <a href="./blog/ahorro/index.html" class="article-link">
             <div class="article-card">
               <div style="position: relative;">
-                <img src="./assets/png/finanzas-personales-inteligentes.jpg" alt="Ahorro Inteligente">
+                <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="Ahorro Inteligente">
                 <div class="badge">#¿Quieres ahorrar fácil?</div>
               </div>
               <h2 class="article-title">Formas de gestionar tu dinero sin problemas</h2>
@@ -902,7 +899,7 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
           <a href="./blog/empleo/index.html" class="article-link">
             <div class="article-card">
               <div style="position: relative;">
-                <img src="./assets/png/oportunidades-financieras-reales.jpg" alt="Inversión Inteligente">
+                <img src="./assets/png/oportunidades-financieras-reales.webp" alt="Inversión Inteligente">
                 <div class="badge">#¿Nada de progreso?</div>
               </div>
               <h2 class="article-title">Genera oportunidades en tu carrera laboral</h2>
@@ -922,7 +919,7 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
           <a href="./blog/inversiones/index.html" class="article-link">
             <div class="article-card">
               <div style="position: relative;">
-                <img src="./assets/png/inversion-inteligente-segura.jpg" alt="Ingresos Pasivos">
+                <img src="./assets/png/inversion-inteligente-segura.webp" alt="Ingresos Pasivos">
                 <div class="badge">#¿Temes invertir?</div>
               </div>
               <h2 class="article-title">Aprende cómo invertir sin temores este año</h2>
@@ -1042,9 +1039,13 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
             shadow-md hover:shadow-lg transform hover:-translate-y-1 hover:scale-105 
             transition-all duration-300 ease-in-out"
      style="font-family: 'Poppins', sans-serif;">
-    Ver todo el contenido
+    Ver todo el Contenido
   </a>
 </div>
+
+
+
+
 
 
 
