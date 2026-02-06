@@ -65,11 +65,6 @@
 
 
 
-
-
-
-
-
  /* ================== BANNER MODERNO ================== */
 .banner-section {
   position: relative;
@@ -349,6 +344,49 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+
+<script>
+const emailInput = document.getElementById('email');
+const errorText = document.getElementById('emailError');
+
+emailInput.addEventListener('invalid', () => {
+  if (emailInput.validity.valueMissing) {
+    errorText.textContent = 'El correo es obligatorio.';
+  } 
+  else if (emailInput.validity.typeMismatch) {
+    errorText.textContent = 'Ingresa un correo electrónico válido.';
+  } 
+  else if (emailInput.validity.tooShort) {
+    errorText.textContent = 'El correo es demasiado corto.';
+  } 
+  else if (emailInput.validity.tooLong) {
+    errorText.textContent = 'El correo es demasiado largo.';
+  }
+
+  errorText.classList.remove('hidden');
+});
+
+emailInput.addEventListener('input', () => {
+  if (emailInput.validity.valid) {
+    errorText.classList.add('hidden');
+  }
+});
+</script>
+
+
+<script>
+  // FUNCIONES PARA ABRIR Y CERRAR POPUP
+  function openPopup() {
+    const overlay = document.getElementById("popupOverlay");
+    overlay.style.display = "flex";
+  }
+
+  function closePopup() {
+    const overlay = document.getElementById("popupOverlay");
+    overlay.style.display = "none";
+  }
+</script>
+
 </body>
 
 
@@ -433,37 +471,45 @@ document.addEventListener('DOMContentLoaded', () => {
       <!-- 🔁 Redirección después de enviar -->
       <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias2.html">
 
-      <!-- EMAIL -->
-      <input type="email" name="email" required
-             class="w-full border border-stone-300 rounded-lg px-4 py-3"
-             placeholder="Tu correo electrónico">
+<!-- EMAIL -->
+<div>
+  <input id="email"
+         type="email"
+         name="email"
+         required
+         minlength="6"
+         maxlength="60"
+         class="w-full border border-stone-300 rounded-lg px-4 py-3"
+         placeholder="Tu correo electrónico">
 
-      <!-- BOTÓN -->
+  <p id="emailError" class="hidden text-sm text-red-600 mt-2">
+    Debes ingresar un correo electrónico válido.
+  </p>
+</div>
+
+     <!-- BOTÓN -->
       <button type="submit"
               class="bg-green-600 text-white w-full py-3 rounded-lg font-semibold hover:bg-green-700">
         Obtener Guía
       </button>
-    </form>
 
-    <!-- CERRAR POPUP -->
-    <button onclick="closePopup()" class="mt-4 text-sm text-stone-500 hover:text-stone-700">
-      Cerrar
-    </button>
+        </form>
+
+<!-- CERRAR POPUP -->
+<button onclick="closePopup()"
+  class="w-full mt-3 py-3 rounded-lg font-semibold
+         text-stone-600 bg-transparent
+         border border-stone-300
+         hover:bg-stone-100 hover:text-stone-800
+         active:scale-95
+         transition-all duration-150 ease-out">
+  Cerrar
+</button>
+
   </div>
 </div>
 
-<script>
-  // FUNCIONES PARA ABRIR Y CERRAR POPUP
-  function openPopup() {
-    const overlay = document.getElementById("popupOverlay");
-    overlay.style.display = "flex";
-  }
 
-  function closePopup() {
-    const overlay = document.getElementById("popupOverlay");
-    overlay.style.display = "none";
-  }
-</script>
 
 
 
@@ -472,37 +518,49 @@ document.addEventListener('DOMContentLoaded', () => {
 <section class="relative py-20 lg:py-32 text-left overflow-x-hidden" style="font-family: 'Lora', serif;">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
 
-    <div class="space-y-8">
-      <div class="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-[10px] font-medium">
-        <i data-lucide="sparkles" class="w-4 h-4"></i>
-        <span>Nueva Guía Financiera</span>
+    <!-- Columna izquierda: todo agrupado -->
+    <div class="flex flex-col">
+      <!-- Badge minimalista -->
+      <div class="inline-flex items-center space-x-2 mb-4">
+        <i data-lucide="check-circle" class="w-4 h-4"></i>
+        <span class="text-stone-900 text-sm font-medium">Nueva Guía Financiera</span>
       </div>
 
       <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
-        Aprende a <span class="text-green-600">Multiplicar tu Dinero</span> desde Cero
+        Aprende a Multiplicar tu Dinero <span class="text-green-600"> desde Cero </span> 
       </h1>
 
-      <blockquote class="italic text-stone-600 text-left">
-        <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+      <blockquote class="italic text-stone-600 text-left mt-6">
+        <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
           <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
             Aprende a ganar, ahorrar e invertir con inteligencia. Sin atajos, sin promesas falsas, solo pasos reales hacia tu libertad financiera.
           </span>
         </p>
       </blockquote>  
-
-      <!-- Botones movidos debajo del texto -->
-      <div class="flex flex-col sm:flex-row gap-4 mt-4" style="font-family: 'Poppins', sans-serif;">
-        <button onclick="openPopup()"
-                class="bg-green-600 text-white px-3 sm:px-5 py-2 sm:py-3 rounded-full text-sm font-semibold hover:bg-green-700 shadow-lg text-center w-full sm:w-auto shake-button">
-          Descargar Guía Gratis
-        </button>
-
-        <a href="./tienda.html"
-           class="border-2 border-stone-300 text-stone-700 px-3 sm:px-5 py-2 sm:py-3 rounded-full text-sm font-semibold hover:border-green-600 hover:text-green-600 flex items-center justify-center w-full sm:w-auto">
-          Productos
-        </a>
-      </div>
     </div>
+
+    <!-- Columna derecha vacía o imagen -->
+    <div></div>
+
+
+ <!-- Botones movidos debajo del texto -->
+<div class="flex flex-col sm:flex-row gap-4 mt-4" style="font-family: 'Poppins', sans-serif;">
+
+  <!-- Botón principal -->
+  <button onclick="openPopup()"
+          class="bg-stone-800 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-stone-700 shadow-lg text-center w-full sm:w-auto shake-button transition-all duration-200">
+    Descargar Guía Gratis
+  </button>
+
+  <!-- Botón secundario -->
+  <a href="./tienda.html"
+     class="border-2 border-stone-300 text-stone-700 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold 
+            hover:bg-stone-800 hover:text-white flex items-center justify-center w-full sm:w-auto transition-all duration-200">
+    Productos
+  </a>
+
+</div>
+
 
     <!-- Puedes dejar vacía la segunda columna si quieres que todo quede en la izquierda -->
     <div></div>
@@ -512,9 +570,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 <!-- Contenedor tipo "3 cartas" -->
-<div class="relative flex justify-center items-end mt-0" style="height: 300px;">
+<div class="relative flex justify-center items-end mt-0 h-[200px] sm:h-[260px] md:h-[320px]">
 
   <!-- Imagen 2 (detrás izquierda) -->
   <img src="./assets/img/crecer-mentalmente-para-avanzar.webp" 
@@ -526,16 +583,15 @@ document.addEventListener('DOMContentLoaded', () => {
        alt=""
        class="absolute right-2 w-24 h-24 sm:right-1/5 sm:w-36 sm:h-36 md:right-1/4 md:w-56 md:h-56 object-cover rounded-lg transform rotate-6 z-0">
 
-  <!-- Imagen 1 (frente, más grande) -->
+  <!-- Imagen 1 (frente) -->
   <img src="./assets/img/mentalidad-ganadora-diaria.webp" 
        alt=""
        class="relative w-36 h-36 sm:w-48 sm:h-48 md:w-72 md:h-72 object-cover rounded-lg z-10">
 
-  <!-- Sombra curva (solo para la primera) -->
+  <!-- Sombra -->
   <div class="absolute bottom-0 w-36 h-8 sm:w-48 sm:h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
 
 </div>
-
 
 
 
@@ -625,23 +681,467 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+<!-- Símbolo / ícono -->
+<div class="text-stone-400 text-lg mb-3 text-center">
+  $
+</div>
 
- <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
-          style="font-family: 'Poppins', sans-serif;">
-      Sobre este sitio
-      <span class="inline-block mt-1 sm:mt-0"
-        style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
-        Código Millonario
+<div class="flex justify-center my-8 px-4">
+  <div class="overflow-hidden max-w-full">
+    <marquee
+      class="block w-full max-w-md mx-auto"
+      scrollamount="5"
+      bgcolor="#FFFFFF"
+    >
+      <span style="font-family: georgia; font-size: 1rem; font-weight: 600; color: #000;">
+        El dinero no da felicidad, pero el desorden financiero sí quita mucha tranquilidad.
       </span>
-    </h2>
+    </marquee>
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="./assets/img/libertad-financiera-paso-a-paso.webp" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
+
+
+
+<section class="mb-14 sm:mb-16">
+  <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
+      style="font-family: 'Poppins', sans-serif;">
+    Lo que dicen nuestros 
+    <span class="inline-block mt-1 sm:mt-0"
+          style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
+      Lectores
+    </span>
+  </h2>
 
   <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
-    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+    <p class="text-sm text-stone-500 mt-6" style="font-family: 'Poppins', sans-serif;">
       <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-Aprender sobre dinero no es complicado, solo requiere claridad y criterio.
+        Decisiones conscientes, no promesas rápidas
       </span>
     </p>
   </blockquote>
+</section>
+
+
+
+<!-- BLOQUE DE TESTIMONIOS ESTILO TARJETAS -->
+<section class="mb-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- GRID RESPONSIVO -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
+
+      <!-- Testimonio 1 -->
+      <article class="h-full">
+        <div class="article-card flex flex-col h-full">
+          <div class="flex items-center space-x-4 mb-4">
+            <img src="https://i.pravatar.cc/80?img=32" class="w-14 h-14 rounded-full" alt="Carolina López">
+            <div>
+              <h3 class="article-title">Mariana Rodríguez</h3>
+              <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">Colombia</p>
+            </div>
+          </div>
+
+          <!-- 5 estrellas completas -->
+          <div class="flex text-yellow-400 mb-3">
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+          </div>
+
+          <p class="text-stone-700 leading-relaxed flex-grow" style="font-family: 'Poppins', sans-serif;" >
+           Antes veía el dinero como algo que siempre se iba. Con tu contenido aprendí a tomar decisiones más 
+           conscientes y a pensar a largo plazo. Hoy manejo mis gastos con mucha más claridad.
+          </p>
+        </div>
+      </article>
+
+      <!-- Testimonio 2 -->
+      <article class="h-full">
+        <div class="article-card flex flex-col h-full">
+          <div class="flex items-center space-x-4 mb-4">
+            <img src="https://i.pravatar.cc/80?img=12" class="w-14 h-14 rounded-full" alt="David Herrera">
+            <div>
+              <h3 class="article-title">Alejandro Ramírez</h3>
+              <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">México</p>
+            </div>
+          </div>
+
+          <div class="flex text-yellow-400 mb-3">
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+          </div>
+
+          <p class="text-stone-700 leading-relaxed flex-grow" style="font-family: 'Poppins', sans-serif;" >
+          Siempre había leído sobre inversión, pero no sabía por dónde empezar. Con este contenido entendí los conceptos clave y aprendí 
+          a evaluar riesgos antes de mover mi dinero. Ahora invierto con criterio, no por impulso.
+          </p>
+        </div>
+      </article>
+
+      <!-- Testimonio 3 -->
+      <article class="h-full">
+        <div class="article-card flex flex-col h-full">
+          <div class="flex items-center space-x-4 mb-4">
+            <img src="https://i.pravatar.cc/80?img=48" class="w-14 h-14 rounded-full" alt="Valentina Torres">
+            <div>
+              <h3 class="article-title">Camila Rojas</h3>
+              <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">Chile</p>
+            </div>
+          </div>
+
+          <div class="flex text-yellow-400 mb-3">
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+          </div>
+
+          <p class="text-stone-700 leading-relaxed flex-grow" style="font-family: 'Poppins', sans-serif;" >
+          Este contenido me ayudó a cambiar la forma en que tomo decisiones con mi dinero. Dejé de improvisar y empecé a 
+          planificar mejor mis ingresos y gastos, con una visión más clara a largo plazo.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Usa el mismo CSS de las tarjetas compactas -->
+<style>
+.article-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-card {
+    width: 100%;
+    max-width: 300px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Para testimonios: la imagen es circular */
+.article-card .rounded-full {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+}
+
+.article-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    margin-top: 0; /* para testimonios queda más ajustado */
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.meta, .arrow-btn, .badge { display: none; } /* ocultamos lo que no aplica */
+</style>
+
+
+
+
+
+<!-- Símbolo / ícono -->
+<div class="text-stone-400 text-lg mb-3 text-center">
+  $
+</div>
+
+<div class="flex justify-center my-8 px-4">
+  <div class="overflow-hidden max-w-full">
+    <marquee
+      class="block w-full max-w-md mx-auto"
+      scrollamount="5"
+      bgcolor="#FFFFFF"
+    >
+      <span style="font-family: georgia; font-size: 1rem; font-weight: 600; color: #000;">
+        La verdadera riqueza es no vivir persiguiendo lo que no necesitas.
+      </span>
+    </marquee>
+  </div>
+</div>
+
+
+
+
+<!-- BLOQUE DE TARJETAS COMPACTAS -->
+<section class="mb-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+    <section class="mb-5 sm:mb-16">
+  <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-3 sm:mb-8 mt-4 sm:mt-20 text-center leading-tight"
+      style="font-family: 'Poppins', sans-serif;">
+    Lo que realmente importa al 
+    <span class="inline-block mt-1 sm:mt-0"
+          style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
+      manejar tu dinero
+    </span>
+  </h2>
+
+  <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
+    <p class="text-sm text-stone-500 mt-6" style="font-family: 'Poppins', sans-serif;">
+      Prioriza lo que suma: decisiones inteligentes hoy, tranquilidad financiera mañana.
+    </p>
+  </blockquote>
+</section>
+
+    <!-- GRID RESPONSIVO -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+
+      <!-- TARJETA 1 -->
+      <div class="article">
+        <article>
+          <a href="./blog/ahorro/index.html" class="article-link">
+            <div class="article-card">
+              <div style="position: relative;">
+                <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="Ahorro Inteligente">
+                <div class="badge">#¿Quieres ahorrar fácil?</div>
+              </div>
+              <h2 class="article-title">Formas de gestionar tu dinero sin problemas</h2>
+              <div class="meta">
+                <span><i>📅</i> 13/10/2025</span>
+                <span><i>💬</i> Sin Comentarios</span>
+                <div class="arrow-btn">➜</div>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <!-- TARJETA 2 -->
+      <div class="article">
+        <article>
+          <a href="./blog/empleo/index.html" class="article-link">
+            <div class="article-card">
+              <div style="position: relative;">
+                <img src="./assets/png/oportunidades-financieras-reales.webp" alt="Inversión Inteligente">
+                <div class="badge">#¿Nada de progreso?</div>
+              </div>
+              <h2 class="article-title">Genera oportunidades en tu carrera laboral</h2>
+              <div class="meta">
+                <span><i>📅</i> 20/10/2025</span>
+                <span><i>💬</i> Sin Comentarios</span>
+                <div class="arrow-btn">➜</div>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <!-- TARJETA 3 -->
+      <div class="article">
+        <article>
+          <a href="./blog/inversiones/index.html" class="article-link">
+            <div class="article-card">
+              <div style="position: relative;">
+                <img src="./assets/png/inversion-inteligente-segura.webp" alt="Ingresos Pasivos">
+                <div class="badge">#¿Temes invertir?</div>
+              </div>
+              <h2 class="article-title">Aprende cómo invertir sin temores este año</h2>
+              <div class="meta">
+                <span><i>📅</i> 25/10/2025</span>
+                <span><i>💬</i> Sin Comentarios</span>
+                <div class="arrow-btn">➜</div>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <!-- Puedes duplicar más tarjetas aquí -->
+    </div>
+  </div>
+</section>
+
+<!-- CSS PARA TARJETAS COMPACTAS -->
+<style>
+.article-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-card {
+    width: 100%;
+    max-width: 300px; /* más pequeña que antes */
+    background: #ffffff;
+    border-radius: 20px; /* ligeramente más pequeño */
+    padding: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px; /* más compacta */
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.badge {
+    position: relative;
+    display: inline-block;
+    background: #1E5BFF;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: -28px;
+    margin-left: 10px;
+}
+
+.article-title {
+    font-size: 18px; /* más pequeña */
+    font-weight: 700;
+    color: #222;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 6px;
+}
+
+.meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.arrow-btn {
+    margin-left: auto;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    background: #1E5BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.article-card:hover .arrow-btn {
+    transform: scale(1.15);
+}
+</style>
+
+
+
+
+<div class="text-center mt-8">
+  <a href="./educacionfinanciera.html"
+     class="inline-block bg-stone-800 text-white text-sm font-semibold px-6 py-3 rounded-full 
+            shadow-md hover:bg-stone-700 hover:shadow-lg transform hover:-translate-y-1 hover:scale-105 
+            transition-all duration-300 ease-in-out"
+     style="font-family: 'Poppins', sans-serif;">
+    Ver todo el Contenido
+  </a>
+</div>
+
+
+
+<div class="text-stone-400 text-lg mt-20 mb-4 text-center">
+  $
+</div>
+
+<div class="flex justify-center my-8 px-4">
+  <div class="overflow-hidden max-w-full">
+    <marquee
+      class="block w-full max-w-md mx-auto"
+      scrollamount="5"
+      bgcolor="#FFFFFF"
+    >
+      <span style="font-family: georgia; font-size: 1rem; font-weight: 600; color: #000;">
+        No se trata de correr detrás del dinero, sino de dejar de huirle al control.
+      </span>
+    </marquee>
+  </div>
+</div>
+
+
+
+
+<section class="pt-10 sm:pt-14 mb-20 sm:mb-16">
+  <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 text-center leading-tight"
+      style="font-family: 'Poppins', sans-serif;">
+    Sobre este sitio
+    <span class="inline-block mt-1 sm:mt-0"
+          style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
+      Código Millonario
+    </span>
+  </h2>
+
+  <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
+    <p class="text-sm text-stone-500 mt-6" style="font-family: 'Poppins', sans-serif;">
+      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+        A continuación respondemos las preguntas frecuentes sobre este sitio y su propósito.
+      </span>
+    </p>
+  </blockquote>
+</section>
+
+
 
 
 
@@ -817,55 +1317,6 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
         </div>
       </div>
 
-    </div>
-
- </div>
-</section>
-    <!-- ================= FIN ACORDEÓN ================= -->
-
-
-    
-
-
-
-
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="./assets/img/libertad-financiera-paso-a-paso.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
-
-
-
-  <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
-        style="font-family: 'Poppins', sans-serif;">
-      Lo que dicen nuestros 
-      <span class="inline-block mt-1 sm:mt-0"
-            style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
-       Lectores
-      </span>
-    </h2>
-
-  <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
-    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
-      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-          Decisiones conscientes, no promesas rápidas
-      </span>
-    </p>
-  </blockquote>
-
-       
-
-
-<section class="mb-16" style="font-family:'Lora',serif;">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- ================= ACORDEÓN ================= -->
-
-    <div class="cf-accordion">
-
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
           Decisiones conscientes, no promesas rápidas
@@ -874,7 +1325,7 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
         <div class="cf-accordion-content">
   
             <p>
-        Estas opiniones no vienen de expertos financieros ni de promesas de resultados rápidos.
+        Las opiniones en esta sección no vienen de expertos financieros ni de promesas de resultados rápidos.
         Vienen de lectores que decidieron informarse mejor antes de tomar decisiones con su dinero.
       </p>
 
@@ -888,191 +1339,6 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
 
         </div>
       </div>
-
-    </div>
-
- </div>
-</section>
-    <!-- ================= FIN ACORDEÓN ================= -->
-
-
-
-
-<!-- BLOQUE DE TESTIMONIOS ESTILO TARJETAS -->
-<section class="mb-16">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- GRID RESPONSIVO -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
-
-      <!-- Testimonio 1 -->
-      <article class="h-full">
-        <div class="article-card flex flex-col h-full">
-          <div class="flex items-center space-x-4 mb-4">
-            <img src="https://i.pravatar.cc/80?img=32" class="w-14 h-14 rounded-full" alt="Carolina López">
-            <div>
-              <h3 class="article-title">Mariana Rodríguez</h3>
-              <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">Colombia</p>
-            </div>
-          </div>
-
-          <!-- 5 estrellas completas -->
-          <div class="flex text-yellow-400 mb-3">
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-          </div>
-
-          <p class="text-stone-700 leading-relaxed flex-grow" style="font-family: 'Poppins', sans-serif;" >
-           Antes veía el dinero como algo que siempre se iba. Con tu contenido aprendí a tomar decisiones más 
-           conscientes y a pensar a largo plazo. Hoy manejo mis gastos con mucha más claridad.
-          </p>
-        </div>
-      </article>
-
-      <!-- Testimonio 2 -->
-      <article class="h-full">
-        <div class="article-card flex flex-col h-full">
-          <div class="flex items-center space-x-4 mb-4">
-            <img src="https://i.pravatar.cc/80?img=12" class="w-14 h-14 rounded-full" alt="David Herrera">
-            <div>
-              <h3 class="article-title">Alejandro Ramírez</h3>
-              <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">México</p>
-            </div>
-          </div>
-
-          <div class="flex text-yellow-400 mb-3">
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-          </div>
-
-          <p class="text-stone-700 leading-relaxed flex-grow" style="font-family: 'Poppins', sans-serif;" >
-          Siempre había leído sobre inversión, pero no sabía por dónde empezar. Con este contenido entendí los conceptos clave y aprendí 
-          a evaluar riesgos antes de mover mi dinero. Ahora invierto con criterio, no por impulso.
-          </p>
-        </div>
-      </article>
-
-      <!-- Testimonio 3 -->
-      <article class="h-full">
-        <div class="article-card flex flex-col h-full">
-          <div class="flex items-center space-x-4 mb-4">
-            <img src="https://i.pravatar.cc/80?img=48" class="w-14 h-14 rounded-full" alt="Valentina Torres">
-            <div>
-              <h3 class="article-title">Camila Rojas</h3>
-              <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">Chile</p>
-            </div>
-          </div>
-
-          <div class="flex text-yellow-400 mb-3">
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-          </div>
-
-          <p class="text-stone-700 leading-relaxed flex-grow" style="font-family: 'Poppins', sans-serif;" >
-          Este contenido me ayudó a cambiar la forma en que tomo decisiones con mi dinero. Dejé de improvisar y empecé a 
-          planificar mejor mis ingresos y gastos, con una visión más clara a largo plazo.
-          </p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- Usa el mismo CSS de las tarjetas compactas -->
-<style>
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.article-card {
-    width: 100%;
-    max-width: 300px;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 14px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    font-family: 'Arial', sans-serif;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
-}
-
-.article-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-}
-
-.article-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 16px;
-}
-
-/* Para testimonios: la imagen es circular */
-.article-card .rounded-full {
-    width: 56px;
-    height: 56px;
-    object-fit: cover;
-}
-
-.article-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #222;
-    margin-top: 0; /* para testimonios queda más ajustado */
-    margin-bottom: 6px;
-    line-height: 1.3;
-}
-
-.meta, .arrow-btn, .badge { display: none; } /* ocultamos lo que no aplica */
-</style>
-
-
-
-
-
-
-<!-- BLOQUE DE TARJETAS COMPACTAS -->
-<section class="mb-16">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-<h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
-    style="font-family: 'Poppins', sans-serif;">
-  Lo que realmente importa al 
-  <span class="inline-block mt-1 sm:mt-0"
-        style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
-    manejar tu dinero
-  </span>
-</h2>
-
-<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mt-4">
-  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
-    Prioriza lo que suma: decisiones inteligentes hoy, tranquilidad financiera mañana.
-  </p>
-</blockquote>
-
-
-
-<section class="mb-16" style="font-family:'Lora',serif;">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- ================= ACORDEÓN ================= -->
-    
-
-    <div class="cf-accordion">
 
       <div class="cf-accordion-item">
         <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
@@ -1091,191 +1357,9 @@ Este espacio propone reflexión más que instrucciones, contraste de ideas más 
 
     </div>
 
-  </div>
+ </div>
 </section>
-<!-- ================= FIN ACORDEÓN ================= -->
-
-
-
-
-    
-
-    <!-- GRID RESPONSIVO -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-
-      <!-- TARJETA 1 -->
-      <div class="article">
-        <article>
-          <a href="./blog/ahorro/index.html" class="article-link">
-            <div class="article-card">
-              <div style="position: relative;">
-                <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="Ahorro Inteligente">
-                <div class="badge">#¿Quieres ahorrar fácil?</div>
-              </div>
-              <h2 class="article-title">Formas de gestionar tu dinero sin problemas</h2>
-              <div class="meta">
-                <span><i>📅</i> 13/10/2025</span>
-                <span><i>💬</i> Sin Comentarios</span>
-                <div class="arrow-btn">➜</div>
-              </div>
-            </div>
-          </a>
-        </article>
-      </div>
-
-      <!-- TARJETA 2 -->
-      <div class="article">
-        <article>
-          <a href="./blog/empleo/index.html" class="article-link">
-            <div class="article-card">
-              <div style="position: relative;">
-                <img src="./assets/png/oportunidades-financieras-reales.webp" alt="Inversión Inteligente">
-                <div class="badge">#¿Nada de progreso?</div>
-              </div>
-              <h2 class="article-title">Genera oportunidades en tu carrera laboral</h2>
-              <div class="meta">
-                <span><i>📅</i> 20/10/2025</span>
-                <span><i>💬</i> Sin Comentarios</span>
-                <div class="arrow-btn">➜</div>
-              </div>
-            </div>
-          </a>
-        </article>
-      </div>
-
-      <!-- TARJETA 3 -->
-      <div class="article">
-        <article>
-          <a href="./blog/inversiones/index.html" class="article-link">
-            <div class="article-card">
-              <div style="position: relative;">
-                <img src="./assets/png/inversion-inteligente-segura.webp" alt="Ingresos Pasivos">
-                <div class="badge">#¿Temes invertir?</div>
-              </div>
-              <h2 class="article-title">Aprende cómo invertir sin temores este año</h2>
-              <div class="meta">
-                <span><i>📅</i> 25/10/2025</span>
-                <span><i>💬</i> Sin Comentarios</span>
-                <div class="arrow-btn">➜</div>
-              </div>
-            </div>
-          </a>
-        </article>
-      </div>
-
-      <!-- Puedes duplicar más tarjetas aquí -->
-    </div>
-  </div>
-</section>
-
-<!-- CSS PARA TARJETAS COMPACTAS -->
-<style>
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.article-card {
-    width: 100%;
-    max-width: 300px; /* más pequeña que antes */
-    background: #ffffff;
-    border-radius: 20px; /* ligeramente más pequeño */
-    padding: 14px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    font-family: 'Arial', sans-serif;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
-}
-
-.article-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-}
-
-.article-card img {
-    width: 100%;
-    height: 180px; /* más compacta */
-    object-fit: cover;
-    border-radius: 16px;
-}
-
-.badge {
-    position: relative;
-    display: inline-block;
-    background: #1E5BFF;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-top: -28px;
-    margin-left: 10px;
-}
-
-.article-title {
-    font-size: 18px; /* más pequeña */
-    font-weight: 700;
-    color: #222;
-    margin-top: 12px;
-    margin-bottom: 8px;
-    line-height: 1.3;
-}
-
-.meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 10px;
-    color: rgba(0, 0, 0, 0.5);
-    margin-top: 6px;
-}
-
-.meta span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    white-space: nowrap;
-}
-
-.arrow-btn {
-    margin-left: auto;
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    min-height: 36px;
-    background: #1E5BFF;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 16px;
-    transition: transform 0.25s ease;
-}
-
-.article-card:hover .arrow-btn {
-    transform: scale(1.15);
-}
-</style>
-
-
-
-
-<div class="text-center mt-8">
-  <a href="./educacionfinanciera.html"
-     class="inline-block bg-blue-600 text-white text-sm font-semibold px-6 py-3 rounded-full 
-            shadow-md hover:shadow-lg transform hover:-translate-y-1 hover:scale-105 
-            transition-all duration-300 ease-in-out"
-     style="font-family: 'Poppins', sans-serif;">
-    Ver todo el Contenido
-  </a>
-</div>
-
-
-
-
+    <!-- ================= FIN ACORDEÓN ================= -->
 
 
 
