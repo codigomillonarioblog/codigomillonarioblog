@@ -212,76 +212,146 @@
 </style>
 
 
+  
+
+
+
 
   <!-- HERO PRINCIPAL -->
    <!-- ESPACIO FINAL -->
 <section class="py-12"></section>
 
 
-<!-- HERO -->
-<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
-  
-  <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
-    <span class="text-green-600">Contáctame</span> Ahora
-  </h1>
+<!-- HERO PRINCIPAL -->
+<section class="relative py-20 lg:py-32 text-left overflow-x-hidden" style="font-family: 'Lora', serif;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-6 lg:gap-12 items-start">
 
-  <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
-    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
-      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-        ¿Tienes preguntas, propuestas o quieres asesoría? Escríbeme y te responderé lo más pronto posible.
-      </span>
-    </p>
-  </blockquote>
+    <!-- Columna izquierda -->
+    <div class="flex flex-col">
+      <!-- Badge minimalista -->
+      <div class="inline-flex items-center space-x-2 mb-4">
+        <i data-lucide="check-circle" class="w-4 h-4"></i>
+        <span class="text-stone-900 text-sm font-medium">Contacto</span>
+      </div>
+
+      <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
+        Canal abierto  para consultas y <br>
+        <span class="text-green-600">  mensajes directos </span>
+      </h1>
+
+      <blockquote class="italic text-stone-600 mt-6">
+        <p class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+        ¿Tienes preguntas, propuestas o quieres asesoría?  Escríbeme y te <br> responderé lo más pronto posible.
+        </p>
+      </blockquote>  
+    </div>
+
+  </div>
 </section>
-
 
 
 
 <section class="py-12"></section>
 
+
 <!-- FORMULARIO -->
-<main style="font-family: 'Lora', serif;">
-    <section class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10">
+<main style="font-family: 'Poppins', sans-serif;">
+  <section class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10">
 
-        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6" novalidate>
+      
+      <!-- Web3Forms required hidden inputs -->
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo mensaje desde Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
 
-            <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <!-- NOMBRE -->
+      <div>
+        <label class="block text-sm font-medium mb-2">Nombre</label>
+        <input id="name" type="text" name="name" placeholder="Tu nombre completo"
+               class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
+               required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+">
+        <p id="nameError" class="hidden text-sm text-red-600 mt-2">
+          Debes ingresar un nombre válido (solo letras, mínimo 2 y máximo 50 caracteres).
+        </p>
+      </div>
 
-            <input type="hidden" name="subject" value="Nuevo mensaje desde Código Millonario">
+      <!-- CORREO -->
+      <div>
+        <label class="block text-sm font-medium mb-2">Correo electrónico</label>
+        <input id="email" type="email" name="email" placeholder="Tu correo electrónico"
+               class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
+               required minlength="6" maxlength="60">
+        <p id="emailError" class="hidden text-sm text-red-600 mt-2">
+          Debes ingresar un correo electrónico válido.
+        </p>
+      </div>
 
-            <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+      <!-- MENSAJE -->
+      <div>
+        <label class="block text-sm font-medium mb-2">Mensaje</label>
+        <textarea id="message" rows="5" name="message" placeholder="Tu mensaje"
+                  class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
+                  required minlength="10" maxlength="500"></textarea>
+        <p id="messageError" class="hidden text-sm text-red-600 mt-2">
+          El mensaje debe tener entre 10 y 500 caracteres.
+        </p>
+      </div>
 
-            <div>
-                <label class="block text-sm font-medium mb-2">Nombre</label>
-                <input type="text" name="name"
-                    class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
-                    required>
-            </div>
+      <!-- BOTÓN ENVIAR -->
+      <button type="submit"
+              class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition">
+        Enviar mensaje
+      </button>
 
-            <div>
-                <label class="block text-sm font-medium mb-2">Correo electrónico</label>
-                <input type="email" name="email"
-                    class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
-                    required>
-            </div>
-
-            <div>
-                <label class="block text-sm font-medium mb-2">Mensaje</label>
-                <textarea rows="5" name="message"
-                    class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
-                    required></textarea>
-            </div>
-
-            <button type="submit"
-                class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition">
-                Enviar mensaje
-            </button>
-
-        </form>
-
-    </section>
+    </form>
+  </section>
 </main>
-</body>
+
+<script>
+const form = document.getElementById('contactForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const messageError = document.getElementById('messageError');
+
+function validateInput(input, error) {
+  if (!input.value.trim() || !input.checkValidity()) {
+    error.classList.remove('hidden');
+    return false;
+  } else {
+    error.classList.add('hidden');
+    return true;
+  }
+}
+
+// Validación en tiempo real
+[nameInput, emailInput, messageInput].forEach(input => {
+  input.addEventListener('input', () => {
+    if(input === nameInput) validateInput(nameInput, nameError);
+    if(input === emailInput) validateInput(emailInput, emailError);
+    if(input === messageInput) validateInput(messageInput, messageError);
+  });
+});
+
+// Validación al enviar
+form.addEventListener('submit', (e) => {
+  const validName = validateInput(nameInput, nameError);
+  const validEmail = validateInput(emailInput, emailError);
+  const validMessage = validateInput(messageInput, messageError);
+
+  if (!validName || !validEmail || !validMessage) {
+    e.preventDefault(); // Bloquea el envío si algún campo está vacío o inválido
+  }
+});
+</script>
+
+
+    </body>
+</main>
 
 
 
