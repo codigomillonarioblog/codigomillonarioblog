@@ -552,135 +552,112 @@ medir tu progreso y fortalecer tu estrategia financiera a largo plazo.
 <section class="py-12"></section>
 
 
-    <!-- BOTÓN FLOTANTE DE COMPARTIR -->
-<div class="fixed bottom-12 right-6 z-50">
 
-    <!-- Botones desplegables -->
-    <div id="shareButtons" class="flex flex-col items-center gap-3 mb-4 opacity-0 pointer-events-none transition-all duration-300">
-        
-        <!-- Facebook -->
-        <a id="facebookShare"
-           target="_blank"
-           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition hover:-translate-y-1">
-            <i data-lucide="facebook" class="w-5 h-5"></i>
-        </a>
 
-        <!-- X (Twitter) -->
-        <a id="twitterShare"
-           target="_blank"
-           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-900 text-white shadow-lg transition hover:-translate-y-1">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2zm-2.377 17.5h1.64L8.29 4.39H6.57l9.297 15.11z"/>
-            </svg>
-        </a>
+<!-- BOTÓN FLOTANTE DE COMPARTIR -->
+<div class="fixed bottom-12 right-6 z-50 flex flex-col items-center">
 
-        <!-- LinkedIn -->
-        <a id="linkedinShare"
-           target="_blank"
-           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition hover:-translate-y-1">
-            <i data-lucide="linkedin" class="w-5 h-5"></i>
-        </a>
+  <!-- Botones -->
+<div id="shareButtons"
+  class="flex flex-col items-center gap-3 mb-4
+         hidden opacity-0 translate-y-2
+         transition-all duration-300 ease-out">
 
-        <!-- WhatsApp -->
-        <a id="whatsappShare"
-           target="_blank"
-           class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition hover:-translate-y-1">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
-                <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
-            </svg>
-        </a>
+    <!-- Facebook -->
+    <a id="facebookShare" target="_blank"
+      class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:-translate-y-1 transition">
+      <i data-lucide="facebook" class="w-5 h-5"></i>
+    </a>
 
-        <!-- TikTok -->
-        <a id="tiktokShare"
-           target="_blank"
-           class="w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-gray-800 text-white shadow-lg transition hover:-translate-y-1">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 48 48" fill="currentColor">
-                <path d="M41.5 14.1c-3.3-.1-6.5-1.7-8.6-4.4-1.1-1.3-1.8-3-2.2-4.7h-.1v-.4c-.1-.6-.1-1.1-.1-1.7H24v30.2c0 2-.8 3.9-2.2 5.3-1.4 1.4-3.3 2.2-5.3 2.2-4.1 0-7.5-3.4-7.5-7.5S12.4 25.7 16.5 25.7c1.1 0 2.2.3 3.2.8V18c-1-.1-2-.2-3-.2-8.3 0-15 6.7-15 15s6.7 15 15 15c4 0 7.8-1.6 10.6-4.4 2.8-2.8 4.4-6.6 4.4-10.6V18.2c2.5 1.8 5.5 2.8 8.6 2.9v-7z"/>
-            </svg>
-        </a>
+    <!-- X -->
+    <a id="twitterShare" target="_blank"
+      class="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white shadow-lg hover:-translate-y-1 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2z"/>
+      </svg>
+    </a>
 
-        <!-- Copiar enlace -->
-        <button id="copyLink"
-            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-500 hover:bg-gray-600 text-white shadow-lg transition hover:-translate-y-1"
-            title="Copiar enlace">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.414-1.414m7.778-7.778a4 4 0 015.656 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.536-1.536"/>
-            </svg>
-        </button>
+    <!-- LinkedIn -->
+    <a id="linkedinShare" target="_blank"
+      class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 text-white shadow-lg hover:-translate-y-1 transition">
+      <i data-lucide="linkedin" class="w-5 h-5"></i>
+    </a>
 
-    </div>
+<!-- WhatsApp -->
+<a id="whatsappShare" target="_blank"
+  class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:-translate-y-1 transition">
+  
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 32 32"
+       class="w-5 h-5 fill-current">
+    <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
+  </svg>
+</a>
 
-    <!-- BOTÓN FLOTANTE PRINCIPAL -->
-    <button id="toggleShare"
-        class="w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center shadow-xl transition-all hover:-translate-y-1">
-        <i data-lucide="share-2" class="w-6 h-6"></i>
-    </button>
+    <!-- Copiar -->
+<button id="copyLink"
+  class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-900 text-white shadow-lg hover:-translate-y-1 transition">
+  <i data-lucide="link" class="w-5 h-5"></i>
+</button>
+  </div>
 
+  <!-- BOTÓN PRINCIPAL -->
+  <button id="toggleShare"
+    class="w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-xl flex items-center justify-center transition hover:-translate-y-1">
+    <i data-lucide="share-2" class="w-6 h-6"></i>
+  </button>
 </div>
 
 <script>
-    const toggleShare = document.getElementById("toggleShare");
-    const shareButtons = document.getElementById("shareButtons");
-    const copyLink = document.getElementById("copyLink");
+  const toggle = document.getElementById("toggleShare");
+  const menu = document.getElementById("shareButtons");
+  const copy = document.getElementById("copyLink");
 
-    const facebookShare = document.getElementById("facebookShare");
-    const twitterShare = document.getElementById("twitterShare");
-    const linkedinShare = document.getElementById("linkedinShare");
-    const whatsappShare = document.getElementById("whatsappShare");
-    const tiktokShare = document.getElementById("tiktokShare");
+  let isOpen = false;
 
-    let open = false;
-
-    // Función para abrir/cerrar botones
-    function toggleButtons(show) {
-        open = show;
-        if (open) {
-            shareButtons.classList.remove("opacity-0", "pointer-events-none");
-            shareButtons.classList.add("opacity-100");
-        } else {
-            shareButtons.classList.add("opacity-0", "pointer-events-none");
-            shareButtons.classList.remove("opacity-100");
-        }
-    }
-
-    toggleShare.onclick = (e) => {
-        toggleButtons(!open);
-        e.stopPropagation(); // Evita que el clic se propague
-    };
-
-    // Asignar URLs dinámicamente según la página actual
-    const currentURL = encodeURIComponent(window.location.href);
-    facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
-    twitterShare.href = `https://twitter.com/intent/tweet?url=${currentURL}`;
-    linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}`;
-    whatsappShare.href = `https://api.whatsapp.com/send?text=${currentURL}`;
-    tiktokShare.href = `https://www.tiktok.com/share?url=${currentURL}`;
-
-    // Copiar enlace dinámico
-    copyLink.onclick = (e) => {
-        navigator.clipboard.writeText(window.location.href)
-            .then(() => alert("Enlace copiado al portapapeles"))
-            .catch(() => alert("No se pudo copiar el enlace"));
-        e.stopPropagation(); // Evita cerrar menú
-    };
-
-    // Evitar cerrar al hacer clic dentro del contenedor de botones
-    shareButtons.addEventListener("click", (e) => e.stopPropagation());
-
-    // Cerrar al hacer clic fuera
-    document.addEventListener("click", () => {
-        if (open) toggleButtons(false);
+  function openMenu() {
+    menu.classList.remove("hidden");
+    requestAnimationFrame(() => {
+      menu.classList.remove("opacity-0", "translate-y-2");
+      menu.classList.add("opacity-100", "translate-y-0");
     });
+    isOpen = true;
+  }
 
-    // Cerrar al hacer scroll
-    window.addEventListener("scroll", () => {
-        if (open) toggleButtons(false);
-    });
+  function closeMenu() {
+    menu.classList.remove("opacity-100", "translate-y-0");
+    menu.classList.add("opacity-0", "translate-y-2");
 
-    lucide.createIcons();
+    setTimeout(() => {
+      menu.classList.add("hidden");
+    }, 300); // 👈 igual a duration-300
+
+    isOpen = false;
+  }
+
+  toggle.addEventListener("click", () => {
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  // 🔥 Cerrar suavemente SOLO al hacer scroll
+  window.addEventListener("scroll", () => {
+    if (isOpen) closeMenu();
+  }, { passive: true });
+
+  // Links dinámicos
+  const url = encodeURIComponent(window.location.href);
+  facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+  twitterShare.href = `https://twitter.com/intent/tweet?url=${url}`;
+  linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${url}`;
+  whatsappShare.href = `https://api.whatsapp.com/send?text=${url}`;
+
+  copy.addEventListener("click", () => {
+    navigator.clipboard.writeText(window.location.href);
+    closeMenu();
+  });
+
+  lucide.createIcons();
 </script>
-
-
 
 
 

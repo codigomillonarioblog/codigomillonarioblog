@@ -1,18 +1,41 @@
 <!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Plataformas digitales confiables para hacer crecer tu dinero sin riesgos - Código Millonario</title>
-    <meta name="description" content="Conoce las plataformas de inversión más destacadas, aprende cómo elegir la ideal según tu perfil y descubre consejos clave antes de invertir de forma segura.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El enfoque correcto acelera cualquier resultado | Código Millonario</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="icon" href="../../assets/img/favicon.png" type="image/png">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+<style>
+/* ===================== PAGINACIÓN ===================== */
+.pager-container { background: #ffffff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); padding: 12px; margin-bottom: 24px; }
+.page-box { min-width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; user-select: none; font-weight: 600; color: #0f172a; transition: all 0.2s ease; }
+.page-box:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.06); transform: translateY(-1px); }
+.page-box.active { border-color: #94a3b8; box-shadow: 0 0 0 3px rgba(14,165,233,0.06); background: #f8fafc; }
+.compact-btn { min-width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; transition: all 0.2s ease; }
+.compact-btn[disabled] { opacity: 0.45; cursor: default; pointer-events: none; }
+.select-pages { border: 1px solid #e6e6e6; background: #fff; height: 40px; border-radius: 6px; padding: 6px 10px; }
+input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border-radius: 6px; padding: 6px 10px; width: 80px; background: #fff; }
 
-    <!-- Favicon -->
-    <link rel="icon" href="../../../assets/img/favicon.png" type="image/png">
+#articlesGrid { transition: all 0.5s ease; }
+.article { transition: opacity 0.4s ease; }
 
-    <!-- Google tag (gtag.js) -->
+@media (max-width: 640px) {
+  .pager-grid { grid-template-columns: 1fr; gap: 8px; }
+  .page-box { min-width: 34px; height: 34px; }
+  .compact-btn { min-width: 34px; height: 34px; }
+  input[type="number"].goto-page { width: 64px; }
+}
+
+
+body {
+  background-color: #f5f5f5 !important; /* gris muy claro */
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -21,9 +44,109 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+
+<style>
+/* TARJETA ENVOLVENTE */
+.article-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CARD PREMIUM */
+.article-card {
+    width: 100%;
+    max-width: 380px;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(0,0,0,0.22);
+}
+
+/* IMAGEN */
+.article-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+/* ETIQUETA */
+.badge {
+    position: relative;
+    display: inline-block;
+    background: #1E5BFF;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: -32px;
+    margin-left: 12px;
+}
+
+/* TÍTULO */
+.article-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+/* FECHA + COMENTARIOS */
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 8px;
+}
+
+.meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+/* BOTÓN */
+.arrow-btn {
+    margin-left: auto;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    background: #1E5BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.25s ease;
+}
+
+.article-card:hover .arrow-btn {
+    transform: scale(1.15);
+}
+</style>
+
 </head>
 
 <body class="bg-stone-50 text-stone-900">
+
 
 
 <!-- MENU FLOTANTE UNIVERSAL -->
@@ -39,32 +162,32 @@
     </div>
 
     <div class="flex-1 flex justify-center items-center space-x-6 text-sm">
-      <a href="../../../index.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+      <a href="../../index.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
         Inicio
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="../../../educacionfinanciera.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Educación Financiera
+      <a href="../../educacionfinanciera.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+        Blog
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="../../../herramientas.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+      <a href="../../herramientas.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
         Herramientas
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="../../../opiniones.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+      <a href="../../opiniones.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
         Opiniones
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="../../../tienda.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+      <a href="../../tienda.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
         Tienda
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="../../../contacto.html" class="ml-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-200">
+      <a href="../../contacto.html" class="ml-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-200">
         Contacto
       </a>
     </div>
@@ -87,12 +210,12 @@
 
   <!-- MENU MOVIL DESPLEGABLE -->
   <div id="mobileMenu" class="fixed top-20 left-1/2 -translate-x-1/2 w-11/12 max-w-xs bg-white rounded-2xl shadow-lg p-4 flex flex-col space-y-2 scale-0 opacity-0 pointer-events-none transition-all duration-300 z-50">
-    <a href="../../../index.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Inicio</a>
-    <a href="../../../educacionfinanciera.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Blog</a>
-    <a href="../../../herramientas.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Herramientas</a>
-    <a href="../../../opiniones.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Opiniones</a>
-    <a href="../../../tienda.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Tienda</a>
-    <a href="../../../contacto.html" class="mobile-item px-4 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors">Contacto</a>
+    <a href="../../index.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Inicio</a>
+    <a href="../../educacionfinanciera.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Blog</a>
+    <a href="../../herramientas.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Herramientas</a>
+    <a href="../../opiniones.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Opiniones</a>
+    <a href="../../tienda.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Tienda</a>
+    <a href="../../contacto.html" class="mobile-item px-4 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors">Contacto</a>
   </div>
 
 </header>
@@ -118,11 +241,6 @@
   #mobileMenu { transform-origin: top center; }
   #mobileMenu.scale-100 { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
   #mobileMenu.scale-0 { transform: translateX(-50%) scale(0); opacity: 0; pointer-events: none; }
-
-
-  body {
-  background-color: #f5f5f5 !important; /* gris muy claro */
-}
 </style>
 
 <script>
@@ -199,34 +317,32 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 </script>
 
 
+  <!-- HERO PRINCIPAL -->
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
 
 
 <!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
-      <span class="block">Elege Plataformas Seguras</span>
-      <span class="block">y Multiplica tu Dinero</span>
-      <span class="block">Inteligentemente</span>
-    </h1>
-  </div>
+<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+<h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
+    Una mente enfocada <br>
+    <span class="text-green-600"> no deja espacio </span> al fracaso <br>   
+</h1>   
+ <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
+    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Cuando entrenas tu mente para pensar con claridad, disciplina y propósito, el fracaso deja de ser una opción y el éxito se convierte en consecuencia.
+      </span>
+    </p>
+  </blockquote>
+</section>
 
-<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
-<!-- Fecha -->
-  <span class="leading-none tracking-wide">
-    25 Dic 2025 
-  </span>
 
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
-</div>
 
   <!-- Imagen principal con sombra curva -->
   <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/invertir-en-internet-sin-ser-estafado.jpg" alt="" 
+    <img src="../../assets/png/el-exito-empieza-en-la-mente.webp" alt="" 
          class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
     <!-- Sombra curva -->
     <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
@@ -234,751 +350,454 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-                 <!-- INTRODUCCIÓN GENERAL -->
-                     <main class="py-20">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    
+           <!-- INTRODUCCIÓN GENERAL -->
+<main class="py-20" style="font-family: 'Lora', serif;">
+                 
 
 
+<h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
+          style="font-family: 'Poppins', sans-serif;">
+        De la mentalidad al resultado
+        <span class="inline-block mt-1 sm:mt-0"
+        style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
+        resultado
+      </span>
+    </h2>
 
-
-<!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
-<style>
-/* ================= CONTENEDOR ================= */
-.toc-container {
-  border: 1px solid #6b7280;
-  border-radius: 0;
-  max-width: 650px;
-  width: 100%;
-  margin: 20px 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  box-shadow: none;
-  overflow: hidden;
-  padding: 0;
-}
-
-/* ================= BOTÓN ================= */
-.toc-toggle {
-  width: 100%;
-  text-align: left;
-  padding: 14px 20px;
-  background-color: #f9fafb;
-  border: none;
-  font-weight: 600;
-  font-size: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.toc-toggle:hover,
-.toc-toggle:focus {
-  background-color: #f9fafb;
-  outline: none;
-}
-
-/* ================= FLECHA ================= */
-.toc-toggle::after {
-  content: "▼";
-  font-size: 12px;
-  transition: transform 0.3s ease;
-}
-
-/* Flecha cuando está abierta */
-.toc-container.open .toc-toggle::after {
-  transform: rotate(180deg);
-}
-
-/* ================= LISTA ================= */
-.toc-list {
-  list-style: none;
-  margin: 0;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  border-top: none;
-  transition: max-height 0.45s ease, opacity 0.35s ease;
-  display: block;
-}
-
-/* Lista abierta */
-.toc-container.open .toc-list {
-  max-height: 800px;
-  opacity: 1;
-  padding: 12px 20px;
-  border-top: 1px solid #6b7280;
-}
-
-.toc-list li {
-  margin: 10px 0;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
-}
-
-.toc-list li:last-child {
-  border-bottom: none; /* quitar línea del último */
-}
-
-.toc-list li a {
-  text-decoration: none;
-  color: #1f2937;
-  font-size: 15px;
-}
-
-.toc-list li a:hover {
-  text-decoration: none;
-  color: #1f2937;
-}
-
-/* ================= OFFSET PARA MENÚ FIJO ================= */
-h2[id] {
-  scroll-margin-top: 100px;
-}
-</style>
-
-<!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
-  <ul class="toc-list">
-    <li><a href="#titulo1">1. Antes de elegir dónde quieres invertir</a></li>
-    <li><a href="#titulo2">2. Plataformas destacadas</a></li>
-    <li><a href="#titulo3">3. Cómo elegir la plataforma ideal según tu perfil</a></li>
-    <li><a href="#titulo4">4. Consejos antes de invertir</a></li>
-    <li><a href="#titulo5">5. Por qué este año puede ser un buen momento para invertir</a></li>
-    <li><a href="#titulo6">6. Advertencia importante</a></li>
-  </ul>
-</div>
-
-<!-- ================= JAVASCRIPT ================= -->
-<script>
-const tocContainer = document.querySelector(".toc-container");
-const toggleBtn = tocContainer.querySelector(".toc-toggle");
-
-let mouseInsideTOC = false;
-
-// Abrir / cerrar SOLO con el botón
-toggleBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  tocContainer.classList.toggle("open");
-});
-
-// Detectar si el mouse está dentro del TOC
-tocContainer.addEventListener("mouseenter", () => {
-  mouseInsideTOC = true;
-});
-
-tocContainer.addEventListener("mouseleave", () => {
-  mouseInsideTOC = false;
-});
-
-// Cerrar al hacer click fuera
-document.addEventListener("click", (e) => {
-  if (!tocContainer.contains(e.target)) {
-    tocContainer.classList.remove("open");
-  }
-});
-
-// Cerrar si el TOC sale del viewport
-function isOutOfViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return rect.bottom < 0; // si la parte inferior ya no está visible
-}
-
-window.addEventListener("scroll", () => {
-  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
-    tocContainer.classList.remove("open");
-  }
-});
-</script>
+<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Cuando el pensamiento es claro y la intención firme, el progreso deja de ser casualidad.
+    </span>
+  </p>
+</blockquote>
 
 
 
-<!-- Separador editorial premium -->
-<div class="relative my-12">
+    <!-- BLOQUE EXPLICATIVO 5 -->
+<section class="mb-16 text-left cursor-pointer">
 
-  <!-- Etiqueta -->
-  <span class="absolute -top-3 left-0 
-               bg-slate-800 text-white text-[11px] font-semibold 
-               px-3 py-1 rounded-full shadow-sm tracking-wide">
-    A CONTINUACIÓN
+  <!-- CONTENEDOR QUE LIMITA EL ANCHO -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div
+      class="flex gap-6 overflow-x-auto pb-4
+             md:grid md:grid-cols-2
+             lg:grid-cols-4
+             md:gap-6 md:overflow-visible">
+
+      <!-- CUADRO 1 -->
+      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
+                  bg-white/90 border border-stone-200
+                  shadow-sm
+                  transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
+        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
+          Claridad antes de actuar
+        </h3>
+        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
+          Una mente clara define prioridades, elimina distracciones y permite tomar decisiones con intención y propósito.
+        </p>
+      </div>
+
+      <!-- CUADRO 2 -->
+      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
+                  bg-white/90 border border-stone-200
+                  shadow-sm
+                  transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
+        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
+          Disciplina mental
+        </h3>
+        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
+          El progreso no depende de la motivación, sino de la disciplina para sostener buenas decisiones incluso cuando cuesta.
+        </p>
+      </div>
+
+      <!-- CUADRO 3 -->
+      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
+                  bg-white/90 border border-stone-200
+                  shadow-sm
+                  transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
+        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
+          Aprender de cada decisión
+        </h3>
+        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
+          Cada elección enseña algo. Una mentalidad enfocada aprende, ajusta y avanza sin repetir los mismos errores.
+        </p>
+      </div>
+
+      <!-- CUADRO 4 -->
+      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
+                  bg-white/90 border border-stone-200
+                  shadow-sm
+                  transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
+        <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
+          Pensar a largo plazo
+        </h3>
+        <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
+          El éxito sostenible se construye con visión, paciencia y decisiones alineadas con objetivos claros.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+                <section class="mb-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- aquí siguen las tarjetas de artículos -->
+
+
+         <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
+    style="font-family: 'Poppins', sans-serif;">
+  Mentalidad y
+  <span class="inline-block mt-1 sm:mt-0"
+        style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
+    Decisiones
   </span>
+</h2>
 
-  <!-- Línea -->
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
-</div>
+<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+      Desarrolla una forma de pensar clara y disciplinada para tomar mejores decisiones y construir resultados sostenibles.
+    </span>
+  </p>
+</blockquote>
 
 
+            <!-- PAGINACIÓN ARRIBA -->
+            <div class="max-w-5xl mx-auto mb-6">
+                <div class="pager-container">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4 px-2">
+                            <div class="text-sm text-stone-700">
+                                Total <span id="totalResults" class="font-semibold">0</span> resultados
+                            </div>
+                            <div class="hidden sm:inline-block text-sm text-stone-700">
+                                Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center gap-2 px-2">
+                            <button id="firstBtn" class="compact-btn">«</button>
+                            <button id="prevBtn" class="compact-btn">‹</button>
+                            <div id="pageNumbers" class="flex items-center gap-2"></div>
+                            <button id="nextBtn" class="compact-btn">›</button>
+                            <button id="lastBtn" class="compact-btn">»</button>
+                        </div>
+                        <div class="flex justify-end items-center gap-3 px-2">
+                            <select id="perPageSelect" class="select-pages">
+                                <option value="6" selected>6 / página</option>
+                                <option value="9">9 / página</option>
+                                <option value="12">12 / página</option>
+                                <option value="20">20 / página</option>
+                            </select>
+                            <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
+                            <button id="gotoBtn" class="page-box">Ir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-<!-- INTRODUCCIÓN -->
-   <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Antes de elegir dónde quieres invertir</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-<img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-       class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
-
-    <p> 
-        Invertir hoy en Colombia, desde tu celular o incluso con poco capital, es más viable que nunca. Existen diversas plataformas digitales que permiten acceder a la bolsa, fondos, criptomonedas y fondos de inversión colectiva, adaptadas a todo tipo de perfiles, desde conservadores hasta agresivos.         En esta guía te muestro las mejores opciones disponibles en 2025: lo bueno, lo no tan bueno y para quién puede servir cada plataforma.
-    </p>
-</div>
+            <!-- GRID DE ARTÍCULOS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="articlesGrid">
 
 
+  <!-- ARTÍCULO 1 -->
+<div class="article">
+  <article>
+    <a href="./errores-comunes-de-la-clase-media.html" class="article-link">
+      <div class="article-card">
 
-
-<!-- PARRAFO -->
-   <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Plataformas destacadas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        Trii
-    </strong><br>
-    Permite invertir en acciones colombianas de la Bolsa de Valores de Colombia (BVC) desde una app.<br>
-    Comisiones bajas comparadas con brokers tradicionales.<br>
-    Ideal para quienes quieren invertir localmente, con montos accesibles y sin complicaciones.
-</p>
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        Tyba
-    </strong><br>
-    Ofrece acceso a fondos de inversión colectiva, renta fija y en algunos casos permite diversificar entre diferentes niveles de riesgo.<br>
-    Es una buena opción para quienes quieren invertir sin tener que analizar cada acción individualmente: ideal para un perfil conservador o moderado.
-</p>
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        Mesfix (inversión en facturas por cobrar)
-    </strong><br>
-    Plataforma alternativa que permite invertir en facturas por cobrar de empresas: en esencia compras “deudas” de empresas y esperas su pago con un rendimiento.<br>
-    Es una alternativa menos conocida, pero interesante para diversificar fuera del mercado de acciones o criptomonedas.
-</p>
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        CDT online y fondos de inversión de bancos tradicionales
-    </strong><br>
-    Muchos bancos en Colombia ofrecen hoy opciones digitales: CDT (Certificado de Depósito a Término) o fondos con montos bajos de entrada.<br>
-    Estas opciones suelen ser de menor riesgo: ideales si buscas proteger tu capital más que buscar altos retornos.
-</p>
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        Plataformas de inversión internacional (bolsas extranjeras, ETFs, mercados globales)
-    </strong><br>
-    A través de ciertas apps puedes acceder a mercados internacionales, lo que permite diversificar fuera de Colombia y aprovechar monedas fuertes.<br>
-    Útil si buscas diversificación y estás dispuesto a asumir volatilidad, pero también corres riesgos cambiarios.
-</p>
-
-</div>
-
-
-
-
-<!-- PARRAFO -->
-  <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Cómo elegir la plataforma ideal según tu perfil</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        1. Conservador (quieres poco riesgo)
-    </strong><br>
-    • CDT online<br>
-    • Fondos de inversión colectiva<br>
-    • Mesfix
-</p>
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        2. Moderado (quieres crecimiento con control)
-    </strong><br>
-    • Tyba<br>
-    • Fondos mixtos<br>
-    • Fondos conservadores
-</p>
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        3. Si deseas invertir en empresas locales
-    </strong><br>
-    • Trii
-</p>
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        4. Si buscas diversificar internacionalmente / alto crecimiento
-    </strong><br>
-    • Plataformas con acceso a mercados globales<br>
-    • ETFs<br>
-    • Criptomonedas (con precaución)
-</p>
-
-<p>
-    <strong class="text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
-        5. Si quieres bajo riesgo pero buen rendimiento
-    </strong><br>
-    • Fondos bancarios<br>
-    • Una parte en inversión colectiva o facturas (Mesfix)
-</p>
-
-</div>
-
-
-
-
-<!-- PARRAFO -->
- 
-  <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Consejos antes de invertir</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-
-<p>
-    • Verifica que la plataforma esté regulada o supervisada (o tenga respaldo confiable) para evitar fraudes.<br><br>
-    • No inviertas todo en un solo lugar: diversificar protege tu dinero.<br><br>
-    • Empieza con montos pequeños: así aprendes sin arriesgar demasiado.<br><br>
-    • Ten claro tu perfil de riesgo: no todos buscan lo mismo.<br><br>
-    • Consulta bien las comisiones, plazos e implicaciones antes de invertir.
-</p>
-</div>
-
-
-<!-- PARRAFO -->
-
-  <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Por qué este año puede ser un buen momento para invertir</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-
-<p>
-    • El crecimiento de plataformas digitales y fintech hace que sea más sencillo invertir con montos pequeños.<br><br>
-    • Hay más opciones reguladas y accesibles, lo que baja barreras de entrada.<br><br>
-    • El contexto económico y la inflación pueden hacer que inversiones seguras o diversificadas sean una forma de proteger el ahorro.
-</p>
-</div>
-
-
-
-<!-- PARRAFO -->
- 
-  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Advertencia importante</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-
-<p>
-    La información presentada es solo educativa y busca dar ideas al lector sobre mayores oportunidades. No constituye asesoría financiera profunda ni promueve decisiones tomadas fuera de la voluntad de cada uno de ustedes. Cada inversión tiene riesgos que el lector debe precisar y reconocer. Es necesario evaluar tu situación personal antes de tomar decisiones. Investiga siempre por tu cuenta y utiliza únicamente plataformas reguladas y confiables. Recuerda que no se gana dinero fácil de la noche a la mañana.
-</p>
-</div>
-
-
-<!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/invertir-en-internet-sin-ser-estafado.jpg" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
-
-
-
-
-<!-- Sección recomendada -->
-<div class="mt-16 mb-10">
-
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-       <strong class="font-semibold text-slate-800">
-      Código Millonario</strong> recomienda:
-    </p>
-  </blockquote>
-
-
+        <div style="position: relative;">
+          <img src="../../assets/png/claridad-mental-resultados-reales.webp" alt="Negocios Simples">
+          <div class="badge">#El fallo que nadie ve</div>
         </div>
-    </main>
 
+        <h2 class="article-title">
+          El problema silencioso de la clase media
+        </h2>
 
+        <div class="meta">
+          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
 
-
-<!-- ================= INTERLINK FUNCIONAL (SELECT + BUSCADOR) ================= -->
-<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
-  <p class="interlink-heading text-center font-semibold text-sm mb-4">
-    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
-  </p>
-  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
-    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
-    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button">Ir</button>
-    <a id="viewAllBtn" href="../invertir-en-plataformas/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button">
-      Ver todos
+      </div>
     </a>
-  </div>
-  <div class="flex justify-end items-center mt-4 text-stone-700 text-sm">
-    Total <span id="totalArticles" class="font-semibold mx-1">0</span> artículos
-  </div>
+  </article>
 </div>
 
-<!-- ================= INTERLINK VISUAL PROFESIONAL ================= -->
-<div class="max-w-3xl mx-auto my-12 interlink-wrapper">
-  <p class="interlink-heading text-center font-semibold text-sm mb-4">
-    Los más recomendados
+  
+                <!-- Puedes duplicar más artículos aquí con la clase "article" -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
+    style="font-family: 'Poppins', sans-serif;">
+     De los errores a los
+    <span class="inline-block mt-1 sm:mt-0"
+    style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
+    resultados
+  </span>
+</h2>
+
+<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Los errores muestran el camino que conduce a los resultados.
+    </span>
   </p>
-  <div id="interlinkGrid" style="display:flex; flex-direction:column; gap:10px;"></div>
-</div>
+</blockquote>
 
-<!-- ================= ESTILOS ================= -->
-<style>
-/* Tarjeta grande con animación */
-.interlink-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  transition: transform .2s ease, box-shadow .2s ease;
-  overflow: hidden;
-}
-.interlink-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-.interlink-card a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-.interlink-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px;
-}
-.interlink-img {
-  position: relative;
-  flex-shrink: 0;
-  width: 90px;
-  height: 55px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.interlink-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .3s ease;
-}
-.interlink-card:hover .interlink-img img {
-  transform: scale(1.05);
-}
-/* Badge azul */
-.interlink-badge {
-  position: absolute;
-  bottom: 3px;
-  left: 3px;
-  background: #007BFF;
-  color: #fff;
-  font-size: 9px;
-  padding: 1px 6px;
-  border-radius: 999px;
-}
-.interlink-text {
-  flex: 1;
-}
-.interlink-title {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 4px;
-  line-height: 1.25;
-  color: #111;
-}
-.meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
-  color: #666;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
 
-/* BOTÓN FLECHA “PRO” INTEGRADO */
-.arrow-btn {
-  margin-left: auto;
-  width: 42px;
-  height: 42px;
-  min-width: 42px;
-  min-height: 42px;
-  background: #1E5BFF;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 18px;
-  font-family: inherit;
-  transition: transform 0.25s ease;
-}
-.interlink-card:hover .arrow-btn {
-  transform: scale(1.15);
-}
+ <section class="mb-16"  style="font-family:'Lora',serif;">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-/* Modernización del cuadro principal */
-.interlink-container {
-  border-radius: 16px;
-  padding: 24px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-.interlink-container p {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 600;
-  color: #1f2937;
-}
-.select-pages, .goto-page {
-  border: 1px solid #c0c0c0;
-  background: #fff;
-  height: 42px;
-  border-radius: 8px;
-  padding: 6px 10px;
-  font-weight: 500;
-  color: #111827;
-  transition: all 0.2s ease;
-}
-.select-pages:hover, .goto-page:hover {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transform: translateY(-1px);
-}
+    <!-- ================= ACORDEÓN ================= -->
 
-/* Botones Ir y Ver todos */
-.interlink-button {
-  font-family: 'Lora', serif;
-  background: #fff;
-  border: 1px solid #c0c0c0;
-  padding: 6px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.interlink-button:hover {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transform: translateY(-1px);
-}
+    <style>
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco fijo */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transform: translateY(0);
+    will-change: transform; /* optimiza animación */
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+
+  /* Animación tipo card con sombra */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
 </style>
 
-<!-- ================= SCRIPT ÚNICO ================= -->
-<script>
-const select = document.getElementById("articleSelect");
-const searchInput = document.getElementById("searchInput");
-const goBtn = document.getElementById("goBtn");
-const totalArticles = document.getElementById("totalArticles");
-const interlinkGrid = document.getElementById("interlinkGrid");
+    <div class="cf-accordion">
 
-const perPage = 6;
-let allArticles = [];
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+      Claridad a través del proceso
+      <span class="cf-accordion-icon"></span>
+    </div>
 
-function shuffle(array){
-  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
-}
+    <div class="cf-accordion-content">
 
-function renderSelect(list){
-  select.innerHTML = "";
-  if(list.length === 0){
-    const opt = document.createElement("option");
-    opt.textContent = "No se encontraron artículos";
-    opt.disabled = true;
-    select.appendChild(opt);
-    return;
-  }
-  list.slice(0, perPage).forEach(a=>{
-    const opt = document.createElement("option");
-    opt.value = a.url;
-    opt.textContent = a.title;
-    select.appendChild(opt);
-  });
-}
+      <p>
+        El progreso real no surge de decisiones perfectas, sino de atravesar procesos imperfectos con una mente dispuesta a aprender. En el camino hacia cualquier objetivo aparecen errores, dudas y momentos de frustración. No porque algo esté mal, sino porque así se construye la claridad.
+      </p>
 
-function renderCards(list){
-  interlinkGrid.innerHTML = "";
-  list.slice(0, perPage).forEach(a=>{
-    interlinkGrid.innerHTML += `
-      <section class="interlink-card">
-        <a href="${a.url}">
-          <div class="interlink-content">
-            <div class="interlink-img">
-              <img src="${a.image}" alt="">
-              <div class="interlink-badge">#Relacionado</div>
-            </div>
-            <div class="interlink-text">
-              <div class="interlink-title">${a.title}</div>
-              <div class="meta">
-                <span>⏱ 5 min de lectura</span>
-                <span><i>💬</i> 0</span>
-                <div class="arrow-btn">➜</div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </section>
-    `;
-  });
-}
+      <p>
+        Muchas personas se detienen cuando algo no sale como esperaban. Interpretan el error como una señal de retroceso, cuando en realidad es una fuente de información. Cada intento fallido muestra qué ajustar, qué descartar y qué dirección dejar de seguir.
+      </p>
 
-function renderAll(list){
-  totalArticles.textContent = list.length;
-  renderSelect(list);
-  renderCards(list);
-}
+      <p>
+        La claridad no aparece antes de actuar, aparece durante el proceso. Al avanzar, empiezas a entender qué decisiones valen la pena, dónde enfocar tu energía y qué caminos ya no tienen sentido. Abandonar temprano impide llegar a ese punto donde todo comienza a ordenarse.
+      </p>
 
-goBtn.addEventListener("click", ()=>{
-  if(select.value) window.location.href = select.value;
-});
+      <p>
+        La idea inicial suele cambiar. No porque fuera incorrecta, sino porque el proceso revela opciones mejores. Muchas veces el verdadero resultado no es el que imaginaste al comienzo, sino uno más alineado con lo que descubres sobre ti, tus capacidades y tu visión.
+      </p>
 
-searchInput.addEventListener("input", ()=>{
-  const q = searchInput.value.toLowerCase();
-  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
-});
+      <p>
+        Por ejemplo, alguien puede iniciar un camino con una meta clara y, al avanzar, descubrir que su verdadera fortaleza está en otro lugar. No es un fracaso, es evolución. La mentalidad correcta entiende que cambiar de dirección con criterio también es avanzar.
+      </p>
 
-fetch("../invertir-en-plataformas/index.html")
-.then(r=>r.text())
-.then(html=>{
-  const temp = document.createElement("div");
-  temp.innerHTML = html;
-  temp.querySelectorAll("time, .date, .meta, span").forEach(el=>{
-    if(el.textContent.includes("📅") || el.textContent.includes("Sin Comentarios") || /\d{2}\/\d{2}\/\d{4}/.test(el.textContent)){
-      el.remove();
-    }
-  });
-  const links = Array.from(temp.querySelectorAll(".article a"));
-  allArticles = shuffle(
-    links.map(a=>{
-      const h = a.querySelector("h3");
-      return {
-        title: h ? h.textContent.trim() : a.textContent.trim(),
-        url: a.getAttribute("href"),
-        image: a.querySelector("img")?.src || "./assets/png/default.png"
-      };
-    }).filter(a => a.title.length > 15)
-  );
-  renderAll(allArticles);
-})
-.catch(e=>console.error("Interlink error:", e));
-</script>
+      <p>
+        Los proyectos, metas y resultados sólidos no nacen de planes perfectos, sino de ejecución constante, revisión honesta y mejora continua. Cada acción genera experiencia, cada error aporta datos y, con constancia, la mente se vuelve más clara, más firme y más estratégica.
+      </p>
 
-
-
-
-<!-- BOTÓN FLOTANTE DE COMPARTIR -->
-<div class="fixed bottom-12 right-6 z-50 flex flex-col items-center">
-
-  <!-- Botones -->
-<div id="shareButtons"
-  class="flex flex-col items-center gap-3 mb-4
-         hidden opacity-0 translate-y-2
-         transition-all duration-300 ease-out">
-
-    <!-- Facebook -->
-    <a id="facebookShare" target="_blank"
-      class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:-translate-y-1 transition">
-      <i data-lucide="facebook" class="w-5 h-5"></i>
-    </a>
-
-    <!-- X -->
-    <a id="twitterShare" target="_blank"
-      class="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white shadow-lg hover:-translate-y-1 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2z"/>
-      </svg>
-    </a>
-
-    <!-- LinkedIn -->
-    <a id="linkedinShare" target="_blank"
-      class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 text-white shadow-lg hover:-translate-y-1 transition">
-      <i data-lucide="linkedin" class="w-5 h-5"></i>
-    </a>
-
-<!-- WhatsApp -->
-<a id="whatsappShare" target="_blank"
-  class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:-translate-y-1 transition">
-  
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 32 32"
-       class="w-5 h-5 fill-current">
-    <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
-  </svg>
-</a>
-
-    <!-- Copiar -->
-<button id="copyLink"
-  class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-900 text-white shadow-lg hover:-translate-y-1 transition">
-  <i data-lucide="link" class="w-5 h-5"></i>
-</button>
+    </div>
   </div>
-
-  <!-- BOTÓN PRINCIPAL -->
-  <button id="toggleShare"
-    class="w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-xl flex items-center justify-center transition hover:-translate-y-1">
-    <i data-lucide="share-2" class="w-6 h-6"></i>
-  </button>
 </div>
 
-<script>
-  const toggle = document.getElementById("toggleShare");
-  const menu = document.getElementById("shareButtons");
-  const copy = document.getElementById("copyLink");
+    <script>
+    document.querySelectorAll('.cf-accordion').forEach(accordion => {
+  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.cf-accordion-item');
+      const content = item.querySelector('.cf-accordion-content');
 
-  let isOpen = false;
+      // Solo afecta los items de ESTE acordeón
+      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+        }
+      });
 
-  function openMenu() {
-    menu.classList.remove("hidden");
-    requestAnimationFrame(() => {
-      menu.classList.remove("opacity-0", "translate-y-2");
-      menu.classList.add("opacity-100", "translate-y-0");
+      item.classList.toggle('is-open');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
     });
-    isOpen = true;
-  }
-
-  function closeMenu() {
-    menu.classList.remove("opacity-100", "translate-y-0");
-    menu.classList.add("opacity-0", "translate-y-2");
-
-    setTimeout(() => {
-      menu.classList.add("hidden");
-    }, 300); // 👈 igual a duration-300
-
-    isOpen = false;
-  }
-
-  toggle.addEventListener("click", () => {
-    isOpen ? closeMenu() : openMenu();
   });
+});
+    </script>
 
-  // 🔥 Cerrar suavemente SOLO al hacer scroll
-  window.addEventListener("scroll", () => {
-    if (isOpen) closeMenu();
-  }, { passive: true });
 
-  // Links dinámicos
-  const url = encodeURIComponent(window.location.href);
-  facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-  twitterShare.href = `https://twitter.com/intent/tweet?url=${url}`;
-  linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${url}`;
-  whatsappShare.href = `https://api.whatsapp.com/send?text=${url}`;
 
-  copy.addEventListener("click", () => {
-    navigator.clipboard.writeText(window.location.href);
-    closeMenu();
-  });
+</main>
 
-  lucide.createIcons();
+
+<!-- SCRIPT DE PAGINACIÓN -->
+<script>
+const articles = document.querySelectorAll('.article');
+const articlesGrid = document.getElementById('articlesGrid');
+const perPageSelect = document.getElementById('perPageSelect');
+const currentPageText = document.getElementById('currentPageText');
+const totalPagesText = document.getElementById('totalPagesText');
+const totalResults = document.getElementById('totalResults');
+const pageNumbers = document.getElementById('pageNumbers');
+const firstBtn = document.getElementById('firstBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const lastBtn = document.getElementById('lastBtn');
+const gotoInput = document.getElementById('gotoInput');
+const gotoBtn = document.getElementById('gotoBtn');
+
+let currentPage = 1;
+let perPage = parseInt(perPageSelect.value);
+let totalArticles = articles.length;
+let totalPages = Math.ceil(totalArticles / perPage);
+
+function renderArticles() {
+    articles.forEach((article, index) => {
+        const start = (currentPage - 1) * perPage;
+        const end = start + perPage;
+        article.style.display = (index >= start && index < end) ? 'block' : 'none';
+    });
+    currentPageText.textContent = currentPage;
+    totalPagesText.textContent = totalPages;
+    totalResults.textContent = totalArticles;
+    renderPageNumbers();
+}
+
+function renderPageNumbers() {
+    pageNumbers.innerHTML = '';
+    for(let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('div');
+        btn.textContent = i;
+        btn.className = 'page-box' + (i === currentPage ? ' active' : '');
+        btn.addEventListener('click', () => {
+            currentPage = i;
+            renderArticles();
+        });
+        pageNumbers.appendChild(btn);
+    }
+}
+
+firstBtn.addEventListener('click', () => { currentPage = 1; renderArticles(); });
+prevBtn.addEventListener('click', () => { if(currentPage > 1){ currentPage--; renderArticles(); } });
+nextBtn.addEventListener('click', () => { if(currentPage < totalPages){ currentPage++; renderArticles(); } });
+lastBtn.addEventListener('click', () => { currentPage = totalPages; renderArticles(); });
+
+perPageSelect.addEventListener('change', () => {
+    perPage = parseInt(perPageSelect.value);
+    totalPages = Math.ceil(totalArticles / perPage);
+    currentPage = 1;
+    renderArticles();
+});
+
+gotoBtn.addEventListener('click', () => {
+    let page = parseInt(gotoInput.value);
+    if(page >= 1 && page <= totalPages){
+        currentPage = page;
+        renderArticles();
+    }
+});
+
+renderArticles();
 </script>
+
+</body>
+</html>
+
+
+
 
 
 
@@ -1332,7 +1151,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
-
 
 
 
