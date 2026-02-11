@@ -3,15 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Educación Financiera - Código Millonario</title>
+<title>La raíz de tus peores decisiones económicas | Código Millonario</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
-<link rel="icon" href="./assets/img/favicon.png" type="image/png">
-
+<link rel="icon" href="../../assets/img/favicon.png" type="image/png">
 
 <style>
 /* ===================== PAGINACIÓN ===================== */
-.pager-container { background: #ffffff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); padding: 12px; }
+.pager-container { background: #ffffff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); padding: 12px; margin-bottom: 24px; }
 .page-box { min-width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; user-select: none; font-weight: 600; color: #0f172a; transition: all 0.2s ease; }
 .page-box:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.06); transform: translateY(-1px); }
 .page-box.active { border-color: #94a3b8; box-shadow: 0 0 0 3px rgba(14,165,233,0.06); background: #f8fafc; }
@@ -28,6 +27,11 @@ input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border
   .page-box { min-width: 34px; height: 34px; }
   .compact-btn { min-width: 34px; height: 34px; }
   input[type="number"].goto-page { width: 64px; }
+}
+
+
+body {
+  background-color: #f5f5f5 !important; /* gris muy claro */
 }
 </style>
 
@@ -137,16 +141,13 @@ input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border
 .article-card:hover .arrow-btn {
     transform: scale(1.15);
 }
-
-
-body {
-  background-color: #f5f5f5 !important; /* gris muy claro */
-}
-
 </style>
 
 </head>
+
 <body class="bg-stone-50 text-stone-900">
+
+
 
 <!-- MENU FLOTANTE UNIVERSAL -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -161,32 +162,32 @@ body {
     </div>
 
     <div class="flex-1 flex justify-center items-center space-x-6 text-sm">
-      <a href="./index.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+      <a href="../../index.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
         Inicio
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="./educacionfinanciera.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+      <a href="../../educacionfinanciera.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
         Blog
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="./herramientas.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+      <a href="../../herramientas.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
         Herramientas
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="./opiniones.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+      <a href="../../opiniones.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
         Opiniones
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="./tienda.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
+      <a href="../../tienda.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
         Tienda
         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
       </a>
 
-      <a href="./contacto.html" class="ml-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-200">
+      <a href="../../contacto.html" class="ml-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-200">
         Contacto
       </a>
     </div>
@@ -209,12 +210,12 @@ body {
 
   <!-- MENU MOVIL DESPLEGABLE -->
   <div id="mobileMenu" class="fixed top-20 left-1/2 -translate-x-1/2 w-11/12 max-w-xs bg-white rounded-2xl shadow-lg p-4 flex flex-col space-y-2 scale-0 opacity-0 pointer-events-none transition-all duration-300 z-50">
-    <a href="./index.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Inicio</a>
-    <a href="./educacionfinanciera.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Blog</a>
-    <a href="./herramientas.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Herramientas</a>
-    <a href="./opiniones.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Opiniones</a>
-    <a href="./tienda.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Tienda</a>
-    <a href="./contacto.html" class="mobile-item px-4 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors">Contacto</a>
+    <a href="../../index.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Inicio</a>
+    <a href="../../educacionfinanciera.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Blog</a>
+    <a href="../../herramientas.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Herramientas</a>
+    <a href="../../opiniones.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Opiniones</a>
+    <a href="../../tienda.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Tienda</a>
+    <a href="../../contacto.html" class="mobile-item px-4 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors">Contacto</a>
   </div>
 
 </header>
@@ -279,16 +280,31 @@ body {
       }, { passive: true });
     }
 
-    // MARCAR LINK ACTIVO
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-    document.querySelectorAll(".nav-item").forEach(link => {
-      const href = link.getAttribute("href")?.replace("./", "");
-      if(href === currentPage){
-        link.style.color = "#1c1c1c";
-        link.style.fontWeight = "700";
-      }
-    });
+// MARCAR LINK ACTIVO FORZADO
+const forcedPage = "educacionfinanciera.html"; // Página que siempre quieres marcar
+
+function getFileName(href) {
+  return href.split("/").pop(); // Obtiene solo el nombre del archivo
+}
+
+document.querySelectorAll(".nav-item").forEach(link => {
+  const href = link.getAttribute("href");
+  if(getFileName(href) === forcedPage){
+    link.style.color = "#1c1c1c";
+    link.style.fontWeight = "700";
+  }
+});
+
+document.querySelectorAll(".mobile-item").forEach(link => {
+  const href = link.getAttribute("href");
+  if(getFileName(href) === forcedPage){
+    link.style.background = "#f0f0f0";
+    link.style.fontWeight = "700";
+  }
+});
+
+
 
     document.querySelectorAll(".mobile-item").forEach(link => {
       const href = link.getAttribute("href")?.replace("./", "");
@@ -306,90 +322,58 @@ body {
 <section class="py-12"></section>
 
 
-
-
-<!-- HERO PRINCIPAL -->
-<section class="relative py-20 lg:py-32 text-left overflow-x-hidden" style="font-family: 'Lora', serif;">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-6 lg:gap-12 items-start">
-
-    <!-- Columna izquierda -->
-    <div class="flex flex-col">
-      <!-- Badge minimalista -->
-      <div class="inline-flex items-center space-x-2 mb-4">
-        <i data-lucide="check-circle" class="w-4 h-4"></i>
-        <span class="text-stone-900 text-sm font-medium">Educación Financiera</span>
-      </div>
-
-      <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
-        Artículos y reflexiones <br> sobre dinero, éxito,  
-        <span class="text-green-600">trabajo y <br> decisiones</span>
-      </h1>
-
-      <blockquote class="italic text-stone-600 mt-6">
-        <p class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-          Domina los pilares del dinero: ahorro, inversión, control de gastos y crecimiento <br> patrimonial.
-        </p>
-      </blockquote>  
-    </div>
-
-  </div>
+<!-- HERO -->
+<section class="relative bg-gradient-to-br from-green-50 to-stone-100 py-20 lg:py-32 text-center">
+<h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight" style="font-family: 'Lora', serif;">
+    La raíz de tus peores <br>
+    <span class="text-green-600"> decisiones económicas </span> empieza <br> mucho antes del dinero
+</h1>   
+ <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
+    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Antes de que el dinero desaparezca, tus creencias, miedos y urgencias ya estaban tomando decisiones por ti.
+      </span>
+    </p>
+  </blockquote>
 </section>
 
 
-<!-- Contenedor tipo "3 cartas" -->
-<div class="relative flex justify-center items-end mt-4 sm:mt-10" style="height: auto; min-height: 220px;">
 
-  <!-- Imagen 2 (detrás izquierda) -->
-  <img src="./assets/img/libertad-financiera-paso-a-paso.webp" 
-       alt=""
-       class="absolute left-2 w-24 h-24 sm:left-1/5 sm:w-36 sm:h-36 md:left-1/4 md:w-56 md:h-56 object-cover rounded-lg transform -rotate-6 z-0">
-
-  <!-- Imagen 3 (detrás derecha) -->
-  <img src="./assets/img/multiplicar-tu-dinero-desde-cero.webp" 
-       alt=""
-       class="absolute right-2 w-24 h-24 sm:right-1/5 sm:w-36 sm:h-36 md:right-1/4 md:w-56 md:h-56 object-cover rounded-lg transform rotate-6 z-0">
-
-  <!-- Imagen 1 (frente, más grande) -->
-  <img src="./assets/img/mentalidad-de-crecimiento-y-exito.webp" 
-       alt=""
-       class="relative w-36 h-36 sm:w-48 sm:h-48 md:w-72 md:h-72 object-cover rounded-lg z-10">
-
-  <!-- Sombra curva (solo para la primera) -->
-  <div class="absolute bottom-0 w-36 h-8 sm:w-48 sm:h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-
-</div>
-
-
-
-
+  <!-- Imagen principal con sombra curva -->
+  <div class="flex justify-center mt-10 relative">
+    <img src="../../assets/png/patrones-mentales-y-dinero.webp" alt="" 
+         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
+    <!-- Sombra curva -->
+    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  </div>
 
 
 
            <!-- INTRODUCCIÓN GENERAL -->
-   <main class="py-20" style="font-family: 'Lora', serif;">
-               
+<main class="py-20" style="font-family: 'Lora', serif;">
+                 
 
 
-
-      <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
+<h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
           style="font-family: 'Poppins', sans-serif;">
-        Blog Oficial de
+        De la mente a la consecuencia
         <span class="inline-block mt-1 sm:mt-0"
         style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
-        Código Millonario
+        realidad
       </span>
     </h2>
 
 <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
   <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
     <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-       Este espacio reúne ideas claras para entender el dinero, pensar mejor y tomar decisiones más conscientes, sin atajos ni promesas vacías.
+Las decisiones financieras no se toman con dinero, se toman con creencias, miedos y hábitos que operan en silencio mucho antes de enfrentar una consecuencia real.
     </span>
   </p>
 </blockquote>
 
 
-<!-- BLOQUE EXPLICATIVO 8 -->
+
+ <!-- BLOQUE EXPLICATIVO 5 -->
 <section class="mb-16 text-left cursor-pointer">
 
   <!-- CONTENEDOR QUE LIMITA EL ANCHO -->
@@ -408,10 +392,10 @@ body {
                   transition-all duration-300
                   hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
         <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
-          Aprende A
+          Claridad mental antes de decidir
         </h3>
         <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
-        Tomar control de tu dinero no es hacerte rico rápido, es entender cómo funciona y usarlo a tu favor sin falsas promesas.
+          Las malas decisiones financieras nacen cuando la mente está saturada, confundida o actuando desde la urgencia, no desde la claridad.
         </p>
       </div>
 
@@ -422,10 +406,10 @@ body {
                   transition-all duration-300
                   hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
         <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
-        La Verdad
+          Disciplina frente a la emoción
         </h3>
         <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
-        Aquí no hay fórmulas mágicas, solo ideas reales y aplicables que, con mentalidad emprendedora, amplían tus oportunidades.
+          La mayoría de los errores económicos no se cometen por falta de información, sino por dejar que la emoción decida por encima de la razón.
         </p>
       </div>
 
@@ -436,10 +420,10 @@ body {
                   transition-all duration-300
                   hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
         <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
-         Escalar
+          Patrones que se repiten
         </h3>
         <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
-        Cada artículo es un paso hacia más claridad, estabilidad y decisiones conscientes construidas con tiempo y disciplina.
+          Cuando no se analiza una mala decisión, esta no desaparece: se convierte en un patrón que se repite una y otra vez.
         </p>
       </div>
 
@@ -450,10 +434,10 @@ body {
                   transition-all duration-300
                   hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
         <h3 class="text-lg font-semibold text-stone-900 mb-3" style="font-family:'Poppins',sans-serif;">
-        ¿Qué saber?
+          Visión contra urgencia
         </h3>
         <p class="text-sm text-stone-600 leading-relaxed" style="font-family:'Lora',serif;">
-        El dinero crece después de que la mente lo hace. Sin conocimiento, sistemas y proceso, no hay fortuna sostenible.
+          Pensar a largo plazo no es optimismo, es la capacidad de no sacrificar el futuro por alivio inmediato.
         </p>
       </div>
 
@@ -462,336 +446,127 @@ body {
 </section>
 
 
-
-
                 <section class="mb-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- aquí siguen las tarjetas de artículos -->
-  
 
 
-<h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
+   <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
     style="font-family: 'Poppins', sans-serif;">
-  Cómo funciona 
+  Mente y
   <span class="inline-block mt-1 sm:mt-0"
         style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
-    el Dinero
+    decisiones
   </span>
 </h2>
-
 
 <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
   <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
     <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-      Cada artículo responde a una pregunta real sobre el dinero. Elige por dónde empezar.
+      Antes de que el dinero entre en juego, ya existen creencias, miedos y hábitos que están decidiendo por ti.
+    </span>
+  </p>
+</blockquote>
+
+
+            <!-- PAGINACIÓN ARRIBA -->
+            <div class="max-w-5xl mx-auto mb-6">
+                <div class="pager-container">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4 px-2">
+                            <div class="text-sm text-stone-700">
+                                Total <span id="totalResults" class="font-semibold">0</span> resultados
+                            </div>
+                            <div class="hidden sm:inline-block text-sm text-stone-700">
+                                Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center gap-2 px-2">
+                            <button id="firstBtn" class="compact-btn">«</button>
+                            <button id="prevBtn" class="compact-btn">‹</button>
+                            <div id="pageNumbers" class="flex items-center gap-2"></div>
+                            <button id="nextBtn" class="compact-btn">›</button>
+                            <button id="lastBtn" class="compact-btn">»</button>
+                        </div>
+                        <div class="flex justify-end items-center gap-3 px-2">
+                            <select id="perPageSelect" class="select-pages">
+                                <option value="6" selected>6 / página</option>
+                                <option value="9">9 / página</option>
+                                <option value="12">12 / página</option>
+                                <option value="20">20 / página</option>
+                            </select>
+                            <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
+                            <button id="gotoBtn" class="page-box">Ir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- GRID DE ARTÍCULOS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="articlesGrid">
+
+
+  <!-- ARTÍCULO 1 -->
+<div class="article">
+  <article>
+    <a href="./no-ahorrar-te-roba-libertad-financiera.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="../../assets/png/sin-ahorro-no-decides-tu.webp" alt="Negocios Simples">
+          <div class="badge">#La urgencia manda</div>
+        </div>
+
+        <h2 class="article-title">
+          Cuando no tienes ahorro, no decides tú…
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 11/02/2026</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+  
+                <!-- Puedes duplicar más artículos aquí con la clase "article" -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+  <h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
+    style="font-family: 'Poppins', sans-serif;">
+     De los patrones a los
+    <span class="inline-block mt-1 sm:mt-0"
+    style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
+    resultados
+  </span>
+</h2>
+
+<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto mb-8">
+  <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
+    <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
+Los resultados financieros no son accidentes; son la consecuencia directa de patrones mentales que se repiten en el tiempo.
     </span>
   </p>
 </blockquote>
 
 
 
-      <!-- PAGINACIÓN ARRIBA -->
-      <div class="max-w-5xl mx-auto mb-6">
-        <div class="pager-container">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div class="flex items-center gap-4 px-2">
-              <div class="text-sm text-stone-700">
-                Total <span id="totalResults" class="font-semibold">0</span> resultados
-              </div>
-              <div class="hidden sm:inline-block text-sm text-stone-700">
-                Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
-              </div>
-            </div>
-            <div class="flex justify-center items-center gap-2 px-2">
-              <button id="firstBtn" class="compact-btn">«</button>
-              <button id="prevBtn" class="compact-btn">‹</button>
-              <div id="pageNumbers" class="flex items-center gap-2"></div>
-              <button id="nextBtn" class="compact-btn">›</button>
-              <button id="lastBtn" class="compact-btn">»</button>
-            </div>
-            <div class="flex justify-end items-center gap-3 px-2">
-              <select id="perPageSelect" class="select-pages">
-                <option value="6" selected>6 / página</option>
-                <option value="9">9 / página</option>
-                <option value="12">12 / página</option>
-                <option value="20">20 / página</option>
-              </select>
-              <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
-              <button id="gotoBtn" class="page-box">Ir</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articlesGrid">
-        <!-- Ejemplo de artículos -->
-
-
-
-  <div class="article">
-  <article>
-    <a href="./blog/biografia-de-millonarios/index.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="./assets/png/como-se-hicieron-millonarios.webp" alt="">
-          <div class="badge">#¿Cómo se hicieron ricos?</div>
-        </div>
-
-        <h2 class="article-title">
-          Biografías de millonarios hechos a sí mismos
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-      </div>
-    </a>
-  </article>
-</div>
-
-<!-- Repite tus artículos -->
-<div class="article">
-  <article>
-    <a href="./blog/ahorro/index.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="">
-          <div class="badge">#¿Quieres ahorrar fácil?</div>
-        </div>
-
-        <h2 class="article-title">
-          Formas de gestionar tu dinero sin problemas
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./blog/mentalidad-de-exito/index.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="./assets/png/el-exito-empieza-en-la-mente.webp" alt="">
-          <div class="badge">#Mentalidad de éxito</div>
-        </div>
-
-        <h2 class="article-title">
-          El éxito es mental antes que material ¿Por qué?
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./blog/inversiones/index.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="./assets/png/inversion-inteligente-segura.webp" alt="">
-          <div class="badge">#¿Temes invertir?</div>
-        </div>
-
-        <h2 class="article-title">
-          Aprende cómo invertir sin temores este año
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./blog/psicologia-del-dinero/index.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="./assets/png/patrones-mentales-y-dinero.webp" alt="">
-          <div class="badge">#La psicología del dinero</div>
-        </div>
-
-        <h2 class="article-title">
-          ¿por qué la gente hace lo que hace con el dinero?
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./blog/deudas/index.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="./assets/png/eliminar-deudas-rapido.webp" alt="">
-          <div class="badge">#¿Tus deudas no se van?</div>
-        </div>
-
-        <h2 class="article-title">
-          Recupera el control con métodos eficientes
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./blog/empleo/index.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
-          <div class="badge">#¿Nada de progreso?</div>
-        </div>
-
-        <h2 class="article-title">
-         Genera oportunidades en tu carrera laboral
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./blog/negocios/index.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
-          <div class="badge">#¿No triunfas en negocios?</div>
-        </div>
-
-        <h2 class="article-title">
-          Aprende a crear y escalar negocios rentables
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./blog/temas-de-interes-global/index.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="./assets/png/detectar-oportunidades-de-mercado.webp" alt="">
-          <div class="badge">#Tu futuro aquí</div>
-        </div>
-
-        <h2 class="article-title">
-          Tendencias que impactan tus oportunidades
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-
-
-
-
-
-                      <!-- DUPLICA MÁS ARTÍCULOS PARA PRUEBAS -->
-
-        </div>
-    </div>
-</section>
-
-
-
-
-<h2 class="text-2xl sm:text-3xl font-semibold text-stone-900 mb-6 sm:mb-8 mt-12 sm:mt-20 text-center leading-tight"
-    style="font-family: 'Poppins', sans-serif;">
-     Decisiones que Impulsan tu Crecimiento
-    <span class="inline-block mt-1 sm:mt-0"
-    style="background-color:#2563eb; color:white; padding: 0.15rem 0.45rem; border-radius: 6px;">
-       Financiero
-  </span>
-</h2>
-
-<blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
-    <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
-      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-      Explora estos conceptos esenciales y empieza a tomar decisiones financieras más inteligentes desde hoy.
-      </span>
-    </p>
-  </blockquote>
-
-
-<section class="mb-16">
+ <section class="mb-16"  style="font-family:'Lora',serif;">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- ================= ACORDEÓN ================= -->
 
-   <style>
+    <style>
   .cf-accordion {
     margin-top: 60px;
   }
@@ -880,401 +655,148 @@ body {
 
     <div class="cf-accordion">
 
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-          ¿Qué es la educación financiera?
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-          <p>
-          La educación financiera es el conjunto de conocimientos, habilidades y hábitos que te permiten comprender cómo funciona el dinero en tu vida diaria y cómo administrarlo de forma consciente según tu situación actual. No se trata únicamente de saber cuánto ganas o cuánto gastas, sino de entender cómo fluye el dinero, cómo tomar mejores decisiones y cómo evitar errores que pueden afectar tu estabilidad económica a corto, mediano y largo plazo.
-          </p>
+  <div class="cf-accordion-item">
+  <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+    Patrones mentales que se repiten
+    <span class="cf-accordion-icon"></span>
+  </div>
 
-          <p>
-          Cuando una persona tiene educación financiera, es capaz de organizar sus ingresos, controlar sus gastos, crear un presupuesto realista, ahorrar de manera constante e identificar oportunidades para invertir de forma responsable. Además, aprende a diferenciar entre necesidades y deseos, a usar el crédito con inteligencia y a prevenir el sobreendeudamiento, uno de los problemas financieros más comunes hoy en día.
-          </p>
-          
-          <p>
-          La educación financiera también implica desarrollar una mentalidad crítica frente al consumo, el marketing y las decisiones impulsivas. Muchas veces el dinero no se pierde por falta de ingresos, sino por falta de claridad y planificación. Entender conceptos como intereses, inflación, deudas, ahorro e inversión permite tomar decisiones informadas y evitar caer en trampas financieras que parecen inofensivas, pero que con el tiempo pueden afectar seriamente tu economía personal.
-          </p>
+  <div class="cf-accordion-content">
 
-          <p>
-          Otro aspecto clave de la educación financiera es que se adapta a cada persona. No importa si estás comenzando desde cero, si tienes ingresos variables o si ya manejas un negocio; aprender a gestionar tu dinero te ayuda a tomar control de tu presente y a construir un futuro financiero más estable. No se trata de hacerse rico de la noche a la mañana, sino de crear una relación sana y consciente con el dinero.
-          </p>
+    <p>
+      Las decisiones financieras no suelen fallar por falta de información, sino por patrones mentales que operan en automático. Muchas personas creen estar eligiendo libremente, cuando en realidad están reaccionando desde hábitos emocionales aprendidos hace años.
+    </p>
 
-          <p>
-          En resumen, la educación financiera es una herramienta fundamental para mejorar tu calidad de vida, reducir el estrés económico y tomar decisiones alineadas con tus objetivos personales. Cuanto mayor sea tu nivel de educación financiera, mayor será tu capacidad para usar el dinero como un aliado y no como una fuente constante de preocupación.
-          </p>
+    <p>
+      Cuando algo sale mal, la reacción inmediata no es analizar, sino justificar. Se culpa al mercado, al salario, al gobierno o a la suerte. Rara vez se examina el patrón que llevó a repetir la misma decisión bajo presión, miedo o urgencia.
+    </p>
 
-        </div>
-      </div>
+    <p>
+      La mente busca alivio inmediato, no estabilidad a largo plazo. Por eso se aceptan deudas que ofrecen tranquilidad momentánea, trabajos que reducen el estrés del presente o gastos que compensan frustraciones internas. El problema no es el dinero, es la necesidad emocional detrás de la decisión.
+    </p>
 
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-          ¿Por qué es importante aprender sobre finanzas personales?
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-          <p>
-Aprender sobre finanzas personales es importante porque el dinero forma parte de casi todas las decisiones que tomamos en la vida, aunque muchas veces no seamos conscientes de ello. Sin educación financiera, es muy fácil caer en errores comunes como gastar impulsivamente, endeudarse sin un plan claro o vivir siempre al día sin pensar en el futuro. Estos hábitos, con el tiempo, pueden generar estrés, frustración y una sensación constante de falta de control.
-          </p>
+    <p>
+      Con el tiempo, estos comportamientos se normalizan. Se convierten en parte de la identidad financiera de la persona. “Siempre me pasa lo mismo” no es mala suerte, es un patrón no cuestionado que sigue activo.
+    </p>
 
-           <p>
-Cuando entiendes cómo funcionan tus finanzas personales, empiezas a tomar decisiones con mayor claridad. Aprendes a manejar mejor tus ingresos, a organizar tus gastos y a priorizar lo que realmente es importante para ti. Esto no significa dejar de disfrutar la vida, sino gastar con intención y saber exactamente a dónde va tu dinero. Tener control financiero te da tranquilidad mental y te permite enfrentar imprevistos sin que se conviertan en crisis.
-          </p>
+    <p>
+      Romper un patrón financiero no empieza con una nueva estrategia de ahorro, empieza con una pregunta incómoda: ¿Qué estoy intentando evitar sentir cuando tomo esta decisión?
+    </p>
 
-           <p>
-La importancia de aprender sobre finanzas personales también está en la capacidad de planificar el futuro. Ahorrar, invertir o prepararte para metas grandes como comprar una vivienda, emprender un negocio o asegurar tu retiro deja de ser un sueño lejano y se convierte en un proceso realista. No se trata de ganar más dinero de inmediato, sino de usar mejor el que ya tienes y tomar decisiones más inteligentes a largo plazo.
-          </p>
+    <p>
+      La verdadera claridad financiera aparece cuando dejas de enfocarte solo en el resultado y empiezas a observar el proceso mental que te llevó hasta allí. Cambiar números es fácil; cambiar patrones requiere conciencia.
+    </p>
 
-           <p>
-Además, la educación financiera te protege de malas decisiones y de información engañosa. Cuando conoces conceptos básicos como deudas, intereses, ahorro e inversión, es menos probable que caigas en promesas irreales o en compromisos financieros que no entiendes del todo. Esto te da mayor seguridad y autonomía para elegir lo que realmente se adapta a tu situación.
-          </p>
-
-           <p>
-En pocas palabras, aprender sobre finanzas personales es importante porque te permite tomar el control de tu dinero, reducir el estrés financiero y construir una vida más estable y alineada con tus objetivos. Cuanto antes empieces, mejores serán las decisiones que tomes y más opciones tendrás para crear el futuro que deseas.
-          </p>
-
-        </div>
-      </div>
-
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-          ¿Para qué sirve la educación financiera en tu vida diaria?
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-          <p>
-La educación financiera sirve para que puedas manejar tu dinero con mayor claridad y tomar decisiones conscientes en tu vida diaria. No se trata solo de saber cuánto ganas, sino de entender cómo usas ese dinero, qué hábitos te benefician y cuáles te están frenando sin que te des cuenta. Cuando tienes educación financiera, dejas de reaccionar a fin de mes y empiezas a actuar con intención.
-          </p>
-
-             <p>
-En el día a día, la educación financiera te ayuda a organizar y controlar tus gastos, identificando en qué se va tu dinero y eliminando gastos innecesarios que muchas veces pasan desapercibidos. Esto te permite crear un equilibrio entre lo que ganas y lo que gastas, evitando vivir constantemente bajo presión económica.
-          </p>
-
-             <p>
-También sirve para planificar metas económicas reales, como comprar una casa, cambiar de vehículo, viajar, emprender un negocio o prepararte para la jubilación. Al entender cómo ahorrar y planificar, estas metas dejan de verse lejanas y se convierten en objetivos alcanzables con pasos claros y medibles.
-          </p>
-
-             <p>
-Otro beneficio clave es que te permite prepararte para gastos imprevistos. Emergencias médicas, reparaciones o situaciones inesperadas pueden afectar seriamente tus finanzas si no estás preparado. La educación financiera te enseña la importancia de contar con un fondo de emergencia para enfrentar estos momentos sin recurrir a deudas que luego se vuelven difíciles de manejar.
-          </p>
-
-             <p>
-Además, aprender sobre educación financiera te ayuda a entender productos financieros como créditos, seguros e inversiones. En lugar de firmar contratos sin saber qué estás aceptando, puedes evaluar riesgos, costos e intereses, y elegir lo que realmente se ajusta a tu situación. Esto reduce la posibilidad de cometer errores costosos y te da mayor seguridad al tomar decisiones.
-          </p>
-
-             <p>
-En resumen, la educación financiera sirve para mejorar tu relación con el dinero, evitar errores comunes y tomar decisiones más inteligentes que impacten positivamente tu presente y tu futuro. Es una herramienta práctica que te acompaña todos los días y te da mayor control sobre tu vida financiera.
-          </p>
-
-        </div>
-      </div>
-
-       <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-          ¿Cómo empezar a mejorar tu educación financiera?
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-          <p>
-Mejorar tu educación financiera no requiere conocimientos avanzados ni grandes ingresos, sino la decisión de empezar con pequeños pasos consistentes. El primer paso es tomar conciencia de tu situación actual, es decir, saber exactamente cuánto dinero entra y cuánto sale cada mes. Llevar un registro de tus ingresos y gastos te permite identificar hábitos que están afectando tus finanzas y detectar oportunidades de mejora que antes pasaban desapercibidas.
-          </p>
-
-           <p>
-Una vez tienes claridad sobre tus números, el siguiente paso es crear un presupuesto mensual realista. Un buen presupuesto no es una restricción, sino una guía que te ayuda a distribuir tu dinero de forma inteligente, asegurando que cubres tus necesidades, ahorras y disfrutas sin excederte. Ajustarlo con el tiempo es parte del proceso, no una señal de fracaso.
-          </p>
-
-           <p>
-También es importante aprender los conceptos básicos del ahorro y la inversión. Entender cómo funciona el ahorro, para qué sirve un fondo de emergencia y cuáles son las opciones de inversión más simples te ayudará a tomar mejores decisiones sin asumir riesgos innecesarios. No se trata de invertir grandes cantidades, sino de comprender cómo poner tu dinero a trabajar de forma gradual.
-          </p>
-
-           <p>
-Hoy en día existen muchas herramientas digitales que facilitan este camino. Calculadoras financieras, simuladores de crédito, aplicaciones de control de gastos y plataformas educativas pueden ayudarte a visualizar mejor tus decisiones y a evitar errores comunes. Usarlas de forma constante hace una gran diferencia.
-          </p>
-
-           <p>
-Por último, mejorar tu educación financiera implica aprender de forma continua. Leer artículos, ver videos, escuchar podcasts o tomar cursos sencillos sobre finanzas personales te permite fortalecer tus conocimientos y mantenerte actualizado. Lo importante no es consumir información sin parar, sino aplicar lo que aprendes poco a poco en tu vida diaria.
-          </p>
-
-          <p>
-En resumen, empezar a mejorar tu educación financiera es un proceso accesible para cualquier persona. Con pequeños cambios, constancia y la información adecuada, puedes desarrollar hábitos financieros más saludables y construir una base sólida para tu futuro.
-          </p>
-
-        </div>
-      </div>
-
- </div>
-</section>
-
-
-
-
-
-<section class="mb-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
-       <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-          ¿Cuándo deberías aplicar estos conceptos?
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-          <p>
-No existe una “edad perfecta” ni un momento ideal para empezar a aplicar la educación financiera. Puedes hacerlo hoy mismo, sin importar si ganas mucho o poco, si estás endeudado o si apenas estás comenzando a manejar tu propio dinero. La educación financiera no es solo para personas con grandes ingresos, es para cualquiera que quiera tomar mejores decisiones en su vida diaria.
-          </p>
-
-          <p>
-Mientras antes comprendas cómo funciona tu dinero, menos errores costosos cometerás en el futuro. Entender estos conceptos a tiempo te permite anticiparte a problemas comunes como el sobreendeudamiento, la falta de ahorro o la dependencia total del ingreso mensual. Incluso pequeños cambios aplicados desde hoy pueden generar un impacto grande con el paso del tiempo.
-          </p>
-
-          <p>
-Si estás empezando tu vida laboral, estos conocimientos te ayudarán a construir bases sólidas desde el inicio. Si ya llevas años trabajando, nunca es tarde para corregir hábitos y reorganizar tus finanzas. Y si atraviesas un momento económico difícil, aprender sobre finanzas personales puede ser la herramienta que te permita recuperar el control.
-          </p>
-
-          <p>
-La clave no es esperar el momento perfecto, sino empezar con lo que tienes y desde donde estás. Cada decisión consciente que tomes hoy acerca de tu dinero te acerca un paso más a una vida financiera más estable, tranquila y con mejores oportunidades.
-          </p>
-
-        </div>
-      </div>
-
-       <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-          ¿Para quién es esta sección de educación financiera?
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-          <p>
-Esta sección de educación financiera está pensada para cualquier persona que quiera entender mejor su dinero y usarlo de forma más inteligente en su vida diaria. No importa si estás comenzando, si nunca te enseñaron a manejar tus finanzas o si sientes que el dinero se te va sin saber en qué. Aquí no necesitas conocimientos previos ni términos complicados.
-          </p>
-
-           <p>
-Es ideal para estudiantes que quieren aprender a administrar sus primeros ingresos, trabajadores que buscan organizar mejor su salario y evitar vivir al límite cada mes, y emprendedores que necesitan tomar decisiones más claras sobre gastos, ahorros e inversiones. También es para quienes desean planificar su futuro, cumplir metas importantes o simplemente dejar de sentir estrés cuando piensan en dinero.
-          </p>
-
-           <p>
-El enfoque de esta sección es práctico, claro y directo. Todo está explicado con ejemplos reales, lenguaje sencillo y sin tecnicismos innecesarios. La idea es que puedas aplicar lo que aprendes de inmediato, sin vueltas ni promesas irreales.
-          </p>
-
-           <p>
-Si alguna vez has sentido que nadie te explicó cómo funciona el dinero en la vida real, este espacio es para ti. Aquí aprenderás a tomar el control de tus finanzas paso a paso, a tu ritmo y con información útil que realmente te ayude a mejorar tu relación con el dinero.
-          </p>
-
-        </div>
-      </div>
-
-       <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-          El verdadero inicio de tu libertad financiera
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-         <p>
-          La diferencia entre permanecer estancado y avanzar hacia la libertad financiera está, una por una, en la decisión que estás tomando a diario. Es necesario aplicar lo que aprendes, tanto así que de lo aplicado sale el camino que debes seguir, y sabrás ese camino cuando trabajes de forma incansable.
-      </p>
-
-       <p>
-        Actúa de manera consciente y construye sistemas que hagan que tu billetera le sonría al dinero. Si estás leyendo esto, te aseguro que es la mejor indecisión que has tomado, independientemente del lugar donde quieras aprender estos conceptos sobre el dinero. 
-      </p>
-          
-                  
-        <p>          
-        Buscar la intención de cómo mejorar ya te hace único. Recuerda, no se inicia con dinero, se inicia con ideas, con acción y con constancia. No estás lejos de tus sueños con una idea, y no estás más cerca de esos sueños sin acciones.
-      </p>
-
-        </div>
-      </div>
-
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-          ¿Cómo actuar hoy?
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-           <p>
-        Empieza con un paso simple, pero decisivo: tomar el control de tu dinero antes de que él tome el control de ti. Un impulso provocado por un buen marketing, una fiesta emocionante o un vicio que no controles puede estar derrumbando la pirámide de tu dinero. En otro caso, no necesitas suerte, contactos ni un gran capital. 
-      </p>
-
-      <p>
-        Solo claridad es la parte más importante, intención y la voluntad de descubrir qué camino es para ti el más apropiado. No se trata de tomar ventajas sobre los demás, pues cada camino es diferente; se trata de ti mismo y de lo que puedes ofrecer a los demás con la intención de ayudar.
-      </p>
-
-      <p>
-        Solo tu camino te llevará a donde quieres, no el camino de alguien más, no el camino que no es para ti. Esa búsqueda puede tomar tiempo, esfuerzo, errores y fracasos. Mientras más rápido pase esta etapa, estará más cerca de lograr eso que quiere para su vida. Las excusas te paralizan, te mantienen justo donde no quieres estar.
-      </p>
-  
-      <p>
-        ¿Llevas años así? Mira cuánto te quejas y mira cuánto piensas en soluciones; esto hace la diferencia. La intención no es preocuparse, es ocuparse, y cuando llegue un problema real, ocúpate de él allí. Te aseguro que no llegará, solo son ideas de nuestra mente pensando en problemas que nunca pasarán.
-      </p>
-
-        </div>
-      </div>
-
-    </div>
+  </div>
+</div>
+</div>
 
     <script>
-      document.querySelectorAll('.cf-accordion-header').forEach(header => {
-        header.addEventListener('click', () => {
+    document.querySelectorAll('.cf-accordion').forEach(accordion => {
+  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.cf-accordion-item');
+      const content = item.querySelector('.cf-accordion-content');
 
-          const item = header.closest('.cf-accordion-item');
-          const content = item.querySelector('.cf-accordion-content');
-
-          document.querySelectorAll('.cf-accordion-item').forEach(other => {
-            if (other !== item) {
-              other.classList.remove('is-open');
-              other.querySelector('.cf-accordion-content').style.maxHeight = null;
-            }
-          });
-
-          item.classList.toggle('is-open');
-
-          if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-          } else {
-            content.style.maxHeight = content.scrollHeight + 'px';
-          }
-        });
+      // Solo afecta los items de ESTE acordeón
+      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+        }
       });
+
+      item.classList.toggle('is-open');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
     </script>
 
- </div>
-</section>
-    <!-- ================= FIN ACORDEÓN ================= -->
 
- 
 
 </main>
 
 
-
-
+<!-- SCRIPT DE PAGINACIÓN -->
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const articles = Array.from(document.querySelectorAll('.article'));
-    const articlesGrid = document.getElementById('articlesGrid');
+const articles = document.querySelectorAll('.article');
+const articlesGrid = document.getElementById('articlesGrid');
+const perPageSelect = document.getElementById('perPageSelect');
+const currentPageText = document.getElementById('currentPageText');
+const totalPagesText = document.getElementById('totalPagesText');
+const totalResults = document.getElementById('totalResults');
+const pageNumbers = document.getElementById('pageNumbers');
+const firstBtn = document.getElementById('firstBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const lastBtn = document.getElementById('lastBtn');
+const gotoInput = document.getElementById('gotoInput');
+const gotoBtn = document.getElementById('gotoBtn');
 
-    const totalResultsEl = document.getElementById('totalResults');
-    const currentPageText = document.getElementById('currentPageText');
-    const totalPagesText = document.getElementById('totalPagesText');
-    const perPageSelect = document.getElementById('perPageSelect');
-    const gotoInput = document.getElementById('gotoInput');
-    const gotoBtn = document.getElementById('gotoBtn');
-    const firstBtn = document.getElementById('firstBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const lastBtn = document.getElementById('lastBtn');
-    const pageNumbersContainer = document.getElementById('pageNumbers');
+let currentPage = 1;
+let perPage = parseInt(perPageSelect.value);
+let totalArticles = articles.length;
+let totalPages = Math.ceil(totalArticles / perPage);
 
-    let perPage = parseInt(perPageSelect.value, 10);
-    let currentPage = 1;
-    let totalPages = Math.max(1, Math.ceil(articles.length / perPage));
-
-    function showPage(page) {
-        if (page < 1) page = 1;
-        if (page > totalPages) page = totalPages;
-        currentPage = page;
+function renderArticles() {
+    articles.forEach((article, index) => {
         const start = (currentPage - 1) * perPage;
         const end = start + perPage;
+        article.style.display = (index >= start && index < end) ? 'block' : 'none';
+    });
+    currentPageText.textContent = currentPage;
+    totalPagesText.textContent = totalPages;
+    totalResults.textContent = totalArticles;
+    renderPageNumbers();
+}
 
-        articles.forEach((article, idx) => {
-            if (idx >= start && idx < end) {
-                article.style.display = '';
-                setTimeout(() => article.style.opacity = 1, 10);
-            } else {
-                article.style.opacity = 0;
-                setTimeout(() => article.style.display = 'none', 400);
-            }
+function renderPageNumbers() {
+    pageNumbers.innerHTML = '';
+    for(let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('div');
+        btn.textContent = i;
+        btn.className = 'page-box' + (i === currentPage ? ' active' : '');
+        btn.addEventListener('click', () => {
+            currentPage = i;
+            renderArticles();
         });
-
-        currentPageText.textContent = currentPage;
-        totalPagesText.textContent = totalPages;
-
-        updateButtons();
-        renderPageNumbers();
+        pageNumbers.appendChild(btn);
     }
+}
 
-    function updateButtons() {
-        firstBtn.disabled = currentPage === 1;
-        prevBtn.disabled = currentPage === 1;
-        nextBtn.disabled = currentPage === totalPages;
-        lastBtn.disabled = currentPage === totalPages;
-    }
+firstBtn.addEventListener('click', () => { currentPage = 1; renderArticles(); });
+prevBtn.addEventListener('click', () => { if(currentPage > 1){ currentPage--; renderArticles(); } });
+nextBtn.addEventListener('click', () => { if(currentPage < totalPages){ currentPage++; renderArticles(); } });
+lastBtn.addEventListener('click', () => { currentPage = totalPages; renderArticles(); });
 
-    function renderPageNumbers() {
-        pageNumbersContainer.innerHTML = '';
-        if (totalPages <= 5) {
-            for (let i = 1; i <= totalPages; i++) {
-                pageNumbersContainer.appendChild(createPageButton(i));
-            }
-            return;
-        }
-        pageNumbersContainer.appendChild(createPageButton(1));
-        let start = Math.max(2, currentPage - 1);
-        let end = Math.min(totalPages - 1, currentPage + 1);
-
-        if (start > 2) {
-            const dots = document.createElement('div');
-            dots.textContent = '...';
-            dots.className = 'text-stone-400 px-1';
-            pageNumbersContainer.appendChild(dots);
-        }
-
-        for (let i = start; i <= end; i++) {
-            pageNumbersContainer.appendChild(createPageButton(i));
-        }
-
-        if (end < totalPages - 1) {
-            const dots = document.createElement('div');
-            dots.textContent = '...';
-            dots.className = 'text-stone-400 px-1';
-            pageNumbersContainer.appendChild(dots);
-        }
-
-        pageNumbersContainer.appendChild(createPageButton(totalPages));
-    }
-
-    function createPageButton(num) {
-        const btn = document.createElement('button');
-        btn.textContent = num;
-        btn.className = 'page-box';
-        if (num === currentPage) btn.classList.add('active');
-        btn.addEventListener('click', () => showPage(num));
-        return btn;
-    }
-
-    perPageSelect.addEventListener('change', () => {
-        perPage = parseInt(perPageSelect.value, 10);
-        totalPages = Math.ceil(articles.length / perPage);
-        currentPage = 1;
-        showPage(currentPage);
-    });
-
-    firstBtn.addEventListener('click', () => showPage(1));
-    prevBtn.addEventListener('click', () => showPage(currentPage - 1));
-    nextBtn.addEventListener('click', () => showPage(currentPage + 1));
-    lastBtn.addEventListener('click', () => showPage(totalPages));
-
-    gotoBtn.addEventListener('click', () => {
-        const val = parseInt(gotoInput.value, 10);
-        if (!isNaN(val)) showPage(val);
-        gotoInput.value = '';
-    });
-
-    gotoInput.addEventListener('keydown', e => {
-        if (e.key === 'Enter') gotoBtn.click();
-    });
-
-    totalResultsEl.textContent = articles.length;
-    totalPages = Math.ceil(articles.length / perPage);
-    showPage(currentPage);
+perPageSelect.addEventListener('change', () => {
+    perPage = parseInt(perPageSelect.value);
+    totalPages = Math.ceil(totalArticles / perPage);
+    currentPage = 1;
+    renderArticles();
 });
-</script>
 
+gotoBtn.addEventListener('click', () => {
+    let page = parseInt(gotoInput.value);
+    if(page >= 1 && page <= totalPages){
+        currentPage = page;
+        renderArticles();
+    }
+});
+
+renderArticles();
+</script>
 
 </body>
 </html>
+
+
 
 
 
