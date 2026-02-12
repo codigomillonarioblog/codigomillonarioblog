@@ -181,7 +181,11 @@
 
 
 
+
 </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -551,23 +555,24 @@ emailInput.addEventListener('input', () => {
  <!-- Botones movidos debajo del texto -->
 <div class="flex flex-col sm:flex-row gap-4 mt-4" style="font-family: 'Poppins', sans-serif;">
 
-  <!-- Botón principal -->
-  <button onclick="openPopup()"
-          class="bg-stone-800 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-stone-700 shadow-lg text-center w-full sm:w-auto shake-button transition-all duration-200">
-    Descargar Guía Gratis
-  </button>
+<!-- Botón principal -->
+<button onclick="openPopup()"
+        class="bg-green-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold 
+               hover:bg-black hover:text-white shadow-lg text-center w-full sm:w-auto shake-button transition-all duration-200">
+  Descargar Guía Gratis
+</button>
 
- <!-- Botón Productos en verde -->
+<!-- Botón Productos estilo outline -->
 <a href="./tienda.html"
-   class="bg-green-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold 
-          hover:bg-green-600 flex items-center justify-center w-full sm:w-auto transition-all duration-200">
+   class="bg-white text-black border-2 border-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold 
+          hover:bg-black hover:text-white flex items-center justify-center w-full sm:w-auto transition-all duration-200">
   Productos
 </a>
 
-<!-- Botón Donaciones en verde -->
+<!-- Botón Donaciones estilo outline -->
 <a href="./donar.html"
-   class="bg-green-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold 
-          hover:bg-green-600 flex items-center justify-center w-full sm:w-auto transition-all duration-200">
+   class="bg-white text-black border-2 border-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold 
+          hover:bg-black hover:text-white flex items-center justify-center w-full sm:w-auto transition-all duration-200">
   Donaciones
 </a>
 
@@ -714,16 +719,49 @@ emailInput.addEventListener('input', () => {
 
 
 
-<div style="height:30px; margin:30px 0;"></div>
 
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="./assets/img/libertad-financiera-paso-a-paso.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+
+
+<!-- Cuadro central de redes y texto -->
+<div class="max-w-md w-full mx-auto mt-16 bg-white rounded-xl shadow-lg p-6 flex flex-col items-center gap-6">
+
+  <!-- Logo centrado arriba -->
+  <img src="./assets/img/social-finanzas.jpeg" alt="Mi Logo"
+       class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover">
+
+  <!-- Texto centrado -->
+  <div class="text-center px-4">
+    <h2 class="text-lg sm:text-xl font-bold text-gray-800">Explora mi contenido</h2>
+    <p class="text-gray-600 mt-2 text-sm sm:text-base">
+      Contenido GRATIS que comparto con mi comunidad.  
+      Recuerda suscribirte, darle like y seguirme.
+    </p>
   </div>
+
+  <!-- Redes sociales alineadas horizontalmente -->
+  <div class="flex flex-wrap justify-center gap-4 mt-4">
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-black text-white hover:scale-110 transition-transform">
+      <i class="fab fa-tiktok text-lg sm:text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-red-600 text-white hover:scale-110 transition-transform">
+      <i class="fab fa-youtube text-lg sm:text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-red-500 text-white hover:scale-110 transition-transform">
+      <i class="fab fa-pinterest-p text-lg sm:text-xl"></i>
+    </a>
+  </div>
+
+</div>
+
 
 
 
