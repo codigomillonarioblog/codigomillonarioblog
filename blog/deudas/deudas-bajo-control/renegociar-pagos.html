@@ -216,9 +216,15 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 <div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
 
-<!-- Fecha -->
+   <!-- Fecha -->
+<span class="text-center text-xs">
+  <span class="update-icon-inline"></span> Actualizado
+</span>
+
+<span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
+
   <span class="leading-none tracking-wide">
-      25 Dic 2025
+    12 feb 2026 
   </span>
 
   <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
@@ -429,125 +435,151 @@ window.addEventListener("scroll", () => {
 
 
 <!-- INTRODUCCIÓN -->
-  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Evalúa tu situación financiera actual</h2>
+  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">Evalúa tu situación financiera actual</h2>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 <img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
        class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+  
     <p>
-        Antes de acercarte al banco, necesitas un panorama claro:  
-         Lista tus deudas: monto total, tasa de interés, cuota mensual y plazo restante. Esto te permitirá identificar cuáles deudas son más urgentes y cuáles se pueden renegociar más fácilmente.  
-         Analiza tus ingresos y gastos mensuales: determina cuánto dinero puedes destinar al pago de deudas sin comprometer tus necesidades básicas y tus gastos esenciales.  
-         Prioriza deudas críticas: enfócate en aquellas con intereses más altos, con riesgo de reporte a centrales de riesgo o con moras significativas. Esto te ayudará a evitar mayores costos financieros y sanciones.
+        Antes de acercarte al banco, es súper importante que tengas un panorama real de tu dinero. No sirve de nada ir a pedir algo si no sabes exactamente qué tienes y qué debes.  
+        Primero, haz una lista de tus deudas: cuánto debes en total, la tasa de interés, la cuota mensual y el tiempo que te falta para pagar. 
+    </p>
+
+    <p>        
+        Ver esto en papel (o en un Excel, lo que tengas a mano) te ayudará a ver cuáles son urgentes y cuáles podrías renegociar sin tanto lío.  
+        Luego, revisa tus ingresos y gastos del mes: cuánto entra, cuánto sale y qué parte de eso puedes usar para pagar deudas sin quedarte corto en lo básico. 
+    </p>
+   
+    <p>        
+        Aquí mucha gente se sorprende al ver que gasta más de lo que creía en cosas que ni siquiera recuerda.  
+        Por último, prioriza. Empieza con las deudas más críticas: las que tienen intereses altos, las que ya pueden aparecer en tu reporte de crédito o las que ya llevan tiempo sin pagarse. Atender esto primero evita que la bola de nieve crezca y te cueste aún más dinero.
     </p>
 </div>
 
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Conoce tus derechos y opciones legales</h2>
+   <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Conoce tus derechos y opciones legales</h2>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
-    En Colombia, las entidades financieras deben ofrecer alternativas a clientes que atraviesan dificultades de pago:  
-     Refinanciación de créditos: permite ajustar cuotas y plazos para mejorar la liquidez mensual.  
-     Reducción temporal de cuotas: ideal para situaciones de emergencia o pérdida temporal de ingresos.  
-     Ampliación de plazos: permite disminuir la carga mensual distribuyendo la deuda en más tiempo.  
-     Periodos de gracia: suspender pagos durante algunos meses sin generar intereses adicionales.  
-
-    Infórmate sobre la Ley 1328 de 2009 y la normativa de la Superintendencia Financiera de Colombia, que protege a los consumidores financieros y asegura un trato justo en la renegociación.
-</p>
-</div>
-
-
-<!-- PARRAFO -->
-    <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Prepara tu propuesta antes de negociar</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-
-<p>
-    Acudir al banco sin un plan reduce significativamente tus posibilidades de éxito. Antes de negociar:  
-     Determina cuánto puedes pagar mensualmente de manera realista y sostenible.  
-     Define un plazo ideal para saldar la deuda que se ajuste a tu presupuesto.  
-     Evalúa la posibilidad de consolidar varias deudas en un solo crédito para simplificar pagos y reducir tasas de interés.  
-
-    <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Ejemplo:</strong> Si debes $5.000.000 en tarjetas con cuotas de $500.000, podrías solicitar reducir la cuota a $300.000 y extender el plazo a 24 meses, logrando un alivio inmediato en tu flujo de caja mensual.
+    La verdad, muchas personas no saben que en Colombia tienes ciertos derechos cuando se te complica pagar tus deudas. Los bancos y entidades financieras están obligados a ofrecer opciones para que no termines ahogado. Por ejemplo:  
+    <ul class="list-disc ml-5">
+        <li><strong>Refinanciación de créditos:</strong> te permite ajustar cuotas y plazos para que tu bolsillo respire un poco mejor cada mes.</li>
+        <li><strong>Reducción temporal de cuotas:</strong> útil si perdiste tu trabajo o tu ingreso se redujo de repente.</li>
+        <li><strong>Ampliación de plazos:</strong> repartir la deuda en más tiempo para que cada mes no se sienta tan pesado.</li>
+        <li><strong>Periodos de gracia:</strong> suspender pagos unos meses sin que te cobren intereses extra.</li>
+    </ul>
+    Además, conviene que te informes sobre la Ley 1328 de 2009 y la normativa de la Superintendencia Financiera de Colombia. Básicamente, estas reglas están para protegerte como consumidor y asegurarte que la negociación sea justa.  
+    Ojo, que no siempre los bancos lo explican de manera clara, así que vale la pena preguntar y asegurarte que entiendes todas las condiciones.
 </p>
 </div>
 
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Comunícate directamente con tu entidad financiera</h2>
+    <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Prepara tu propuesta antes de negociar</h2>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
-<p>
-    Los canales más efectivos para negociar tu deuda son:  
-     Oficinas físicas: permiten atención personalizada, explicando tu situación directamente a un asesor que puede ofrecer soluciones inmediatas.  
-     Líneas de servicio al cliente: algunos bancos permiten solicitudes formales por teléfono, especialmente para clientes con historial de pago.  
-     Banca en línea: varias entidades permiten enviar solicitudes de reestructuración digitalmente, lo que ahorra tiempo y evita traslados.  
 
-    <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Tip:</strong> Mantén un registro detallado de correos, llamadas y nombres de los funcionarios que te atiendan, esto servirá como respaldo en caso de desacuerdos futuros.
+<p>
+    Ir al banco sin tener un plan es como lanzarte al agua sin saber nadar: reduces mucho tus posibilidades de que todo salga bien. Antes de sentarte a negociar, haz esto:  
+    <ul class="list-disc ml-5">
+        <li><strong>Calcula cuánto puedes pagar realmente cada mes:</strong> nada de números “soñados”, que después te dejen en problemas.</li>
+        <li><strong>Define un plazo razonable:</strong> algo que puedas cumplir sin estresarte cada mes.</li>
+        <li><strong>Piensa en consolidar deudas:</strong> si tienes varias, a veces juntarlas en un solo crédito ayuda a simplificar y a bajar tasas de interés.</li>
+    </ul>
+    <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Ejemplo:</strong> Supongamos que debes $5.000.000 en tarjetas con cuotas de $500.000. Podrías proponer reducir la cuota a $300.000 y extender el plazo a 24 meses. Así dejas de sentir que cada mes te ahogan las deudas y tu flujo de caja respira un poco.  
+    No es magia, pero tener una propuesta clara te pone en control y te da mucho más poder para negociar.
 </p>
 </div>
 
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Negocia con claridad y transparencia</h2>
+  <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Comunícate directamente con tu entidad financiera</h2>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
-    Para lograr un acuerdo exitoso:  
-     Explica tu situación actual con honestidad, sin exagerar ni minimizar tus dificultades.  
-     Presenta tu propuesta de pago concreta, incluyendo montos y fechas de pago.  
-     Solicita confirmación por escrito de cualquier acuerdo, ya sea correo electrónico o documento oficial del banco.  
-     Consulta todas las condiciones relacionadas con tasas de interés, cobros adicionales o penalidades por pago anticipado, evitando sorpresas futuras.  
-    
-    Mantener claridad y transparencia genera confianza y aumenta las probabilidades de obtener mejores condiciones.
-</p>
-</div>
-
-
-<!-- PARRAFO -->
-  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Considera la consolidación de deudas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-
-<p>
-    Si tienes varias deudas en distintos bancos, consolidarlas puede ofrecer beneficios importantes:  
-     Reducir el número de cuotas mensuales, simplificando tu administración financiera.  
-     Posibilitar una tasa de interés más baja, disminuyendo el costo total de la deuda.  
-     Facilitar el control de pagos y mejorar tu historial crediticio al mantener tus obligaciones al día.  
-
-    <strong class="inline mt-0 mb-0 text-green-700 font-semibold text-lg">Ejemplo en Colombia:</strong> Un crédito de libre inversión para consolidar deudas de tarjetas y créditos de consumo puede ofrecer cuotas más cómodas y menor estrés financiero, logrando un flujo de efectivo más estable.
+    Lo mejor que puedes hacer es hablar directamente con tu banco o entidad financiera. A veces uno piensa que todo es en línea o por teléfono, pero nada reemplaza el contacto real. Los canales más efectivos son:  
+    <ul class="list-disc ml-5">
+        <li><strong>Oficinas físicas:</strong> hablar cara a cara con un asesor ayuda un montón. Puedes explicar tu situación y, muchas veces, obtener soluciones inmediatas sin tanta burocracia.</li>
+        <li><strong>Líneas de servicio al cliente:</strong> algunos bancos aceptan solicitudes formales por teléfono, sobre todo si eres cliente con buen historial. Sí, a veces toca insistir un poco, pero funciona.</li>
+        <li><strong>Banca en línea:</strong> varias entidades permiten enviar solicitudes de reestructuración desde la web o la app, lo que ahorra tiempo y evita viajes innecesarios.</li>
+    </ul>
+    <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Tip:</strong> Guarda todo registro: correos, llamadas, nombres de los funcionarios que te atiendan. Parece exagerado, pero si surge algún desacuerdo, tener pruebas marca la diferencia.  
+    Ah, y no temas preguntar todo, aunque parezca obvio; a veces un detalle pequeño hace que la negociación funcione mucho mejor.
 </p>
 </div>
 
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Cumple con el nuevo acuerdo</h2>
+   <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Negocia con claridad y transparencia</h2>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
-    Una vez firmado el acuerdo de renegociación:  
-     Configura pagos automáticos para evitar retrasos y cargos adicionales.  
-     Ajusta tu presupuesto mensual de acuerdo a la nueva cuota, priorizando el pago de la deuda sobre gastos no esenciales.  
-     Evita adquirir nuevas deudas hasta estabilizar tus finanzas, asegurando que tu plan se cumpla sin contratiempos.  
-
-    Cumplir con los compromisos mejora tu historial crediticio, lo que te permitirá acceder a mejores condiciones financieras en el futuro.
+    Si quieres que la negociación con tu banco funcione de verdad, lo clave es ser claro y honesto. Nada de inventar números ni minimizar lo que pasa. Hazlo así:  
+    <ul class="list-disc ml-5">
+        <li><strong>Explica tu situación actual:</strong> cuenta la verdad sobre tu capacidad de pago, tus ingresos y gastos. La gente se da cuenta si exageras y eso no ayuda.</li>
+        <li><strong>Presenta tu propuesta concreta:</strong> indica cuánto puedes pagar, cuándo y de qué manera. Nada de “voy a pagar lo que pueda”.</li>
+        <li><strong>Pide todo por escrito:</strong> correo, documento oficial o lo que sea. Esto te protege si después hay algún malentendido.</li>
+        <li><strong>Revisa todas las condiciones:</strong> tasas de interés, cobros extras o penalidades por pago anticipado. Evita sorpresas que luego te compliquen la vida.</li>
+    </ul>
+    Mantener claridad y transparencia no solo genera confianza, sino que también aumenta tus chances de conseguir mejores condiciones. Y, siendo sincero, da más tranquilidad a tu cabeza; uno ya tiene suficiente con las deudas como para andar preocupado por sorpresas innecesarias.
 </p>
 </div>
 
 
+
 <!-- PARRAFO -->
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Mantén un control periódico</h2>
+  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Considera la consolidación de deudas</h2>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
 
 <p>
-    Revisa tus cuentas y avances regularmente:  
-     Confirma que las cuotas se debiten correctamente y en la fecha acordada.  
-     Monitorea el saldo pendiente de la deuda para asegurarte de que los pagos se reflejen correctamente.  
-     Ajusta gastos si surgen imprevistos, manteniendo la disciplina financiera y evitando retrasos.  
-    Este control constante evita sorpresas y asegura que la renegociación cumpla su objetivo: salir de deudas de manera ordenada y sostenible.
+    Si tienes varias deudas repartidas en distintos bancos, juntar todo en un solo crédito puede ser un salvavidas. No es magia, pero ayuda un montón. Algunas ventajas:  
+    <ul class="list-disc ml-5">
+        <li><strong>Reducir el número de cuotas:</strong> menos pagos cada mes hace que tu administración financiera sea mucho más sencilla, y menos estrés mental también.</li>
+        <li><strong>Posibilidad de una tasa más baja:</strong> esto significa que, a largo plazo, pagas menos intereses y tu deuda no se sigue inflando como bola de nieve.</li>
+        <li><strong>Mejor control y historial crediticio:</strong> tener todo en un solo lugar facilita cumplir con los pagos y mejora tu calificación si lo llevas al día.</li>
+    </ul>
+    <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">Ejemplo en Colombia:</strong> un crédito de libre inversión para consolidar tarjetas y créditos de consumo puede darte cuotas más cómodas y menos estrés financiero, logrando un flujo de caja más estable.  
+    Y sí, suena obvio, pero mucha gente no lo hace porque le da miedo “juntar todo”. La clave es planearlo bien y calcular que realmente puedes cumplir.
+</p>
+</div>
+
+
+
+<!-- PARRAFO -->
+   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Cumple con el nuevo acuerdo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+<p>
+    Una vez que firmes el acuerdo de renegociación, lo más importante es cumplirlo al pie de la letra. Algunas cosas que ayudan:  
+    <ul class="list-disc ml-5">
+        <li><strong>Configura pagos automáticos:</strong> así no se te olvida nada y evitas cargos extras que solo complican la situación.</li>
+        <li><strong>Ajusta tu presupuesto mensual:</strong> reorganiza tus gastos según la nueva cuota, priorizando la deuda sobre gastos que no son esenciales. Sí, toca recortar un poco, pero vale la pena.</li>
+        <li><strong>Evita nuevas deudas:</strong> hasta que tus finanzas estén más estables, nada de meter más compromisos. Esto asegura que tu plan funcione sin sorpresas.</li>
+    </ul>
+    Cumplir con los compromisos no solo te quita peso de encima, sino que también mejora tu historial crediticio. Y créeme, eso abre puertas a mejores condiciones financieras en el futuro, cuando de verdad necesites un respiro o un crédito nuevo.
+</p>
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Mantén un control periódico</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+
+<p>
+    No basta con firmar el acuerdo; hay que estar pendiente constantemente. Revisa tus cuentas y avances cada cierto tiempo para no llevarte sorpresas:  
+    <ul class="list-disc ml-5">
+        <li><strong>Confirma los débitos:</strong> asegúrate de que las cuotas se cobren correctamente y en la fecha acordada. Sí, a veces falla, y es mejor detectarlo a tiempo.</li>
+        <li><strong>Monitorea tu saldo pendiente:</strong> verifica que los pagos realmente se reflejen y que todo cuadre con lo acordado.</li>
+        <li><strong>Ajusta tus gastos si surgen imprevistos:</strong> mantén la disciplina financiera y evita retrasos que puedan complicar el plan.</li>
+    </ul>
+    Este control constante no solo evita sorpresas, sino que también asegura que la renegociación cumpla su objetivo real: salir de deudas de manera ordenada y sostenible. Y créeme, aunque suene tedioso, con el tiempo se vuelve un hábito que da tranquilidad.
 </p>
 </div>
 
