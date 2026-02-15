@@ -182,6 +182,31 @@
 
 
 
+
+@media (max-width: 480px){
+  #new-article-bubble {
+    bottom: 15px;          /* margen desde abajo */
+    right: 15px;           /* margen desde la derecha */
+    font-size: 13px;       /* texto más pequeño */
+    max-width: 90%;        /* ocupa casi toda la pantalla */
+    padding: 10px 14px;    
+    flex-direction: row;   /* horizontal con link y X */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  }
+
+  #new-article-bubble a {
+    flex: 1;
+    font-size: 13px;
+    margin-right: 8px;
+  }
+
+  #new-article-bubble span#close-bubble {
+    font-size: 14px;
+  }
+}
+
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -394,6 +419,90 @@ emailInput.addEventListener('input', () => {
     const overlay = document.getElementById("popupOverlay");
     overlay.style.display = "none";
   }
+</script>
+
+
+
+
+
+
+
+<div id="new-article-bubble" style="display:none;">
+  <a id="new-article-link" href="" target="_blank"></a>
+  <span id="close-bubble">✖</span>
+</div>
+
+<style>
+  #new-article-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    max-width: 300px;
+    z-index: 9999;
+    display: flex; /* flex pero sigue oculto por inline display:none */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #new-article-bubble a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  #new-article-bubble span#close-bubble {
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>
+
+
+<script>
+fetch('posts.json')
+  .then(response => response.json())
+  .then(posts => {
+    const lastPost = posts[0];
+    if(!lastPost) return;
+
+    const bubble = document.getElementById('new-article-bubble');
+    const link = document.getElementById('new-article-link');
+
+    const closed = sessionStorage.getItem('bubbleClosed');
+    if(closed) return; // si ya cerró, no mostrar
+
+    link.textContent = "Nuevo artículo: " + lastPost.title;
+    link.href = lastPost.url;
+
+    // Temporizador para todos los dispositivos
+    const delay = 20000; // 20 segundos
+    setTimeout(() => {
+      bubble.style.display = 'flex';       // se muestra el div
+      // Suavemente hacemos aparecer la burbuja
+      setTimeout(() => {
+        bubble.style.opacity = '1';
+        bubble.style.transform = 'translateY(0)';
+      }, 50); // pequeña pausa para que la transición funcione
+    }, delay);
+
+    // Cerrar burbuja
+    document.getElementById('close-bubble').onclick = () => {
+      bubble.style.display = 'none';
+      bubble.style.opacity = '0';
+      bubble.style.transform = 'translateY(20px)';
+      sessionStorage.setItem('bubbleClosed', 'true');
+    }
+
+  })
+  .catch(err => console.error(err));
 </script>
 
 </body>
