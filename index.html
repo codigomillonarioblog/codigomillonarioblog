@@ -570,6 +570,8 @@ fetch('posts.json')
 <div id="popupOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:2000; justify-content:center; align-items:center;">
   <div id="popupBox" class="bg-white p-8 rounded-2xl max-w-md w-11/12 text-center">
 
+    
+
 
 <h2 class="text-2xl font-bold mb-4" style="font-family: 'Poppins', sans-serif;">
   Descargar Guía Gratis
@@ -609,7 +611,7 @@ fetch('posts.json')
       <button type="submit"
               class="bg-green-600 text-white w-full py-3 rounded-lg font-semibold hover:bg-green-700">
         Obtener Guía
-      </button>
+</button>
 
         </form>
 
@@ -624,8 +626,10 @@ fetch('posts.json')
   Cerrar
 </button>
 
+
   </div>
 </div>
+
 
 
 
@@ -636,13 +640,29 @@ fetch('posts.json')
 <section class="relative py-20 lg:py-32 text-left overflow-x-hidden" style="font-family: 'Lora', serif;">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
 
-    <!-- Columna izquierda: todo agrupado -->
-    <div class="flex flex-col">
-      <!-- Badge minimalista -->
-      <div class="inline-flex items-center space-x-2 mb-4">
-        <i data-lucide="check-circle" class="w-4 h-4"></i>
-        <span class="text-stone-900 text-sm font-medium">Nueva Guía Financiera</span>
-      </div>
+<!-- Columna izquierda: todo agrupado -->
+<div class="flex flex-col">
+  
+  <!-- Contenedor horizontal -->
+  <div class="flex items-center space-x-6 mb-4">
+    
+    <!-- Badge minimalista (clickeable) -->
+    <a href="./educacionfinanciera.html" class="inline-flex items-center space-x-2 group">
+      <i data-lucide="check-circle" class="w-4 h-4 group-hover:text-green-600 group-hover:scale-110 transition"></i>
+      <span class="text-stone-900 text-sm font-medium group-hover:text-green-600 transition">
+        Nueva Guía Financiera
+      </span>
+    </a>
+
+    <!-- Enlace Sobre el autor -->
+    <a href="./sobre-el-autor.html" class="inline-flex items-center space-x-2 group">
+      <i data-lucide="user" class="w-4 h-4 text-black group-hover:text-green-600 group-hover:scale-110 transition"></i>
+      <span class="text-stone-900 text-sm font-medium group-hover:text-green-600 transition">
+        Sobre el autor
+      </span>
+    </a>
+
+  </div>
 
       <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
         Aprende a Multiplicar tu Dinero <span class="text-green-600"> sin límites </span> 
@@ -693,6 +713,8 @@ fetch('posts.json')
             transition-colors duration-200">
     Donaciones
   </a>
+
+
 
 </div>
 
@@ -1276,117 +1298,6 @@ fetch('posts.json')
 
 <div style="height:30px; margin:30px 0;"></div>
 
-
-
-<!-- Separador editorial premium -->
-<div class="relative my-12 max-w-3xl mx-auto px-4 sm:px-6">
-
-  <!-- Etiqueta -->
-  <span class="absolute -top-3 left-0 
-               bg-slate-800 text-white text-[11px] font-semibold 
-               px-3 py-1 rounded-full shadow-sm tracking-wide">
-    A CONTINUACIÓN
-  </span>
-
-  <!-- Línea -->
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Biografía por el autor de:
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
-
-</div>
-
-
-
-<div class="flex flex-col items-center text-center mt-16">
-
-  <!-- Imagen redonda -->
-  <img src="./assets/img/fundador-codigo-millonario.webp" 
-       alt="Francisco Urrego - Código Millonario"
-       class="w-28 h-28 rounded-full object-cover shadow-md mb-6">
-
-  <!-- Bloque de texto -->
-  <blockquote class="max-w-xl italic text-stone-600">
-
-    <p class="text-sm text-stone-500 space-y-4" style="font-family: 'Poppins', sans-serif;">
-      
-     <strong>Un poco sobre el autor</strong><br><br>
-
-      <strong>Quién soy</strong><br>
-      Mi nombre es Francisco Urrego. Soy autor con libros publicados en Amazon y alguien que decidió dejar de consumir contenido financiero superficial para empezar a aplicar principios reales.
-      <br><br>
-
-  <strong>Experiencia</strong><br>
-Además de este proyecto, soy autor de <strong>La Mente del Mañana</strong>, un ebook de ciencia ficción, y <strong>EL TIEMPO</strong>, un libro enfocado en mentalidad de éxito y desarrollo personal.  
-Estas publicaciones forman parte de mi trayectoria como escritor y reflejan mi interés constante por las ideas, el crecimiento y la construcción a largo plazo.
-<br><br>
-
-
-      <strong>Qué hago</strong><br>
-Aplico los principios que comparto en el blog Código Millonario en mi vida y comparto lo que funciona, sin adornos ni promesas irreales.
-      <br><br>
-
-      <strong>Qué no soy</strong><br>
-      No vendo fórmulas mágicas ni atajos rápidos.
-      <br><br>
-
-      <strong>Qué encontrarás aquí</strong><br>
-      Estrategia, mentalidad y construcción real enfocadas en educación financiera, pensamiento crítico y crecimiento profesional.
-    </p>
-
-    <p class="mt-6 text-stone-600">
-      Pensar mejor sobre el dinero es una habilidad que se aprende, no un golpe de suerte.
-    </p>
-
-    <p class="mt-6 text-stone-500 text-sm">
-      Libros publicados – Páginas oficiales:<br>
-      📘 La Mente del Mañana – 
-      <a href="https://www.amazon.com/-/es/FRANCISCO-JAVIER-URREGO-ZAPATA-ebook/dp/B0B1TYJ2H4" target="_blank" class="text-blue-600 hover:underline">
-        Ver en Amazon
-      </a><br>
-      📙 TIEMPO – 
-      <a href="https://www.amazon.com/TIEMPO-Spanish-FRANCISCO-JAVIER-URREGO/dp/B09ZZXHS56" target="_blank" class="text-blue-600 hover:underline">
-        Ver en Amazon
-      </a>
-    </p>
-
-  </blockquote>
-
-</div>
-
-<!-- Imágenes de libros -->
-<div class="flex flex-col sm:flex-row gap-4 mt-8 items-center justify-center">
-
-  <img src="./assets/img/la-mente-del-manana.webp"
-       alt="Portada del libro La Mente del Mañana - Francisco Urrego"
-       class="w-32 h-48 object-cover rounded-lg shadow-md">
-
-  <img src="./assets/img/el-tiempo-libro.webp"
-       alt="Portada del libro TIEMPO - Francisco Urrego"
-       class="w-32 h-48 object-cover rounded-lg shadow-md">
-
-</div>
-
-
-<!-- Línea legal -->
-<div class="max-w-3xl mx-auto px-4 sm:px-6 mt-16">
-  <div class="w-full h-px bg-slate-200"></div>
-  <p class="text-xs text-slate-500 text-center mt-6">
-    © 2025 Código Millonario — Todos los derechos reservados.
-  </p>
-</div>
-
-
-
-<div style="height:30px; margin:30px 0;"></div>
 
 
 
