@@ -20,6 +20,14 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body class="bg-stone-50 text-stone-900">
@@ -201,45 +209,101 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-<!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
+
+
+<!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-40 max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
       <span class="block">Cómo J.K. Rowling   </span>
       <span class="block"> Construyó una Fortuna a Partir de </span>
       <span class="block mt-1">un Manuscrito Rechazado</span>
-    </h1>
+  </h1>
+</div>
+
+
+<div class="flex justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>
+    <strong>Redes sociales Código Millonario:</strong> 
+  </p>
+</div>
+
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
   </div>
 
-<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
 
-<!-- Fecha -->
-<span class="leading-none tracking-wide">
-    08 ene 2026 
-  </span>
 
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
+<!-- Bloque editorial profesional responsive con espacio lateral en móviles -->
+<div class="flex flex-row items-center gap-3 my-6 max-w-4xl mx-auto px-4 sm:px-0">
 
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
+  <!-- Imagen del autor al lado del texto -->
+  <div class="flex-shrink-0">
+    <img src="../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
   </div>
 
+  <!-- Información editorial -->
+  <div class="flex-1">
+    <blockquote class="pl-3">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+        Escrito el 08 ene 2026 
+      </p>
+    
 
-<div style="border-left: 2px solid #9ca3af; border-right: 2px solid #9ca3af; 
-            padding: 0 8px; margin: 10px auto; max-width: 90%; width: fit-content; text-align: center;">
-  <p style="font-size: 0.65rem; font-style: italic; transform: skewX(-6deg); color: #6b7280; margin: 0;">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+       Por <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">Francisco Urrego</a> · Fundador de Código Millonario
+      </p>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         ⏱ 5 min lectura
+      </p>
+    </blockquote>
+  </div>
+
+</div>
+
+
+<div class="flex flex-col justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>Rowling no se hizo rica por soñar, se hizo rica porque nunca cedió el control de su historia cuando empezó a generar valor.</p>
+  <p>Durante años escribió sin garantías, pero cada rechazo fortalecía lo que eventualmente se convertiría en un activo imposible de replicar.</p>
+</div>
+
+
+
+<div class="flex justify-center mt-20 relative max-w-4xl mx-auto px-4 sm:px-0"> 
+  <img src="../../assets/png/jk-rowling-historia-fortuna.webp"
+       alt="" 
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10"> 
+</div>
+
+
+
+<div class="mx-auto my-4 max-w-[90%] px-4 text-center">
+  <p class="text-xs italic text-gray-500 -skew-x-6 m-0">
     Ilustración generada digitalmente para representar a la autora.
   </p>
 </div>
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/jk-rowling-historia-fortuna.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
 
 
 
@@ -350,8 +414,8 @@ h2[id] {
 </style>
 
 <!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+<button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
     <li><a href="#titulo1">1. Cómo J.K. Rowling construyó su fortuna</a></li>
     <li><a href="#titulo2">2. Antes del dinero: una situación límite</a></li>
@@ -424,25 +488,13 @@ window.addEventListener("scroll", () => {
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
 
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
 </div>
 
 
 
 <!-- INTRODUCCIÓN -->
-<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">Cómo J.K. Rowling construyó su fortuna</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-<img src="../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">Cómo J.K. Rowling construyó su fortuna</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 <strong>Joanne Kathleen Rowling</strong> nació en <strong>1965</strong> en Yate, Inglaterra, en una familia de clase media-baja. Su padre, <strong>Peter Rowling,</strong> trabajaba como ingeniero aeronáutico, y su madre, <strong>Anne Rowling,</strong> era ama de casa y luego enfermera. No crecieron con lujos, pero tampoco en pobreza extrema; vivían modestamente, y desde temprano, Joanne entendió que nada se daba por sentado.
@@ -467,8 +519,8 @@ La historia de <strong>J.K. Rowling</strong> suele contarse como un cuento inspi
 
 
 
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Antes del dinero: una situación límite</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Antes del dinero: una situación límite</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
   <p>
   Antes de que <strong>Harry Potter</strong> existiera, J.K. Rowling no estaba pensando en fama, contratos millonarios ni éxito editorial. Su realidad era mucho más cruda. Atravesaba uno de los momentos más difíciles de su vida, con una presión constante por sobrevivir día a día.
@@ -493,8 +545,8 @@ No tenía capital, no tenía contactos influyentes ni respaldo editorial. Solo t
 
 
 
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">El manuscrito que nadie quería publicar</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El manuscrito que nadie quería publicar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
   <p>
   A mediados de los años noventa, <strong>J.K. Rowling</strong> terminó el manuscrito de <em>Harry Potter y la piedra filosofal</em>. Para entonces, la historia ya estaba completa, pero el verdadero desafío apenas comenzaba.
@@ -516,8 +568,8 @@ No tenía capital, no tenía contactos influyentes ni respaldo editorial. Solo t
 
 
 
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Los rechazos no fueron pocos</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Los rechazos no fueron pocos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
   <p>
   El manuscrito de <em>Harry Potter y la piedra filosofal</em> no fue rechazado una sola vez. Antes de encontrar una editorial dispuesta a publicarlo, pasó por numerosas negativas. Diversas fuentes coinciden en que más de una decena de editoriales descartaron el proyecto.
@@ -544,8 +596,8 @@ Aun así, Rowling insistió. Durante aproximadamente uno o dos años enfrentó u
 
 
 
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">El verdadero valor no era el libro, era el universo</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El verdadero valor no era el libro, era el universo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
   <p>
   Aquí aparece un punto que casi nadie analiza cuando se habla del éxito de <strong>Harry Potter.</strong> El valor real no estaba únicamente en un libro bien escrito, sino en algo mucho más profundo: el universo que J.K. Rowling había creado alrededor de la historia.
@@ -567,8 +619,8 @@ Aun así, Rowling insistió. Durante aproximadamente uno o dos años enfrentó u
 
 
 
-  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">La decisión que creó la fortuna (no fue escribir)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La decisión que creó la fortuna (no fue escribir)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
    <p>
   El verdadero dinero no llegó con el primer libro. Ni siquiera con las ventas iniciales. El punto de inflexión estuvo en una decisión menos visible, pero mucho más determinante: el control de los derechos.
@@ -591,8 +643,8 @@ Aun así, Rowling insistió. Durante aproximadamente uno o dos años enfrentó u
 
 
 
- <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"> De libro a imperio: el efecto bola de nieve</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+ <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;"> De libro a imperio: el efecto bola de nieve</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
  <p>
   El crecimiento económico real comenzó cuando <strong>Harry Potter</strong> dejó de ser únicamente un libro. A partir de ese momento, la historia empezó a expandirse en múltiples direcciones, y cada nueva forma de explotación amplificó el valor de las anteriores.
@@ -615,8 +667,8 @@ Aun así, Rowling insistió. Durante aproximadamente uno o dos años enfrentó u
 
 
 
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Cuánto dinero generó Harry Potter (sin exagerar)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuánto dinero generó Harry Potter (sin exagerar)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
   <p>
   Con el paso de los años, <strong>J.K. Rowling</strong> se convirtió en una de las autoras más ricas del mundo. Aunque las cifras exactas pueden variar según las fuentes y los periodos analizados, existe un consenso general sobre la magnitud económica del fenómeno <strong>Harry Potter.</strong>
@@ -639,8 +691,8 @@ Aun así, Rowling insistió. Durante aproximadamente uno o dos años enfrentó u
 
 
 
-<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Qué SÍ es replicable de esta historia</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Qué SÍ es replicable de esta historia</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
   <p>
   No todos pueden crear un fenómeno global como <strong>Harry Potter.</strong> La obra, el momento histórico y el alcance cultural no se pueden copiar. Pero las decisiones que transformaron una idea en riqueza sí se repiten, una y otra vez, en distintas industrias y contextos.
@@ -670,8 +722,8 @@ Aun así, Rowling insistió. Durante aproximadamente uno o dos años enfrentó u
 
 
 
-<h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Qué NO es replicable (y no te deben vender)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Qué NO es replicable (y no te deben vender)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
   <p>
   No todo en la historia de Harry Potter puede copiarse, y venderla como una fórmula exacta es una trampa común. Existen factores que estuvieron completamente fuera del control de la autora y que no dependen del esfuerzo individual.
@@ -716,13 +768,13 @@ Se hizo rica pensando como dueña.”
 
 
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/jk-rowling-historia-fortuna.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
+
 
 
 <!-- Sección recomendada -->

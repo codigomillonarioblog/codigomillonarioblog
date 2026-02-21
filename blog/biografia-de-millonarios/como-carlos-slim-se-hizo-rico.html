@@ -20,6 +20,13 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body class="bg-stone-50 text-stone-900">
@@ -185,8 +192,6 @@ document.querySelectorAll(".mobile-item").forEach(link => {
   }
 });
 
-
-
     document.querySelectorAll(".mobile-item").forEach(link => {
       const href = link.getAttribute("href")?.replace("./", "");
       if(href === currentPage){
@@ -198,46 +203,96 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 </script>
 
 
-
-
-<!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
-      <span class="block"> La estrategia que hizo Rico a </span>
-      <span class="block mt-1"> Carlos Slim </span>
-    </h1>
-  </div>
   
 
-  <div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
-
-     <!-- Fecha -->
- <span class="leading-none tracking-wide">
-    20 ene 2026 
-  </span>
-
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
+  <!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-40 max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
+      <span class="block"> La estrategia que hizo Rico a </span>
+      <span class="block mt-1"> Carlos Slim </span>
+  </h1>
 </div>
 
-<div style="border-left: 2px solid #9ca3af; border-right: 2px solid #9ca3af; 
-            padding: 0 8px; margin: 10px auto; max-width: 90%; width: fit-content; text-align: center;">
-  <p style="font-size: 0.65rem; font-style: italic; transform: skewX(-6deg); color: #6b7280; margin: 0;">
-    Ilustración generada digitalmente para representar al empresario Carlos Slim.
+
+<div class="flex justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>
+    <strong>Redes sociales Código Millonario:</strong> 
   </p>
 </div>
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/carlos-slim-millonario-mexicano.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
   </div>
+
+
+
+<!-- Bloque editorial profesional responsive con espacio lateral en móviles -->
+<div class="flex flex-row items-center gap-3 my-6 max-w-4xl mx-auto px-4 sm:px-0">
+
+  <!-- Imagen del autor al lado del texto -->
+  <div class="flex-shrink-0">
+    <img src="../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+
+  <!-- Información editorial -->
+  <div class="flex-1">
+    <blockquote class="pl-3">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+        Escrito el 20 ene 2026 
+      </p>
+
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+       Por <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">Francisco Urrego</a> · Fundador de Código Millonario
+      </p>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         ⏱ 5 min lectura
+      </p>
+    </blockquote>
+  </div>
+
+</div>
+
+
+<div class="flex flex-col justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>Muchos buscan riqueza rápida, pero Carlos Slim construyó su fortuna paso a paso.</p>
+  <p>La verdadera estrategia está en la paciencia, la disciplina y la visión a largo plazo.</p>
+</div>
+
+
+<div class="flex justify-center mt-20 relative max-w-4xl mx-auto px-4 sm:px-0"> 
+  <img src="../../assets/png/carlos-slim-millonario-mexicano.webp"
+       alt="" 
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10"> 
+</div>
+
+
+<div class="mx-auto my-4 max-w-[90%] px-4 text-center">
+  <p class="text-xs italic text-gray-500 -skew-x-6 m-0">
+    Ilustración generada digitalmente para representar al empresario Carlos Slim.
+  </p>
+</div>
 
 
 
@@ -348,8 +403,8 @@ h2[id] {
 </style>
 
 <!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+<button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
     <li><a href="#titulo1">1. La estrategia real detrás de la fortuna de Carlos Slim</a></li>
     <li><a href="#titulo2">2. El inicio de la estrategia silenciosa</a></li>
@@ -421,25 +476,13 @@ window.addEventListener("scroll", () => {
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
 
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
 </div>
 
 
 
 <!-- INTRODUCCIÓN -->
-<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">La estrategia real detrás de la fortuna de Carlos Slim</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-<img src="../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">La estrategia real detrás de la fortuna de Carlos Slim</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 En esta oportunidad me daré el gusto de relatar la historia de Carlos Slim con enfoque y análisis según la mentalidad de <strong>Código Millonario</strong> para el éxito, mentalidad de riqueza y visión. Para resaltar, Carlos Slim no se hizo rico rápido, ni joven, ni siendo famoso, mucho menos usando atajos rápidos. 
@@ -469,8 +512,8 @@ Cada paso estaba calculado, cada movimiento tenía un propósito, y así fue con
 
 
 
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">El inicio de la estrategia silenciosa</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El inicio de la estrategia silenciosa</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 
 <p>
@@ -481,7 +524,7 @@ Para comprender un poco más el trasfondo de cómo Carlos Slim llegó tan lejos,
 Cada decisión que tomaba estaba pensada para multiplicar resultados futuros, no para obtener solo un par de monedas o reconocimiento inmediato. Invertir en acciones subvaluadas, diversificar inteligentemente y aprender de cada error fueron los cimientos de un enfoque que, aunque invisible para la mayoría, generaba ventajas estratégicas enormes en su posición y para lo que quería lograr.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
 El método que definió su fortuna</h3>
 
 <p>
@@ -497,8 +540,8 @@ En pocas palabras, su estrategia silenciosa se basó en crear ventajas donde otr
 
 
 
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">La base de su estrategia: pensar cuando otros huyen</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La base de su estrategia: pensar cuando otros huyen</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
 Comprar en momentos de crisis</h3>
@@ -521,8 +564,8 @@ Como era de esperar, el valor que Slim extraía en estos momentos no era inmedia
 
 
 
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Invirtió en lo que la gente usa todos los días</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Invirtió en lo que la gente usa todos los días</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Más adelante, cuando Slim ya contaba con capital y experiencia, su visión estratégica lo llevó a invertir en negocios mucho más grandes que tienen demanda constante y sostenida los 365 días del año sin falla. La clave que aplicó aquí no está en la inversión misma, sino en la capacidad de identificar sectores que generan ingresos estables a largo plazo, que pueden resistir cambios económicos y multiplicar valor con el tiempo. <strong>Esto refleja su enfoque metódico: analizar, calcular riesgos y actuar únicamente cuando las oportunidades son claras y medibles</strong>, así estén en riesgo o no.
@@ -542,8 +585,8 @@ Para ese tiempo, Slim continuó expandiendo sus inversiones y las redirigió hac
 
 
 
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">El largo plazo como ventaja competitiva</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El largo plazo como ventaja competitiva</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
 Esta es una ley universal que nadie puede romper: la regla del tiempo. </h3>
@@ -567,8 +610,8 @@ Analizar la historia de Slim a través de esta lente permite ver un patrón: la 
 
 
 
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">La fortuna de Carlos Slim</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La fortuna de Carlos Slim</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 
 <p>
@@ -604,8 +647,8 @@ Analizar la historia de Slim a través de esta lente permite ver un patrón: la 
   </div>
 
 
-<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">El error que la mayoría comete (y él evitó)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El error que la mayoría comete (y él evitó)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
   <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
 Confundir movimiento con progreso</h3>
@@ -632,8 +675,8 @@ La riqueza llegó como consecuencia, no como objetivo inmediato.
 
 
 
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Qué SÍ es replicable de esta historia</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Qué SÍ es replicable de esta historia</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 
 <p>
@@ -661,8 +704,8 @@ En resumen, no se trata de copiar cifras ni empresas, sino de entender los princ
 
 
 
-  <h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Qué NO es replicable actualmente</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Qué NO es replicable actualmente</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 No todo en la historia de Carlos Slim puede ser replicado hoy. Su capital inicial, aunque modesto, era suficiente para aprovechar oportunidades que hoy no existen en la misma forma. Además, el contexto económico y regulatorio de México en las décadas de 1980 y 1990, con empresas en crisis y mercados poco competitivos, ofrecía situaciones únicas que permitieron adquirir activos a precios imposibles de encontrar ahora.  
@@ -676,7 +719,7 @@ Tampoco es replicable su acceso temprano a redes familiares y contactos estraté
 Por último, la paciencia de décadas que caracteriza a su estrategia, aunque admirable, se benefició de un contexto específico: pocas alternativas de inversión global comparables, menor velocidad de información y cambios de mercado menos inmediatos que los que existen hoy. En resumen, las condiciones únicas que permitieron a Slim construir su imperio son difíciles, si no imposibles, de reproducir tal cual en la actualidad.  
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
 Pensar a largo plazo cuando nadie quiere esperar</h3>
 
   <p>
@@ -700,13 +743,13 @@ Filosofía de Código Millonario según Carlos Slim
 
 
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/carlos-slim-millonario-mexicano.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
+
 
 
 
