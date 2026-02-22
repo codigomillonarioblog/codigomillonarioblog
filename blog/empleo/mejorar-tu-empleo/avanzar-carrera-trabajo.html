@@ -19,6 +19,14 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 
@@ -200,39 +208,86 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-<!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
-      <span class="block">Como Avanzar en</span>
-      <span class="block">tu Carrera sin Renunciar al</span>
-      <span class="block mt-1">Trabajo Actual</span>
-    </h1>
+
+
+
+<!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-40 max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
+      <span class="block">Como Avanzar en tu Carrera sin</span>
+      <span class="block mt-1"> Renunciar al Trabajo Actual</span>
+  </h1>
+</div>
+
+
+<div class="flex justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>
+    <strong>Redes sociales Código Millonario:</strong> 
+  </p>
+</div>
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
   </div>
 
-<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+<!-- Bloque editorial profesional responsive con espacio lateral en móviles -->
+<div class="flex flex-row items-center gap-3 my-6 max-w-4xl mx-auto px-4 sm:px-0">
 
-<!-- Fecha -->
-  <span class="leading-none tracking-wide">
-    26 Dic 2025 
-  </span>
-
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
-
+  <!-- Imagen del autor al lado del texto -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
   </div>
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/quiero-renunciar-a-mi-trabajo-que-hago.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  <!-- Información editorial -->
+  <div class="flex-1">
+    <blockquote class="pl-3">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+        Escrito el 26 Dic 2025
+      </p>
+    
+
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+       Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">Francisco Urrego</a> · Fundador de Código Millonario
+      </p>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         ⏱ 5 min lectura
+      </p>
+    </blockquote>
   </div>
 
+</div>
+
+<div class="flex flex-col justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+<p>No necesitas renunciar para avanzar; puedes usar tu empleo actual como campo de práctica mientras desarrollas habilidades y contactos.</p>
+<p>La diferencia no está en trabajar más horas, sino en usar mejor tu tiempo y enfocarlo en lo que realmente te acerca a tu siguiente paso.</p>
+</div>
+
+<div class="flex justify-center mt-20 relative max-w-4xl mx-auto px-4 sm:px-0"> 
+  <img src="../../../assets/png/quiero-renunciar-a-mi-trabajo-que-hago.webp"
+       alt="" 
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10"> 
+</div>
 
 
 
@@ -343,8 +398,8 @@ h2[id] {
 </style>
 
 <!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+<button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
     <li><a href="#titulo1">1. Como Crecer sin Renunciar a tu Trabajo Actual</a></li>
     <li><a href="#titulo2">2. Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera</a></li>
@@ -414,25 +469,13 @@ window.addEventListener("scroll", () => {
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
 
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
 </div>
 
 
 
 <!-- INTRODUCCIÓN -->
- <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">Como Crecer sin Renunciar a tu Trabajo Actual</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
- <img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-     class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+ <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">Como Crecer sin Renunciar a tu Trabajo Actual</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Muchos profesionales sienten la urgencia de crecer, pero temen perder la seguridad de su empleo actual, ya sea porque dependen de un ingreso para sobrevivir, alguna u otra necesidad que los ha llevado a enfocarse en una labor de forma rápida, consciente o inconsciente, o simplemente porque la moda es ir a trabajar como todos lo hacen. 
@@ -509,8 +552,10 @@ Pero en otros casos no hay rutas trazadas de caminos a seguir; esto puede ponert
 
 
 <!-- CONSTRUYE UNA BASE SÓLIDA -->
- <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera </h2>
- <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+ <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera </h2>
+ <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Reconociendo tu posición actual</h3>
 <p>
   Para quienes tienen un buen empleo el día de hoy, déjenme decirles que están en el punto donde la mayoría desearía estar. Independientemente de cuál sea tu ocupación, muchos desearían simplemente tener un empleo, una forma de estabilidad que se puede dar de forma rápida, ocasional o profesional. Para quienes no tienen empleo o aún están en busca de trabajo, no son ustedes los del problema y mucho menos su profesión, ya que el mundo laboral está diseñado de manera en la que no todos pueden ocupar el mismo lugar a la vez, no todos pueden hacer lo mismo, no todos ganarán los mismos salarios. 
@@ -518,9 +563,9 @@ Pero en otros casos no hay rutas trazadas de caminos a seguir; esto puede ponert
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Diferencias entre empleo y emprendimiento</h3>
 <p>
-Deben tener en cuenta que en la vida laboral no es la misma que la del emprendimiento: en la laboral estás compitiendo con posiblemente millones de personas; en la del emprendimiento, el número es mucho menor, pero hay gente con mucho más talento, y talento no significa éxito garantizado, así como la falta de él tampoco significa resultados positivos.    ¿Has llegado al punto donde no sabes cuál es tu nivel de conocimientos financieros? Si quieres saber qué tan bien estás en cuanto a saberes generales en finanzas, puedes hacer el <a href="https://codigomillonario.blog/herramientas/examen-financiero" target="_blank" 
-   class="text-sm font-semibold text-stone-800 hover:text-stone-900 transition-colors duration-200 transform -rotate-12" 
-   style="font-family: 'Poppins', sans-serif;">
+Deben tener en cuenta que en la vida laboral no es la misma que la del emprendimiento: en la laboral estás compitiendo con posiblemente millones de personas; en la del emprendimiento, el número es mucho menor, pero hay gente con mucho más talento, y talento no significa éxito garantizado, así como la falta de él tampoco significa resultados positivos.    ¿Has llegado al punto donde no sabes cuál es tu nivel de conocimientos financieros? Si quieres saber qué tan bien estás en cuanto a saberes generales en finanzas, puedes hacer el 
+
+<a href="https://codigomillonario.blog/herramientas/examen-financiero" target="_blank" class="text-blue-600 hover:underline">
    examen financiero
 </a>
  y medir tu nivel sin problemas ni complicaciones.
@@ -551,8 +596,8 @@ Ahora bien, toda esta estructura no promete grandes resultados solo porque sí, 
 
 
 <!-- CREA FUENTES DE INGRESO PROPIAS -->
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Cómo Generar Ingresos con tus Ideas y Habilidades Profesionales</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Cómo Generar Ingresos con tus Ideas y Habilidades Profesionales</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Convertir una idea en una fuente de ingreso es uno de los movimientos más inteligentes que puedes hacer hoy. No se trata solo de “crear algo”, sino de entender que cada proyecto, por pequeño que parezca, puede funcionar como una pieza de tu patrimonio. El tiempo es la base de todo imperio; quien no se mantiene o perdura en el lapso de tiempo necesario o hasta ver resultados, desaparecerá como polvo en el aire. No obstante, no se genera dinero solo con una gran idea: una buena idea es como poner la pluma en la balanza de posibilidades, donde del otro lado pesa más el esfuerzo, constancia y disciplina.
@@ -653,8 +698,8 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 
 <!-- DIVERSIFICA -->
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Expande tu Caja de Herramientas Profesionales para Generar más Valor</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Expande tu Caja de Herramientas Profesionales para Generar más Valor</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Diversifica tus habilidades para liderar</h3>
 <p>
@@ -663,9 +708,9 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Aprende habilidades que sumen valor real</h3>
 <p>
-        La diversificación no significa dispersión: se trata de elegir habilidades que sumen valor real a tu perfil y generen retorno tangible. Cada nueva capacidad que adquieres funciona como un activo que puedes aplicar inmediatamente en tu empleo actual, en proyectos personales o en oportunidades futuras. Esto te permite avanzar profesionalmente sin sacrificar estabilidad financiera y, al mismo tiempo, estar preparado para asumir roles más estratégicos cuando llegue el momento de dar el salto. Para saber que impacto tiene el ineterz compuesto puedes determinarlo con la <a href="https://codigomillonario.blog/herramientas/interescompuesto" target="_blank" 
-   class="text-sm font-semibold text-stone-800 hover:text-stone-900 transition-colors duration-200 transform -rotate-12" 
-   style="font-family: 'Poppins', sans-serif;">
+  La diversificación no significa dispersión: se trata de elegir habilidades que sumen valor real a tu perfil y generen retorno tangible. Cada nueva capacidad que adquieres funciona como un activo que puedes aplicar inmediatamente en tu empleo actual, en proyectos personales o en oportunidades futuras. Esto te permite avanzar profesionalmente sin sacrificar estabilidad financiera y, al mismo tiempo, estar preparado para asumir roles más estratégicos cuando llegue el momento de dar el salto. Para saber que impacto tiene el ineterz compuesto puedes determinarlo con la 
+        
+  <a href="https://codigomillonario.blog/herramientas/interescompuesto" target="_blank" class="text-blue-600 hover:underline">
    Calculadora de interes compuesto.
 </a>
 </p>
@@ -691,8 +736,8 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 
 <!-- CONSTRUYE RED DE APOYO -->
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Tu red Profesional como Motor de Oportunidades </h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Tu red Profesional como Motor de Oportunidades </h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Conexiones que generan valor</h3>
 <p>
@@ -727,8 +772,8 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 
 <!-- ADMINISTRA TUS RECURSOS -->
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Administra tus Recursos de forma Estratégica para Crecer</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Administra tus Recursos de forma Estratégica para Crecer</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Invierte tu tiempo y dinero como un recurso estratégico</h3>
 <p>
@@ -749,8 +794,8 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 
 <!-- PREPARA EL SALTO -->
-<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Prepárate para el Siguiente paso en tu Carrera Profesional</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Prepárate para el Siguiente paso en tu Carrera Profesional</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Transforma tu empleo en una plataforma de crecimiento</h3>
 <p>
@@ -777,8 +822,8 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 
 <!-- CIERRE -->
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style="font-family: 'Poppins', sans-serif;">Convierte tu Empleo en un Trampolín hacia tu éxito Profesional</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Convierte tu Empleo en un Trampolín hacia tu éxito Profesional</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Aprovecha tu empleo como plataforma de crecimiento</h3>
 <p>
@@ -803,13 +848,13 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 </div>
 
 
- <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/quiero-renunciar-a-mi-trabajo-que-hago.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
+
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
 
 
 

@@ -21,6 +21,13 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body class="bg-stone-50 text-stone-900">
@@ -202,44 +209,87 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-<!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
-      <span class="block"> Cómo mantener </span>
-      <span class="block">  tus finanzas estables después  </span>
-      <span class="block mt-1"> de salir de deudas </span>
-    </h1>
+
+       
+
+<!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-40 max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
+      <span class="block"> Cómo mantener tus finanzas estables </span>
+      <span class="block mt-1"> después de salir de deudas </span>
+  </h1>
+</div>
+
+
+<div class="flex justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>
+    <strong>Redes sociales Código Millonario:</strong> 
+  </p>
+</div>
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
   </div>
 
-<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+<!-- Bloque editorial profesional responsive con espacio lateral en móviles -->
+<div class="flex flex-row items-center gap-3 my-6 max-w-4xl mx-auto px-4 sm:px-0">
 
-   <!-- Fecha -->
-<span class="text-center text-xs">
-  <span class="update-icon-inline"></span> Actualizado
-</span>
-
-<span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="leading-none tracking-wide">
-    12 feb 2026 
-  </span>
-
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
+  <!-- Imagen del autor al lado del texto -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
   </div>
 
+  <!-- Información editorial -->
+  <div class="flex-1">
+    <blockquote class="pl-3">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+        Actualizado 12 feb 2026
+      </p>
+    
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/como-evitar-volver-a-endeudarse.jpg" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+       Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">Francisco Urrego</a> · Fundador de Código Millonario
+      </p>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         ⏱ 5 min lectura
+      </p>
+    </blockquote>
   </div>
+
+</div>
+
+<div class="flex flex-col justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+<p>Muchos creen que una vez reportados no hay vuelta atrás.</p>
+<p>La realidad es otra, y aquí te lo voy a mostrar paso a paso.</p>
+</div>
+
+<div class="flex justify-center mt-20 relative max-w-4xl mx-auto px-4 sm:px-0"> 
+  <img src="../../../assets/png/como-evitar-volver-a-endeudarse.jpg"
+       alt="" 
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10"> 
+</div>
+
 
 
 
@@ -349,8 +399,8 @@ h2[id] {
 </style>
 
 <!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+<button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
     <li><a href="#titulo1">1. Mantener la estabilidad financiera después de pagar deudas</a></li>
     <li><a href="#titulo2">2. Controla tus gastos y presupuesto</a></li>
@@ -421,26 +471,14 @@ window.addEventListener("scroll", () => {
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
 
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
 </div>
 
 
 
 
 <!-- INTRODUCCIÓN -->
-  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">Mantener la estabilidad financiera después de pagar deudas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-  <img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-       class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">Mantener la estabilidad financiera después de pagar deudas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
   
     <p>
         Terminar de pagar tus deudas en Colombia es un alivio enorme, de esos que te hacen sentir que por fin puedes respirar tranquilo. Pero ojo, porque no basta con eso; si no tienes hábitos financieros claros, es muy fácil caer otra vez en el mismo ciclo. Yo he visto gente que paga todo y al mes siguiente ya está endeudada otra vez porque no planificó bien sus gastos. 
@@ -453,8 +491,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PÁRRAFOS -->
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Controla tus gastos y presupuesto</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Controla tus gastos y presupuesto</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     La verdad es que muchas veces creemos que controlar el dinero es complicado, pero en realidad todo empieza por saber a dónde va cada peso. Mantener un registro claro de tus ingresos y gastos es la base para no caer otra vez en deudas. Cuando sabes en qué te estás gastando la plata, es mucho más fácil detectar esos gastos “fantasma” que ni te das cuenta y que al final del mes hacen daño.
@@ -483,8 +521,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PÁRRAFOS -->
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Construye un fondo de emergencia sólido</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Construye un fondo de emergencia sólido</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Tener un fondo de emergencia es como un colchón que te salva cuando algo inesperado aparece. Créeme, he visto personas que terminan pidiendo créditos por cosas que podrían haberse cubierto con un ahorro mínimo. Incluso apartando un poquito cada mes, se nota la diferencia y esa tranquilidad no tiene precio.
@@ -513,8 +551,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PÁRRAFOS -->
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Evita créditos innecesarios y compras impulsivas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Evita créditos innecesarios y compras impulsivas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Una vez que logras pagar tus deudas, es increíble la sensación de libertad… pero ojo, porque ahí mismo es donde muchos caen otra vez. La tentación de usar créditos “porque ya puedo” es real y fuerte. Aprender a controlar esos impulsos es clave para no retroceder y mantener la estabilidad que tanto te costó conseguir.
@@ -543,8 +581,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PÁRRAFOS -->
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Invierte en educación financiera y hábitos inteligentes</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Invierte en educación financiera y hábitos inteligentes</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Aprender sobre dinero no es solo para expertos ni para gente con mucha plata; de hecho, conocer cómo funcionan las tasas de interés, la inflación y las herramientas financieras puede salvarte de cometer errores costosos. Yo mismo recuerdo cuando no entendía cómo se acumulaban los intereses y terminé pagando de más sin darme cuenta. Por eso, invertir tiempo en educación financiera es invertir en tu tranquilidad.
@@ -573,8 +611,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PÁRRAFOS -->
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Mantén seguros y protegidos tus recursos</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Mantén seguros y protegidos tus recursos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     A veces uno se siente tranquilo porque ya pagó deudas y empezó a ahorrar, pero la verdad es que la vida puede lanzar sorpresas en cualquier momento. Tener tus recursos protegidos con seguros y opciones financieras confiables es clave para no volver al círculo de deudas por un accidente, enfermedad o imprevisto.
@@ -601,8 +639,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PÁRRAFOS -->
-<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Establece metas financieras claras y medibles</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Establece metas financieras claras y medibles</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Tener metas claras con tu dinero es como ponerle destino a un viaje. Si no sabes a dónde quieres llegar, cualquier gasto inesperado te puede desviar y terminarás de nuevo en deudas o sin ahorros. Definir objetivos financieros te ayuda a enfocar tus ingresos y evita que compres cosas que realmente no necesitas.
@@ -629,8 +667,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PÁRRAFOS -->
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Mantén disciplina y hábitos financieros saludables</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Mantén disciplina y hábitos financieros saludables</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Evitar volver a endeudarse después de pagar todo no es fácil, la verdad. Requiere disciplina, constancia y hábitos financieros que se vuelvan casi automáticos. Controlar gastos, mantener un fondo de emergencia, invertir en educación financiera y proteger tus recursos no son solo “cosas que se leen en libros”, funcionan de verdad si las integras poco a poco en tu día a día.
@@ -647,13 +685,12 @@ window.addEventListener("scroll", () => {
 </div>
 
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/como-evitar-volver-a-endeudarse.jpg" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
 
 
 

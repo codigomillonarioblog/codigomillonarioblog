@@ -20,6 +20,13 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 
@@ -200,43 +207,85 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-<!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
-      <span class="block"> Cómo mejorar tu historial crediticio </span>
-      <span class="block"> y aumentar tu puntaje en </span>
-      <span class="block mt-1"> Datacrédito </span>
-    </h1>
+
+
+<!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-40 max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
+      <span class="block">Cómo mejorar tu historial crediticio </span>
+      <span class="block mt-1">y aumentar tu puntaje en Datacrédito </span>
+  </h1>
+</div>
+
+
+<div class="flex justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>
+    <strong>Redes sociales Código Millonario:</strong> 
+  </p>
+</div>
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
   </div>
 
-<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
+<!-- Bloque editorial profesional responsive con espacio lateral en móviles -->
+<div class="flex flex-row items-center gap-3 my-6 max-w-4xl mx-auto px-4 sm:px-0">
 
-   <!-- Fecha -->
-<span class="text-center text-xs">
-  <span class="update-icon-inline"></span> Actualizado
-</span>
-
-<span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="leading-none tracking-wide">
-    12 feb 2026 
-  </span>
-
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
+  <!-- Imagen del autor al lado del texto -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
   </div>
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/como-subir-puntaje-crediticio-rapido.jpg" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+  <!-- Información editorial -->
+  <div class="flex-1">
+    <blockquote class="pl-3">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+        Actualizado 12 feb 2026 
+      </p>
+    
+
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+       Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">Francisco Urrego</a> · Fundador de Código Millonario
+      </p>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         ⏱ 5 min lectura
+      </p>
+    </blockquote>
   </div>
+
+</div>
+
+<div class="flex flex-col justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+<p>Tu historial crediticio refleja cómo manejas tus deudas, no solo si puedes pedir más dinero.</p>
+<p>Un atraso pequeño puede afectar tu score, así que conviene mantener los pagos al día.</p>
+</div>
+
+<div class="flex justify-center mt-20 relative max-w-4xl mx-auto px-4 sm:px-0"> 
+  <img src="../../../assets/png/como-subir-puntaje-crediticio-rapido.jpg"
+       alt="" 
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10"> 
+</div>
 
 
 
@@ -347,8 +396,8 @@ h2[id] {
 </style>
 
 <!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+<button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
     <li><a href="#titulo1">1. Por qué tu historial crediticio importa en Colombia</a></li>
     <li><a href="#titulo2">2. ¿Qué es el historial crediticio y por qué importa?</a></li>
@@ -364,7 +413,6 @@ h2[id] {
     <li><a href="#titulo12">12. No te atrases ni un solo día (esto derrumba el score)</a></li>
     <li><a href="#titulo13">13. ¿Cuánto tiempo tarda en mejorar un historial en Colombia?</a></li>
     <li><a href="#titulo14">14. Mejora tu reputación financiera sin esperar años</a></li>
-
   </ul>
 </div>
 
@@ -425,25 +473,13 @@ window.addEventListener("scroll", () => {
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
 
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
 </div>
 
 
 
 <!-- INTRODUCCIÓN -->
-  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">Por qué tu historial crediticio importa en Colombia</h2>
+  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">Por qué tu historial crediticio importa en Colombia</h2>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-<img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-       class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
 
    <p>
         Tener un buen historial crediticio en Colombia es más importante de lo que muchos creen. No se trata solo de poder pedir un crédito o comprar algo a cuotas, sino que también influye en cosas que uno ni se imagina: desde conseguir un apartamento en arriendo sin tanto rollo hasta poder acceder a ciertos servicios o beneficios financieros que muchas veces pasan desapercibidos. 
@@ -459,8 +495,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">¿Qué es el historial crediticio y por qué importa?</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">¿Qué es el historial crediticio y por qué importa?</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     El historial crediticio, en pocas palabras, es como tu hoja de vida financiera. Es el registro de cómo manejas tus deudas, tus créditos, tarjetas y cualquier producto financiero que tengas. En Colombia, las principales entidades que lo llevan son:
@@ -481,8 +517,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Paga a tiempo (esto sube tu puntaje más rápido que cualquier otra cosa)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Paga a tiempo (esto sube tu puntaje más rápido que cualquier otra cosa)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Pagar tus deudas a tiempo es probablemente lo más importante si quieres ver tu puntaje subir rápido. De hecho, los pagos puntuales representan como un 40-45% de tu score total, así que no es cualquier cosa.  
@@ -507,8 +543,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Usa tu tarjeta de crédito (aunque sea poquito)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+   <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Usa tu tarjeta de crédito (aunque sea poquito)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Tener una tarjeta de crédito y no usarla es casi como tener un superpoder y no aprovecharlo. Lo ideal es usarla aunque sea para cosas pequeñas del día a día, por ejemplo:  
@@ -536,8 +572,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
- <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Mantén bajo el uso de tu cupo (menos del 30%)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+ <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Mantén bajo el uso de tu cupo (menos del 30%)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Uno de los factores que más pesa en tu puntaje es cuánto estás usando de tu cupo de crédito. No es solo pagar a tiempo, también importa no pasarte del límite.  
@@ -561,8 +597,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">No abras demasiados créditos al mismo tiempo</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">No abras demasiados créditos al mismo tiempo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Cada vez que pides un crédito o una tarjeta, la entidad revisa tu historial. No es que esto sea malo por sí mismo, pero muchas solicitudes en poco tiempo pueden bajar tu score y hacer que los bancos o financieras se pongan más cautelosos.  
@@ -585,8 +621,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Ten al menos un producto financiero activo</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Ten al menos un producto financiero activo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Si no tienes ningún producto financiero a tu nombre, tu historial prácticamente no se mueve. Es como si no existieras para las entidades financieras, y eso puede retrasar mucho que tu score suba.  
@@ -614,8 +650,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-    <h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Paga la deuda total, no solo el mínimo</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+    <h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Paga la deuda total, no solo el mínimo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Pagar solo el mínimo de tu tarjeta te mantiene a flote, pero no ayuda mucho a subir tu puntaje. Es como si estuvieras diciendo “sí, puedo pagar, pero apenas”.  
@@ -642,8 +678,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Cierra deudas pequeñas primero (efecto rápido)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+   <h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cierra deudas pequeñas primero (efecto rápido)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Si tienes varias deudas pequeñas por ahí, lo más inteligente es atacarlas primero. O sea, paga las que sean bajas y deja las grandes para después. Suena simple, pero funciona muy bien.  
@@ -666,8 +702,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Revisa si tienes errores en Datacrédito</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+   <h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Revisa si tienes errores en Datacrédito</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Muchas veces tu score está bajo y ni te imaginas por qué. La verdad es que en Datacrédito pueden aparecer errores que afectan tu historial sin que tú lo sepas. Algunos ejemplos comunes:  
@@ -697,8 +733,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-    <h2 id="titulo11" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Mantén estabilidad económica (aunque sea mínima)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+    <h2 id="titulo11" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Mantén estabilidad económica (aunque sea mínima)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Las entidades financieras no solo miran si pagas tus deudas, también les importa ver que tienes cierta estabilidad económica. O sea, no hace falta ser rico ni tener ingresos enormes, pero sí que haya constancia.  
@@ -727,8 +763,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo12" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">No te atrases ni un solo día (esto derrumba el score)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo12" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">No te atrases ni un solo día (esto derrumba el score)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Aunque parezca exagerado, incluso un solo día de atraso puede afectar tu score. Las entidades financieras ven cualquier retraso como un riesgo, y eso se refleja casi de inmediato en tu historial.  
@@ -755,8 +791,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo13" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">¿Cuánto tiempo tarda en mejorar un historial en Colombia?</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo13" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">¿Cuánto tiempo tarda en mejorar un historial en Colombia?</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     La verdad es que depende mucho de tu situación, no hay un número mágico, pero por experiencia y lo que suelen decir las entidades, se puede dar un rango aproximado.  
@@ -779,8 +815,8 @@ window.addEventListener("scroll", () => {
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo14" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Mejora tu reputación financiera sin esperar años</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+   <h2 id="titulo14" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Mejora tu reputación financiera sin esperar años</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
   <p>
     La buena noticia es que mejorar tu historial crediticio en Colombia sí es posible y no tiene por qué tomarte años. La clave está en ser constante y hacer las cosas bien: pagar a tiempo, usar tus productos financieros correctamente, mantener tu cupo bajo, y revisar que no haya errores en tu historial.  
@@ -797,13 +833,14 @@ window.addEventListener("scroll", () => {
 </div>
 
 
- <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/como-subir-puntaje-crediticio-rapido.jpg" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
+
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
+
 
 
 <!-- Sección recomendada -->
