@@ -20,6 +20,13 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body class="bg-stone-50 text-stone-900">
@@ -185,8 +192,6 @@ document.querySelectorAll(".mobile-item").forEach(link => {
   }
 });
 
-
-
     document.querySelectorAll(".mobile-item").forEach(link => {
       const href = link.getAttribute("href")?.replace("./", "");
       if(href === currentPage){
@@ -199,44 +204,85 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
+     
 
-<!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
-      <span class="block"> 10 ideas de </span>
-      <span class="block">Negocios Rentables para</span>
+<!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-40 max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
+      <span class="block"> 10 ideas de Negocios Rentables para</span>
       <span class="block mt-1"> Empezar hoy en Colombia</span>
-    </h1>
-  </div>
-
-<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
-<!-- Fecha -->
-<span class="text-center text-xs">
-  <span class="update-icon-inline"></span> Actualizado
-</span>
-
-<span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="leading-none tracking-wide">
-    14 ene 2026 
-  </span>
-
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
+  </h1>
 </div>
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/como-iniciar-un-negocio-desde-cero.jpg" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+
+<div class="flex justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>
+    <strong>Redes sociales Código Millonario:</strong> 
+  </p>
+</div>
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
   </div>
 
+<!-- Bloque editorial profesional responsive con espacio lateral en móviles -->
+<div class="flex flex-row items-center gap-3 my-6 max-w-4xl mx-auto px-4 sm:px-0">
+
+  <!-- Imagen del autor al lado del texto -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+
+  <!-- Información editorial -->
+  <div class="flex-1">
+    <blockquote class="pl-3">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         Actualizado 14 ene 2026
+      </p>
+    
+
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+       Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">Francisco Urrego</a> · Fundador de Código Millonario
+      </p>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         ⏱ 5 min lectura
+      </p>
+    </blockquote>
+  </div>
+
+</div>
+
+<div class="flex flex-col justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>Los negocios más rentables no son los grandes, sino los que resuelven necesidades que nadie más ve.</p>
+  <p>Comienza pequeño, creativo y específico: ahí es donde nacen oportunidades únicas en Colombia.</p>
+</div>
+
+<div class="flex justify-center mt-20 relative max-w-4xl mx-auto px-4 sm:px-0"> 
+  <img src="../../../assets/png/como-iniciar-un-negocio-desde-cero.jpg"
+       alt="" 
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10"> 
+</div>
 
 
 
@@ -346,8 +392,8 @@ h2[id] {
 </style>
 
 <!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+<button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
     <li><a href="#titulo1">1. Primer paso hacia negocios únicos</a></li>
     <li><a href="#titulo2">2. Negocios invisibles: microservicios que nadie nota pero todos necesitan</a></li>
@@ -421,25 +467,13 @@ window.addEventListener("scroll", () => {
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
 
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
 </div>
 
 
 
 <!-- INTRODUCCIÓN -->
-   <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">Primer paso hacia negocios únicos en Colombia</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-<img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-       class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+   <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">Primer paso hacia negocios únicos en Colombia</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
  <p>
 Para muchos, Colombia es un país lleno de oportunidades; para otros, estas parecen no ser suficientes. Sin embargo, el verdadero punto no es si existen o no, sino qué estás haciendo tú para construirlas, o si simplemente esperas a que alguien más lo haga.
 Hoy, cualquier persona puede iniciar un negocio rentable sin necesidad de invertir millones, incluso generando empleo y crecimiento local. 
@@ -459,16 +493,18 @@ En este espacio solo daré ejemplos lo más breves posibles, sin entrar en demas
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Negocios invisibles: microservicios que nadie nota pero todos necesitan</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Negocios invisibles: microservicios que nadie nota pero todos necesitan</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-  Estas ideas de negocios las puedes iniciar hoy mismo sin complicar la solución más de lo necesario. Existen necesidades cotidianas que pasan desapercibidas, pero <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">alguien debe cubrirlas.</strong> Aquí está tu oportunidad para ofrecer servicios ultraespecíficos, casi “secretos”, que generen ingresos recurrentes:
+  Estas ideas de negocios las puedes iniciar hoy mismo sin complicar la solución más de lo necesario. Existen necesidades cotidianas que pasan desapercibidas, pero <strong>alguien debe cubrirlas.</strong> Aquí está tu oportunidad para ofrecer servicios ultraespecíficos, casi “secretos”, que generen ingresos recurrentes:
 </p>
 
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 Sistemas no saturados
 </strong>
+</p>
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
     <li>Revisión y actualización de perfiles de LinkedIn para freelancers ocupados.</li>
@@ -480,11 +516,11 @@ Sistemas no saturados
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Ideas verdes: negocios que cuidan y venden</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+   <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Ideas verdes: negocios que cuidan y venden</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-Es notable que, para muchos, el mundo está cambiando, y el tema ambiental no se quedó atrás, aunque a veces lo parezca. Cada día, más empresas y personas están tomando medidas para integrar la naturaleza en su forma de vivir; sin embargo, <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">el público colombiano no se quedó atrás y busca sostenibilidad</strong>. 
+Es notable que, para muchos, el mundo está cambiando, y el tema ambiental no se quedó atrás, aunque a veces lo parezca. Cada día, más empresas y personas están tomando medidas para integrar la naturaleza en su forma de vivir; sin embargo, <strong>el público colombiano no se quedó atrás y busca sostenibilidad</strong>. 
 Negocios muy sencillos y verdes pueden generar ingresos mientras hacen el bien. 
 </p>
 
@@ -492,9 +528,11 @@ Negocios muy sencillos y verdes pueden generar ingresos mientras hacen el bien.
 Quizás no parezcan rentables al inicio; sin embargo, este es un sistema de negocio en crecimiento lento, y quien se posicione ahora podrá ocupar una buena posición en el mercado a futuro.
 </p>
 
-<strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 Aquí hay que ser muy creativos y dejar que la imaginación dé vida a negocios naturales. Ejemplos:
 </strong>
+</p>
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
     <li>Creación de entornos naturales.</li>
@@ -507,16 +545,18 @@ Aquí hay que ser muy creativos y dejar que la imaginación dé vida a negocios 
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Negocios de experiencias digitales inmersivas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+   <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Negocios de experiencias digitales inmersivas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-Hoy en día, ha aumentado exponencialmente la creación de experiencias sobre la venta de productos. La gente ya no solo quiere objetos materiales; <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">quiere emociones y experiencias únicas.</strong> En este contexto, incluso con recursos limitados, puedes ofrecer algo innovador y creativo.
+Hoy en día, ha aumentado exponencialmente la creación de experiencias sobre la venta de productos. La gente ya no solo quiere objetos materiales; <strong>quiere emociones y experiencias únicas.</strong> En este contexto, incluso con recursos limitados, puedes ofrecer algo innovador y creativo.
 </p>
 
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 Este es un mercado que está en pleno crecimiento.
 </strong>
+</p>
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
     <li>Mini tours virtuales de ciudades o pueblos colombianos poco conocidos.</li>
@@ -528,16 +568,19 @@ Este es un mercado que está en pleno crecimiento.
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Micro reventas de nichos raros</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" sstyle=" font-family: 'Montserrat', sans-serif;">Micro reventas de nichos raros</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-    Olvídate de lo común. El verdadero dinero está en <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">nichos que pocos miran</strong>, productos que generan curiosidad y fidelidad. Muchas veces vemos algo raro en venta que despierta tanta curiosidad que genera en nosotros una necesidad inmediata de querer tenerlo. Si logras provocar ese efecto en los demás, puedes generar dinero.
+    Olvídate de lo común. El verdadero dinero está en <strong>nichos que pocos miran</strong>, productos que generan curiosidad y fidelidad. 
+    Muchas veces vemos algo raro en venta que despierta tanta curiosidad que genera en nosotros una necesidad inmediata de querer tenerlo. Si logras provocar ese efecto en los demás, puedes generar dinero.
 </p>
 
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 La lógica detrás de esto
 </strong>
+</p>
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
     <li>Objetos coleccionables de series, cómics o juegos antiguos.</li>
@@ -549,14 +592,15 @@ La lógica detrás de esto
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">
 Servicios para nichos ocultos
 </h2>
 
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-    Existen clientes que buscan <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">soluciones muy específicas, únicas y personalizadas</strong>, y están dispuestos a pagar más por obtener algo que no encuentran fácilmente en el mercado tradicional. Estos nichos suelen pasar desapercibidos, pero representan oportunidades reales para quienes saben identificar necesidades poco comunes.
+    Existen clientes que buscan <strong>soluciones muy específicas, únicas y personalizadas</strong>, y están dispuestos a pagar más por obtener algo que no encuentran 
+    fácilmente en el mercado tradicional. Estos nichos suelen pasar desapercibidos, pero representan oportunidades reales para quienes saben identificar necesidades poco comunes.
 </p>
 
 <p>
@@ -575,11 +619,11 @@ Servicios para nichos ocultos
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Reparaciones creativas y microinventos</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Reparaciones creativas y microinventos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-    No todo está inventado. Muchos buscan <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">soluciones rápidas y originales</strong> a problemas cotidianos. Aquí puedes entrar con tus manos y creatividad para aportar valor en lo siguiente:
+    No todo está inventado. Muchos buscan <strong>soluciones rápidas y originales</strong> a problemas cotidianos. Aquí puedes entrar con tus manos y creatividad para aportar valor en lo siguiente:
 </p>
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
     <li>Adaptaciones de muebles o electrodomésticos para espacios pequeños.</li>
@@ -591,14 +635,14 @@ Servicios para nichos ocultos
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">
 Experiencias de entretenimiento mini y locales
 </h2>
 
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-    La diversión también puede convertirse en un negocio <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">innovador y de pequeña escala</strong>. Hoy, muchas personas valoran más las experiencias cercanas, personalizadas y diferentes, lo que permite crear momentos memorables sin necesidad de grandes inversiones.
+    La diversión también puede convertirse en un negocio <strong>innovador y de pequeña escala</strong>. Hoy, muchas personas valoran más las experiencias cercanas, personalizadas y diferentes, lo que permite crear momentos memorables sin necesidad de grandes inversiones.
 </p>
 
 <p>
@@ -618,14 +662,15 @@ Experiencias de entretenimiento mini y locales
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
+<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">
 Servicios digitales de nicho extremo
 </h2>
 
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-    El mundo digital aún tiene muchos rincones inexplorados. Existen necesidades muy específicas que no son atendidas por los servicios tradicionales, y ahí es donde nacen los <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">microservicios digitales de nicho</strong>. Si apuntas a problemas concretos y poco comunes, estos servicios pueden convertirse en una verdadera mina de oro.
+    El mundo digital aún tiene muchos rincones inexplorados. Existen necesidades muy específicas que no son atendidas por los servicios tradicionales, y ahí es donde nacen los 
+    <strong>microservicios digitales de nicho</strong>. Si apuntas a problemas concretos y poco comunes, estos servicios pueden convertirse en una verdadera mina de oro.
 </p>
 
 <p>
@@ -643,14 +688,14 @@ Servicios digitales de nicho extremo
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
+<h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">
 Arte y decoración fuera de lo común
 </h2>
 
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-    Cada vez más personas buscan piezas únicas y auténticas para personalizar sus hogares y espacios de trabajo. Con creatividad y una propuesta clara, puedes ofrecer <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">arte y decoración que no se encuentra en tiendas tradicionales</strong>, aumentando así su valor percibido.
+    Cada vez más personas buscan piezas únicas y auténticas para personalizar sus hogares y espacios de trabajo. Con creatividad y una propuesta clara, puedes ofrecer <strong>arte y decoración que no se encuentra en tiendas tradicionales</strong>, aumentando así su valor percibido.
 </p>
 
 <p>
@@ -669,14 +714,14 @@ Arte y decoración fuera de lo común
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo11" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
+<h2 id="titulo11" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">
 Servicios a domicilio ultra especializados
 </h2>
 
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-    Los servicios a domicilio ya no se limitan solo a la comida o la limpieza. Hoy existen personas dispuestas a pagar por <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">soluciones muy concretas, personalizadas y convenientes</strong>. Si logras identificar una necesidad específica y llevarla directamente al hogar del cliente, puedes construir un negocio único con alta percepción de valor.
+    Los servicios a domicilio ya no se limitan solo a la comida o la limpieza. Hoy existen personas dispuestas a pagar por <strong>soluciones muy concretas, personalizadas y convenientes</strong>. Si logras identificar una necesidad específica y llevarla directamente al hogar del cliente, puedes construir un negocio único con alta percepción de valor.
 </p>
 
 <p>
@@ -698,17 +743,12 @@ Servicios a domicilio ultra especializados
 </div>
 
 
-
-
-
-<!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/como-iniciar-un-negocio-desde-cero.jpg" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
-
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
 
 
 <!-- Sección recomendada -->

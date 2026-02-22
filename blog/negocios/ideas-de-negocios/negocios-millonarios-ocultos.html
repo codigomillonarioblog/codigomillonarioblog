@@ -20,6 +20,13 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body class="bg-stone-50 text-stone-900">
@@ -201,43 +208,85 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-<!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
-      <span class="block">Cómo los Millonarios</span>
-      <span class="block">Multiplican su Dinero con</span>
-      <span class="block mt-1"> Negocios Ocultos</span>
-    </h1>
-  </div>
 
-<div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
-<!-- Fecha -->
-<span class="text-center text-xs">
-  <span class="update-icon-inline"></span> Actualizado
-</span>
 
-<span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="leading-none tracking-wide">
-    14 ene 2026 
-  </span>
-
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
+<!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-40 max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
+      <span class="block">Cómo los Millonarios Multiplican su</span>
+      <span class="block mt-1">Dinero con Negocios Ocultos</span>
+  </h1>
 </div>
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/negocios-que-hacen-ricos-a-millonarios.jpg" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+
+<div class="flex justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>
+    <strong>Redes sociales Código Millonario:</strong> 
+  </p>
+</div>
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
   </div>
 
+<!-- Bloque editorial profesional responsive con espacio lateral en móviles -->
+<div class="flex flex-row items-center gap-3 my-6 max-w-4xl mx-auto px-4 sm:px-0">
+
+  <!-- Imagen del autor al lado del texto -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+
+  <!-- Información editorial -->
+  <div class="flex-1">
+    <blockquote class="pl-3">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+        Actualizado 14 ene 2026
+      </p>
+    
+
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+       Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">Francisco Urrego</a> · Fundador de Código Millonario
+      </p>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         ⏱ 5 min lectura
+      </p>
+    </blockquote>
+  </div>
+
+</div>
+
+<div class="flex flex-col justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>La riqueza rara vez aparece en lo visible; los negocios silenciosos son los que sostienen fortunas.</p>
+  <p>No busques lo que brilla hoy, busca lo que resuelve problemas reales y se mantiene en el tiempo.</p>
+</div>
+
+<div class="flex justify-center mt-20 relative max-w-4xl mx-auto px-4 sm:px-0"> 
+  <img src="../../../assets/png/negocios-que-hacen-ricos-a-millonarios.jpg"
+       alt="" 
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10"> 
+</div>
 
 
             <!-- INTRODUCCIÓN GENERAL -->
@@ -346,8 +395,8 @@ h2[id] {
 </style>
 
 <!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+<button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
     <li><a href="#titulo1">1. Negocios Ocultos que los Millonarios Usan</a></li>
     <li><a href="#titulo2">2. Franquicias de bajo perfil</a></li>
@@ -422,25 +471,13 @@ window.addEventListener("scroll", () => {
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
 
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
 </div>
 
 
 
 <!-- INTRODUCCIÓN -->
-   <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">Negocios Ocultos que los Millonarios Usan</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-<img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-       class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+   <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">Negocios Ocultos que los Millonarios Usan</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Entre el 30 % y el 60 % de la población, dependiendo del país y del nivel de educación, no comprende realmente de qué tratan las finanzas básicas. Con esto ocurriendo, es aún más difícil que puedan identificar de dónde nace la riqueza. Y es entendible: yo mismo formé parte de ese porcentaje que desconocía por completo la existencia de un conocimiento básico sobre el manejo del dinero. 
@@ -460,17 +497,14 @@ Desde un enfoque empresarial sencillo, cada negocio genera ingresos en función 
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
-Franquicias de bajo perfil
-</h2>
-
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Franquicias de bajo perfil</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 En este caso, cuando se habla de franquicias, el error es creer en marcas grandes, visibles, altamente publicitadas y patrocinadas. Sin embargo, una gran parte del capital inteligente no se mueve en negocios llamativos que llegan a millones, sino en franquicias de bajo perfil que operan lejos de la atención masiva, ocupando un espacio en específico, pero con ingresos constantes y predecibles. Muchas veces, un negocio puede no tener ventas millonarias; para este caso, ventas recurrentes se pueden transformar en algo rentable cuando nadie está mirando.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
 Cuando el negocio funciona aunque nadie lo mire</h3>
 
 <p>
@@ -481,7 +515,7 @@ Este tipo de franquicias no dependen de modas ni de tendencias virales; no dejar
 La clave no está en la fama de la marca, sino en la estabilidad del flujo de clientes fieles y el posible boca a boca, la repetición de compra y la eficiencia del modelo operativo. Muchos inversores priorizan negocios donde el sistema ya esté probado, pero aún exista margen para optimizar procesos, mejorar la atención o adaptarse mejor a la demanda local sin asumir riesgos excesivos. Ahora imagina un negocio de este estilo con varias sucursales, aquí ya empieza a sonar algo jugoso, ¿verdad?
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
 Lo que dura no necesita ruido</h3>
 
 <p>
@@ -496,8 +530,8 @@ Lo que llega de moda se quema rápido; puede generar buen dinero en poco tiempo;
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Importaciones de nicho</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+   <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Importaciones de nicho</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Esta opción me parece una gran idea. Consiste en identificar productos que no se encuentran fácilmente en el país y atender a un público más selecto. Hay personas que se asocian entre sí para traer contenedores con mercancías específicas y luego revenderlas en su mercado local, una estrategia común entre empresarios y grandes inversionistas. Esto permite mantener control sobre la cantidad importada y asegurar que la oferta se mantenga exclusiva, especialmente si eres el único con acceso a esos productos, aumentando tanto la percepción de valor como el margen de ganancia.
@@ -512,19 +546,17 @@ En Colombia existen las cacharrerías, tiendas muy populares donde se vende prá
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
-  Servicios profesionales especializados
-</h2>
-
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Servicios profesionales especializados</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Otro caso menos conocido por la mayoría pero más rentables de generar dinero es ofreciendo servicios especializados. Aquí no se trata de competir por precios, sino de que se puedan enfocar en nichos donde pocas personas saben realmente lo que hacen y los clientes están dispuestos a pagar bien por experiencias únicas, conocimiento y resultados. Básicamente eso se trata de ofrecer tus conocimientos o los de otras personas y crear disponibilidad de el para el uso de quien la necesite.
 </p>
 
-
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 Ejemplos reales de este modelo de negocio</strong>
+</p>
 
 <ul class="text-stone-700 leading-relaxed mb-4 list-inside list-disc">
     <li>Consultoría legal enfocada en startups tecnológicas, un servicio que requiere conocimiento específico y suele generar relaciones a largo plazo.</li>
@@ -537,18 +569,17 @@ Ejemplos reales de este modelo de negocio</strong>
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
-  Inversiones estratégicas en bienes raíces poco conocidos
-</h2>
-
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Inversiones estratégicas en bienes raíces poco conocidos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 No todas las oportunidades rentables en bienes raíces están en zonas famosas o altamente promocionadas. Muchos inversionistas se enfocan en áreas en crecimiento, donde todavía no hay tanta atención, pero ya se empiezan a ver señales claras de desarrollo y expansión.
 </p>
 
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 Más ideas concretas</strong>
+</p>
 
 <ul class="text-stone-700 leading-relaxed mb-4 list-inside list-disc">
     <li>Lotes o terrenos ubicados en zonas cercanas a nuevos proyectos de infraestructura, donde el valor del suelo tiende a aumentar con el tiempo.</li>
@@ -561,8 +592,8 @@ Más ideas concretas</strong>
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Estrategias de reinversión y multiplicación</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Estrategias de reinversión y multiplicación</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Una característica común en estos negocios es que los ingresos no se consumen de inmediato. Los millonarios reinvierten constantemente para potenciar crecimiento, expandir mercado y proteger capital. La reinversión estratégica permite multiplicar resultados y reducir riesgos, manteniendo un flujo sólido y predecible.
@@ -572,8 +603,10 @@ Más ideas concretas</strong>
 Esta sección se enfoca en reinvertir de forma constante las ganancias dentro del mismo negocio hasta llevarlo al nivel deseado. Para mantenerse en el tiempo, es clave ir integrando poco a poco herramientas que faciliten los procesos y ayuden a que la empresa crezca de manera más ordenada.
 </p>
 
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 ¿Qué se puede tener en cuenta?</strong>
+</p>
 
 <ul class="text-stone-700 leading-relaxed mb-4 list-inside list-disc">
     <li>Mejorar procesos o automatizar tareas que aumenten eficiencia y reduzcan costos.</li>
@@ -585,11 +618,8 @@ Esta sección se enfoca en reinvertir de forma constante las ganancias dentro de
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
-  Micro logística para comercios locales
-</h2>
-
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Micro logística para comercios locales</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Muchos piensan que la logística es solo para grandes empresas, pero en realidad hay cientos de pequeños comercios que necesitan entregas rápidas y no pueden pagar plataformas grandes. Ahí es donde aparecen las oportunidades: crear micro-operadores logísticos que atiendan zonas específicas y resuelvan un problema real.
@@ -599,8 +629,10 @@ Muchos piensan que la logística es solo para grandes empresas, pero en realidad
 Con una sola motocicleta o vehículo ligero se pueden cubrir varias rutas al día y generar ingresos constantes si el proceso está bien organizado. La clave está en ofrecer tarifas simples, como pagos por paquete, a negocios locales que necesitan envíos frecuentes.
 </p>
 
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 ¿Dónde hacerlo?</strong>
+</p>
 
 <ul class="text-stone-700 leading-relaxed mb-4 list-inside list-disc">
     <li>Áreas con distancias cortas y alto movimiento diario, ideales para entregas rápidas.</li>
@@ -613,11 +645,8 @@ Con una sola motocicleta o vehículo ligero se pueden cubrir varias rutas al dí
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
-  Alquiler de productos que la gente no compra, solo usa
-</h2>
-
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Alquiler de productos que la gente no compra, solo usa</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 No todo el mundo quiere comprar cosas que va a usar una o dos veces. Muchos solo necesitan resolver una necesidad puntual, y ahí es donde el alquiler se convierte en un negocio inteligente. Quien entiende esto puede crear pequeños negocios con buena rotación y alta rentabilidad.
@@ -627,8 +656,10 @@ No todo el mundo quiere comprar cosas que va a usar una o dos veces. Muchos solo
 Este modelo funciona con productos que suelen ser costosos o poco comunes, desde herramientas para remodelar hasta equipos para creadores de contenido o eventos. Lo mejor es que no se necesita un inventario grande para empezar; se puede crecer poco a poco según la demanda.
 </p>
 
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
   Ejemplos claros de este sistema.</strong>
+</p>
 
 <ul class="text-stone-700 leading-relaxed mb-4 list-inside list-disc">
     <li>Máquinas para limpieza profunda de tapizados o alfombras.</li>
@@ -640,11 +671,8 @@ Este modelo funciona con productos que suelen ser costosos o poco comunes, desde
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo11" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
-  Restauración y reventa de muebles vintage
-</h2>
-
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo11" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Restauración y reventa de muebles vintage</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Mientras la mayoría prefiere comprar muebles nuevos, hay quienes entienden que restaurar piezas antiguas puede dejar márgenes muy altos. Sillas, mesas o escritorios que parecen viejos o dañados pueden transformarse en productos con mucho valor si se restauran bien y se presentan como piezas únicas.
@@ -654,8 +682,10 @@ Mientras la mayoría prefiere comprar muebles nuevos, hay quienes entienden que 
 Lo interesante de este modelo es que muchas personas se deshacen de muebles por falta de espacio o por mudanzas, lo que permite conseguir inventario a muy bajo costo o incluso gratis.
 </p>
 
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 ¿Qué puedes hacer?</strong>
+</p>
 
 <ul class="text-stone-700 leading-relaxed mb-4 list-inside list-disc">
     <li>Compra de muebles usados con potencial de restauración y reventa.</li>
@@ -667,11 +697,8 @@ Lo interesante de este modelo es que muchas personas se deshacen de muebles por 
 
 
 <!-- PÁRRAFO -->
-<h2 id="titulo12" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">
-  Micro centros de contenido para creadores
-</h2>
-
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo12" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Micro centros de contenido para creadores</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Cada vez más personas crean contenido en video, pero no todos cuentan con el espacio o el equipo adecuado. Ahí surge una oportunidad clara: montar pequeños estudios de grabación bien equipados, con buena iluminación, micrófonos y un fondo limpio, listos para grabar.
@@ -681,9 +708,10 @@ Cada vez más personas crean contenido en video, pero no todos cuentan con el es
 Los creadores pueden alquilar estos espacios por horas para grabar videos cortos, podcasts o sesiones de fotos rápidas. Es un modelo de negocio de bajo costo inicial y alta rotación, especialmente atractivo para quienes producen contenido de forma constante.
 </p>
 
-
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<p>
+<strong>
 ¿Qué debes tener en cuenta?</strong>
+</p>
 
 <ul class="text-stone-700 leading-relaxed mb-4 list-inside list-disc">
     <li>Espacios pequeños acondicionados específicamente para grabación.</li>
@@ -694,7 +722,8 @@ Los creadores pueden alquilar estos espacios por horas para grabar videos cortos
 
 
 <!-- CIERRE -->
- <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+ <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
 <p>
 La mayoría de estos negocios no aparecen en titulares ni se sienten emocionantes al inicio, pero funcionan porque resuelven problemas reales y se sostienen en el tiempo. No se trata de copiar modelos por moda, sino de entender cómo se mueve el dinero cuando nadie está viendo.
 </p>
@@ -705,16 +734,12 @@ La riqueza rara vez se construye de un solo golpe. Casi siempre nace de decision
  </div>
 
 
-
-
- <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../../assets/png/negocios-que-hacen-ricos-a-millonarios.jpg" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
-
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
 
 
 <!-- Sección recomendada -->

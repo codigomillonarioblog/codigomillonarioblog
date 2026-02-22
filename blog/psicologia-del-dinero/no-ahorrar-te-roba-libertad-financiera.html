@@ -20,6 +20,13 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body class="bg-stone-50 text-stone-900">
@@ -199,41 +206,86 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
+ 
 
-<!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm" style="font-family: 'Poppins', sans-serif;" >
-      <span class="block"> 
-         Cómo la falta de </span>
-      <span class="block"> ahorro te empuja a vivir </span>
-      <span class="block mt-1"> en modo Supervivencia </span>
-    </h1>
-  </div>
 
-  <div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
-
-     <!-- Fecha -->
- <span class="leading-none tracking-wide">
-    11 feb 2026 
-  </span>
-
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
+<!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-40 max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
+      <span class="block"> Cómo la falta de ahorro te empuja a</span>
+      <span class="block mt-1">vivir en modo Supervivencia </span>
+  </h1>
 </div>
 
 
+<div class="flex justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>
+    <strong>Redes sociales Código Millonario:</strong> 
+  </p>
+</div>
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/sin-ahorro-no-decides-tu.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
   </div>
+
+<!-- Bloque editorial profesional responsive con espacio lateral en móviles -->
+<div class="flex flex-row items-center gap-3 my-6 max-w-4xl mx-auto px-4 sm:px-0">
+
+  <!-- Imagen del autor al lado del texto -->
+  <div class="flex-shrink-0">
+    <img src="../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+
+  <!-- Información editorial -->
+  <div class="flex-1">
+    <blockquote class="pl-3">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+        Escrito el 11 feb 2026
+      </p>
+    
+
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+       Por <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">Francisco Urrego</a> · Fundador de Código Millonario
+      </p>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         ⏱ 5 min lectura
+      </p>
+    </blockquote>
+  </div>
+
+</div>
+
+<div class="flex flex-col justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>Sin un colchón de ahorro, tus decisiones financieras siempre estarán dictadas por el miedo y la urgencia, no por lo que realmente quieres.</p>
+  <p>Ahorrar no es acumular dinero, es recuperar la capacidad de decir ‘no’ y elegir tu propio camino con claridad.</p>
+</div>
+
+<div class="flex justify-center mt-20 relative max-w-4xl mx-auto px-4 sm:px-0"> 
+  <img src="../../assets/png/sin-ahorro-no-decides-tu.webp"
+       alt="" 
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10"> 
+</div>
 
 
 
@@ -344,8 +396,8 @@ h2[id] {
 </style>
 
 <!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+<button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
     <li><a href="#titulo1">1. La urgencia cambia la forma en que decides</a></li>
     <li><a href="#titulo2">2. Cuando no tienes ahorro, el miedo empieza a mandar</a></li>
@@ -353,7 +405,7 @@ h2[id] {
     <li><a href="#titulo4">4. La falta de ahorro te empuja directo a malas deudas</a></li>
     <li><a href="#titulo5">5. Por qué salir del modo supervivencia es más importante que ganar más</a></li>
     <li><a href="#titulo6">6. La realidad incómoda que casi nadie dice</a></li>
-    <li><a href="#titulo7">7. el ahorro no te cambia la vida, te devuelve la elección</a></li>
+    <li><a href="#titulo7">7. El ahorro no te cambia la vida, te devuelve la elección</a></li>
   </ul>
 </div>
 
@@ -416,32 +468,20 @@ window.addEventListener("scroll", () => {
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
 
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
 </div>
 
 
 
 <!-- INTRODUCCIÓN -->
-<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">La urgencia cambia la forma en que decides</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-<img src="../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">La urgencia cambia la forma en que decides</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 La mayoría de personas cree que los problemas financieros comienzan con un mal salario, pocas oportunidades o con no ganar lo suficiente para mejorar sus vidas, frases en sus mentes como "Si tuviera una mejor vida todo sería mucho más fácil", "si tuviera una mejor casa no estaría así", "si pudiera tener tal cosa sería mejor". Pero desde la psicología del dinero, el verdadero problema suele ser otro y en este caso es: no tener un colchón de ahorros.
 </p>
 
 <p>
-<strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
+<strong>
 ¿Por qué se cree que parte de ahí el problema?</strong>  
 </p>
 
@@ -466,8 +506,8 @@ En codigo millonario apostamos por pensar en una solución de la mano con tu sit
 
 
 
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Cuando no tienes ahorro, el miedo empieza a mandar</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuando no tienes ahorro, el miedo empieza a mandar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Para entrar aún más en contexto, si alguna vez has sentido perder el control y que dependas de algo que sabes que no es seguro, te has sentido resignado y como mascota de alguien, ¿o de un sistema del que sabes que debes hacer las cosas sin cuestionarte absolutamente nada? Este es el principio que quiero que veas para que puedas comprender más la lógica ahora mismo.
@@ -481,7 +521,7 @@ Sin embargo, la psicología del dinero lo explica bajo sus propios términos y d
 Cuando no tienes ahorro, cada imprevisto se siente como una amenaza real que sí puede destruirte o quitarte lo que temes perder, dependiendo la crisis. ¿Vivir así está bien? Un despido, una llamada del banco, una enfermedad leve, un retraso en el pago o un gasto inesperado dejan de ser situaciones normales y se convierten en señales de peligro que te dices: actúa ahora, porque hay más posibilidad de que eso no termine muy bien.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
 Decidir bajo presión nunca es decidir</h3>
 
 <p>
@@ -501,10 +541,11 @@ Desde ahí, el miedo empieza a tomar decisiones por ti. Y cuando el miedo decide
 
 
 
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Aceptas malos trabajos no porque quieras, sino porque no puedes decir que no</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Aceptas malos trabajos no porque quieras, sino porque no puedes decir que no</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 A nivel global, la Organización Internacional del Trabajo (OIT) estima que cientos de millones de personas trabajan en empleos de bajos salarios, y que alrededor del 20 % de los trabajadores asalariados en el mundo gana tan poco que su participación en los ingresos laborales es mínima. Además, más de 300 millones de personas empleadas viven en pobreza extrema, lo que demuestra que tener trabajo no garantiza estabilidad ni margen financiero. 
+
 <a href="https://www.ilo.org/global/research/global-reports/global-wage-report/lang--en/index.htm" target="_blank" class="text-blue-600 hover:underline">
 Fuente: Global Wage Report – OIT
 </a>
@@ -517,7 +558,7 @@ Según esos estudios, es un gran porcentaje de personas que permanecen en trabaj
 Cuando no hay ahorro, renunciar no es una opción real y es justo de lo que hemos estado analizando hasta ahora. Por lo tanto, negociar mejores condiciones tampoco es apropiado cuando no tienes un plan B. Buscar algo mejor se siente como un riesgo inaceptable y aún más cuando los demás pueden percatar que estás vulnerable y procederán incluso a cometer más abusos en tu contra. La mente no evalúa posibilidades, solo calcula cuánto tiempo puede resistir antes de que todo se derrumbe.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
 Cuando el miedo se vuelve tu jefe silencioso</h3>
 
 <p>
@@ -538,8 +579,8 @@ El ahorro no te hace rico. Pero te da algo igual de valioso: margen, poder de ne
 
 
 
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">La falta de ahorro te empuja directo a malas deudas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La falta de ahorro te empuja directo a malas deudas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 En la mayoría de los casos, cuando no hay ahorro, cualquier gasto inesperado se cubre con deuda, así sean pequeñas, adquiridas por particulares o procesos rápidos y dudosos que pueden poner en riesgo su tranquilidad. En ese caso, no suele ser la mejor opción; este sistema se presenta como el salvador único que puede sacarlos de un imprevisto a primera mano.
@@ -549,7 +590,7 @@ En la mayoría de los casos, cuando no hay ahorro, cualquier gasto inesperado se
 No es una decisión estratégica, es una reacción lógica involuntaria ocasionada por el temor dentro de su inconsciente. La mente, ya en modo supervivencia, busca apagar el incendio lo más rápido posible, como antes lo habíamos hablado, sin evaluar consecuencias a largo plazo y aceptando cualquier riesgo adicional.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
 Endeudarse para calmar el miedo</h3>
 
 <p>
@@ -569,8 +610,8 @@ El problema es que cada deuda reduce aún más tu margen futuro. Y mientras meno
 
 
 
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Por qué salir del modo supervivencia es más importante que ganar más</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Por qué salir del modo supervivencia es más importante que ganar más</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Si puedes lograr ganar más dinero, ayuda, pero no resuelve el problema de fondo si sigues viviendo sin margen o repitiendo este patrón más veces durante tu vida.
@@ -586,7 +627,7 @@ Salir del modo supervivencia significa recuperar el control mental antes que el 
 Algunos piensan: lo que me ocurrió era necesario y debía pasar así, y déjame decirte que no necesariamente hasta cierto punto, y omitir ese aprendizaje es aún peor que intentar aprender de él y no ponerlo en práctica.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
 El verdadero inicio de la libertad financiera</h3>
 
 <p>
@@ -610,8 +651,8 @@ Cuando tienes margen, no solo ganas dinero: ganas voz, negociación y la capacid
 
 
 
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"> La realidad incómoda que casi nadie dice</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;"> La realidad incómoda que casi nadie dice</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 La falta de ahorro no te hace débil.
@@ -642,8 +683,8 @@ Solo cuando tienes un colchón de seguridad puedes tomar decisiones con claridad
 
 
 
-  <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">el ahorro no te cambia la vida, te devuelve la elección</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+  <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El ahorro no te cambia la vida, te devuelve la elección</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 El mayor daño de no ahorrar no es no tener dinero.
@@ -679,16 +720,12 @@ Tu margen de ahorro no es dinero, es libertad de elegir las reglas de tu vida.
   </blockquote>
 
 
-
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/sin-ahorro-no-decides-tu.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
-
-
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
 
 
 <!-- Sección recomendada -->

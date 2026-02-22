@@ -20,6 +20,13 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body class="bg-stone-50 text-stone-900">
@@ -185,8 +192,6 @@ document.querySelectorAll(".mobile-item").forEach(link => {
   }
 });
 
-
-
     document.querySelectorAll(".mobile-item").forEach(link => {
       const href = link.getAttribute("href")?.replace("./", "");
       if(href === currentPage){
@@ -200,41 +205,87 @@ document.querySelectorAll(".mobile-item").forEach(link => {
 
 
 
-<!-- HERO -->
-<!-- Contenedor del título -->
- <div class="flex flex-col justify-center items-center mt-36 md:mt-40 px-4">
-    <h1 class="font-bold text-stone-900 text-center text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm " style="font-family: 'Poppins', sans-serif;">
-      <span class="block"> 5 hábitos financieros  </span>
-      <span class="block"> que la gente exitosa practica  </span>
-      <span class="block mt-1"> antes de los 30 </span>
-    </h1>
-  </div>
-  
 
-  <div class="mt-6 text-xs text-stone-500 flex flex-row justify-center items-center space-x-1" style="font-family: 'Poppins', sans-serif;">
 
-     <!-- Fecha -->
- <span class="leading-none tracking-wide">
-    14 feb 2026 
-  </span>
 
-  <span class="inline-block h-3 w-px bg-stone-300 mx-3"></span>
-
-  <span class="flex items-center gap-1 leading-none">
-    ⏱ <span>5 min lectura</span>
-  </span>
+<!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-40 max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
+      <span class="block"> 5 hábitos financieros que la gente</span>
+      <span class="block mt-1">exitosa practica antes de los 30 </span>
+  </h1>
 </div>
 
 
+<div class="flex justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+  <p>
+    <strong>Redes sociales Código Millonario:</strong> 
+  </p>
+</div>
 
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/5-habitos-financieros-personas-exitosas.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
   </div>
 
+<!-- Bloque editorial profesional responsive con espacio lateral en móviles -->
+<div class="flex flex-row items-center gap-3 my-6 max-w-4xl mx-auto px-4 sm:px-0">
+
+  <!-- Imagen del autor al lado del texto -->
+  <div class="flex-shrink-0">
+    <img src="../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+
+  <!-- Información editorial -->
+  <div class="flex-1">
+    <blockquote class="pl-3">
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+        Escrito el 14 feb 2026
+      </p>
+    
+
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+       Por <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">Francisco Urrego</a> · Fundador de Código Millonario
+      </p>
+      <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+         ⏱ 5 min lectura
+      </p>
+    </blockquote>
+  </div>
+
+</div>
+
+<div class="flex flex-col justify-start gap-5 mt-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Open Sans', sans-serif;">
+ <p><strong>Antes de los 30, quienes triunfan trabajan en silencio</strong> mientras otros solo esperan resultados instantáneos.</p>
+  <p><strong>Controlan su dinero con intención</strong> y lo destinan a activos que generan libertad y seguridad a largo plazo.</p>
+  <p><strong>Piensan a largo plazo y ejecutan de forma constante</strong>, entendiendo que la verdadera riqueza se construye con hábitos sostenidos, no con suerte.</p>
+</div>
+
+<div class="flex justify-center mt-20 relative max-w-4xl mx-auto px-4 sm:px-0"> 
+  <img src="../../assets/png/5-habitos-financieros-personas-exitosas.webp"
+       alt="" 
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10"> 
+</div>
 
 
 
@@ -344,8 +395,8 @@ h2[id] {
 </style>
 
 <!-- ================= HTML ================= -->
-<div class="toc-container">
-  <button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+<button class="toc-toggle" type="button">Tabla de contenidos</button>
   <ul class="toc-list">
     <li><a href="#titulo1">1. Quiénes triunfan antes de los 30 siguen estos hábitos</a></li>
     <li><a href="#titulo2">2. Antes de los 30, ellos trabajaron en silencio</a></li>
@@ -416,83 +467,71 @@ window.addEventListener("scroll", () => {
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
 
-  <!-- Nota editorial -->
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-      Esto es un análisis y enfoque editorial de
-      <strong class="font-semibold text-slate-800">
-        Código Millonario.
-      </strong>
-    </p>
-  </blockquote>
 </div>
 
 
 
 <!-- INTRODUCCIÓN -->
-<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Poppins', sans-serif;">Quiénes triunfan antes de los 30 siguen estos hábitos</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-<img src="../../assets/img/multiplicar-tu-dinero-desde-cero.webp" alt="" 
-class="float-right w-40 h-40 md:w-64 md:h-64 object-cover ml-4 mb-2 rounded-lg shadow">
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">Quiénes triunfan antes de los 30 siguen estos hábitos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-  Hay una creencia muy cierta y se centra de este modo: todos damos por hecho que cualquier proceso de obtención de alguna habilidad, conocimiento o lo deseado parte de una serie de acciones que, intensamente realizadas cada día, llevan a una sola palabra de forma simple: "hábito". ¿Pero la mayoría conoce el peso real de esta palabra? 
+  Hay una creencia muy cierta y se centra de este modo: todos damos por hecho que cualquier proceso de obtención de alguna habilidad, conocimiento o lo deseado parte de una serie de acciones que, intensamente realizadas cada día, llevan a una sola palabra de forma simple: <strong>"hábito"</strong>. ¿Pero la mayoría conoce el peso real de esta palabra? 
   ¿O simplemente se popularizó lo suficiente como para que perdiera relevancia, se normalizara y ahora cualquiera la use como medio de venta rápida de forma improvisada?
 </p>
 
 <p>
-Muchos no comprenden muy bien cuáles son los métodos por los cuales una persona puede adquirir cifras sorprendentes cada mes y prefieren aceptar que es cuestión de suerte o se está cometiendo algo ilegal ahí. ¿Cómo es posible que alguien tenga demasiado dinero y yo no? Eso debe ser ilegal, está haciendo algo mal, pronto irá preso, lo apuesto.
+Muchos no comprenden muy bien cuáles son los métodos por los cuales una persona puede adquirir cifras sorprendentes cada mes y prefieren aceptar que es cuestión de <strong>suerte</strong> o se está cometiendo algo ilegal ahí. ¿Cómo es posible que alguien tenga demasiado dinero y yo no? Eso debe ser ilegal, está haciendo algo mal, pronto irá preso, lo apuesto.
 </p>
 
 <p>
 Es así como sus mentes juegan un papel fundamental del lado de la historia que eligen creer y no ver más allá de sus posibilidades.
 Pero la realidad es otra.
 
-Las personas que construyen riqueza temprano no lo hacen por casualidad, reafirma el autor.
+Las personas que construyen riqueza temprano no lo hacen por <strong>casualidad</strong>, reafirma el autor.
 </p>
 
 <p>
-Lo hacen porque adoptan hábitos específicos antes de los 30 años, cuando la mayoría todavía está improvisando, tambaleando, tratando de decidir qué camino seguir; ellos están ejecutando de forma continua.
+Lo hacen porque adoptan <strong>hábitos específicos antes de los 30 años</strong>, cuando la mayoría todavía está improvisando, tambaleando, tratando de decidir qué camino seguir; ellos están ejecutando de forma continua.
 
 Quiero asegurarle al lector que no perderá su valioso tiempo leyendo esta sección del blog Código Millonario, ya que aquí encontrará oro, como aquel que se va a la orilla de un río en búsqueda de oro, solo que aquí sí se encuentra oro.
 </p>
 
 <p>
-Incluimos comportamientos concretos que cambian el rumbo financiero de una vida, así como fue cambiada la vida de quienes tuvieron éxito en lo que se propusieron.
+Incluimos <strong>comportamientos concretos que cambian el rumbo financiero</strong> de una vida, así como fue cambiada la vida de quienes tuvieron éxito en lo que se propusieron.
 </p>
 
 </div>
 
 
 
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Antes de los 30, ellos trabajaron en silencio</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Antes de los 30, ellos trabajaron en silencio</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
 Nadie ve el proceso, solo el resultado
 </h3>
 
 <p>
-Muchas de estas personas que lograron tener éxito antes de cumplir los 30s, iniciaron a temprana edad; sí, mientras usted y miles de personas más solo se dedicaban a jugar como lo haría cualquier joven o niño hasta determinada edad, ellos estaban construyendo algo valioso en silencio, y no me refiero a que lo estuviesen ocultando, de ningún modo. Hay algo muy particular que pasa en esa percepción de que trabajaron en silencio, y eso se debe a lo siguiente.
+Muchas de estas personas que lograron tener <strong>éxito</strong> antes de cumplir los 30s, iniciaron a temprana edad; sí, mientras usted y miles de personas más solo se dedicaban a jugar como lo haría cualquier joven o niño hasta determinada edad, ellos estaban construyendo algo <strong>valioso</strong> en silencio, y no me refiero a que lo estuviesen ocultando, de ningún modo. Hay algo muy particular que pasa en esa percepción de que trabajaron en silencio, y eso se debe a lo siguiente.
 </p>
 
 <p>
-No es que trabajaran escondidos o realmente sin contarle nada a nadie; lo que sucede es que, al igual que en este momento, es imposible saber quién ganará una gran fama y se expondrá ante la multitud. Para cuando alguien se expone, es el momento en el cual nadie vio los largos 10 años de valla interminable para lograr su fortuna; las personas maxifican sus resultados y no exponen el trabajo interminable durante años para lograrlo.
+No es que trabajaran escondidos o realmente sin contarle nada a nadie; lo que sucede es que, al igual que en este momento, es imposible saber quién ganará una gran fama y se expondrá ante la multitud. Para cuando alguien se expone, es el momento en el cual nadie vio los largos <strong>10 años</strong> de valla interminable para lograr su fortuna; las personas maxifican sus resultados y no exponen el trabajo interminable durante años para lograrlo.
 
-Mientras muchos dormían, literal, ellos trabajaban en ideas innovadoras que más adelante los sacaría de cualquier necesidad de buscar y depender de un empleo.
+Mientras muchos dormían, literal, ellos trabajaban en ideas <strong>innovadoras</strong> que más adelante los sacaría de cualquier necesidad de buscar y depender de un empleo.
 </p>
 
 <p>
-Para que el lector tenga una idea más aproximada a lo que me refiero, quiero que usted y yo nos metamos más profundamente acerca de este pensamiento de esta forma simple. Se requiere aproximadamente de 5, 7 a 10 años lograr un éxito monumental, o quizás no ser el mejor en su área, pero sí es totalmente posible y alcanzable lograr una pequeña fortuna.
+Para que el lector tenga una idea más aproximada a lo que me refiero, quiero que usted y yo nos metamos más profundamente acerca de este pensamiento de esta forma simple. Se requiere aproximadamente de 5, 7 a <strong>10 años</strong> lograr un éxito monumental, o quizás no ser el mejor en su área, pero sí es totalmente posible y alcanzable lograr una pequeña fortuna.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-El tiempo no crea riqueza, la ejecución sí</h3>
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+El tiempo no crea riqueza, la ejecución sí
+</h3>
 
 <p>
-Hasta este punto pueden haber más preguntas que respuestas para muchos; aun así, quiero ser lo más claro posible y enfocarnos en el valor real. Muchas cosas pueden no ser relevantes. Se puede creer que hay profesionales en su área que llevan muchos más años de los indicados anteriormente, posiblemente más de 10 años; sin embargo, el tiempo es solo una unidad de medida, no necesariamente un carpintero con 10 años de experiencia en su labor va a hacerse rico, porque no es así.
+Hasta este punto pueden haber más preguntas que respuestas para muchos; aun así, quiero ser lo más claro posible y enfocarnos en el valor real. Muchas cosas pueden no ser relevantes. Se puede creer que hay profesionales en su área que llevan muchos más años de los indicados anteriormente, posiblemente más de 10 años; sin embargo, el tiempo es solo una unidad de medida, no necesariamente un carpintero con 10 años de experiencia en su labor va a hacerse <strong>rico</strong>, porque no es así.
 </p>
 
 <p>
@@ -503,18 +542,19 @@ Una explicación más precisa es: quienes logran grandes cantidades de dinero fu
 
 
 
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"> Viven por debajo de sus posibilidades (aunque ganen más)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
-
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;"> Viven por debajo de sus posibilidades (aunque ganen más)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-La mayoría de personas que ganan grandes cantidades de dinero, decidieron llevar una vida como cualquier persona que dependiera de un empleo y su sueldo; para ellos, ganar más no implica gastar más. Claro, hay costos que subirán inevitablemente, pero se acomodan a su nivel de ingresos y no buscan tener la vida de alguien con más dinero que ellos.
+La mayoría de personas que ganan grandes cantidades de <strong>dinero</strong>, decidieron llevar una vida como cualquier persona que dependiera de un empleo y su sueldo; para ellos, ganar más no implica gastar más. Claro, hay costos que subirán inevitablemente, pero se acomodan a su nivel de ingresos y no buscan tener la vida de alguien con más dinero que ellos.
 </p>
 
 <p>
-Cabe aclarar que muchos sí decidieron tener autos costosos, casas que la mayoría no puede permitirse; sin embargo, son un gasto accesible para ellos. Pero, cuando hablamos de vaciar la cuenta bancaria después de cada pago, hace mucho la mayoría hubiera terminado en bancarrota.
+Cabe aclarar que muchos sí decidieron tener autos <strong>costosos</strong>, casas que la mayoría no puede permitirse; sin embargo, son un gasto <strong>accesible</strong> para ellos. Pero, cuando hablamos de vaciar la cuenta bancaria después de cada pago, hace mucho la mayoría hubiera terminado en bancarrota.
+</p>
 
-¿No te resuena que conservar y ahorrar va de la mano con no derrochar? El éxito no va de la mano con el lujo, pero sí parte de cosas tan sencillas como establecer un límite con cuentas claras.
+<p>
+¿No te resuena que conservar y <strong>ahorrar</strong> va de la mano con no derrochar? El éxito no va de la mano con el lujo, pero sí parte de cosas tan sencillas como establecer un límite con cuentas claras.
 </p>
 
 <p>
@@ -526,9 +566,11 @@ Las personas financieramente exitosas hacen lo contrario.
 Cuando ganan más, no gastan más.
 Mantienen sus mismos gastos e invierten en donde vivirán y qué conducirán.
 
-No buscan aparentar riqueza.
+No buscan aparentar <strong>riqueza</strong>.
 Buscan construirla a partir de cada oportunidad accesible.
+</p>
 
+<p>
 Antes de los 30, entienden algo clave:
 La libertad financiera no depende de cuánto ganas, de dónde vives o quién eres, sino de cuánto conservas y qué se hace a diario para estar en el futuro con una mejor vida.
 </p>
@@ -537,8 +579,8 @@ La libertad financiera no depende de cuánto ganas, de dónde vives o quién ere
 
 
 
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"> Invierten en activos, no en apariencias</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;"> Invierten en activos, no en apariencias</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 No hay acto que más allá ha arruinado la vida de muchos como el de intentar vender una apariencia que no es propia de quien la proyecta. Ahora bien, hay quienes invierten en apariencias para sacar retribuciones mediante algún método que en algunas ocasiones puede abrirles las puertas a nuevas oportunidades.
@@ -557,11 +599,15 @@ Un activo es un sistema automático o regulado que necesita muy poco tiempo o na
 </p>
 
 <p>
-  <strong class="text-sm font-semibold text-stone-800 block mt-2" style="font-family: 'Poppins', sans-serif;">
-Algunos métodos comunes, pueden haber miles.</strong>
 
-Puede ser:
-<br><br>
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+  Algunos métodos comunes, pueden haber miles</h3>
+
+<p>
+<strong>Puede ser:</strong>
+</p>
+
+<p>
 Educación que aumente tus ingresos y te permita cobrar más por lo que sabes.<br>
 Un negocio digital que funcione incluso mientras duermes.<br>
 Inversiones que generen rendimientos con el tiempo.<br>
@@ -581,8 +627,8 @@ Antes de los 30, esta decisión lo cambia todo: gastar para sentirte bien hoy o 
 
 
 
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Construyen múltiples fuentes de ingreso</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Construyen múltiples fuentes de ingreso</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Algo curioso en las personas que tuvieron éxito implementando hábitos financieros antes de los 30s es que, una vez que descubrieron la forma de generar algún tipo de ingreso, es como desbloquear el código millonario: no puedes desaprender el cómo hacer dinero, cómo buscar algún método de dónde extraer ese dinero.
@@ -600,8 +646,11 @@ Concentrar todo tu sustento en una sola fuente te deja vulnerable y a merced de 
 Las personas exitosas antes de los 30 entienden esto temprano. No esperan a tener miles ahorrados ni un título perfecto. Empiezan con lo que tienen ahora, desde donde están; la evolución y perfección van surgiendo de a poco. Como quien organiza una habitación: al principio puede no gustarle y, de a poco, va puliendo esa presentación hasta tener una habitación soñada, pero hay que iniciar tendiendo la cama por lo menos.
 </p>
 
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+Comenzar con algo manejable</h3>
+
 <p>
-<strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">
+<strong>
 Consejo de oro:</strong> empiezan con algo pequeño.
 Simular que debes iniciar con algo que cambiará el mundo de la noche a la mañana es algo irreal, pero es entendible; todos los que buscamos respuestas pasamos por ahí al inicio.
 </p>
@@ -630,8 +679,8 @@ Cuando mejoras muchos aspectos de tu vida, de repente ya no estás obligado a ha
 
 
 
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">Controlan su dinero con intención</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Controlan su dinero con intención</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Controlar el dinero que se puede adquirir mediante inversiones puede parecer una pesadilla para quienes no soportan ver un dólar en sus bolsillos, y para quienes tienen éxitos económicos antes de los 30s es tan sencillo como destinar cierta cantidad para sus gastos y guardar o reinvertir lo restante.
@@ -645,7 +694,7 @@ Si nos ponemos a analizar, en este mundo hay mil maneras de gastar un millón de
 Ahora imagínate que ese millón de dólares era la única oportunidad de salir de una vida que nunca quisiste y lo malgastante rápido, no te quedó nada. ¿Qué le hace creer a las personas que ganar un millón de dólares mensuales ya pueden ser dioses? Estas creencias de tener mucho dinero y vivir como reyes son propias de las personas con escasez.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
 Quien no mide su dinero, pierde su libertad</h3>
 
 <p>
@@ -688,8 +737,8 @@ Y el hábito de revisarlo constantemente vale más que cualquier inversión que 
 
 
 
-<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;"> Piensan a largo plazo (aunque el mundo sea inmediato)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Piensan a largo plazo (aunque el mundo sea inmediato)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Hasta este siglo, es bastante notorio que nuestra civilización ha entrado en decadencia cuando hablamos de que la mayoría quiere las cosas rápido, cuando hace muchos años atrás era muy usado esto de la mentalidad basada en años. Todos quieren tener éxito el primer mes, todos quieren competir con quienes llevan años haciendo lo que hacen. Este tiempo es lo que todos llaman hoy
@@ -718,7 +767,7 @@ No se construye por moda.
 Se forma con decisiones repetidas durante años en la misma actividad, así de simple.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
  Un despertar de realidad, como balde de agua fría.</h3>
 
 <p>
@@ -753,8 +802,8 @@ Una acumulación de decisiones correctas sostenidas en el tiempo.
 
 
 
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Poppins', sans-serif;">El éxito es lo que haces cuando nadie mira</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Lora', serif;">
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El éxito es lo que haces cuando nadie mira</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Ahora, para ir cerrando, quiero anticiparme diciendo estas palabras: antes de los 30 no es absolutamente necesario que 
@@ -796,17 +845,12 @@ Y quien entiende esto antes de los 30, empieza a jugar un juego en el que puede 
 </div>
 
 
-
-  
-
-  <!-- Imagen principal con sombra curva -->
-  <div class="flex justify-center mt-10 relative">
-    <img src="../../assets/png/5-habitos-financieros-personas-exitosas.webp" alt="" 
-         class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-lg relative z-10">
-    <!-- Sombra curva -->
-    <div class="absolute bottom-0 w-48 h-12 md:w-72 md:h-20 bg-gradient-to-t from-black/20 to-transparent rounded-b-full z-0"></div>
-  </div>
-
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
 
 
 <!-- Sección recomendada -->
