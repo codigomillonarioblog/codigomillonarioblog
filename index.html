@@ -221,6 +221,7 @@
 
   <!-- MENÚ DE ESCRITORIO (PC) -->
   <nav class="hidden md:flex bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] px-8 py-4 w-full max-w-5xl flex items-center justify-between pointer-events-auto transition-all duration-300">
+
     <div class="flex items-center space-x-3">
       <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
       <span class="text-xl font-bold text-stone-900">Código Millonario</span>
@@ -562,14 +563,15 @@ fetch('posts.json')
 <section class="py-12"></section>
 
 
+
+
+
 <!-- ========= POPUP ========= -->
 <div id="popupOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:2000; justify-content:center; align-items:center;">
-  <div id="popupBox" class="bg-white p-8 rounded-2xl max-w-md w-11/12 text-center">
+<div id="popupBox" class="bg-white p-8 rounded-2xl max-w-md w-11/12 text-center">
 
-    
-
-
-<h2 class="text-2xl font-bold mb-4" style="font-family: 'Poppins', sans-serif;">
+  
+<h2 class="text-2xl font-bold mb-4" style=" font-family: 'Montserrat', sans-serif;">
   Descargar Guía Gratis
 </h2>
 
@@ -606,8 +608,8 @@ fetch('posts.json')
      <!-- BOTÓN -->
       <button type="submit"
               class="bg-green-600 text-white w-full py-3 rounded-lg font-semibold hover:bg-green-700">
-        Obtener Guía
-</button>
+             Obtener Guía
+      </button>
 
         </form>
 
@@ -629,130 +631,59 @@ fetch('posts.json')
 
 
 
+<div class="flex flex-col justify-center items-start mt-30 max-w-4xl mx-auto px-4 md:px-0">
+      <span class="block mt-1">Tu mentor en educación financiera</span>
+</div>
 
-
-
-
-<section class="relative py-20 lg:py-32 text-left overflow-x-hidden" style="font-family: 'Lora', serif;">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
-
-<!-- Columna izquierda: todo agrupado -->
-<div class="flex flex-col">
-  
-  <!-- Contenedor horizontal -->
-  <div class="flex items-center space-x-6 mb-4">
-    
-    <!-- Badge minimalista (clickeable) -->
-    <a href="./educacionfinanciera.html" class="inline-flex items-center space-x-2 group">
-      <i data-lucide="check-circle" class="w-4 h-4 group-hover:text-green-600 group-hover:scale-110 transition"></i>
-      <span class="text-stone-900 text-sm font-medium group-hover:text-green-600 transition">
-        Nueva Guía Financiera
-      </span>
-    </a>
-
-    <!-- Enlace Sobre el autor -->
-    <a href="./sobre-el-autor.html" class="inline-flex items-center space-x-2 group">
-      <i data-lucide="user" class="w-4 h-4 text-black group-hover:text-green-600 group-hover:scale-110 transition"></i>
-      <span class="text-stone-900 text-sm font-medium group-hover:text-green-600 transition">
-        Sobre el autor
-      </span>
-    </a>
-
-  </div>
-
-      <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
-        Aprende a Multiplicar tu Dinero <span class="text-green-600"> sin límites </span> 
-      </h1>
-
-      <blockquote class="italic text-stone-600 text-left mt-6">
-        <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">
-          <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-            Aprende a ganar, ahorrar e invertir con inteligencia. Sin atajos, sin promesas falsas, solo pasos reales hacia tu libertad financiera.
-          </span>
-        </p>
-      </blockquote>  
-    </div>
-
-    <!-- Columna derecha vacía o imagen -->
-    <div></div>
-
-
- <!-- Botones movidos debajo del texto -->
-<div class="flex flex-col sm:flex-row gap-4 mt-4 font-poppins">
-
-  <!-- Botón principal -->
-  <button onclick="openPopup()"
-          class="bg-green-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full 
-                 text-sm sm:text-base font-semibold shadow-lg 
-                 text-center w-full sm:w-auto
-                 sm:hover:bg-black sm:hover:text-white
-                 transition-colors duration-200">
-    Descargar Guía Gratis
-  </button>
-
-  <!-- Botón Productos -->
-  <a href="./tienda.html"
-     class="bg-white text-black border-2 border-black px-5 sm:px-6 py-2.5 sm:py-3 
-            rounded-full text-sm sm:text-base font-semibold 
-            flex items-center justify-center w-full sm:w-auto
-            sm:hover:bg-black sm:hover:text-white
-            transition-colors duration-200">
-    Productos
-  </a>
-
-  <!-- Botón Donaciones -->
-  <a href="./donar.html"
-     class="bg-white text-black border-2 border-black px-5 sm:px-6 py-2.5 sm:py-3 
-            rounded-full text-sm sm:text-base font-semibold 
-            flex items-center justify-center w-full sm:w-auto
-            sm:hover:bg-black sm:hover:text-white
-            transition-colors duration-200">
-    Donaciones
-  </a>
-
-
-
+<!-- HERO alineado a la izquierda como los demás divs -->
+<div class="flex flex-col justify-center items-start mt-30 mb-[5vh] max-w-4xl mx-auto px-4 md:px-0">
+  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
+      <span class="block mt-1">Blog Aprende a Multiplicar</span>
+      <span class="block mt-1">tu Dinero sin límites</span>
+  </h1>
 </div>
 
 
-    <!-- Puedes dejar vacía la segunda columna si quieres que todo quede en la izquierda -->
-    <div></div>
 
-  </div>
-</section>
+<div class="flex flex-col justify-center items-start mt-30 max-w-4xl mx-auto px-4 md:px-0 space-y-4">
 
+  <!-- Badge minimalista (clickeable) -->
+  <a href="./educacionfinanciera.html" 
+     class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
+    <i data-lucide="check-circle" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
+    <span>Nueva Guía Financiera</span>
+  </a>
 
+  <!-- Enlace Sobre el autor -->
+  <a href="./sobre-el-autor.html" 
+     class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
+    <i data-lucide="user" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
+    <span>Sobre el autor</span>
+  </a>
 
+<!-- Botón principal estilo minimalista -->
+<a href="#" 
+   onclick="openPopup(); event.preventDefault();" 
+   class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
+    <i data-lucide="download" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
+    <span>Descargar guía gratis</span>
+</a>
 
+  <!-- Botón Productos estilo minimalista -->
+  <a href="./tienda.html" 
+     class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
+    <i data-lucide="shopping-cart" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
+    <span>Productos</span>
+  </a>
 
+  <!-- Botón Donaciones estilo minimalista -->
+  <a href="./donar.html" 
+     class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
+    <i data-lucide="heart" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
+    <span>Donaciones</span>
+  </a>
 
-<!-- Contenedor tipo "3 cartas" -->
-<div class="relative flex justify-center items-end mt-0 h-[200px] sm:h-[260px] md:h-[320px]">
-
-<!-- Imagen 2 (detrás izquierda) -->
-<img src="./assets/img/crecer-mentalmente-para-avanzar.webp" 
-     alt=""
-     loading="lazy"
-     decoding="async"
-     class="absolute left-2 w-24 h-24 sm:left-1/5 sm:w-36 sm:h-36 md:left-1/4 md:w-56 md:h-56 object-cover rounded-lg -rotate-6 z-0">
-
-<!-- Imagen 3 (detrás derecha) -->
-<img src="./assets/img/habitos-que-construyen-exito.webp" 
-     alt=""
-     loading="lazy"
-     decoding="async"
-     class="absolute right-2 w-24 h-24 sm:right-1/5 sm:w-36 sm:h-36 md:right-1/4 md:w-56 md:h-56 object-cover rounded-lg rotate-6 z-0">
-
-<!-- Imagen 1 (frente - PRIORIDAD ALTA) -->
-<img src="./assets/img/mentalidad-ganadora-diaria.webp" 
-     alt=""
-     loading="eager"
-     fetchpriority="high"
-     decoding="async"
-     class="relative w-36 h-36 sm:w-48 sm:h-48 md:w-72 md:h-72 object-cover rounded-lg z-10">
-     
 </div>
-
 
 
 
@@ -841,23 +772,6 @@ fetch('posts.json')
 
 
 
-<div style="height:30px; margin:30px 0;"></div>
-
-
-<div class="flex justify-center my-8 px-4">
-  <div class="overflow-hidden max-w-full">
-    <marquee
-      class="block w-full max-w-md mx-auto"
-      scrollamount="5"
-      bgcolor="#FFFFFF"
-    >
-      <span style="font-family: georgia; font-size: 1rem; font-weight: 600; color: #000;">
-        El dinero no da felicidad, pero el desorden financiero sí quita mucha tranquilidad.
-      </span>
-    </marquee>
-  </div>
-</div>
-
 
 
 
@@ -878,7 +792,6 @@ fetch('posts.json')
     </h2>
 
     <p class="text-gray-600 mt-3 text-sm sm:text-base leading-relaxed">
-      <strong>Tu mentor en educación financiera</strong><br>
       Contenido GRATIS que comparto con mi comunidad.  
       Recuerda suscribirte, darle like y seguirme.
     </p>
@@ -1074,23 +987,6 @@ fetch('posts.json')
 
 
 
-
-<div style="height:30px; margin:30px 0;"></div>
-
-
-<div class="flex justify-center my-8 px-4">
-  <div class="overflow-hidden max-w-full mt-[20px]">
-    <marquee
-      class="block w-full max-w-md mx-auto"
-      scrollamount="5"
-      bgcolor="#FFFFFF"
-    >
-      <span style="font-family: georgia; font-size: 1rem; font-weight: 600; color: #000;">
-        La verdadera riqueza es no vivir persiguiendo lo que no necesitas.
-      </span>
-    </marquee>
-  </div>
-</div>
 
 <div style="height:30px; margin:30px 0;"></div>
 
@@ -1306,17 +1202,6 @@ fetch('posts.json')
       Código Millonario
     </span>
   </h2>
-
-  <blockquote class="italic text-stone-600 text-center max-w-2xl mx-auto">
-    <p class="text-sm text-stone-500 mt-6" style="font-family: 'Poppins', sans-serif;">
-      <span class="text-sm font-normal text-stone-800" style="font-family: 'Poppins', sans-serif;">
-        A continuación respondemos las preguntas frecuentes sobre este sitio y su propósito.
-      </span>
-    </p>
-  </blockquote>
-</section>
-
-
 
 
 
