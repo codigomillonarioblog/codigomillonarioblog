@@ -127,6 +127,9 @@
   #mobileMenu.scale-100 { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
   #mobileMenu.scale-0 { transform: translateX(-50%) scale(0); opacity: 0; pointer-events: none; }
 
+  body {
+  background-color: #f5f5f5 !important; /* gris muy claro */
+}
 </style>
 
 <script>
@@ -189,8 +192,6 @@ document.querySelectorAll(".mobile-item").forEach(link => {
     link.style.fontWeight = "700";
   }
 });
-
-
 
     document.querySelectorAll(".mobile-item").forEach(link => {
       const href = link.getAttribute("href")?.replace("./", "");
