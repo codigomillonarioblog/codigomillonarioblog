@@ -11,17 +11,84 @@
 
 <style>
 /* ===================== PAGINACIÓN ===================== */
-.pager-container { background: #ffffff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); padding: 12px; }
-.page-box { min-width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; user-select: none; font-weight: 600; color: #0f172a; transition: all 0.2s ease; }
-.page-box:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.06); transform: translateY(-1px); }
-.page-box.active { border-color: #94a3b8; box-shadow: 0 0 0 3px rgba(14,165,233,0.06); background: #f8fafc; }
-.compact-btn { min-width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e6e6e6; background: #fff; cursor: pointer; transition: all 0.2s ease; }
-.compact-btn[disabled] { opacity: 0.45; cursor: default; pointer-events: none; }
-.select-pages { border: 1px solid #e6e6e6; background: #fff; height: 40px; border-radius: 6px; padding: 6px 10px; }
-input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border-radius: 6px; padding: 6px 10px; width: 80px; background: #fff; }
+.pager-container { 
+    background: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    padding: 12px; 
+    border: 1px solid rgba(0,0,0,0.1); /* delineación sutil */
+}
 
-#articlesGrid { transition: all 0.5s ease; }
-.article { transition: opacity 0.4s ease; }
+.page-box { 
+    min-width: 38px; 
+    height: 38px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 6px; 
+    border: 1px solid #e6e6e6; 
+    background: #fff; 
+    cursor: pointer; 
+    user-select: none; 
+    font-weight: 600; 
+    color: #0f172a; 
+    transition: all 0.2s ease; 
+}
+
+.page-box:hover { 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06); 
+    transform: translateY(-1px); 
+}
+
+.page-box.active { 
+    border-color: #94a3b8; 
+    box-shadow: 0 0 0 3px rgba(14,165,233,0.06); 
+    background: #f8fafc; 
+}
+
+.compact-btn { 
+    min-width: 40px; 
+    height: 40px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 6px; 
+    border: 1px solid #e6e6e6; 
+    background: #fff; 
+    cursor: pointer; 
+    transition: all 0.2s ease; 
+}
+
+.compact-btn[disabled] { 
+    opacity: 0.45; 
+    cursor: default; 
+    pointer-events: none; 
+}
+
+.select-pages { 
+    border: 1px solid #e6e6e6; 
+    background: #fff; 
+    height: 40px; 
+    border-radius: 6px; 
+    padding: 6px 10px; 
+}
+
+input[type="number"].goto-page { 
+    border: 1px solid #e6e6e6; 
+    height: 40px; 
+    border-radius: 6px; 
+    padding: 6px 10px; 
+    width: 80px; 
+    background: #fff; 
+}
+
+#articlesGrid { 
+    transition: all 0.5s ease; 
+}
+
+.article { 
+    transition: opacity 0.4s ease; 
+}
 
 @media (max-width: 640px) {
   .pager-grid { grid-template-columns: 1fr; gap: 8px; }
@@ -50,22 +117,24 @@ input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border
     color: inherit;
 }
 
-/* CARD PREMIUM */
+/* CARD PREMIUM CON DELINEACIÓN */
 .article-card {
     width: 100%;
     max-width: 380px;
-    background: #ffffff;
+    background: #ffffff; /* fondo blanco */
     border-radius: 28px;
     padding: 18px;
+    border: 1px solid rgba(0,0,0,0.1); /* delineación sutil */
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     font-family: 'Arial', sans-serif;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .article-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 18px 38px rgba(0,0,0,0.22);
+    border-color: rgba(0,0,0,0.15); /* borde un poquito más visible al pasar el mouse */
 }
 
 /* IMAGEN */
@@ -138,9 +207,8 @@ input[type="number"].goto-page { border: 1px solid #e6e6e6; height: 40px; border
     transform: scale(1.15);
 }
 
-
-body {
-  background-color: #f5f5f5 !important; /* gris muy claro */
+body, html {
+  background-color: #ffffff !important;
 }
 
 </style>
@@ -153,158 +221,274 @@ body {
 </head>
 <body class="bg-stone-50 text-stone-900">
 
-<!-- MENU FLOTANTE UNIVERSAL -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-<header class="fixed inset-x-0 top-6 z-50 flex justify-center pointer-events-none">
 
-  <!-- MENÚ DE ESCRITORIO (PC) -->
-  <nav class="hidden md:flex bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] px-8 py-4 w-full max-w-5xl flex items-center justify-between pointer-events-auto transition-all duration-300" style="font-family: 'Poppins', sans-serif;">
-    <div class="flex items-center space-x-3">
-      <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-      <span class="text-xl font-bold text-stone-900">Código Millonario</span>
-    </div>
+ <!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+  <div class="navbar-spacer"></div>
+  <div class="navbar-line"></div>
 
-    <div class="flex-1 flex justify-center items-center space-x-6 text-sm">
-      <a href="./index.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Inicio
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="./index.html" class="navbar-logo">Código Millonario</a>
 
-      <a href="./educacionfinanciera.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Blog
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="./index.html">Inicio</a></li>
+      <li><a href="./educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="./herramientas.html">Herramientas</a></li>
+      <li><a href="./opiniones.html">Opiniones</a></li>
+      <li><a href="./tienda.html">Productos</a></li>
+      <li><a href="./sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="./donar.html">Donaciones</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+    </ul>
 
-      <a href="./herramientas.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Herramientas
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
+    <div class="navbar-space"></div>
 
-      <a href="./opiniones.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Opiniones
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
-
-      <a href="./tienda.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Tienda
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
-
-      <a href="./contacto.html" class="ml-4 px-4 py-2 bg-white text-black font-semibold rounded-full border-2 border-black hover:border-blue-900 hover:text-blue-900 hover:shadow-lg
-          transition-all duration-300">
-        Contacto</a>
-    </div>
-  </nav>
-
-  <!-- MENÚ MÓVIL -->
-  <nav class="md:hidden bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] w-full flex items-center justify-between pointer-events-auto transition-all duration-300" style="font-family: 'Poppins', sans-serif; max-width: 95vw; padding: 0.5rem 1rem;">
-    <div class="flex items-center space-x-2">
-      <i data-lucide="wallet" class="w-5 h-5 text-green-600"></i>
-      <span class="text-base font-bold text-stone-900">Código Millonario</span>
-    </div>
-
-    <!-- HAMBURGUESA -->
-    <button id="menu-toggle" class="relative w-6 h-6 flex flex-col justify-center items-center">
-      <span class="line top-line"></span>
-      <span class="line mid-line"></span>
-      <span class="line bottom-line"></span>
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
     </button>
-  </nav>
-
-  <!-- MENU MOVIL DESPLEGABLE -->
-  <div id="mobileMenu" class="fixed top-20 left-1/2 -translate-x-1/2 w-11/12 max-w-xs bg-white rounded-2xl shadow-lg p-4 flex flex-col space-y-2 scale-0 opacity-0 pointer-events-none transition-all duration-300 z-50">
-    <a href="./index.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Inicio</a>
-    <a href="./educacionfinanciera.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Blog</a>
-    <a href="./herramientas.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Herramientas</a>
-    <a href="./opiniones.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Opiniones</a>
-    <a href="./tienda.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Tienda</a>
-    <a href="./contacto.html" class="mobile-item px-4 py-2 bg-white text-black rounded-full font-semibold border-2 border-black hover:border-blue-900 hover:text-blue-900 hover:shadow-lg transition-all duration-300">
-     Contacto </a>
   </div>
 
-</header>
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="./index.html">Inicio</a>
+      <a href="./educacionfinanciera.html">Educación Financiera</a>
+      <a href="./herramientas.html">Herramientas</a>
+      <a href="./opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="./tienda.html">Productos</a>
+      <a href="./sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="./donar.html">Donaciones</a>
+      <a href="./contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
 
 <style>
-  /* --- X PERFECTA --- */
-  #menu-toggle .line {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #1c1c1c;
-    border-radius: 4px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  .top-line { transform: translateY(-6px); }
-  .mid-line { opacity: 1; }
-  .bottom-line { transform: translateY(6px); }
-  #menu-toggle.open .top-line { transform: translateY(0) rotate(45deg); }
-  #menu-toggle.open .mid-line { opacity: 0; }
-  #menu-toggle.open .bottom-line { transform: translateY(0) rotate(-45deg); }
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
 
-  /* MOBILE MENU ANIMATIONS */
-  #mobileMenu { transform-origin: top center; }
-  #mobileMenu.scale-100 { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
-  #mobileMenu.scale-0 { transform: translateX(-50%) scale(0); opacity: 0; pointer-events: none; }
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 60px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+#mobileMenu a:hover { color: #22c55e; }
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobileMenu');
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
 
-    if(menuToggle && mobileMenu){
-      function closeMobileMenu() {
-        mobileMenu.classList.remove('scale-100','opacity-100','pointer-events-auto');
-        mobileMenu.classList.add('scale-0','opacity-0','pointer-events-none');
-        menuToggle.classList.remove('open');
-      }
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
 
-      menuToggle.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.contains('scale-100');
-        if(isOpen) closeMobileMenu();
-        else {
-          mobileMenu.classList.remove('scale-0','opacity-0','pointer-events-none');
-          mobileMenu.classList.add('scale-100','opacity-100','pointer-events-auto');
-          menuToggle.classList.add('open');
-        }
-      });
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
 
-      document.querySelectorAll('#mobileMenu a').forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-      });
-
-      window.addEventListener('resize', () => { if(window.innerWidth >= 768) closeMobileMenu(); });
-      document.addEventListener('click', (e) => {
-        if(window.innerWidth < 768){
-          if(!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) closeMobileMenu();
-        }
-      });
-      document.addEventListener('scroll', () => {
-        if(window.innerWidth < 768 && mobileMenu.classList.contains('scale-100')) closeMobileMenu();
-      }, { passive: true });
-    }
-
-    // MARCAR LINK ACTIVO
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-    document.querySelectorAll(".nav-item").forEach(link => {
-      const href = link.getAttribute("href")?.replace("./", "");
-      if(href === currentPage){
-        link.style.color = "#1c1c1c";
-        link.style.fontWeight = "700";
-      }
-    });
-
-    document.querySelectorAll(".mobile-item").forEach(link => {
-      const href = link.getAttribute("href")?.replace("./", "");
-      if(href === currentPage){
-        link.style.background = "#f0f0f0";
-        link.style.fontWeight = "700";
-      }
-    });
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
   });
+});
 </script>
+
 
 
   <!-- HERO PRINCIPAL -->
@@ -314,106 +498,328 @@ body {
 
 
 
-<div class="flex flex-col justify-center items-start mt-16 md:mt-40 max-w-4xl mx-auto px-4 md:px-0" style="font-family: 'Montserrat', sans-serif;">
-  <span class="block mt-1">Educación Financiera</span>
-</div>
+<!-- Contenedor general -->
+<div class="marquee-wrapper">
+  
+  <!-- Línea superior -->
+  <div class="marquee-line"></div>
 
-<!-- HERO alineado a la izquierda como los demás divs -->
-<div class="flex flex-col justify-center items-start mt-0 mb-[5vh] max-w-4xl mx-auto px-4 md:px-0">
-  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
-      <span class="block mt-1">Artículos y reflexiones sobre dinero,</span>
-      <span class="block mt-1"> éxito, trabajo y decisiones</span>
-  </h1>
-</div>
-
-
-
-
-
-<div class="flex flex-col justify-center items-start mt-16 md:mt-40 max-w-4xl mx-auto px-4 md:px-0" style=" font-family: 'Montserrat', sans-serif;">
-      <span class="block mt-1">Blog Oficial de Código Millonario</span>
-</div>
-
-
-
-           <!-- INTRODUCCIÓN GENERAL -->
-
-   <main class="py-10">
-<section class="mb-16 text-left cursor-pointer" style="font-family: 'Open Sans', sans-serif;">
-
-  <!-- CONTENEDOR QUE LIMITA EL ANCHO -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <div
-      class="flex gap-6 overflow-x-auto pb-4
-             md:grid md:grid-cols-2
-             lg:grid-cols-4
-             md:gap-6 md:overflow-visible">
-
-      <!-- CUADRO 1 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style=" font-family: 'Montserrat', sans-serif;">
-          Aprende A
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed">
-        Tomar control de tu dinero no es hacerte rico rápido, es entender cómo funciona y usarlo a tu favor sin falsas promesas.
-        </p>
+  <!-- Contenedor -->
+  <div class="marquee-container-full">
+    
+    <div class="marquee-track">
+      <div class="marquee-text-full">
+        <span>-economía • Colombia • 20 Sep, 2025 • Opinión / Estudio Financiero</span>
+        <span>Guías Financieras • Inversión • Estrategias</span>
+        <span>Tips Financieros • Ahorro-y</span>
       </div>
 
-      <!-- CUADRO 2 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style=" font-family: 'Montserrat', sans-serif;">
-        La Verdad
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed">
-        Aquí no hay fórmulas mágicas, solo ideas reales y aplicables que, con mentalidad emprendedora, amplían tus oportunidades.
-        </p>
+      <!-- DUPLICADO -->
+      <div class="marquee-text-full">
+        <span>-economía • Colombia • 20 Sep, 2025 • Opinión / Estudio Financiero</span>
+        <span>Guías Financieras • Inversión • Estrategias</span>
+        <span>Tips Financieros • Ahorro-y</span>
       </div>
-
-      <!-- CUADRO 3 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style=" font-family: 'Montserrat', sans-serif;">
-         Escalar
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed">
-        Cada artículo es un paso hacia más claridad, estabilidad y decisiones conscientes construidas con tiempo y disciplina.
-        </p>
-      </div>
-
-      <!-- CUADRO 4 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style=" font-family: 'Montserrat', sans-serif;">
-        ¿Qué saber?
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed">
-        El dinero crece después de que la mente lo hace. Sin conocimiento, sistemas y proceso, no hay fortuna sostenible.
-        </p>
-      </div>
-
     </div>
+
   </div>
-</section>
+
+  <!-- Línea inferior -->
+  <div class="marquee-line"></div>
+
+</div>
+
+<style>
+/* Contenedor general */
+.marquee-wrapper {
+  max-width: 64rem;
+  margin: 4rem 0 0 20px; /* Desktop: pegado a la izquierda */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Líneas */
+.marquee-line {
+  height: 1px;
+  background: #cbd5e1;
+  width: 100%;
+}
+
+/* Contenedor animación */
+.marquee-container-full {
+  height: 36px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.marquee-text-full {
+  display: flex;
+  gap: 50px;
+  white-space: nowrap;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
+
+.marquee-text-full span {
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* 📱 En teléfono se centra */
+@media (max-width: 768px) {
+  .marquee-wrapper {
+    margin: 4rem auto 0 auto; /* vuelve a centrarse */
+    padding: 0 15px;
+  }
+}
+</style>
 
 
 
-<div class="flex flex-col justify-center items-start mt-20 mb-10 max-w-4xl mx-auto px-4 md:px-0" style=" font-family: 'Montserrat', sans-serif;">
-      <span class="block mt-1">Cómo funciona el Dinero</span>
+<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+  <span class="block">
+    Educación Financiera
+  </span>
+</div>
+
+<h1 class="blog-main-title">
+Artículos y reflexiones sobre dinero, <br> éxito, trabajo y deciciones
+
+<p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
+Explora consejos prácticos, experiencias y estrategias para mejorar tus finanzas, alcanzar tus<br>
+metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
+</p>
+</h1>
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+
+
+<div class="left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+    Blog Oficial de Código Millinero
+  </span>
+</div>
+
+<style>
+/* 🖥 Desktop: alineado a la izquierda */
+.left-block {
+  margin-left: 20px;
+  margin-top: 80px;  /* reemplaza mt-20 de Tailwind */
+  margin-right: 0;
+}
+
+/* 📱 Mobile: centrado y margen superior más grande */
+@media (max-width: 768px) {
+  .left-block {
+    margin: 40px auto 0 auto; /* suficiente separación arriba en móvil */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+</style>
+
+
+
+
+<div class="articles-wrapper">
+
+  <!-- Línea superior -->
+  <div class="section-line"></div>
+
+  <div class="articles-row">
+
+    <div class="article-block">
+      <div class="text-content">
+        <h3>Tomar control de tu dinero no es hacerte rico rápido, es entender cómo funciona y usarlo a tu favor sin falsas promesas</h3>
+        <p>Aprende A</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Imagen 1" class="article-image">
+      <div class="article-divider"></div>
+    </div>
+
+    <div class="article-block">
+      <div class="text-content">
+        <h3>Aquí no hay fórmulas mágicas, solo ideas reales y aplicables que, con mentalidad emprendedora, amplían tus oportunidades</h3>
+        <p>La verdad</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Imagen 2" class="article-image">
+      <div class="article-divider"></div>
+    </div>
+
+    <div class="article-block">
+      <div class="text-content">
+        <h3>Cada artículo es un paso hacia más claridad, estabilidad y decisiones conscientes construidas con tiempo y disciplina</h3>
+        <p>Escalar</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Imagen 3" class="article-image">
+      <div class="article-divider"></div>
+    </div>
+
+    <div class="article-block">
+      <div class="text-content">
+        <h3>El dinero crece después de que la mente lo hace. Sin conocimiento, sistemas y proceso, no hay fortuna sostenible</h3>
+        <p>¿Qué saber?</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Imagen 4" class="article-image">
+      <div class="article-divider"></div>
+    </div>
+
+  </div>
+
+  <!-- Línea inferior -->
+  <div class="section-line"></div>
+
+</div>
+
+<style>
+.articles-wrapper {
+  max-width: 64rem;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-line {
+  height: 1px;
+  width: 100%;
+  background-color: #d1d5db;
+  margin: 16px 0;
+}
+
+.articles-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: hidden; /* quita el scroll horizontal */
+}
+
+.article-block {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 0;
+  background: none;
+  border: none;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.article-block h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin: 0 0 4px 0;
+}
+
+.article-block p {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.article-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Línea divisoria entre artículos */
+.article-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-top: 12px;
+  display: none; /* solo se activa en móvil */
+}
+
+@media (max-width: 768px) {
+  .articles-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+  .articles-row {
+    flex-direction: column; /* full-width, uno por uno */
+    gap: 0; /* ya hay línea divisoria */
+  }
+  .article-block {
+    flex: 1 0 100%;
+    margin-bottom: 0;
+  }
+  .article-divider {
+    display: block; /* se muestra en móvil */
+  }
+}
+</style>
+           
+
+
+<div class="left-block flex flex-col justify-center items-start mb-10 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+    ¿Cómo funciona el Dinero?
+  </span>
 </div>
 
 
@@ -704,11 +1110,13 @@ body {
 
 
 
-
-
-<div class="flex flex-col justify-center items-start mt-40 mb-10 max-w-4xl mx-auto px-4 md:px-0" style=" font-family: 'Montserrat', sans-serif;">
-      <span class="block mt-1">Preguntas frecuentes Educación financiera</span>
+<div class="flex flex-col justify-center items-start mt-40 mb-1 max-w-4xl mx-auto px-4 md:px-0" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+    Preguntas frecuentes Educación financiera
+  </span>
 </div>
+
+
 
 
               <section class="mb-16">
@@ -806,7 +1214,7 @@ body {
     <div class="cf-accordion">
 
       <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
           ¿Qué es la educación financiera?
           <span class="cf-accordion-icon"></span>
         </div>
@@ -835,7 +1243,7 @@ body {
       </div>
 
       <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
           ¿Por qué es importante aprender sobre finanzas personales?
           <span class="cf-accordion-icon"></span>
         </div>
@@ -864,7 +1272,7 @@ En pocas palabras, aprender sobre finanzas personales es importante porque te pe
       </div>
 
       <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
           ¿Para qué sirve la educación financiera en tu vida diaria?
           <span class="cf-accordion-icon"></span>
         </div>
@@ -897,7 +1305,7 @@ En resumen, la educación financiera sirve para mejorar tu relación con el dine
       </div>
 
        <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
           ¿Cómo empezar a mejorar tu educación financiera?
           <span class="cf-accordion-icon"></span>
         </div>
@@ -935,11 +1343,11 @@ En resumen, empezar a mejorar tu educación financiera es un proceso accesible p
 
 
 
-
-<div class="flex flex-col justify-center items-start mt-20 mb-10 max-w-4xl mx-auto px-4 md:px-0" style=" font-family: 'Montserrat', sans-serif;">
-      <span class="block mt-1">Fundamentos prácticos para construir tu libertad financiera</span>
+<div class="flex flex-col justify-center items-start mt-20 mb-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+    Fundamentos prácticos para construir tu libertad financiera
+  </span>
 </div>
-
 
 
 
@@ -948,7 +1356,7 @@ En resumen, empezar a mejorar tu educación financiera es un proceso accesible p
 
 
        <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
           ¿Cuándo deberías aplicar estos conceptos?
           <span class="cf-accordion-icon"></span>
         </div>
@@ -973,7 +1381,7 @@ La clave no es esperar el momento perfecto, sino empezar con lo que tienes y des
       </div>
 
        <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
           ¿Para quién es esta sección de educación financiera?
           <span class="cf-accordion-icon"></span>
         </div>
@@ -998,7 +1406,7 @@ Si alguna vez has sentido que nadie te explicó cómo funciona el dinero en la v
       </div>
 
        <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
           El verdadero inicio de tu libertad financiera
           <span class="cf-accordion-icon"></span>
         </div>
@@ -1020,7 +1428,7 @@ Si alguna vez has sentido que nadie te explicó cómo funciona el dinero en la v
       </div>
 
       <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
           ¿Cómo actuar hoy?
           <span class="cf-accordion-icon"></span>
         </div>

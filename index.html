@@ -35,35 +35,9 @@
 <style>
   html, body { height: 100%; font-family: 'Poppins', sans-serif; margin:0; padding:0; }
 
-  /* HAMBURGUESA */
-  #menu-toggle { position: relative; width: 24px; height: 24px; }
-  #menu-toggle .line {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #1c1c1c;
-    border-radius: 4px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  .top-line { transform: translateY(-6px); }
-  .mid-line { opacity: 1; }
-  .bottom-line { transform: translateY(6px); }
-  #menu-toggle.open .top-line { transform: translateY(0) rotate(45deg); }
-  #menu-toggle.open .mid-line { opacity: 0; }
-  #menu-toggle.open .bottom-line { transform: translateY(0) rotate(-45deg); }
-
-  /* MOBILE MENU ANIMATIONS */
-  #mobileMenu { transform-origin: top center; transition: transform 0.3s ease, opacity 0.3s ease; }
-  #mobileMenu.scale-100 { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
-  #mobileMenu.scale-0 { transform: translateX(-50%) scale(0); opacity: 0; pointer-events: none; }
-
-
-
-  body {
-  background-color: #f5f5f5 !important; /* gris muy claro */
+body, html {
+  background-color: #ffffff !important;
 }
-
-
 
  /* ================== BANNER MODERNO ================== */
 .banner-section {
@@ -131,9 +105,6 @@
 /* Animaciones eliminadas */
 /* @keyframes slideInLeft {...} */
 
-
-
-
 /* ================== RESPONSIVE MÓVIL ================== */
 
 @media (max-width: 768px) {
@@ -178,11 +149,6 @@
   }
 }
 
-
-
-
-
-
 @media (max-width: 480px){
   #new-article-bubble {
     bottom: 15px;          /* margen desde abajo */
@@ -206,7 +172,6 @@
     font-size: 14px;
   }
 }
-
 </style>
 
 <!-- Redes sociales iconos -->
@@ -215,131 +180,275 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-
 </head>
 <body class="bg-stone-50 text-stone-900">
 
-<!-- HEADER CON MENÚ HAMBURGUESA -->
-<header class="fixed inset-x-0 top-6 z-50 flex justify-center pointer-events-none">
 
-  <!-- MENÚ DE ESCRITORIO (PC) -->
-  <nav class="hidden md:flex bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] px-8 py-4 w-full max-w-5xl flex items-center justify-between pointer-events-auto transition-all duration-300">
 
-    <div class="flex items-center space-x-3">
-      <i data-lucide="wallet" class="w-8 h-8 text-green-600"></i>
-      <span class="text-xl font-bold text-stone-900">Código Millonario</span>
-    </div>
 
-    <div class="flex-1 flex justify-center items-center space-x-6 text-sm">
-      <a href="./index.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Inicio
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
-      <a href="./educacionfinanciera.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Blog
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
-      <a href="./herramientas.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Herramientas
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
-      <a href="./opiniones.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Opiniones
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
-       <a href="./tienda.html" class="nav-item relative group text-stone-600 hover:text-green-600 transition-all duration-200">
-        Tienda
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full"></span>
-      </a>
-      <a href="./contacto.html" class="ml-4 px-4 py-2 bg-white text-black font-semibold rounded-full border-2 border-black hover:border-blue-900 hover:text-blue-900 hover:shadow-lg
-          transition-all duration-300">
-        Contacto
-      </a>
-    </div>
-  </nav>
 
-  <!-- MENÚ MÓVIL (barra principal) -->
-  <nav class="md:hidden bg-white rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] w-full flex items-center justify-between pointer-events-auto transition-all duration-300" style="max-width: 95vw; padding: 0.5rem 1rem;">
-    <div class="flex items-center space-x-2">
-      <i data-lucide="wallet" class="w-5 h-5 text-green-600"></i>
-      <span class="text-base font-bold text-stone-900">Código Millonario</span>
-    </div>
-    <button id="menu-toggle" class="relative w-6 h-6 flex flex-col justify-center items-center">
-      <span class="line top-line"></span>
-      <span class="line mid-line"></span>
-      <span class="line bottom-line"></span>
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+  <div class="navbar-spacer"></div>
+  <div class="navbar-line"></div>
+
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="./index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="./index.html">Inicio</a></li>
+      <li><a href="./educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="./herramientas.html">Herramientas</a></li>
+      <li><a href="./opiniones.html">Opiniones</a></li>
+      <li><a href="./tienda.html">Productos</a></li>
+      <li><a href="./sobre-el-autor.html">Sobre el autor</a></li>
+      <li> <li><a href="#"onclick="openPopup(); 
+      event.preventDefault();">Descargar guía gratis</a></li></li>
+      <li><a href="./donar.html">Donaciones</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
     </button>
-  </nav>
-
-  <!-- MENU MOVIL DESPLEGABLE -->
-  <div id="mobileMenu" class="fixed top-20 left-1/2 -translate-x-1/2 w-11/12 max-w-xs bg-white rounded-2xl shadow-lg p-4 flex flex-col space-y-2 scale-0 opacity-0 pointer-events-none z-50">
-    <a href="./index.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Inicio</a>
-    <a href="./educacionfinanciera.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Blog</a>
-    <a href="./herramientas.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Herramientas</a>
-    <a href="./opiniones.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Opiniones</a>
-    <a href="./tienda.html" class="mobile-item px-4 py-2 rounded-lg hover:bg-green-50 transition-colors">Tienda</a>
-    <a href="./contacto.html" class="mobile-item px-4 py-2 bg-white text-black rounded-full font-semibold border-2 border-black hover:border-blue-900 hover:text-blue-900 hover:shadow-lg transition-all duration-300">
-     Contacto </a>
   </div>
-</header>
 
-<!-- SCRIPTS -->
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="./index.html">Inicio</a>
+      <a href="./educacionfinanciera.html">Educación Financiera</a>
+      <a href="./herramientas.html">Herramientas</a>
+      <a href="./opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="./tienda.html">Productos</a>
+      <a href="./sobre-el-autor.html">Sobre el autor</a>
+      <a href="#"onclick="openPopup();
+       event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="./donar.html">Donaciones</a>
+      <a href="./contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 60px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+#mobileMenu a:hover { color: #22c55e; }
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
 
-  /* ---------- HAMBURGUESA ---------- */
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobileMenu');
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
 
-  function closeMobileMenu() {
-    mobileMenu.classList.remove('scale-100','opacity-100','pointer-events-auto');
-    mobileMenu.classList.add('scale-0','opacity-0','pointer-events-none');
-    menuToggle.classList.remove('open');
-  }
-
-  menuToggle.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('scale-100');
-    if(isOpen) closeMobileMenu();
-    else {
-      mobileMenu.classList.remove('scale-0','opacity-0','pointer-events-none');
-      mobileMenu.classList.add('scale-100','opacity-100','pointer-events-auto');
-      menuToggle.classList.add('open');
-    }
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
   });
-
-  document.querySelectorAll('#mobileMenu a').forEach(link => {
-    link.addEventListener('click', closeMobileMenu);
-  });
-
-  window.addEventListener('resize', () => {
-    if(window.innerWidth >= 768) closeMobileMenu();
-  });
-
-  document.addEventListener('click', (e) => {
-    if(window.innerWidth < 768 && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-      closeMobileMenu();
-    }
-  });
-
-  document.addEventListener('scroll', () => {
-    if(window.innerWidth < 768 && mobileMenu.classList.contains('scale-100')) closeMobileMenu();
-  }, { passive:true });
-
-  /* ---------- MARCAR LINK ACTIVO ---------- */
-  let currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-  document.querySelectorAll(".nav-item").forEach(link => {
-    const href = link.getAttribute("href").replace("./", "");
-    if(href === currentPage) { link.style.color = "#1c1c1c"; link.style.fontWeight = "700"; }
-  });
-
-  document.querySelectorAll(".mobile-item").forEach(link => {
-    const href = link.getAttribute("href").replace("./", "");
-    if(href === currentPage) { link.style.background = "#f0f0f0"; link.style.fontWeight = "700"; }
-  });
-
-  /* ---------- ICONOS LUCIDE ---------- */
-  if(window.lucide) lucide.replace();
 });
 </script>
 
@@ -506,7 +615,6 @@ fetch('posts.json')
   })
   .catch(err => console.error(err));
 </script>
-
 </body>
 
 
@@ -527,38 +635,8 @@ fetch('posts.json')
       </p>
     </div>
 
-    <!-- Contenedor tipo "libro abierto" -->
-    <div class="banner-images absolute right-6 md:right-16 -bottom-24 z-20 -translate-x-24">
-      <div class="relative w-48 h-48 md:w-72 md:h-72">
-
-        <!-- Imagen de fondo izquierda -->
-        <img
-          src="./assets/img/pensar-en-grande-lograr-mas.webp"
-          alt=""
-          class="absolute top-0 left-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-lg transform -rotate-12 -translate-x-40 z-0"
-        >
-
-        <!-- Imagen de fondo derecha -->
-        <img
-          src="./assets/img/disciplina-constante-para-el-exito.webp"
-          alt=""
-          class="absolute top-0 left-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-lg transform rotate-12 translate-x-56 z-0"
-        >
-
-        <!-- Imagen principal (frente) -->
-        <img
-          src="./assets/img/mentalidad-de-crecimiento-y-exito.webp"
-          alt=""
-          class="absolute top-0 left-0 w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 object-cover rounded-lg z-10"
-        >
-
-      </div>
-    </div>
-
   </div>
 </section>
-
-
 
 
 
@@ -636,530 +714,751 @@ fetch('posts.json')
 
 
 
-<div class="flex flex-col justify-center items-start mt-16 max-w-4xl mx-auto px-4 md:px-0" style=" font-family: 'Montserrat', sans-serif;">
-      <span class="block mt-1">Tu mentor en educación financiera</span>
-</div>
-
-<!-- HERO alineado a la izquierda como los demás divs -->
-<div class="flex flex-col justify-center items-start mt-10 mb-[5vh] max-w-4xl mx-auto px-4 md:px-0">
-  <h1 class="font-bold text-stone-900 text-left text-3xl md:text-5xl leading-snug md:leading-tight drop-shadow-sm">
-      <span class="block mt-1">Aprende a Multiplicar</span>
-      <span class="block mt-1">tu Dinero sin límites</span>
-  </h1>
-</div>
 
 
 
-<div class="flex flex-col justify-center items-start mt-30 max-w-4xl mx-auto px-4 md:px-0 space-y-4">
+<!-- Contenedor general -->
+<div class="marquee-wrapper">
+  
+  <!-- Línea superior -->
+  <div class="marquee-line"></div>
 
-  <!-- Badge minimalista (clickeable) -->
-  <a href="./educacionfinanciera.html" 
-     class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
-    <i data-lucide="check-circle" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
-    <span>Nueva Guía Financiera</span>
-  </a>
+  <!-- Contenedor -->
+  <div class="marquee-container-full">
+    
+    <div class="marquee-track">
+      <div class="marquee-text-full">
+        <span>-economía • Colombia • 20 Sep, 2025 • Opinión / Estudio Financiero</span>
+        <span>Guías Financieras • Inversión • Estrategias</span>
+        <span>Tips Financieros • Ahorro-y</span>
+      </div>
 
-  <!-- Enlace Sobre el autor -->
-  <a href="./sobre-el-autor.html" 
-     class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
-    <i data-lucide="user" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
-    <span>Sobre el autor</span>
-  </a>
+      <!-- DUPLICADO -->
+      <div class="marquee-text-full">
+        <span>-economía • Colombia • 20 Sep, 2025 • Opinión / Estudio Financiero</span>
+        <span>Guías Financieras • Inversión • Estrategias</span>
+        <span>Tips Financieros • Ahorro-y</span>
+      </div>
+    </div>
 
-<!-- Botón principal estilo minimalista -->
-<a href="#" 
-   onclick="openPopup(); event.preventDefault();" 
-   class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
-    <i data-lucide="download" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
-    <span>Descargar guía gratis</span>
-</a>
+  </div>
 
-  <!-- Botón Productos estilo minimalista -->
-  <a href="./tienda.html" 
-     class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
-    <i data-lucide="shopping-cart" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
-    <span>Productos</span>
-  </a>
-
-  <!-- Botón Donaciones estilo minimalista -->
-  <a href="./donar.html" 
-     class="inline-flex items-center space-x-2 text-sm font-medium text-stone-900 group hover:text-blue-900 transition-colors duration-200">
-    <i data-lucide="heart" class="w-4 h-4 text-black group-hover:text-blue-900 transition-colors duration-200"></i>
-    <span>Donaciones</span>
-  </a>
+  <!-- Línea inferior -->
+  <div class="marquee-line"></div>
 
 </div>
 
+<style>
 
-<div class="flex flex-col justify-center items-start mt-20 mb-8 max-w-4xl mx-auto px-4 md:px-0" style=" font-family: 'Montserrat', sans-serif;">
+/* Contenedor general */
+.marquee-wrapper {
+  max-width: 64rem;
+  margin: 4rem 0 0 20px; /* Desktop: pegado a la izquierda */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Líneas */
+.marquee-line {
+  height: 1px;
+  background: #cbd5e1;
+  width: 100%;
+}
+
+/* Contenedor animación */
+.marquee-container-full {
+  height: 36px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.marquee-text-full {
+  display: flex;
+  gap: 50px;
+  white-space: nowrap;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
+
+.marquee-text-full span {
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* 📱 En teléfono se centra */
+@media (max-width: 768px) {
+  .marquee-wrapper {
+    margin: 4rem auto 0 auto; /* vuelve a centrarse */
+    padding: 0 15px;
+  }
+}
+
+</style>
+
+
+    
+
+<div class="left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+    Tu mentor en educación financiera
+  </span>
+</div>
+
+
+<h1 class="blog-main-title">
+Aprende a Multiplicar tu Dinero y potenciar <br> tu Futuro sin Límites
+
+<p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
+    Descubre estrategias financieras probadas, herramientas efectivas y consejos prácticos para hacer crecer<br>
+    tu dinero de manera inteligente y construir un futuro sólido y libre de preocupaciones.
+</p>
+</h1>
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+
+
+
+
+<div class="left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
   <span class="block">
     Una forma distinta de aprender sobre dinero
   </span>
 </div>
 
+<style>
+/* 🖥 Desktop: alineado a la izquierda */
+.left-block {
+  margin-left: 20px;
+  margin-top: 80px;  /* reemplaza mt-20 de Tailwind */
+  margin-right: 0;
+}
+
+/* 📱 Mobile: centrado y margen superior más grande */
+@media (max-width: 768px) {
+  .left-block {
+    margin: 40px auto 0 auto; /* suficiente separación arriba en móvil */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+</style>
 
 
 
-<!-- BLOQUE EXPLICATIVO 8 -->
-<section class="mb-16 text-left cursor-pointer">
+<div class="articles-wrapper">
 
-  <!-- CONTENEDOR QUE LIMITA EL ANCHO -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
+  <!-- Línea superior -->
+  <div class="section-line"></div>
 
-    <div
-      class="flex gap-6 overflow-x-auto pb-4
-             md:grid md:grid-cols-2
-             lg:grid-cols-4
-             md:gap-6 md:overflow-visible">
+  <div class="articles-row">
 
-      <!-- CUADRO 1 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style=" font-family: 'Montserrat', sans-serif;">
-          Aprende a pensar
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed">
-          Tomar control del dinero no es ganar más de inmediato, es entender cómo funciona el sistema y cómo tomar mejores decisiones dentro de él.
-        </p>
+    <div class="article-block">
+      <div class="text-content">
+        <h3>Aprende a pensar, toma control del dinero no es ganar más de inmediato es entender cómo</h3>
+        <p>funciona el sistema</p>
       </div>
-
-      <!-- CUADRO 2 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style=" font-family: 'Montserrat', sans-serif;">
-          Con cabeza fría
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed">
-         Aquí aprenderás a evaluar ideas, detectar riesgos y entender por qué muchas estrategias fallan antes de copiar lo que otros dicen que funciona.
-        </p>
-      </div>
-
-      <!-- CUADRO 3 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style=" font-family: 'Montserrat', sans-serif;">
-          Construir con tiempo
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed">
-          El crecimiento financiero no es un golpe de suerte, es el resultado de hábitos, conocimientos y constancia sostenida.
-        </p>
-      </div>
-
-      <!-- CUADRO 4 -->
-      <div class="min-w-[260px] md:min-w-0 p-6 rounded-2xl
-                  bg-white/90 border border-stone-200
-                  shadow-sm
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-md hover:border-stone-300">
-        <h3 class="text-lg font-semibold text-stone-900 mb-3" style=" font-family: 'Montserrat', sans-serif;">
-          Lo que sí importa
-        </h3>
-        <p class="text-sm text-stone-600 leading-relaxed">
-          El dinero es consecuencia. Sin mentalidad, conocimiento y sistemas, cualquier ganancia es frágil y temporal.
-        </p>
-      </div>
-
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Imagen 1" class="article-image">
+      <div class="article-divider"></div>
     </div>
+
+    <div class="article-block">
+      <div class="text-content">
+        <h3>Aquí aprenderás a evaluar ideas, detectar riesgos y entender por qué muchas estrategias fallan</h3>
+        <p>Con cabeza fría</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Imagen 2" class="article-image">
+      <div class="article-divider"></div>
+    </div>
+
+    <div class="article-block">
+      <div class="text-content">
+        <h3>El crecimiento financiero no es un golpe de suerte, es el resultado conocimientos y constancia sostenida</h3>
+        <p>Construir con tiempo</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Imagen 3" class="article-image">
+      <div class="article-divider"></div>
+    </div>
+
+    <div class="article-block">
+      <div class="text-content">
+        <h3>El dinero es consecuencia. Sin mentalidad, conocimiento y sistemas, cualquier ganancia es frágil y temporal</h3>
+        <p>Lo que sí importa</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Imagen 4" class="article-image">
+      <div class="article-divider"></div>
+    </div>
+
   </div>
-</section>
+
+  <!-- Línea inferior -->
+  <div class="section-line"></div>
+
+</div>
+
+<style>
+.articles-wrapper {
+  max-width: 64rem;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-line {
+  height: 1px;
+  width: 100%;
+  background-color: #d1d5db;
+  margin: 16px 0;
+}
+
+.articles-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+.article-block {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  transition: transform 0.2s;
+}
+
+.article-block:hover {
+  transform: translateY(-2px);
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.article-block h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin: 0 0 4px 0;
+}
+
+.article-block p {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.article-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Línea divisoria entre artículos */
+.article-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-top: 12px;
+  display: none; /* solo se activa en móvil */
+}
+
+@media (max-width: 768px) {
+  .articles-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+  .articles-row {
+    flex-direction: column; /* apilados verticalmente */
+    gap: 0;
+  }
+  .article-block {
+    flex: 1 0 100%;
+    margin-bottom: 0;
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .article-divider {
+    display: block; /* línea divisoria visible en móvil */
+  }
+}
+</style>
 
 
 
+ <div class="marquee-wrapper">
 
+  <div class="flex items-center">
 
-
-
-<!-- Cuadro central de redes y texto -->
-<div class="max-w-md w-full mx-auto mt-20 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl p-8 flex flex-col items-center gap-8 border border-gray-100">
-
-  <!-- Logo centrado arriba -->
-  <div class="relative">
-    <img src="./assets/img/social-finanzas.webp" alt="Mi Logo"
-         class="w-24 h-24 rounded-full object-cover ring-4 ring-white shadow-lg">
-  </div>
-
-  <!-- Texto centrado -->
-  <div class="text-center px-4">
-    <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 tracking-tight">
+    <h2>
       Explora mi contenido en redes sociales
     </h2>
 
-    <p class="text-gray-600 mt-3 text-sm sm:text-base leading-relaxed">
-      Contenido GRATIS que comparto con mi comunidad.  
+    <div class="ml-auto" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+      <span style="color:#111;">TikTok</span> -
+      <span style="color:#111;">YouTube</span> -
+      <span style="color:#111;">Pinterest</span>
+    </div>
+
+  </div>
+
+
+  <div class="flex items-center justify-between gap-6 mt-4 flex-wrap">
+
+    <p class="text-gray-600 text-sm sm:text-base leading-relaxed" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+      Contenido GRATIS que comparto con mi comunidad.<br>
       Recuerda suscribirte, darle like y seguirme.
     </p>
-  </div>
 
-  <!-- Redes sociales alineadas horizontalmente -->
-  <div class="flex justify-center gap-5 mt-2">
+    <div class="flex gap-4">
 
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
-       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <i class="fab fa-tiktok text-xl"></i>
-    </a>
+      <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+         class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <i class="fab fa-tiktok text-xl"></i>
+      </a>
 
-    <!-- YouTube -->
-    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
-       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <i class="fab fa-youtube text-xl"></i>
-    </a>
+      <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+         class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <i class="fab fa-youtube text-xl"></i>
+      </a>
 
-    <!-- Pinterest -->
-    <a href="https://pin.it/3tqNXYoAA" target="_blank"
-       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <i class="fab fa-pinterest-p text-xl"></i>
-    </a>
-
-  </div>
-
-</div>
-
-
-
-
-
-
-<div class="flex flex-col justify-center items-start mt-40 mb-8 max-w-4xl mx-auto px-4 md:px-0" style=" font-family: 'Montserrat', sans-serif;">
-  <span class="block">
-    Lo que dicen nuestros lectores
-  </span>
-</div>
-
-
-
-
-<!-- BLOQUE DE TESTIMONIOS ESTILO TARJETAS -->
-<section class="mb-16">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- GRID RESPONSIVO -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
-
-      <!-- Testimonio 1 -->
-      <article class="h-full">
-        <div class="article-card flex flex-col h-full">
-          <div class="flex items-center space-x-4 mb-4">
-            <img src="https://i.pravatar.cc/80?img=32" class="w-14 h-14 rounded-full" alt="Carolina López">
-            <div>
-              <h3 class="article-title">Mariana Rodríguez</h3>
-              <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">Colombia</p>
-            </div>
-          </div>
-
-          <!-- 5 estrellas completas -->
-          <div class="flex text-yellow-400 mb-3">
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-          </div>
-
-          <p class="text-stone-700 leading-relaxed flex-grow" style="font-family: 'Poppins', sans-serif;" >
-           Antes veía el dinero como algo que siempre se iba. Con tu contenido aprendí a tomar decisiones más 
-           conscientes y a pensar a largo plazo. Hoy manejo mis gastos con mucha más claridad.
-          </p>
-        </div>
-      </article>
-
-      <!-- Testimonio 2 -->
-      <article class="h-full">
-        <div class="article-card flex flex-col h-full">
-          <div class="flex items-center space-x-4 mb-4">
-            <img src="https://i.pravatar.cc/80?img=12" class="w-14 h-14 rounded-full" alt="David Herrera">
-            <div>
-              <h3 class="article-title">Alejandro Ramírez</h3>
-              <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">México</p>
-            </div>
-          </div>
-
-          <div class="flex text-yellow-400 mb-3">
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-          </div>
-
-          <p class="text-stone-700 leading-relaxed flex-grow" style="font-family: 'Poppins', sans-serif;" >
-          Siempre había leído sobre inversión, pero no sabía por dónde empezar. Con este contenido entendí los conceptos clave y aprendí 
-          a evaluar riesgos antes de mover mi dinero. Ahora invierto con criterio, no por impulso.
-          </p>
-        </div>
-      </article>
-
-      <!-- Testimonio 3 -->
-      <article class="h-full">
-        <div class="article-card flex flex-col h-full">
-          <div class="flex items-center space-x-4 mb-4">
-            <img src="https://i.pravatar.cc/80?img=48" class="w-14 h-14 rounded-full" alt="Valentina Torres">
-            <div>
-              <h3 class="article-title">Camila Rojas</h3>
-              <p class="text-sm text-stone-500" style="font-family: 'Poppins', sans-serif;">Chile</p>
-            </div>
-          </div>
-
-          <div class="flex text-yellow-400 mb-3">
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
-          </div>
-
-          <p class="text-stone-700 leading-relaxed flex-grow" style="font-family: 'Poppins', sans-serif;" >
-          Este contenido me ayudó a cambiar la forma en que tomo decisiones con mi dinero. Dejé de improvisar y empecé a 
-          planificar mejor mis ingresos y gastos, con una visión más clara a largo plazo.
-          </p>
-        </div>
-      </article>
+      <a href="https://pin.it/3tqNXYoAA" target="_blank"
+         class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <i class="fab fa-pinterest-p text-xl"></i>
+      </a>
 
     </div>
+
   </div>
+</div>
+
+<style>
+
+/* 🔥 Desktop: hacia la izquierda */
+.marquee-wrapper {
+  max-width: 64rem;
+  margin: 4rem 0 0 20px; /* pegado a la izquierda */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 📱 Mobile: centrado */
+@media (max-width: 768px) {
+  .marquee-wrapper {
+    margin: 4rem auto 0 auto; /* centrado */
+    padding: 0 15px;
+  }
+}
+
+</style>
+
+
+
+
+
+  <div style="height:20px; margin:20px 0;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="main-layout">
+
+  <!-- Sidebar ahora queda a la IZQUIERDA -->
+  <aside class="sidebar">
+
+    <h2 class="sidebar-title">Lo que dicen nuestros lectores</h2>
+
+    <!-- Noticia 1 -->
+    <a href="#" class="news-item">
+      
+      <!-- Imagen cuadrada a la izquierda -->
+      <div class="news-thumb">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="">
+      </div>
+
+      <!-- Texto -->
+      <div class="news-text">
+        <h3>
+          El 78% de colombianos se arrepiente de gastar la prima
+        </h3>
+        <p>
+          Un estudio revela que la mayoría no planifica sus ingresos extra 
+          y termina enfrentando dificultades financieras.
+        </p>
+      </div>
+
+    </a>
+
+    <!-- Noticia 2 -->
+    <a href="#" class="news-item">
+
+      <div class="news-thumb">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="">
+      </div>
+
+      <div class="news-text">
+        <h3>
+          Cómo organizar ingresos extraordinarios sin desorden financiero
+        </h3>
+        <p>
+          Expertos recomiendan dividir el dinero en ahorro, inversión y gasto responsable.
+        </p>
+      </div>
+
+    </a>
+
+  </aside>
+
 </section>
 
-<!-- Usa el mismo CSS de las tarjetas compactas -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="main-layout">
+
+
+  <!-- Sidebar derecha -->
+  <aside class="sidebar">
+
+    <h2 class="sidebar-title">Más Noticias</h2>
+
+    <!-- Noticia 1 -->
+    <a href="./blog/ahorro/index.html" class="news-item">
+      <div class="news-text">
+        <h3>
+         Una forma de gestionar tu dinero sin problemas aprendiendo a controlar tus gastos, 
+         ahorrar de manera inteligente
+        </h3>
+        <p>
+         Esta sección te enseña a tomar el control de tu dinero, manejar tus gastos de forma eficiente, 
+         ahorrar sin complicaciones y sacar el máximo provecho a cada peso que ingresas.
+        </p>
+      </div>
+      <div class="news-thumb">
+        <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="">
+      </div>
+    </a>
+
+    <!-- Noticia 2 -->
+    <a href="./blog/empleo/index.html" class="news-item">
+      <div class="news-text">
+        <h3>
+          Conviértete en la persona que todos buscan y genera oportunidades únicas
+        </h3>
+        <p>
+         Aprende a destacar en tu trabajo, desarrollar habilidades clave y posicionarte como alguien 
+         indispensable que atrae oportunidades únicas para crecer profesionalmente.
+        </p>
+      </div>
+      <div class="news-thumb">
+        <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+      </div>
+    </a>
+
+        <!-- Noticia 3 -->
+    <a href="./blog/inversiones/index.html" class="news-item">
+      <div class="news-text">
+        <h3>
+         Aprende a invertir con claridad y aprovecha todas tus oportunidades financieras
+        </h3>
+        <p>
+         Esta sección te enseña a invertir con conocimiento y seguridad, tomar decisiones financieras 
+         inteligentes y aprovechar al máximo cada oportunidad para hacer crecer tu dinero.
+        </p>
+      </div>
+      <div class="news-thumb">
+        <img src="./assets/png/inversion-inteligente-segura.webp" alt="">
+      </div>
+    </a>
+
+  </aside>
+
+</section>
+
 <style>
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+
+/* CONTENEDOR GENERAL */
+.main-layout {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
-.article-card {
-    width: 100%;
-    max-width: 300px;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 14px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    font-family: 'Arial', sans-serif;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
+/* Sidebar más ancho */
+.sidebar {
+  flex: 1;
+  max-width: 700px; /* ← MÁS ANCHO */
 }
 
-.article-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+/* Título */
+.sidebar-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 28px;
 }
 
-.article-card img {
+/* Tarjeta noticia estilo portal */
+.news-item {
+  display: flex;
+  gap: 24px;
+  text-decoration: none;
+  color: inherit;
+  padding: 22px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* Imagen RECTANGULAR horizontal */
+.news-thumb {
+  width: 260px;      /* más larga */
+  height: 140px;     /* menos alta */
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+/* Texto */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 20px; /* más grande */
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+}
+
+.news-text p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    max-width: 100%;
+  }
+
+  .news-thumb {
     width: 100%;
     height: 180px;
-    object-fit: cover;
-    border-radius: 16px;
-}
+  }
 
-/* Para testimonios: la imagen es circular */
-.article-card .rounded-full {
-    width: 56px;
-    height: 56px;
-    object-fit: cover;
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
-
-.article-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #222;
-    margin-top: 0; /* para testimonios queda más ajustado */
-    margin-bottom: 6px;
-    line-height: 1.3;
-}
-
-.meta, .arrow-btn, .badge { display: none; } /* ocultamos lo que no aplica */
 </style>
 
 
 
 
-<div style="height:30px; margin:30px 0;"></div>
 
+<section class="main-layout reviews-block">
+  <aside class="sidebar">
 
+    <h2 class="sidebar-title">Lo que dicen nuestros lectores</h2>
 
-
-
-<!-- BLOQUE DE TARJETAS COMPACTAS -->
-<section class="mb-16">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
-<div class="flex flex-col justify-center items-start mt-12 mb-8 max-w-4xl mx-auto px-4 md:px-0" style=" font-family: 'Montserrat', sans-serif;">
-  <span class="block">
-    Lo que realmente importa al manejar tu dinero
-  </span>
-</div>
-
-
-    <!-- GRID RESPONSIVO -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-
-      <!-- TARJETA 1 -->
-      <div class="article">
-        <article>
-          <a href="./blog/ahorro/index.html" class="article-link">
-            <div class="article-card">
-              <div style="position: relative;">
-                <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="Ahorro Inteligente">
-                <div class="badge">#¿Quieres ahorrar fácil?</div>
-              </div>
-              <h2 class="article-title">Formas de gestionar tu dinero sin problemas</h2>
-              <div class="meta">
-                <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-                <span><i>💬</i> Sin Comentarios</span>
-                <div class="arrow-btn">➜</div>
-              </div>
-            </div>
-          </a>
-        </article>
+    <!-- Testimonio 1 -->
+    <div class="review-item">
+      <img class="review-avatar" src="https://i.pravatar.cc/80?img=32" alt="Mariana Rodríguez">
+      <div class="review-content">
+        <h3>Mariana Rodríguez</h3>
+        <span class="review-location">
+          Colombia
+          <span class="review-stars">★★★★★</span>
+        </span>
+        <p>Antes veía el dinero como algo que siempre se iba. Con tu contenido aprendí a tomar decisiones más conscientes.</p>
       </div>
-
-      <!-- TARJETA 2 -->
-      <div class="article">
-        <article>
-          <a href="./blog/empleo/index.html" class="article-link">
-            <div class="article-card">
-              <div style="position: relative;">
-                <img src="./assets/png/oportunidades-financieras-reales.webp" alt="Inversión Inteligente">
-                <div class="badge">#¿Nada de progreso?</div>
-              </div>
-              <h2 class="article-title">Genera oportunidades en tu carrera laboral</h2>
-              <div class="meta">
-                <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-                <span><i>💬</i> Sin Comentarios</span>
-                <div class="arrow-btn">➜</div>
-              </div>
-            </div>
-          </a>
-        </article>
-      </div>
-
-      <!-- TARJETA 3 -->
-      <div class="article">
-        <article>
-          <a href="./blog/inversiones/index.html" class="article-link">
-            <div class="article-card">
-              <div style="position: relative;">
-                <img src="./assets/png/inversion-inteligente-segura.webp" alt="Ingresos Pasivos">
-                <div class="badge">#¿Temes invertir?</div>
-              </div>
-              <h2 class="article-title">Aprende cómo invertir sin temores este año</h2>
-              <div class="meta">
-                <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-                <span><i>💬</i> Sin Comentarios</span>
-                <div class="arrow-btn">➜</div>
-              </div>
-            </div>
-          </a>
-        </article>
-      </div>
-
-      <!-- Puedes duplicar más tarjetas aquí -->
     </div>
-  </div>
+
+    <!-- Testimonio 2 -->
+    <div class="review-item">
+      <img class="review-avatar" src="https://i.pravatar.cc/80?img=12" alt="Alejandro Ramírez">
+      <div class="review-content">
+        <h3>Alejandro Ramírez</h3>
+        <span class="review-location">
+          México
+          <span class="review-stars">★★★★★</span>
+        </span>
+        <p>Con este contenido entendí los conceptos clave y aprendí a evaluar riesgos antes de mover mi dinero.</p>
+      </div>
+    </div>
+
+    <!-- Testimonio 3 -->
+    <div class="review-item">
+      <img class="review-avatar" src="https://i.pravatar.cc/80?img=48" alt="Camila Rojas">
+      <div class="review-content">
+        <h3>Camila Rojas</h3>
+        <span class="review-location">
+          Chile
+          <span class="review-stars">★★★★★</span>
+        </span>
+        <p>Me ayudó a cambiar la forma en que tomo decisiones con mi dinero. Dejé de improvisar y empecé a planificar mejor.</p>
+      </div>
+    </div>
+
+  </aside>
 </section>
 
-<!-- CSS PARA TARJETAS COMPACTAS -->
 <style>
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.article-card {
-    width: 100%;
-    max-width: 300px; /* más pequeña que antes */
-    background: #ffffff;
-    border-radius: 20px; /* ligeramente más pequeño */
-    padding: 14px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    font-family: 'Arial', sans-serif;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
-}
-
-.article-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-}
-
-.article-card img {
-    width: 100%;
-    height: 180px; /* más compacta */
-    object-fit: cover;
-    border-radius: 16px;
-}
-
-.badge {
-    position: relative;
-    display: inline-block;
-    background: #1E5BFF;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-top: -28px;
-    margin-left: 10px;
-}
-
-.article-title {
-    font-size: 18px; /* más pequeña */
-    font-weight: 700;
-    color: #222;
-    margin-top: 12px;
-    margin-bottom: 8px;
-    line-height: 1.3;
-}
-
-.meta {
+  /* Contenedor principal: aislado con reviews-block */
+  .reviews-block .review-item {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 10px;
-    color: rgba(0, 0, 0, 0.5);
-    margin-top: 6px;
-}
+    align-items: flex-start; /* alinea la imagen con la parte superior del texto */
+    gap: 0.5rem; /* espacio entre imagen y texto */
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb; /* línea delgada separadora */
+  }
 
-.meta span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    white-space: nowrap;
-}
+  /* Quitar borde del último item */
+  .reviews-block .review-item:last-child {
+    border-bottom: none;
+  }
 
-.arrow-btn {
-    margin-left: auto;
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    min-height: 36px;
-    background: #1E5BFF;
+  /* Imagen estilo icono */
+  .reviews-block .review-avatar {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 16px;
-    transition: transform 0.25s ease;
-}
+    object-fit: cover;
+    flex-shrink: 0;
+  }
 
-.article-card:hover .arrow-btn {
-    transform: scale(1.15);
-}
+  /* Contenido del review */
+  .reviews-block .review-content h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .reviews-block .review-location {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #78716c; /* gris estilo stone-500 */
+    margin-bottom: 0.25rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .reviews-block .review-stars {
+    display: inline-flex;
+    margin-left: 0.25rem;
+    color: #facc15; /* amarillo */
+    font-size: 0.75rem;
+  }
+
+  .reviews-block .review-content p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 </style>
+
 
 
 
@@ -1167,14 +1466,14 @@ fetch('posts.json')
 
 
 
-<div class="flex flex-col justify-center items-start mt-20 mb-8 max-w-4xl mx-auto px-4 md:px-0" style=" font-family: 'Montserrat', sans-serif;">
+<div class="flex flex-col justify-center items-start mt-20 mb-8 max-w-4xl mx-auto px-4 md:px-0" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
   <span class="block">
-    Preguntas frecuentes:
+    Preguntas frecuentes
   </span>
 </div>
 
        <section class="mb-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- ================= ACORDEÓN ================= -->
 
@@ -1265,12 +1564,10 @@ fetch('posts.json')
   }
 </style>
 
-
-
     <div class="cf-accordion">
 
       <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+        <div class="cf-accordion-header">
           El dinero no es el problema
           <span class="cf-accordion-icon"></span>
         </div>
