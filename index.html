@@ -184,10 +184,6 @@ body, html {
 <body class="bg-stone-50 text-stone-900">
 
 
-
-
-
-
 <!-- Navbar con menú móvil estilo revista -->
 <nav class="navbar">
   <div class="navbar-spacer"></div>
@@ -205,8 +201,7 @@ body, html {
       <li><a href="./opiniones.html">Opiniones</a></li>
       <li><a href="./tienda.html">Productos</a></li>
       <li><a href="./sobre-el-autor.html">Sobre el autor</a></li>
-      <li> <li><a href="#"onclick="openPopup(); 
-      event.preventDefault();">Descargar guía gratis</a></li></li>
+      <li><a href="#"onclick="openPopup();event.preventDefault();">Descargar guía gratis</a></li>
       <li><a href="./donar.html">Donaciones</a></li>
       <li><a href="./contacto.html">Contacto</a></li>
     </ul>
@@ -407,8 +402,6 @@ body, html {
   color: #000;
   text-decoration: none;
 }
-
-#mobileMenu a:hover { color: #22c55e; }
 
 @media(max-width: 767px) {
   .navbar-menu { display: none; }
@@ -648,68 +641,164 @@ fetch('posts.json')
 
 
 
+<!-- ========= POPUP OVERLAY ========= -->
+<div id="popupOverlay">
 
-<!-- ========= POPUP ========= -->
-<div id="popupOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:2000; justify-content:center; align-items:center;">
-<div id="popupBox" class="bg-white p-8 rounded-2xl max-w-md w-11/12 text-center">
+  <div class="popup-box">
 
-  
-<h2 class="text-2xl font-bold mb-4" style=" font-family: 'Montserrat', sans-serif;">
-  Descargar Guía Gratis
-</h2>
+    <h2 style="font-family: 'Montserrat', sans-serif;">
+      Descargar Guía Gratis
+    </h2>
 
-    <p class="text-stone-600 mb-6">Ingresa tu correo para recibir la guía inmediata.</p>
+    <p>Ingresa tu correo para recibir la guía inmediata.</p>
 
-    <!-- FORMULARIO CON WEB3FORMS -->
-    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+    <!-- FORMULARIO -->
+    <form action="https://api.web3forms.com/submit" method="POST">
 
-      <!-- 🔑 CLAVE DE WEB3FORMS -->
       <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
-
-      <!-- 📌 Asunto opcional para identificar -->
       <input type="hidden" name="subject" value="Nuevo registro de guía gratis">
-
-      <!-- 🔁 Redirección después de enviar -->
       <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias2.html">
 
-<!-- EMAIL -->
-<div>
-  <input id="email"
-         type="email"
-         name="email"
-         required
-         minlength="6"
-         maxlength="60"
-         class="w-full border border-stone-300 rounded-lg px-4 py-3"
-         placeholder="Tu correo electrónico">
+      <input 
+        type="email" 
+        name="email" 
+        required 
+        minlength="6" 
+        maxlength="60"
+        placeholder="Tu correo electrónico">
 
-  <p id="emailError" class="hidden text-sm text-red-600 mt-2">
-    Debes ingresar un correo electrónico válido.
-  </p>
-</div>
-
-     <!-- BOTÓN -->
-      <button type="submit"
-              class="bg-green-600 text-white w-full py-3 rounded-lg font-semibold hover:bg-green-700">
-             Obtener Guía
+      <button type="submit">
+        Obtener Guía
       </button>
 
-        </form>
+    </form>
 
-<!-- CERRAR POPUP -->
-<button onclick="closePopup()"
-  class="w-full mt-3 py-3 rounded-lg font-semibold
-         text-stone-600 bg-transparent
-         border border-stone-300
-         hover:bg-stone-100 hover:text-stone-800
-         active:scale-95
-         transition-all duration-150 ease-out">
-  Cerrar
-</button>
-
+    <button onclick="closePopup()" class="close-btn">
+      Cerrar
+    </button>
 
   </div>
 </div>
+
+
+<!-- ========= ESTILOS ========= -->
+<style>
+
+#popupOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.popup-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 40px 35px;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  text-align: left;
+  animation: popupFade 0.25s ease-out;
+}
+
+.popup-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup-box p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.popup-box input[type="email"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  transition: 0.2s;
+}
+
+.popup-box input[type="email"]:focus {
+  outline: none;
+  border-color: #111;
+}
+
+.popup-box button[type="submit"] {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.popup-box button[type="submit"]:hover {
+  background: #333;
+}
+
+.close-btn {
+  width: 100%;
+  margin-top: 12px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  color: #444;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  background: #eaeaea;
+}
+
+@keyframes popupFade {
+  from { transform: translateY(15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 📱 AJUSTE MÓVIL — evita que choque con navbar */
+@media (max-width: 767px) {
+
+  #popupOverlay {
+    align-items: flex-start;   /* lo baja */
+    padding-top: 110px;        /* espacio debajo del navbar */
+  }
+
+  .popup-box {
+    padding: 30px 20px;
+  }
+
+}
+
+</style>
+
+
+<!-- ========= FUNCIONES JS ========= -->
+<script>
+function openPopup() {
+  const overlay = document.getElementById('popupOverlay');
+  if (overlay) overlay.style.display = 'flex';
+}
+
+function closePopup() {
+  const overlay = document.getElementById('popupOverlay');
+  if (overlay) overlay.style.display = 'none';
+}
+</script>
 
 
 
