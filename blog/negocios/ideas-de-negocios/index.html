@@ -251,9 +251,13 @@ body, html {
 
 <!-- Navbar con menú móvil estilo revista -->
 <nav class="navbar">
-  <div class="navbar-spacer"></div>
-  <div class="navbar-line"></div>
-
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../../../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
   <div class="navbar-container">
     <!-- Logo -->
     <a href="../../../index.html" class="navbar-logo">Código Millonario</a>
@@ -674,7 +678,14 @@ function closePopup() {
 }
 </script>
 
-
+<style>
+.marquee-line {
+  height: 1px;            /* línea delgada */
+  background-color: #ccc;  /* gris claro */
+  width: 100%;            /* ocupa todo el contenedor */
+  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
+}
+</style>
 
 
 <div class="left-block flex flex-col justify-center items-start mt-20 mb-2 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
@@ -686,7 +697,8 @@ function closePopup() {
 
 <h1 class="blog-main-title">
 Emprende y haz que tus ideas se conviertan en proyectos que generen dinero<br>  
-
+<!-- Línea superior -->
+<div class="marquee-line"></div>
 <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
 Emprender no es solo tener una idea, sino convertirla en un proyecto estructurado capaz de generar ingresos reales.<br> 
 En esta sección aprenderás cómo validar oportunidades, organizar tus recursos y transformar tu creatividad en modelos sostenibles.
