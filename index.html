@@ -184,11 +184,17 @@ body, html {
 <body class="bg-stone-50 text-stone-900">
 
 
+
+
 <!-- Navbar con menú móvil estilo revista -->
 <nav class="navbar">
-  <div class="navbar-spacer"></div>
-  <div class="navbar-line"></div>
-
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="./assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
   <div class="navbar-container">
     <!-- Logo -->
     <a href="./index.html" class="navbar-logo">Código Millonario</a>
@@ -634,13 +640,6 @@ fetch('posts.json')
 
 
 
-  <!-- HERO PRINCIPAL -->
-   <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-
-
-
-
 <!-- ========= POPUP OVERLAY ========= -->
 <div id="popupOverlay" style="font-family: 'Open Sans', sans-serif;">
 
@@ -802,11 +801,7 @@ function closePopup() {
 
 
 
-
-
-
-
-<!-- Contenedor general -->
+<!-- Contenedor general más arriba -->
 <div class="marquee-wrapper">
   
   <!-- Línea superior -->
@@ -911,7 +906,7 @@ function closePopup() {
 
 <h1 class="blog-main-title">
 Aprende a Multiplicar tu Dinero y potenciar <br> tu Futuro sin Límites
-
+  <div class="marquee-line"></div>
 <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
     Descubre estrategias financieras probadas, herramientas efectivas y consejos prácticos para hacer crecer<br>
     tu dinero de manera inteligente y construir un futuro sólido y libre de preocupaciones.
