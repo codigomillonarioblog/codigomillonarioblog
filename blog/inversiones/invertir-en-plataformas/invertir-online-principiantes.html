@@ -640,106 +640,151 @@ Tu primera inversión no debe impresionarte, debe enseñarte cómo funciona el c
 
 
 
-      <!-- TABLA DE CONTENIDOS ESTILO CARLA CON WIFI -->
+<!-- ================= ACORDEÓN ================= -->
+
 <style>
-/* ================= CONTENEDOR ================= */
-.toc-container {
-  border: 1px solid #6b7280;
-  border-radius: 0;
-  max-width: 650px;
-  width: 100%;
-  margin: 20px 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  box-shadow: none;
-  overflow: hidden;
-  padding: 0;
-}
+  .cf-accordion {
+    margin-top: 60px;
+  }
 
-/* ================= BOTÓN ================= */
-.toc-toggle {
-  width: 100%;
-  text-align: left;
-  padding: 14px 20px;
-  background-color: #f9fafb;
-  border: none;
-  font-weight: 600;
-  font-size: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
 
-.toc-toggle:hover,
-.toc-toggle:focus {
-  background-color: #f9fafb;
-  outline: none;
-}
+  /* Ajustamos el ancho máximo y centramos el acordeón */
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco */
+    border-radius: 14px;
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 600px; /* ancho máximo deseado */
+    
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+    
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
 
-/* ================= FLECHA ================= */
-.toc-toggle::after {
-  content: "▼";
-  font-size: 12px;
-  transition: transform 0.3s ease;
-}
+  /* Animación tipo card con sombra al pasar el mouse */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
+  }
 
-/* Flecha cuando está abierta */
-.toc-container.open .toc-toggle::after {
-  transform: rotate(180deg);
-}
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
 
-/* ================= LISTA ================= */
-.toc-list {
-  list-style: none;
-  margin: 0;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  border-top: none;
-  transition: max-height 0.45s ease, opacity 0.35s ease;
-  display: block;
-}
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
 
-/* Lista abierta */
-.toc-container.open .toc-list {
-  max-height: 800px;
-  opacity: 1;
-  padding: 12px 20px;
-  border-top: 1px solid #6b7280;
-}
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
 
-.toc-list li {
-  margin: 10px 0;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #e5e7eb; /* línea delgada entre títulos */
-}
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
 
-.toc-list li:last-child {
-  border-bottom: none; /* quitar línea del último */
-}
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
 
-.toc-list li a {
-  text-decoration: none;
-  color: #1f2937;
-  font-size: 15px;
-}
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
 
-.toc-list li a:hover {
-  text-decoration: none;
-  color: #1f2937;
-}
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
 
-/* ================= OFFSET PARA MENÚ FIJO ================= */
-h2[id] {
-  scroll-margin-top: 100px;
-}
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
 </style>
 
-<!-- ================= HTML ================= -->
-<div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
-<button class="toc-toggle" type="button">Tabla de contenidos</button>
+<div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+ 
   <ul class="toc-list">
     <li><a href="#titulo1">1. Primeros pasos para invertir online sin complicaciones</a></li>
     <li><a href="#titulo2">2. Entiende primero qué significa invertir</a></li>
@@ -751,63 +796,78 @@ h2[id] {
     <li><a href="#titulo8">8. Aprende lo básico mientras avanzas</a></li>
     <li><a href="#titulo9">9. Empieza a invertir poco a poco y con claridad</a></li>
   </ul>
+
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
-<!-- ================= JAVASCRIPT ================= -->
 <script>
-const tocContainer = document.querySelector(".toc-container");
-const toggleBtn = tocContainer.querySelector(".toc-toggle");
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
 
-let mouseInsideTOC = false;
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
 
-// Abrir / cerrar SOLO con el botón
-toggleBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  tocContainer.classList.toggle("open");
-});
+        item.classList.toggle('is-open');
 
-// Detectar si el mouse está dentro del TOC
-tocContainer.addEventListener("mouseenter", () => {
-  mouseInsideTOC = true;
-});
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
 
-tocContainer.addEventListener("mouseleave", () => {
-  mouseInsideTOC = false;
-});
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
 
-// Cerrar al hacer click fuera
-document.addEventListener("click", (e) => {
-  if (!tocContainer.contains(e.target)) {
-    tocContainer.classList.remove("open");
-  }
-});
-
-// Cerrar si el TOC sale del viewport
-function isOutOfViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return rect.bottom < 0; // si la parte inferior ya no está visible
-}
-
-window.addEventListener("scroll", () => {
-  if (!mouseInsideTOC && isOutOfViewport(tocContainer)) {
-    tocContainer.classList.remove("open");
-  }
-});
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
 </script>
 
 
 
+
 <!-- Separador editorial premium responsive -->
-<div class="relative my-12 w-full">
+<div class="relative mt-10 mb-4 w-full">
   <!-- Línea -->
   <div class="w-full h-px bg-slate-300"></div>
   <!-- Etiqueta -->
-  <span class="absolute -top-2 left-0 
-               bg-slate-900 text-white text-[11px] sm:text-sm font-normal 
-               px-3 py-1 rounded-full shadow-sm tracking-wide">
-    A CONTINUACIÓN
-  </span>
 </div>
+
 
 
       <!-- INTRODUCCIÓN -->
