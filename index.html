@@ -923,6 +923,34 @@ function closePopup() {
       </h1>
 
 
+
+<div class="flex gap-4 social-container">
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+     class="social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
+
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+     class="social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://pin.it/3tqNXYoAA" target="_blank"
+     class="social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+
+  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+  </a>
+
+</div>
+
+
+
 <div class="left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
      style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
   <span class="block">
@@ -1009,13 +1037,10 @@ function closePopup() {
 
 
     </div>
-
   </div>
-
 </div>
 
 <style>
-
 /* BLOQUE COMPLETAMENTE A LA IZQUIERDA */
 .section-wrapper{
   width:100%;
@@ -1146,11 +1171,6 @@ function closePopup() {
 
 
 
-
-
-
-
-
 <style>
 /* 🖥 Desktop: alineado a la izquierda */
 .left-block {
@@ -1168,6 +1188,8 @@ function closePopup() {
   }
 }
 </style>
+
+<!-- ESTILOS DE LAS TAREJETAS Una forma distinta de aprender sobre dinero -->
 
 <style>
 .articles-wrapper {
@@ -1273,74 +1295,45 @@ function closePopup() {
 </style>
 
 
-
-
-
- <div class="marquee-wrapper">
-
-  <div class="flex items-center">
-
-    <h2>
-      Explora mi contenido en redes sociales
-    </h2>
-
-    <div class="ml-auto" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-      <span style="color:#111;">TikTok</span> -
-      <span style="color:#111;">YouTube</span> -
-      <span style="color:#111;">Pinterest</span>
-    </div>
-
-  </div>
-
-
-  <div class="flex items-center justify-between gap-6 mt-4 flex-wrap">
-
-    <p class="text-gray-600 text-sm sm:text-base leading-relaxed" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-      Contenido GRATIS que comparto con mi comunidad.<br>
-      Recuerda suscribirte, darle like y seguirme.
-    </p>
-
-    <div class="flex gap-4">
-
-      <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
-         class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <i class="fab fa-tiktok text-xl"></i>
-      </a>
-
-      <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
-         class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <i class="fab fa-youtube text-xl"></i>
-      </a>
-
-      <a href="https://pin.it/3tqNXYoAA" target="_blank"
-         class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <i class="fab fa-pinterest-p text-xl"></i>
-      </a>
-
-    </div>
-
-  </div>
-</div>
+<!-- ESTILO DE LOS ICONOS DE REDES SOCIALES -->
 
 <style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
 
-/* 🔥 Desktop: hacia la izquierda */
-.marquee-wrapper {
-  max-width: 64rem;
-  margin: 4rem 0 0 20px; /* pegado a la izquierda */
+.social-icon {
+  width: 36px;
+  height: 36px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-/* 📱 Mobile: centrado */
-@media (max-width: 768px) {
-  .marquee-wrapper {
-    margin: 4rem auto 0 auto; /* centrado */
-    padding: 0 15px;
-  }
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
 }
 
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 </style>
 
 
