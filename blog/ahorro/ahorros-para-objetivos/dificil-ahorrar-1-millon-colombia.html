@@ -1,25 +1,17 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ahorra para tus metas y transforma tus objetivos en realidad | Código Millonario</title>
-
-<!-- Tailwind y Lucide -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por qué ahorrar 1 millón en Colombia es tan difícil (y qué hacer al respecto) - Código Millonario</title>
+    <meta name="description" content="¿Por qué es tan difícil ahorrar 1 millón en Colombia? Te explico los factores que lo hacen complicado y cómo superarlos.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
 <!-- Favicon -->
 <link rel="icon" href="../../../assets/img/favicon-v2.png" type="image/png">
 
-<!-- Google Fonts Poppins -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -29,219 +21,16 @@
   gtag('config', 'G-0826LEMPPY');
 </script>
 
-<style>
-/* ===================== GRID DE TARJETAS CENTRADO ===================== */
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-#articlesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
-    justify-content: center; /* 🔥 centra las tarjetas */
-    gap: 24px; /* espacio uniforme entre tarjetas */
-    max-width: 1200px;
-    margin: 0 auto; /* centra todo el bloque */
-}
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-/* Evita espacios extra */
-.article {
-    display: flex;
-    justify-content: center;
-}
-
-/* ===================== PAGINACIÓN CENTRADA ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center; /* 🔥 centra la paginación */
-}
-
-</style>
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-
-/* ===================== PAGINACIÓN ===================== */
-.pager-container { 
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1); /* delineación sutil */
-}
-
-.page-box { 
-    min-width: 38px; 
-    height: 38px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    user-select: none; 
-    font-weight: 600; 
-    color: #0f172a; 
-    transition: all 0.2s ease; 
-}
-
-.page-box:hover { 
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06); 
-    transform: translateY(-1px); 
-}
-
-.page-box.active { 
-    border-color: #94a3b8; 
-    box-shadow: 0 0 0 3px rgba(14,165,233,0.06); 
-    background: #f8fafc; 
-}
-
-.compact-btn { 
-    min-width: 40px; 
-    height: 40px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    transition: all 0.2s ease; 
-}
-
-.compact-btn[disabled] { 
-    opacity: 0.45; 
-    cursor: default; 
-    pointer-events: none; 
-}
-
-.select-pages { 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-}
-
-input[type="number"].goto-page { 
-    border: 1px solid #e6e6e6; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-    width: 80px; 
-    background: #fff; 
-}
-
-#articlesGrid { 
-    transition: all 0.5s ease; 
-}
-
-.article { 
-    transition: opacity 0.4s ease; 
-}
-
-@media (max-width: 640px) {
-  .pager-grid { grid-template-columns: 1fr; gap: 8px; }
-  .page-box { min-width: 34px; height: 34px; }
-  .compact-btn { min-width: 34px; height: 34px; }
-  input[type="number"].goto-page { width: 64px; }
-}
-</style>
-
-<style>
-/* ===================== Tarejetas dentro de la Compaginacion ===================== */
-/* CONTENEDOR */
-.articles-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 24px;
-    align-items: stretch;
-}
-
-/* TARJETA ENVOLVENTE */
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    height: 100%;
-}
-
-/* CARD */
-.article-card {
-    width: 100%;
-    max-width: 250px;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 12px 0;
-    box-shadow: none;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
-}
-
-/* BLOQUE SUPERIOR DE TEXTO (CLAVE 🔥) */
-.text-content {
-    min-height: 90px; /* 👈 ajusta hasta alinear perfecto */
-    border-bottom: 1px solid #e5e5e5; /* 👈 línea debajo del texto */
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-.article-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.article {
-    display: flex;
-}
-
-.article article {
-    flex: 1;
-    display: flex;
-}
-
-.article-link {
-    display: flex;
-    flex: 1;
-}
-
-/* TÍTULO */
-.article-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1c1c1c;
-    margin: 0 0 4px 0;
-    line-height: 1.4;
-}
-
-/* BADGE */
-.badge {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #555;
-    margin: 0;
-}
-
-/* IMAGEN 16:9 */
-.article-card img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-/* OCULTOS */
-.meta,
-.arrow-btn {
-    display: none;
-}
-
 /* Fondo */
 body, html {
     background-color: #ffffff !important;
@@ -250,7 +39,6 @@ body, html {
 
 </head>
 <body class="bg-stone-50 text-stone-900">
-
 
 <!-- Navbar con menú móvil estilo revista -->
 <nav class="navbar">
@@ -521,11 +309,9 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 </script>
 
 
-
-
    <!-- ESPACIO FINAL -->
 <section class="py-12"></section>
-  
+
 
 <!-- ========= POPUP OVERLAY ========= -->
 <div id="popupOverlay" style="font-family: 'Open Sans', sans-serif;">
@@ -683,32 +469,31 @@ function closePopup() {
 }
 </script>
 
-<style>
-.marquee-line {
-  height: 1px;            /* línea delgada */
-  background-color: #ccc;  /* gris claro */
-  width: 100%;            /* ocupa todo el contenedor */
-  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
-}
-</style>
 
 
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-2 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+
+<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
      style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
   <span class="block">
-   Acercarte a las metas que más importan
+   Educación Financiera
   </span>
 </div>
 
-<h1 class="blog-main-title">
-Sección ahorra con propósito y logra <br>lo que te propongas 
-<!-- Línea superior -->
-<div class="marquee-line"></div>
-<p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
-En esta sección aprenderás a ahorrar con intención y dirección. No se trata solo de guardar dinero,<br>
-sino de darle un propósito claro: construir metas, alcanzar objetivos personales y transformar pequeños hábitos en resultados concretos. 
-</p>
+<!-- Título -->
+<h1 class="blog-main-title" >
+    <div class=" mt-1 w-full h-px bg-slate-300"></div>
+    Por qué es tan difícil ahorrar 1 millón en Colombia: las razones principales<br>  
+    <div class=" mt-1 w-full h-px bg-slate-300"></div>
 </h1>
+
+<div class="flex flex-col justify-start gap-5 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Si se te dificulta iniciar un ahorro voluntario, descubre los obstáculos que hacen complicado
+ahorrar un millón en Colombia y cómo planificar mejor tus próximos pasos hacia un ahorro con resultados reales.
+  </p>
+</div>
+
 <style>
 .blog-main-title {
   font-family: 'Poppins', sans-serif;
@@ -743,401 +528,122 @@ sino de darle un propósito claro: construir metas, alcanzar objetivos personale
 </style>
 
 
-
-
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-0 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-  ¿Ya estás Cerca?
-  </span>
-</div>
-
-
-
-<div class="articles-wrapper">
-
-  <!-- Línea superior -->
-  <div class="section-line"></div>
-
-  <div class="articles-row">
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>La fase más crucial es aquella por la que debe pasar cualquier persona que busca alcanzar un anhelo o elevar su estilo de vida. Con pequeños ajustes intencionados puedes cambiar tu rumbo.</h3>
-        <p>Fase crucial</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Las repercusiones de tus acciones no se ven de inmediato; se manifiestan con el tiempo, como un eco que amplifica los efectos de cada decisión que tomas.</h3>
-        <p>Eco de tus acciones</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Tus decisiones, aunque al principio parezcan pequeñas, tienen un efecto multiplicador que con el tiempo define tu rumbo y tus resultados.</h3>
-        <p>Efecto multiplicador</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>El dinero, como los resultados, empieza pequeño pero con constancia y dirección puede crecer y dejar una huella significativa en tu vida.</h3>
-        <p>Comenzar pequeño</p>
-      </div>
-    </div>
-</div>
-
-
-</div>
-
 <style>
-.articles-wrapper {
-  max-width: 64rem;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.section-line {
-  height: 1px;
+.layout-wrapper {
   width: 100%;
-  background-color: #d1d5db;
-  margin: 16px 0;
-}
-
-.articles-row {
   display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: stretch; /* Alinea los bloques con la misma altura */
-  overflow-x: hidden;
 }
 
-.article-block {
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribuye el espacio interno */
-  padding: 12px 0;
-  background: none;
-  border: none;
-}
-
-.text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1; /* Hace que cada bloque crezca para igualar alturas */
-  margin-bottom: 8px;
-}
-
-.article-block h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1c1c1c;
-  margin: 0 0 6px 0;
-  line-height: 1.4;
-}
-
-.article-block p {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.article-divider {
+.content-column {
   width: 100%;
-  height: 1px;
-  background-color: #e5e7eb;
-  margin-top: 16px;
-  display: none;
+  max-width: 760px;
+  padding-left: 35px;  /* antes 60px */
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-column {
+    max-width: 720px;
+    padding-left: 25px; /* antes 40px */
+  }
 }
 
 @media (max-width: 768px) {
-  .articles-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 15px;
-  }
-
-  .articles-row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .article-block {
-    flex: 1 0 100%;
-  }
-
-  .article-divider {
-    display: block;
+  .content-column {
+    max-width: 100%;
+    padding-left: 10px; /* antes 20px */
+    padding-right: 18px;
   }
 }
 </style>
 
 
 
+<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+   Redes sociales Código Millonario:
+  </span>
+</div>
+
+
+
+ <!-- INTRODUCCIÓN GENERAL -->
+<main class="py-0">
+  <div class="layout-wrapper">
+    <article class="content-column">
+
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-tiktok text-xl"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-youtube text-xl"></i>
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <i class="fab fa-pinterest-p text-xl"></i>
+    </a>
+
+  </div>
+
+
+<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
+<div class="max-w-4xl mt-7 ml-0 px-4 md:px-0 flex items-start space-x-4" >
+  <!-- Imagen del autor -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+  <!-- Texto del autor -->
+  <div class="py-3">
+    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+        Francisco Urrego
+      </a>
+    </p>
+  </div>
+</div>
+
+
+  <div class=" mt-5 w-full h-px bg-slate-300"></div>
+
+  <div style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+   <p>
+        Escrito el 04 mar 2026  | 19:11 h
+   </p>
+    <p>
+      ⏱ 5 min lectura
+    </p>
+    </div>
+
+
 <div class="flex justify-center md:justify-start mt-10 relative px-4 sm:px-0 md:-ml-8">
-  <img src="../../../assets/png/plan-de-ahorro-para-objetivos.jpg"
+  <img src="../../../assets/png/ahorrar-1-millon-de-pesos-en-colombia-disciplina-financiera.webp"
        alt=""
        class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10">
 </div>
 
 
 
-   <!-- INTRODUCCIÓN GENERAL -->
-      <main class="py-10">
-
- 
 
 
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-20 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-  Alcanza tus objetivos
-  </span>
-</div>
+<!-- ================= ACORDEÓN ================= -->
 
-
-
-
-  <!-- ARTÍCULOS DE AHORRO -->
-     <section class="mb-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
-      <!-- PAGINACIÓN ARRIBA -->
-      <div class="max-w-5xl mx-auto mb-6">
-        <div class="pager-container">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div class="flex items-center gap-4 px-2">
-              <div class="text-sm text-stone-700">
-                Total <span id="totalResults" class="font-semibold">0</span> resultados
-              </div>
-              <div class="hidden sm:inline-block text-sm text-stone-700">
-                Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
-              </div>
-            </div>
-            <div class="flex justify-center items-center gap-2 px-2">
-              <button id="firstBtn" class="compact-btn">«</button>
-              <button id="prevBtn" class="compact-btn">‹</button>
-              <div id="pageNumbers" class="flex items-center gap-2"></div>
-              <button id="nextBtn" class="compact-btn">›</button>
-              <button id="lastBtn" class="compact-btn">»</button>
-            </div>
-            <div class="flex justify-end items-center gap-3 px-2">
-              <select id="perPageSelect" class="select-pages">
-                <option value="6" selected>6 / página</option>
-                <option value="9">9 / página</option>
-                <option value="12">12 / página</option>
-                <option value="20">20 / página</option>
-              </select>
-              <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
-              <button id="gotoBtn" class="page-box">Ir</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articlesGrid">
-        <!-- Ejemplo de artículos -->
-
-<div class="article">
-  <article>
-    <a href="./dificil-ahorrar-1-millon-colombia.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../../assets/png/ahorrar-1-millon-de-pesos-en-colombia-disciplina-financiera.webp" 
-               alt="">
-          <div class="badge">¿Es realmente difícil ahorrar 1 millón de pesos en Colombia?</div>
-        </div>
-
-        <h2 class="article-title">
-        Factores financieros y decisiones personales que influyen directamente en la capacidad de ahorro
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 25/02/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./1m-sin-ganar-mas.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../../assets/png/como-ahorrar-un-millon-colombia.webp" 
-               alt="">
-          <div class="badge">¿Sí es posible ahorrar $1.000.000 en Colombia incluso con ingresos bajos?</div>
-        </div>
-
-        <h2 class="article-title">
-        Mientras muchos dicen que no alcanza, otros ya están guardando su primer millón
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 25/02/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./ingresos-extra-prima.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../../assets/png/que-hacer-con-tu-prima-ingresos-extra.webp" 
-               alt="">
-        <div class="badge">Muchos colombianos no tienen claro cómo usar un ingreso adicional</div>
-        </div>
-
-        <h2 class="article-title">
-        El destino de las primas y su papel en la construcción de progreso para quienes buscan éxito financiero
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 25/02/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
- <div class="article">
-  <article>
-    <a href="./ahorrar-para-una-moto-meta.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../../assets/png/plan-de-ahorro-para-comprar-una-moto.webp" 
-               alt="">
-          <div class="badge">¿Quieres comprar moto?</div>
-        </div>
-
-        <h2 class="article-title">
-          ¿Cómo comprar tu moto sin endeudarte?
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 03/02/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<div class="article">
-  <article>
-    <a href="./vivienda-siendo-independiente.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../../assets/png/puedo-comprar-casa-siendo-independiente.webp" 
-               alt="">
-          <div class="badge">¿Trabajas independiente?</div>
-        </div>
-
-        <h2 class="article-title">
-          ¿Es posible tener casa propia sin un empleo?
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 07/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
- <div class="article">
-  <article>
-    <a href="./comprar-carro-en-colombia-errores-costosos.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../../assets/png/como-comprar-un-carro.webp" 
-               alt="">
-          <div class="badge">¿Quieres comprar carro?</div>
-        </div>
-
-        <h2 class="article-title">
-          ¿Cómo evitar errores que cuestan millones?
-        </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 06/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-
-
-              <!-- Mas artículos -->
-     </div>
-   </div>
- </section>
-
-
-
- <div class="left-block flex flex-col justify-center items-start md:items-center mt-40 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-   Pon en orden tu dinero y cumple tus metas
-  </span>
-</div>
-
-
-
-
-
-
-<section class="mb-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
-
-    <!-- ================= ACORDEÓN ================= -->
-
-   <style>
+<style>
   .cf-accordion {
     margin-top: 60px;
   }
@@ -1146,22 +652,27 @@ sino de darle un propósito claro: construir metas, alcanzar objetivos personale
     box-sizing: border-box;
   }
 
+  /* Ajustamos el ancho máximo y centramos el acordeón */
   .cf-accordion-item {
-    background: #ffffff; /* fondo blanco fijo */
+    background: #ffffff; /* fondo blanco */
     border-radius: 14px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 600px; /* ancho máximo deseado */
+    
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+    
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: translateY(0);
-    will-change: transform; /* optimiza animación */
-    border: 1px solid rgba(0,0,0,0.03);
+    will-change: transform;
   }
 
-  /* Animación tipo card con sombra */
+  /* Animación tipo card con sombra al pasar el mouse */
   .cf-accordion-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
   }
 
   .cf-accordion-header {
@@ -1222,206 +733,729 @@ sino de darle un propósito claro: construir metas, alcanzar objetivos personale
     line-height: 1.7;
     font-size: 16px;
   }
+
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
 </style>
 
-    <div class="cf-accordion">
+<div class="cf-accordion">
 
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-Tu dinero responde a lo que haces, no a lo que esperas
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-  
-         <p>
-          Una de las habilidades más demandadas hoy en día está relacionada con manejar el dinero. Incluso en trabajos que no son altamente remunerados, la capacidad de organizar y optimizar recursos se vuelve esencial, porque en cualquier empresa, inversor o persona común, el control financiero es crítico. 
-        </p>
-   
-         <p>
-          Es negligente no poner atención desde el primer centavo que pasa por nuestras manos. Cada peso cuenta; ahí es donde comienzan a formarse las grandes sumas de dinero.
-        </p>
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
 
-        <p>
-          Un ejemplo claro se encuentra en los impuestos: un IVA puede parecer insignificante cuando lo pagamos individualmente, pero a gran escala representa cifras enormes que movilizan la economía. Esto nos recuerda que el flujo de dinero requiere cuidado, disciplina y regulación. Lo que no se administra tiende a perderse, y lo que se controla con estrategia crece y se multiplica.
-        </p>
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+ 
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. </a></li>
+    <li><a href="#titulo2">2. </a></li>
+    <li><a href="#titulo3">3. </a></li>
+    <li><a href="#titulo4">4. </a></li>
+    <li><a href="#titulo5">5. </a></li>
+    <li><a href="#titulo6">6. </a></li>
+    <li><a href="#titulo7">7. </a></li>
+    <li><a href="#titulo8">8. </a></li>
+    <li><a href="#titulo9">9. </a></li>
+  </ul>
 
-        <p>
-          Esta idea no solo aplica al dinero: incluso la naturaleza funciona bajo principios similares. Cada ecosistema tiene sus propias reglas, desde las cadenas alimenticias hasta los ciclos de recursos. Mantener un equilibrio evita escasez o exceso; una pequeña intervención puede generar estabilidad o, por el contrario, causar desequilibrio. 
-        </p>
-
-        <p>
-          Lo mismo sucede con tus finanzas personales: un manejo consciente y constante asegura que tus recursos trabajen a tu favor y se multipliquen con el tiempo.
-        </p>
-
-        </div>
       </div>
 
     </div>
+  </div>
 
-    <script>
-    document.querySelectorAll('.cf-accordion').forEach(accordion => {
-  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.cf-accordion-item');
-      const content = item.querySelector('.cf-accordion-content');
+</div>
 
-      // Solo afecta los items de ESTE acordeón
-      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+<script>
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
+
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
+
+        item.classList.toggle('is-open');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
         }
       });
+    });
+  });
 
-      item.classList.toggle('is-open');
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
 
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
       }
     });
   });
-});
-    </script>
-
-
- </div>
-</section>
-    <!-- ================= FIN ACORDEÓN ================= -->
-
-        
-</main>
-
-
-
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const articles = Array.from(document.querySelectorAll('.article'));
-    const articlesGrid = document.getElementById('articlesGrid');
-
-    const totalResultsEl = document.getElementById('totalResults');
-    const currentPageText = document.getElementById('currentPageText');
-    const totalPagesText = document.getElementById('totalPagesText');
-    const perPageSelect = document.getElementById('perPageSelect');
-    const gotoInput = document.getElementById('gotoInput');
-    const gotoBtn = document.getElementById('gotoBtn');
-    const firstBtn = document.getElementById('firstBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const lastBtn = document.getElementById('lastBtn');
-    const pageNumbersContainer = document.getElementById('pageNumbers');
-
-    let perPage = parseInt(perPageSelect.value, 10);
-    let currentPage = 1;
-    let totalPages = Math.max(1, Math.ceil(articles.length / perPage));
-
-    function showPage(page) {
-        if (page < 1) page = 1;
-        if (page > totalPages) page = totalPages;
-        currentPage = page;
-        const start = (currentPage - 1) * perPage;
-        const end = start + perPage;
-
-        articles.forEach((article, idx) => {
-            if (idx >= start && idx < end) {
-                article.style.display = '';
-                setTimeout(() => article.style.opacity = 1, 10);
-            } else {
-                article.style.opacity = 0;
-                setTimeout(() => article.style.display = 'none', 400);
-            }
-        });
-
-        currentPageText.textContent = currentPage;
-        totalPagesText.textContent = totalPages;
-
-        updateButtons();
-        renderPageNumbers();
-    }
-
-    function updateButtons() {
-        firstBtn.disabled = currentPage === 1;
-        prevBtn.disabled = currentPage === 1;
-        nextBtn.disabled = currentPage === totalPages;
-        lastBtn.disabled = currentPage === totalPages;
-    }
-
-    function renderPageNumbers() {
-        pageNumbersContainer.innerHTML = '';
-        if (totalPages <= 5) {
-            for (let i = 1; i <= totalPages; i++) {
-                pageNumbersContainer.appendChild(createPageButton(i));
-            }
-            return;
-        }
-        pageNumbersContainer.appendChild(createPageButton(1));
-        let start = Math.max(2, currentPage - 1);
-        let end = Math.min(totalPages - 1, currentPage + 1);
-
-        if (start > 2) {
-            const dots = document.createElement('div');
-            dots.textContent = '...';
-            dots.className = 'text-stone-400 px-1';
-            pageNumbersContainer.appendChild(dots);
-        }
-
-        for (let i = start; i <= end; i++) {
-            pageNumbersContainer.appendChild(createPageButton(i));
-        }
-
-        if (end < totalPages - 1) {
-            const dots = document.createElement('div');
-            dots.textContent = '...';
-            dots.className = 'text-stone-400 px-1';
-            pageNumbersContainer.appendChild(dots);
-        }
-
-        pageNumbersContainer.appendChild(createPageButton(totalPages));
-    }
-
-    function createPageButton(num) {
-        const btn = document.createElement('button');
-        btn.textContent = num;
-        btn.className = 'page-box';
-        if (num === currentPage) btn.classList.add('active');
-        btn.addEventListener('click', () => showPage(num));
-        return btn;
-    }
-
-    perPageSelect.addEventListener('change', () => {
-        perPage = parseInt(perPageSelect.value, 10);
-        totalPages = Math.ceil(articles.length / perPage);
-        currentPage = 1;
-        showPage(currentPage);
-    });
-
-    firstBtn.addEventListener('click', () => showPage(1));
-    prevBtn.addEventListener('click', () => showPage(currentPage - 1));
-    nextBtn.addEventListener('click', () => showPage(currentPage + 1));
-    lastBtn.addEventListener('click', () => showPage(totalPages));
-
-    gotoBtn.addEventListener('click', () => {
-        const val = parseInt(gotoInput.value, 10);
-        if (!isNaN(val)) showPage(val);
-        gotoInput.value = '';
-    });
-
-    gotoInput.addEventListener('keydown', e => {
-        if (e.key === 'Enter') gotoBtn.click();
-    });
-
-    totalResultsEl.textContent = articles.length;
-    totalPages = Math.ceil(articles.length / perPage);
-    showPage(currentPage);
-});
 </script>
 
-</body>
-</html>
 
 
+
+<!-- Separador editorial premium responsive -->
+<div class="relative mt-10 mb-4 w-full">
+  <!-- Línea -->
+  <div class="w-full h-px bg-slate-300"></div>
+  <!-- Etiqueta -->
+</div>
+
+
+
+<!-- INTRODUCCIÓN -->
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Hoy en día <strong>ahorrar un millón de pesos en Colombia</strong> está algo complicado. Pueden existir muchas atribuciones de por qué es imposible hacerlo, las excusas son el anzuelo perfecto que muchos aceptan para justificarse.
+</p>
+
+<p>
+La verdad es que no depende de factores externos,
+<a href="https://www.banrep.gov.co/es/glosario/indice-precios-al-consumidor-ipc?utm_source=chatgpt.com
+" target="_blank" class="text-blue-600 hover:underline">
+el estado del país,
+</a>
+ la economía a nivel mundial o tu vecino. Sí, así como lo escuchas, pero depende más de ti que de un milagro o razón ajena. 
+</p>
+
+<p>
+¿Cuánto ganas? Eso no afecta un <strong>ahorro intencionado</strong>, de hecho ganar algo de dinero es la oportunidad para iniciar.
+</p>
+
+<p>
+Otros culpan su salario, aunque puede parecer creíble para ellos, no mejora sus estados actuales. Las <strong>finanzas personales</strong> parecen algo aburrido: administrar el dinero, tomar apuntes, llevar cuentas. 
+</p>
+
+<p>
+Si no puedes ser consciente de que se fueron 20.000 pesos, difícil será <strong>ahorrar 1 millón en Colombia</strong>.
+</p>
+
+<p>
+Imagina que esto sucede todos los meses sin explicación alguna; ahora la pregunta es: ¿No será falta de un mayor ingreso? ¿O será falta de control oportuno?
+Si sabes poco de administración, una rama de las finanzas básicas, debes tener en cuenta que antes de pensar en ganar más, primero necesitas <strong>ordenar lo que ya estás recibiendo</strong>.
+</p>
+
+</div>
+
+
+
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El desorden financiero es más caro que un salario bajo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+El acto de no llevar registros diarios de gastos es mucho peor que ganar poco. Ganar poco te obliga a restringirte de ciertos gastos que no puedes permitirte, pero ganar bien y desperdiciar es botar tiempo de vida invertido para adquirir ese dinero. 
+</p>
+
+<p>
+Los gastos que parecen "normales", como pagos en cuotas, domicilios, transporte innecesario en muchos casos y compras impulsivas, hacen que el dinero se diluya rápidamente. 
+</p>
+
+<p>
+En Colombia es común gastar pequeñas cantidades diarias durante todo el mes; al final de ese mismo mes pueden superar los 200.000 o 400.000 pesos. Sin estructura, cualquier ingreso parece insuficiente, lo que hace que se perciba la necesidad de ganar más. 
+</p>
+
+<p>
+Estas son las razones: las creencias, más todas estas consecuencias que son actos, sumadas entre sí, generan la percepción de que <strong>ahorrar 1 millón de pesos en Colombia</strong> sea imposible para la mayoría.
+</p>
+
+<p>
+Analiza esto con detenimiento: el problema no es cuánto entra, sino cómo se dispersa. Ahora mismo toma la calculadora, anota, analiza y espero no te asustes.
+</p>
+
+<p>
+Si quieres fortalecer tu base económica, he diseñado estas 
+<a href="https://codigomillonario.blog/herramientas" target="_blank" class="text-blue-600 hover:underline">
+herramientas financieras
+</a>
+para ayudarte a mejorar tus habilidades, dominar tu dinero y construir resultados financieros más sólidos.
+</p>
+
+</div>
+
+
+
+<!-- H2: Conoce tu verdadero margen de ahorro -->
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Un millón no se ahorra pensando en un millón</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Otra causa de por qué parece imposible <strong>ahorrar 1 millón de pesos</strong> en la actualidad:
+</p>
+
+<p>
+Creer que de un solo mes de sueldo debes apartar de golpe tu millón de pesos es la razón por la que va a ser imposible hacerlo, y esto suma una excusa más para no llevarlo a cabo.
+</p>
+
+<p>
+Nadie ahorra un millón de golpe siendo un empleado en Colombia ganando el mínimo. Esto se construye dividiéndolo en <strong>metas mensuales alcanzables y claras</strong>. 
+</p>
+
+<p>
+Saquemos los cálculos ahora mismo. Si ahorro en monedas diarias, ¿cuántas monedas y de qué denominación necesitaría para lograr mi meta de ahorrar un millón en determinado plazo?
+</p>
+
+<p>
+Si decides ahorrar de forma quincenal, ¿puedes extraer 50.000 pesos? ¿Dentro de cuánto juntas tu millón con 50 quincenales? 
+</p>
+
+<p>
+¿O prefieres 150.000 pesos mensuales? A estas alturas ya te vas haciendo la idea de cómo funcionan las finanzas personales y ¿es complicado? Para nada, un niño puede hacerlo también.
+</p>
+
+<p>
+Si decides lograrlo en cinco meses, necesitas separar 200.000 pesos mensuales. Eso obliga a hacer <strong>ajustes concretos</strong>, corregir tu postura frente a lo que gastabas que ahora no podrás. 
+</p>
+
+<p>
+El error clásico es esperar que “sobre dinero”. El <strong>ahorro real se hace primero</strong>, y luego se vive con lo que queda.
+</p>
+
+</div>
+
+
+
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Esta es la diferencia entre no poder y no organizarse</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Un caso real y muy común entre los colombianos es el de Laura. Ella decía que su salario no le permitía ahorrar.
+</p>
+
+<p>
+¿Estaba segura? Sin embargo, un día tomó la iniciativa de revisar sus gastos y descubrió que estaba pagando tres suscripciones innecesarias, que casi no usaba, solo por moda y tendencia del momento. Además, estuvo gastando más de 180.000 pesos al mes en 
+
+<a href="https://www.bancolombia.com/educacion-financiera/finanzas-personales/que-son-gastos-hormiga?" 
+target="_blank" class="text-blue-600 hover:underline">
+antojos y salidas casuales.
+</a>
+</p>
+
+<p>
+No era pobreza extrema ni falta de un ingreso más fuerte. Era <strong>desorganización total</strong>. Al ajustar esos puntos, empezó a guardar 220.000 pesos mensuales conscientemente y alcanzó el millón antes de lo que esperaba.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo aplicarlo desde hoy</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Estos pasos no son obligatorios, pues cada lector puede crear su plan de acuerdo a sus intereses, plan y necesidades.
+</p>
+
+<ul>
+<li>1. Revisa tus últimos 30 días de gastos y suma todo lo que no era esencial: Aquí todo va a parecer esencial, así que saber elegir sabiamente puede ayudar.</li><br>
+<li>2. Define en cuántos meses quieres alcanzar el millón: Mientras más realista sea, más posibilidades de cumplir.</li><br>
+<li>3. Separa la cuota mensual el mismo día que recibes tu ingreso: No es opcional, es obligatorio este paso; de otro modo puedes no lograrlo. Aquí es donde todos fracasan.</li><br>
+<li>4. Elimina al menos una suscripción o gasto repetitivo este mes: Deshacerse de gastos de entretenimiento va a marcar la diferencia.</li>
+</ul>
+
+<p>
+Si quieres aprender ahora mismo cómo ahorrar la cantidad de 1 millón de pesos, puedes ir a esta sección: si no tienes 
+<a href="https://codigomillonario.blog/blog/ahorro/ahorros-para-objetivos/1m-sin-ganar-mas.html" target="_blank" class="text-blue-600 hover:underline">
+$1 millón ahorrado
+</a>,
+el problema no es tu sueldo, donde brindo información detallada y específica.
+</p>
+
+</div>
+
+
+
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La disciplina siempre va a valer más que el salario</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El salario influye, sí, ya que es el motivo por el cual puedes iniciar a ahorrar para el millón de pesos. Pero lo que realmente tiene costo es <strong>mantener la disciplina en todo momento</strong>.
+</p>
+
+<p>
+En Colombia, muchas personas 
+<a href="https://www.elespectador.com/economia/el-82-de-los-hogares-en-colombia-asegura-no-tener-posibilidades-de-ahorro-dane/" 
+target="_blank" class="text-blue-600 hover:underline">
+podrían ahorrar un millón
+</a>
+si tuvieran voluntad real, estructura y claridad de lo que se necesita.
+</p>
+
+<p>
+No necesitas ganar el doble para empezar a mejorar ahora mismo. Necesitas tomar control. El <strong>orden financiero siempre va antes que el crecimiento económico</strong>.
+</p>
+
+</div>
+
+
+
+
+  <!-- Imagen principal centrada, más pequeña en móviles -->
+<div class="flex justify-center mt-10 relative max-w-4xl mx-auto px-4 sm:px-0">
+  <img src="../../../assets/img/multiplicar-tu-dinero-desde-cero.webp" 
+       alt="" 
+       class="w-64 h-44 sm:w-80 sm:h-56 object-cover relative z-10">
+</div>
+
+
+
+
+  <!-- Sección recomendada -->
+<div class="mt-16 mb-10">
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
+    <p class="text-sm text-slate-600 italic leading-relaxed"
+       style="font-family: 'Poppins', sans-serif;">
+       <strong class="font-semibold text-slate-800">
+      Código Millonario</strong> recomienda:
+    </p>
+  </blockquote>
+</div>
+
+    </main>
+
+   
+
+
+    <!-- ================= INTERLINK FUNCIONAL (SELECT + BUSCADOR) ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center font-semibold text-sm mb-4">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+  </p>
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button">Ir</button>
+    <a id="viewAllBtn" href="../ahorros-para-objetivos/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button">
+      Ver todos
+    </a>
+  </div>
+  <div class="flex justify-end items-center mt-4 text-stone-700 text-sm">
+    Total <span id="totalArticles" class="font-semibold mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= INTERLINK VISUAL PROFESIONAL ================= -->
+<div class="max-w-3xl mx-auto my-12 interlink-wrapper">
+  <p class="interlink-heading text-center font-semibold text-sm mb-4">
+    Los más recomendados
+  </p>
+  <div id="interlinkGrid" style="display:flex; flex-direction:column; gap:10px;"></div>
+</div>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* Tarjeta grande con animación */
+.interlink-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  overflow: hidden;
+}
+.interlink-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.interlink-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.interlink-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+.interlink-img {
+  position: relative;
+  flex-shrink: 0;
+  width: 90px;
+  height: 55px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.interlink-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+.interlink-card:hover .interlink-img img {
+  transform: scale(1.05);
+}
+/* Badge azul */
+.interlink-badge {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  background: #007BFF;
+  color: #fff;
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+.interlink-text {
+  flex: 1;
+}
+.interlink-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.25;
+  color: #111;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #666;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* BOTÓN FLECHA “PRO” INTEGRADO */
+.arrow-btn {
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  background: #1E5BFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-family: inherit;
+  transition: transform 0.25s ease;
+}
+.interlink-card:hover .arrow-btn {
+  transform: scale(1.15);
+}
+
+/* Modernización del cuadro principal */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.interlink-container p {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: #1f2937;
+}
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: 500;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+.select-pages:hover, .goto-page:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* Botones Ir y Ver todos */
+.interlink-button {
+  font-family: 'Lora', serif;
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.interlink-button:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+</style>
+
+<!-- ================= SCRIPT ÚNICO ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = a.title;
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <section class="interlink-card">
+        <a href="${a.url}">
+          <div class="interlink-content">
+            <div class="interlink-img">
+              <img src="${a.image}" alt="">
+              <div class="interlink-badge">#Relacionado</div>
+            </div>
+            <div class="interlink-text">
+              <div class="interlink-title">${a.title}</div>
+              <div class="meta">
+                <span>⏱ 5 min de lectura</span>
+                <span><i>💬</i> 0</span>
+                <div class="arrow-btn">➜</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../ahorros-para-objetivos/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+  temp.querySelectorAll("time, .date, .meta, span").forEach(el=>{
+    if(el.textContent.includes("📅") || el.textContent.includes("Sin Comentarios") || /\d{2}\/\d{2}\/\d{4}/.test(el.textContent)){
+      el.remove();
+    }
+  });
+  const links = Array.from(temp.querySelectorAll(".article a"));
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+
+
+
+
+<!-- BOTÓN FLOTANTE DE COMPARTIR -->
+<div class="fixed bottom-12 right-6 z-50 flex flex-col items-center">
+
+  <!-- Botones -->
+<div id="shareButtons"
+  class="flex flex-col items-center gap-3 mb-4
+         hidden opacity-0 translate-y-2
+         transition-all duration-300 ease-out">
+
+    <!-- Facebook -->
+    <a id="facebookShare" target="_blank"
+      class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:-translate-y-1 transition">
+      <i data-lucide="facebook" class="w-5 h-5"></i>
+    </a>
+
+    <!-- X -->
+    <a id="twitterShare" target="_blank"
+      class="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white shadow-lg hover:-translate-y-1 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2H21.5l-7.51 8.57L22 22h-6.766l-5.3-6.943L3.5 22H.25l8.033-9.17L2 2h6.91l4.713 6.231L18.244 2z"/>
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a id="linkedinShare" target="_blank"
+      class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-700 text-white shadow-lg hover:-translate-y-1 transition">
+      <i data-lucide="linkedin" class="w-5 h-5"></i>
+    </a>
+
+<!-- WhatsApp -->
+<a id="whatsappShare" target="_blank"
+  class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:-translate-y-1 transition">
+  
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 32 32"
+       class="w-5 h-5 fill-current">
+    <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
+  </svg>
+</a>
+
+    <!-- Copiar -->
+<button id="copyLink"
+  class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-900 text-white shadow-lg hover:-translate-y-1 transition">
+  <i data-lucide="link" class="w-5 h-5"></i>
+</button>
+  </div>
+
+  <!-- BOTÓN PRINCIPAL -->
+  <button id="toggleShare"
+    class="w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-xl flex items-center justify-center transition hover:-translate-y-1">
+    <i data-lucide="share-2" class="w-6 h-6"></i>
+  </button>
+</div>
+
+<script>
+  const toggle = document.getElementById("toggleShare");
+  const menu = document.getElementById("shareButtons");
+  const copy = document.getElementById("copyLink");
+
+  let isOpen = false;
+
+  function openMenu() {
+    menu.classList.remove("hidden");
+    requestAnimationFrame(() => {
+      menu.classList.remove("opacity-0", "translate-y-2");
+      menu.classList.add("opacity-100", "translate-y-0");
+    });
+    isOpen = true;
+  }
+
+  function closeMenu() {
+    menu.classList.remove("opacity-100", "translate-y-0");
+    menu.classList.add("opacity-0", "translate-y-2");
+
+    setTimeout(() => {
+      menu.classList.add("hidden");
+    }, 300); // 👈 igual a duration-300
+
+    isOpen = false;
+  }
+
+  toggle.addEventListener("click", () => {
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  // 🔥 Cerrar suavemente SOLO al hacer scroll
+  window.addEventListener("scroll", () => {
+    if (isOpen) closeMenu();
+  }, { passive: true });
+
+  // Links dinámicos
+  const url = encodeURIComponent(window.location.href);
+  facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+  twitterShare.href = `https://twitter.com/intent/tweet?url=${url}`;
+  linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${url}`;
+  whatsappShare.href = `https://api.whatsapp.com/send?text=${url}`;
+
+  copy.addEventListener("click", () => {
+    navigator.clipboard.writeText(window.location.href);
+    closeMenu();
+  });
+
+  lucide.createIcons();
+</script>
 
 
 
@@ -1777,7 +1811,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-  
+
+
+
     <script>
         lucide.createIcons();
     </script>
