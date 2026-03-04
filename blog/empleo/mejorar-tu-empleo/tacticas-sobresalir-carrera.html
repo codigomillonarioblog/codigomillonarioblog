@@ -559,45 +559,86 @@ La autoridad real no se impone ni se anuncia; se acumula con disciplina constant
 }
 </style>
 
+<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+
+<style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
 
 
-<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-   Redes sociales Código Millonario:
-  </span>
+
+
+<div class="left-block flex items-center mt-10 px-1 md:px-0 ml-3 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
+   Código Millonario en Redes:
 </div>
 
 
-
  <!-- INTRODUCCIÓN GENERAL -->
-<main class="py-0">
+<main class="py-5">
   <div class="layout-wrapper">
     <article class="content-column">
 
 
     <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
-<div class="flex justify-start gap-5 mt-3 max-w-4xl mx-auto px-4 md:px-0">
+<div class="flex gap-4 social-container">
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+     class="social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
 
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
-       class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <i class="fab fa-tiktok text-xl"></i>
-    </a>
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+     class="social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
 
-    <!-- YouTube -->
-    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
-       class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <i class="fab fa-youtube text-xl"></i>
-    </a>
+  <a href="https://pin.it/3tqNXYoAA" target="_blank"
+     class="social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
 
-    <!-- Pinterest -->
-    <a href="https://pin.it/3tqNXYoAA" target="_blank"
-       class="w-12 h-12 flex items-center justify-center rounded-full bg-rose-500 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <i class="fab fa-pinterest-p text-xl"></i>
-    </a>
+  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+  </a>
 
-  </div>
+</div>
 
 
 <!-- Información editorial con imagen a la izquierda, más a la izquierda -->
@@ -1494,10 +1535,10 @@ fetch("../mejorar-tu-empleo/index.html")
 <div class="fixed bottom-12 right-6 z-50 flex flex-col items-center">
 
   <!-- Botones -->
-<div id="shareButtons"
-  class="flex flex-col items-center gap-3 mb-4
-         hidden opacity-0 translate-y-2
-         transition-all duration-300 ease-out">
+  <div id="shareButtons"
+    class="flex flex-col items-center gap-3 mb-4
+           hidden opacity-0 translate-y-2
+           transition-all duration-300 ease-out">
 
     <!-- Facebook -->
     <a id="facebookShare" target="_blank"
@@ -1519,27 +1560,27 @@ fetch("../mejorar-tu-empleo/index.html")
       <i data-lucide="linkedin" class="w-5 h-5"></i>
     </a>
 
-<!-- WhatsApp -->
-<a id="whatsappShare" target="_blank"
-  class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:-translate-y-1 transition">
-  
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 32 32"
-       class="w-5 h-5 fill-current">
-    <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
-  </svg>
-</a>
+    <!-- WhatsApp -->
+    <a id="whatsappShare" target="_blank"
+      class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:-translate-y-1 transition">
+      
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 32 32"
+           class="w-5 h-5 fill-current">
+        <path d="M16 .3C7.5.3.6 7.2.6 15.7c0 2.7.7 5.4 2.1 7.7L.3 31.7l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.5 0 15.4-6.9 15.4-15.4C31.7 7.2 24.8.3 16 .3zm0 28c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5.1 1.3 1.4-4.9-.3-.5C3.7 20 3 17.9 3 15.7 3 8.8 8.9 3 16 3s13 5.8 13 12.7-5.9 12.6-13 12.6zm7.3-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1s-1.5-.6-2.9-1.8c-1.1-.9-1.8-2-2-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 2.9 4.4 7.1 6.1 1 .4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.3-1 2.6-1.9.3-.9.3-1.8.2-2-.1-.2-.3-.3-.7-.5z"/>
+      </svg>
+    </a>
 
     <!-- Copiar -->
-<button id="copyLink"
-  class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-900 text-white shadow-lg hover:-translate-y-1 transition">
-  <i data-lucide="link" class="w-5 h-5"></i>
-</button>
+    <button id="copyLink"
+      class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-900 text-white shadow-lg hover:-translate-y-1 transition">
+      <i data-lucide="link" class="w-5 h-5"></i>
+    </button>
   </div>
 
-  <!-- BOTÓN PRINCIPAL -->
+  <!-- BOTÓN PRINCIPAL (AHORA NEGRO) -->
   <button id="toggleShare"
-    class="w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-xl flex items-center justify-center transition hover:-translate-y-1">
+    class="w-12 h-12 rounded-full bg-black hover:bg-gray-900 text-white shadow-xl flex items-center justify-center transition hover:-translate-y-1">
     <i data-lucide="share-2" class="w-6 h-6"></i>
   </button>
 </div>
@@ -1566,7 +1607,7 @@ fetch("../mejorar-tu-empleo/index.html")
 
     setTimeout(() => {
       menu.classList.add("hidden");
-    }, 300); // 👈 igual a duration-300
+    }, 300);
 
     isOpen = false;
   }
@@ -1575,12 +1616,10 @@ fetch("../mejorar-tu-empleo/index.html")
     isOpen ? closeMenu() : openMenu();
   });
 
-  // 🔥 Cerrar suavemente SOLO al hacer scroll
   window.addEventListener("scroll", () => {
     if (isOpen) closeMenu();
   }, { passive: true });
 
-  // Links dinámicos
   const url = encodeURIComponent(window.location.href);
   facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
   twitterShare.href = `https://twitter.com/intent/tweet?url=${url}`;
