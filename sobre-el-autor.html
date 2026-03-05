@@ -510,9 +510,9 @@ function closePopup() {
 <div class="flex flex-col items-center justify-center mt-6 gap-2 text-center lg:-ml-40"
      style="font-family: 'Montserrat', sans-serif;">
 
-  <img src="./assets/img/fundador-codigo-millonario.webp" 
-       alt="Francisco Urrego - Código Millonario"
-       class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover shadow-sm">
+<img src="./assets/img/fundador-codigo-millonario.webp" 
+     alt="Francisco Urrego - Código Millonario"
+     class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover shadow-sm">
 
        <h1 style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
 
@@ -576,6 +576,10 @@ Director Editorial – Código Millonario
         </p>
 
         <p>
+          Además, Francisco es un escritor colombiano y autor de libros publicados en fuentes reconocidas.
+        </p>
+
+        <p>
           Su trabajo se centra en analizar hábitos financieros, modelos de riqueza y estrategias de crecimiento personal desde una perspectiva realista y aplicada al contexto latinoamericano.
         </p>
 
@@ -599,10 +603,9 @@ Director Editorial – Código Millonario
         <p>Biografías de empresarios y fundadores</p>
 
         <p>
-          Además, es un escritor colombiano y autor de libros publicados en fuentes reconocidas.
+Código Millonario es un proyecto editorial sobre dinero, mentalidad financiera, éxito y negocios.
+El sitio fue publicado en septiembre de 2025.
         </p>
-
-       
 
       </div>
 
@@ -619,7 +622,6 @@ Director Editorial – Código Millonario
 </div>
 
 
-
 <div class="articles-wrapper">
 
   <!-- Línea superior -->
@@ -631,7 +633,7 @@ Director Editorial – Código Millonario
     <a href="./blog/mentalidad-de-exito/errores-comunes-de-la-clase-media.html" class="article-block-link">
       <div class="article-block">
         <div class="text-content">
-          <h3>Estos son los 9 errores comunes de la clase media que frenan el progreso financiero que debes evitar ahora</h3>
+          <h3>Estos son los 9 errores comunes que comete la clase media y frenan el progreso financiero que debes evitar ahora</h3>
           <p>La clase media no está en crisis por falta de ingresos, sino por falta de estructura financiera que transforme el salario en libertad real.</p>
         </div>
         <img src="./assets/png/claridad-mental-resultados-reales.webp" alt="Imagen 1" class="article-image">
@@ -642,8 +644,9 @@ Director Editorial – Código Millonario
     <!-- TARJETA 2 -->
     <a href="./blog/psicologia-del-dinero/no-ahorrar-te-roba-libertad-financiera.html" class="article-block-link">
       <div class="article-block">
+                <div class="article-divider"></div>
         <div class="text-content">
-          <h3>¿Sabías que la falta de ahorro te puede empujar a vivir en modo supervivencia por mucho tiempo sin darte cuenta?</h3>
+          <h3>¿Sabías que la falta de ahorro te puede empujar a vivir en modo supervivencia por mucho tiempo sin darte cuenta? esto es muy comun</h3>
           <p>Ahorrar no es acumular dinero, es recuperar la capacidad de decir ‘no’ y elegir tu propio camino con claridad en todo momento.</p>
         </div>
         <img src="./assets/png/sin-ahorro-no-decides-tu.webp" alt="Imagen 2" class="article-image">
@@ -654,6 +657,7 @@ Director Editorial – Código Millonario
     <!-- TARJETA 3 -->
     <a href="./blog/empleo/mejorar-tu-empleo/errores-carrera.html" class="article-block-link">
       <div class="article-block">
+                <div class="article-divider"></div>
         <div class="text-content">
           <h3>Los 7 errores típicos que están frenando tu crecimiento profesional sin darte cuenta (y cómo corregirlos a tiempo) eficientemente</h3>
           <p>El estancamiento casi nunca llega de golpe; empieza cuando dejas de actualizarte y te convences de que “con lo que sabes es suficiente”.</p>
@@ -666,13 +670,13 @@ Director Editorial – Código Millonario
     <!-- TARJETA 4 -->
     <a href=".//blog/biografia-de-millonarios/fundador-de-kfc-construyo-su-fortuna.html" class="article-block-link">
       <div class="article-block">
+                <div class="article-divider"></div>
         <div class="text-content">
-          <h3>La increíble historia real de KFC: cómo un hombre fracasó durante décadas antes de triunfar a los 65. ¿Mentalidad exitosa o suerte?</h3>
+          <h3>cómo un hombre fracasó durante décadas antes de triunfar a los 65 con KFC. Mentalidad exitosa o fue suerte?</h3>
           <p>Muchos creen que a los 60 ya es tarde para empezar algo grande.
           La historia de Sanders demuestra que la persistencia estratégica vence cualquier fracaso.</p>
         </div>
         <img src="./assets/png/colonel-sanders-historia-de-riqueza.webp" alt="Imagen 4" class="article-image">
-        <div class="article-divider"></div>
       </div>
     </a>
 
@@ -682,6 +686,7 @@ Director Editorial – Código Millonario
   <div class="section-line"></div>
 
 </div>
+
 
 <style>
 .articles-wrapper {
@@ -704,7 +709,7 @@ Director Editorial – Código Millonario
   gap: 16px;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch; /* todas las tarjetas misma altura */
   overflow-x: hidden;
 }
 
@@ -714,24 +719,41 @@ Director Editorial – Código Millonario
   color: inherit;
   cursor: pointer;
   flex: 0 0 250px;
+  height: 100%;
 }
 
 .article-block {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 12px 0;
   transition: transform 0.2s;
+  align-items: center;
+  height: 100%;
 }
 
 .article-block-link:hover .article-block {
   transform: translateY(-2px);
 }
 
+/* IMAGEN */
+.article-image {
+  width: 70%;
+  max-width: 200px;
+  height: 200px;       /* altura fija para todas */
+  object-fit: cover;   /* recorta sin deformar */
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto 10px auto;
+  flex-shrink: 0;      /* evita que se reduzca */
+}
+
+/* CONTENIDO TEXTO */
 .text-content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  width: 70%;
+  max-width: 200px;
+  text-align: left;
 }
 
 .article-block h3 {
@@ -739,7 +761,7 @@ Director Editorial – Código Millonario
   font-size: 1rem;
   font-weight: 600;
   color: #1c1c1c;
-  margin: 0 0 4px 0;
+  margin: 0 0 6px 0;
 }
 
 .article-block p {
@@ -749,16 +771,7 @@ Director Editorial – Código Millonario
   margin: 0;
 }
 
-.article-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 4px;
-  display: block;
-  margin-bottom: 8px;
-}
-
-/* Línea divisoria entre artículos */
+/* línea divisoria */
 .article-divider {
   width: 100%;
   height: 1px;
@@ -767,30 +780,58 @@ Director Editorial – Código Millonario
   display: none;
 }
 
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+
 @media (max-width: 768px) {
+
   .articles-wrapper {
     margin-left: auto;
     margin-right: auto;
     padding: 0 15px;
   }
+
   .articles-row {
     flex-direction: column;
-    gap: 0;
+    gap: 16px;
   }
+
   .article-block-link {
     flex: 1 0 100%;
   }
+
   .article-block {
     background: #fff;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    align-items: center;
   }
+
   .article-divider {
     display: block;
   }
+
+  /* imagen móvil */
+  .article-image {
+    width: 90%;
+    max-width: none;
+    height: 220px;      /* MISMA ALTURA PARA TODAS */
+    object-fit: cover;
+    margin: 0 0 10px 0;
+  }
+
+  /* texto */
+  .text-content {
+    width: 90%;
+    max-width: none;
+    text-align: left;
+  }
+
 }
 </style>
+
 
 
 
