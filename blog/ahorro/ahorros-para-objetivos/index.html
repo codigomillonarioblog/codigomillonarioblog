@@ -527,6 +527,7 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 <section class="py-12"></section>
   
 
+
 <!-- ========= POPUP OVERLAY ========= -->
 <div id="popupOverlay" style="font-family: 'Open Sans', sans-serif;">
 
@@ -566,9 +567,8 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   </div>
 </div>
 
-
-<!-- ========= ESTILOS ========= -->
 <style>
+/* ========= ESTILOS ========= */
 
 #popupOverlay {
   display: none;
@@ -576,9 +576,15 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   inset: 0;
   background: rgba(0,0,0,0.55);
   z-index: 2000;
+
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+
+  /* ↓ BAJA MÁS EL POPUP Y DEJA MARGEN PARA FUTUROS CAMBIOS */
+  align-items: flex-start;
+  padding-top: clamp(200px, 22vh, 320px);
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .popup-box {
@@ -593,6 +599,7 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 }
 
 .popup-box h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -656,12 +663,11 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* 📱 AJUSTE MÓVIL — evita que choque con navbar */
+/* 📱 AJUSTE PARA TELÉFONOS */
 @media (max-width: 767px) {
 
   #popupOverlay {
-    align-items: flex-start;   /* lo baja */
-    padding-top: 110px;        /* espacio debajo del navbar */
+    padding-top: clamp(170px, 26vh, 260px);
   }
 
   .popup-box {
@@ -682,6 +688,10 @@ function closePopup() {
   if (overlay) overlay.style.display = 'none';
 }
 </script>
+
+
+
+
 
 <style>
 .marquee-line {
@@ -955,7 +965,31 @@ sino de darle un propósito claro: construir metas, alcanzar objetivos personale
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articlesGrid">
         <!-- Ejemplo de artículos -->
 
+<div class="article">
+  <article>
+    <a href="./ahorrar-2-millones-6-meses-colombia.html" class="article-link">
+      <div class="article-card">
 
+        <div style="position: relative;">
+          <img src="../../../assets/png/plan-ahorro-2-millones-6-meses-colombia.webp" 
+               alt="">
+          <div class="badge">El plan progresivo para alcanzar 2 millones de pesos en 6 meses en Colombia</div>
+        </div>
+
+        <h2 class="article-title">
+        Estrategia práctica de ahorro mensual, control de gastos cotidianos y disciplina
+        </h2>
+
+        <div class="meta">
+          <span><i>📅</i> 25/02/2026</span>
+          <span><i>💬</i> Sin Comentarios</span>
+          <div class="arrow-btn">➜</div>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
 
 <div class="article">
   <article>

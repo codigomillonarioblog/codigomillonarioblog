@@ -524,6 +524,7 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 <section class="py-12"></section>
 
 
+
 <!-- ========= POPUP OVERLAY ========= -->
 <div id="popupOverlay" style="font-family: 'Open Sans', sans-serif;">
 
@@ -563,9 +564,8 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   </div>
 </div>
 
-
-<!-- ========= ESTILOS ========= -->
 <style>
+/* ========= ESTILOS ========= */
 
 #popupOverlay {
   display: none;
@@ -573,9 +573,15 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   inset: 0;
   background: rgba(0,0,0,0.55);
   z-index: 2000;
+
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+
+  /* ↓ BAJA MÁS EL POPUP Y DEJA MARGEN PARA FUTUROS CAMBIOS */
+  align-items: flex-start;
+  padding-top: clamp(200px, 22vh, 320px);
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .popup-box {
@@ -590,6 +596,7 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 }
 
 .popup-box h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -653,12 +660,11 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* 📱 AJUSTE MÓVIL — evita que choque con navbar */
+/* 📱 AJUSTE PARA TELÉFONOS */
 @media (max-width: 767px) {
 
   #popupOverlay {
-    align-items: flex-start;   /* lo baja */
-    padding-top: 110px;        /* espacio debajo del navbar */
+    padding-top: clamp(170px, 26vh, 260px);
   }
 
   .popup-box {
@@ -679,6 +685,9 @@ function closePopup() {
   if (overlay) overlay.style.display = 'none';
 }
 </script>
+
+
+
 
 <style>
 .marquee-line {
