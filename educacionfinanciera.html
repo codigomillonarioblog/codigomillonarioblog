@@ -689,106 +689,7 @@ function closePopup() {
 
 
 
-<!-- Contenedor general -->
-<div class="marquee-wrapper">
-  
-  <!-- Línea superior -->
-  <div class="marquee-line"></div>
 
-  <!-- Contenedor -->
-  <div class="marquee-container-full">
-    
-    <div class="marquee-track">
-      <div class="marquee-text-full">
-        <span style="color:#111;">-economía • Colombia • 20 Sep, 2025 • Opinión / Estudio Financiero</span>
-        <span>Guías Financieras • Inversión • Estrategias</span>
-        <span style="color:#111;">Tips Financieros • Ahorro-y</span>
-      </div>
-
-      <!-- DUPLICADO -->
-      <div class="marquee-text-full">
-        <span style="color:#111;">-economía • Colombia • 20 Sep, 2025 • Opinión / Estudio Financiero</span>
-        <span>Guías Financieras • Inversión • Estrategias</span>
-        <span style="color:#111;">Tips Financieros • Ahorro-y</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Línea inferior -->
-  <div class="marquee-line"></div>
-
-</div>
-
-<style>
-
-/* Contenedor general */
-.marquee-wrapper {
-  max-width: 64rem;
-  margin: 4rem 0 0 20px; /* Desktop: pegado a la izquierda */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Líneas */
-.marquee-line {
-  height: 1px;
-  background: #cbd5e1;
-  width: 100%;
-}
-
-/* Contenedor animación */
-.marquee-container-full {
-  height: 36px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 25s linear infinite;
-}
-
-.marquee-text-full {
-  display: flex;
-  gap: 50px;
-  white-space: nowrap;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #777;
-}
-
-.marquee-text-full span {
-  flex-shrink: 0;
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-/* 📱 En teléfono se centra */
-@media (max-width: 768px) {
-  .marquee-wrapper {
-    margin: 4rem auto 0 auto; /* vuelve a centrarse */
-    padding: 0 15px;
-  }
-}
-
-</style>
-
-<style>
-.marquee-line {
-  height: 1px;            /* línea delgada */
-  background-color: #ccc;  /* gris claro */
-  width: 100%;            /* ocupa todo el contenedor */
-  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
-}
-</style>
 
 
 <div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
@@ -846,7 +747,7 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 <div class="left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
      style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
   <span class="block">
-    Blog Oficial de Código Millonario
+  Un analicis editorial de Código Millonario
   </span>
 </div>
 
@@ -881,7 +782,7 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
     <div class="article-block">
       <div class="text-content">
         <h3>Tomar control de tu dinero no es hacerte rico rápido, es entender cómo funciona y usarlo a tu favor sin falsas promesas</h3>
-        <p>Aprende A</p>
+        <p>El dinero no necesita milagros, necesita comprensión</p>
       </div>
       <img src="assets/png/ahorro-real-con-salario-minimo.webp" alt="Imagen 1" class="article-image">
       <div class="article-divider"></div>
@@ -890,7 +791,7 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
     <div class="article-block">
       <div class="text-content">
         <h3>Aquí no hay fórmulas mágicas, solo ideas reales y aplicables que, con mentalidad emprendedora, amplían tus oportunidades</h3>
-        <p>La verdad</p>
+        <p>El dinero favorece a quien entiende sus reglas</p>
       </div>
       <img src="assets/png/invertir-en-internet-sin-ser-estafado.jpg" alt="Imagen 2" class="article-image">
       <div class="article-divider"></div>
@@ -899,7 +800,7 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
     <div class="article-block">
       <div class="text-content">
         <h3>Cada artículo es un paso hacia más claridad, estabilidad y decisiones conscientes construidas con tiempo y disciplina</h3>
-        <p>Escalar</p>
+        <p>Esta seccion está pensada para ayudarte a ver el dinero con más claridad</p>
       </div>
       <img src="assets/png/ahorrar-500-mil-pesos-colombia.webp" alt="Imagen 3" class="article-image">
       <div class="article-divider"></div>
@@ -908,7 +809,7 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
     <div class="article-block">
       <div class="text-content">
         <h3>El dinero crece después de que la mente lo hace. Sin conocimiento, sistemas y proceso, no hay fortuna sostenible</h3>
-        <p>¿Qué saber?</p>
+        <p>La mente construye primero lo que el dinero refleja después</p>
       </div>
       <img src="assets/png/como-recuperar-control-de-mi-dinero.jpg" alt="Imagen 4" class="article-image">
       <div class="article-divider"></div>
@@ -1028,7 +929,7 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 </div>
 
 
-                <section class="mb-16">
+                <section class="mb-16" style=>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- aquí siguen las tarjetas de artículos -->
   
