@@ -181,14 +181,16 @@ input[type="number"].goto-page {
     flex-direction: column;
 }
 
-/* BLOQUE SUPERIOR DE TEXTO (CLAVE 🔥) */
+/* BLOQUE SUPERIOR DE TEXTO */
 .text-content {
-    min-height: 90px; /* 👈 ajusta hasta alinear perfecto */
-    border-bottom: 1px solid #e5e5e5; /* 👈 línea debajo del texto */
+    min-height: 90px;
+    border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
+/* CARD FLEX */
 .article-card {
     display: flex;
     flex-direction: column;
@@ -218,6 +220,7 @@ input[type="number"].goto-page {
     color: #1c1c1c;
     margin: 0 0 4px 0;
     line-height: 1.4;
+    text-align: left;
 }
 
 /* BADGE */
@@ -226,6 +229,9 @@ input[type="number"].goto-page {
     font-weight: 500;
     color: #555;
     margin: 0;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 /* IMAGEN 16:9 */
@@ -246,6 +252,32 @@ input[type="number"].goto-page {
 body, html {
     background-color: #ffffff !important;
 }
+</style>
+
+<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+<style>
+  /* ICONO FLECHA */
+  .article-card .card-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg); /* Apunta a la derecha */
+    transition: transform 0.35s ease;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  /* Contenedor relativo para que el icono se posicione correctamente */
+  .article-card {
+    position: relative;
+  }
+
+  /* Opcional: rotar al hacer click */
+  .article-card.open .card-icon {
+    transform: rotate(135deg);
+  }
 </style>
 
 </head>
@@ -973,13 +1005,9 @@ El relato real de cómo transformó cada desafío en oportunidad y construyó un
         <h2 class="article-title">
           Falló más veces de las que la mayoría intenta
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 18/02/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -999,13 +1027,9 @@ El relato real de cómo transformó cada desafío en oportunidad y construyó un
         <h2 class="article-title">
            Así nació la fortuna del fundador de KFC
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 01/02/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1025,13 +1049,9 @@ El relato real de cómo transformó cada desafío en oportunidad y construyó un
         <h2 class="article-title">
           Cómo Oprah construyó su riqueza con negocios
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 29/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1051,13 +1071,9 @@ El relato real de cómo transformó cada desafío en oportunidad y construyó un
         <h2 class="article-title">
           Sacrificó ganancias tempranas por dominio
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 22/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1077,13 +1093,9 @@ El relato real de cómo transformó cada desafío en oportunidad y construyó un
         <h2 class="article-title">
           De decisiones aburridas a riqueza duradera
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 20/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1103,13 +1115,9 @@ El relato real de cómo transformó cada desafío en oportunidad y construyó un
         <h2 class="article-title">
           Cuando todos dijeron no, él construyó Alibaba
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 15/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1129,13 +1137,9 @@ El relato real de cómo transformó cada desafío en oportunidad y construyó un
         <h2 class="article-title">
           De manuscrito rechazado a imperio millonario
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 06/01/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>

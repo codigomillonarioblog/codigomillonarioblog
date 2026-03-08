@@ -178,14 +178,16 @@ input[type="number"].goto-page {
     flex-direction: column;
 }
 
-/* BLOQUE SUPERIOR DE TEXTO (CLAVE 🔥) */
+/* BLOQUE SUPERIOR DE TEXTO */
 .text-content {
-    min-height: 90px; /* 👈 ajusta hasta alinear perfecto */
-    border-bottom: 1px solid #e5e5e5; /* 👈 línea debajo del texto */
+    min-height: 90px;
+    border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
+/* CARD FLEX */
 .article-card {
     display: flex;
     flex-direction: column;
@@ -215,6 +217,7 @@ input[type="number"].goto-page {
     color: #1c1c1c;
     margin: 0 0 4px 0;
     line-height: 1.4;
+    text-align: left;
 }
 
 /* BADGE */
@@ -223,6 +226,9 @@ input[type="number"].goto-page {
     font-weight: 500;
     color: #555;
     margin: 0;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 /* IMAGEN 16:9 */
@@ -243,6 +249,32 @@ input[type="number"].goto-page {
 body, html {
     background-color: #ffffff !important;
 }
+</style>
+
+<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+<style>
+  /* ICONO FLECHA */
+  .article-card .card-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg); /* Apunta a la derecha */
+    transition: transform 0.35s ease;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  /* Contenedor relativo para que el icono se posicione correctamente */
+  .article-card {
+    position: relative;
+  }
+
+  /* Opcional: rotar al hacer click */
+  .article-card.open .card-icon {
+    transform: rotate(135deg);
+  }
 </style>
 
 </head>
@@ -971,13 +1003,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           ¿Quieres ganar más sin invertir tanto?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 04/02/2026</span>
-          <span><i>💬</i> Sin comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -996,13 +1024,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           ¿Has perdido dinero en plataformas digitales? 
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 04/02/2026</span>
-          <span><i>💬</i> Sin comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1021,13 +1045,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           Cómo proteger tu dinero cuando la economía cae
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 04/02/2026</span>
-          <span><i>💬</i> Sin comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1046,13 +1066,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           ¿Quieres Ganar dinero sin trabajar con un CDT?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 04/02/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1071,13 +1087,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           ¿Estás en riesgo? Podrían robar tu dinero 
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 01/02/2026</span>
-          <span><i>💬</i> Sin comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1096,13 +1108,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           Ventajas que no sabías que tenías en 5 minutos
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1121,13 +1129,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           ¿Quieres ganar dinero sin perderlo en el intento? 
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1146,13 +1150,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           ¿Quieres invertir sin correr riesgos?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1171,13 +1171,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           ¿Sabías que tu dinero puede crecer con Ualá?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1196,13 +1192,9 @@ En esta sección aprenderás a utilizarlas con criterio, analizar riesgos y toma
         <h2 class="article-title">
           ¿Por qué deberías iniciar con un CDT ahora?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> Actualizado</span>
-          <span><i>💬</i> Sin comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>

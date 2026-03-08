@@ -180,14 +180,16 @@ input[type="number"].goto-page {
     flex-direction: column;
 }
 
-/* BLOQUE SUPERIOR DE TEXTO (CLAVE 🔥) */
+/* BLOQUE SUPERIOR DE TEXTO */
 .text-content {
-    min-height: 90px; /* 👈 ajusta hasta alinear perfecto */
-    border-bottom: 1px solid #e5e5e5; /* 👈 línea debajo del texto */
+    min-height: 90px;
+    border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
+/* CARD FLEX */
 .article-card {
     display: flex;
     flex-direction: column;
@@ -217,6 +219,7 @@ input[type="number"].goto-page {
     color: #1c1c1c;
     margin: 0 0 4px 0;
     line-height: 1.4;
+    text-align: left;
 }
 
 /* BADGE */
@@ -225,6 +228,9 @@ input[type="number"].goto-page {
     font-weight: 500;
     color: #555;
     margin: 0;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 /* IMAGEN 16:9 */
@@ -245,6 +251,32 @@ input[type="number"].goto-page {
 body, html {
     background-color: #ffffff !important;
 }
+</style>
+
+<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+<style>
+  /* ICONO FLECHA */
+  .article-card .card-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg); /* Apunta a la derecha */
+    transition: transform 0.35s ease;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  /* Contenedor relativo para que el icono se posicione correctamente */
+  .article-card {
+    position: relative;
+  }
+
+  /* Opcional: rotar al hacer click */
+  .article-card.open .card-icon {
+    transform: rotate(135deg);
+  }
 </style>
 
 </head>
@@ -974,13 +1006,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           Borrón y Cuenta Nueva en Colombia
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 20/02/2026</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -999,13 +1027,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           ¿Listo para no volver a endeudarte?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1024,13 +1048,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           ¿Cómo limpiar tu nombre tras ese antecedente?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1049,13 +1069,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
            ¿Qué créditos arruinan tu bolsillo?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1074,13 +1090,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           ¿Qué pasa si tomas otra deuda?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1099,13 +1111,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           ¿Cómo saber si mi dinero está en orden?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1124,13 +1132,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           ¿Para qué sirve el método Bola de Nieve?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1149,13 +1153,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           ¿Se puede pagar cinco deudas en una sola?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1174,13 +1174,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           ¿Es posible reducir el monto mensual?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1199,13 +1195,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           ¿Es posible impulsar tu puntaje rápidamente?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1224,13 +1216,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
           ¿Deseas dejar de ser prisionero de tus dudas?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 13/10/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1249,13 +1237,9 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
         <h2 class="article-title">
             ¿Dejaste de pagar un préstamo?
         </h2>
-
-        <div class="meta">
-          <span><i>📅</i> 14/12/2025</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
