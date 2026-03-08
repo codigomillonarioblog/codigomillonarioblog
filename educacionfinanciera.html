@@ -253,6 +253,32 @@ body, html {
 }
 </style>
 
+<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+<style>
+  /* ICONO FLECHA */
+  .article-card .card-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg); /* Apunta a la derecha */
+    transition: transform 0.35s ease;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  /* Contenedor relativo para que el icono se posicione correctamente */
+  .article-card {
+    position: relative;
+  }
+
+  /* Opcional: rotar al hacer click */
+  .article-card.open .card-icon {
+    transform: rotate(135deg);
+  }
+</style>
+
 </head>
 <body class="bg-stone-50 text-stone-900">
 
@@ -822,7 +848,6 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <p>La mente construye primero lo que el dinero refleja después</p>
       </div>
       <img src="assets/png/como-recuperar-control-de-mi-dinero.jpg" alt="Imagen 4" class="article-image">
-      <div class="article-divider"></div>
     </div>
 
   </div>
@@ -1000,12 +1025,9 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <h2 class="article-title">
         Aprende sobre las biografías detrás de grandes fortunas y cómo lo lograron
         </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1026,13 +1048,9 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <h2 class="article-title">
         Mentalidad y hábitos para ahorrar y cumplir tus objetivos
         </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1050,14 +1068,10 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <h2 class="article-title">
         El éxito no es suerte: es mentalidad, un principio fundamental
-        </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+        </h2>         
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1076,13 +1090,9 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <h2 class="article-title">
         Sistemas para proteger y multiplicar tu dinero de forma clara
         </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1101,12 +1111,9 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <h2 class="article-title">
         La forma de pensar que cambia tu destino financiero en la vida real
         </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1125,14 +1132,9 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <h2 class="article-title">
         El problema silencioso de las deudas que nunca desaparecen
         </h2>
-
-        
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1151,13 +1153,9 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <h2 class="article-title">
         ¿Es normal sentir que tu carrera profesional se ha quedado estancada?
         </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1176,13 +1174,9 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <h2 class="article-title">
         El desafío detrás de convertir una idea en un negocio rentable
         </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
@@ -1201,13 +1195,9 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <h2 class="article-title">
         Mirando hacia las oportunidades del mañana, tomando ventaja
         </h2>
-
-        <div class="meta">
-          <span><i data-lucide="check-circle" class="w-4 h-4"></i>Recomendado</span>
-          <span><i>💬</i> Sin Comentarios</span>
-          <div class="arrow-btn">➜</div>
-        </div>
-
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
       </div>
     </a>
   </article>
