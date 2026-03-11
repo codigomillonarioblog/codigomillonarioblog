@@ -708,9 +708,8 @@ Durante años escribió sin garantías, pero cada rechazo fortalecía lo que eve
 
 
 
-<!-- ================= ACORDEÓN ================= -->
-
 <style>
+  /* ================= ACORDEÓN ================= */
   .cf-accordion {
     margin-top: 60px;
   }
@@ -722,14 +721,14 @@ Durante años escribió sin garantías, pero cada rechazo fortalecía lo que eve
   /* Ajustamos el ancho máximo y centramos el acordeón */
   .cf-accordion-item {
     background: #ffffff; /* fondo blanco */
-    border-radius: 14px;
+    border-radius: 0px; /* puntas cuadradas */
     margin: 0 auto 16px auto; /* centrado horizontal */
-    max-width: 600px; /* ancho máximo deseado */
-    
+    max-width: 680px; /* ancho máximo deseado aumentado */
+
     /* Delineado sutil */
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
-    
+
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: translateY(0);
@@ -804,6 +803,7 @@ Durante años escribió sin garantías, pero cada rechazo fortalecía lo que eve
   /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
   .toc-container {
     padding: 0 22px 22px 22px;
+    max-width: 100%;
   }
 
   .toc-list {
@@ -837,6 +837,7 @@ Durante años escribió sin garantías, pero cada rechazo fortalecía lo que eve
     .cf-accordion-item {
       margin-left: 8px;
       margin-right: 8px;
+      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
     }
   }
 </style>
@@ -928,13 +929,6 @@ Durante años escribió sin garantías, pero cada rechazo fortalecía lo que eve
 </script>
 
 
-
-<!-- Separador editorial premium responsive -->
-<div class="relative mt-10 mb-4 w-full">
-  <!-- Línea -->
-  <div class="w-full h-px bg-slate-300"></div>
-  <!-- Etiqueta -->
-</div>
 
 
 
