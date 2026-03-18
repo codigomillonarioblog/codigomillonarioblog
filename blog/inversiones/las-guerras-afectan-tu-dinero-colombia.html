@@ -1794,7 +1794,7 @@ Te puede interesar:
     <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
     <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
     <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button">Ir</button>
-    <a id="viewAllBtn" href="../invertir-en-plataformas/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button">
+    <a id="viewAllBtn" href="../inversiones/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button">
       Ver todos
     </a>
   </div>
@@ -2020,7 +2020,7 @@ searchInput.addEventListener("input", ()=>{
   renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
 });
 
-fetch("../invertir-en-plataformas/index.html")
+fetch("../inversiones/index.html")
 .then(r=>r.text())
 .then(html=>{
   const temp = document.createElement("div");
