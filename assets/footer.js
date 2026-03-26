@@ -4,6 +4,8 @@
     const div = document.createElement("div");
 
     div.innerHTML = `
+      <!-- TODO TU FOOTER EXACTO -->
+      <!-- SIN <script> -->
 
 <!-- ===================== FOOTER PROFESIONAL DEFINITIVO ===================== -->
 <footer style="font-family: Arial, sans-serif; font-size: 11px; font-weight: 400; color: #555; background-color: #333; padding-top: 
@@ -165,54 +167,74 @@ class="bg-gray-600 hover:bg-gray-700 px-2.5 py-1 flex items-center justify-cente
 }
 </style>
 
-<!-- ===================== SCRIPT ===================== -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
 
-  const openModal = modal => {
-    modal.classList.remove("hidden");
-    modal.classList.add("grid");
-    modal.querySelector(".modal-enter").classList.add("modal-enter-active");
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = modal => {
-    modal.classList.add("hidden");
-    modal.classList.remove("grid");
-    modal.querySelector(".modal-enter").classList.remove("modal-enter-active");
-    document.body.style.overflow = "";
-  };
-
-  document.querySelectorAll("[data-modal]").forEach(el => {
-    el.addEventListener("click", () => {
-      const modal = document.getElementById(el.dataset.modal);
-      if (modal) openModal(modal);
-    });
-  });
-
-  document.querySelectorAll(".modal-close").forEach(btn => {
-    btn.addEventListener("click", () => closeModal(btn.closest(".fixed")));
-  });
-
-  document.querySelectorAll(".fixed").forEach(modal => {
-    modal.addEventListener("click", e => {
-      if (e.target === modal) closeModal(modal);
-    });
-  });
-
-});
-</script>
-
-
+      <style>
+        .modal-enter {
+          opacity: 0;
+          transform: scale(0.95);
+          transition: all 0.3s ease-out;
+        }
+        .modal-enter-active {
+          opacity: 1;
+          transform: scale(1);
+        }
+      </style>
     `;
 
     return div;
   }
 
+  function initFooterScripts() {
+
+    const openModal = modal => {
+      modal.classList.remove("hidden");
+      modal.classList.add("grid");
+      modal.querySelector(".modal-enter")?.classList.add("modal-enter-active");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeModal = modal => {
+      modal.classList.add("hidden");
+      modal.classList.remove("grid");
+      modal.querySelector(".modal-enter")?.classList.remove("modal-enter-active");
+      document.body.style.overflow = "";
+    };
+
+    document.querySelectorAll("[data-modal]").forEach(el => {
+      el.addEventListener("click", () => {
+        const modal = document.getElementById(el.dataset.modal);
+        if (modal) openModal(modal);
+      });
+    });
+
+    document.querySelectorAll(".modal-close").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const modal = btn.closest(".fixed");
+        if (modal) closeModal(modal);
+      });
+    });
+
+    document.querySelectorAll(".fixed").forEach(modal => {
+      modal.addEventListener("click", e => {
+        if (e.target === modal) closeModal(modal);
+      });
+    });
+
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
+
+    // 1. Inserta el footer
     document.querySelectorAll(".footer-here").forEach(el => {
       el.appendChild(createFooter());
     });
+
+    // 2. Ejecuta el JS DESPUÉS
+    initFooterScripts();
+
   });
 
 })();
+
+
+
