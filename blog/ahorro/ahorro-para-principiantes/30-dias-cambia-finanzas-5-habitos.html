@@ -1261,7 +1261,7 @@ herramientas
 <div id="share"></div>
 
 <script>
-fetch("share.html")
+fetch("/share.html")
 .then(res => res.text())
 .then(data => {
     document.getElementById("share").innerHTML = data;
