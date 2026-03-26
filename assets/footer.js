@@ -161,24 +161,13 @@ class="bg-gray-600 hover:bg-gray-700 px-2.5 py-1 flex items-center justify-cente
   transform: scale(0.95);
   transition: all 0.3s ease-out;
 }
+
 .modal-enter-active {
   opacity: 1;
   transform: scale(1);
 }
 </style>
 
-
-      <style>
-        .modal-enter {
-          opacity: 0;
-          transform: scale(0.95);
-          transition: all 0.3s ease-out;
-        }
-        .modal-enter-active {
-          opacity: 1;
-          transform: scale(1);
-        }
-      </style>
     `;
 
     return div;
