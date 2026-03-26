@@ -94,7 +94,7 @@ class="bg-gray-600 hover:bg-gray-700 px-2.5 py-1 flex items-center justify-cente
 
 <div>
 <h3 class="font-semibold mb-3 tracking-wide navbar-logo-footer">Contacto</h3>
-<p class="text-white text-[12px]">Colombia — Online</p>
+<p class="text-white text-[12px]">Colombia — Online 2026</p>
 <p class="text-white text-[12px]">codigomillonarioblog@gmail.com</p>
   </div>
 </div>
