@@ -184,7 +184,8 @@ body, html {
 <body class="bg-stone-50 text-stone-900">
 
 
-  <!-- Tipografia de codigo millonario menu -->
+
+<!-- Tipografia de codigo millonario menu -->
 <style>
 .navbar-logo {
     font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
@@ -226,7 +227,7 @@ body, html {
       <li><a href="./opiniones.html">Opiniones</a></li>
       <li><a href="./tienda.html">Productos</a></li>
       <li><a href="./sobre-el-autor.html">Sobre el autor</a></li>
-      <li><a href="#"onclick="openPopup();event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
       <li><a href="./donar.html">Donaciones</a></li>
       <li><a href="./contacto.html">Contacto</a></li>
     </ul>
@@ -260,8 +261,7 @@ body, html {
       <h3>Recursos</h3>
       <a href="./tienda.html">Productos</a>
       <a href="./sobre-el-autor.html">Sobre el autor</a>
-      <a href="#"onclick="openPopup();
-       event.preventDefault();">Descargar guía gratis</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
     </div>
 
     <div class="mobile-section">
@@ -459,6 +459,10 @@ body {
 </style>
 
 <script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('active');
   mobileMenu.classList.toggle('show');
@@ -479,10 +483,6 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   });
 });
 </script>
-
-
-
-
 
 <!-- ================== SCRIPT DEL BANNER ================== -->
 <script>
