@@ -1711,102 +1711,104 @@ style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color:
 
 
 
+
+
        <section class="mb-16">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- ================= ACORDEÓN ================= -->
 
   <style>
-  .cf-accordion {
-    margin-top: 60px;
-  }
+/* ================= AISLAMIENTO ================= */
+.cf-accordion {
+  margin-top: 60px;
+  isolation: isolate;
+}
 
-  .cf-accordion * {
-    box-sizing: border-box;
-  }
+.cf-accordion,
+.cf-accordion * {
+  box-sizing: border-box;
+}
 
-  .cf-accordion-item {
-    background: #ffffff; /* fondo blanco fijo */
-    border-radius: 14px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
-    transform: translateY(0);
-    will-change: transform; /* optimiza animación */
-    border: 1px solid rgba(0,0,0,0.03);
-  }
+/* ================= ITEM ================= */
+.cf-accordion .cf-accordion-item {
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(0);
+  will-change: transform;
+  border: 1px solid rgba(0,0,0,0.03);
+}
 
-  /* Animación tipo card con sombra */
-  .cf-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
-  }
+.cf-accordion .cf-accordion-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
 
-  .cf-accordion-header {
-    padding: 14px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000;
-    user-select: none;
-    background: #ffffff;
-    transition: none;
-  }
+/* ================= HEADER ================= */
+.cf-accordion .cf-accordion-header {
+  all: unset; /* 🔒 resetea estilos externos */
+  padding: 14px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 400;
+  color: #000000;
+  user-select: none;
+  background: #ffffff;
+}
 
-  .cf-accordion-header:hover {
-    background: #ffffff;
-  }
+/* ================= ICONO ================= */
+.cf-accordion .cf-accordion-icon {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
 
-  /* ICONO */
-  .cf-accordion-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(45deg);
-    transform-origin: center;
-    transition: transform 0.35s ease;
-    margin-left: 12px;
-    flex-shrink: 0;
-  }
+.cf-accordion .cf-accordion-item.is-open .cf-accordion-icon {
+  transform: rotate(-135deg);
+}
 
-  .cf-accordion-item.is-open .cf-accordion-icon {
-    transform: rotate(-135deg);
-  }
+/* ================= CONTENIDO ================= */
+.cf-accordion .cf-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  position: relative;
+}
 
-  .cf-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: relative;
-  }
+/* LÍNEA DIVISORIA */
+.cf-accordion .cf-accordion-item.is-open .cf-accordion-content::before {
+  content: "";
+  display: block;
+  width: 88%;
+  margin: 0 auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
 
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
-  .cf-accordion-item.is-open .cf-accordion-content::before {
-    content: "";
-    display: block;
-    width: 88%;
-    margin: 0 auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .cf-accordion-content p {
-    padding: 18px 22px 22px;
-    margin: 0;
-    color: #000000;
-    line-height: 1.7;
-    font-size: 16px;
-  }
+.cf-accordion .cf-accordion-content p {
+  padding: 18px 22px 22px;
+  margin: 0;
+  color: #000000;
+  line-height: 1.7;
+  font-size: 16px;
+}
 </style>
 
 
     <div class="cf-accordion">
 <!-- ================= SEPARADOR ================= -->
-
 
       <div class="cf-accordion-item">
         <div class="cf-accordion-header">
@@ -1993,6 +1995,38 @@ comunes y tomar decisiones más inteligentes sobre tu dinero. Esto convierte la 
 </section>
     <!-- ================= FIN ACORDEÓN ================= -->
 
+
+    <script id="q9xk21">
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".cf-accordion-item");
+
+  items.forEach(item => {
+    const header = item.querySelector(".cf-accordion-header");
+
+    header.addEventListener("click", () => {
+      // cerrar otros (opcional tipo FAQ)
+      items.forEach(i => {
+        if (i !== item) {
+          i.classList.remove("is-open");
+          const content = i.querySelector(".cf-accordion-content");
+          content.style.maxHeight = null;
+        }
+      });
+
+      // toggle actual
+      item.classList.toggle("is-open");
+
+      const content = item.querySelector(".cf-accordion-content");
+
+      if (item.classList.contains("is-open")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+  });
+});
+</script>
 
 
   <!-- HERO PRINCIPAL -->
