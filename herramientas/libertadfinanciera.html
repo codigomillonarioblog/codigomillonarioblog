@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Libertad Financiera - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../assets/img/favicon-v2.png" type="image/png">
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+<style>
+body, html {
+  background-color: #ffffff !important;
+}
+</style>
+
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../herramientas.html">Herramientas</a></li>
+      <li><a href="../opiniones.html">Opiniones</a></li>
+      <li><a href="../tienda.html">Productos</a></li>
+      <li><a href="../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../donar.html">Donaciones</a></li>
+      <li><a href="../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../index.html">Inicio</a>
+      <a href="../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../herramientas.html">Herramientas</a>
+      <a href="../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../tienda.html">Productos</a>
+      <a href="../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../donar.html">Donaciones</a>
+      <a href="../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+
+
+  <!-- HERO PRINCIPAL -->
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+<style>
+.marquee-line {
+  height: 1px;            /* línea delgada */
+  background-color: #ccc;  /* gris claro */
+  width: 100%;            /* ocupa todo el contenedor */
+  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
+}
+</style>
+
+
+
+<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+  <span class="block">
+     Calculadora de libertad financiera
+  </span>
+</div>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+    <h1>
+ Descubre cuánto dinero necesitas invertir <br> para vivir de tus 
+rendimientos sin volver a preocuparte por el dinero.
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+
+  <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
+Calcula de manera clara y realista cuánto capital necesitas acumular para que tus inversiones generen ingresos suficientes y sostenibles.<br> Aprende a proyectar tus rendimientos, planificar tu
+ libertad financiera y construir una estrategia que te permita vivir de tus ingresos pasivos sin depender de un salario fijo.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+   
+
+
+        <!-- ESPACIO FINAL -->
+    <section class="py-20"></section>
+
+
+
+    <!-- CONTENIDO -->
+    <main>
+      <section class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10 border border-stone-200">
+
+            <form id="calcForm" class="space-y-6">
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Tus gastos mensuales (COP)</label>
+                    <input type="text" id="gastos" class="inputNumber w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Rendimiento anual estimado (%)</label>
+                    <input type="text" id="rendimiento" class="inputPercent w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
+                </div>
+
+                <button type="button" onclick="calcularLibertad()"
+                    class="w-full bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition-colors">
+                    Calcular
+                </button>
+
+                <button type="button" onclick="reiniciarCalc()"
+                    class="w-full bg-stone-200 text-stone-700 py-3 rounded-xl text-lg font-semibold hover:bg-stone-300 transition-colors">
+                    Reiniciar Calculadora
+                </button>
+
+            </form>
+
+        </section>
+    </main>
+
+    <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-[999]">
+        <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl animate-[modalShow_.3s_ease]">
+
+            <h3 class="text-3xl font-bold text-center mb-6">Resultado</h3>
+
+            <p class="text-lg text-stone-700">
+                Gastos anuales: <span id="m_gastosAnuales" class="font-semibold"></span>
+            </p>
+
+            <p class="text-lg text-stone-700 mt-2">
+                Rendimiento anual estimado: <span id="m_rendimiento" class="font-semibold"></span>
+            </p>
+
+            <p class="text-xl font-bold text-green-600 text-center mt-6">Capital necesario:</p>
+
+            <p class="text-4xl text-green-700 font-extrabold text-center mt-2" id="m_capital"></p>
+
+            <button onclick="cerrarModal()" 
+                class="w-full mt-8 bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition">
+                Cerrar
+            </button>
+
+        </div>
+    </div>
+
+    <section class="py-12"></section>
+
+    <script>
+        function cleanNumberFormat(value) {
+            return parseFloat(value.replace(/\./g, '').replace(/,/g, '').replace(/%/g, '')) || 0;
+        }
+
+        document.querySelectorAll('.inputNumber').forEach(input => {
+            input.addEventListener('input', function() {
+                let raw = this.value.replace(/\D/g, '');
+                this.value = raw === '' ? '' : parseInt(raw).toLocaleString('es-CO');
+            });
+        });
+
+        document.querySelectorAll('.inputPercent').forEach(input => {
+            input.addEventListener('input', function() {
+                let raw = this.value.replace(/\D/g, '');
+                this.value = raw === '' ? '' : raw + '%';
+            });
+        });
+
+        function calcularLibertad() {
+            const gastos = cleanNumberFormat(document.getElementById("gastos").value);
+            const rendimiento = cleanNumberFormat(document.getElementById("rendimiento").value) / 100;
+
+            if (!gastos || !rendimiento) {
+                alert("Por favor llena todos los campos.");
+                return;
+            }
+
+            const gastosAnuales = gastos * 12;
+            const capitalNecesario = gastosAnuales / rendimiento;
+
+            document.getElementById("m_gastosAnuales").textContent = gastosAnuales.toLocaleString("es-CO") + " COP";
+            document.getElementById("m_rendimiento").textContent = (rendimiento * 100).toFixed(2) + "%";
+            document.getElementById("m_capital").textContent = capitalNecesario.toLocaleString("es-CO") + " COP";
+
+            document.getElementById("modal").classList.remove("hidden");
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal").classList.add("hidden");
+        }
+
+        function reiniciarCalc() {
+            document.getElementById("gastos").value = "";
+            document.getElementById("rendimiento").value = "";
+            cerrarModal();
+        }
+    </script>
+
+
+
+
+<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+  <span class="block">
+    Planifica tu camino hacia la libertad financiera
+  </span>
+</div>
+
+
+
+
+
+
+ <section class="mb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
+
+    <!-- ================= ACORDEÓN ================= -->
+
+  <style>
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco fijo */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transform: translateY(0);
+    will-change: transform; /* optimiza animación */
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+
+  /* Animación tipo card con sombra */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+</style>
+
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+        Calcula tu capital necesario
+          <span class="cf-accordion-icon"></span>
+        </div>
+        <div class="cf-accordion-content">
+  
+           <p>
+La 
+<strong>
+Calculadora de Libertad Financiera
+</strong>
+es una herramienta diseñada para ayudarte a estimar cuánto capital necesitas
+invertir para cubrir tus gastos y reducir tu dependencia de un empleo tradicional.
+</p>
+
+<p>
+A partir de tus objetivos de vida, nivel de gastos y una rentabilidad estimada,
+esta calculadora te permite visualizar un escenario financiero a largo plazo
+de forma clara y realista.
+</p>
+
+<p>
+
+<strong>
+No es una promesa de ingresos ni asesoría financiera
+</strong>.
+Es una simulación que te ayuda a entender qué tan lejos estás de tu meta y
+qué variables influyen en tu camino hacia la independencia económica.
+</p>
+
+<p>
+<strong>
+Esta calculadora es ideal para:
+</strong>
+</p>
+
+<ul style="padding-left: 30px;">
+  <li>→ Personas que sueñan con alcanzar la libertad financiera.</li>
+  <li>→ Quienes desean planificar ingresos pasivos.</li>
+  <li>→ Ahorristas e inversionistas a largo plazo.</li>
+  <li>→ Usuarios que buscan claridad sobre sus objetivos financieros.</li>
+</ul>
+
+<p>
+La libertad financiera no se trata solo de ganar más dinero, sino de
+planificar con intención y tomar decisiones alineadas con el estilo de vida
+que deseas construir.
+</p>
+
+<p>
+Usa esta Calculadora de Libertad Financiera como una guía para definir metas,
+medir tu progreso y fortalecer tu estrategia financiera a largo plazo.
+</p>
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+    document.querySelectorAll('.cf-accordion').forEach(accordion => {
+  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.cf-accordion-item');
+      const content = item.querySelector('.cf-accordion-content');
+
+      // Solo afecta los items de ESTE acordeón
+      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+        }
+      });
+
+      item.classList.toggle('is-open');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+    </script>
+
+
+</section>
+
+
+
+ <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+</body>
+</html>
