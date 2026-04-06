@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo proteger y hacer crecer tu dinero en Colombia durante la crisis | Código Millonario</title>
+    <meta name="description" content="No dejes que la crisis afecte tus finanzas. Aprende a proteger y aumentar tu dinero en Colombia con estrategias seguras y fáciles de aplicar, incluso si estás empezando a invertir.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../../assets/img/favicon-v2.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../../../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../../index.html">Inicio</a></li>
+      <li><a href="../../../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../../tienda.html">Productos</a></li>
+      <li><a href="../../../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../../../donar.html">Donaciones</a></li>
+      <li><a href="../../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../../../index.html">Inicio</a>
+      <a href="../../../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../../../herramientas.html">Herramientas</a>
+      <a href="../../../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../../../tienda.html">Productos</a>
+      <a href="../../../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../../../donar.html">Donaciones</a>
+      <a href="../../../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+   Educación Financiera
+  </span>
+</div>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+    <h1>
+Protege tu dinero y aprende a hacerlo crecer en Colombia durante tiempos de crisis
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+</div>
+
+<div class="flex flex-col justify-start gap-5 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+En tiempos de inestabilidad, el mayor riesgo no es la economía… es reaccionar desde el miedo y no desde el análisis.
+La crisis no siempre destruye, muchas veces revela quién estaba preparado y quién solo vivía cómodo.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+<style>
+.layout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content-column {
+  width: 100%;
+  max-width: 760px;
+  padding-left: 35px;  /* antes 60px */
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-column {
+    max-width: 720px;
+    padding-left: 25px; /* antes 40px */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column {
+    max-width: 100%;
+    padding-left: 10px; /* antes 20px */
+    padding-right: 18px;
+  }
+}
+</style>
+
+<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+
+<style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+
+
+
+
+<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
+   Código Millonario en Redes:
+</div>
+
+
+ <!-- INTRODUCCIÓN GENERAL -->
+<main class="py-5">
+  <div class="layout-wrapper">
+    <article class="content-column">
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex gap-4 social-container">
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+     class="social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
+
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+     class="social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://pin.it/3tqNXYoAA" target="_blank"
+     class="social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+
+  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+  </a>
+
+</div>
+
+<!-- TAMAÑO INCONO TWITTER -->
+<style>
+.social-icon svg{
+  width:14px !important;
+  height:14px !important;
+}
+</style>
+
+<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
+<div class="max-w-4xl mt-7 ml-0 px-4 md:px-0 flex items-start space-x-4" >
+  <!-- Imagen del autor -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+  <!-- Texto del autor -->
+  <div class="py-3">
+    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+        Francisco Urrego
+      </a>
+    </p>
+  </div>
+</div>
+
+
+  <div class=" mt-5 w-full h-px bg-slate-300"></div>
+
+  <div style="font-family: Arial, sans-serif; font-size: 11px; font-weight: 400; color: #777;">
+   <p>
+        Actualizado el 04 feb 2026 | 15:19 h
+   </p>
+    <p>
+      ⏱ 5 min lectura
+    </p>
+    </div>
+
+
+<div class="flex justify-center md:justify-start mt-5 relative px-4 sm:px-0 md:-ml-8">
+  <img src="../../../assets/png/proteger-dinero-en-crisis-economica.jpg"
+       alt=""
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10">
+</div>
+
+
+
+
+<style>
+  /* ================= ACORDEÓN ================= */
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  /* Ajustamos el ancho máximo y centramos el acordeón */
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco */
+    border-radius: 0px; /* puntas cuadradas */
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 680px; /* ancho máximo deseado aumentado */
+
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  /* Animación tipo card con sombra al pasar el mouse */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+    max-width: 100%;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
+    }
+  }
+</style>
+
+<div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+ 
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. ¿Qué hacer con tu dinero en tiempos de crisis económica? Descúbrelo aquí</a></li>
+    <li><a href="#titulo2">2. Cómo convertir la inestabilidad económica en oportunidades: ajusta tus finanzas hoy</a></li>
+    <li><a href="#titulo3">3. ¿Qué sectores están creciendo y cómo sacarles ventaja en tiempos de cambio?</a></li>
+    <li><a href="#titulo4">4. Cómo evaluar tu estabilidad financiera personal antes de que la economía te afecte</a></li>
+    <li><a href="#titulo5">5. Hazte más valioso: la mejor defensa para proteger tus ingresos en crisis</a></li>
+    <li><a href="#titulo6">6. Mueve tu dinero a tiempo: cómo actuar rápido sin caer en la desesperación</a></li>
+    <li><a href="#titulo7">7. ¿Tu seguridad financiera depende de un solo ingreso? Descubre cómo diversificar</a></li>
+    <li><a href="#titulo8">8. ¿Estás listo para adaptarte y aprovechar oportunidades en tiempos económicos difíciles?</a></li>
+    <li><a href="#titulo9">9. Cómo estar preparado y tomar control de tus finanzas cuando la economía es incierta</a></li>
+  </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
+
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
+
+        item.classList.toggle('is-open');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
+
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+<!-- INTRODUCCIÓN -->
+   <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">¿Qué hacer con tu dinero en tiempos de crisis económica? Descúbrelo aquí</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    Cuando la economía empieza a moverse de forma impredecible, la sensación más común es la incertidumbre, el temor de no saber qué podría pasar. Suben los precios, cambian las tasas, aparecen noticias alarmantes y muchas personas reaccionan desde el miedo. El problema es que, en ese estado, es fácil tomar decisiones apresuradas que terminan afectando aún más la estabilidad financiera personal.
+</p>
+
+<p>
+    En contextos así, el objetivo no debería ser esconderse ni paralizarse, sino entender qué está pasando y qué sí está bajo tu control. No todas las decisiones deben ser drásticas, pero sí conscientes. Mantener la calma y actuar con razonamiento marca una diferencia enorme entre proteger tu dinero o perderlo por malas decisiones.
+</p>
+
+<p>
+    En este contenido encontrarás un enfoque práctico para afrontar momentos de inestabilidad económica: cómo pensar tus finanzas con cabeza fría, qué errores evitar y qué tipo de decisiones pueden ayudarte a mantener estabilidad incluso cuando el entorno no es favorable.
+</p>
+
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+   <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo convertir la inestabilidad económica en oportunidades: ajusta tus finanzas hoy</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El problema principal de la crisis es verla como eso mismo, algo negativo, algo que trae caos, desorden, pérdidas; no obstante, no siempre es así, <strong>hay quienes aprovechan muchas oportunidades de estas situaciones que parecen el fin.</strong>
+</p>
+
+<p>
+    Cuando la economía se vuelve inestable, es común interpretar cualquier cambio como una crisis. Sin embargo, <strong>no todos los períodos difíciles son sinónimo de desastre</strong>; muchos son etapas de transición donde el sistema se reajusta, se pasa a un modelo de sistema viejo a un modelo nuevo, todo se reajusta de acuerdo a la contemporaneidad social.
+</p>
+
+<p>
+    Los precios, los sectores productivos y los hábitos de consumo cambian constantemente. La diferencia no está en evitar esos movimientos, sino en entenderlos y ajustar tus decisiones a tiempo. <strong>Ahí es donde entra tu verdadera fortaleza financiera.</strong>
+</p>
+
+<p>
+    Ver estos cambios como una oportunidad para reorganizar gastos, replantear prioridades y fortalecer tu base económica te coloca un paso adelante de quienes reaccionan desde el pánico. Ajustar no es retroceder; es adaptarse para mantenerse estable y si el temor no te vence sobresalir victorioso.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<!-- PARRAFO -->
+   <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">¿Qué sectores están creciendo y cómo sacarles ventaja en tiempos de cambio?</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+A menudo <strong>la urgencia, el descontrol y el querer actuar con prisa suelen ser más devastadores que la misma crisis en sí.</strong> Todos corren a invertir sin nunca haber invertido en nada antes; algunos invierten solo por especulación, otros invierten a un plazo corto con la esperanza de salvar sus ahorros de forma rápida. Sin embargo, el sistema financiero mundial no funciona así.
+</p>
+
+<p>
+Muchas veces, en estas crisis, específicamente en los momentos más difíciles, la economía no se detiene por completo. Mientras algunos sectores se contraen y se preparan para amortiguar una caída, otros se adaptan, añaden métodos a sus procesos, se fortalecen y ganan relevancia en el mercado. <strong>El error común es concentrarse solo en lo que cae y se queda</strong>, dando lugar al pasar por alto lo nuevo que sigue avanzando sin ellos.
+</p>
+
+<p>
+En lugar de enfocarte únicamente en lo negativo, observa qué cambió realmente, si es o no una crisis real, a quiénes afecta realmente, por qué, sobre todo y lo más importante, qué beneficios puedes sacar de eso, qué servicios se vuelven indispensables y qué negocios están acelerando su digitalización, automatización. Estos cambios no son casuales; responden a nuevas necesidades y hábitos de consumo que es posible que hayan dejado de existir o vinieron nuevos.
+</p>
+
+<p>
+<strong>Identificar estos patrones no significa invertir a ciegas, sino entender hacia dónde se está reorganizando la economía en general.</strong> Prestar atención a estas señales te permite tomar decisiones más informadas y alineadas con la nueva dirección del mercado.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- PARRAFO -->
+   <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo evaluar tu estabilidad financiera personal antes de que la economía te afecte</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    Cuando el panorama económico del país se vuelve incierto, es fácil asumir que tu situación personal está automáticamente en riesgo por especulaciones externas. Sin embargo, la estabilidad financiera no es igual para todos y, en muchos casos, es más individual y personal de lo que realmente parece.
+</p>
+
+<p>
+    Antes de tomar decisiones impulsivas, analiza con calma de dónde provienen tus ingresos, qué tan estable es tu empleo o tu negocio y si realmente dependen de forma directa o indirecta del entorno nacional afectado. No todas las actividades económicas reaccionan igual ante los mismos cambios y a veces las afecciones pasan desapercibidas, ya que no es para la mayoría.
+</p>
+
+<p>
+    A veces, la sensación de inestabilidad no viene de tu realidad financiera, sino del ruido constante de las noticias y las opiniones externas que vienen consigo. Separar los hechos de la percepción te permite evaluar tu situación con mayor claridad y tomar decisiones basadas en datos, no en miedo colectivo.
+</p>
+
+</div>
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Las mejores decisiones nacen del análisis propio, no del miedo colectivo.
+</p>
+
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+   <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Hazte más valioso: la mejor defensa para proteger tus ingresos en crisis</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Esta es una regla fundamental del crecimiento y desarrollo personal de la que nadie habla en realidad. Muchas veces, cuando llega la crisis, no afecta a los que ya estaban preparados, sino a los que no lo estaban, decidieron quedarse atrás y, cuando llegan los cambios, entran en el olvido. Solo unos ajustes y redirección pueden ponerlos de regreso en el juego, donde están los grandes. No es que seas menos valioso, solo que para las nuevas reglas tu enfoque dejó de ser válido en ese sistema económico.
+</p>
+
+<p>
+    Cuando todo parece incierto, la mayoría de personas se enfoca únicamente en recortar gastos y
+    <strong>
+“aguantar”</strong> hasta que la situación mejore y pase la tormenta. Esto es un error de principiantes. El problema es que ahorrar solo te da algo de tiempo, pero no
+    te da control real de ese método. La verdadera estabilidad no viene de gastar menos, sino de valer más en este caso.
+</p>
+
+</div>
+
+
+
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Más valor, más ingresos y mejores oportunidades de negociación en cualquier escenario</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    Aumentar tu valor laboral o profesional significa convertirte en alguien difícil de reemplazar, con cualidades que el mercado nuevo no puede ignorar.
+    Mejorar tus habilidades, aprender algo que en tu entorno se volvió un reto, destacar en tu trabajo o a lo que te dediques hace que,
+    incluso en momentos de recortes o crisis, sigas siendo relevante mientras otros se estancan en algo básico y fundamental para la vida financiera.
+</p>
+
+<p>
+    En la práctica, esto se traduce en más oportunidades, mejores ingresos y mayor capacidad de
+    negociación. No se trata de trabajar más horas, sino de trabajar con más ingenio. En tiempos
+    difíciles, el que más opciones tiene no es el que más ahorra, sino el que más valor aporta. Cabe aclarar que no se trata de saltar de una profesión u oficio a otro; esto solo lleva al fracaso. Aquí te invito a ver la realidad de tu entorno, área o situación y estar dispuesto a arriesgarte en añadir valor a tu situación financiera.
+</p>
+
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+   <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Mueve tu dinero a tiempo: cómo actuar rápido sin caer en la desesperación</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    En muchas ocasiones una economía inestable sí exige rapidez en ciertos movimientos: ajustar precios, optimizar gastos,
+    buscar nuevas oportunidades antes de que se sature el mercado o renegociar condiciones.
+    <strong>Quedarse inmóvil esperando a que todo se calme suele ser más peligroso que actuar con prudencia.</strong> No se trata de correr con una venda
+    en los ojos, sino de no dormirse con la solución en las manos.
+</p>
+
+<p>
+    Sin embargo, <strong>la velocidad sin responsabilidad lleva a errores costosos</strong>, incluso llevándote sin querer al mismo hueco de donde viene la crisis.
+    La desesperación nubla el juicio, el criterio y la percepción de poder actuar a favor de tu bienestar. En el mar, quien se desespera se ahoga; así mismo en las crisis.
+    Quien empuja sin ver todo el panorama puede aceptar ofertas engañosas, negocios dudosos o promesas de dinero rápido que, en la
+    mayoría de casos, empeoran la situación inicial.
+</p>
+
+<p>
+    <strong>Actuar con inteligencia significa analizar rápido, decidir con datos y ejecutar con calma.</strong>
+    No todas las oportunidades son para todos ni todo cambio es urgente o se debe realizar rápido. En contextos difíciles,
+    sobreviven y crecen quienes se mueven a tiempo, pero con la cabeza fría y los números claros. Recuerda que cuando la crisis llega, no siempre afecta todo de inmediato; a veces es una advertencia que te hace el llamado de moverte o quedarte y ser arrastrado tiempo después sin aviso.
+</p>
+
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">¿Tu seguridad financiera depende de un solo ingreso? Descubre cómo diversificar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    Este apartado no podía dejarlo pasar y, aunque la mayoría ya haya escuchado y ya parezca repetitivo el tema de diversificar,
+    es fundamental añadir algo de información sobre este tema aquí en Código Millonario.
+    <strong>Una economía inestable no crea los problemas, los expone sin censuras.</strong> Cuando todo funciona bien, depender de
+    una sola fuente de ingreso puede parecer suficiente; a veces las crisis no son a nivel global, sino más bien
+    a nivel personal; por decir, alguien con una fuente de ingresos principal perdió ese negocio, esto sigue siendo el mismo problema.
+</p>
+
+<p>
+    La comodidad puede dar satisfacción, la pérdida de ella puede causar confusión, llevando a la quiebra y sin el tiempo necesario
+    para recuperarse al no existir otros ingresos. <strong>Cuando llegan los cambios, esa dependencia se convierte en una debilidad clara.</strong>
+</p>
+
+<p>
+    Si tu ingreso, tu negocio o tu estabilidad dependen de una sola fuente, estás más expuesto a
+    decisiones externas que no controlas. Un ajuste, un recorte o un cambio en el mercado puede
+    afectar directamente tu flujo de dinero sin darte margen de reacción.
+</p>
+
+<p>
+    No se trata de tener muchas fuentes de ingreso sin dirección, sino de construir alternativas
+    realistas y complementarias a lo que ya haces. <strong>Diversificar no es dispersarse, es reducir el riesgo para que tu seguridad financiera no dependa de un solo punto de apoyo.</strong> Hay quienes les funciona
+    la diversificación en otros entornos que no dependen de su mismo modelo de negocio; sin embargo, no lo añado en esta
+    sección, ya que eso requiere tiempo, inversión y largo plazo, generando un entorno que en una crisis puede generar un fracaso más.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<!-- PARRAFO -->
+   <h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">¿Estás listo para adaptarte y aprovechar oportunidades en tiempos económicos difíciles?</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    <strong>Las personas o empresas rígidas suelen ser las primeras en quebrarse cuando el entorno cambia.</strong>
+    Aferrarse a un solo plan, método o ingreso puede ser cómodo mientras todo va bien, pero se convierte
+    en un lastre cuando llega la incertidumbre.
+</p>
+
+<p>
+    Adaptarte significa estar dispuesto a modificar estrategias, probar nuevas rutas o ajustar tus
+    planes sin sentir que estás retrocediendo. <strong>La flexibilidad no es improvisación, sino capacidad de respuesta inteligente</strong>, cosa que para algunas grandes empresas puede ser un verdadero dolor de cabeza y costos adicionales en
+    rediseñar sus sistemas: identificar qué funciona, qué no y cómo aprovechar las nuevas circunstancias pone a cualquiera un paso adelante siempre.
+</p>
+
+<p>
+    En la práctica, la flexibilidad convierte los problemas en oportunidades reales. Quien se mueve
+    rápido, analiza y ajusta, encuentra caminos donde otros solo ven obstáculos. <strong>Una crisis es el mejor método que te advierte que te estás quedando sin cualidades esenciales para un nuevo entorno en camino.</strong>
+</p>
+  
+<p>    
+    Muchas veces, grandes negocios desaparecen lentamente por estas causas hasta quedar en la nada; piensan que nada los puede afectar,
+    sin embargo, hasta el que cree tener la razón puede terminar en el olvido permanente.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- PARRAFO -->
+   <h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo estar preparado y tomar control de tus finanzas cuando la economía es incierta</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    Esta guía ofrece orientación general para ayudarte a enfrentar momentos económicos inestables,
+    pero recuerda que cada situación personal es diferente. No existe un único camino que funcione
+    para todos; cualquier decisión relevante debe tomarse con análisis propio y, si lo necesitas,
+    con asesoría profesional.
+</p>
+
+<p>
+    Lo más importante es que actúes con claridad, valor y estrategia. Identifica tus fortalezas,
+    aumenta tu valor, diversifica tus fuentes de ingreso, mantente flexible y nunca tomes decisiones
+    impulsadas por el miedo o la presión externa. La estabilidad real no se encuentra en evitar riesgos,
+    sino en estar preparado para afrontarlos y aprovechar las oportunidades que surgen incluso en la crisis.
+</p>
+
+<p>
+    Cada pequeño paso que tomes hoy, pensado con inteligencia y disciplina, puede marcar la diferencia
+    para que mañana no solo sobrevivas a la incertidumbre, sino que salgas fortalecido y con mayor control
+    de tu futuro financiero.
+</p>
+
+</div>
+
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+No sobrevive quien huye de la tormenta, sino quien la vive y se prepara para la próxima.
+</p>
+
+</div>
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+
+  <!-- Sección recomendada -->
+<div class="mt-5 mb-10">
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
+    <p class="text-sm text-slate-600 italic leading-relaxed"
+       style="font-family: 'Poppins', sans-serif;">
+       <strong class="font-semibold text-slate-800">
+      Código Millonario</strong> recomienda:
+    </p>
+  </blockquote>
+</div>
+    
+    
+        </div>
+    </main>
+
+
+
+
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center text-sm mb-4" style=" font-family: 'Montserrat', sans-serif;">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style=" font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../invertir-en-plataformas/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style=" font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style=" font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+
+    <p class="interlink-heading text-center text-sm mb-6" style=" font-family: 'Montserrat', sans-serif;">
+    Lo más leído
+    </p>
+
+    <div id="interlinkGrid"></div>
+
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* CONTENEDOR */
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ITEM */
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* IMAGEN */
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* CONTROLES */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb; /* 👈 NUEVA LÍNEA */
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* BOTONES */
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+/* 🔥 FUNCIÓN PARA CORTAR TEXTO */
+function truncate(text, maxLength = 60){
+  return text.length > maxLength 
+    ? text.substring(0, maxLength) + "..." 
+    : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title, 60);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <p>Este artículo relacionado puede ayudarte a mejorar tus conocimientos financieros de forma estratégica.</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../invertir-en-plataformas/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+
+  const links = Array.from(temp.querySelectorAll(".article a"));
+
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+   
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

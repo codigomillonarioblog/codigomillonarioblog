@@ -1,0 +1,1916 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajar más no significa avanzar: la verdad que casi nadie quiere decir | Código Millonario</title>
+    <meta name="description" content="Millones de personas trabajan más que nunca y aún así no sienten progreso. Descubre las razones económicas y mentales detrás de este problema moderno.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../../assets/img/favicon-v2.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../../../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../../index.html">Inicio</a></li>
+      <li><a href="../../../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../../tienda.html">Productos</a></li>
+      <li><a href="../../../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../../../donar.html">Donaciones</a></li>
+      <li><a href="../../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../../../index.html">Inicio</a>
+      <a href="../../../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../../../herramientas.html">Herramientas</a>
+      <a href="../../../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../../../tienda.html">Productos</a>
+      <a href="../../../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../../../donar.html">Donaciones</a>
+      <a href="../../../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+
+<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+   Educación Financiera
+  </span>
+</div>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+    <h1>
+Trabajamos más que nunca… ¿por qué sentimos que no avanzamos?
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+</div>
+
+<div class="flex flex-col justify-start gap-5 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Estar ocupado no es lo mismo que estar avanzando; muchas veces solo significa que estás reaccionando todo el día.
+Si cada mes empiezas desde cero, no estás construyendo progreso, solo estás sosteniendo el sistema.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+<style>
+.layout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content-column {
+  width: 100%;
+  max-width: 760px;
+  padding-left: 35px;  /* antes 60px */
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-column {
+    max-width: 720px;
+    padding-left: 25px; /* antes 40px */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column {
+    max-width: 100%;
+    padding-left: 10px; /* antes 20px */
+    padding-right: 18px;
+  }
+}
+</style>
+
+<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+
+<style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+
+
+
+
+
+<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
+   Código Millonario en Redes:
+</div>
+
+
+ <!-- INTRODUCCIÓN GENERAL -->
+<main class="py-5">
+  <div class="layout-wrapper">
+    <article class="content-column">
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex gap-4 social-container">
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+     class="social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
+
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+     class="social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://pin.it/3tqNXYoAA" target="_blank"
+     class="social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+
+  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+  </a>
+
+</div>
+
+<!-- TAMAÑO INCONO TWITTER -->
+<style>
+.social-icon svg{
+  width:14px !important;
+  height:14px !important;
+}
+</style>
+
+<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
+<div class="max-w-4xl mt-7 ml-0 px-4 md:px-0 flex items-start space-x-4" >
+  <!-- Imagen del autor -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+  <!-- Texto del autor -->
+  <div class="py-3">
+    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+        Francisco Urrego
+      </a>
+    </p>
+  </div>
+</div>
+
+
+  <div class=" mt-5 w-full h-px bg-slate-300"></div>
+
+  <div style="font-family: Arial, sans-serif; font-size: 11px; font-weight: 400; color: #777;">
+   <p>
+        Escrito el 31 ene 2026 | 21:05 h
+   </p>
+    <p>
+      ⏱ 8 min lectura
+    </p>
+    </div>
+
+
+<div class="flex justify-center md:justify-start mt-5 relative px-4 sm:px-0 md:-ml-8">
+  <img src="../../../assets/png/trabajar-mas-avanzar-menos.webp"
+       alt=""
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10">
+</div>
+
+
+
+
+<style>
+  /* ================= ACORDEÓN ================= */
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  /* Ajustamos el ancho máximo y centramos el acordeón */
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco */
+    border-radius: 0px; /* puntas cuadradas */
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 680px; /* ancho máximo deseado aumentado */
+
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  /* Animación tipo card con sombra al pasar el mouse */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+    max-width: 100%;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
+    }
+  }
+</style>
+
+<div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+ 
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. ¿Por qué trabajar más ya no garantiza progreso económico?</a></li>
+    <li><a href="#titulo2">2. Antes el trabajo terminaba; hoy la mente nunca descansa</a></li>
+    <li><a href="#titulo3">3. La diferencia entre trabajar más y realmente progresar</a></li>
+    <li><a href="#titulo4">4. El costo de vida sube, pero el tiempo sigue siendo el mismo</a></li>
+    <li><a href="#titulo5">5. La diferencia entre trabajar duro y trabajar con visión</a></li>
+    <li><a href="#titulo6">6. La diferencia entre vender tu tiempo y construir un activo</a></li>
+    <li><a href="#titulo7">7. Trabajar más no siempre es el problema. El problema es para qué trabajas</a></li>
+    <li><a href="#titulo8">8. Trabajar más ya no basta: lo que realmente marca la diferencia</a></li>
+  </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
+
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
+
+        item.classList.toggle('is-open');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
+
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+<!-- INTRODUCCIÓN -->
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">¿Por qué trabajar más ya no garantiza progreso económico?</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Hay una percepción cada vez más fuerte en los tiempos actuales. 
+No hay nada más frustrante que sentir que el esfuerzo no <strong>produce resultados</strong>. 
+Muchas personas han vivido ese momento en el que un día descubren que aquello por lo que trabajaron tanto parece no avanzar.
+</p>
+
+<p>
+Ideas que en algún momento parecían tener un gran futuro hoy parecen estar exactamente en el mismo lugar que hace meses o incluso años. 
+Ese sentimiento de <strong>estancamiento</strong> se ha vuelto más común de lo que muchos imaginan.
+</p>
+
+<p>
+De hecho, no es una sensación aislada ni exclusiva de unas pocas personas. 
+Cada vez más individuos comparten la misma experiencia: 
+trabajan más horas, <strong>hacen más esfuerzo</strong> y permanecen constantemente ocupados.
+</p>
+
+<p>
+Sin embargo, la realidad que muchos perciben es diferente a lo que esperaban. 
+El dinero parece rendir menos, el tiempo se vuelve más escaso y 
+la sensación de progreso personal o <strong>económico es mínima</strong>.
+</p>
+
+<p>
+Diversos análisis económicos muestran que el aumento de salarios no siempre se traduce en 
+<a href="https://www.infobae.com/espana/2025/07/30/los-sueldos-suben-pero-el-poder-adquisitivo-no-y-tiene-que-ver-con-que-deberiamos-trabajar-mejor-mientras-la-productividad-crezca-poco-los-salarios-reales-apenas-aumentaran/"
+ target="_blank" class="text-blue-600 hover:underline">
+mayor poder adquisitivo, 
+</a>
+especialmente cuando el costo de vida crece más rápido que los ingresos.
+</p>
+
+<p>
+Esta situación inevitablemente lleva a una pregunta incómoda, pero necesaria:
+</p>
+
+<p>
+<strong>¿Realmente hoy se necesita trabajar más para vivir igual que en el pasado?</strong>
+</p>
+
+<p>
+La respuesta no es tan simple como un “sí” o un “no”. 
+La realidad es más profunda y está relacionada con los cambios que han ocurrido en el mundo moderno.
+</p>
+
+<p>
+<strong>La economía ha cambiado,</strong> las dinámicas laborales también, 
+y la forma en que intercambiamos tiempo por dinero ya no funciona exactamente como antes.
+</p>
+
+</div>
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">Qué está cambiando en la vida moderna y por qué afecta el progreso</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+Muchos factores han aumentado el nivel de compromiso requerido incluso en tareas básicas que antes no tomaban demasiado tiempo. 
+Hoy las personas parecen tener menos tiempo, menos libertad y, en muchos casos, menos estabilidad financiera.
+</p>
+
+<p>
+También se percibe una transformación en la vida social. 
+Las relaciones reales parecen disminuir mientras aumentan las conexiones superficiales.
+</p>
+
+<p>
+Todas estas variaciones alimentan una pregunta cada vez más frecuente:
+<strong>¿por qué hoy se trabaja más y se avanza menos?</strong>
+</p>
+
+<p>
+Esa pregunta fue precisamente el punto de partida para crear esta sección en Código Millonario, con el objetivo de analizar qué está 
+ocurriendo realmente, qué factores muchas personas no están viendo y hacia dónde podría dirigirse esta tendencia.
+</p>
+
+<p>
+Porque entender lo que sucede hoy no es solo una cuestión económica. 
+También es una <strong>reflexión sobre el impacto</strong> que estos cambios pueden tener en tu vida.
+</p>
+
+</div>
+
+
+
+
+
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Antes el trabajo terminaba; hoy la mente nunca descansa</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Para términos de trabajo físico, muchas personas en el pasado enfrentaban jornadas duras: campo, fábricas, turnos extensos y tareas pesadas. No era una vida fácil ni cómoda, y el desgaste corporal era evidente desde temprano.
+</p>
+
+<p>
+Sin embargo, existía una diferencia clave que hoy casi no se menciona.
+</p>
+
+<p>
+A pesar del esfuerzo, el entorno era más <strong>simple</strong>. Los gastos fijos eran menores, la presión social era más baja, la comparación con otros no era constante y las distracciones eran limitadas.
+</p>
+
+<p>
+El trabajo terminaba cuando terminaba la jornada.
+</p>
+
+<p>
+Hoy, aunque en el papel algunas jornadas parecen más cortas, el trabajo se volvió <strong>permanente</strong>.
+</p>
+
+<p>
+El celular, los correos, los mensajes y las redes mantienen a la mente conectada todo el tiempo. Ya no existe un cierre claro entre trabajo y descanso.
+</p>
+
+<p>
+Antes, el cansancio era principalmente <strong>físico</strong> y tenía un final.
+</p>
+
+<p>
+Hoy, el desgaste es <strong>mental</strong>, continuo y muchas veces invisible. No se trata solo de cuántas horas se trabaja, sino de que la mente casi nunca deja de hacerlo.
+</p>
+
+<p>
+La vida no se pone más difícil, sino que ahora parte del tiempo es usado en actividades que no aportan valor real que sume, sino desgaste vacío y desproporcional a la atención que se le brinda.
+</p>
+
+</div>
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+La <strong>atención</strong> es dinero y para la mayoría regalar su atención suele ser cosa de pasatiempo o distracción rutinaria.
+</p>
+
+<p>
+La mente se mantiene en un constante procesamiento de información en el subconsciente, donde genera <strong>dopamina</strong> falsa.
+</p>
+
+<p>
+Esta información puede que no cambie la vida de muchas personas, ya que es más fuerte el poder mental de atenerse a lo que le hace pasar el tiempo y olvidarse de su entorno desgastante, a tener que tomar decisiones propias por liberarse de esas ataduras.
+</p>
+
+<p>
+Sin embargo, aun así, debo cumplir con mi propósito.
+</p>
+
+</div>
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-10" style="font-family: 'Open Sans', sans-serif;"> 
+Te puede interesar:
+</div>
+
+<style>
+.articulo-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+  min-height: 140px; /* altura mínima para el contenido y botón */
+}
+
+.articulo-main {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  padding: 10px 15px 50px 15px; /* padding inferior para dejar espacio al botón */
+}
+
+.articulo-img {
+  width: 200px;
+  height: 110px;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.articulo-contenido {
+  flex: 1;
+  padding-left: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articulo-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #000;
+}
+
+.articulo-descripcion {
+  font-size: 12px;
+  color: #555;
+  flex: 1;
+}
+
+/* Botón Ir a la derecha con línea */
+.articulo-boton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: center;
+}
+
+.articulo-boton span {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Texto plano a la izquierda dentro del mismo botón, visible */
+.articulo-boton-texto {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Móvil */
+@media (max-width:600px) {
+  .articulo-main {
+    flex-direction: column;
+    padding: 8px 10px 50px 10px; /* dejar espacio para botón */
+  }
+
+  .articulo-img {
+    width: 120px;
+    height: 70px;
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+
+  .articulo-contenido {
+    padding-left: 0;
+  }
+
+  .articulo-titulo {
+    font-size: 12px;
+  }
+
+  .articulo-descripcion {
+    font-size: 11px;
+  }
+
+  .articulo-boton {
+    padding: 6px 10px;
+  }
+
+  .articulo-boton span {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .articulo-boton-texto {
+    font-size: 11px;
+  }
+}
+</style>
+
+<a href="https://codigomillonario.blog/blog/psicologia-del-dinero/mentalidad-rico-vs-pobre.html" class="articulo-box">
+  <img src="../../../assets/png/diferencias-mentalidad-rico-pobre.webp" class="articulo-img">
+  <div class="articulo-main">
+    <div class="articulo-contenido">
+      <div class="articulo-titulo">
+      <h2 style="font-family: 'Open Sans', sans-serif;">La mayoría de los pobres nunca adopta la mentalidad de los ricos</h2>
+      </div>
+      <div class="articulo-descripcion">
+<strong>Si quieres empezar a cambiar tu mentalidad, esta es la realidad detrás de una mentalidad de rico vs. pobre: descubre las claves que cambian tu relación con el dinero.</strong>
+      </div>
+    </div>
+  </div>
+  <div class="articulo-boton">
+    <div class="articulo-boton-texto">Lo más leído:</div>
+    <span>Ir</span>
+  </div>
+</a>
+
+
+
+
+
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La diferencia entre trabajar más y realmente progresar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<p>
+Aquí está uno de los puntos clave del problema actual:
+</p>
+
+</div>
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">Por qué trabajar más no garantiza progreso económico</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+Hoy muchas personas trabajan más horas, tienen varios ingresos y viven en una constante ocupación. La agenda siempre está llena y la sensación es que no hay tiempo para nada. Sin embargo, ese esfuerzo adicional no se traduce necesariamente en progreso real.
+</p>
+
+<p>
+A pesar de trabajar más, muchas personas viven al día, no logran ahorrar, no consiguen nada y no construyen nada propio. El motivo principal es que la mayoría sigue intercambiando tiempo por dinero. Cuando el trabajo se detiene, el ingreso también lo hace.
+</p>
+
+</div>
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">El cambio económico: por qué hoy se necesitan más ingresos para vivir</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+En el pasado, con un solo salario, era posible sostener una familia, ahorrar poco a poco y aspirar a objetivos grandes como comprar una casa. El costo de vida era menor y el ingreso, aunque limitado, permitía una cierta estabilidad.
+</p>
+
+<p>
+Hoy el escenario es distinto. Incluso con dos ingresos en un mismo hogar, muchas personas permanecen estancadas. No porque trabajen poco, sino porque el modelo actual exige más esfuerzo para obtener los mismos o menores resultados.
+</p>
+
+</div>
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">Por qué tener empleo no siempre significa progreso</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+Una confusión mayor es aceptar la idea de que un empleo significa progreso, y no necesariamente es cierto o falso. Eso va ligado más a los intereses de las personas, es decir, hasta dónde quieren llegar, qué quieren lograr y hacia dónde van.
+</p>
+
+<p>
+Sin embargo, las metas y ambiciones pueden verse muy afectadas por el entorno, cambios de parecer, estilo de vida y otros factores que escapan a la parte consciente de cada individuo. Un trabajo no garantiza progreso por sí solo, y no tenerlo no necesariamente es estancarse en la vida.
+</p>
+
+</div>
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">Dos factores que explican por qué algunas personas progresan más que otras</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+Puede tener mucha más <strong>visión</strong> alguien sin un empleo y llegar mucho más lejos en cinco años que alguien con un trabajo, y esto se debe a dos factores determinantes que la mente oculta.
+</p>
+
+<p>
+Uno: la persona sin empleo se arriesga más, quiere tomar las riendas de su vida y de sus decisiones. Al no estar sujeta a algo estable, puede ver <strong>oportunidades</strong> mucho más rápido que los demás. Este es el arte de la supervivencia, como todos lo conocemos, solo que ya no en el área de la vida salvaje en la selva.
+</p>
+
+<p>
+Dos: quien tiene un empleo puede dar todo por hecho y bajar la guardia. La <strong>rutina</strong> trae oxígeno mental y eso se puede transformar en años de estancamiento. Como la mente vende la idea de que con el trabajo ya estás tirando para adelante, te duermes.
+</p>
+
+<p>
+Esto no ocurre en todos los casos; sin embargo, es más susceptible la persona con empleo de olvidarse de sus <strong>sueños</strong> más profundos por solo vivir la vida normal.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El costo de vida sube, pero el tiempo sigue siendo el mismo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+No entraré en muchos detalles en este apartado, ya que todos nos dimos cuenta hasta ahora que todo está subiendo de valor en la actualidad y existe verdad que nadie puede cambiar, sin importar el país, la profesión o el nivel de ingresos:
+todos tenemos solo 24 horas al día, sin embargo:
+</p>
+
+<p>
+<strong>
+El problema no es el tiempo. El problema es todo lo que compite por él.
+</strong>
+</p>
+
+<p>
+Hoy muchas personas perciben una presión económica cada vez mayor:
+</p>
+
+<ul>
+<li>El <strong>tiempo</strong> vuela.</li>
+<li>El <strong>arriendo</strong> sube.</li>
+<li>Los <strong>servicios</strong> aumentan.</li>
+<li>La <strong>comida</strong> cuesta más.</li>
+<li>Pero el <strong>salario</strong> casi no se mueve.</li>
+</ul>
+
+<p>
+<strong>
+¿Casi nada parece detenerse, verdad?
+</strong>
+</p>
+
+<p>
+Cada año, la vida exige más dinero para mantenerse en el mismo lugar. No para avanzar, no para crecer, solo para sostener lo básico. Y cuando el ingreso no crece al mismo ritmo, la presión cae siempre sobre el mismo recurso: el tiempo personal.
+</p>
+
+<p>
+Entonces aparece la solución más común, la más aceptada y la menos cuestionada:
+</p>
+
+<p>
+<strong>
+“Trabaja más horas”.
+</strong>
+</p>
+
+<p>
+Al inicio parece lógica. Más horas, más dinero. Pero esa ecuación tiene un límite muy claro. El cuerpo se cansa, la mente se agota y la vida empieza a volverse repetitiva, automática y sin dirección.
+</p>
+
+<p>
+Ya no se trabaja para construir algo, sino para apagar incendios: pagar cuentas, cubrir gastos, llegar al próximo mes.
+</p>
+
+<p>
+Aquí es donde muchas personas quedan atrapadas en un ciclo sin salida. No porque no se esfuercen, sino porque el sistema empuja a dar más tiempo por el mismo resultado, mientras el costo de vivir sigue avanzando sin esperar a nadie.
+</p>
+
+</div>
+
+
+
+
+
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La diferencia entre trabajar duro y trabajar con visión</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+No todo trabajo extra es malo. El problema no está en esforzarse más, sino en no tener claro para qué se está haciendo ese esfuerzo.
+</p>
+
+<p>
+Muchas personas trabajan más horas con la esperanza de mejorar su situación, pero sin una dirección clara. El resultado suele ser siempre el mismo: más desgaste, más cansancio y el mismo punto de partida, llegando el momento donde la ilusión de sustentar esa vida se rompe, porque no es sostenible.
+</p>
+
+</div>
+
+
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">Trabajar duro sin visión suele generar más horas y el mismo ingreso</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+Más horas.<br>
+Mismo ingreso.<br>
+Mismo resultado.
+Y si todo sube, deberás trabajar aún más para siquiera sostener hasta donde has llegado.
+</p>
+
+<p>
+<strong>
+¿No te parece un modelo no sostenible y rompedor?
+</strong>
+</p>
+
+<p>
+Es un esfuerzo que se consume en el presente. Cuando el trabajo se detiene, el progreso también lo hace.
+</p>
+
+<p>
+Trabajar duro con visión es distinto. Aquí el esfuerzo inicial no se busca para sobrevivir, sino para construir.
+</p>
+
+</div>
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">Trabajar duro con visión permite construir algo propio</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+Más esfuerzo al inicio.<br>
+Resultados acumulativos.<br>
+Ingresos que no dependen solo de tu tiempo.
+</p>
+
+<p>
+Este tipo de trabajo no paga de inmediato, pero crea bases sólidas. Cada acción suma, cada avance se conserva y cada decisión apunta a un crecimiento que no desaparece cuando dejas de trabajar unas horas.
+</p>
+
+<p>
+<strong>
+¿A qué tipos de trabajos se refiere el autor?
+</strong>
+</p>
+
+<p>
+Crear un proyecto digital o un negocio propio, sé que no es comodidad inmediata. Es incomodidad consciente, disciplina y paciencia. Pero también es construcción a largo plazo, visión clara y la posibilidad real de salir del intercambio constante de tiempo por dinero.
+</p>
+
+<p>
+<strong>
+¿Si supieras que llegaras en 5 años a no tener nada? cosa que es probable si no haces nada, ¿por qué mejor no iniciar algo propio ahora? y llegar con algo que te respalde.
+</strong>
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-10" style="font-family: 'Open Sans', sans-serif;"> 
+Te puede interesar:
+</div>
+
+<style>
+.articulo-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+  min-height: 140px; /* altura mínima para el contenido y botón */
+}
+
+.articulo-main {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  padding: 10px 15px 50px 15px; /* padding inferior para dejar espacio al botón */
+}
+
+.articulo-img {
+  width: 200px;
+  height: 110px;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.articulo-contenido {
+  flex: 1;
+  padding-left: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articulo-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #000;
+}
+
+.articulo-descripcion {
+  font-size: 12px;
+  color: #555;
+  flex: 1;
+}
+
+/* Botón Ir a la derecha con línea */
+.articulo-boton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: center;
+}
+
+.articulo-boton span {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Texto plano a la izquierda dentro del mismo botón, visible */
+.articulo-boton-texto {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Móvil */
+@media (max-width:600px) {
+  .articulo-main {
+    flex-direction: column;
+    padding: 8px 10px 50px 10px; /* dejar espacio para botón */
+  }
+
+  .articulo-img {
+    width: 120px;
+    height: 70px;
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+
+  .articulo-contenido {
+    padding-left: 0;
+  }
+
+  .articulo-titulo {
+    font-size: 12px;
+  }
+
+  .articulo-descripcion {
+    font-size: 11px;
+  }
+
+  .articulo-boton {
+    padding: 6px 10px;
+  }
+
+  .articulo-boton span {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .articulo-boton-texto {
+    font-size: 11px;
+  }
+}
+</style>
+
+<a href="https://codigomillonario.blog/blog/psicologia-del-dinero/bloqueos-mentales-dinero.html" class="articulo-box">
+  <img src="../../../assets/png/pensamientos-erroneos-dinero.webp" class="articulo-img">
+  <div class="articulo-main">
+    <div class="articulo-contenido">
+      <div class="articulo-titulo">
+      <h2 style="font-family: 'Open Sans', sans-serif;">Estos patrones mentales que pueden estar afectando la percepción que tienes acerca del dinero y cómo cambiarlos</h2>
+      </div>
+      <div class="articulo-descripcion">
+        <strong>Si tu forma de pensar no cambia, tu bolsillo tampoco lo hará. Las decisiones pequeñas y repetidas moldean tu riqueza mucho más que el azar o la suerte.</strong>
+      </div>
+    </div>
+  </div>
+  <div class="articulo-boton">
+    <div class="articulo-boton-texto">Lo más leído:</div>
+    <span>Ir</span>
+  </div>
+</a>
+
+
+
+
+
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La diferencia entre vender tu tiempo y construir un activo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+<strong>
+Un empleo tradicional funciona de una forma muy clara y conocida
+</strong>
+</p>
+
+<p>
+Para este momento nos podimos topar con una paradoja muy clara, que no necesita respuestas, ni analizar a profundidad y se basa en algo simple:
+</p>
+
+<p>
+Si trabajas, cobras.<br>
+Si paras, no cobras.
+</p>
+
+<p>
+No hay acumulación real. Cada día empieza desde cero y el ingreso depende directamente del tiempo que intercambias por dinero.
+</p>
+
+<p>
+<strong>
+Un activo digital o fisico funciona distinto.</strong>
+</p>
+
+<p>
+Cada contenido suma.<br>
+El esfuerzo se acumula.<br>
+El tiempo empieza a jugar a tu favor.
+</p>
+
+<p>
+Aquí no trabajas solo para el presente. Cada acción se convierte en una base que no desaparece cuando el día termina.
+</p>
+
+<p>
+Al principio exige más trabajo, más disciplina y más paciencia. Durante esa etapa, el esfuerzo parece invisible y los resultados tardan en llegar.
+</p>
+
+<p>
+Pero con el tiempo ocurre el cambio clave. Lo que antes era solo trabajo empieza a convertirse en sistema. El proyecto sigue generando movimiento incluso cuando no estás presente.
+</p>
+
+<p>
+No se trata de magia ni de dinero fácil. Se trata de construir algo que no desaparece cuando te acuestas a dormir y que, bien trabajado, puede generar ingresos sin depender exclusivamente de tu presencia constante.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+  <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Trabajar más no siempre es el problema. El problema es para qué trabajas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+<strong>
+La respuesta honesta no es un simple sí o no. Depende de cómo estés jugando el juego.
+</strong>
+</p>
+
+<p>
+<strong>
+Primer escenario:
+</strong>
+</p>
+
+<p>
+Sí, hay que trabajar más si tu ingreso depende únicamente de tu tiempo. En ese escenario, cada aumento en el costo de vida se compensa con más horas, más sacrificio y menos espacio para decidir.
+</p>
+
+<p>
+<strong>
+Segundo escenario:
+</strong>
+</p>
+
+<p>
+No, no hay que trabajar más si construyes algo que trabaje para ti. En ese caso, el esfuerzo no se repite cada día desde cero, sino que se acumula y empieza a darte margen de maniobra.
+</p>
+
+<p>
+<strong>
+Aquí está la diferencia que casi nadie quiere aceptar:
+</strong>
+</p>
+
+<p>
+La mayoría trabaja más toda su vida y nunca sale del mismo lugar.<br>
+Una minoría trabaja más al inicio para no tener que hacerlo siempre.
+</p>
+
+<p>
+<strong>No es una cuestión de talento ni de suerte.</strong> Es una decisión sobre cuándo esforzarse y para qué. Seguir dando más tiempo al mismo modelo o invertir ese tiempo en construir una salida.
+</p>
+
+</div>
+
+
+
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Trabajar más ya no basta: lo que realmente marca la diferencia</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+  <p>
+El problema no es que hoy la gente trabaje más.
+El problema es que muchos trabajan más sin dirección.
+
+Trabajar duro no garantiza libertad.
+Pero trabajar con estrategia, visión y constancia sí puede cambiar el juego.
+
+Si hoy estás construyendo algo que no da resultados inmediatos, pero tiene potencial a largo plazo, no estás perdiendo el tiempo…
+estás sembrando.
+  </p>
+
+<p>
+Este análisis no busca dar respuestas cerradas ni fórmulas rápidas. Busca ofrecer una forma distinta de mirar la realidad actual, identificar dónde se pierde el rumbo y entender por qué, a pesar de trabajar más, muchas personas no avanzan.
+</p>
+
+<p>
+Reconocer el problema es incómodo, pero necesario. Porque solo entendiendo qué falló, por qué se llegó a este punto y cómo se cerraron ciertas puertas, es posible pensar en una forma real de volver a abrirlas.
+</p>
+
+<p>
+La mejor forma de abrir una puerta que está cerrada es comprender por qué se cerró, si realmente está cerrada y cómo abrirla.
+</p>
+
+</div>
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+
+<!-- Sección recomendada -->
+<div class="mt-5 mb-10">
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
+    <p class="text-sm text-slate-600 italic leading-relaxed"
+       style="font-family: 'Poppins', sans-serif;">
+       <strong class="font-semibold text-slate-800">
+      Código Millonario</strong> recomienda:
+    </p>
+  </blockquote>
+</div>
+
+    </main>
+
+   
+
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center text-sm mb-4" style=" font-family: 'Montserrat', sans-serif;">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style=" font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../mejorar-tu-empleo/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style=" font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style=" font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+
+    <p class="interlink-heading text-center text-sm mb-6" style=" font-family: 'Montserrat', sans-serif;">
+    Lo más leído
+    </p>
+
+    <div id="interlinkGrid"></div>
+
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* CONTENEDOR */
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ITEM */
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* IMAGEN */
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* CONTROLES */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb; /* 👈 NUEVA LÍNEA */
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* BOTONES */
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+/* 🔥 FUNCIÓN PARA CORTAR TEXTO */
+function truncate(text, maxLength = 60){
+  return text.length > maxLength 
+    ? text.substring(0, maxLength) + "..." 
+    : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title, 60);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <p>Este artículo relacionado puede ayudarte a mejorar tus conocimientos financieros de forma estratégica.</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../mejorar-tu-empleo/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+
+  const links = Array.from(temp.querySelectorAll(".article a"));
+
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+   
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

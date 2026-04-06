@@ -1,0 +1,1540 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeff Bezos y la lógica fría que convirtió a Amazon en un imperio | Código Millonario</title>
+    <meta name="description" content="Descubre cómo Jeff Bezos sacrificó ganancias, pensó a largo plazo y usó una mentalidad CEO para dominar el comercio global con Amazon.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/favicon-v2.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../tienda.html">Productos</a></li>
+      <li><a href="../../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../../donar.html">Donaciones</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../../index.html">Inicio</a>
+      <a href="../../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../../herramientas.html">Herramientas</a>
+      <a href="../../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../../tienda.html">Productos</a>
+      <a href="../../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../../donar.html">Donaciones</a>
+      <a href="../../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+   Educación Financiera
+  </span>
+</div>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+    <h1>
+Jeff Bezos y Amazon: la mentalidad que lo convirtió en uno de los hombres más ricos del mundo: así puedes beneficiarte de ese modelo de negocio
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+</div>
+
+<div class="flex flex-col justify-start gap-5 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+  Bezos no empezó con carisma ni suerte, empezó con datos y una paciencia que pocos soportarían.
+  Amazon no creció por inspiración, creció porque alguien estuvo dispuesto a aguantar años de pérdidas que nadie más toleraría.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+<style>
+.layout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content-column {
+  width: 100%;
+  max-width: 760px;
+  padding-left: 35px;  /* antes 60px */
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-column {
+    max-width: 720px;
+    padding-left: 25px; /* antes 40px */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column {
+    max-width: 100%;
+    padding-left: 10px; /* antes 20px */
+    padding-right: 18px;
+  }
+}
+</style>
+
+<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+
+<style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+
+
+
+
+<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
+   Código Millonario en Redes:
+</div>
+
+
+ <!-- INTRODUCCIÓN GENERAL -->
+<main class="py-5">
+  <div class="layout-wrapper">
+    <article class="content-column">
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex gap-4 social-container">
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+     class="social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
+
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+     class="social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://pin.it/3tqNXYoAA" target="_blank"
+     class="social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+
+  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+  </a>
+
+</div>
+
+<!-- TAMAÑO INCONO TWITTER -->
+<style>
+.social-icon svg{
+  width:14px !important;
+  height:14px !important;
+}
+</style>
+
+<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
+<div class="max-w-4xl mt-7 ml-0 px-4 md:px-0 flex items-start space-x-4" >
+  <!-- Imagen del autor -->
+  <div class="flex-shrink-0">
+    <img src="../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+  <!-- Texto del autor -->
+  <div class="py-3">
+    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+      Por <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+        Francisco Urrego
+      </a>
+    </p>
+  </div>
+</div>
+
+
+  <div class=" mt-5 w-full h-px bg-slate-300"></div>
+
+  <div style="font-family: Arial, sans-serif; font-size: 11px; font-weight: 400; color: #777;">
+   <p>
+        Escrito el 22 ene 2026 | 09:12 h
+   </p>
+    <p>
+      ⏱ 5 min lectura
+    </p>
+    </div>
+
+
+<div class="flex justify-center md:justify-start mt-5 relative px-4 sm:px-0 md:-ml-8">
+  <img src="../../assets/png/jeff-bezos-estrategia-amazon.webp"
+       alt=""
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10">
+</div>
+
+
+
+<div class="mx-auto my-4 max-w-[90%] px-4 text-center">
+  <p class="text-xs italic text-gray-500 -skew-x-6 m-0">
+Ilustración digital que representa a Jeff Bezos con fines artísticos.
+  </p>
+</div>
+
+
+
+
+<style>
+  /* ================= ACORDEÓN ================= */
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  /* Ajustamos el ancho máximo y centramos el acordeón */
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco */
+    border-radius: 0px; /* puntas cuadradas */
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 680px; /* ancho máximo deseado aumentado */
+
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  /* Animación tipo card con sombra al pasar el mouse */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+    max-width: 100%;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
+    }
+  }
+</style>
+
+<div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. La lógica implacable detrás del imperio Amazon</a></li>
+    <li><a href="#titulo2">2. Amazon no nació para ganar dinero rápido</a></li>
+    <li><a href="#titulo3">3. Obsesión por el cliente, no por el ego</a></li>
+    <li><a href="#titulo4">4. Pensar como dueño, no como empleado</a></li>
+    <li><a href="#titulo5">5. Cuánto dinero mueve Amazon y cuánto ha ganado Jeff Bezos</a></li>
+    <li><a href="#titulo6">6. La parte de la historia que sigue vigente</a></li>
+    <li><a href="#titulo7">7. El contexto que hizo posible a Amazon ya no existe</a></li>
+    <li><a href="#titulo8">8. Jeff Bezos no ganó porque fuera el más listo. Ganó porque:</a></li>
+  </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
+
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
+
+        item.classList.toggle('is-open');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
+
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+<!-- INTRODUCCIÓN -->
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">La lógica implacable detrás del imperio Amazon</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Para interpretar mejor su historia, es necesario tener en cuenta que Jeff Bezos no construyó Amazon con carisma, pensar y llegara algún día, ni discursos largos de inspiración para dar ese primer paso. Él lo hizo con una mentalidad incómoda; sí, es probable que se haya arrepentido de tomar la decisión más dura. 
+</p>
+
+<p>
+Sin embargo, para la mayoría es un trabajo casi destructivo desde el nivel mental, de resistencia y presión mental a la que se debe someter durante años: pensar a largo plazo cuando todos buscan resultados inmediatos, soportar pérdidas cuando otros entran en pánico, tomar decisiones frías y acertadas, basadas en datos concretos y limpios, no en emociones que frustran el progreso ni temores que solo te hacen querer abandonar.  
+</p>
+
+<p>
+Esta historia no es el típico relato de <strong>“sueña y lograrás todo”</strong> o <strong>"espera, siéntate y cálmate, lo lograrás".</strong> Esta es la historia de cómo una lógica bien estructurada, aplicada y llevada a cabo puede crear una de las mayores fortunas de la historia.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Los comienzos: Ver lo que otros ignoraron</h3>
+
+<p>
+Jeffrey Preston <strong>Bezos</strong> nació el 12 de enero de 1964 en <strong>Albuquerque, Nuevo México, EE. UU.</strong> Su madre, <strong>Jacklyn Gise</strong>, era adolescente en ese momento, y su padre biológico, <strong>Ted Jorgensen</strong>, se separó poco después del nacimiento. Cuando Jeff tenía alrededor de cuatro años, su madre se casó con <strong>Miguel “Mike” Bezos</strong>, un inmigrante cubano que adoptó a Jeff, dándole su apellido. Desde pequeño, Jeff mostró <strong>curiosidad por la ciencia y la tecnología</strong>, y su padrastro lo apoyó mucho en sus intereses.
+</p>
+
+<p>
+Jeff asistió a la <strong>High School de Miami Palmetto</strong>, donde continuó destacándose académicamente. Era un estudiante aplicado, especialmente en <strong>matemáticas y ciencias</strong>, y se graduó con honores en 1982. Durante esos años, trabajó en <strong>proyectos de ciencia</strong> y tuvo sus primeros acercamientos al <strong>mundo de los negocios</strong>, vendiendo productos y creando pequeños experimentos de inversión.
+</p>
+
+<p>
+En 1994, Bezos trabajaba en <strong>Wall Street</strong> con un salario alto y una carrera segura. Pero detectó un dato que pasó desapercibido para muchos: el <strong>crecimiento anual del uso de internet</strong> superaba el 2.000%.
+No vio una moda. Vio una <strong>infraestructura en expansión</strong>.
+Renunció, se mudó a un garaje y empezó vendiendo <strong>libros</strong> porque era el mercado con más referencias disponibles. No porque amara los libros, sino porque la <strong>lógica del negocio</strong> lo indicaba.
+Nota: las grandes oportunidades suelen parecer aburridas al inicio.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Amazon no nació para ganar dinero rápido</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Esta parte es una de las más duras, y es donde nadie, o bueno, casi nadie sigue. Nadie habla de esta etapa: durante años, Amazon perdió dinero. La mayoría de inversionistas dudaban, medios criticaban y competidores se burlaban todo el tiempo.  
+Bezos no buscaba beneficios inmediatos. Buscaba dominar el mercado mientras se sostenía en el tiempo.
+</p>
+
+<p>
+Su estrategia fue clara desde que inició:  
+Reinvertir todo, mejorar la logística, reducir fricción para el cliente, construir confianza antes que ganancias. Mientras otros pensaban en el próximo trimestre, Bezos pensaba en la próxima década. Sacrificar el corto plazo para controlar el largo plazo puede ser la única manera de lograr el éxito anhelado.
+</p>
+
+<br>
+<strong>
+Entre sus prioridades estaban:</strong>
+<br>
+
+
+<p>  
+<ul class="list-disc list-inside">
+  <li>Reinvertir todas las ganancias en crecimiento y tecnología</li>
+  <li>Mejorar la logística hasta niveles que otros consideraban imposibles</li>
+  <li>Reducir fricción para el cliente, facilitando cada compra</li>
+  <li>Construir confianza y reputación antes que perseguir ganancias rápidas</li>
+</ul>
+Mientras otros pensaban en el próximo trimestre, Bezos pensaba en la próxima década, así que iba muy adelantado antes que sus competidores con esa mentalidad.  
+<strong>
+Su visión:</strong> sacrificar el corto plazo para controlar el largo plazo.  
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+La paciencia estratégica es la ventaja que pocos están dispuestos a pagar</h3>
+
+<p>
+Lo más impresionante es que esta visión requería paciencia extrema y resiliencia mental. No se trata solo de estrategias de negocios; se trata de resistir la presión externa, ignorar las críticas y mantener la disciplina incluso cuando parecía que todo el mundo dudaba.  
+Amazon no se construyó de la noche a la mañana; se construyó con decisiones frías, calculadas y consistentes, enfocadas en el futuro que Bezos imaginó antes que nadie.
+</p>
+
+<p>
+Esta lección aplica más allá de los negocios cualquiera: si quieres construir algo que dure, debes estar dispuesto a esperar lo necesario, a aprender de las pérdidas y a pensar siempre en grande, pero siempre mantener el mismo proyecto, mucho más allá de lo que los demás consideran aceptable. Bezos enseñó que el verdadero crecimiento nunca es inmediato, 
+y que dominar un mercado requiere visión, constancia y estrategia. Muchos sienten que cada día resta para lograrlo; con esta mentalidad, Bezos entendió que cada día que se va, suma y agrega intereses a su éxito.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Obsesión por el cliente, no por el ego</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Bezos repitió durante años una frase incómoda para los directivos tradicionales:  
+<strong>
+“Si te obsesionas con el cliente, todo lo demás se alinea solo.”</strong>
+Amazon bajó precios incluso cuando no convenía. Aceptó devoluciones que parecían pérdidas. Invirtió en envíos rápidos aunque costaran millones.  
+¿El resultado?  
+Lealtad brutal del cliente y una ventaja casi imposible de copiar. No todos están dispuestos a perder, no todos están dispuestos a aceptar devoluciones. Es muy compleja la idea una vez empiezas a visualizar cómo es la intención detrás de este gran imperio.  
+</p>
+
+<p>
+Lo que muchos no ven es que esta obsesión con el cliente no era solo un lema: era una estrategia sistemática y tenía toda la razón; nadie regresa donde no lo atendieron, donde no cumplieron. Cada decisión, desde la interfaz de la web hasta la política de devoluciones, se tomaba pensando en la experiencia del usuario y no de sus bolsillos. Bezos entendió que el ego de un directivo o la búsqueda de ganancias rápidas podían destruir esta ventaja a largo plazo y quizás ya ni existiera Amazon para este tiempo.
+</p>
+
+<p>
+Miremos un ejemplo práctico para comprender aún más las intenciones: <strong>Amazon Prime.</strong> En sus inicios, los envíos gratis, rápidos y sin complicaciones para los usuarios parecían un gasto enorme sin retorno inmediato. Pero al obsesionarse con la comodidad del cliente, Bezos creó una base de usuarios extremadamente leales que luego compran cientos de millones de productos cada año. 
+</p>
+
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+El crecimiento real nace cuando el cliente es la prioridad</h3>
+
+<p>
+Es como decir: "sabes, aquí me trataron bien, aquí estoy seguro". De este modo, el cliente no solo se fideliza, también comparte sus experiencias al usar Amazon.  
+La lección clave: las empresas mueren cuando priorizan su ego sobre el valor real. En cambio, cuando el foco es el cliente, las decisiones difíciles se vuelven más claras y el crecimiento sostenible se vuelve inevitable.
+</p>
+
+<p>
+Para los emprendedores y líderes, esto puede significar que el éxito no llega por perseguir la fama o los títulos que toman años, sino por resolver problemas reales de personas comunes en cualquier parte del mundo. Este precio se paga de muchas formas, a veces de manera incómoda, costosa y poco reconocida, cuando nadie te mira, mucho tiempo en soledad al principio. Bezos enseñó que poner al cliente primero no es solo ético, sino la estrategia más rentable y duradera que existe y podrá existir, ya que es inevitable que un buen servicio aporte valor de algún modo.
+</p>
+
+</div>
+
+
+
+
+
+  <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Pensar como dueño, no como empleado</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Adoptar medidas como el cambio de mentalidad en sus empleados, siempre lo puso por delante, no quiero solo un empleado, quiero que ese empleado sienta que tambien es dueño de la empresa. De este modo Bezos impulsó una cultura donde cada líder debía actuar como propietario. No como alguien que “cumple horario”.
+Decisiones basadas en:
+
+ 
+<ul class="list-disc list-inside space-y-2">
+  <li>Decisiones basadas en <strong>datos</strong>, no en opiniones.</li>
+  <li>Uso constante de <strong>experimentos</strong> para aprender rápido y ajustar.</li>
+  <li><strong>Responsabilidad total</strong> sobre cada decisión tomada.</li>
+  <li><strong>Fallos permitidos</strong>, pero <strong>excusas no</strong>.</li>
+  <li>
+    <strong>Mentalidad millonaria:</strong> asumir el costo de tus decisiones te obliga a pensar mejor,
+    con más lógica y menos impulsividad.
+  </li>
+</ul>
+
+<p class="mt-4">
+<strong>
+AWS: el movimiento que nadie vio venir.
+</strong><br>
+Mientras todos veían a Amazon como una simple tienda online, Bezos lanzó
+Amazon Web Services (AWS), apostando por una infraestructura tecnológica
+que terminaría sosteniendo gran parte de internet.
+</p>
+
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Las jugadas invisibles que construyen fortunas (y su verdadero costo)</h3>
+
+<p>
+Hoy:
+</p>
+
+<ul class="list-disc list-inside text-stone-700 leading-relaxed mb-4 space-y-1" style="font-family: 'Lora', serif;">
+  <li>AWS genera miles de millones de dólares.</li>
+  <li>Sostiene gran parte de la infraestructura de internet.</li>
+  <li>Financia otras apuestas estratégicas de Amazon.</li>
+</ul>
+
+<p>
+Fue una jugada silenciosa, técnica y poco glamorosa.  
+Exactamente el tipo de movimiento que crea fortunas duraderas.
+</p>
+
+<p>
+<strong>
+Lección brutal:
+</strong>
+el dinero grande rara vez está donde todos miran al inicio.
+</p>
+
+<p>
+El precio del éxito
+</p>
+
+<p>
+<strong>
+Nada de esto fue gratis:
+</strong>
+</p>
+
+<ul class="list-disc list-inside text-stone-700 leading-relaxed mb-4 space-y-1" style="font-family: 'Lora', serif;">
+  <li>Jornadas extremas.</li>
+  <li>Decisiones impopulares.</li>
+  <li>Sacrificios personales.</li>
+  <li>Críticas constantes.</li>
+</ul>
+
+<p>
+Bezos entendió algo que pocos aceptan: no se puede construir algo extraordinario sin pagar un precio extraordinario.
+</p>
+
+<p>
+<strong>
+La enseñanza final de Jeff Bezos.
+</strong>
+</p>
+
+
+  </div>
+
+
+
+
+
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuánto dinero mueve Amazon y cuánto ha ganado Jeff Bezos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Amazon no empezó como un gigante ni como una máquina de dinero.  
+Durante años fue una empresa que quemaba capital, acumulaba pérdidas y parecía incapaz de justificar su ambición.  
+La mayoría solo veía una tienda online que no ganaba dinero.  
+Bezos veía algo distinto: una infraestructura que algún día sostendría el comercio y los servicios digitales del mundo.
+</p>
+
+<p>
+Décadas después, esa visión se tradujo en números que parecen irreales.  
+En 2024, Amazon reportó ingresos cercanos a 
+<strong>
+638 mil millones de dólares
+</strong>,
+con beneficios netos aproximados de 
+<strong>
+59 mil millones de dólares
+</strong>,
+casi el doble que el año anterior.
+<br>
+Fuente:
+<a href="https://www.aboutamazon.com/news/company-news/amazon-annual-results" target="_blank" class="text-blue-600 hover:underline">
+Amazon – <strong>
+Resultados financieros</strong>
+</a>
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Para dimensionar lo que esto significa:</h3>
+
+
+<ul class="list-disc list-inside space-y-2">
+  <li>
+    Los ingresos anuales de Amazon superan el Producto Interno Bruto de países completos como Suecia o Tailandia.
+    <br>
+    Fuente:
+    <a href="https://data.worldbank.org/" target="_blank" class="text-blue-600 hover:underline">
+    -<strong>
+World Bank</strong>
+    </a>
+  </li>
+
+  <li>
+    En algunos trimestres recientes, Amazon ha superado los 
+    <strong>
+    170–180 mil millones de dólares en ventas
+    </strong>,
+    cifras que la colocan muy por encima de la mayoría de corporaciones globales.
+    <br>
+    Fuente:
+    <a href="https://www.forbes.com/sites/greatspeculations/amazon-earnings/" target="_blank" class="text-blue-600 hover:underline">
+    -<strong>
+Forbes</strong>
+    </a>
+  </li>
+
+  <li>
+    Amazon Web Services (AWS) representa una porción menor de los ingresos totales, pero genera una parte
+    desproporcionada de las ganancias gracias a márgenes extremadamente altos.
+    <br>
+    Fuente:
+    <a href="https://www.statista.com/statistics/241624/amazon-web-services-revenue/" target="_blank" class="text-blue-600 hover:underline">
+    -<strong>
+Statista</strong>
+    </a>
+  </li>
+</ul>
+
+<p>
+En cuanto a Jeff Bezos, su riqueza es consecuencia directa de haber mantenido esa visión durante décadas.  
+Posee alrededor del 
+<strong>
+8 %
+</strong>
+de Amazon, por lo que su fortuna no depende de un salario, sino del valor que el mercado asigna a la empresa.
+</p>
+
+<p>
+En 2025, su patrimonio neto ha sido estimado en rangos cercanos a los 
+<strong>
+230–260 mil millones de dólares
+</strong>,
+colocándolo de forma constante entre las personas más ricas del planeta.
+<br>
+Fuente:
+<a href="https://www.forbes.com/profile/jeff-bezos/" target="_blank" class="text-blue-600 hover:underline">
+<strong>
+Forbes – Jeff Bezos</strong>
+</a>
+</p>
+
+<p>
+Es clave entender algo: Bezos no se volvió rico porque Amazon ganara dinero rápido, sino porque
+<strong>
+aguantó el tiempo suficiente</strong>
+para que una estructura gigantesca comenzara a producir resultados.
+En días buenos de mercado, su patrimonio puede aumentar o caer en
+<strong>
+decenas de miles de millones de dólares
+</strong>
+sin que él mueva un solo dólar en efectivo.
+</p>
+
+<p>
+En resumen, estas cifras no son casualidad ni suerte como muchos asumen cuando ven a alguien con mucho dinero.  
+Son el resultado de decisiones frías, paciencia extrema y una obsesión por construir sistemas que escalan.
+Amazon no imprime dinero: ejecuta lógica a gran escala.
+</p>
+
+</div>
+
+
+
+
+
+  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La parte de la historia que sigue vigente</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+No puedes replicar el contexto exacto de Jeff Bezos, ni su acceso a capital, ni el momento histórico en el que nació internet.  
+Pero eso nunca fue lo importante.  
+Lo verdaderamente replicable no es Amazon: es la <strong> forma de pensar</strong> que lo hizo posible.
+</p>
+
+<p>
+<strong>
+Primero,</strong> la capacidad de pensar a largo plazo cuando todo a tu alrededor exige resultados inmediatos. Bezos entrenó su mente para soportar años de incomodidad sin validación externa. Esta habilidad no depende de dinero, depende de disciplina mental y claridad de propósito.
+</p>
+
+<p>
+<strong>
+Segundo,</strong> tomar decisiones basadas en lógica y datos, no en emociones momentáneas. La mayoría abandona no porque su idea sea mala, sino porque no soporta la presión psicológica de ver pérdidas temporales. Bezos entendió que perder en el corto plazo no siempre significa estar equivocado.
+</p>
+
+<p>
+<strong>
+Tercero,</strong> la obsesión por crear valor real antes de exigir recompensas. Resolver un problema mejor que nadie, incluso cuando no es rentable al inicio, es una estrategia que puede aplicarse en cualquier negocio, industria o proyecto personal.
+</p>
+
+<p>
+<strong>
+Y quizás lo más incómodo:</strong> asumir responsabilidad total. Pensar como dueño implica aceptar que nadie va a rescatarte, que los errores cuestan y que el progreso real ocurre cuando nadie te está aplaudiendo.
+</p>
+
+<p>
+<strong>
+La lección final es clara:</strong> no necesitas ser Jeff Bezos para aplicar estos principios.  
+Pero sí necesitas estar dispuesto a pagar el mismo precio mental: paciencia, consistencia y decisiones difíciles sostenidas en el tiempo.
+</p>
+
+</div>
+
+
+
+
+
+  <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El contexto que hizo posible a Amazon ya no existe</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+<p>
+No todo en la historia de Jeff Bezos puede copiarse, y fingir lo contrario es una forma rápida de autoengaño.  
+Amazon nació en un momento histórico irrepetible: el inicio masivo de internet, con competencia mínima y un mercado global prácticamente virgen.
+</p>
+
+<p>
+  <strong>
+Hoy no es posible replicar ese nivel de ventaja inicial.</strong> Los mercados están saturados, los costos de adquisición de clientes son altos y la competencia es feroz desde el primer día. Pensar que basta con “tener una buena idea” para dominar un sector es una fantasía peligrosa.
+</p>
+
+<p>
+Tampoco es replicable el acceso temprano a capital paciente. Bezos tuvo inversionistas dispuestos a esperar años sin retornos. En la actualidad, la mayoría del capital exige resultados rápidos, métricas inmediatas y crecimiento constante, lo que limita estrategias de largo plazo si no se gestiona con inteligencia.
+</p>
+
+<p>
+Otro error común es intentar imitar la escala de Amazon desde el inicio. Infraestructura, logística global y precios agresivos requieren un volumen que solo se alcanza después de años de ejecución impecable. Copiar la forma sin tener el fondo suele llevar al colapso.
+</p>
+
+<p>
+La lección incómoda es esta: no puedes repetir el contexto, el momento ni el terreno que Bezos tuvo.  
+Pero sí puedes entender por qué funcionó y adaptar esos principios a una realidad mucho más competitiva.
+</p>
+
+<p>
+El fracaso aparece cuando alguien intenta jugar el mismo juego, con reglas distintas, creyendo que el resultado será el mismo.
+</p>
+
+</div>
+
+
+
+
+
+  <h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Jeff Bezos no ganó porque fuera el más listo. Ganó porque:</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+ <p>
+Jeff Bezos no era el único con acceso a internet, ni el único que vio su potencial.  
+Tampoco era el empresario más carismático ni el más querido de su industria.  
+La diferencia estuvo en <strong>cómo pensaba</strong> y, sobre todo, en <strong>qué estaba dispuesto a soportar</strong>.
+</p>
+
+<p>
+Ganó porque pensó más lejos que la mayoría, cuando otros solo miraban el próximo mes.  
+Ganó porque aguantó más presión, críticas y pérdidas sin cambiar de rumbo.  
+Ganó porque tomó decisiones frías cuando otros se dejaron llevar por el miedo o la euforia.  
+Y ganó porque construyó sistemas sólidos, no atajos frágiles.
+</p>
+
+<p>
+En un mundo obsesionado con el dinero rápido, los resultados inmediatos y la validación constante,  
+su historia deja una verdad incómoda que pocos quieren aceptar:
+</p>
+
+
+
+<blockquote class="border-l-4 border-stone-300 pl-4 italic text-stone-600">
+<p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+La riqueza real se construye despacio, en silencio y con lógica.
+</p>
+  </blockquote>
+
+
+</div>
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+
+
+  <!-- Sección recomendada -->
+<div class="mt-5 mb-10">
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
+    <p class="text-sm text-slate-600 italic leading-relaxed"
+       style="font-family: 'Poppins', sans-serif;">
+       <strong class="font-semibold text-slate-800">
+      Código Millonario</strong> recomienda:
+    </p>
+  </blockquote>
+</div>
+
+
+    </main>
+
+   
+
+
+   
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center text-sm mb-4" style=" font-family: 'Montserrat', sans-serif;">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style=" font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../biografia-de-millonarios/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style=" font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style=" font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+
+    <p class="interlink-heading text-center text-sm mb-6" style=" font-family: 'Montserrat', sans-serif;">
+    Lo más leído
+    </p>
+
+    <div id="interlinkGrid"></div>
+
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* CONTENEDOR */
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ITEM */
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* IMAGEN */
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* CONTROLES */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb; /* 👈 NUEVA LÍNEA */
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* BOTONES */
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+/* 🔥 FUNCIÓN PARA CORTAR TEXTO */
+function truncate(text, maxLength = 60){
+  return text.length > maxLength 
+    ? text.substring(0, maxLength) + "..." 
+    : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title, 60);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <p>Este artículo relacionado puede ayudarte a mejorar tus conocimientos financieros de forma estratégica.</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../biografia-de-millonarios/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+
+  const links = Array.from(temp.querySelectorAll(".article a"));
+
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+   
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

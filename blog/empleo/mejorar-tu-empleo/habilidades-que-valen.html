@@ -1,0 +1,1429 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Las habilidades que ahora mismo todo empleador está buscando (y pocos dominan) | Código Millonario</title>
+    <meta name="description" content="Aprende a ser un empleado imprescindible que destaque ante las empresas, dominando habilidades que pocos consideran pero que generan resultados comprobados de inmediato.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../../assets/img/favicon-v2.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../../../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../../index.html">Inicio</a></li>
+      <li><a href="../../../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../../tienda.html">Productos</a></li>
+      <li><a href="../../../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../../../donar.html">Donaciones</a></li>
+      <li><a href="../../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../../../index.html">Inicio</a>
+      <a href="../../../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../../../herramientas.html">Herramientas</a>
+      <a href="../../../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../../../tienda.html">Productos</a>
+      <a href="../../../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../../../donar.html">Donaciones</a>
+      <a href="../../../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+   Educación Financiera
+  </span>
+</div>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+    <h1>
+Muchos colombianos no saben cómo diferenciarse de la competencia al momento de sobresalir en su profesión
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+</div>
+
+<div class="flex flex-col justify-start gap-5 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+En un entorno donde muchos cumplen lo básico, destacar depende de lo que haces cuando nadie te está supervisando.
+No es acumular habilidades por moda, es dominar las que realmente resuelven problemas y generan resultados claros.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+<style>
+.layout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content-column {
+  width: 100%;
+  max-width: 760px;
+  padding-left: 35px;  /* antes 60px */
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-column {
+    max-width: 720px;
+    padding-left: 25px; /* antes 40px */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column {
+    max-width: 100%;
+    padding-left: 10px; /* antes 20px */
+    padding-right: 18px;
+  }
+}
+</style>
+
+<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+
+<style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+
+
+
+
+
+<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
+   Código Millonario en Redes:
+</div>
+
+
+ <!-- INTRODUCCIÓN GENERAL -->
+<main class="py-5">
+  <div class="layout-wrapper">
+    <article class="content-column">
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex gap-4 social-container">
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+     class="social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
+
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+     class="social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://pin.it/3tqNXYoAA" target="_blank"
+     class="social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+
+  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+  </a>
+
+</div>
+
+<!-- TAMAÑO INCONO TWITTER -->
+<style>
+.social-icon svg{
+  width:14px !important;
+  height:14px !important;
+}
+</style>
+
+<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
+<div class="max-w-4xl mt-7 ml-0 px-4 md:px-0 flex items-start space-x-4" >
+  <!-- Imagen del autor -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+  <!-- Texto del autor -->
+  <div class="py-3">
+    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+        Francisco Urrego
+      </a>
+    </p>
+  </div>
+</div>
+
+
+  <div class=" mt-5 w-full h-px bg-slate-300"></div>
+
+  <div style="font-family: Arial, sans-serif; font-size: 11px; font-weight: 400; color: #777;">
+   <p>
+        Actualizado el 27 Dic 2025 | 12:34 h
+   </p>
+    <p>
+      ⏱ 5 min lectura
+    </p>
+    </div>
+
+
+<div class="flex justify-center md:justify-start mt-5 relative px-4 sm:px-0 md:-ml-8">
+  <img src="../../../assets/png/como-evitar-ser-reemplazado-en-trabajo.webp"
+       alt=""
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10">
+</div>
+
+
+
+
+<style>
+  /* ================= ACORDEÓN ================= */
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  /* Ajustamos el ancho máximo y centramos el acordeón */
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco */
+    border-radius: 0px; /* puntas cuadradas */
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 680px; /* ancho máximo deseado aumentado */
+
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  /* Animación tipo card con sombra al pasar el mouse */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+    max-width: 100%;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
+    }
+  }
+</style>
+
+<div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Habilidades más valoradas en el mercado laboral actual</a></li>
+    <li><a href="#titulo2">2. Qué son las habilidades digitales avanzadas y por qué importan tanto</a></li>
+    <li><a href="#titulo3">3. Resuelve problemas con confianza: herramientas y técnicas para destacar</a></li>
+    <li><a href="#titulo4">4. Por qué una comunicación efectiva es clave para destacar hoy</a></li>
+    <li><a href="#titulo5">5. Habilidades interpersonales que te hacen sobresalir</a></li>
+  </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
+
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
+
+        item.classList.toggle('is-open');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
+
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+<!-- INTRODUCCIÓN -->
+ <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">Habilidades más valoradas en el mercado laboral actual</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Las habilidades, talentos y cualidades que poseen las personas que aspiran a un puesto de trabajo son en general muy similares, causando que sea más difícil para el empleador detectar un buen trabajador. Cuando se trata de trabajo, cualquiera puede aplicar, cualquiera tiene lo que se necesita para un puesto, todos en general están aptos; eso hace que la competencia entre empleados y futuros empleados se incremente drásticamente, abriendo una grieta que reduce las posibilidades de que haya buenas oportunidades laborales para la mayoría.   
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+  Un mercado más exigente y menos paciente
+</h3>
+<p>
+El mercado laboral mundial es cada vez más competitivo y selectivo. Ya no basta con títulos o experiencia: los empleadores buscan profesionales que generen resultados rápidos, resuelvan problemas antes de que se presenten y aporten valor tangible desde el primer día. La mayoría quiere ganar dinero más rápido que nunca, haciendo que un empleado sea fácilmente reemplazado o desechado si no cumple con sus expectativas. 
+</p>
+<p>
+Sin problemas, con el menor esfuerzo y con una orden pueden ser despedidos sin cuestionar nada. Estos procesos han hecho que muchos piensen más su camino a seguir, altas tasas de desempleo en comunidades más vulnerables, gente buscando mejores oportunidades y quienes buscan crearlas por sí mismos.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+  La importancia de volverse imprescindible
+</h3>
+<p>
+Para ser imprescindible, no basta solo con querer un buen puesto de trabajo; en una sociedad donde cada vez hay gente más capacitada que la mayoría, estar a ese mismo nivel o mayor puede significar dominar una gran variedad de habilidades. Si bien no es obligatorio para ningún caso en específico, la vida laboral ha hablado: creces o no puedes estar en mi empresa. Algunas habilidades, como las que hablaremos a continuación, te hacen visible, indispensable, único y más difícil de reemplazar. Quienes las aplican consiguen acceso a mejores proyectos, ascensos y salarios más altos. 
+</p>
+<p>
+Ignorarlas hoy significa quedarse atrás, teniendo en cuenta el camino laboral; sin embargo, los entornos se volvieron lugares donde cada decisión y cada acción cuenta.
+<strong >
+  Aquí te mostraré las capacidades concretas que pocos dominan,</strong> pero que todos los empleadores están buscando ahora mismo, y cómo aplicarlas para transformar tu carrera.
+
+</p>
+</div>
+
+
+
+
+<!-- HABILIDADES DIGITALES AVANZADAS 💻 -->
+ <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Qué son las habilidades digitales avanzadas y por qué importan tanto</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+La digitalización como factor decisivo
+</h3>
+<p>
+He decidido integrar a este apartado el uso de la tecnología y, como era de esperar, no podía pasar desapercibido un tema que en la actualidad ha creado una revolución a nivel mundial. La digitalización en estos días ya no es opcional: es el motor que define quién avanza y quién queda atrás. Empresas en todo el mundo necesitan profesionales que no solo manejen herramientas básicas, sino que puedan convertir datos en decisiones estratégicas con altas rentabilidades y automatizar procesos que aumenten productividad, crecimiento, eficiencia y hagan ganar más millones a la empresa.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Por qué esto es relevante para tu futuro laboral
+</h3>
+<p>
+Para quienes no logran asimilar o captar la idea, he decidido aclarar con mayor detalle qué significa esto para ti, como futuro trabajador o si ya eres empleado, de una forma más sencilla. Los avances digitales no son para nada obligatorios para ningún campo; sin embargo, quiero aclarar que para quienes desean mantener un paso por delante del resto, es información fresca, reciente y de gran valor. 
+</p>
+<p>
+Cuando tienes una flecha solo puedes disparar a la diana una vez; cuando tienes tres flechas, son tres oportunidades para dar en el blanco. En este caso, una flecha a la primera es casi imposible que dé en el blanco, cuando hablamos de temas laborales.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Adaptarse o limitar las posibilidades de prosperar
+</h3>
+<p>
+La tecnología ha impuesto sus nuevas reglas, y aunque por ahora no sea tan notable su implementación en la mayoría de procesos que mueven la economía, empresas y otras áreas, no quiere decir que no llegue ese día donde dependamos únicamente de esos avances digitales. No es un dato más, no es una especulación más, es realidad y esa es mi intención: dar credibilidad de que resistir a la tecnología es reducir las posibilidades de prosperidad y abundancia en el camino hacia el éxito.
+</p>
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+Ejemplos básicos reales a considerar:</h3>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+  1. "La tecnología es una herramienta, no un enemigo"
+</strong>
+<ul class="list-disc pl-6 mb-4">
+  <li>Reflexiona sobre cómo la tecnología puede ayudarte a alcanzar tus objetivos y mejorar tu vida.</li>
+  <li>Piensa en cómo la tecnología ha cambiado la forma en que vivimos, trabajamos y nos comunicamos.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+  2. "¿Qué pasaría si no me adapto?"
+</strong>
+<ul class="list-disc pl-6 mb-4">
+  <li>Imagina cómo sería si no te adaptas a la tecnología y te quedas atrás.</li>
+  <li>Piensa en las oportunidades que podrías perder y los beneficios que podrías obtener si te adaptas a la tecnología.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+  3. "La tecnología es para todos"
+</strong>
+<ul class="list-disc pl-6 mb-4">
+  <li>Recuerda que la tecnología es para todos, sin importar la edad, el género o la experiencia.</li>
+  <li>Piensa en cómo la tecnología puede ser una herramienta para mejorar la vida de las personas y hacer que las cosas sean más fáciles.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+  4. "¿Qué puedo aprender?"
+</strong>
+<ul class="list-disc pl-6 mb-4">
+  <li>En lugar de temer a la tecnología, piensa en lo que puedes aprender de ella.</li>
+  <li>Identifica las áreas en las que deseas mejorar y busca recursos para aprender más sobre la tecnología.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+  5. "La tecnología es divertida"
+</strong>
+<ul class="list-disc pl-6 mb-4">
+  <li>Recuerda que la tecnología puede ser divertida y emocionante.</li>
+  <li>Piensa en las cosas que puedes hacer con la tecnología.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+  6. "¿Qué puedo crear?"
+</strong>
+<ul class="list-disc pl-6">
+  <li>Imagina las cosas que puedes crear con la tecnología, como una aplicación, un sitio web o un proyecto de arte.</li>
+  <li>Piensa en cómo la tecnología puede ser una herramienta para expresar tu creatividad y hacer que tus ideas cobren vida.</li>
+</ul>
+</div>
+
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+De la reflexión a la acción consciente
+</h3>
+Si todo esto te resonó, es normal que surja la pregunta de cómo llevar estas ideas a algo más concreto. La reflexión es el primer paso, pero cuando se combina con pequeñas acciones conscientes, empieza a tomar forma real. Por eso, he dejado algunas 
+
+<a href="https://codigomillonario.blog/herramientas" target="_blank" class="text-blue-600 hover:underline">  
+  herramientas</a>
+
+prácticas que pueden ayudarte a observar mejor tu situación actual, evaluar tus decisiones y entender con más claridad hacia dónde estás avanzando, sin presión y a tu propio ritmo.
+</div>
+
+
+
+<!-- PENSAMIENTO CRÍTICO Y RESOLUCIÓN DE PROBLEMAS 🧠 -->
+
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Resuelve problemas con confianza: herramientas y técnicas para destacar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Hacer lo necesario vs hacer las cosas bien hechas
+</h3>
+<p>
+Las personas que tienen la capacidad de resolver necesidades bien hechas suelen destacar más que quienes solo hacen lo necesario, y ¿qué diferencia a estas dos? Hacer las cosas bien hechas implica hacerlo una, dos veces y aun así cuestionar si puede tener alguna falla más; sin embargo, quien solo hace lo que tiene que hacer, lo hará de igual modo, pero tomando el factor de que a la primera está más que perfecto y suponiendo que nadie más lo hará mejor, y aunque quede mejor en uno o dos casos remotos, la mayoría de las veces esto no funcionará siempre.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Cuestionar el trabajo como ventaja competitiva
+</h3>
+<p>
+Para ser realmente imprescindible en tu empleo es necesario cuestionar la forma en la que ejecutas las tareas en el ambiente laboral. Es la herramienta más poderosa: todos cumplen horarios, todos son responsables, todos cumplen exactamente con el patrón que tienen los que hacen las cosas mal, los que simulan trabajar duramente mientras evaden su carga, incrementando el trabajo en los demás. Todos cumplen y aparentan ser profesionales en el trabajo; sabemos que no es así, pero solo el trabajo cuestionado y perfeccionado no miente en los resultados.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Dar un poco más de lo esperado
+</h3>
+<p>
+Las empresas valoran quienes pueden hacer las cosas no de una manera perfecta, no de la manera en que no haya errores, no de la manera en que traiga la paz mundial, pero sí de una manera humana, acorde a lo que se espera y un poco más. ¿A quién no le gustaría pagar para que hagan un trabajo y que quede mejor de lo esperado? ¿A quién no le gustaría invertir en plata y recibir oro? Todo empleado por ganar un sueldo mensual es capaz de bajar la luna, pero muy pocos pueden simplemente no bajar la luna y sí excavar una mina y extraer recursos de allí. 
+</p>
+<p>
+Esta forma de ver las cosas puede parecer un poco invasiva quizás en algunas mentes que no suelen estar acostumbradas; sin embargo, trato de que mi intención sea la más comprensiva para aquellos que buscan respuestas reales, sin pasos a seguir, sin ocultar el proceso real y sin engañar. Lo importante aquí es que se comprendan eficientemente estos comportamientos humanos. Sé que es difícil sobresalir, yo sé que cuesta, yo sé que hay que dar un poco más que los demás, pero al final vale la pena.
+</p>
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+Herramientas para impulsarte</h3>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+1. La pregunta incómoda antes de entregar
+</strong>
+<ul class="list-disc pl-6">
+  <li>Antes de dar una tarea por terminada, pregúntate: “¿Esto realmente cumple su propósito o solo cumple el requisito?”</li>
+  <li>Por ejemplo, no se trata solo de entregar un informe, sino de pensar si alguien que lo lea entenderá el mensaje sin tener que preguntarte nada.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+2. La revisión con distancia
+</strong>
+<ul class="list-disc pl-6">
+  <li>Cuando termines algo, aléjate unos minutos y vuelve a revisarlo como si no fuera tuyo.</li>
+  <li>Este pequeño espacio mental ayuda a detectar errores, vacíos o mejoras que no se ven cuando estás demasiado involucrado en la tarea.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+3. El enfoque en el resultado, no en el esfuerzo
+</strong>
+<ul class="list-disc pl-6">
+  <li>No te preguntes cuánto trabajaste, pregúntate qué tan útil quedó lo que hiciste.</li>
+  <li>Un trabajo bien hecho no es el que más tiempo consume, sino el que mejor resuelve el problema para quien lo recibe.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+4. El hábito de mejorar una sola cosa más
+</strong>
+<ul class="list-disc pl-6">
+  <li>Cuando una tarea ya está “bien”, busca una mejora pequeña pero clara: una explicación más simple, un orden más lógico o un detalle que evite errores futuros.</li>
+  <li>No se trata de perfección, sino de aportar un poco más de valor del esperado.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+5. La comparación contigo mismo, no con los demás
+</strong>
+<ul class="list-disc pl-6">
+  <li>Evalúa tu trabajo comparándolo con cómo lo hacías antes, no con lo que otros aparentan hacer.</li>
+  <li>Este enfoque evita la simulación y te obliga a crecer de forma real, constante y sostenible.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+Técnicas para destacar
+</strong>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+1. Autoevaluación constante del trabajo entregado
+</strong>
+<ul class="list-disc pl-6">
+  <li>Revisar de forma crítica cada tarea antes de darla por finalizada.</li>
+  <li>Detectar posibles fallas, mejoras o ajustes sin necesidad de que alguien más lo señale.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+2. Priorización consciente del impacto
+</strong>
+<ul class="list-disc pl-6">
+  <li>Enfocarse primero en las tareas que generan mayor valor real.</li>
+  <li>Diferenciar lo urgente de lo verdaderamente importante.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+3. Claridad en la ejecución
+</strong>
+<ul class="list-disc pl-6">
+  <li>Entender completamente qué se espera antes de comenzar una tarea.</li>
+  <li>Reducir errores derivados de suposiciones o interpretaciones incompletas.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+4. Responsabilidad sin supervisión
+</strong>
+<ul class="list-disc pl-6">
+  <li>Cumplir con las tareas asignadas sin depender del control constante.</li>
+  <li>Asumir los resultados del trabajo propio, tanto positivos como negativos.</li>
+</ul>
+
+<strong class="block mt-8 mb-4 text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">
+5. Mejora progresiva y sostenida
+</strong>
+<ul class="list-disc pl-6">
+  <li>Buscar avances continuos en la forma de trabajar.</li>
+  <li>Evitar la comodidad de repetir procesos sin cuestionarlos.</li>
+</ul>
+</div>
+
+
+
+
+<!-- COMUNICACIÓN EFECTIVA 🗣️ -->
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Por qué una comunicación efectiva es clave para destacar hoy</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+La comunicación como base de la acción
+</h3>
+<p>
+Desde siempre la humanidad ha usado la comunicación para transmitir sentimientos, ideas y mucho más; no es solo hablar, es un medio de transmisión que da a entender de forma precisa una situación a los demás. Actuar es crucial; actuar sin una comunicación adecuada en la mayoría de los casos trae más perjuicios que beneficios. Así sean positivos los cambios realizados, es imposible entender las ideas de quien desea obtener ciertos resultados, captarlas y ejecutarlas con esa base si no hubiera comunicación previa. 
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Escuchar antes que actuar
+</h3>
+<p>
+En la mayoría de las áreas, como empleado, escuchar es más importante que actuar; escuchar es mucho más importante que tratar de impresionar, escuchar es más importante que tener excelentes resultados, escuchar es más importante que esforzarse, escuchar es mucho más importante que suponer que para ti estará bien si realizas algo a tu modo.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+La claridad como forma de respeto
+</h3>
+<p>
+Para simplificar y aclarando, hoy no basta con hacer bien las cosas; también importa cómo se entienden. Una comunicación efectiva no es hablar más ni usar palabras complicadas, es transmitir ideas con claridad, en el momento correcto y con la intención adecuada. Cuando alguien se comunica bien, reduce errores, evita suposiciones y hace que el trabajo fluya sin tensiones innecesarias. Además, comunicar bien es una forma de respeto. Significa pensar en quien escucha o lee, anticiparse a sus dudas y facilitarle el camino.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+La confianza que genera una buena comunicación
+</h3>
+<p>
+Muchas veces los problemas no surgen por falta de capacidad, sino por mensajes incompletos, mal explicados o dados a medias. La claridad ahorra tiempo, energía y desgaste. En un entorno donde todos están ocupados y distraídos, quien logra expresar lo esencial destaca sin esfuerzo. No porque se imponga, sino porque genera confianza. Las personas confían en quien se explica bien, en quien escucha antes de responder y en quien sabe ajustar su mensaje según la situación. Al final, una buena comunicación no solo mejora resultados: mejora relaciones, y eso, hoy más que nunca, marca la diferencia.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Las consecuencias de no comunicar con claridad
+</h3>
+<p>
+Cuando la comunicación no es clara, las consecuencias aparecen rápido, aunque muchas veces se normalizan. El trabajo se malinterpreta, las tareas se repiten y los errores se acumulan sin que nadie se haga realmente responsable. Lo que pudo resolverse con una explicación sencilla termina convirtiéndose en frustración y pérdida de tiempo. También se deterioran las relaciones. La falta de comunicación genera roces innecesarios, desconfianza y una sensación constante de estar “apagando incendios”. 
+</p>
+<p>
+Las personas dejan de colaborar con fluidez y empiezan a protegerse, a suponer intenciones o a trabajar de forma aislada para evitar problemas. A largo plazo, el impacto es más silencioso pero más fuerte. Las ideas pierden fuerza porque no se expresan bien, el esfuerzo pasa desapercibido y las oportunidades se reducen. Quien no comunica con claridad puede ser visto como desordenado, poco confiable o difícil de seguir, incluso cuando su trabajo es bueno. En un entorno donde la claridad es valor, no saber comunicar termina siendo un límite real para crecer.
+</p>
+</div>
+
+
+
+
+<!-- HABILIDADES INTERPERSONALES 🤝 -->
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Habilidades interpersonales que te hacen sobresalir</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Hay que empezar comprendiendo que no estás solo, que dependemos de alguien como alguien depende de nosotros. Hablando en un mundo laboral y donde se quiere ser imprescindible, las habilidades interpersonales se refieren a la forma en que una persona se relaciona con otras en su día a día. No tienen que ver con títulos, cargos o conocimientos técnicos, sino con la manera en que se comunica, escucha y actúa dentro de un entorno compartido.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Habilidades visibles que impactan el entorno
+</h3>
+<p>
+Son habilidades prácticas, visibles y constantes. Incluyen aspectos como expresarse con claridad, prestar atención real a lo que otros dicen y entender que no todos piensan o reaccionan igual. También implican saber manejar desacuerdos sin generar fricción innecesaria, aceptar críticas sin tomarlas como algo personal y adaptar el tono según la situación o la persona con la que se interactúa. 
+</p>
+<p>
+En el trabajo y en cualquier espacio de unión, estas habilidades marcan la diferencia entre avanzar o estancarse. Permiten que las ideas se entiendan mejor, que los conflictos no escalen y que la cooperación sea más natural. Cuando faltan, incluso el talento más sólido pierde impacto. Cuando están presentes, el trabajo fluye y las relaciones se sostienen en el tiempo.
+</p>
+
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+El impacto del trato diario en las relaciones
+</h3>
+<p>
+Cómo actuamos con los demás no es un detalle menor, aunque muchas veces se trate como si lo fuera. El tono que usamos, la forma en que reaccionamos y hasta los silencios dicen más de lo que creemos. Eso influye directamente en cómo las personas se sienten, en cómo responden y en el ambiente que se termina formando. Cuando ese trato es equilibrado, las cosas suelen avanzar con menos resistencia. 
+</p>
+<p>
+No porque todo sea perfecto, sino porque hay una base mínima de respeto y entendimiento. En cambio, cuando las actitudes se descuidan, el ambiente se vuelve pesado, aparecen tensiones innecesarias y cualquier proceso, por simple que sea, empieza a complicarse. Al final, las relaciones no fallan por grandes conflictos, sino por pequeñas conductas repetidas que nadie se toma el tiempo de revisar.
+</p>
+</div>
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+  
+<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
+Convertir el criterio en decisiones reales
+</h3>
+Entender estos comportamientos y dinámicas no siempre es suficiente si no se traducen en algo medible. A veces hace falta detenerse, evaluar con calma y mirar los números con honestidad. Si quieres hacerlo de forma sencilla, he reunido algunas 
+
+<a href="https://codigomillonario.blog/herramientas" target="_blank" class="text-blue-600 hover:underline">  
+  herramientas</a>
+  
+que te permiten analizar tu situación financiera, simular escenarios y tomar decisiones con mayor criterio, sin promesas ni atajos.
+</div>
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+
+<!-- Sección recomendada -->
+<div class="mt-5 mb-10">
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
+    <p class="text-sm text-slate-600 italic leading-relaxed"
+       style="font-family: 'Poppins', sans-serif;">
+       <strong class="font-semibold text-slate-800">
+      Código Millonario</strong> recomienda:
+    </p>
+  </blockquote>
+</div>
+
+
+
+      </div>
+    </main>
+
+
+
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center text-sm mb-4" style=" font-family: 'Montserrat', sans-serif;">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style=" font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../mejorar-tu-empleo/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style=" font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style=" font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+
+    <p class="interlink-heading text-center text-sm mb-6" style=" font-family: 'Montserrat', sans-serif;">
+    Lo más leído
+    </p>
+
+    <div id="interlinkGrid"></div>
+
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* CONTENEDOR */
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ITEM */
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* IMAGEN */
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* CONTROLES */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb; /* 👈 NUEVA LÍNEA */
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* BOTONES */
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+/* 🔥 FUNCIÓN PARA CORTAR TEXTO */
+function truncate(text, maxLength = 60){
+  return text.length > maxLength 
+    ? text.substring(0, maxLength) + "..." 
+    : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title, 60);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <p>Este artículo relacionado puede ayudarte a mejorar tus conocimientos financieros de forma estratégica.</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../mejorar-tu-empleo/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+
+  const links = Array.from(temp.querySelectorAll(".article a"));
+
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+   
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

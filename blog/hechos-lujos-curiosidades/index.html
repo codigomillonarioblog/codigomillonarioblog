@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hechos y Curiosidades del Mundo del Lujo que Sorprenden a Todos | Código Millonario</title>
+<meta name="description" content="Hechos y curiosidades del lujo, secretos poco conocidos y datos sorprendentes sobre estilo de vida exclusivo y élite.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/favicon-v2.png" type="image/png">
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<style>
+/* ===================== GRID DE TARJETAS CENTRADO ===================== */
+
+#articlesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: center; /* 🔥 centra las tarjetas */
+    gap: 24px; /* espacio uniforme entre tarjetas */
+    max-width: 1200px;
+    margin: 0 auto; /* centra todo el bloque */
+}
+
+/* Evita espacios extra */
+.article {
+    display: flex;
+    justify-content: center;
+}
+
+/* ===================== PAGINACIÓN CENTRADA ===================== */
+
+.pager-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center; /* 🔥 centra la paginación */
+}
+
+</style>
+
+<style>
+
+/* ===================== PAGINACIÓN ===================== */
+.pager-container { 
+    background: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    padding: 12px; 
+    border: 1px solid rgba(0,0,0,0.1); /* delineación sutil */
+}
+
+.page-box { 
+    min-width: 38px; 
+    height: 38px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 6px; 
+    border: 1px solid #e6e6e6; 
+    background: #fff; 
+    cursor: pointer; 
+    user-select: none; 
+    font-weight: 600; 
+    color: #0f172a; 
+    transition: all 0.2s ease; 
+}
+
+.page-box:hover { 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06); 
+    transform: translateY(-1px); 
+}
+
+.page-box.active { 
+    border-color: #94a3b8; 
+    box-shadow: 0 0 0 3px rgba(14,165,233,0.06); 
+    background: #f8fafc; 
+}
+
+.compact-btn { 
+    min-width: 40px; 
+    height: 40px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 6px; 
+    border: 1px solid #e6e6e6; 
+    background: #fff; 
+    cursor: pointer; 
+    transition: all 0.2s ease; 
+}
+
+.compact-btn[disabled] { 
+    opacity: 0.45; 
+    cursor: default; 
+    pointer-events: none; 
+}
+
+.select-pages { 
+    border: 1px solid #e6e6e6; 
+    background: #fff; 
+    height: 40px; 
+    border-radius: 6px; 
+    padding: 6px 10px; 
+}
+
+input[type="number"].goto-page { 
+    border: 1px solid #e6e6e6; 
+    height: 40px; 
+    border-radius: 6px; 
+    padding: 6px 10px; 
+    width: 80px; 
+    background: #fff; 
+}
+
+#articlesGrid { 
+    transition: all 0.5s ease; 
+}
+
+.article { 
+    transition: opacity 0.4s ease; 
+}
+
+@media (max-width: 640px) {
+  .pager-grid { grid-template-columns: 1fr; gap: 8px; }
+  .page-box { min-width: 34px; height: 34px; }
+  .compact-btn { min-width: 34px; height: 34px; }
+  input[type="number"].goto-page { width: 64px; }
+}
+</style>
+
+<style>
+/* ===================== Tarejetas dentro de la Compaginacion ===================== */
+/* CONTENEDOR */
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* TARJETA ENVOLVENTE */
+.article-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+/* CARD */
+.article-card {
+    width: 100%;
+    max-width: 250px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 12px 0;
+    box-shadow: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* BLOQUE SUPERIOR DE TEXTO */
+.text-content {
+    min-height: 90px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* CARD FLEX */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.article {
+    display: flex;
+}
+
+.article article {
+    flex: 1;
+    display: flex;
+}
+
+.article-link {
+    display: flex;
+    flex: 1;
+}
+
+/* TÍTULO */
+.article-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1c1c1c;
+    margin: 0 0 4px 0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* BADGE */
+.badge {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #555;
+    margin: 0;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* IMAGEN 16:9 */
+.article-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* OCULTOS */
+.meta,
+.arrow-btn {
+    display: none;
+}
+
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+<style>
+  /* ICONO FLECHA */
+  .article-card .card-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg); /* Apunta a la derecha */
+    transition: transform 0.35s ease;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  /* Contenedor relativo para que el icono se posicione correctamente */
+  .article-card {
+    position: relative;
+  }
+
+  /* Opcional: rotar al hacer click */
+  .article-card.open .card-icon {
+    transform: rotate(135deg);
+  }
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../tienda.html">Productos</a></li>
+      <li><a href="../../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../../donar.html">Donaciones</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../../index.html">Inicio</a>
+      <a href="../../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../../herramientas.html">Herramientas</a>
+      <a href="../../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../../tienda.html">Productos</a>
+      <a href="../../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../../donar.html">Donaciones</a>
+      <a href="../../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+
+<style>
+.marquee-line {
+  height: 1px;            /* línea delgada */
+  background-color: #ccc;  /* gris claro */
+  width: 100%;            /* ocupa todo el contenedor */
+  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
+}
+</style>
+
+
+<div class="left-block flex flex-col justify-center items-start mt-20 mb-2 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+  Aprende con curiosidades
+  </span>
+</div>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+    <h1>
+Los Secretos del Lujo: Hechos Poco Conocidos y Curiosos del Estatus
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+
+  <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
+Historias, récords y curiosidades sobre dinero e inversiones que sorprenden y muestran <br>
+cómo funciona la economía en formas inesperadas.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+<div class="left-block flex flex-col justify-center items-start mt-20 mb-0 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+  Inversiones sorprendentes
+  </span>
+</div>
+
+      
+  
+<div class="articles-wrapper" style="font-family: 'Open Sans', sans-serif;">
+
+  <!-- Línea superior -->
+  <div class="section-line"></div>
+
+  <div class="articles-row">
+
+<div class="article-block">
+  <div class="text-content">
+    <h3>Desde récords sorprendentes hasta objetos que alcanzan precios impensables, el mundo del dinero está lleno de curiosidades.</h3>
+    <hr style="width:100%;">
+    <p>Curiosidades Asombrosas del Mundo del Dinero</p>
+  </div>
+  <div class="article-divider"></div>
+</div>
+
+<div class="article-block">
+  <div class="text-content">
+    <h3>Algunas inversiones y coleccionables han crecido tanto que sus valores superan lo que imaginábamos hace años.</h3>
+    <hr style="width:100%;">
+    <p>Las Inversiones y Coleccionables Superan Toda Expectativa</p>
+  </div>
+  <div class="article-divider"></div>
+</div>
+
+<div class="article-block">
+  <div class="text-content">
+    <h3>Monedas raras, billetes históricos y curiosidades financieras muestran cómo el dinero también tiene historia y cultura.</h3>
+    <hr style="width:100%;">
+    <p>Dinero con Historia: Secretos y lujos sorprendentes</p>
+  </div>
+  <div class="article-divider"></div>
+</div>
+
+<div class="article-block">
+  <div class="text-content">
+    <h3>Al observar los récords, tendencias y hechos sorprendentes, entender cómo funcionan las finanzas de maneras inesperadas.</h3>
+    <hr style="width:100%;">
+    <p>El Lado Insólito del Dinero y las expectativas que genera</p>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<style>
+.articles-wrapper {
+  max-width: 64rem;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-line {
+  height: 1px;
+  width: 100%;
+  background-color: #d1d5db;
+  margin: 16px 0;
+}
+
+.articles-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch; /* Alinea los bloques con la misma altura */
+  overflow-x: hidden;
+}
+
+.article-block {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el espacio interno */
+  padding: 12px 0;
+  background: none;
+  border: none;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* Hace que cada bloque crezca para igualar alturas */
+  margin-bottom: 8px;
+}
+
+.article-block h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin: 0 0 6px 0;
+  line-height: 1.4;
+}
+
+.article-block p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.article-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-top: 16px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .articles-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+
+  .articles-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .article-block {
+    flex: 1 0 100%;
+  }
+
+  .article-divider {
+    display: block;
+  }
+}
+</style>
+
+
+
+
+<div class="flex justify-center md:justify-start mt-2 md:mt-5 relative px-4 sm:px-0 md:-ml-8">
+  <img src="../../assets/png/detectar-oportunidades-de-mercado.webp"
+       alt=""
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[50rem] md:h-[26rem] object-contain relative z-10 md:translate-x-4">
+</div>
+
+
+   <!-- INTRODUCCIÓN GENERAL -->
+      <main class="py-10">
+
+
+
+<div class="left-block flex flex-col justify-center items-start md:items-center mt-20 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+  Récords financieros
+  </span>
+</div>
+
+
+
+              <section class="mb-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- aquí siguen las tarjetas de artículos -->
+
+
+
+<!-- PAGINACIÓN ARRIBA -->
+<div class="pager-container max-w-5xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="flex items-center gap-4 px-2">
+            <div class="text-sm text-stone-700">
+                Total <span id="totalResults" class="font-semibold">0</span> resultados
+            </div>
+            <div class="hidden sm:inline-block text-sm text-stone-700">
+                Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
+            </div>
+        </div>
+        <div class="flex justify-center items-center gap-2 px-2">
+            <button id="firstBtn" class="compact-btn">«</button>
+            <button id="prevBtn" class="compact-btn">‹</button>
+            <div id="pageNumbers" class="flex items-center gap-2"></div>
+            <button id="nextBtn" class="compact-btn">›</button>
+            <button id="lastBtn" class="compact-btn">»</button>
+        </div>
+        <div class="flex justify-end items-center gap-3 px-2">
+            <select id="perPageSelect" class="select-pages">
+                <option value="6" selected>6 / página</option>
+                <option value="9">9 / página</option>
+                <option value="12">12 / página</option>
+                <option value="20">20 / página</option>
+            </select>
+            <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
+            <button id="gotoBtn" class="page-box">Ir</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ARTÍCULOS -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="articlesGrid">
+
+
+
+
+    <!-- EJEMPLO DE ARTÍCULO -->
+    <div class="article">
+      <article>
+      <a href="./5-errores-financieros-costaron-fortunas.html" class="article-link">
+      <div class="article-card">
+      
+        <div style="position: relative;">
+          <img src="../../assets/png/errores-financieros-que-costaron-fortunas.webp" alt="">
+          <div class="badge">Estos errores financieros muestran cómo oportunidades rechazadas, ventas prematuras y objetos ignorados terminaron costando verdaderas fortunas.</div>
+        </div>
+
+        <h2 class="article-title">
+        Pequeñas decisiones que pueden cambiar el destino del dinero
+        </h2>
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
+      </div>
+    </a>
+  </article>
+</div>
+
+    <div class="article">
+     <article>
+      <a href="./compras-absurdas-millonarios-subastas.html" class="article-link">
+      <div class="article-card">
+      
+        <div style="position: relative;">
+          <img src="../../assets/png/banana-pegada-pared-subasta-arte.webp" alt="banana pegada a la pared obra de arte conceptual en subasta">
+          <div class="badge">En el mundo de los millonarios, el dinero puede convertir casi cualquier cosa en un objeto de colección. Desde una simple banana pegada a una pared hasta...</div>
+        </div>
+
+        <h2 class="article-title">
+        De bananas a fantasmas: las subastas más absurdas del mundo
+        </h2>
+          <!-- ICONO -->
+          <span class="card-icon"></span>
+          <div class="meta"></div>
+      </div>
+    </a>
+  </article>
+</div>
+
+
+
+
+
+    <!-- Más artículos aquí -->
+      </div>
+    </div>
+</section>
+
+
+
+<div class="left-block flex flex-col justify-center items-start md:items-center mt-40 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+  El lado curioso de las inversiones
+  </span>
+</div>
+
+
+  
+
+ <section class="mb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
+
+    <!-- ================= ACORDEÓN ================= -->
+
+   <style>
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco fijo */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transform: translateY(0);
+    will-change: transform; /* optimiza animación */
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+
+  /* Animación tipo card con sombra */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+</style>
+
+    <div class="cf-accordion">
+
+    <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+      ¿Podría una idea simple transformarse en una fortuna?
+    <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+        <p>
+        Cada día surgen inversiones y oportunidades que parecen imposibles: desde startups que multiplican su valor en semanas, hasta objetos y activos que alcanzan cifras récord sin previo aviso. El mundo del dinero está lleno de sorpresas.
+        </p>
+
+        <p>
+        Lo que ayer parecía un riesgo, hoy es un récord; lo que ignorabas puede transformarse en una tendencia millonaria. Observar estas curiosidades financieras te enseña que el dinero no solo se gana, también se sorprende y se multiplica en formas inesperadas.
+        </p>
+
+        <p>
+        Quien se atreve a mirar más allá de lo obvio descubre que las oportunidades no esperan. El mundo financiero está en movimiento constante, y solo los que buscan lo extraordinario llegan a encontrar cifras que desafían toda expectativa.
+        </p>
+
+    </div>
+</div>
+
+    </div>
+
+    <script>
+    document.querySelectorAll('.cf-accordion').forEach(accordion => {
+  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.cf-accordion-item');
+      const content = item.querySelector('.cf-accordion-content');
+
+      // Solo afecta los items de ESTE acordeón
+      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+        }
+      });
+
+      item.classList.toggle('is-open');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+    </script>
+
+
+
+</main>
+
+
+
+<script>
+/* ================= PAGINACIÓN FUNCIONAL ================= */
+const articlesGrid = document.getElementById("articlesGrid");
+const perPageSelect = document.getElementById("perPageSelect");
+const currentPageText = document.getElementById("currentPageText");
+const totalPagesText = document.getElementById("totalPagesText");
+const totalResults = document.getElementById("totalResults");
+const firstBtn = document.getElementById("firstBtn");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const lastBtn = document.getElementById("lastBtn");
+const pageNumbers = document.getElementById("pageNumbers");
+const gotoInput = document.getElementById("gotoInput");
+const gotoBtn = document.getElementById("gotoBtn");
+
+const articles = Array.from(document.querySelectorAll(".article"));
+let currentPage = 1;
+let perPage = parseInt(perPageSelect.value);
+
+function renderArticles() {
+    const start = (currentPage - 1) * perPage;
+    const end = start + perPage;
+
+    articles.forEach((article, index) => {
+        article.style.display = (index >= start && index < end) ? "block" : "none";
+    });
+
+    currentPageText.textContent = currentPage;
+    totalPagesText.textContent = Math.ceil(articles.length / perPage);
+    totalResults.textContent = articles.length;
+
+    renderPageNumbers();
+}
+
+function renderPageNumbers() {
+    pageNumbers.innerHTML = "";
+    const totalPages = Math.ceil(articles.length / perPage);
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("div");
+        btn.textContent = i;
+        btn.className = "page-box" + (i === currentPage ? " active" : "");
+        btn.addEventListener("click", () => {
+            currentPage = i;
+            renderArticles();
+        });
+        pageNumbers.appendChild(btn);
+    }
+}
+
+perPageSelect.addEventListener("change", () => {
+    perPage = parseInt(perPageSelect.value);
+    currentPage = 1;
+    renderArticles();
+});
+
+firstBtn.addEventListener("click", () => { currentPage = 1; renderArticles(); });
+prevBtn.addEventListener("click", () => { if(currentPage>1){currentPage--;renderArticles();} });
+nextBtn.addEventListener("click", () => { if(currentPage<Math.ceil(articles.length/perPage)){currentPage++;renderArticles();} });
+lastBtn.addEventListener("click", () => { currentPage=Math.ceil(articles.length/perPage); renderArticles(); });
+gotoBtn.addEventListener("click", () => {
+    let page = parseInt(gotoInput.value);
+    if(page>=1 && page<=Math.ceil(articles.length/perPage)){
+        currentPage = page;
+        renderArticles();
+    }
+});
+
+renderArticles();
+</script>
+
+</body>
+</html>
+
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

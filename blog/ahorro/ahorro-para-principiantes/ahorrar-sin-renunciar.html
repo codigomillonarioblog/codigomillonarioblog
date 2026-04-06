@@ -1,0 +1,1815 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo ahorrar dinero sin cambiar tu estilo de vida | Código Millonario</title>
+    <meta name="description" content="Nunca fue tan fácil ahorrar dinero sin cambiar tu estilo de vida. Empieza a gastar con más inteligencia y deja de ver el gasto como una pérdida.">    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../../assets/img/favicon-v2.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../../../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../../index.html">Inicio</a></li>
+      <li><a href="../../../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../../tienda.html">Productos</a></li>
+      <li><a href="../../../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../../../donar.html">Donaciones</a></li>
+      <li><a href="../../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../../../index.html">Inicio</a>
+      <a href="../../../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../../../herramientas.html">Herramientas</a>
+      <a href="../../../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../../../tienda.html">Productos</a>
+      <a href="../../../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../../../donar.html">Donaciones</a>
+      <a href="../../../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+   Educación Financiera
+  </span>
+</div>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+    <h1>
+Cómo ahorrar dinero sin cambiar tu estilo de vida ni dejar de vivir como te gusta
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+</div>
+
+<div class="flex flex-col justify-start gap-5 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Si ahorrar te suena a sacrificio, algo estás haciendo mal.
+Existe una forma de vivir bien hoy sin descuidar tu futuro.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+<style>
+.layout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content-column {
+  width: 100%;
+  max-width: 760px;
+  padding-left: 35px;  /* antes 60px */
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-column {
+    max-width: 720px;
+    padding-left: 25px; /* antes 40px */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column {
+    max-width: 100%;
+    padding-left: 10px; /* antes 20px */
+    padding-right: 18px;
+  }
+}
+</style>
+
+<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+
+<style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+
+
+
+
+<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
+   Código Millonario en Redes:
+</div>
+
+
+ <!-- INTRODUCCIÓN GENERAL -->
+<main class="py-5">
+  <div class="layout-wrapper">
+    <article class="content-column">
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex gap-4 social-container">
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+     class="social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
+
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+     class="social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://pin.it/3tqNXYoAA" target="_blank"
+     class="social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+
+  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+  </a>
+
+</div>
+
+<!-- TAMAÑO INCONO TWITTER -->
+<style>
+.social-icon svg{
+  width:14px !important;
+  height:14px !important;
+}
+</style>
+
+
+<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
+<div class="max-w-4xl mt-7 ml-0 px-4 md:px-0 flex items-start space-x-4" >
+  <!-- Imagen del autor -->
+  <div class="flex-shrink-0">
+    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+  <!-- Texto del autor -->
+  <div class="py-3">
+    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+        Francisco Urrego
+      </a>
+    </p>
+  </div>
+</div>
+
+
+  <div class=" mt-5 w-full h-px bg-slate-300"></div>
+
+  <div style="font-family: Arial, sans-serif; font-size: 11px; font-weight: 400; color: #777;">
+   <p>
+        Actualizado el 09 ene 2026 | 21:09 h
+   </p>
+    <p>
+      ⏱ 4 min lectura
+    </p>
+    </div>
+
+
+
+<img src="../../../assets/png/controlar-gastos-sin-sacrificios.webp"
+     alt=""
+class="w-80 mx-auto relative top-6 sm:w-[40rem] md:w-[50rem] sm:-left-6 sm:top-4 object-contain z-10">
+
+
+
+<style>
+  /* ================= ACORDEÓN ================= */
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  /* Ajustamos el ancho máximo y centramos el acordeón */
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco */
+    border-radius: 0px; /* puntas cuadradas */
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 680px; /* ancho máximo deseado aumentado */
+
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  /* Animación tipo card con sombra al pasar el mouse */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+    max-width: 100%;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
+    }
+  }
+</style>
+
+<div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Cómo ahorrar dinero sin sacrificios: equilibrio entre ahorro y calidad de vida</a></li>
+    <li><a href="#titulo2">2. Cómo mejorar tu relación con el dinero y tus finanzas personales sin dejar de disfrutar tu estilo de vida</a></li>
+    <li><a href="#titulo3">3. Cómo comprar con un plan y evitar gastar dinero sin control</a></li>
+    <li><a href="#titulo4">4. Cuando un descuento te ayuda a ahorrar y cuando solo te hace gastar más</a></li>
+    <li><a href="#titulo5">5. Transforma tus hábitos financieros y empieza a ahorrar sin depender de la fuerza de voluntad</a></li>
+    <li><a href="#titulo6">6. Por qué priorizar experiencias sobre cosas mejora tus finanzas personales y tu ahorro</a></li>
+    <li><a href="#titulo7">7. Por qué los pequeños gastos afectan tu ahorro más de lo que imaginas</a></li>
+    <li><a href="#titulo8">8. Ahorrar sin renunciar a tu estilo de vida: una forma más inteligente de gestionar tu dinero</a></li>
+  </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
+
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
+
+        item.classList.toggle('is-open');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
+
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+<!-- INTRODUCCIÓN -->
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">Cómo ahorrar dinero sin sacrificios: equilibrio entre ahorro y calidad de vida</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Muchas personas creen que <strong>ahorrar dinero</strong> implica dejar de disfrutar la vida y puede ser una de las tantas causas por las que no lo hacen; recortar todo lo que les gusta o vivir con constantes restricciones puede ser desesperante. 
+</p>
+
+<p>
+Sin embargo, ahorrar no se trata de privarse, si así no lo quieres, sino de aprender a usar el dinero de forma consciente para que <strong>trabaje a tu favor</strong> sin afectar tu bienestar actual.
+</p>
+
+<p>
+El verdadero equilibrio aparece cuando entiendes cómo administrar tus ingresos sin usar el <strong>azar como método normal</strong>. 
+</p>
+
+<p>
+Identificar qué quieres hacer, hasta dónde quieres llegar y redirigir ese dinero hacia <strong>objetivos financieros claros</strong> que realmente te aporten tranquilidad y estabilidad a la vez. 
+</p>
+
+<p>
+No gastes menos por obligación y con culpa, <strong>gasta sabiamente</strong>.
+</p>
+
+<p>
+Con algunos ajustes pequeños y sencillos puedes <strong>ahorrar cada mes</strong> y seguir disfrutando de tus hobbies, comidas y salidas. 
+</p>
+
+<p>
+En este artículo descubrirás <strong>estrategias prácticas de ahorro</strong> fáciles de tomar y realistas para mejorar tu ahorro sin sentir que estás sacrificando tu estilo de vida.
+</p>
+
+<p>
+Si quieres empezar de inmediato, puedes apoyarte en esta herramienta para visualizar tu progreso: Calcula
+<a href="https://codigomillonario.blog/herramientas" target="_blank" class="text-blue-600 hover:underline">
+cuánto puedes ahorrar fácilmente ahora mismo.
+</a>
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo mejorar tu relación con el dinero y tus finanzas personales sin dejar de disfrutar tu estilo de vida</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Suele haber una creencia negativa en las personas que quieren vivir mejor sin cambiar su estilo de vida y fracasan al intentar <strong>ahorrar dinero</strong> porque creen que deben renunciar a todo lo que disfrutan. 
+</p>
+
+<p>
+Si ya tienes un estilo de vida preestablecido, tomar la iniciativa de <strong>ahorrar</strong> no te llevará a la ruina ni mucho menos, si no lo han hecho tus gastos aún. 
+</p>
+
+<p>
+El problema no son tus gustos, sino la forma en que los consumes, si son recurrentes o no. No obstante, <strong>ahorrar dinero</strong> no se trata de prohibirte, sino de ajustar pequeños hábitos diarios que hoy pasan desapercibidos y se llevan tu dinero sin darte valor real.
+</p>
+
+<p>
+Cuando haces consciente cada gasto, comienzas a tomar el control sin sentir que estás perdiendo <strong>libertad financiera</strong>. 
+</p>
+
+<p>
+Estos ajustes simples pueden marcar una diferencia real sin afectar tu estilo de vida:
+</p>
+
+</div>
+
+
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Ejemplos de gastos que puedes reducir sin esfuerzo</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2 text-justify">
+  <li>¿Comes fuera todos los días? Reduce a 2–3 veces por semana y cocina en casa los otros días.</li>
+  <li>¿Compras café a diario en la calle? Prepáralo en casa, llévalo en un termo y mantén tu hábito favorito gastando menos.</li>
+  <li>¿Pagas suscripciones que casi no usas? Cancélalas o compártelas en planes familiares.</li>
+</ul>
+
+<p>
+<strong>Beneficio:</strong> Empiezas a <strong>ahorrar dinero</strong> sin sentir culpa, sin <strong>restricciones extremas</strong> y sin abandonar lo que te gusta. Todo esto mejora tu <strong>control de gastos</strong> y tu <strong>economía personal</strong>.
+</p>
+
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo comprar con un plan y evitar gastar dinero sin control</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Este ejercicio puede parecer aburrido y que ya lo dicen muchos medios. 
+</p>
+
+<p>
+Sin embargo, el poder que esconde este factor es tan real que aquí, en Código Millonario, es muy necesario mencionarlo y no dejarlo pasar, ya que una de las formas más comunes de perder dinero es comprar sin un <strong>plan de compras</strong>, sin saber qué vas a hacer cuando tengas de frente muchos productos. 
+</p>
+
+<p>
+Entrar a una cadena de tienda 
+<strong>
+“solo a mirar y ver qué resulta”</strong> casi siempre termina en <strong>gastos innecesarios</strong> que, sumados mes a mes, afectan directamente tu capacidad de ahorrar. 
+</p>
+
+<p>
+Comprar con lista y un objetivo claro transforma cada salida de compras en una decisión concreta y directa en lo que harás, no impulsiva, sin dirección, que no te permite ahorrar.
+</p>
+
+<p>
+Cuando no existe una intención clara al momento de comprar, el dinero se va en decisiones rápidas que parecen pequeñas, pero que terminan acumulándose sin que lo notes. 
+</p>
+
+<p>
+La falta de planificación no solo afecta tu bolsillo, también debilita el hábito del ahorro, porque cada <strong>gasto impulsivo</strong> le quita espacio a tus objetivos financieros reales.
+</p>
+
+<p>
+En cambio, cuando compras con un enfoque definido, comienzas a desarrollar una mejor <strong>disciplina financiera</strong>, lo que te permite tomar decisiones más conscientes y evitar caer en compras innecesarias.
+</p>
+
+</div>
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-10" style="font-family: 'Open Sans', sans-serif;"> 
+Te puede interesar:
+</div>
+
+<style>
+.articulo-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+  min-height: 140px; /* altura mínima para el contenido y botón */
+}
+
+.articulo-main {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  padding: 10px 15px 50px 15px; /* padding inferior para dejar espacio al botón */
+}
+
+.articulo-img {
+  width: 200px;
+  height: 110px;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.articulo-contenido {
+  flex: 1;
+  padding-left: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articulo-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #000;
+}
+
+.articulo-descripcion {
+  font-size: 12px;
+  color: #555;
+  flex: 1;
+}
+
+/* Botón Ir a la derecha con línea */
+.articulo-boton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: center;
+}
+
+.articulo-boton span {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Texto plano a la izquierda dentro del mismo botón, visible */
+.articulo-boton-texto {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Móvil */
+@media (max-width:600px) {
+  .articulo-main {
+    flex-direction: column;
+    padding: 8px 10px 50px 10px; /* dejar espacio para botón */
+  }
+
+  .articulo-img {
+    width: 120px;
+    height: 70px;
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+
+  .articulo-contenido {
+    padding-left: 0;
+  }
+
+  .articulo-titulo {
+    font-size: 12px;
+  }
+
+  .articulo-descripcion {
+    font-size: 11px;
+  }
+
+  .articulo-boton {
+    padding: 6px 10px;
+  }
+
+  .articulo-boton span {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .articulo-boton-texto {
+    font-size: 11px;
+  }
+}
+</style>
+
+<a href="https://codigomillonario.blog/blog/empleo/mejorar-tu-empleo/trabajar-mas-no-alcanza.html" class="articulo-box">
+  <img src="../../../assets/png/trabajar-mas-avanzar-menos.webp" class="articulo-img">
+  <div class="articulo-main">
+    <div class="articulo-contenido">
+      <div class="articulo-titulo">
+      <h2 style="font-family: 'Open Sans', sans-serif;">Trabajamos más que nunca… ¿por qué sentimos que no avanzamos?</h2>
+      </div>
+      <div class="articulo-descripcion">
+        <strong>Estar ocupado no es lo mismo que estar avanzando; muchas veces solo significa que estás reaccionando todo el día.</strong>
+      </div>
+    </div>
+  </div>
+  <div class="articulo-boton">
+    <div class="articulo-boton-texto">Lo más leído:</div>
+    <span>Ir</span>
+  </div>
+</a>
+
+
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Consejos para evitar compras impulsivas y ahorrar dinero en tus compras</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2 text-justify">
+  <li>Antes de ir al supermercado, prepara una lista clara y respétala.</li>
+  <li>Evita comprar productos solo porque están en oferta si no los necesitas.</li>
+  <li>Compra cantidades razonables: ni de más por impulso ni de menos por mala planificación.</li>
+
+  <li>Cuando entres a un centro comercial, evita “solo mirar” porque es donde más <strong>compras impulsivas</strong> ocurren.</li>
+  <li>Antes de comprar ropa, revisa lo que ya tienes para no duplicar <strong>gastos innecesarios</strong>.</li>
+  <li>Si vas a salir con amigos, define un <strong>presupuesto personal</strong> para evitar gastar más de lo planeado en comida o bebidas.</li>
+  <li>En compras online, deja los productos en el carrito unas horas antes de pagar para evitar <strong>decisiones emocionales</strong>.</li>
+</ul>
+
+<p>
+<strong>Beneficio:</strong> Reduces <strong>gastos innecesarios</strong>, tomas mejores decisiones y haces que tu dinero rinda más sin dejar de cubrir lo esencial.
+</p>
+
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuando un descuento te ayuda a ahorrar y cuando solo te hace gastar más</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Es normal y obvio que las personas sepan qué es un descuento y la mayoría supongan que lo saben aprovechar lo suficiente. 
+</p>
+
+<p>
+Porque comprar en descuento no es lo mismo que sacarle provecho a un descuento, ya que los descuentos pueden ser una gran herramienta para ahorrar o una trampa silenciosa para gastar de más.
+</p>
+
+<p>
+Se suele creer en la sociedad que los que toman un buen descuento están <strong>ahorrando solo porque un producto tiene un precio rebajado</strong>, cuando en realidad están comprando algo que no necesitaban al final del día. 
+</p>
+
+<p>
+La diferencia entre perder dinero y aprovechar una oferta está en la intención y en el momento en que compras. Se puede perder mucho dinero comprando algo <strong>no necesario en rebaja</strong> que comprar algo necesario con precio inflado, y algunos se preguntarán ¿por qué?
+</p>
+
+<p>
+<strong>
+La razón es simple:</strong> lo que necesitas va a ocupar un espacio real y un uso constante. 
+</p>
+
+</div>
+
+
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Cuando compras algo que no necesitas, aunque sea barato, ese dinero no estaba dentro de tus <strong>prioridades</strong>, no será usado de la mejor manera si es que se usa. En cambio, un gasto necesario cumple una función real que equivale al precio pagado por su necesidad. 
+</p>
+
+<p>
+El problema no es el precio, sino la <strong>intención detrás de la compra</strong>, ¿compras por comprar? o compras porque sí lo necesitas.
+</p>
+
+<p>
+Aprovechar descuentos con inteligencia significa usarlos a tu favor, no dejar que <strong>decidan por ti</strong>. 
+</p>
+
+<p>
+Cuando sabes qué necesitas, cuánto puedes gastar y comparas opciones antes de comprar, las ofertas se convierten en <strong>aliadas de tu ahorro</strong> y no en excusas para gastar sin control.
+</p>
+
+<p>
+<strong>
+  Beneficios de este método:</strong> Gastas menos en lo que ya ibas a comprar, evitas <strong>compras impulsivas</strong> y haces que cada descuento sume a tu ahorro.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Transforma tus hábitos financieros y empieza a ahorrar sin depender de la fuerza de voluntad</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El método correcto no es usar la <strong>fuerza de voluntad para ahorrar</strong>, ya que ese método casi siempre falla. El verdadero camino ocurre cuando dejas de depender del esfuerzo diario como condición obligatoria y comienzas a construir <strong>hábitos que funcionen de forma automática</strong> a tu favor. 
+</p>
+
+<p>
+Cuando tus decisiones financieras están bien estructuradas, ahorrar deja de ser una <strong>lucha constante</strong> y se convierte en algo natural y espontáneo.
+</p>
+
+<p>
+En lugar de preguntarte todos los días si puedes gastar o no, cuánto puedes gastar, en qué gastarlo rápido, la forma correcta está en diseñar un <strong>sistema que tome esas decisiones por ti</strong>. 
+</p>
+
+<p>
+Estos hábitos no buscan limitarte, sino ayudarte a usar mejor tu dinero sin afectar tu estilo de vida:
+</p>
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2 text-justify">
+  <li>
+    <strong>
+    Convierte tus compras en ahorro:
+    </strong>
+    utiliza descuentos, cashback y programas de puntos cada vez que compres algo que ya tenías previsto.
+  </li>
+
+  <li>
+    <strong>
+    Elige prioridades, no restricciones:
+    </strong>
+    invierte tu dinero en lo que realmente disfrutas y reduce gastos que no te aportan valor.
+  </li>
+
+  <li>
+    <strong>
+    Aprende a renegociar tus servicios:
+    </strong>
+    revisa y ajusta costos de internet, telefonía, luz o suscripciones que pagas mes a mes.
+  </li>
+
+  <li>
+    <strong>
+    Cambia hábitos, no tu estilo de vida:
+    </strong>
+    aplica mejoras pequeñas y constantes sin sentir que estás sacrificando tu bienestar.
+  </li>
+</ul>
+
+</div>
+
+
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Por qué priorizar experiencias sobre cosas mejora tus finanzas personales y tu ahorro</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Una de las razones por las que muchas personas sienten que el dinero nunca alcanza es porque gran parte se va en objetos que <strong>pierden valor casi de inmediato</strong>. 
+</p>
+
+<p>
+Compras que emocionan por unos días, pero que con el tiempo terminan <strong>olvidadas, guardadas o reemplazadas</strong>. Aprender a priorizar experiencias sobre cosas cambia por completo la forma en que gastas y ahorras.
+</p>
+
+<p>
+Las experiencias generan <strong>recuerdos, aprendizaje y bienestar emocional</strong> que permanece mucho más tiempo que cualquier objeto material. 
+</p>
+
+<p>
+Cuando diriges tu dinero hacia momentos que realmente disfrutas, el gasto deja de sentirse vacío y el ahorro se vuelve más natural, porque reduces <strong>compras impulsivas</strong> sin sentir que te estás privando.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Cómo cambiar tus hábitos de gasto: ideas para disfrutar más experiencias y mejorar tus finanzas</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2 text-justify">
+  <li>Invierte en experiencias que aporten valor real, como viajes cortos, conciertos, talleres o cursos.</li>
+  <li>Reduce gastos en objetos de moda o compras por impulso que no mejoran tu calidad de vida.</li>
+  <li>Adopta la mentalidad de <strong>
+    “menos cosas, más momentos”</strong> para gastar con intención.</li>
+</ul>
+
+<p>
+<strong>
+  Beneficio:</strong> Disfrutas más tu dinero, gastas con mayor conciencia y permites que el ahorro crezca sin sentir sacrificio.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Por qué los pequeños gastos afectan tu ahorro más de lo que imaginas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Uno de los errores más comunes al intentar ahorrar es enfocarse solo en grandes recortes que parecen imposibles y olvidar los gastos pequeños del día a día. 
+</p>
+
+<p>
+Estos gastos parecen inofensivos porque no se sienten de inmediato, pero cuando se repiten constantemente terminan representando una parte importante de tu dinero mensual.
+</p>
+
+<p>
+Ajustar estos gastos no significa vivir limitado, sino identificar dónde se va tu dinero sin darte un beneficio concreto real. 
+</p>
+
+<p>
+Al hacer pequeños cambios de forma consciente, puedes liberar dinero todos los meses sin afectar tu comodidad ni tu estilo de vida.
+</p>
+
+</div>
+
+
+
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Cómo ajustar gastos cotidianos de manera sostenible</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<ul class="list-disc pl-6 text-stone-700 space-y-2 text-justify">
+  <li>Reduce el consumo de agua, luz y otros servicios sin perder comodidad.</li>
+  <li>Evita desplazamientos innecesarios o comparte viajes para disminuir costos.</li>
+  <li>Cocina más en casa y lleva tu propia comida al trabajo u otros compromisos.</li>
+</ul>
+
+<p>
+<strong>
+Beneficio:</strong> Ahorras de forma silenciosa y constante, y esos pequeños montos, con el tiempo, se convierten en un ahorro real que fortalece tu estabilidad financiera sin excusas.
+</p>
+
+</div>
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-10" style="font-family: 'Open Sans', sans-serif;"> 
+Te puede interesar:
+</div>
+
+<style>
+.articulo-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+  min-height: 140px; /* altura mínima para el contenido y botón */
+}
+
+.articulo-main {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  padding: 10px 15px 50px 15px; /* padding inferior para dejar espacio al botón */
+}
+
+.articulo-img {
+  width: 200px;
+  height: 110px;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.articulo-contenido {
+  flex: 1;
+  padding-left: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articulo-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #000;
+}
+
+.articulo-descripcion {
+  font-size: 12px;
+  color: #555;
+  flex: 1;
+}
+
+/* Botón Ir a la derecha con línea */
+.articulo-boton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: center;
+}
+
+.articulo-boton span {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Texto plano a la izquierda dentro del mismo botón, visible */
+.articulo-boton-texto {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Móvil */
+@media (max-width:600px) {
+  .articulo-main {
+    flex-direction: column;
+    padding: 8px 10px 50px 10px; /* dejar espacio para botón */
+  }
+
+  .articulo-img {
+    width: 120px;
+    height: 70px;
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+
+  .articulo-contenido {
+    padding-left: 0;
+  }
+
+  .articulo-titulo {
+    font-size: 12px;
+  }
+
+  .articulo-descripcion {
+    font-size: 11px;
+  }
+
+  .articulo-boton {
+    padding: 6px 10px;
+  }
+
+  .articulo-boton span {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .articulo-boton-texto {
+    font-size: 11px;
+  }
+}
+</style>
+
+<a href="https://codigomillonario.blog/link-del-articulo.html" class="articulo-box">
+  <img src="../../../assets/png/thomas-alva-edison-inventor.webp" class="articulo-img">
+  <div class="articulo-main">
+    <div class="articulo-contenido">
+      <div class="articulo-titulo">
+      <h2 style="font-family: 'Open Sans', sans-serif;">El punto de vista financiero de Thomas Alva Edison: biografía, inventos y lecciones de éxito</h2>
+      </div>
+      <div class="articulo-descripcion">
+        <strong>Edison no se hizo rico por inventar, se hizo rico porque convirtió ideas en sistemas que generaban dinero incluso cuando él no trabajaba.</strong>
+      </div>
+    </div>
+  </div>
+  <div class="articulo-boton">
+    <div class="articulo-boton-texto">Lo más leído:</div>
+    <span>Ir</span>
+  </div>
+</a>
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Ahorrar sin renunciar a tu estilo de vida: una forma más inteligente de gestionar tu dinero</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Ahorrar sin perder tu estilo de vida no es una teoría ni un privilegio para quienes ganan más; es una habilidad que se construye con decisiones conscientes y hábitos bien pensados. 
+</p>
+
+<p>
+Cuando entiendes en qué se va tu dinero, automatizas el ahorro y priorizas lo que realmente te aporta bienestar, el ahorro deja de ser un sacrificio y se convierte en una forma inteligente de vivir mejor.
+</p>
+
+<p>
+No necesitas cambiarlo todo ni esperar el momento perfecto. Basta con aplicar uno o dos ajustes hoy para empezar a notar resultados reales en las próximas semanas. 
+</p>
+
+<p>
+En solo 30 días puedes sentir mayor control, menos estrés financiero y la tranquilidad de saber que tu dinero está trabajando para ti, sin renunciar a lo que disfrutas.
+</p>
+
+<p>
+Si quieres llevar este proceso un paso más allá, apóyate en nuestras 
+<a href="https://codigomillonario.blog/herramientas" target="_blank" class="text-blue-600 hover:underline">
+herramientas</a>
+y la 
+<a href="https://codigomillonario.blog/herramientas" target="_blank" class="text-blue-600 hover:underline">
+calculadora de presupuesto</a> 
+Empieza hoy. Tu futuro financiero no se construye mañana, se construye con lo que haces ahora.
+</p>
+
+</div>
+
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+
+<!-- Sección recomendada -->
+<div class="mt-5 mb-10">
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
+    <p class="text-sm text-slate-600 italic leading-relaxed"
+       style="font-family: 'Poppins', sans-serif;">
+       <strong class="font-semibold text-slate-800">
+      Código Millonario</strong> recomienda:
+    </p>
+  </blockquote>
+</div>
+
+
+      </div>
+    </main>
+
+
+
+
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center text-sm mb-4" style=" font-family: 'Montserrat', sans-serif;">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style=" font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../ahorro-para-principiantes/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style=" font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style=" font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+
+    <p class="interlink-heading text-center text-sm mb-6" style=" font-family: 'Montserrat', sans-serif;">
+    Lo más leído
+    </p>
+
+    <div id="interlinkGrid"></div>
+
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* CONTENEDOR */
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ITEM */
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* IMAGEN */
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* CONTROLES */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb; /* 👈 NUEVA LÍNEA */
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* BOTONES */
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+/* 🔥 FUNCIÓN PARA CORTAR TEXTO */
+function truncate(text, maxLength = 60){
+  return text.length > maxLength 
+    ? text.substring(0, maxLength) + "..." 
+    : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title, 60);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <p>Este artículo relacionado puede ayudarte a mejorar tus conocimientos financieros de forma estratégica.</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../ahorro-para-principiantes/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+
+  const links = Array.from(temp.querySelectorAll(".article a"));
+
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+   
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+ 
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

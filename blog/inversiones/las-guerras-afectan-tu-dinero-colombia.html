@@ -1,0 +1,1893 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las guerras ya están afectando tu dinero en Colombia (aunque no lo notes) | Código Millonario</title>
+    <meta name="description" content="Las guerras globales están impactando tu dinero en Colombia. Descubre cómo afectan la inflación, el dólar y tus inversiones, y qué hacer para protegerte.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/favicon-v2.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../tienda.html">Productos</a></li>
+      <li><a href="../../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../../donar.html">Donaciones</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../../index.html">Inicio</a>
+      <a href="../../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../../herramientas.html">Herramientas</a>
+      <a href="../../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../../tienda.html">Productos</a>
+      <a href="../../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../../donar.html">Donaciones</a>
+      <a href="../../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+
+<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+   Educación Financiera
+  </span>
+</div>
+
+<div class="blog-main-title relative">
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+    <h1>
+        Las guerras actuales están afectando tu dinero 
+        <br>(y probablemente no lo sabías)
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+</div>
+
+<div class="flex flex-col justify-start gap-5 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Aunque las guerras parezcan lejanas, sus efectos ya llegan a tu bolsillo en Colombia. Precios más altos, 
+mercados inestables y movimientos en el dólar están afectando tu dinero… y lo que hagas ahora puede marcar la diferencia.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+<style>
+.layout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content-column {
+  width: 100%;
+  max-width: 760px;
+  padding-left: 35px;  /* antes 60px */
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-column {
+    max-width: 720px;
+    padding-left: 25px; /* antes 40px */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column {
+    max-width: 100%;
+    padding-left: 10px; /* antes 20px */
+    padding-right: 18px;
+  }
+}
+</style>
+
+<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+
+<style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+
+
+
+
+<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
+   Código Millonario en Redes:
+</div>
+
+
+ <!-- INTRODUCCIÓN GENERAL -->
+<main class="py-5">
+  <div class="layout-wrapper">
+    <article class="content-column">
+
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex gap-4 social-container">
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+     class="social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
+
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+     class="social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://pin.it/3tqNXYoAA" target="_blank"
+     class="social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+
+  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+  </a>
+
+</div>
+
+<!-- TAMAÑO INCONO TWITTER -->
+<style>
+.social-icon svg{
+  width:14px !important;
+  height:14px !important;
+}
+</style>
+
+<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
+<div class="max-w-4xl mt-7 ml-0 px-4 md:px-0 flex items-start space-x-4" >
+  <!-- Imagen del autor -->
+  <div class="flex-shrink-0">
+    <img src="../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+  <!-- Texto del autor -->
+  <div class="py-3">
+    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+      Por <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+        Francisco Urrego
+      </a>
+    </p>
+  </div>
+</div>
+
+
+  <div class=" mt-5 w-full h-px bg-slate-300"></div>
+
+  <div style="font-family: Arial, sans-serif; font-size: 11px; font-weight: 400; color: #777;">
+   <p>
+        Escrito el 18 mar 2026  | 11:34 h
+   </p>
+    <p>
+      ⏱ 5 min lectura
+    </p>
+    </div>
+
+
+<div class="flex justify-center md:justify-start mt-5 relative px-4 sm:px-0 md:-ml-8">
+  <img src="../../assets/png/guerras-impacto-dinero-colombia-inversiones.webp"
+       alt=""
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10">
+</div>
+
+
+
+
+
+<style>
+  /* ================= ACORDEÓN ================= */
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  /* Ajustamos el ancho máximo y centramos el acordeón */
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco */
+    border-radius: 0px; /* puntas cuadradas */
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 680px; /* ancho máximo deseado aumentado */
+
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  /* Animación tipo card con sombra al pasar el mouse */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+    max-width: 100%;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
+    }
+  }
+</style>
+
+<div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+ 
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Cómo las guerras impactan la economía global, los mercados y tu dinero</a></li>
+    <li><a href="#titulo2">2. Efectos de la guerra en América Latina: desde el comercio hasta tu bolsillo</a></li>
+    <li><a href="#titulo10">3. Cuando el conflicto es global, tu estrategia es personal</a></li>
+    <li><a href="#titulo12">4. Qué deberías hacer en estos momentos (sin complicarte la vida)</a></li>
+    <li><a href="#titulo">5.  Sub temas</a></li>
+    <li><a href="#titulo4">→ Deja de vivir como si nada estuviera pasando</a></li>
+    <li><a href="#titulo5">→ Ten dinero disponible (aunque sea poco)</a></li>
+    <li><a href="#titulo6">→ Reduce gastos que no te aportan nada inmediatamente</a></li>
+    <li><a href="#titulo7">→ Asegura lo básico antes de pensar en crecer</a></li>
+    <li><a href="#titulo8">→ No tomes decisiones desde el miedo</a></li>
+    <li><a href="#titulo9">→ Mantente informado, pero no saturado</a></li>
+  </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
+
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
+
+        item.classList.toggle('is-open');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
+
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+<!-- INTRODUCCIÓN -->
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Mientras lees esto, hay conflictos en el mundo moviendo miles de millones de dólares. Puede que parezcan lejanos, sin embargo, la realidad es incómoda de admitir:
+
+Ya que parte de ese impacto está llegando de a poco a tu bolsillo en Colombia.
+</p>
+
+<p>
+Precios más altos, mercados inestables y decisiones económicas que cambian de un día para otro.
+
+La mayoría de las personas no se da cuenta. Hasta que ya es tarde para tomar medidas económicas en tu hogar.
+</p>
+
+<p>
+Entonces la pregunta es clara:
+¿cómo están afectando las guerras tu dinero y qué deberías hacer ahora mismo para mitigar el impacto?
+</p>
+
+</div>
+
+
+
+
+
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">El despertar económico: cómo la guerra afecta cada rincón del dinero</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+Hoy en día, una guerra afecta directa e indirectamente todo el circuito económico mundial. Ya no es un caso aislado: penetra cada rincón donde el intercambio depende del dinero.
+</p>
+
+<p>
+Vivimos en una burbuja donde todo está más correlacionado y dependiente de miles de procesos interconectados para mantener la economía en flujo constante.
+</p>
+
+<p>
+Es como un motor industrial: una pieza que se desgasta o un aceite de baja calidad puede afectar todo el sistema. Lo mismo pasa con la economía global: un fallo en un punto genera repercusiones en todos los demás.
+</p>
+
+
+<h4 class="font-semibold">Qué implica un conflicto mundial en la actualidad</h4>
+
+
+<p>
+Hoy en día, una guerra significa que, aunque algunos países no participen directamente ni sufran daños materiales, todos sentimos las posibles consecuencias de lo que se avecina.
+</p>
+
+<p>
+Sí, porque toda guerra trae efectos negativos, pero también hay quienes aprovechan oportunidades legítimas que surgen del conflicto.
+</p>
+
+<p>
+No hablo de violar derechos ni de actuar fuera de la ética; me refiero a ver oportunidades reales sin ignorar los riesgos y consecuencias que pueden aparecer.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo las guerras impactan la economía global, los mercados y tu dinero</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+Cuando hay guerra, no solo hay tensión política. Existe un efecto dominó financiero que golpea 
+todos los rincones del mundo: norte, sur, este y oeste.
+</p>
+
+<p>
+Todo lo que dependa del dinero como intercambio sufre consecuencias colaterales, y casi siempre no son buenas. 
+Cada movimiento económico está conectado, y lo que parece lejano puede afectar tu bolsillo hoy.
+</p>
+
+
+<h4 class="font-semibold">¿Qué afecta un conflicto mundial en todos los sistemas económicos?</h4>
+
+
+<p>
+Las guerras normalmente suelen afectar recursos clave como:
+</p>
+
+<ul>
+  <li>Petróleo</li>
+  <li>Gas</li>
+  <li>Alimentos (trigo, maíz)</li>
+  <li>Metales</li>
+</ul>
+
+<p>
+Estos recursos son fundamentales para la economía global. El petróleo y el gas mueven industrias y transporte, 
+los alimentos básicos aseguran la alimentación de millones, y los metales son esenciales para la industria y la tecnología.
+</p>
+
+<p>
+Cuando hay guerra, la producción y distribución se interrumpen, los precios suben y la escasez genera un efecto dominó que impacta a todos.
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<h4 class="font-semibold">Cuando la guerra impacta precios, mercados y tu dinero</h4>
+
+<p>
+Si la guerra se prolonga por mucho más tiempo, los productos de todas las categorías en el mercado comienzan a escasear, 
+ya sea por la falta de algunos de estos procesos esenciales para la elaboración: materia prima, producción, distribución y comercialización.
+</p>
+
+
+<p>
+Cuando estos recursos se ven amenazados:
+
+Los precios suben rápidamente
+
+Se generan grandes necesidades y
+
+los países entran en competencia
+</p>
+
+<p>
+Y aquí está el problema:
+cuando suben estos precios, tú también pagas más por ellos en el día a día.
+</p>
+
+<p>
+Muchos mercados financieros y los inversionistas reaccionan rápido al miedo.
+</p>
+
+<p>
+Cuando hay conflictos:
+
+Las bolsas caen
+
+Aumenta la volatilidad
+
+Se retira dinero de activos riesgosos
+
+
+El dinero no desaparece, se mueve hacia lugares más seguros.
+</p>
+
+<p>
+
+Tasas y moneda
+
+Para controlar el caos económico:
+
+Los bancos centrales suben tasas
+
+El crédito se vuelve más caro
+
+El dólar se fortalece
+
+
+Y esto tiene un efecto directo:
+todo se vuelve más costoso, incluso sin que te des cuenta.
+</p>
+
+</div>
+
+
+
+
+
+<!-- H2: Conoce tu verdadero margen de ahorro -->
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Efectos de la guerra en América Latina: desde el comercio hasta tu bolsillo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Esta interpretación detallada y analítica nos brinda un panorama más claro del papel de la economía en la guerra.
+</p>
+
+<p>
+El comercio exterior es clave: Colombia, al igual que la mayoría de países del mundo, depende en gran parte de sus exportaciones.
+</p>
+
+<p>
+Si el petróleo sube → entra más dinero al país. Pero si hay crisis global → baja la demanda
+</p>
+
+<p>
+Si la demanda de café aumenta → mayores ingresos para los productores colombianos. Pero si los precios internacionales caen → se reduce la rentabilidad del sector.
+</p>
+
+<p>
+Si las exportaciones de flores crecen → entra más divisa al país. Pero si hay problemas logísticos globales → los envíos se retrasan y se pierden oportunidades.
+</p>
+
+<p>
+Si el precio del carbón sube → más recursos para inversión pública. Pero si la minería enfrenta restricciones internacionales → disminuye la competitividad del país.
+</p>
+
+<p>
+Si los minerales metálicos tienen alta demanda → Colombia gana estabilidad económica. Pero si surgen conflictos internacionales → el comercio se vuelve incierto y volátil.
+</p>
+
+<p>
+Si las exportaciones de petróleo refinado aumentan → se fortalece la balanza comercial. Pero si hay recesión global → disminuye la venta y el país pierde ingresos.
+</p>
+
+<p>
+Es un juego de equilibrio inestable.
+</p>
+
+
+<p>
+
+La llegada de la inflación y el alza en precios,
+
+este es el golpe más directo a tu bolsillo:
+
+Alimentos más caros
+
+Gasolina más costosa
+
+Transporte más caro
+
+
+No es coincidencia.
+Es el efecto indirecto de lo que está pasando en el mundo.
+
+</p>
+
+
+<p>
+
+Riesgo de inversión local
+
+Cuando hay incertidumbre global:
+
+Inversionistas sacan dinero de países emergentes
+
+Aumenta el riesgo país
+
+Se frena el crecimiento
+
+
+Y esto significa algo importante:
+tu dinero puede rendir menos si no sabes dónde ponerlo.
+
+</p>
+
+</div>
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-10" style="font-family: 'Open Sans', sans-serif;"> 
+Te puede interesar:
+</div>
+
+<style>
+.articulo-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+  min-height: 140px; /* altura mínima para el contenido y botón */
+}
+
+.articulo-main {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  padding: 10px 15px 50px 15px; /* padding inferior para dejar espacio al botón */
+}
+
+.articulo-img {
+  width: 200px;
+  height: 110px;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.articulo-contenido {
+  flex: 1;
+  padding-left: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articulo-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #000;
+}
+
+.articulo-descripcion {
+  font-size: 12px;
+  color: #555;
+  flex: 1;
+}
+
+/* Botón Ir a la derecha con línea */
+.articulo-boton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: center;
+}
+
+.articulo-boton span {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Texto plano a la izquierda dentro del mismo botón, visible */
+.articulo-boton-texto {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Móvil */
+@media (max-width:600px) {
+  .articulo-main {
+    flex-direction: column;
+    padding: 8px 10px 50px 10px; /* dejar espacio para botón */
+  }
+
+  .articulo-img {
+    width: 120px;
+    height: 70px;
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+
+  .articulo-contenido {
+    padding-left: 0;
+  }
+
+  .articulo-titulo {
+    font-size: 12px;
+  }
+
+  .articulo-descripcion {
+    font-size: 11px;
+  }
+
+  .articulo-boton {
+    padding: 6px 10px;
+  }
+
+  .articulo-boton span {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .articulo-boton-texto {
+    font-size: 11px;
+  }
+}
+</style>
+
+<a href="https://codigomillonario.blog/blog/ahorro/ahorros-para-objetivos/ahorrar-2-millones-6-meses-colombia.html" class="articulo-box">
+  <img src="../../assets/png/plan-ahorro-2-millones-6-meses-colombia.webp" class="articulo-img">
+  <div class="articulo-main">
+    <div class="articulo-contenido">
+      <div class="articulo-titulo">
+      <h2 style="font-family: 'Open Sans', sans-serif;">La meta de 2 millones de pesos en 6 meses: el plan de ahorro que sí funciona en Colombia</h2>
+      </div>
+      <div class="articulo-descripcion">
+        <strong>Cuando el objetivo es claro 2 millones de pesos en 6 meses es mucho más fácil organizar el dinero y mantener la meta.</strong>
+      </div>
+    </div>
+  </div>
+  <div class="articulo-boton">
+    <div class="articulo-boton-texto">Lo más leído:</div>
+    <span>Ir</span>
+  </div>
+</a>
+
+
+
+
+<h2 id="titulo12" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Qué deberías hacer en estos momentos (sin complicarte la vida)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+
+No pongas todo tu dinero en un solo lugar
+
+Mantén una parte líquida
+
+No tomes decisiones por miedo
+
+Piensa en el largo plazo
+
+
+Y sobre todo:
+no ignores lo que está pasando en el mundo.
+
+Porque sí te afecta.
+
+</p>
+
+<p>
+Siendo así, aquí dejo algunas medidas a tener en cuenta y no necesitas ser experto ni tener mucho dinero para protegerte
+desde ahora.
+</p>
+
+<p>
+Pero sí necesitas moverte distinto de la mayoría que está pensando que no los va a afectar o es pasajera la situación.
+
+Aquí va lo que realmente tiene sentido ahora:
+</p>
+
+</div>
+
+
+
+<h3 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">1. Deja de vivir como si nada estuviera pasando</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+No cometas este error, que es muy habitual en momentos de incertidumbre y conflictos. 
+
+La mayoría sigue teniendo los mismos comportamientos financieros: gastan igual, como si los precios no fueran a seguir subiendo.
+</p>
+
+<p>
+Pero la realidad es otra: todo está encareciéndose poco a poco, y desperdiciar cada peso ahora puede dejarte arruinado más rápido mañana.
+</p>
+
+<p>
+La recomendación es ajustar tu forma de gastar antes de que te obliguen a hacerlo.
+
+No es miedo.
+Es anticipación. 
+</p>
+
+<p>
+Comprar solo lo necesario por unos días, sin malgastar, podrá hacer
+que tu saldo respalde un gasto cuando los precios sigan subiendo en todas partes.
+
+Pequeños cambios hoy pueden marcar una gran diferencia en tu estabilidad financiera mañana.
+</p>
+
+</div>
+
+
+
+<h3 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">2. Ten dinero disponible (aunque sea poco)</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+No todo es ahorrar para “algún día”.
+
+En momentos inciertos, lo más valioso es tener acceso rápido a dinero para responder de forma inmediata ante emergencias derivadas de este escenario.
+</p>
+
+<p>
+Cuando todo se complica, el que tiene efectivo tiene mayor capacidad de decisión;
+el que no tiene dinero a la mano se ve obligado a enfrentar cualquier emergencia sin respaldo.
+</p>
+
+<p>
+Empieza con lo que puedas, pero hazlo de forma constante, hasta que la tensión disminuya o desaparezcan los riesgos o el conflicto.
+</p>
+
+</div>
+
+
+
+
+
+
+<h3 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">3. Reduce gastos que no te aportan nada inmediatamente</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+En tiempos así, optimizar los recursos al máximo puede hacer una gran diferencia, sobre todo, si una vez
+todo el conflicto termine, es probable que puedan salir nuevas oportunidades de adquisición,
+las cuales puedes tomar gracias al dinero extraído y ahorrado de esa reducción de gastos.
+</p>
+
+<p>
+Hay quienes abandonan casas o las ponen en venta muy por debajo de sus precios debido al temor; así también,
+vehículos y algunos elementos que en una economía estable no estarían tan accesibles.
+</p>
+
+<p>
+Algunos negocios pequeños no logran sostenerse en tiempos de crisis y terminan vendiéndose a precios más bajos.
+Para quien tiene liquidez, esto puede representar la oportunidad de adquirir un negocio ya funcionando y hacerlo crecer cuando la economía se estabilice.
+</p>
+
+<p>
+No se trata de dejar de vivir para reducir unos pesos en gastos, se trata de adquirir una mentalidad visionaria
+y pensar a futuro, no solo en lo que sucederá hoy. Dejar de pagar por cosas que no te hacen avanzar.
+Ese dinero hoy vale más guardado que mal gastado.
+</p>
+
+</div>
+
+
+
+
+
+<h3 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">4. Asegura lo básico antes de pensar en crecer</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+En una situación semejante, antes de dar otro paso no se puede olvidar de tener algo ya asegurado.
+</p>
+
+<p>
+Muchos empiezan a invertir y a moverse con gran prisa, dejando atrás algo que era lo que necesitaban para su crecimiento financiero.
+</p>
+
+<p>
+En la mayoría de las situaciones, querer “ganar más” es un deseo de cualquier ser humano; sin embargo, 
+intentar ganar más cuando no tienen una estabilidad previa es privar el crecimiento en cualquier sentido hacia donde 
+dirija su intención.
+</p>
+
+<p>
+No tiene que tener toda su vida resuelta para avanzar y, en momentos como estos, lo esencial es primero asegurarse de:
+</p>
+
+<p>
+Tener cubiertos tus gastos básicos.
+</p>
+
+<p>
+Poder sostenerte por el mayor tiempo posible.
+</p>
+
+<p>
+No depender de un solo ingreso si puedes evitarlo.
+</p>
+
+<p>
+Crecer sin base es demasiado arriesgado.
+Sostenerte y avanzar en el proceso es inteligencia.
+</p>
+
+</div>
+
+
+
+
+<h3 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">5. No tomes decisiones desde el miedo</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+Cuando el miedo entra, la claridad desaparece. Perder dinero en una crisis es más común de lo que parece, pero para evitarlo 
+es esencial dejar el miedo de lado y ser conscientes de lo que realmente está ocurriendo.
+</p>
+
+<p>
+Vende por alivio, no por estrategia.<br>
+Compra por impulso, no por convicción.<br>
+Decide para escapar, no para avanzar.
+</p>
+
+<p>
+Tomarte un momento para no reaccionar ya te pone por delante. Porque mientras otros intentan corregir decisiones apresuradas, tú estás conservando algo más valioso que una oportunidad.
+</p>
+
+</div>
+
+
+
+
+
+
+<h3 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style="font-family: 'Montserrat', sans-serif;">6. Mantente informado, pero no saturado</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;"> 
+
+<p>
+No saber qué está pasando te deja expuesto, pero consumir información sin filtro también te desordena. Estar informado no significa estar pegado a cada titular ni reaccionar a cada movimiento.
+</p>
+
+<p>
+Informarte no debería ser una acumulación de noticias, sino la base para mantener la orientación del camino que quieres construir.
+</p>
+
+<p>
+La información bien usada te da perspectiva y te permite decidir con calma. Mal gestionada, solo añade ruido, genera ansiedad y te empuja a actuar sin dirección. La diferencia no está en cuánto consumes, sino en qué eliges ignorar.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuando el conflicto es global, tu estrategia es personal</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Las guerras no solo se pelean en territorios lejanos; se reflejan silenciosamente en los precios, en los mercados y en cada decisión financiera que tomas sin darte cuenta. Aunque no estés en el centro del conflicto, sí estás dentro de sus consecuencias.
+</p>
+
+<p>
+Nadie puede anticipar todo lo que va a pasar y la diferencia no está en saberlo todo, sino en cómo decides moverte tú y tu dinero mientras todo sucede. Ignorar el contexto te vuelve vulnerable, pero reaccionar sin un plan te hace cometer errores aún más costosos.
+</p>
+
+<p>
+No puedes controlar lo que ocurre en el mundo, pero sí puedes controlar tu forma de actuar frente a ello. Ajustar, proteger y pensar con estrategia no es exageración, es adaptación al medio.
+</p>
+
+<p>
+En momentos como estos, no gana el que más arriesga ni el que más se mueve, sino el que logra mantenerse en pie mientras otros pierden dirección. Y eso, a largo plazo, marca toda la diferencia en tu economía.
+</p>
+
+</div>
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-10" style="font-family: 'Open Sans', sans-serif;"> 
+Te puede interesar:
+</div>
+
+<style>
+.articulo-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+  min-height: 140px; /* altura mínima para el contenido y botón */
+}
+
+.articulo-main {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  padding: 10px 15px 50px 15px; /* padding inferior para dejar espacio al botón */
+}
+
+.articulo-img {
+  width: 200px;
+  height: 110px;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.articulo-contenido {
+  flex: 1;
+  padding-left: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articulo-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #000;
+}
+
+.articulo-descripcion {
+  font-size: 12px;
+  color: #555;
+  flex: 1;
+}
+
+/* Botón Ir a la derecha con línea */
+.articulo-boton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: center;
+}
+
+.articulo-boton span {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Texto plano a la izquierda dentro del mismo botón, visible */
+.articulo-boton-texto {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Móvil */
+@media (max-width:600px) {
+  .articulo-main {
+    flex-direction: column;
+    padding: 8px 10px 50px 10px; /* dejar espacio para botón */
+  }
+
+  .articulo-img {
+    width: 120px;
+    height: 70px;
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+
+  .articulo-contenido {
+    padding-left: 0;
+  }
+
+  .articulo-titulo {
+    font-size: 12px;
+  }
+
+  .articulo-descripcion {
+    font-size: 11px;
+  }
+
+  .articulo-boton {
+    padding: 6px 10px;
+  }
+
+  .articulo-boton span {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .articulo-boton-texto {
+    font-size: 11px;
+  }
+}
+</style>
+
+<a href="https://codigomillonario.blog/blog/ahorro/ahorros-para-objetivos/ingresos-extra-prima.html" class="articulo-box">
+  <img src="../../assets/png/que-hacer-con-tu-prima-ingresos-extra.webp" class="articulo-img">
+  <div class="articulo-main">
+    <div class="articulo-contenido">
+      <div class="articulo-titulo">
+      <h2 style="font-family: 'Open Sans', sans-serif;">Qué hacer con tu prima o ingresos extra: ideas prácticas para usar tu dinero sabiamente</h2>
+      </div>
+      <div class="articulo-descripcion">
+        <strong>Si tienes ingresos extra y no sabes por dónde empezar, estas ideas prácticas te pueden ayudar. ¿De que modo?</strong>
+      </div>
+    </div>
+  </div>
+  <div class="articulo-boton">
+    <div class="articulo-boton-texto">Lo más leído:</div>
+    <span>Ir</span>
+  </div>
+</a>
+
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+
+  <!-- Sección recomendada -->
+<div class="mt-5 mb-10">
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
+    <p class="text-sm text-slate-600 italic leading-relaxed"
+       style="font-family: 'Poppins', sans-serif;">
+       <strong class="font-semibold text-slate-800">
+      Código Millonario</strong> recomienda:
+    </p>
+  </blockquote>
+</div>
+
+    </main>
+
+   
+
+
+
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center text-sm mb-4" style=" font-family: 'Montserrat', sans-serif;">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style=" font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../inversiones/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style=" font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style=" font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+
+    <p class="interlink-heading text-center text-sm mb-6" style=" font-family: 'Montserrat', sans-serif;">
+    Lo más leído
+    </p>
+
+    <div id="interlinkGrid"></div>
+
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* CONTENEDOR */
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ITEM */
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* IMAGEN */
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* CONTROLES */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb; /* 👈 NUEVA LÍNEA */
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* BOTONES */
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+/* 🔥 FUNCIÓN PARA CORTAR TEXTO */
+function truncate(text, maxLength = 60){
+  return text.length > maxLength 
+    ? text.substring(0, maxLength) + "..." 
+    : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title, 60);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <p>Este artículo relacionado puede ayudarte a mejorar tus conocimientos financieros de forma estratégica.</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../inversiones/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+
+  const links = Array.from(temp.querySelectorAll(".article a"));
+
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+   
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

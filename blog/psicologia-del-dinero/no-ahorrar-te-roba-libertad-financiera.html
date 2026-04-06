@@ -1,0 +1,1337 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo la falta de ahorro te obliga a aceptar malos trabajos y malas decisiones | Código Millonario</title>
+    <meta name="description" content="Cuando no tienes ahorro, pierdes poder de decisión. Este artículo explica, desde la psicología del dinero, cómo la escasez te empuja a aceptar trabajos tóxicos, deudas peligrosas y decisiones que no quieres tomar.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/favicon-v2.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+<!-- Navbar con menú móvil estilo revista -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-center mt-1 mb-1">
+  <img src="../../assets/img/favicon-v2.png" 
+       alt="Inspiración Código Millonario"
+       class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 md:-translate-x-20 object-cover shadow-lg">
+</div>
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../tienda.html">Productos</a></li>
+      <li><a href="../../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../../donar.html">Donaciones</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../../index.html">Inicio</a>
+      <a href="../../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../../herramientas.html">Herramientas</a>
+      <a href="../../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../../tienda.html">Productos</a>
+      <a href="../../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../../donar.html">Donaciones</a>
+      <a href="../../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 50px; }
+  .navbar-spacer { height: 50px; }
+}
+
+.navbar-line { height: 1px; width: 100%; background: #ccc; }
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil tipo panel lateral ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+
+<div class="left-block flex flex-col justify-center items-start mt-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
+  <span class="block">
+   Educación Financiera
+  </span>
+</div>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+    <h1>
+¿Sabías que la falta de ahorro te puede empujar a vivir en modo supervivencia por mucho tiempo sin darte cuenta?
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+</div>
+
+<div class="flex flex-col justify-start gap-5 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Sin un colchón de ahorro, tus decisiones financieras siempre estarán dictadas por el miedo y la urgencia, no por lo que realmente quieres.
+Ahorrar no es acumular dinero, es recuperar la capacidad de decir ‘no’ y elegir tu propio camino con claridad.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+<style>
+.layout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content-column {
+  width: 100%;
+  max-width: 760px;
+  padding-left: 35px;  /* antes 60px */
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-column {
+    max-width: 720px;
+    padding-left: 25px; /* antes 40px */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column {
+    max-width: 100%;
+    padding-left: 10px; /* antes 20px */
+    padding-right: 18px;
+  }
+}
+</style>
+
+<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+
+<style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+
+
+
+<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
+     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
+   Código Millonario en Redes:
+</div>
+
+
+ <!-- INTRODUCCIÓN GENERAL -->
+<main class="py-5">
+  <div class="layout-wrapper">
+    <article class="content-column">
+
+
+    <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<div class="flex gap-4 social-container">
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+     class="social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
+
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+     class="social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://pin.it/3tqNXYoAA" target="_blank"
+     class="social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+
+  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+  </a>
+
+</div>
+
+<!-- TAMAÑO INCONO TWITTER -->
+<style>
+.social-icon svg{
+  width:14px !important;
+  height:14px !important;
+}
+</style>
+
+<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
+<div class="max-w-4xl mt-7 ml-0 px-4 md:px-0 flex items-start space-x-4" >
+  <!-- Imagen del autor -->
+  <div class="flex-shrink-0">
+    <img src="../../assets/img/fundador-codigo-millonario.webp" 
+         alt="Francisco Urrego - Código Millonario"
+         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+  </div>
+  <!-- Texto del autor -->
+  <div class="py-3">
+    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+      Por <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+        Francisco Urrego
+      </a>
+    </p>
+  </div>
+</div>
+
+
+  <div class=" mt-5 w-full h-px bg-slate-300"></div>
+
+  <div style="font-family: Arial, sans-serif; font-size: 11px; font-weight: 400; color: #777;">
+   <p>
+        Escrito el 11 feb 2026 | 12:33 h
+   </p>
+    <p>
+      ⏱ 5 min lectura
+    </p>
+    </div>
+
+
+<div class="flex justify-center md:justify-start mt-5 relative px-4 sm:px-0 md:-ml-8">
+  <img src="../../assets/png/sin-ahorro-no-decides-tu.webp"
+       alt=""
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10">
+</div>
+
+
+
+
+
+<style>
+  /* ================= ACORDEÓN ================= */
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  /* Ajustamos el ancho máximo y centramos el acordeón */
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco */
+    border-radius: 0px; /* puntas cuadradas */
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 680px; /* ancho máximo deseado aumentado */
+
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  /* Animación tipo card con sombra al pasar el mouse */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+    max-width: 100%;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
+    }
+  }
+</style>
+
+<div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+ 
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. La urgencia cambia la forma en que decides</a></li>
+    <li><a href="#titulo2">2. Cuando no tienes ahorro, el miedo empieza a mandar</a></li>
+    <li><a href="#titulo3">3. Aceptas malos trabajos no porque quieras, sino porque no puedes decir que no</a></li>
+    <li><a href="#titulo4">4. La falta de ahorro te empuja directo a malas deudas</a></li>
+    <li><a href="#titulo5">5. Por qué salir del modo supervivencia es más importante que ganar más</a></li>
+    <li><a href="#titulo6">6. La realidad incómoda que casi nadie dice</a></li>
+    <li><a href="#titulo7">7. El ahorro no te cambia la vida, te devuelve la elección</a></li>
+  </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
+
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
+
+        item.classList.toggle('is-open');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
+
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+<!-- INTRODUCCIÓN -->
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style=" font-family: 'Montserrat', sans-serif;">La urgencia cambia la forma en que decides</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+La mayoría de personas cree que los problemas financieros comienzan con un mal salario, pocas oportunidades o con no ganar lo suficiente para mejorar sus vidas, frases en sus mentes como "Si tuviera una mejor vida todo sería mucho más fácil", "si tuviera una mejor casa no estaría así", "si pudiera tener tal cosa sería mejor". Pero desde la psicología del dinero, el verdadero problema suele ser otro y en este caso es: no tener un colchón de ahorros.
+</p>
+
+<p>
+<strong>
+¿Por qué se cree que parte de ahí el problema?</strong>  
+</p>
+
+<p>
+¿Por no tener un colchón de ahorros?
+</p>
+
+<p>
+Una de las consecuencias de cuando no hay ahorro es que no hay margen, aun que parezca lógico. Aun así, ¿qué pasa realmente cuando no hay margen? Según la psicología del dinero, la mente entra en modo supervivencia todo el tiempo, esto no trae paz y te aleja de la claridad mental. En ese estado la mente no piensa bien, no se negocia, no se elige, no se invierte: ¿Qué pasa después de este patrón? Se suele aceptar lo que sea con tal de aguantar un mes más.
+</p>
+
+<p>
+Debido a ese problema que afecta a muchos, tomé la iniciativa de crear este artículo, no para vender fórmulas mágicas ni discursos motivacionales. Aquí hablaré de una realidad incómoda que muchos viven, que no todos están dispuestos a exponer, que pocos explican con claridad y es muy probable que quienes los afecta esta condición no tengan una solución o un camino claro que seguir después de ello.
+</p>
+
+<p>
+En codigo millonario apostamos por pensar en una solución de la mano con tu situación real.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuando no tienes ahorro, el miedo empieza a mandar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Para entrar aún más en contexto, si alguna vez has sentido perder el control y que dependas de algo que sabes que no es seguro, te has sentido resignado y como mascota de alguien, ¿o de un sistema del que sabes que debes hacer las cosas sin cuestionarte absolutamente nada? Este es el principio que quiero que veas para que puedas comprender más la lógica ahora mismo.
+</p>
+
+<p>
+Sin embargo, la psicología del dinero lo explica bajo sus propios términos y de una forma simple: el dinero no solo paga cosas, también compra tranquilidad mental. Tener un colchón de ahorro no es un lujo, es una barrera psicológica entre tú y el caos.
+</p>
+
+<p>
+Cuando no tienes ahorro, cada imprevisto se siente como una amenaza real que sí puede destruirte o quitarte lo que temes perder, dependiendo la crisis. ¿Vivir así está bien? Un despido, una llamada del banco, una enfermedad leve, un retraso en el pago o un gasto inesperado dejan de ser situaciones normales y se convierten en señales de peligro que te dices: actúa ahora, porque hay más posibilidad de que eso no termine muy bien.
+</p>
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+Decidir bajo presión nunca es decidir</h3>
+
+<p>
+El cerebro no distingue si el problema es pequeño o grande, solo detecta que no hay margen, de que hay una burbuja que puede explotar en cualquier momento.
+</p>
+
+<p>
+En ese estado, la mente entra en modo supervivencia. Ya no piensa en lo que conviene, piensa en lo que alivia, es como poner más parches a una llanta que ya ha sido pinchada muchas veces. No analiza opciones, busca salidas rápidas. No negocia, acepta. No elige bajo sus condiciones, definitivamente elige con miedo.
+</p>
+
+<p>
+Desde ahí, el miedo empieza a tomar decisiones por ti. Y cuando el miedo decide, casi nunca elige lo mejor, solo lo inmediato, lo desgastante, lo que no te gusta, lo que no te lleva al progreso, entrar en razón puede tomar años y mirar atrás solo traerá rencor del tiempo perdido y de no hacerte cargo de tu camino.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Aceptas malos trabajos no porque quieras, sino porque no puedes decir que no</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+A nivel global, la Organización Internacional del Trabajo (OIT) estima que cientos de millones de personas trabajan en empleos de bajos salarios, y que alrededor del 20 % de los trabajadores asalariados en el mundo gana tan poco que su participación en los ingresos laborales es mínima. Además, más de 300 millones de personas empleadas viven en pobreza extrema, lo que demuestra que tener trabajo no garantiza estabilidad ni margen financiero. 
+
+<a href="https://www.ilo.org/global/research/global-reports/global-wage-report/lang--en/index.htm" target="_blank" class="text-blue-600 hover:underline">
+Fuente: Global Wage Report – OIT
+</a>
+
+<p>
+Según esos estudios, es un gran porcentaje de personas que permanecen en trabajos mal pagados, con horarios abusivos o en ambientes tóxicos durante años. No porque les gusten, no porque no sepan que merecen algo mejor, sino porque no tienen respaldo financiero, que en dicho caso los obligaría a analizar más su situación y tomar decisiones que los saquen de ahí lo más pronto posible.
+</p>
+
+<p>
+Cuando no hay ahorro, renunciar no es una opción real y es justo de lo que hemos estado analizando hasta ahora. Por lo tanto, negociar mejores condiciones tampoco es apropiado cuando no tienes un plan B. Buscar algo mejor se siente como un riesgo inaceptable y aún más cuando los demás pueden percatar que estás vulnerable y procederán incluso a cometer más abusos en tu contra. La mente no evalúa posibilidades, solo calcula cuánto tiempo puede resistir antes de que todo se derrumbe.
+</p>
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+Cuando el miedo se vuelve tu jefe silencioso</h3>
+
+<p>
+Desde la psicología del dinero, esto se conoce como dependencia financiera emocional: sabes que el trabajo te desgasta, te frustra y te consume, pero el miedo a quedarte sin ingreso pesa más que el daño diario que soportas. El cuerpo aguanta, la mente se acostumbra y el tiempo pasa sin alternativas viables.
+</p>
+
+<p>
+Con el tiempo, esa dependencia se normaliza. Empiezas a justificar lo injustificable, aceptas que hay miles como tú en la misma situación y, aunque sea así, adquirir esta mentalidad solo desgracia la vida de quien siente que nació para algo más: aceptar y minimizar el abuso, convencerte de que “no está tan mal”. No porque sea verdad, sino porque aceptar la realidad completa implicaría tomar una decisión que hoy no puedes sostener.
+</p>
+
+<p>
+El ahorro no te hace rico. Pero te da algo igual de valioso: margen, poder de negociación y la capacidad real de decir “hasta aquí” sin que el miedo te paralice. No depender de ningún medio en ninguna circunstancia es el método de libertad más apropiado para quienes buscan expansión y éxito a largo plazo. Quien tiene seguridad decide; quien no, solo acepta y calla.
+</p>
+
+</div>
+
+
+
+
+
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La falta de ahorro te empuja directo a malas deudas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+En la mayoría de los casos, cuando no hay ahorro, cualquier gasto inesperado se cubre con deuda, así sean pequeñas, adquiridas por particulares o procesos rápidos y dudosos que pueden poner en riesgo su tranquilidad. En ese caso, no suele ser la mejor opción; este sistema se presenta como el salvador único que puede sacarlos de un imprevisto a primera mano.
+</p>
+
+<p>
+No es una decisión estratégica, es una reacción lógica involuntaria ocasionada por el temor dentro de su inconsciente. La mente, ya en modo supervivencia, busca apagar el incendio lo más rápido posible, como antes lo habíamos hablado, sin evaluar consecuencias a largo plazo y aceptando cualquier riesgo adicional.
+</p>
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+Endeudarse para calmar el miedo</h3>
+
+<p>
+Desde la psicología del dinero, esto tiene una explicación clara: cuando una persona vive en escasez constante, su cerebro prioriza reducir el estrés del presente, incluso si eso implica pagar un costo mucho mayor después. No es ignorancia, no es falta de inteligencia, es presión.
+</p>
+
+<p>
+Así nacen las malas deudas. No como un error puntual, sino como una consecuencia directa de no tener margen. La deuda no llega porque quieras endeudarte, llega porque no tenías otra salida real en ese momento. Hasta aquí, cabe recalcar que una mente en estas condiciones no piensa en el futuro o a largo plazo; su intención es bajar o prolongar su nerviosismo momentáneo, simulando una solución que, a la final, no es solución, sino que se trata de echarle más leña al fuego.
+</p>
+
+<p>
+El problema es que cada deuda reduce aún más tu margen futuro. Y mientras menos margen tienes, más probable es que vuelvas a endeudarte, a estancarte y a hundir más el barco de lo que está. No es un accidente, es un círculo vicioso del que, si no se tiene extrema precaución, puede no haber salida dentro de muchos años.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Por qué salir del modo supervivencia es más importante que ganar más</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Si puedes lograr ganar más dinero, ayuda, pero no resuelve el problema de fondo si sigues viviendo sin margen o repitiendo este patrón más veces durante tu vida.
+
+Hay casos de personas que aumentaron sus ingresos y aun así siguieron viviendo atrapadas de igual modo, porque no atacaron el problema de raíz y siguen sin construir ahorro real. Siguieron tomando decisiones desde el miedo, solo que con cifras más grandes y nunca se preocuparon por solucionar esa espina que quedó allí pendiente.
+</p>
+
+<p>
+Salir del modo supervivencia significa recuperar el control mental antes que el financiero, aun que sabemos que el dinero en este caso puede solucionar hasta cierto punto. La realidad que nadie afronta y de la que todos huyen está en la mente de cada uno y no se soluciona con algo de dinero, ni mucho menos de la noche a la mañana. No necesitas hacerte rico mañana; necesitas construir un espacio donde dediques tiempo a estudiar esos aspectos negativos de los que se desprenden ciertos problemas. 
+</p>
+
+<p>
+Algunos piensan: lo que me ocurrió era necesario y debía pasar así, y déjame decirte que no necesariamente hasta cierto punto, y omitir ese aprendizaje es aún peor que intentar aprender de él y no ponerlo en práctica.
+</p>
+
+<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+El verdadero inicio de la libertad financiera</h3>
+
+<p>
+Adicional a mejorar el conocimiento, cosa que no es opcional como muchos llegan a creer. La próxima solución no es duplicar tu salario. Nota: si puedes, hazlo; si no, aquí está otra salida: crear un pequeño colchón de ahorro, aunque sea mínimo al principio. Y aunque parezca sencillo esto, y aunque todos estén esperando en este artículo una verdad más impactante, la realidad es que las soluciones que muchos millonarios, empresarios y poderosos del sistema económico usan son así de simples; lo que cambia son las escalas. 
+</p>
+
+<p>
+Un fondo que cubra al menos un gasto básico, el que tú elijas. No por rentabilidad, sino por estabilidad mental. Cuando sabes que no estás a cero, tu mente deja de operar en alerta constante.
+</p>
+
+<p>
+Salir del modo supervivencia no ocurre de un día para otro, quiero aclarar al lector. Es un proceso estratégico, continuo, de mucha disciplina, como lo que implica hacer cualquier tarea de éxito. Primero construyes estabilidad, luego tu mente se aclara por completo, después poder de decisión más acción hacia tu crecimiento. Esta fórmula es el principio de Código Millonario, de la mano con la psicología del dinero.
+</p>
+
+<p>
+Cuando tienes margen, no solo ganas dinero: ganas voz, negociación y la capacidad real de decir “no” sin que el miedo decida por ti. De ahí la frase: dinero llama dinero, dinero llama progreso. No es una regla absoluta, pero vaya que el dinero pone a trabajar la mente de otra forma que cuando los bolsillos están vacíos.
+</p>
+
+</div>
+
+
+
+
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;"> La realidad incómoda que casi nadie dice</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+La falta de ahorro no te hace débil.
+</p>
+
+<p>
+Te hace vulnerable.
+</p>
+
+<p>
+Y la vulnerabilidad financiera empuja a personas inteligentes a aceptar situaciones que nunca aceptarían si estuvieran en calma: trabajos que no les gustan, deudas que los asfixian, oportunidades que saben que no les convienen, todo solo por la presión del “no tengo margen”.
+</p>
+
+<p>
+Por eso, antes de hablar de inversiones, negocios o libertad financiera, hay que hablar de lo básico: construir espacio para respirar. Tener margen no es opcional; es la base de cualquier estrategia financiera sólida.
+</p>
+
+<p>
+No es glamour. No es motivación barata. No son excusas. Es entender que tu libertad financiera empieza por proteger tu tranquilidad mental y tu capacidad de elección, antes de intentar crecer o multiplicar dinero.
+</p>
+
+<p>
+Solo cuando tienes un colchón de seguridad puedes tomar decisiones con claridad, negociar con fuerza y evitar caer en trampas que la urgencia crea. Construir margen es prepararte para que cualquier movimiento que hagas en el futuro sea estratégico, no reactivo.
+</p>
+
+</div>
+
+
+
+
+  <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El ahorro no te cambia la vida, te devuelve la elección</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El mayor daño de no ahorrar no es no tener dinero.
+</p>
+
+<p>
+Es perder la capacidad de elegir.
+</p>
+
+<p>
+Cuando no hay ahorro, cada decisión se toma desde la urgencia y el miedo: aceptas trabajos que no te gustan, deudas que te ahogan, soluciones rápidas que no te sirven. Todo porque no hay margen para decir “no”.
+</p>
+
+<p>
+Cuando hay aunque sea un poco de ahorro, eliges desde la calma. Puedes negociar, esperar oportunidades mejores, decir “hasta aquí” sin que el pánico decida por ti. Esa tranquilidad mental es más poderosa que cualquier ingreso extra.
+</p>
+
+<p>
+Desde la psicología del dinero, esa diferencia lo cambia todo: no es cuestión de ganar más, sino de recuperar tu libertad de decidir y tu control sobre tu vida financiera. Ahorrar no es lujo; es poder.
+</p>
+
+<p>
+El ahorro te devuelve lo que nadie puede comprar: la opción de elegir tu camino, sin que la urgencia, la presión o el miedo marquen el rumbo.
+</p>
+
+</div>
+
+
+<blockquote class="border-l-4 border-stone-300 pl-4 italic text-stone-600">
+<p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
+Tu margen de ahorro no es dinero, es libertad de elegir las reglas de tu vida.
+</p>
+  </blockquote>
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+
+
+<!-- Sección recomendada -->
+<div class="mt-5 mb-10">
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
+    <p class="text-sm text-slate-600 italic leading-relaxed"
+       style="font-family: 'Poppins', sans-serif;">
+       <strong class="font-semibold text-slate-800">
+      Código Millonario</strong> recomienda:
+    </p>
+  </blockquote>
+</div>
+
+
+
+    </main>
+
+   
+
+
+  
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center text-sm mb-4" style=" font-family: 'Montserrat', sans-serif;">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style=" font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../psicologia-del-dinero/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style=" font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style=" font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+
+    <p class="interlink-heading text-center text-sm mb-6" style=" font-family: 'Montserrat', sans-serif;">
+    Lo más leído
+    </p>
+
+    <div id="interlinkGrid"></div>
+
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* CONTENEDOR */
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ITEM */
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* IMAGEN */
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* CONTROLES */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb; /* 👈 NUEVA LÍNEA */
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* BOTONES */
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+/* 🔥 FUNCIÓN PARA CORTAR TEXTO */
+function truncate(text, maxLength = 60){
+  return text.length > maxLength 
+    ? text.substring(0, maxLength) + "..." 
+    : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title, 60);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <p>Este artículo relacionado puede ayudarte a mejorar tus conocimientos financieros de forma estratégica.</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../psicologia-del-dinero/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+
+  const links = Array.from(temp.querySelectorAll(".article a"));
+
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+   
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
