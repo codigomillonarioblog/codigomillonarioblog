@@ -63,16 +63,569 @@ body, html {
 </style>
 
 
-<!-- Navbar con menú móvil estilo revista -->
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
 <nav class="navbar">
 <!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
-<div class="donate-hero flex justify-center mt-1 mb-1">
-  <img src="../../../assets/img/codigo-millonario-logo.webp" 
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="../../../assets/img/codigo-millonario-logo.png" 
        alt="Inspiración Código Millonario"
-       class="w-40 h-auto sm:w-48 md:w-56 md:-translate-x-20 object-contain">
+       class="logo-img object-contain">
 </div>
 
-  <div class="navbar-line"></div>
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Recibe estrategias gratis
+    </button>
+
+    <!-- INPUT ANIMADO -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+        
+      <button type="submit" class="btn-enviar">→</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* ✨ ANIMACIÓN INPUT SOLO PC */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(-5px);
+  filter: blur(6px);
+  pointer-events: none;
+
+  transition: all 0.35s ease;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+/* INPUT */
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+</style>
+
+<script>
+  const btnPC = document.getElementById("btnTogglePC");
+  const inputBoxPC = document.getElementById("inputBoxPC");
+
+  btnPC.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    btnPC.style.opacity = "0";
+    btnPC.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      btnPC.style.display = "none";
+      inputBoxPC.classList.add("activo");
+    }, 150);
+  });
+
+  inputBoxPC.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  document.addEventListener("click", () => {
+    inputBoxPC.classList.remove("activo");
+
+    setTimeout(() => {
+      btnPC.style.display = "inline-block";
+      btnPC.style.opacity = "1";
+      btnPC.style.pointerEvents = "auto";
+    }, 200);
+  });
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="../../../assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="../../../blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="../../../blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="../../../blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="../../../blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="../../../blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="../../../blog/negocios/index.html">Modelos de Negocio</a>
+<a href="../../../tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
   <div class="navbar-container">
     <!-- Logo -->
     <a href="../../../index.html" class="navbar-logo">Código Millonario</a>
@@ -83,7 +636,6 @@ body, html {
       <li><a href="../../../educacionfinanciera.html">Educación Financiera</a></li>
       <li><a href="../../../herramientas.html">Herramientas</a></li>
       <li><a href="../../../opiniones.html">Opiniones</a></li>
-      <li><a href="../../../tienda.html">Productos</a></li>
       <li><a href="../../../sobre-el-autor.html">Sobre el autor</a></li>
       <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
       <li><a href="../../../donar.html">Donaciones</a></li>
@@ -138,10 +690,10 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+background: #0f0f0f; 
   z-index: 9999;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  font-family: 'Open Sans', sans-serif;
 }
 
 .navbar-container {
@@ -152,32 +704,26 @@ body, html {
   height: 49px;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  z-index: 9999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-}
-
 .navbar-spacer {
   height: 60px;
   background: transparent;
 }
 
 @media(max-width: 767px) {
-  .navbar-container { height: 50px; }
-  .navbar-spacer { height: 50px; }
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
 }
 
-.navbar-line { height: 1px; width: 100%; background: #ccc; }
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
 
 .navbar-logo {
   font-size: 20px;
   font-weight: bold;
-  color: #000;
+  color: #fff; /* blanco */
   text-decoration: none;
 }
 
@@ -191,8 +737,12 @@ body, html {
 
 .navbar-menu li a {
   text-decoration: none;
-  color: #333;
-  font-size: 14px;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
 }
 
 .navbar-toggler {
@@ -206,7 +756,7 @@ body, html {
 .navbar-toggler-icon {
   width: 25px;
   height: 2px;
-  background: #000;
+  background: #fff; /* blanco */
   display: block;
   position: relative;
   transition: 0.3s;
@@ -218,7 +768,7 @@ body, html {
   position: absolute;
   width: 25px;
   height: 2px;
-  background: #000;
+  background: #fff; /* blanco */
   left: 0;
   transition: 0.3s;
 }
@@ -237,7 +787,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.6);
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
@@ -249,7 +799,7 @@ body, html {
   visibility: visible;
 }
 
-/* ===== Menú móvil tipo panel lateral ===== */
+/* ===== Menú móvil ===== */
 #mobileMenu {
   position: fixed;
   top: 0;
@@ -257,11 +807,11 @@ body, html {
   width: 80%;
   max-width: 320px;
   height: 100%;
-  background: #fff;
+  background: #000; /* negro */
   z-index: 1001;
   overflow-y: auto;
   transition: 0.3s ease;
-  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
 }
 
 #mobileMenu.show {
@@ -270,29 +820,30 @@ body, html {
 
 #mobileMenu .menu-header {
   padding: 1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
+  color: #fff;
 }
 
 .mobile-section {
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .mobile-section h3 {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  color: #555;
+  color: #aaa;
 }
 
 #mobileMenu a {
   display: block;
   font-size: 0.95rem;
   padding: 0.5rem 0;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -313,6 +864,71 @@ body {
 
 @media(max-width: 767px) {
   body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('../../../assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
 }
 </style>
 
@@ -341,6 +957,7 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   });
 });
 </script>
+
 
 
    <!-- ESPACIO FINAL -->
