@@ -962,24 +962,21 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-
-
+<div style="height: 250px;"></div>
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
-
-<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
-     Educación Financiera
-</div>
-
 <!-- Título -->
 <div class="blog-main-title relative">
+<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
 
-<span class="block mt-1 w-full md:w-[89%] h-px bg-slate-300"></span>
-<h1 class="w-full md:w-[89%]">
+<div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
+     style="font-family: 'Open Sans', sans-serif;">
+Educación Financiera
+</div>
+
+<h1 class="w-full md:w-[90%]">
 Comparación entre refinanciar vs. reestructurar deudas: qué significa cada opción y cuál es mejor
 </h1>
 
@@ -995,7 +992,7 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 <style>
 .blog-main-title {
-  font-family: 'Poppins', sans-serif;
+font-family: Georgia, serif;
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.2;
@@ -1005,8 +1002,8 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
   /* 🔥 Separación diferente por lado */
   margin-top: 30px;
   margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+  margin-left: 20px;
+  margin-right: 120px;
 }
 
 /* Responsive */
@@ -1025,7 +1022,6 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
   }
 }
 </style>
-
 
 <style>
 .layout-wrapper {
@@ -1059,7 +1055,6 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 </style>
 
 <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
-
 <style>
 .social-container {
   font-family: Arial, sans-serif;
@@ -1101,51 +1096,58 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 
 
- <!-- INTRODUCCIÓN GENERAL -->
-<main class="py-5">
-  <div class="layout-wrapper">
-    <article class="content-column">
 
+<div class="custom-left-align relative">
 
-<div class="mt-5 mb-4 w-full md:w-[150%] h-px bg-slate-300"></div>
+  <div class="relative">
+    <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
 
-<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
-<div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
-  <!-- Imagen del autor -->
-  <div class="flex-shrink-0">
-    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
-         alt="Francisco Urrego - Código Millonario"
-         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
-  </div>
-
-  <!-- Texto del autor -->
-  <div class="py-1">
-    <p class="text-stone-700 leading-relaxed mb-1 font-light" style="font-family: 'Open Sans', sans-serif;">
-      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
-        Francisco Urrego
+    <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
+    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+      <a href="../../../contacto.html"
+         class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
+        Mensaje
       </a>
-    </p>
-  </div>
+    </div>
+
+    <div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
+      <div class="flex-shrink-0">
+        <img src="../../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego - Código Millonario"
+             class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+      </div>
+
+      <div class="py-1">
+        <p class="text-stone-700 leading-relaxed mb-1 font-light text-xs sm:text-base">
+          Por 
+          <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+            Francisco Urrego
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    
+<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
 </div>
-
-<div class="mt-4 mb-5 w-full md:w-[150%] h-px bg-slate-300"></div>
-
-
 
 <div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
 
-  <!-- Texto -->
-  <div class="text-stone-700 leading-relaxed mb-2 sm:mb-0 text-center sm:text-left font-light" style="font-family: 'Open Sans', sans-serif;">
-    <p>
-    Actualizado el 12 feb 2026 | 11:35 h | <span class="block md:inline"></span> ⏱ 4 min lectura
-    </p>
-  </div>
+<!-- Texto -->
+<div class="mb-2 sm:mb-0 text-center sm:text-center text-[9px] sm:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Actualizado el 12 feb 2026 | 11:35 h | ⏱ 4 min lectura
+  </p>
+</div>
 
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
 
-<p class="mb-2 sm:mb-0">
- Síguenos:
+<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+  Síguenos
 </p>
 
   <!-- Iconos -->
@@ -1170,12 +1172,40 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
         <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
       </svg>
     </a>
+
+    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
+   class="social-icon">
+  <i class="fab fa-instagram"></i>
+</a>
   </div>
 
+</div>
 </div>
 
 <!-- Ajuste tamaño icono X -->
 <style>
+/* Simula content-column SOLO para este bloque */
+.custom-left-align {
+  width: 100%;
+}
+
+/* 💻 PC */
+@media (min-width: 768px) {
+  .custom-left-align {
+    max-width: 760px;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+}
+
+/* 📱 Móvil */
+@media (max-width: 767px) {
+  .custom-left-align {
+    padding-left: 10px;
+    padding-right: 18px;
+  }
+}
+
 .social-icon svg{
   width:14px !important;
   height:14px !important;
@@ -1186,7 +1216,8 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 <img src="../../../assets/png/que-sucede-al-adquirir-otra-deuda.jpg"
      alt=""
-     class="w-80 mx-auto mt-6 relative top-6 sm:w-[40rem] md:w-[50rem] sm:-left-6 sm:top-4 object-contain z-10">
+     class="w-80 mx-auto mt-20 relative top-6 sm:w-[40rem] md:w-[50rem] mx-auto sm:top-4 object-contain z-10">
+
 
 
 
@@ -1409,17 +1440,31 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 
 
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-8">
+  <div class="layout-wrapper">
+    <article class="content-column max-w-4xl mx-auto px-4 md:px-0 text-left">
 
+  <div class="mt-10 mb-6">
+  <span class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+        style="font-family: 'Open Sans', sans-serif;">
+Nota informativa
+  </span>
 
+  <div class="w-16 h-px bg-red-500"></div>
+</div>
 
 
 <!-- INTRODUCCIÓN -->
-  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Entendiendo los conceptos clave</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-20 mt-5" style="font-family: Georgia, serif;">Entendiendo los conceptos clave</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
-     <p>
-        En Colombia, muchas personas confunden términos como refinanciar y reestructurar deudas, pero en realidad son estrategias distintas para manejar tus obligaciones financieras. Entender la diferencia te ayuda a tomar decisiones más inteligentes y a proteger tu historial crediticio.  
-    </p>
+<p>
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+E  
+  </span>
+n Colombia, muchas personas confunden términos como refinanciar y reestructurar deudas, pero en realidad son estrategias distintas para manejar tus obligaciones financieras. Entender la diferencia te ayuda a tomar decisiones más inteligentes y a proteger tu historial crediticio.  
+</p>
 
     <p>
         Básicamente, refinanciar significa reemplazar un crédito por otro, generalmente con mejores condiciones: tasas más bajas, plazos más cómodos o pagos más pequeños. Es como “cambiar de préstamo” para que te sea más fácil cumplir.  
@@ -1437,9 +1482,10 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 
 
+
 <!-- PARRAFO -->
-   <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Qué significa refinanciar deudas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Qué significa refinanciar deudas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Refinanciar básicamente significa tomar un crédito nuevo para pagar uno que ya tienes, normalmente con mejores condiciones. Suena simple, pero puede marcar la diferencia si tu deuda actual tiene intereses muy altos o cuotas que no puedes cubrir cómodamente.  
@@ -1466,9 +1512,10 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 
 
+
 <!-- PARRAFO -->
-    <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Qué significa reestructurar deudas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Qué significa reestructurar deudas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Reestructurar deudas quiere decir básicamente renegociar los términos de tu deuda actual sin reemplazarla por otra. Es útil cuando no puedes cumplir con las condiciones originales pero no quieres o no puedes asumir un crédito nuevo.  
@@ -1497,8 +1544,8 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 
 <!-- PARRAFO -->
-     <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Diferencias clave entre refinanciar y reestructurar</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Diferencias clave entre refinanciar y reestructurar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Entender bien estas diferencias es súper importante antes de tomar cualquier decisión con tus deudas. No es lo mismo refinanciar que reestructurar, y elegir mal puede complicarte más de lo que crees.  
@@ -1522,9 +1569,10 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 
 
+
 <!-- PARRAFO -->
-      <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuándo conviene refinanciar o reestructurar</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cuándo conviene refinanciar o reestructurar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Elegir entre refinanciar o reestructurar depende mucho de tu capacidad de pago y tus objetivos financieros. No es lo mismo necesitar un alivio temporal que buscar un cambio definitivo en tus deudas.  
@@ -1551,9 +1599,10 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 
 
+
 <!-- PARRAFO -->
-  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Pasos para tomar la decisión correcta</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Pasos para tomar la decisión correcta</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Antes de decidir si conviene refinanciar o reestructurar, es bueno seguir algunos pasos prácticos para no meter la pata:
@@ -1584,9 +1633,10 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 
 
+
 <!-- PARRAFO -->
-   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Gestiona tus deudas con estrategia</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Gestiona tus deudas con estrategia</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Conocer la diferencia entre refinanciar y reestructurar deudas en Colombia no es solo cuestión de términos, es poder tomar decisiones inteligentes con tu plata. Si entiendes cómo funciona cada opción, puedes actuar con cabeza: ya sea tomando un crédito nuevo con mejores condiciones o ajustando el que ya tienes, la idea es siempre mantener el control de tus finanzas y no dejar que las deudas te manejen a ti.  
@@ -1608,35 +1658,30 @@ Antes de elegir, revisa tus números con calma; una decisión mal calculada pued
 
 
 
-  <!-- ESPACIO PEQUEÑO FINAL -->
+
+ <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
-
-
 
   <!-- Logos compartir -->
 <div class="share-here"></div>
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
-
-
-
-
-<!-- Sección recomendada -->
+  <!-- Sección recomendada -->
 <div class="mt-5 mb-10">
+<div class="w-full h-px bg-slate-300"></div>
 
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-       <strong class="font-semibold text-slate-800">
-      Código Millonario</strong> recomienda:
-    </p>
-  </blockquote>
+<div class="mt-6 mb-4 text-center">
+  <p class="font-semibold text-slate-800"
+     style="font-family: 'Poppins', sans-serif;">
+    Código Millonario
+  </p>
+  <p class="text-[11px] text-slate-500 leading-relaxed"
+     style="font-family: 'Poppins', sans-serif;">
+    Medio de análisis sobre finanzas y crecimiento económico.
+  </p>
 </div>
 
-        </div>
     </main>
 
 

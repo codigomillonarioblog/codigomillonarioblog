@@ -961,29 +961,23 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-
-
-
-
+<div style="height: 250px;"></div>
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
-
-<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
-     Educación Financiera
-</div>
-
 <!-- Título -->
 <div class="blog-main-title relative">
+<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
 
-<span class="block mt-1 w-full md:w-[89%] h-px bg-slate-300"></span>
-<h1 class="w-full md:w-[89%]">
+<div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
+     style="font-family: 'Open Sans', sans-serif;">
+Educación Financiera
+</div>
+
+<h1 class="w-full md:w-[90%]">
 Si tienes cuotas altas, así puedes negociar una deuda con tu banco y bajar la cuota mensual
 </h1>
-
 </div>
 
 <div class="flex flex-col justify-start gap-5 px-4 md:px-0 ml-0 md:ml-6 text-xl md:text-2xl font-light"
@@ -996,7 +990,7 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 <style>
 .blog-main-title {
-  font-family: 'Poppins', sans-serif;
+font-family: Georgia, serif;
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.2;
@@ -1006,8 +1000,8 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
   /* 🔥 Separación diferente por lado */
   margin-top: 30px;
   margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+  margin-left: 20px;
+  margin-right: 120px;
 }
 
 /* Responsive */
@@ -1026,7 +1020,6 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
   }
 }
 </style>
-
 
 <style>
 .layout-wrapper {
@@ -1060,7 +1053,6 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 </style>
 
 <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
-
 <style>
 .social-container {
   font-family: Arial, sans-serif;
@@ -1102,51 +1094,58 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 
- <!-- INTRODUCCIÓN GENERAL -->
-<main class="py-5">
-  <div class="layout-wrapper">
-    <article class="content-column">
 
+<div class="custom-left-align relative">
 
-<div class="mt-5 mb-4 w-full md:w-[150%] h-px bg-slate-300"></div>
+  <div class="relative">
+    <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
 
-<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
-<div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
-  <!-- Imagen del autor -->
-  <div class="flex-shrink-0">
-    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
-         alt="Francisco Urrego - Código Millonario"
-         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
-  </div>
-
-  <!-- Texto del autor -->
-  <div class="py-1">
-    <p class="text-stone-700 leading-relaxed mb-1 font-light" style="font-family: 'Open Sans', sans-serif;">
-      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
-        Francisco Urrego
+    <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
+    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+      <a href="../../../contacto.html"
+         class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
+        Mensaje
       </a>
-    </p>
-  </div>
+    </div>
+
+    <div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
+      <div class="flex-shrink-0">
+        <img src="../../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego - Código Millonario"
+             class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+      </div>
+
+      <div class="py-1">
+        <p class="text-stone-700 leading-relaxed mb-1 font-light text-xs sm:text-base">
+          Por 
+          <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+            Francisco Urrego
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    
+<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
 </div>
-
-<div class="mt-4 mb-5 w-full md:w-[150%] h-px bg-slate-300"></div>
-
-
 
 <div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
 
-  <!-- Texto -->
-  <div class="text-stone-700 leading-relaxed mb-2 sm:mb-0 text-center sm:text-left font-light" style="font-family: 'Open Sans', sans-serif;">
-    <p>
-    Actualizado el 12 feb 2026 | 06:34 h | <span class="block md:inline"></span> ⏱ 5 min lectura
-    </p>
-  </div>
+<!-- Texto -->
+<div class="mb-2 sm:mb-0 text-center sm:text-center text-[9px] sm:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Actualizado el 12 feb 2026 | 06:34 h | ⏱ 5 min lectura
+  </p>
+</div>
 
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
 
-<p class="mb-2 sm:mb-0">
- Síguenos:
+<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+  Síguenos
 </p>
 
   <!-- Iconos -->
@@ -1171,12 +1170,40 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
         <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
       </svg>
     </a>
+
+    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
+   class="social-icon">
+  <i class="fab fa-instagram"></i>
+</a>
   </div>
 
+</div>
 </div>
 
 <!-- Ajuste tamaño icono X -->
 <style>
+/* Simula content-column SOLO para este bloque */
+.custom-left-align {
+  width: 100%;
+}
+
+/* 💻 PC */
+@media (min-width: 768px) {
+  .custom-left-align {
+    max-width: 760px;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+}
+
+/* 📱 Móvil */
+@media (max-width: 767px) {
+  .custom-left-align {
+    padding-left: 10px;
+    padding-right: 18px;
+  }
+}
+
 .social-icon svg{
   width:14px !important;
   height:14px !important;
@@ -1187,8 +1214,7 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 <img src="../../../assets/png/como-pagar-menos-cada-mes.jpg"
      alt=""
-     class="w-80 mx-auto mt-6 relative top-6 sm:w-[40rem] md:w-[50rem] sm:-left-6 sm:top-4 object-contain z-10">
-
+     class="w-80 mx-auto mt-20 relative top-6 sm:w-[40rem] md:w-[50rem] mx-auto sm:top-4 object-contain z-10">
 
 
   
@@ -1413,16 +1439,32 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-8">
+  <div class="layout-wrapper">
+    <article class="content-column max-w-4xl mx-auto px-4 md:px-0 text-left">
+
+  <div class="mt-10 mb-6">
+  <span class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+        style="font-family: 'Open Sans', sans-serif;">
+Nota informativa
+  </span>
+
+  <div class="w-16 h-px bg-red-500"></div>
+</div>
 
 
 <!-- INTRODUCCIÓN -->
-  <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Evalúa tu situación financiera actual</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-20 mt-5" style="font-family: Georgia, serif;">Evalúa tu situación financiera actual</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
   
-    <p>
-        Antes de acercarte al banco, es súper importante que tengas un panorama real de tu dinero. No sirve de nada ir a pedir algo si no sabes exactamente qué tienes y qué debes.  
+<p>
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+  A
+  </span>
+        ntes de acercarte al banco, es súper importante que tengas un panorama real de tu dinero. No sirve de nada ir a pedir algo si no sabes exactamente qué tienes y qué debes.  
         Primero, haz una lista de tus deudas: cuánto debes en total, la tasa de interés, la cuota mensual y el tiempo que te falta para pagar. 
-    </p>
+</p>
 
     <p>        
         Ver esto en papel (o en un Excel, lo que tengas a mano) te ayudará a ver cuáles son urgentes y cuáles podrías renegociar sin tanto lío.  
@@ -1437,9 +1479,10 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 
+
 <!-- PARRAFO -->
-   <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Conoce tus derechos y opciones legales</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Conoce tus derechos y opciones legales</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     La verdad, muchas personas no saben que en Colombia tienes ciertos derechos cuando se te complica pagar tus deudas. Los bancos y entidades financieras están obligados a ofrecer opciones para que no termines ahogado. Por ejemplo:  
@@ -1457,9 +1500,8 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 <!-- PARRAFO -->
-    <h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Prepara tu propuesta antes de negociar</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
-
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Prepara tu propuesta antes de negociar</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Ir al banco sin tener un plan es como lanzarte al agua sin saber nadar: reduces mucho tus posibilidades de que todo salga bien. Antes de sentarte a negociar, haz esto:  
@@ -1476,8 +1518,8 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 <!-- PARRAFO -->
-  <h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Comunícate directamente con tu entidad financiera</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Comunícate directamente con tu entidad financiera</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Lo mejor que puedes hacer es hablar directamente con tu banco o entidad financiera. A veces uno piensa que todo es en línea o por teléfono, pero nada reemplaza el contacto real. Los canales más efectivos son:  
@@ -1494,8 +1536,8 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 <!-- PARRAFO -->
-   <h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Negocia con claridad y transparencia</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Negocia con claridad y transparencia</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Si quieres que la negociación con tu banco funcione de verdad, lo clave es ser claro y honesto. Nada de inventar números ni minimizar lo que pasa. Hazlo así:  
@@ -1511,9 +1553,10 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 
+
 <!-- PARRAFO -->
-  <h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Considera la consolidación de deudas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Considera la consolidación de deudas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Si tienes varias deudas repartidas en distintos bancos, juntar todo en un solo crédito puede ser un salvavidas. No es magia, pero ayuda un montón. Algunas ventajas:  
@@ -1529,9 +1572,11 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 
+
+
 <!-- PARRAFO -->
-   <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cumple con el nuevo acuerdo</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cumple con el nuevo acuerdo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Una vez que firmes el acuerdo de renegociación, lo más importante es cumplirlo al pie de la letra. Algunas cosas que ayudan:  
@@ -1548,8 +1593,8 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 <!-- PARRAFO -->
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Mantén un control periódico</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Mantén un control periódico</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     No basta con firmar el acuerdo; hay que estar pendiente constantemente. Revisa tus cuentas y avances cada cierto tiempo para no llevarte sorpresas:  
@@ -1565,35 +1610,30 @@ Ir con una propuesta concreta cambia la conversación; no es pedir ayuda, es pla
 
 
 
-  <!-- ESPACIO PEQUEÑO FINAL -->
+
+ <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
-
-
 
   <!-- Logos compartir -->
 <div class="share-here"></div>
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
-
-
-
-<!-- Sección recomendada -->
+  <!-- Sección recomendada -->
 <div class="mt-5 mb-10">
+<div class="w-full h-px bg-slate-300"></div>
 
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-       <strong class="font-semibold text-slate-800">
-      Código Millonario</strong> recomienda:
-    </p>
-  </blockquote>
+<div class="mt-6 mb-4 text-center">
+  <p class="font-semibold text-slate-800"
+     style="font-family: 'Poppins', sans-serif;">
+    Código Millonario
+  </p>
+  <p class="text-[11px] text-slate-500 leading-relaxed"
+     style="font-family: 'Poppins', sans-serif;">
+    Medio de análisis sobre finanzas y crecimiento económico.
+  </p>
 </div>
-
-
-        </div>
+ 
     </main>
 
 
