@@ -961,28 +961,23 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-
-
-
+<div style="height: 250px;"></div>
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
-
-<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
-     Educación Financiera
-</div>
-
 <!-- Título -->
 <div class="blog-main-title relative">
+<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
 
-<span class="block mt-1 w-full md:w-[89%] h-px bg-slate-300"></span>
-<h1 class="w-full md:w-[89%]">
+<div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
+     style="font-family: 'Open Sans', sans-serif;">
+Educación Financiera
+</div>
+
+<h1 class="w-full md:w-[90%]">
 ¿Se puede comprar vivienda en Colombia siendo independiente?: los pasos, requisitos y estrategia real
 </h1>
-
 </div>
 
 <div class="flex flex-col justify-start gap-5 px-4 md:px-0 ml-0 md:ml-6 text-xl md:text-2xl font-light"
@@ -995,7 +990,7 @@ La realidad es otra: planear, ahorrar y actuar paso a paso te acerca al sueño s
 
 <style>
 .blog-main-title {
-  font-family: 'Poppins', sans-serif;
+font-family: Georgia, serif;
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.2;
@@ -1005,8 +1000,8 @@ La realidad es otra: planear, ahorrar y actuar paso a paso te acerca al sueño s
   /* 🔥 Separación diferente por lado */
   margin-top: 30px;
   margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+  margin-left: 20px;
+  margin-right: 120px;
 }
 
 /* Responsive */
@@ -1025,7 +1020,6 @@ La realidad es otra: planear, ahorrar y actuar paso a paso te acerca al sueño s
   }
 }
 </style>
-
 
 <style>
 .layout-wrapper {
@@ -1059,7 +1053,6 @@ La realidad es otra: planear, ahorrar y actuar paso a paso te acerca al sueño s
 </style>
 
 <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
-
 <style>
 .social-container {
   font-family: Arial, sans-serif;
@@ -1102,51 +1095,57 @@ La realidad es otra: planear, ahorrar y actuar paso a paso te acerca al sueño s
 
 
 
- <!-- INTRODUCCIÓN GENERAL -->
-<main class="py-5">
-  <div class="layout-wrapper">
-    <article class="content-column">
+<div class="custom-left-align relative">
 
-  
-<div class="mt-5 mb-4 w-full md:w-[150%] h-px bg-slate-300"></div>
+  <div class="relative">
+    <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
 
-<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
-<div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
-  <!-- Imagen del autor -->
-  <div class="flex-shrink-0">
-    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
-         alt="Francisco Urrego - Código Millonario"
-         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
-  </div>
-
-  <!-- Texto del autor -->
-  <div class="py-1">
-    <p class="text-stone-700 leading-relaxed mb-1 font-light" style="font-family: 'Open Sans', sans-serif;">
-      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
-        Francisco Urrego
+    <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
+    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+      <a href="../../../contacto.html"
+         class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
+        Mensaje
       </a>
-    </p>
-  </div>
+    </div>
+
+    <div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
+      <div class="flex-shrink-0">
+        <img src="../../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego - Código Millonario"
+             class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+      </div>
+
+      <div class="py-1">
+        <p class="text-stone-700 leading-relaxed mb-1 font-light text-xs sm:text-base">
+          Por 
+          <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+            Francisco Urrego
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    
+<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
 </div>
-
-<div class="mt-4 mb-5 w-full md:w-[150%] h-px bg-slate-300"></div>
-
-
 
 <div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
 
-  <!-- Texto -->
-  <div class="text-stone-700 leading-relaxed mb-2 sm:mb-0 text-center sm:text-left font-light" style="font-family: 'Open Sans', sans-serif;">
-    <p>
-    Actualizado el 07 ene 2026 | 20:02 h | <span class="block md:inline"></span> ⏱  8 min lectura
-    </p>
-  </div>
+<!-- Texto -->
+<div class="mb-2 sm:mb-0 text-center sm:text-center text-[9px] sm:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Actualizado el 07 ene 2026 | 20:02 h | ⏱ 8 min lectura
+  </p>
+</div>
 
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
 
-<p class="mb-2 sm:mb-0">
- Síguenos:
+<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+  Síguenos
 </p>
 
   <!-- Iconos -->
@@ -1171,12 +1170,40 @@ La realidad es otra: planear, ahorrar y actuar paso a paso te acerca al sueño s
         <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
       </svg>
     </a>
+
+    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
+   class="social-icon">
+  <i class="fab fa-instagram"></i>
+</a>
   </div>
 
+</div>
 </div>
 
 <!-- Ajuste tamaño icono X -->
 <style>
+/* Simula content-column SOLO para este bloque */
+.custom-left-align {
+  width: 100%;
+}
+
+/* 💻 PC */
+@media (min-width: 768px) {
+  .custom-left-align {
+    max-width: 760px;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+}
+
+/* 📱 Móvil */
+@media (max-width: 767px) {
+  .custom-left-align {
+    padding-left: 10px;
+    padding-right: 18px;
+  }
+}
+
 .social-icon svg{
   width:14px !important;
   height:14px !important;
@@ -1187,7 +1214,7 @@ La realidad es otra: planear, ahorrar y actuar paso a paso te acerca al sueño s
 
 <img src="../../../assets/png/puedo-comprar-casa-siendo-independiente.webp"
      alt=""
-     class="w-80 mx-auto mt-6 relative top-6 sm:w-[40rem] md:w-[50rem] sm:-left-6 sm:top-4 object-contain z-10">
+     class="w-80 mx-auto mt-20 relative top-6 sm:w-[40rem] md:w-[50rem] mx-auto sm:top-4 object-contain z-10">
 
 
 
@@ -1413,47 +1440,91 @@ La realidad es otra: planear, ahorrar y actuar paso a paso te acerca al sueño s
 
 
 
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-8">
+  <div class="layout-wrapper">
+    <article class="content-column max-w-4xl mx-auto px-4 md:px-0 text-left">
+
+  <div class="mt-10 mb-6">
+  <span class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+        style="font-family: 'Open Sans', sans-serif;">
+Nota informativa
+  </span>
+
+  <div class="w-16 h-px bg-red-500"></div>
+</div>
 
 
 <!-- INTRODUCCIÓN -->
-<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo lograr tu primera vivienda en Colombia sin endeudarte ni depender de un banco</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-20 mt-5" style="font-family: Georgia, serif;">Cómo lograr tu primera vivienda en Colombia sin endeudarte ni depender de un banco</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-Para muchos, tener casa propia es solo un sueño que se queda en <strong>“algún día tendré mi casa propia”</strong>, y no está mal soñar, de hecho es el primer paso. Solo que no funciona así: para tener tu primera casa hay que trabajar muy duro y no se materializa solo con sueños vacíos que llenan la mente con la sensación de haberlo logrado ya. Se necesita planificación, estrategia, trabajo duro y justo allí llega lo que muchos llaman: la suerte, y obtienes eso que tanto anhelas.
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+  P
+  </span>
+ara muchos, tener casa propia es solo un sueño que se queda en <strong>“algún día tendré mi casa propia”</strong>, y no está mal soñar, de hecho es el primer paso. Solo que no funciona así: para tener tu primera casa hay que trabajar muy duro y no se materializa solo con sueños vacíos que llenan la mente con la sensación de haberlo logrado ya. Se necesita planificación, estrategia, trabajo duro y justo allí llega lo que muchos llaman: la suerte, y obtienes eso que tanto anhelas.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Beneficios de tener vivienda propia en Colombia
-</h3>
-<p>
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Beneficios de tener vivienda propia en Colombia</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+  <p>
 Una casa propia da tranquilidad, estabilidad y posibilidad de perseguir otros sueños que no dependen de pagar el arriendo cada mes, tener que lidiar con <strong>pesadas mudanzas</strong> cuando sea necesario, y sentirte esclavo de un sistema que estanca otras oportunidades más ambiciosas.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-No necesitas ingresos elevados para tu primera vivienda
-</h3>
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">No necesitas ingresos elevados para tu primera vivienda</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
 <p>
 Para tener casa propia en Colombia, no es necesario tener ingresos elevados como muchos creen. A diferencia de otros países, en Colombia los terrenos para construir un hogar son accesibles para la mayoría que tenga un trabajo estable, algo de dinero o una mentalidad de alguien que desea salir adelante y lograr su objetivo.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Casos reales de trabajadores independientes
-</h3>
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Casos reales de trabajadores independientes</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
 <p>
 Existen casos reales de trabajadores independientes que comenzaron con recursos limitados y avanzaron de forma progresiva. Dividieron su objetivo en etapas claras: primero asegurar una base sólida, luego avanzar paso a paso en la construcción y finalmente completar los detalles conforme aumentaban sus ingresos. Este enfoque les permitió alcanzar estabilidad y tranquilidad financiera en un plazo razonable.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Sistema que ha mejorado la vida de muchos colombianos
-</h3>
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Sistema que ha mejorado la vida de muchos colombianos</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
 <p>
 Hoy quiero enseñarte el sistema que ha hecho que muchos colombianos tengan su casa propia por primera vez, cómo lograron su sueño realidad, cómo multiplicaron sus ingresos al minimizar sus gastos y cómo la vida les mejoró drásticamente. Según encuesta del <strong>Ministerio de Vivienda</strong> sobre subsidios, 38,21 % de los usuarios calificaron que su calidad de vida mejoró al 100 % por tener vivienda propia, y otro 26,8 % considera que mejoró en un 80 %. Es decir, más de 64 % sienten una mejora grande (≥80 %) en su calidad de vida gracias a la vivienda propia.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Cómo aplicar este método paso a paso
-</h3>
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Cómo aplicar este método paso a paso</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Este artículo no solo presenta recomendaciones generales; muestra una forma de pensar, planear y ejecutar un proyecto de vivienda siendo independiente, utilizando estrategias prácticas y ejemplos que pueden adaptarse a distintas realidades, paso a paso.
@@ -1466,14 +1537,17 @@ Si quieres llevar tu proyecto de vivienda al siguiente nivel y tomar decisiones 
    Herramientas Financieras
 </a> y aprende a planear, invertir y multiplicar tus recursos como un verdadero experto. Gratis, fácil y rápido.
 </p>
+
 </div>
 
 
 
 
 
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo los independientes pueden lograr su casa propia sin depender de un empleo fijo</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<!-- PARRAFO -->
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cómo los independientes pueden lograr su casa propia sin depender de un empleo fijo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
   Es muy común la situación que viven muchos colombianos, ya que, según cifras recientes del <strong>DANE</strong> y reportes de medios, aproximadamente el <strong>40,8 %</strong> de los trabajadores en Colombia son cuentapropistas o independientes. Esto equivale a alrededor de <strong>9,6</strong> millones de personas que trabajan por su cuenta, sin depender de un empleo fijo con contrato tradicional.
@@ -1483,11 +1557,16 @@ Si quieres llevar tu proyecto de vivienda al siguiente nivel y tomar decisiones 
   Este dato indica que más de <strong>4</strong> de cada <strong>10</strong> colombianos ocupados trabajan de manera independiente, ya sea como freelancers, pequeños negocios, servicios por cuenta propia o proyectos propios, lo cual representa un segmento enorme del mercado laboral. Lograr tener tu propia vivienda siendo independiente puede parecer un desafío enorme, sobre todo cuando no cuentas con un salario fijo o un contrato estable. Sin embargo, esto no significa que sea imposible.
 </p>
 
+</div>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-¿Es realmente posible comprar vivienda sin un salario fijo?
-</h3>
 
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">¿Es realmente posible comprar vivienda sin un salario fijo?</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   La clave está en planificar cuidadosamente tus ingresos, priorizar tus objetivos y aprovechar estrategias inteligentes para generar recursos de manera constante. En Colombia, muchos trabajadores independientes, emprendedores y freelancers han logrado dar el primer paso hacia su casa propia dividiendo su meta en etapas claras, controlando gastos y haciendo que cada peso cuente. En este párrafo te mostraré cómo puedes aplicar estos mismos principios y avanzar hacia tu sueño de vivienda sin depender de un <strong>empleo tradicional.</strong>
@@ -1497,48 +1576,57 @@ Si quieres llevar tu proyecto de vivienda al siguiente nivel y tomar decisiones 
   Muchas personas optaron por construir sus propias casas sin depender de nadie más, sin depender de ayudas del Estado, sin depender de un empleo o salario fijo. Ahora, la realidad detrás de esto es que es obvio que no iniciaron comprando la casa una vez el dinero estuviera completo en sus manos. Esto implicó, en la mayoría de los casos y de lo que nadie habla, ir adquiriendo las partes de lo que formarían una casa. <strong>Muchos quieren una casa ya lista y completa</strong> sin siquiera tener los recursos suficientes, pero lo que no ven es esta estrategia que tú también puedes implementar para lograr tu sueño pronto.
 </p>
 
+</div>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Cómo una trabajadora independiente convirtió su sueño en casa propia
-</h3>
 
- <p>
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Cómo una trabajadora independiente convirtió su sueño en casa propia</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
   En el caso de María, una humilde trabajadora independiente que vendía masamorras por las calles de Antioquia, Colombia, ella inició su pequeño ahorro mensual sin fallar ni una sola cuota. Ella no usó entidades ni bancos para realizar su ahorro, ya que no quería complicarse y, como la mayoría, sentía que su dinero estaba más seguro bajo su colchón.
 </p>
 
+</div>
 
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-La primera decisión clave: invertir en un lote económico y asegurarlo
-</h3>
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">La primera decisión clave: invertir en un lote económico y asegurarlo</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Cuando tenía aproximadamente <strong>5.000.000</strong> de pesos COP, inició la búsqueda de un lote. Lo buscó en zonas rurales y no urbanas, como muchos quieren. Al encontrar el precio ideal y el lugar exactamente como lo quería, lo compró inmediatamente. No pasó mucho tiempo después de haberlo comprado para estar instalando una pequeña cabaña hecha totalmente de madera, específicamente tablillas que el aserrío más cercano podía proporcionarle, con un costo por tablilla de unos 
   <strong>200 a 500</strong> pesos COP.
 </p>
 
+</div>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Repetir el sistema: crecer sin endeudarse
-</h3>
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Repetir el sistema: crecer sin endeudarse</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   María siguió implementando mejoras a su hogar mientras trabajaba haciendo sus ventas de masamorras; esto ayudó a que la casa tuviera mejoras constantes, como ya no estaba sujeta a gastos en alquiler o depositos fue posible mejorar su economia realizar inverciones. Luego, ella replicó este sistema comprando un nuevo lote y armando otra cabaña con tablas, tablillas, troncos y palos. Esperó uno o dos años, 
   después la vendió y todo ese dinero lo usó para terminar de reconstruir su primera casa, <strong>finalizando así en su totalidad la construcción.</strong> Ahora, esto no es suerte, no es casualidad; quizás no es la casa de un alcalde o de un abogado, sin embargo, muchos desearían tener ese hogar ahora mismo.
 </p>
+
 </div>
 
 
 
 
 
-<!-- H2: Conoce tu verdadero margen de ahorro -->
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Conoce tu verdadero margen de ahorro</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Conoce tu verdadero margen de ahorro</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Empieza por el dinero, no por el tiempo
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">
+  Empieza por el dinero, no por el tiempo
 </h3>
 
 <p>
@@ -1547,19 +1635,28 @@ Empieza por el dinero, no por el tiempo
   En este caso, hablemos del dinero, que es la fuente principal que te llevará hacia ese objetivo. No toquemos el tema del tiempo; cuánto te llevará lograrlo es lo menos relevante por ahora. Solo concéntrate en el cómo, no en el cuándo.
 </p>
 
+</div>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Haz un diagnóstico financiero honesto
-</h3>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Haz un diagnóstico financiero honesto</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Antes de cualquier acción, es fundamental realizar un diagnóstico real de tu situación financiera actual. No basta con calcular un porcentaje genérico; debes tener claro cada peso que sale y puede entrar. Esto permite saber con claridad cuánto puedes destinar a tu objetivo y ajustar expectativas de forma realista, sin depender de la palabra “algún día”.
 </p>
 
+</div>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-El lote primero: la base de todo el proyecto
-</h3>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">El lote primero: la base de todo el proyecto</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   En el caso de María, ella inició comprando el lote primero; es lo que más rápido se valoriza y lo que puede ser más difícil de conseguir. Pero una vez que se tiene, lo demás es mucho más fácil de gestionar. 
@@ -1571,10 +1668,15 @@ El lote primero: la base de todo el proyecto
   No te preocupes por comprar el lote de tu futura casa en una zona rural; aunque al inicio parezca que está retirado, hay lugares donde no solo venden un solo lote, sino varios. Es ahí donde ese lugar se convierte en un pequeño caserío, pueblo o barrio completo. Mientras se construye poco a poco, esa zona puede crecer más de lo que imaginabas y los precios tienden a dispararse.
 </p>
 
+</div>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Define el primer paso y comienza
-</h3>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Define el primer paso y comienza</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Siendo así, inicia por definir cuánto te puede costar un terreno; ese es el primer paso. ¿Dónde lo quieres? Cuando lo compres, después, cada ladrillo sumará a la construcción de tu casa propia.
@@ -1613,6 +1715,21 @@ Es claro añadir, que el lector debe tener en cuenta que es a largo plazo.
 <p>
   Medir y optimizar cada ingreso transforma metas que parecían lejanas en objetivos alcanzables. Como ya lo había dicho, no midas el tiempo; esta percepción de medición mata más sueños en personas que sí pueden lograr sus objetivos. Es como tener las llaves de un auto deportivo de lujo y no querer conducirlo.
 </p>
+
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Diseña metas específicas y por etapas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    Para quienes inician desde cero, dividir un proyecto grande en fases concretas es clave para evitar la sensación de sobrecarga o incluso llegar a abandonar en poco tiempo. Adquirir una vivienda no es solo un gasto, es un plan estratégico que se construye paso a paso, ladrillo a ladrillo. Cada etapa debe contar con objetivos claros de que quieres lograr primero, costos definidos y plazos realistas, no basta con querer y esperar que un dia se cumplira solo, como la ilucion que guardan muchos.
+</p>
+
 </div>
 
 
@@ -1620,17 +1737,9 @@ Es claro añadir, que el lector debe tener en cuenta que es a largo plazo.
 
 
 
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Diseña metas específicas y por etapas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
-
-<p>
-    Para quienes inician desde cero, dividir un proyecto grande en fases concretas es clave para evitar la sensación de sobrecarga o incluso llegar a abandonar en poco tiempo. Adquirir una vivienda no es solo un gasto, es un plan estratégico que se construye paso a paso, ladrillo a ladrillo. Cada etapa debe contar con objetivos claros de que quieres lograr primero, costos definidos y plazos realistas, no basta con querer y esperar que un dia se cumplira solo, como la ilucion que guardan muchos.
-</p>
-
-
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Planifica tu proyecto por etapas
-</h3>
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Planifica tu proyecto por etapas</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 </p>
 Como lo dijimos anterior mente un lote puede no ser mucho, pero es el <strong>50 %</strong> de todo el proceso, todos los que son debajos recursos y hoy tienen casa fue por que empesaron por partes y no todo de una sola compra. 
@@ -1646,23 +1755,30 @@ Como lo dijimos anterior mente un lote puede no ser mucho, pero es el <strong>50
 <p>
     Cuando un proyecto se divide en etapas bien definidas, se vuelve más manejable. Cada avance refuerza la motivación y permite celebrar logros concretos sin perder el enfoque general.
 </p>
+
 </div>
 
 
 
 
 
-
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Protege tu dinero y construye tu camino hacia la vivienda propia</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Protege tu dinero y construye tu camino hacia la vivienda propia</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Es evidente tomar en cuenta esta sección para dejar claro al lector que vendrán tiempos de crisis en su vida, quizás problemas o hasta momentos de celebración que pueden causar la influencia de querer gastar el dinero destinado para la vivienda. Esto es muy común en la mayoría de personas; tomar parte del dinero guardado o destinado a ese proyecto puede hacer que nunca lo logres, ya que siempre que gastes algo de ese dinero, se reinicia el contador. 
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Acumulación de recursos: más importante que tus ingresos diarios
-</h3>
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Acumulación de recursos: más importante que tus ingresos diarios</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
    Algunos pueden pasarse la vida en este zona sin lograr nada, aunque puedan obtener buenos ingresos. El éxito no llega por cuánto ganes hoy, sino por el efecto de acumulación de recursos, no por derroche con la idea de que vendrá más. Separar los recursos destinados a tu vivienda es una práctica clave de control financiero. Mantener el ahorro aislado evita gastos impulsivos y refuerza el compromiso con el objetivo. Cada ingreso asignado cumple una función específica dentro del plan.
@@ -1689,23 +1805,30 @@ Opciones donde puede guardar y asegurar tu ahorro para vivienda propia.
 <p >
     Con disciplina y constancia, incluso aportes periódicos moderados pueden convertirse en una base sólida para dar los primeros pasos sin comprometer el equilibrio financiero diario.
 </p>
+
 </div>
 
 
 
 
 
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Multiplica tus ingresos de manera estratégica</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Multiplica tus ingresos de manera estratégica</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Si bien, aunque es un proyecto a largo plazo, no tiene por qué convertirse en algo casi inalcanzable, o en una pesadilla de prisión mental, como si se pagara una condena mientras se espera ese gran día de iniciar el proceso de construcción de una casa propia. Dicho así, depender únicamente del ahorro puede ralentizar el proceso lo suficiente como para llevar a la mayoría a desistir y abandonar con la idea de que sea un sueño inalcanzable. 
 </p>
 
+</div>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Convierte cada ingreso adicional en pasos hacia tu casa propia
-</h3>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Convierte cada ingreso adicional en pasos hacia tu casa propia</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Generar ingresos adicionales de forma planificada permite avanzar mucho más rápido y con mayor flujo de efectivo; es igual a menos tiempo que puedas permanecer en proceder a la adquisición de una casa propia en Colombia. Cada esfuerzo extra debe tener un propósito claro dentro del proyecto: este dinero irá destinado al lote, este dinero irá destinado para comprar el inodoro, este dinero irá destinado para algunos ladrillos; hubo un descuento en madera, la compraré y almacenaré bien. 
@@ -1715,9 +1838,13 @@ Generar ingresos adicionales de forma planificada permite avanzar mucho más rá
 Algunos incluso van consiguiendo y almacenando cosas, como en el caso anterior; esos objetos les van a servir para complementar o terminar de construir su nueva casa. Y no estaba de más decir estas palabras: ¿cada peso cuenta? Sí. ¿Cada ladrillo cuenta? Sí.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-10 formas prácticas de generar ingresos extra para tu casa propia en Colombia
-</h3>
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">10 formas prácticas de generar ingresos extra para tu casa propia en Colombia</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 <strong>➤</strong>&nbsp;Vender helados, raspados o bolis en tu barrio o en lugares de alta afluencia.<br>
@@ -1732,19 +1859,19 @@ Algunos incluso van consiguiendo y almacenando cosas, como en el caso anterior; 
 <strong>➤</strong>&nbsp;Hacer talleres o clases rápidas (manualidades, repostería, música) para vecinos o conocidos.<br>
 </p>
 
-
-
 <p>
     Cuando los ingresos adicionales se gestionan con intención, el tiempo total del proyecto se reduce y se evita la dispersión financiera.
 </p>
+
 </div>
 
 
 
 
 
-<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Aprovecha beneficios y apoyos disponibles</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Aprovecha beneficios y apoyos disponibles</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 No está de más darle prioridad a este tema, porque es clave para quienes quieren avanzar hacia su casa propia. Pasar por alto ayudas institucionales o programas de apoyo puede significar perder un impulso económico extra que acelere tu meta. Existen opciones que permiten una compra progresiva y mejores condiciones de financiamiento si se integran correctamente a tu plan: ayudas del gobierno, incentivos y más. 
@@ -1753,9 +1880,16 @@ No está de más darle prioridad a este tema, porque es clave para quienes quier
 Dejo este apartado para que seas tú quien explore más a fondo esta información, ya que depende de regulaciones específicas y podría interpretarse mal si se difunde sin contexto. Lo importante es que sepas que estas oportunidades existen y pueden marcar una gran diferencia en tu camino hacia la vivienda propia.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Qué puedes hacer por tu cuenta para aprovechar ayudas
-</h3>
+</div>
+
+
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Qué puedes hacer por tu cuenta para aprovechar ayudas</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     <strong>➤</strong>&nbsp;Investiga programas de apoyo aplicables a primeras adquisiciones.<br>
@@ -1766,15 +1900,16 @@ Qué puedes hacer por tu cuenta para aprovechar ayudas
 <p>
     Utilizar estos recursos de forma estratégica puede acelerar etapas clave sin comprometer la estabilidad económica.
 </p>
+
 </div>
 
 
 
 
 
-
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Beneficios de planificar con precisión siendo independiente</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Beneficios de planificar con precisión siendo independiente</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Una planificación estructurada protege tu estabilidad financiera y te ayuda a avanzar de manera constante, sin sorpresas desagradables. Ser independiente implica que cada decisión que tomes debe estar basada en datos reales, en lo que realmente entra y sale de tu bolsillo, y no en suposiciones o ilusiones de dinero que “tal vez llegue”.
@@ -1790,20 +1925,29 @@ Una planificación estructurada protege tu estabilidad financiera y te ayuda a a
 Este patrón se repite en todos los proyectos exitosos: análisis realista, metas claras por etapas, generación de ingresos estratégicos y decisiones conscientes en cada paso. 
 <strong>No importa si no tienes un salario fijo:</strong> siguiendo este método, puedes construir un proyecto sólido y alcanzable siendo totalmente independiente.
 </p>
+
 </div>
 
 
 
-<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo lograr tu casa propia en Colombia, incluso sin todo el capital</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<!-- PARRAFO -->
+<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cómo lograr tu casa propia en Colombia, incluso sin todo el capital</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 El autor hace referencia a que es posible conseguir casa propia en Colombia, pero también plantea que hay personas de bajos recursos, y que no todos los colombianos disponen del total del capital necesario para una vivienda, que oscila entre <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">70</strong> y <strong class="text-sm font-semibold text-stone-800" style="font-family: 'Poppins', sans-serif;">300</strong> millones de COP. Por eso, propone la idea de adquirir una vivienda propia poco a poco. Para quienes sí tienen ese dinero, es fácil adquirirla: solo es cuestión de mirar opciones, buscar la mejor zona o ciudad donde se quiera, y tomar decisiones informadas.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-Construye tu hogar paso a paso, sin depender de grandes recursos
-</h3>
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Construye tu hogar paso a paso, sin depender de grandes recursos</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Sin embargo, para la mayoría de los colombianos que no pueden permitirse tener un hogar establecido, construir su casa poco a poco puede ser la alternativa más viable, considerando el alza en precios de arriendos, impuestos y estilo de vida. Ahora más que nunca, tener una casa propia en Colombia se ha vuelto indispensable. En la vida no se trata de quién llega primero o de quién tiene lo mejor, sino de ti mismo, de tu esfuerzo y de evitar gastar de más en arriendos, superando necesidades que podrías evitar si decides empezar tu camino hacia tu propia casa hoy mismo.
@@ -1818,31 +1962,27 @@ Sin embargo, para la mayoría de los colombianos que no pueden permitirse tener 
 
 
 
-  <!-- ESPACIO PEQUEÑO FINAL -->
+ <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
-
-
 
   <!-- Logos compartir -->
 <div class="share-here"></div>
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
-
-
-
   <!-- Sección recomendada -->
 <div class="mt-5 mb-10">
+<div class="w-full h-px bg-slate-300"></div>
 
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-       <strong class="font-semibold text-slate-800">
-      Código Millonario</strong> recomienda:
-    </p>
-  </blockquote>
+<div class="mt-6 mb-4 text-center">
+  <p class="font-semibold text-slate-800"
+     style="font-family: 'Poppins', sans-serif;">
+    Código Millonario
+  </p>
+  <p class="text-[11px] text-slate-500 leading-relaxed"
+     style="font-family: 'Poppins', sans-serif;">
+    Medio de análisis sobre finanzas y crecimiento económico.
+  </p>
 </div>
 
     </main>

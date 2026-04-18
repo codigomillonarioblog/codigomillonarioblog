@@ -960,41 +960,36 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-
-
+<div style="height: 250px;"></div>
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
-
-<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
-     Educación Financiera
-</div>
-
 <!-- Título -->
 <div class="blog-main-title relative">
+<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
 
-<span class="block mt-1 w-full md:w-[89%] h-px bg-slate-300"></span>
-<h1 class="w-full md:w-[89%]">
+<div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
+     style="font-family: 'Open Sans', sans-serif;">
+Educación Financiera
+</div>
+
+<h1 class="w-full md:w-[90%]">
 Cómo mejorar tus finanzas personales en 30 días con 5 hábitos simples
 </h1>
-
 </div>
 
 <div class="flex flex-col justify-start gap-5 px-4 md:px-0 ml-0 md:ml-6 text-xl md:text-2xl font-light"
      style="font-family: 'Open Sans', sans-serif;">
   <p class="w-full md:w-[80%]">
-    ¿Nadie te enseñó a darle dirección a tu dinero?
-    En los próximos 30 días puedes pasar del desorden financiero al control total,
+    ¿Nadie te enseñó a darle dirección a tu dinero? En los próximos 30 días puedes pasar del desorden financiero al control total,
     si aplicas reglas simples y constantes.
   </p>
 </div>
 
 <style>
 .blog-main-title {
-  font-family: 'Poppins', sans-serif;
+font-family: Georgia, serif;
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.2;
@@ -1004,8 +999,8 @@ Cómo mejorar tus finanzas personales en 30 días con 5 hábitos simples
   /* 🔥 Separación diferente por lado */
   margin-top: 30px;
   margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+  margin-left: 20px;
+  margin-right: 120px;
 }
 
 /* Responsive */
@@ -1024,7 +1019,6 @@ Cómo mejorar tus finanzas personales en 30 días con 5 hábitos simples
   }
 }
 </style>
-
 
 <style>
 .layout-wrapper {
@@ -1057,9 +1051,7 @@ Cómo mejorar tus finanzas personales en 30 días con 5 hábitos simples
 }
 </style>
 
-
 <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
-
 <style>
 .social-container {
   font-family: Arial, sans-serif;
@@ -1100,56 +1092,57 @@ Cómo mejorar tus finanzas personales en 30 días con 5 hábitos simples
 </style>
 
 
+<div class="custom-left-align relative">
 
+  <div class="relative">
+    <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
 
-
-
-
- <!-- INTRODUCCIÓN GENERAL -->
-<main class="py-5">
-  <div class="layout-wrapper">
-    <article class="content-column">
-
-
-<div class="mt-5 mb-4 w-full md:w-[150%] h-px bg-slate-300"></div>
-
-<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
-<div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
-  <!-- Imagen del autor -->
-  <div class="flex-shrink-0">
-    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
-         alt="Francisco Urrego - Código Millonario"
-         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
-  </div>
-
-  <!-- Texto del autor -->
-  <div class="py-1">
-    <p class="text-stone-700 leading-relaxed mb-1 font-light" style="font-family: 'Open Sans', sans-serif;">
-      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
-        Francisco Urrego
+    <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
+    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+      <a href="../../../contacto.html"
+         class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
+        Mensaje
       </a>
-    </p>
-  </div>
+    </div>
+
+    <div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
+      <div class="flex-shrink-0">
+        <img src="../../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego - Código Millonario"
+             class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+      </div>
+
+      <div class="py-1">
+        <p class="text-stone-700 leading-relaxed mb-1 font-light text-xs sm:text-base">
+          Por 
+          <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+            Francisco Urrego
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    
+<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
 </div>
-
-<div class="mt-4 mb-5 w-full md:w-[150%] h-px bg-slate-300"></div>
-
-
 
 <div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
 
-  <!-- Texto -->
-  <div class="text-stone-700 leading-relaxed mb-2 sm:mb-0 text-center sm:text-left font-light" style="font-family: 'Open Sans', sans-serif;">
-    <p>
-      Actualizado el 09 ene 2026 | 21:09 h | <span class="block md:inline"></span> ⏱ 6 min lectura
-    </p>
-  </div>
+<!-- Texto -->
+<div class="mb-2 sm:mb-0 text-center sm:text-center text-[9px] sm:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Actualizado el 09 ene 2026 | 21:09 h | ⏱ 5 min lectura
+  </p>
+</div>
 
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
 
-<p class="mb-2 sm:mb-0">
- Síguenos:
+<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+  Síguenos
 </p>
 
   <!-- Iconos -->
@@ -1174,12 +1167,40 @@ Cómo mejorar tus finanzas personales en 30 días con 5 hábitos simples
         <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
       </svg>
     </a>
+
+    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
+   class="social-icon">
+  <i class="fab fa-instagram"></i>
+</a>
   </div>
 
+</div>
 </div>
 
 <!-- Ajuste tamaño icono X -->
 <style>
+/* Simula content-column SOLO para este bloque */
+.custom-left-align {
+  width: 100%;
+}
+
+/* 💻 PC */
+@media (min-width: 768px) {
+  .custom-left-align {
+    max-width: 760px;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+}
+
+/* 📱 Móvil */
+@media (max-width: 767px) {
+  .custom-left-align {
+    padding-left: 10px;
+    padding-right: 18px;
+  }
+}
+
 .social-icon svg{
   width:14px !important;
   height:14px !important;
@@ -1190,7 +1211,8 @@ Cómo mejorar tus finanzas personales en 30 días con 5 hábitos simples
 
 <img src="../../../assets/png/como-hacer-crecer-tu-dinero.webp"
      alt=""
-     class="w-80 mx-auto mt-6 relative top-6 sm:w-[40rem] md:w-[50rem] sm:-left-6 sm:top-4 object-contain z-10">
+     class="w-80 mx-auto mt-20 relative top-6 sm:w-[40rem] md:w-[50rem] mx-auto sm:top-4 object-contain z-10">
+
 
 
 <style>
@@ -1411,13 +1433,34 @@ Cómo mejorar tus finanzas personales en 30 días con 5 hábitos simples
 
 
 
-<!-- INTRODUCCIÓN CON GANCHO EMOCIONAL -->
- <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-10 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo transformar tu economía en 30 días con hábitos sencillos</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-8">
+  <div class="layout-wrapper">
+    <article class="content-column max-w-4xl mx-auto px-4 md:px-0 text-left">
+
+  <div class="mt-10 mb-6">
+  <span class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+        style="font-family: 'Open Sans', sans-serif;">
+        Nota informativa
+      </span>
+
+  <div class="w-16 h-px bg-red-500"></div>
+</div>
+
+<!-- INTRODUCCIÓN -->
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-20 mt-5" style="font-family: Georgia, serif;">Cómo transformar tu economía en 30 días con hábitos sencillos</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-Hoy quiero exponer una forma real y actual de cómo ver el dinero y usarla a tu favor para incrementar tus posibilidades de éxito y mejorar tus finanzas en 
-<strong>Colombia.</strong> ¿Sientes que el dinero se te va y nunca logras avanzar? ¿Terminas cada mes preguntándote a dónde fue tu sueldo? No estás solo: hay muchas personas que se hacen estas y otras preguntas cuando ven que su dinero se esfuma y no saben a dónde fue.
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+H  
+  </span>
+oy quiero exponer una forma real y actual de cómo ver el dinero y usarla a tu favor para incrementar tus posibilidades de éxito y mejorar tus finanzas en 
+<strong>Colombia.</strong> 
+</p>
+
+<p>
+¿Sientes que el dinero se te va y nunca logras avanzar? ¿Terminas cada mes preguntándote a dónde fue tu sueldo? No estás solo: hay muchas personas que se hacen estas y otras preguntas cuando ven que su dinero se esfuma y no saben a dónde fue.
 </p>
 
 <p>
@@ -1435,9 +1478,12 @@ Una noticia favorable es que no necesitas meses para ver resultados:
 
 
 
-<!-- HÁBITO 1 -->
-  <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Hábito 1: Registra todos tus gastos para ahorrar dinero y mejorar tus finanzas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+
+<!-- TEXTO 1 -->
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Hábito 1: Registra todos tus gastos para ahorrar dinero y mejorar tus finanzas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
    Independientemente de cuáles sean tus gastos, el primer paso para mejorar tus finanzas no es ahorrar más si no quieres, sino conocer exactamente a dónde se va tu dinero. Este paso es más importante de lo que la mayoría cree. 
@@ -1465,10 +1511,8 @@ El éxito financiero empieza con un simple hábito: anotar todo.
 
 
 
-
-
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">¿Qué gastos registrar para mejorar tus finanzas personales?</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">¿Qué gastos registrar para mejorar tus finanzas personales?</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
   <li>Gastos grandes</li>
@@ -1504,9 +1548,9 @@ Beneficio:</strong> En
 
 
 
-<!-- HÁBITO 2 -->
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Hábito 2: Cómo ahorrar dinero separando tu ahorro apenas recibes tu sueldo</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Hábito 2: Cómo ahorrar dinero separando tu ahorro apenas recibes tu sueldo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Es muy común recibir el pago y emocionarse con tu dinero. Esto puede cegar a muchos, una emoción que los lleva a sentirse más confiados y tomar decisiones apresuradas acerca de su dinero. Un pago no te hará rico; sin embargo, lo que muchos no analizan en realidad no es el pago, sino la acción detrás de él. 
@@ -1520,7 +1564,6 @@ Y con eso me refiero a la acción del gasto: quien gasta dinero de su sueldo sin
 La clave para ahorrar no es la cantidad que entra, sino el comportamiento y la acción consciente de tomar decisiones para el éxito. Si acostumbras a tu cerebro y dopamina a gastar poco de forma recurrente, cuando tengas más dinero harás lo mismo y será un comportamiento sin fin. Por eso vemos a gente que gana mucho dinero y, aun así, no llega a fin de mes. Desde hoy aplica esta regla:
 </p>
 
-
 <p class="text-sm text-stone-800" style="font-family: 'Poppins', sans-serif; font-style: italic;">
 La libertad financiera empieza guardando antes de gastar.
 </p>
@@ -1528,12 +1571,8 @@ La libertad financiera empieza guardando antes de gastar.
 </div>
 
 
-
-
-
-
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Cómo ahorrar dinero cada vez que recibes ingresos</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Cómo ahorrar dinero cada vez que recibes ingresos</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
   <li>Separa un porcentaje 
@@ -1560,9 +1599,9 @@ La libertad financiera empieza guardando antes de gastar.
 
 
 
-
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Hábito 3: Evita las compras impulsivas con la regla de las 48 horas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Hábito 3: Evita las compras impulsivas con la regla de las 48 horas</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Una gran mayoría de personas vive esta situación de forma estereotipada, una acción que puede llegar a ser más destructiva que cualquier otra cuando involucra sentimientos. <strong>¿Quién no quiere comprarse buena ropa, zapatos u objetos?</strong> De hecho, todo el mundo quiere verse bien y vivir bien. El problema real surge cuando ya no es necesario hacerlo y, aun así, se continúa con esta práctica.
@@ -1583,11 +1622,8 @@ Comprar por impulso alivia el momento, pero entenderlo cambia tu futuro.</p>
 
 
 
-
-
-
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Espera 48 horas antes de comprar</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Espera 48 horas antes de comprar</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Durante ese tiempo, pregúntate:
@@ -1616,8 +1652,10 @@ herramientas financieras
 
 
 
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Hábito 4: Cómo usar la deuda inteligentemente y evitar problemas financieros</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<!-- PARRAFO -->
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Hábito 4: Cómo usar la deuda inteligentemente y evitar problemas financieros</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Siempre nos ha dicho, que la deuda es mala, porque roba tu libertad y te mantiene esclavo de alguien, y que es buena por que puedes usarla para invertir y sacar rentabilidad del dinero de alguien más, sin embargo, la deuda no es buena ni mala por sí sola; todo tiene sus matices y depende del contexto en si y para que se uso ese dinero prestado. 
@@ -1635,9 +1673,8 @@ Endeudarte sin pensar resuelve hoy, pero te cobra mañana.
 
 
 
-
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Errores al endeudarte que debes evitar para no perder dinero</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Errores al endeudarte que debes evitar para no perder dinero</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Durante ese momento, pregúntate:
@@ -1659,11 +1696,9 @@ Beneficio:</strong> Evitas deudas innecesarias y mantienes tu estabilidad financ
 
 
 
-
-
-<!-- HÁBITO 5 -->
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Hábito 5: Cómo administrar tu dinero y planificar tus finanzas personales</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Hábito 5: Cómo administrar tu dinero y planificar tus finanzas personales</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Algunas personas no ven la realidad de tomarse en serio su economía sino hasta que llegan a ser ancianos. Son del tipo de personas que dicen: “No sé cuándo moriré, mejor disfruto ahora”, y luego, vaya sorpresa, viven hasta los 
@@ -1678,11 +1713,8 @@ Estas personas suelen improvisar con el dinero. Mientras hay empleo, buen sueldo
 
 
 
-
-
-
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">La clave para organizar tus finanzas y salir del ciclo de gasto</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">La clave para organizar tus finanzas y salir del ciclo de gasto</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Es como elegir qué quieres ser o hacer en la vida y seguir ese camino. Tu dinero también debería tener un propósito, una idea clara a seguir, y no simplemente llegar, gastar, volver al trabajo y continuar con la rueda del hámster hasta envejecer. En lugar de reaccionar cada vez que surge un gasto, establece reglas simples que guíen tus decisiones. 
@@ -1706,11 +1738,9 @@ Reduces errores, tomas mejores decisiones y avanzas con mayor seguridad sin sent
 
 
 
-
-
-<!-- CONCLUSIÓN -->
-  <h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Toma el control de tu dinero con mejores hábitos financieros</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Toma el control de tu dinero con mejores hábitos financieros</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Al final del día, la última decisión siempre la toma el lector sobre qué hacer y qué no hacer con su dinero. Nadie puede obligarte a cambiar tus hábitos financieros, pero sí puedes elegir ser más consciente de cada decisión que tomas. Estos cinco hábitos no buscan limitarte, sino darte claridad y control para que tu dinero deje de ser una fuente de estrés y empiece a trabajar a tu favor.
@@ -1737,8 +1767,8 @@ Reduces errores, tomas mejores decisiones y avanzas con mayor seguridad sin sent
 
 
 
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">El paso final para mejorar tus finanzas personales en 30 días</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">El paso final para mejorar tus finanzas personales en 30 días</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 No necesitas más dinero, necesitas mejores hábitos. Empieza hoy y nota la diferencia en solo un mes.
@@ -1755,43 +1785,34 @@ herramientas
 
 
 
+
+
   <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
-
-
 
   <!-- Logos compartir -->
 <div class="share-here"></div>
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
-
-
-<!-- Sección recomendada -->
+  <!-- Sección recomendada -->
 <div class="mt-5 mb-10">
+<div class="w-full h-px bg-slate-300"></div>
 
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-       <strong class="font-semibold text-slate-800">
-      Código Millonario</strong> recomienda:
-    </p>
-  </blockquote>
+<div class="mt-6 mb-4 text-center">
+  <p class="font-semibold text-slate-800"
+     style="font-family: 'Poppins', sans-serif;">
+    Código Millonario
+  </p>
+  <p class="text-[11px] text-slate-500 leading-relaxed"
+     style="font-family: 'Poppins', sans-serif;">
+    Medio de análisis sobre finanzas y crecimiento económico.
+  </p>
 </div>
 
-
-    </article>
-  </div>
 </main>
 
  
-
-
-
-
-
 
 
 

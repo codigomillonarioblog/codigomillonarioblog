@@ -961,27 +961,23 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-
-
+<div style="height: 250px;"></div>
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
-
-<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
-     Educación Financiera
-</div>
-
 <!-- Título -->
 <div class="blog-main-title relative">
+<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
 
-<span class="block mt-1 w-full md:w-[89%] h-px bg-slate-300"></span>
-<h1 class="w-full md:w-[89%]">
+<div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
+     style="font-family: 'Open Sans', sans-serif;">
+Educación Financiera
+</div>
+
+<h1 class="w-full md:w-[90%]">
 Cuánto dinero deberías tener ahorrado a cada edad (y por qué la mayoría nunca lo consigue)
 </h1>
-
 </div>
 
 <div class="flex flex-col justify-start gap-5 px-4 md:px-0 ml-0 md:ml-6 text-xl md:text-2xl font-light"
@@ -994,7 +990,7 @@ a paso cuánto deberías haber ahorrado a cada edad y cómo ponerte al día sin 
 
 <style>
 .blog-main-title {
-  font-family: 'Poppins', sans-serif;
+font-family: Georgia, serif;
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.2;
@@ -1004,8 +1000,8 @@ a paso cuánto deberías haber ahorrado a cada edad y cómo ponerte al día sin 
   /* 🔥 Separación diferente por lado */
   margin-top: 30px;
   margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+  margin-left: 20px;
+  margin-right: 120px;
 }
 
 /* Responsive */
@@ -1024,7 +1020,6 @@ a paso cuánto deberías haber ahorrado a cada edad y cómo ponerte al día sin 
   }
 }
 </style>
-
 
 <style>
 .layout-wrapper {
@@ -1058,7 +1053,6 @@ a paso cuánto deberías haber ahorrado a cada edad y cómo ponerte al día sin 
 </style>
 
 <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
-
 <style>
 .social-container {
   font-family: Arial, sans-serif;
@@ -1100,50 +1094,58 @@ a paso cuánto deberías haber ahorrado a cada edad y cómo ponerte al día sin 
 
 
 
- <!-- INTRODUCCIÓN GENERAL -->
-<main class="py-5">
-  <div class="layout-wrapper">
-    <article class="content-column">
 
-<div class="mt-5 mb-4 w-full md:w-[150%] h-px bg-slate-300"></div>
+<div class="custom-left-align relative">
 
-<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
-<div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
-  <!-- Imagen del autor -->
-  <div class="flex-shrink-0">
-    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
-         alt="Francisco Urrego - Código Millonario"
-         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
-  </div>
+  <div class="relative">
+    <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
 
-  <!-- Texto del autor -->
-  <div class="py-1">
-    <p class="text-stone-700 leading-relaxed mb-1 font-light" style="font-family: 'Open Sans', sans-serif;">
-      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
-        Francisco Urrego
+    <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
+    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+      <a href="../../../contacto.html"
+         class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
+        Mensaje
       </a>
-    </p>
-  </div>
+    </div>
+
+    <div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
+      <div class="flex-shrink-0">
+        <img src="../../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego - Código Millonario"
+             class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+      </div>
+
+      <div class="py-1">
+        <p class="text-stone-700 leading-relaxed mb-1 font-light text-xs sm:text-base">
+          Por 
+          <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+            Francisco Urrego
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    
+<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
 </div>
-
-<div class="mt-4 mb-5 w-full md:w-[150%] h-px bg-slate-300"></div>
-
-
 
 <div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
 
-  <!-- Texto -->
-  <div class="text-stone-700 leading-relaxed mb-2 sm:mb-0 text-center sm:text-left font-light" style="font-family: 'Open Sans', sans-serif;">
-    <p>
-      Escrito el 14 mar 2026  | 16:13 h | <span class="block md:inline"></span> ⏱ 5  min lectura
-    </p>
-  </div>
+<!-- Texto -->
+<div class="mb-2 sm:mb-0 text-center sm:text-center text-[9px] sm:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Escrito el 14 mar 2026 | 16:13 h | ⏱ 5 min lectura
+  </p>
+</div>
 
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
 
-<p class="mb-2 sm:mb-0">
- Síguenos:
+<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+  Síguenos
 </p>
 
   <!-- Iconos -->
@@ -1168,12 +1170,40 @@ a paso cuánto deberías haber ahorrado a cada edad y cómo ponerte al día sin 
         <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
       </svg>
     </a>
+
+    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
+   class="social-icon">
+  <i class="fab fa-instagram"></i>
+</a>
   </div>
 
+</div>
 </div>
 
 <!-- Ajuste tamaño icono X -->
 <style>
+/* Simula content-column SOLO para este bloque */
+.custom-left-align {
+  width: 100%;
+}
+
+/* 💻 PC */
+@media (min-width: 768px) {
+  .custom-left-align {
+    max-width: 760px;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+}
+
+/* 📱 Móvil */
+@media (max-width: 767px) {
+  .custom-left-align {
+    padding-left: 10px;
+    padding-right: 18px;
+  }
+}
+
 .social-icon svg{
   width:14px !important;
   height:14px !important;
@@ -1181,10 +1211,10 @@ a paso cuánto deberías haber ahorrado a cada edad y cómo ponerte al día sin 
 </style>
 
 
-   
+
 <img src="../../../assets/png/cuanto-dinero-ahorrado-segun-edad.webp"
      alt=""
-     class="w-80 mx-auto mt-6 relative top-6 sm:w-[40rem] md:w-[50rem] sm:-left-6 sm:top-4 object-contain z-10">
+     class="w-80 mx-auto mt-20 relative top-6 sm:w-[40rem] md:w-[50rem] mx-auto sm:top-4 object-contain z-10">
 
 
 
@@ -1410,16 +1440,31 @@ a paso cuánto deberías haber ahorrado a cada edad y cómo ponerte al día sin 
 
 
 
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-8">
+  <div class="layout-wrapper">
+    <article class="content-column max-w-4xl mx-auto px-4 md:px-0 text-left">
+
+  <div class="mt-10 mb-6">
+  <span class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+        style="font-family: 'Open Sans', sans-serif;">
+Nota informativa
+  </span>
+
+  <div class="w-16 h-px bg-red-500"></div>
+</div>
+
 
 
 <!-- INTRODUCCIÓN -->
-<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 class="text-3xl font-semibold text-stone-900 mb-20 mt-5" style="font-family: Georgia, serif;">¿Cuánto dinero debería tener ahorrado una persona promedio?</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-Hay una pregunta que muchas personas evitan hacerse hasta que es demasiado tarde:
-</p>
-
-<p>
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+H  
+  </span>
+ay una pregunta que muchas personas evitan hacerse hasta que es demasiado tarde:
 ¿Cuánto dinero debería tener ahorrado a mi edad?
 </p>
 
@@ -1458,7 +1503,7 @@ Inclusive, tampoco es posible precisar la edad exacta.
 
 
 
-<div class="text-stone-700 leading-relaxed mt-20 mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<div class="text-stone-700 leading-relaxed mb-4 mt-40 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Además, sumemos a esto el propósito individual o la cantidad de ingresos. Todo esto puede influir en una gran variante relacionada con este caso, como advirtimos anteriormente.
@@ -1485,9 +1530,9 @@ donde ahorrar no debería sentirse como un castigo. Debería sentirse como un pe
 
 
 
-
-<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuánto deberías tener ahorrado a los 20 años</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cuánto deberías tener ahorrado a los 20 años</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Primer paso: <strong>Edad inicial no como regla preestablecida.</strong>
@@ -1522,8 +1567,9 @@ Porque es en esa etapa de la vida donde muchas personas comienzan a tener respon
 
 
 
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Aprendiendo a manejar tu dinero en los primeros años laborales</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Aprendiendo a manejar tu dinero en los primeros años laborales</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Los 20 suelen ser años de <strong>aprendizaje financiero</strong>. Muchas personas están empezando su primer trabajo, pagando estudios o intentando estabilizarse económicamente.
@@ -1551,8 +1597,11 @@ Si aún no has comenzado a ahorrar a esta edad, tampoco es tarde. Lo importante 
 
 
 
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Cómo interpretar esta tabla</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-40 mb-10" style="font-family: Georgia, serif;">Cómo interpretar esta tabla</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Los cálculos de ahorro mostrados a continuación en la tabla son estimaciones teóricas. Se asume que todo el dinero sobrante se ahorra cada mes, sin considerar gastos imprevistos, inflación, deudas u 
@@ -1633,8 +1682,10 @@ método real, de forma práctica y diseñada de forma profesional para guiarte s
 
 
 
-<div class=" mt-20" style="font-family: 'Open Sans', sans-serif;">
-  <p>
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+   <p>
     Esta tabla muestra <strong>cuánto tiempo tomaría ahorrar un colchón financiero equivalente a 3 o 6 meses de gastos</strong> según tu ingreso y gastos actuales. Los cálculos se basan en el dinero que realmente te sobra cada mes.
   </p>
 
@@ -1662,9 +1713,10 @@ método real, de forma práctica y diseñada de forma profesional para guiarte s
 
 
 
-<!-- H2: Conoce tu verdadero margen de ahorro -->
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuánto deberías tener ahorrado a los 30 años</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<!-- PARRAFO -->
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cuánto deberías tener ahorrado a los 30 años</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Segundo paso: <strong>En esta edad aproximada no deberías angustiarte, la mayoría inicia aquí.</strong>
@@ -1695,9 +1747,9 @@ Por ejemplo, si ganas <strong>20 millones al año</strong>, la meta aproximada s
 
 
 
-
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">¿Por qué muchos no llegan a esa cifra?</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">¿Por qué muchos no llegan a esa cifra?</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Es bastante común que la gente no tenga ese nivel de ahorro a los 30, por razones como:
@@ -1717,10 +1769,9 @@ Es bastante común que la gente no tenga ese nivel de ahorro a los 30, por razon
 
 
 
-
-
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Lo más importante a tener en cuenta</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Lo más importante a tener en cuenta</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 La clave no es compararte con otros, sino:
@@ -1751,8 +1802,11 @@ a partir de ahora.
 
 
 
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Diferencias entre ahorrar en los 20 y en los 30 que nadie nota</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+<!-- PARRAFO -->
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Diferencias entre ahorrar en los 20 y en los 30 que nadie nota</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Aunque ahorrar siempre es importante, la forma en que funciona el ahorro cambia mucho entre los 20 y los 30 años. No solo influyen los ingresos, sino también el tiempo, los hábitos financieros y las responsabilidades que suelen aparecer con el paso de los años.
@@ -1769,7 +1823,8 @@ Durante esta etapa, el objetivo principal no suele ser acumular grandes cantidad
 
 
 
-<div class="text-stone-700 leading-relaxed mt-20 mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 No obstante, en los 30, muchas personas comienzan a tener <strong>mayor estabilidad laboral y mejores ingresos</strong>. Esto permite ahorrar cantidades más grandes de dinero en comparación con los primeros años de vida laboral. los 30 pueden
@@ -1848,9 +1903,12 @@ ya sea por un mejor empleo o estabilidad constante de ingresos.
 
 
 
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo calcular cuántos meses puedes sobrevivir con tus ahorros sin importar la edad</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
+
+
+<!-- PARRAFO -->
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cómo calcular cuántos meses puedes sobrevivir con tus ahorros sin importar la edad</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 La anterior tabla muestra cómo pueden cambiar los resultados del ahorro dependiendo de los ingresos y los gastos mensuales. 
@@ -1891,8 +1949,9 @@ En otras palabras, se divide todo el dinero que una persona tiene ahorrado entre
 
 
 
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Ejemplo práctico</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Ejemplo práctico</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Si una persona tiene <strong>$1,500 ahorrados</strong> y sus gastos mensuales son de <strong>$500</strong>, el cálculo sería el siguiente:
@@ -1925,8 +1984,12 @@ En este caso también podría cubrir alrededor de tres meses de gastos.
 
 
 
-<h3 class="text-3xl font-semibold text-stone-900 mt-20 mb-4" style="font-family: 'Montserrat', sans-serif;">Cómo calcularlo paso a paso</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Cómo calcularlo paso a paso</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Aquí puedes realizar un 
@@ -1997,9 +2060,7 @@ Por esta razón, muchos expertos en finanzas personales recomiendan construir un
 
 
 
-
-
-<div class="text-stone-700 leading-relaxed mb-4 mt-10" style="font-family: 'Open Sans', sans-serif;"> 
+<div class="text-stone-700 leading-relaxed mb-4 mt-20" style="font-family: 'Open Sans', sans-serif;"> 
 Te puede interesar:
 </div>
 
@@ -2157,8 +2218,10 @@ Te puede interesar:
 
 
 
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuánto deberías tener ahorrado a los 40 años</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<!-- PARRAFO -->
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cuánto deberías tener ahorrado a los 40 años</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <h3>Tercer paso: A los 40 años no es el fin, sin embargo se puede sacar mucha más ventaja que en las anteriores edades.</h3>
 
@@ -2206,7 +2269,8 @@ En otras palabras, <strong>ya no comienzas desde cero, aunque lo hagas</strong>.
 
 
 
-<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-40 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Por eso, lejos de ser una desventaja, es la edad de oro y esta etapa puede convertirse en <strong>uno de los momentos más poderosos para construir riqueza</strong>, siempre que combines la experiencia acumulada con una estrategia financiera clara.
@@ -2239,9 +2303,9 @@ para prevenir más retrasos y pérdida de tiempo optimizando tus recursos.
 
 
 
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuánto deberías tener ahorrado a los 50 años</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
-
+<!-- PARRAFO -->
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cuánto deberías tener ahorrado a los 50 años</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <h3>Cuarto paso: ¿En esta edad ya no hay nada que hacer?</h3>
 
@@ -2290,7 +2354,11 @@ Es una reflexión normal cuando pasan los años. Sin embargo, también es una et
 </div>
 
 
-<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 A esta edad muchas personas ya cuentan con algo que antes no tenían: <strong>criterio para tomar mejores decisiones</strong>, una visión más clara de los riesgos y mayor capacidad para reconocer oportunidades reales.
@@ -2325,8 +2393,10 @@ para construir riqueza?
 
 
 
-<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Por qué muchas personas no logran ahorrar dinero</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<!-- PARRAFO -->
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Por qué muchas personas no logran ahorrar dinero</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Aunque las cifras anteriores pueden servir como referencia, la realidad es que muchas personas no tienen casi ningún ahorro en 
@@ -2390,7 +2460,7 @@ La combinación de estos factores hace que muchas personas lleguen a los 30 o 40
 
 
 
-<div class="text-stone-700 leading-relaxed mb-4 mt-10" style="font-family: 'Open Sans', sans-serif;"> 
+<div class="text-stone-700 leading-relaxed mb-4 mt-20" style="font-family: 'Open Sans', sans-serif;"> 
 Te puede interesar:
 </div>
 
@@ -2549,8 +2619,9 @@ Te puede interesar:
 
 
 
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo empezar a ahorrar dinero aunque ganes poco</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cómo empezar a ahorrar dinero aunque ganes poco</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Una de las excusas más comunes para no ahorrar es pensar que primero hay que ganar mucho dinero.
@@ -2589,16 +2660,16 @@ Hazlo apenas recibas tu salario. El ahorro no debería ser una opción, sino una
 Incluso cantidades pequeñas, si se mantienen durante años, pueden crecer mucho más de lo que parece.
 </p>
 
-<p>
-
-</p>
-
 </div>
 
 
 
-<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Lo más importante no es la cifra, sino el hábito</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Lo más importante no es la cifra, sino el hábito</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 <strong>¿Por qué esto es más importante que cualquier cosa?</strong>
@@ -2634,8 +2705,11 @@ o puedes descargar la guía gratuita que esta arriba en el menu principal. Encon
 
 
 
-<h2 style="font-family: 'Open Sans', sans-serif;">¿Cuánto dinero deberías tener ahorrado según tu edad?</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+<!-- PARRAFO -->
+<h2 class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">¿Cuánto dinero deberías tener ahorrado según tu edad?</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 No existe una cifra exacta que funcione para todas las personas. Sin embargo, estas referencias pueden ayudarte a tener una idea general de cómo evoluciona el ahorro a lo largo de la vida y qué metas financieras podrías plantearte según tu edad.
@@ -2644,31 +2718,28 @@ No existe una cifra exacta que funcione para todas las personas. Sin embargo, es
 
 
 
+
   <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
-
-
 
   <!-- Logos compartir -->
 <div class="share-here"></div>
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
-
-
-
   <!-- Sección recomendada -->
 <div class="mt-5 mb-10">
+<div class="w-full h-px bg-slate-300"></div>
 
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-       <strong class="font-semibold text-slate-800">
-      Código Millonario</strong> recomienda:
-    </p>
-  </blockquote>
+<div class="mt-6 mb-4 text-center">
+  <p class="font-semibold text-slate-800"
+     style="font-family: 'Poppins', sans-serif;">
+    Código Millonario
+  </p>
+  <p class="text-[11px] text-slate-500 leading-relaxed"
+     style="font-family: 'Poppins', sans-serif;">
+    Medio de análisis sobre finanzas y crecimiento económico.
+  </p>
 </div>
 
     </main>
