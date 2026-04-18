@@ -960,29 +960,23 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-
-
-
-
+<div style="height: 250px;"></div>
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
-
-<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
-     Educación Financiera
-</div>
-
 <!-- Título -->
 <div class="blog-main-title relative">
+<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
 
-<span class="block mt-1 w-full md:w-[89%] h-px bg-slate-300"></span>
-<h1 class="w-full md:w-[89%]">
+<div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
+     style="font-family: 'Open Sans', sans-serif;">
+Educación Financiera
+</div>
+
+<h1 class="w-full md:w-[90%]">
 ¿Te sientes estancado en tu trabajo? No renuncies aún: así puedes progresar sin dejarlo
 </h1>
-
 </div>
 
 <div class="flex flex-col justify-start gap-5 px-4 md:px-0 ml-0 md:ml-6 text-xl md:text-2xl font-light"
@@ -995,7 +989,7 @@ La diferencia no está en trabajar más horas, sino en usar mejor tu tiempo y en
 
 <style>
 .blog-main-title {
-  font-family: 'Poppins', sans-serif;
+font-family: Georgia, serif;
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.2;
@@ -1005,8 +999,8 @@ La diferencia no está en trabajar más horas, sino en usar mejor tu tiempo y en
   /* 🔥 Separación diferente por lado */
   margin-top: 30px;
   margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+  margin-left: 20px;
+  margin-right: 120px;
 }
 
 /* Responsive */
@@ -1025,7 +1019,6 @@ La diferencia no está en trabajar más horas, sino en usar mejor tu tiempo y en
   }
 }
 </style>
-
 
 <style>
 .layout-wrapper {
@@ -1059,7 +1052,6 @@ La diferencia no está en trabajar más horas, sino en usar mejor tu tiempo y en
 </style>
 
 <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
-
 <style>
 .social-container {
   font-family: Arial, sans-serif;
@@ -1101,51 +1093,58 @@ La diferencia no está en trabajar más horas, sino en usar mejor tu tiempo y en
 
 
 
- <!-- INTRODUCCIÓN GENERAL -->
-<main class="py-5">
-  <div class="layout-wrapper">
-    <article class="content-column">
 
+<div class="custom-left-align relative">
 
-<div class="mt-5 mb-4 w-full md:w-[150%] h-px bg-slate-300"></div>
+  <div class="relative">
+    <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
 
-<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
-<div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
-  <!-- Imagen del autor -->
-  <div class="flex-shrink-0">
-    <img src="../../../assets/img/fundador-codigo-millonario.webp" 
-         alt="Francisco Urrego - Código Millonario"
-         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
-  </div>
-
-  <!-- Texto del autor -->
-  <div class="py-1">
-    <p class="text-stone-700 leading-relaxed mb-1 font-light" style="font-family: 'Open Sans', sans-serif;">
-      Por <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
-        Francisco Urrego
+    <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
+    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+      <a href="../../../contacto.html"
+         class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
+        Mensaje
       </a>
-    </p>
-  </div>
+    </div>
+
+    <div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
+      <div class="flex-shrink-0">
+        <img src="../../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego - Código Millonario"
+             class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+      </div>
+
+      <div class="py-1">
+        <p class="text-stone-700 leading-relaxed mb-1 font-light text-xs sm:text-base">
+          Por 
+          <a href="../../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+            Francisco Urrego
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    
+<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
 </div>
-
-<div class="mt-4 mb-5 w-full md:w-[150%] h-px bg-slate-300"></div>
-
-
 
 <div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
 
-  <!-- Texto -->
-  <div class="text-stone-700 leading-relaxed mb-2 sm:mb-0 text-center sm:text-left font-light" style="font-family: 'Open Sans', sans-serif;">
-    <p>
-    Actualizado el 26 Dic 2025 | 19:12 h | <span class="block md:inline"></span> ⏱  min lectura
-    </p>
-  </div>
+<!-- Texto -->
+<div class="mb-2 sm:mb-0 text-center sm:text-center text-[9px] sm:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Actualizado el 26 Dic 2025 | 19:12 h | 9 ⏱ min lectura
+  </p>
+</div>
 
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
 
-<p class="mb-2 sm:mb-0">
- Síguenos:
+<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+  Síguenos
 </p>
 
   <!-- Iconos -->
@@ -1170,12 +1169,40 @@ La diferencia no está en trabajar más horas, sino en usar mejor tu tiempo y en
         <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
       </svg>
     </a>
+
+    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
+   class="social-icon">
+  <i class="fab fa-instagram"></i>
+</a>
   </div>
 
+</div>
 </div>
 
 <!-- Ajuste tamaño icono X -->
 <style>
+/* Simula content-column SOLO para este bloque */
+.custom-left-align {
+  width: 100%;
+}
+
+/* 💻 PC */
+@media (min-width: 768px) {
+  .custom-left-align {
+    max-width: 760px;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+}
+
+/* 📱 Móvil */
+@media (max-width: 767px) {
+  .custom-left-align {
+    padding-left: 10px;
+    padding-right: 18px;
+  }
+}
+
 .social-icon svg{
   width:14px !important;
   height:14px !important;
@@ -1186,7 +1213,9 @@ La diferencia no está en trabajar más horas, sino en usar mejor tu tiempo y en
 
 <img src="../../../assets/png/quiero-renunciar-a-mi-trabajo-que-hago.webp"
      alt=""
-     class="w-80 mx-auto mt-6 relative top-6 sm:w-[40rem] md:w-[50rem] sm:-left-6 sm:top-4 object-contain z-10">
+     class="w-80 mx-auto mt-20 relative top-6 sm:w-[40rem] md:w-[50rem] mx-auto sm:top-4 object-contain z-10">
+
+
 
 
 
@@ -1410,43 +1439,80 @@ La diferencia no está en trabajar más horas, sino en usar mejor tu tiempo y en
 
 
 
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-8">
+  <div class="layout-wrapper">
+    <article class="content-column max-w-4xl mx-auto px-4 md:px-0 text-left">
 
+  <div class="mt-10 mb-6">
+  <span class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+        style="font-family: 'Open Sans', sans-serif;">
+Nota informativa
+  </span>
+
+  <div class="w-16 h-px bg-red-500"></div>
+</div>
 
 
 <!-- INTRODUCCIÓN -->
- <h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Como Crecer sin Renunciar a tu Trabajo Actual</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-20 mt-5" style="font-family: Georgia, serif;">Como Crecer sin Renunciar a tu Trabajo Actual</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
-<p>
-Muchos profesionales sienten la urgencia de crecer, pero temen perder la seguridad de su empleo actual, ya sea porque dependen de un ingreso para sobrevivir, alguna u otra necesidad que los ha llevado a enfocarse en una labor de forma rápida, consciente o inconsciente, o simplemente porque la moda es ir a trabajar como todos lo hacen. 
+  <p>
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+  M
+  </span>
+uchos profesionales sienten la urgencia de crecer, pero temen perder la seguridad de su empleo actual, ya sea porque dependen de un ingreso para sobrevivir, alguna u otra necesidad que los ha llevado a enfocarse en una labor de forma rápida, consciente o inconsciente, o simplemente porque la moda es ir a trabajar como todos lo hacen. 
 </p>
 
 <p>
 No obstante, la verdad es que puedes construir tu carrera paso a paso mientras mantienes tu estabilidad laboral y económica. Si te mantienes en la ruta adecuada, atrapando cada contacto que puedes usar para multiplicar tus posibilidades y usar cada habilidad que se te presenta, estoy casi seguro de que es un escalón que te sacará del camino donde no quieres estar. 
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Construyendo tu carrera sin arriesgar tu estabilidad</h3>
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-40 mb-10" style="font-family: Georgia, serif;">Construyendo tu carrera sin arriesgar tu estabilidad</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Debes acercarte a un futuro donde tu carrera es el centro de tu éxito profesional, y eso, en el caso de quienes siguieron la vida laboral, para quienes deciden ser emprendedores también pueden aplicar conceptos y principios aqui integrados que les ayudarán a incrementar sus posibilidades con evidencias tangibles de tu progreso y capacidad para liderar tu propio camino, tu propio enfoque y comandar tu historia.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Prioriza con claridad para acciones efectivas</h3>
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Prioriza con claridad para acciones efectivas</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Antes de invertir tiempo y energía, necesitas claridad absoluta sobre lo que quieres construir. No solo basta con saber por qué y hacia dónde vas. Esto te permite priorizar acciones con impacto real y evitar la trampa de dispersarte en actividades que no suman y te mantienen pobre de mente y pensamientos. Por ejemplo, alguien que quiere convertirse en médico sabe que debe asistir a una escuela de medicina o universidad y asistir todos los días hasta graduarse. 
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Convicción y dirección en caminos inciertos</h3>
-
-<p>
-Pero en otros casos no hay rutas trazadas de caminos a seguir; esto puede ponerte en una situación donde puedes correr riesgos de abandonar tus sueños. Avanzar en un trabajo puede ser muy simple, sobre todo cuando sabes que solo depende de ti, de nadie más. Nadie puede ir a un lugar que no sabe dónde queda; de igual modo pasa con todas las cosas que crees inalcanzables: tener la convicción de lo que buscas te puede acercar más de lo que crees.
-</p>
 </div>
 
 
 
-<div style="overflow-x:auto; margin-top: 20px;">
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Convicción y dirección en caminos inciertos</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+  <p>
+Pero en otros casos no hay rutas trazadas de caminos a seguir; esto puede ponerte en una situación donde puedes correr riesgos de abandonar tus sueños. Avanzar en un trabajo puede ser muy simple, sobre todo cuando sabes que solo depende de ti, de nadie más. Nadie puede ir a un lugar que no sabe dónde queda; de igual modo pasa con todas las cosas que crees inalcanzables: tener la convicción de lo que buscas te puede acercar más de lo que crees.
+</p>
+
+</div>
+
+
+
+<div style="overflow-x:auto; margin-top: 40px;">
   <table style="width: 100%; border-collapse: collapse; font-family: 'Poppins', sans-serif;">
     <thead>
       <tr style="background-color: #f2f2f2;">
@@ -1490,18 +1556,29 @@ Pero en otros casos no hay rutas trazadas de caminos a seguir; esto puede ponert
 
 
 
+<!-- PARRAFO -->
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
-<!-- CONSTRUYE UNA BASE SÓLIDA -->
- <h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Fortalecer tu base Profesional: el Primer paso para Avanzar en tu Carrera </h2>
- <div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Reconociendo tu posición actual</h3>
 
-
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Reconociendo tu posición actual</h3>
 <p>
-  Para quienes tienen un buen empleo el día de hoy, déjenme decirles que están en el punto donde la mayoría desearía estar. Independientemente de cuál sea tu ocupación, muchos desearían simplemente tener un empleo, una forma de estabilidad que se puede dar de forma rápida, ocasional o profesional. Para quienes no tienen empleo o aún están en busca de trabajo, no son ustedes los del problema y mucho menos su profesión, ya que el mundo laboral está diseñado de manera en la que no todos pueden ocupar el mismo lugar a la vez, no todos pueden hacer lo mismo, no todos ganarán los mismos salarios. 
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+P  
+  </span>
+ara quienes tienen un buen empleo el día de hoy, déjenme decirles que están en el punto donde la mayoría desearía estar. Independientemente de cuál sea tu ocupación, muchos desearían simplemente tener un empleo, una forma de estabilidad que se puede dar de forma rápida, ocasional o profesional. Para quienes no tienen empleo o aún están en busca de trabajo, no son ustedes los del problema y mucho menos su profesión, ya que el mundo laboral está diseñado de manera en la que no todos pueden ocupar el mismo lugar a la vez, no todos pueden hacer lo mismo, no todos ganarán los mismos salarios. 
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Diferencias entre empleo y emprendimiento</h3>
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Diferencias entre empleo y emprendimiento</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
 <p>
 Deben tener en cuenta que en la vida laboral no es la misma que la del emprendimiento: en la laboral estás compitiendo con posiblemente millones de personas; en la del emprendimiento, el número es mucho menor, pero hay gente con mucho más talento, y talento no significa éxito garantizado, así como la falta de él tampoco significa resultados positivos.    ¿Has llegado al punto donde no sabes cuál es tu nivel de conocimientos financieros? Si quieres saber qué tan bien estás en cuanto a saberes generales en finanzas, puedes hacer el 
 
@@ -1511,17 +1588,40 @@ Deben tener en cuenta que en la vida laboral no es la misma que la del emprendim
  y medir tu nivel sin problemas ni complicaciones.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Aprovechando tu empleo como plataforma de crecimiento</h3>
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Aprovechando tu empleo como plataforma de crecimiento</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
 <p>
   El trabajo que tienes hoy no es un simple lugar donde cumples horarios: es el espacio donde construyes tu disciplina, tu reputación y tu criterio profesional. Cuando haces las cosas bien, aun en tareas que parecen rutinarias, estás creando una base que te servirá para todo lo que viene después. Tomar responsabilidades que otros evitan, proponer soluciones cuando nadie las pide y aprender de cada proyecto te permite crecer sin anunciarlo. Y con el tiempo, esa constancia queda registrada en resultados reales: procesos que mejoraste, problemas que resolviste y personas que confían en ti. Esa evidencia silenciosa es la que te da peso cuando quieras avanzar, cambiar de rumbo o emprender un camino propio.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">El poder de la rutina en el crecimiento profesional</h3>
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">El poder de la rutina en el crecimiento profesional</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
 <p>
 La mayoría ve lo rutinario como algo aburrido, de lo cual no ven qué beneficios extraer de una vida con ese sentido; otros entran en la monotonía de forma inconsciente, pero lo que en realidad muchos pasan desapercibido es que la vida rutinaria, en la vida laboral y profesional, es la llave maestra del crecimiento lento, pero seguro y constante. Puedes mirarlo de esta manera: cuando se empieza a ensamblar un automóvil se crea ese patrón de monotonía, un atleta que corre los cien metros planos adopta este patrón como algo natural, debe correr cierta cantidad de metros, esa es su habilidad; un piloto de avión debe repetir una y otra vez miles de aterrizajes y despegues. Aquí se repite nuevamente la intención de la rutina.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">El verdadero avance surge de repetir lo que funciona</h3>
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">El verdadero avance surge de repetir lo que funciona</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Todo lo conocido mantiene este patrón con el pasar del tiempo y, cuando más se hace ese mismo ejercicio, este patrón monótono no es raro: es la punta de la pirámide, la fortaleza del conocimiento, la fortaleza de la experiencia y es el santo grial que impulsa cualquier carrera profesional, laboral, emprendedora, artística, deportiva, etc. Quien se aburre y abandona se estará desviando hacia caminos desconocidos. El trabajo duro llama rutina, la rutina llama aprendizajes, experiencias, conocimientos; después llegan las oportunidades y, por consecuencia, los resultados.
@@ -1530,47 +1630,72 @@ Todo lo conocido mantiene este patrón con el pasar del tiempo y, cuando más se
 <p>
 Ahora bien, toda esta estructura no promete grandes resultados solo porque sí, no todo aquel que ha entrado en monotonía significa que será exitoso. Si bien es un principio fundamental, es necesario validar en qué campo vale la experiencia, el conocimiento aplicado y tu tiempo como origen de todo esto.
 </p>
+
 </div>
 
 
 
 
-<!-- CREA FUENTES DE INGRESO PROPIAS -->
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Cómo Generar Ingresos con tus Ideas y Habilidades Profesionales</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cómo Generar Ingresos con tus Ideas y Habilidades Profesionales</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Convertir una idea en una fuente de ingreso es uno de los movimientos más inteligentes que puedes hacer hoy. No se trata solo de “crear algo”, sino de entender que cada proyecto, por pequeño que parezca, puede funcionar como una pieza de tu patrimonio. El tiempo es la base de todo imperio; quien no se mantiene o perdura en el lapso de tiempo necesario o hasta ver resultados, desaparecerá como polvo en el aire. No obstante, no se genera dinero solo con una gran idea: una buena idea es como poner la pluma en la balanza de posibilidades, donde del otro lado pesa más el esfuerzo, constancia y disciplina.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">La importancia de la constancia y el esfuerzo</h3>
+</div>
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">La importancia de la constancia y el esfuerzo</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Muchas personas piensan: “oh, ya tengo un empleo maravilloso, no necesito más dinero”, o al menos no me preocuparé por él, ya que mi empleo con salario mínimo me sostendrá, y eso, claro, si me mantengo en él. Señores… se puede generar ingresos tengas empleo o no. La idea de tener un empleo y ya estar satisfechos puede funcionar, hasta cierto punto, sí; hasta el punto donde estés contra la espada y la pared, sin salidas.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Reconociendo tu vulnerabilidad como ventaja competitiva</h3>
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Reconociendo tu vulnerabilidad como ventaja competitiva</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Este bloque decidí integrarlo con el propósito de que el lector viera su vulnerabilidad, no como debilidad, sino como desventaja competitiva. O piénsalo de esta manera: si mañana no tuvieras tu empleo, ¿qué harías? Es probable que muchos corran a buscar otro empleo, y ¿qué harás después? Buscar otro, claro. Se vuelve una carrera interminable de avance más retroceso: das un paso, retrocedes dos, ya que estás omitiendo una regla fundamental tocada en un párrafo anterior que habla de la monotonía, constancia y persistencia en el mismo camino del titulo <strong class=" text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;"> Fortalece tu base profesional.</strong> 
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Adoptar la mentalidad de creador abre la puerta a la libertad financiera</h3>
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Adoptar la mentalidad de creador abre la puerta a la libertad financiera</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Este punto es clave: busca la forma de hacer dinero en tu empleo o fuera de él. Quiero dejar un mensaje positivo para las mentes que han llegado hasta aquí, y es este: no hace falta conformarse con una sola situación. Un empleo, para muchos, puede ser la catapulta que dispare sus habilidades hacia otro nivel; o, en el caso de otros, puede ser la llama que se apaga y entra en el sistema de zona de confort automáticamente. Las ideas para generar ingresos están vacías, no funcionan, no generan dinero por sí solas. Ahora, si tomas esa idea y, con algo de conocimiento, le das forma, le das vida, ya estaríamos hablando en otro idioma.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Construyendo activos que trabajan por ti</h3>
-
-<p>
-Cuando construyes una herramienta, un servicio o un contenido con intención, estás levantando algo que trabaja por ti incluso cuando no estás presente. Ese proceso te obliga a pensar como creador, a descubrir cómo entregar valor y a identificar oportunidades que la mayoría pasa por alto. Y lo mejor es que, con el tiempo, cada proyecto bien hecho se vuelve un activo que suma: te posiciona, te abre puertas y, sobre todo, te permite generar dinero desde tu propio talento sin depender de nadie.
-</p>
 </div>
 
 
 
-<div style="overflow-x:auto; margin-top: 20px;">
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Construyendo activos que trabajan por ti</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Cuando construyes una herramienta, un servicio o un contenido con intención, estás levantando algo que trabaja por ti incluso cuando no estás presente. Ese proceso te obliga a pensar como creador, a descubrir cómo entregar valor y a identificar oportunidades que la mayoría pasa por alto. Y lo mejor es que, con el tiempo, cada proyecto bien hecho se vuelve un activo que suma: te posiciona, te abre puertas y, sobre todo, te permite generar dinero desde tu propio talento sin depender de nadie.
+</p>
+
+</div>
+
+
+
+<div style="overflow-x:auto; margin-top: 40px;">
   <table style="width: 100%; border-collapse: collapse; font-family: 'Poppins', sans-serif;">
     <thead>
       <tr style="background-color: #f2f2f2;">
@@ -1637,16 +1762,27 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 
 
-<!-- DIVERSIFICA -->
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Expande tu Caja de Herramientas Profesionales para Generar más Valor</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Diversifica tus habilidades para liderar</h3>
+
+<!-- PARRAFO -->
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Expande tu Caja de Herramientas Profesionales para Generar más Valor</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Diversifica tus habilidades para liderar</h3>
+
 <p>
-        No basta con ser bueno en una sola área; diversificar tus habilidades es la estrategia que separa a los profesionales promedio de los que lideran. Mientras mantienes tu empleo para subsistir, puedes invertir tiempo en aprender competencias que se complementen entre sí y te permitan adaptarte a oportunidades inesperadas. Por ejemplo, combinar conocimientos financieros con manejo de datos, o habilidades de comunicación con gestión de proyectos, te da ventaja al tomar decisiones y ejecutar iniciativas en cualquier entorno económico.
+No basta con ser bueno en una sola área; diversificar tus habilidades es la estrategia que separa a los profesionales promedio de los que lideran. Mientras mantienes tu empleo para subsistir, puedes invertir tiempo en aprender competencias que se complementen entre sí y te permitan adaptarte a oportunidades inesperadas. Por ejemplo, combinar conocimientos financieros con manejo de datos, o habilidades de comunicación con gestión de proyectos, te da ventaja al tomar decisiones y ejecutar iniciativas en cualquier entorno económico.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Aprende habilidades que sumen valor real</h3>
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Aprende habilidades que sumen valor real</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
 <p>
   La diversificación no significa dispersión: se trata de elegir habilidades que sumen valor real a tu perfil y generen retorno tangible. Cada nueva capacidad que adquieres funciona como un activo que puedes aplicar inmediatamente en tu empleo actual, en proyectos personales o en oportunidades futuras. Esto te permite avanzar profesionalmente sin sacrificar estabilidad financiera y, al mismo tiempo, estar preparado para asumir roles más estratégicos cuando llegue el momento de dar el salto. Para saber que impacto tiene el ineterz compuesto puedes determinarlo con la 
         
@@ -1655,7 +1791,15 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 </a>
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Estrategias prácticas para potenciar tu perfil</h3>
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Estrategias prácticas para potenciar tu perfil</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <ul class="list-disc list-inside mb-4 text-stone-700">
         <li>Aprende herramientas digitales que complementen tu área principal, como análisis de datos, software financiero o plataformas de productividad.</li>
@@ -1675,23 +1819,39 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
 
 
 
-<!-- CONSTRUYE RED DE APOYO -->
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Tu red Profesional como Motor de Oportunidades </h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Tu red Profesional como Motor de Oportunidades</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Conexiones que generan valor</h3>
+
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Conexiones que generan valor</h3>
+
 <p>
-        Imagina tu red profesional como un tablero de inversión: cada conexión es un activo que puede rendir conocimiento, oportunidades o respaldo estratégico. Mientras estudias y mantienes tu empleo, algunas relaciones pueden enseñarte atajos que ningún libro o curso cubre, otras pueden abrir puertas inesperadas o simplemente servir como referencia cuando necesites validar ideas o decisiones importantes.
+Imagina tu red profesional como un tablero de inversión: cada conexión es un activo que puede rendir conocimiento, oportunidades o respaldo estratégico. Mientras estudias y mantienes tu empleo, algunas relaciones pueden enseñarte atajos que ningún libro o curso cubre, otras pueden abrir puertas inesperadas o simplemente servir como referencia cuando necesites validar ideas o decisiones importantes.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Construyendo un ecosistema de aprendizaje</h3>
+</div>
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Construyendo un ecosistema de aprendizaje</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
 <p>
-        No se trata de sumar contactos, sino de crear un ecosistema donde cada vínculo aporta valor. Puedes aprender de colegas que dominan áreas que tú apenas estás explorando, colaborar con mentores que te desafíen a pensar distinto o incluso interactuar con profesionales de industrias relacionadas para entender cómo funcionan los flujos de dinero, inversión y recursos en la práctica.
+No se trata de sumar contactos, sino de crear un ecosistema donde cada vínculo aporta valor. Puedes aprender de colegas que dominan áreas que tú apenas estás explorando, colaborar con mentores que te desafíen a pensar distinto o incluso interactuar con profesionales de industrias relacionadas para entender cómo funcionan los flujos de dinero, inversión y recursos en la práctica.
 </p>
 
 <strong class="block text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Pasos ejemplares: esto te dará ideas para mejorar y aplicar con tu mentalidad.</strong>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Estrategias prácticas para fortalecer tu red</h3>
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Estrategias prácticas para fortalecer tu red</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <ul class="list-disc list-inside mb-4 text-stone-700">
         <li>Identifica expertos que puedan enseñarte cómo tomar decisiones financieras inteligentes en tu futura carrera.</li>
@@ -1702,49 +1862,85 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
         <li>Aplica lo aprendido de tus contactos directamente en tus proyectos, para transformar la teoría en experiencia tangible.</li>
 </ul>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Convierte tu red en un motor de oportunidades</h3>
-<p>
-        Con esta visión, tu red de apoyo deja de ser un concepto abstracto y se convierte en un ecosistema activo de aprendizaje, estrategia y oportunidades. Cada conexión es un recurso que potencia tu carrera y tu capacidad de tomar decisiones financieras y profesionales acertadas, haciendo que tu empleo actual y tu estudio trabajen juntos para construir tu futuro.
-</p>
 </div>
 
 
 
 
-<!-- ADMINISTRA TUS RECURSOS -->
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Administra tus Recursos de forma Estratégica para Crecer</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Convierte tu red en un motor de oportunidades</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Invierte tu tiempo y dinero como un recurso estratégico</h3>
 <p>
-        Cuando estudias y trabajas al mismo tiempo, tu tiempo y tu dinero se vuelven tus recursos más valiosos. Cada decisión financiera y cada hora invertida en proyectos personales debe generar un retorno tangible: experiencia, habilidades o conexiones que impulsen tu carrera futura. No se trata solo de ahorrar o cumplir horarios, sino de planear cada movimiento como una inversión estratégica en tu desarrollo profesional. Por ejemplo, destinar parte de tu salario a cursos que realmente agreguen valor a tu área de estudio o dedicar bloques específicos de tiempo a proyectos que puedan generar resultados medibles es mucho más efectivo que dispersarte en múltiples actividades sin rumbo.
+Con esta visión, tu red de apoyo deja de ser un concepto abstracto y se convierte en un ecosistema activo de aprendizaje, estrategia y oportunidades. Cada conexión es un recurso que potencia tu carrera y tu capacidad de tomar decisiones financieras y profesionales acertadas, haciendo que tu empleo actual y tu estudio trabajen juntos para construir tu futuro.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Mide el impacto de tus acciones</h3>
-<p>
-        También es clave medir el impacto de tus acciones. Cada proyecto, cada práctica o cada iniciativa paralela debe responder a la pregunta: “¿Esto me acerca a la carrera que quiero o solo consume mis recursos?”. Establecer indicadores claros como habilidades adquiridas, contactos relevantes o resultados cuantificables te permite ajustar tu enfoque constantemente y asegurarte de que cada esfuerzo realmente sume. De esta manera, tu empleo deja de ser solo un medio de subsistencia y se convierte en una plataforma donde construyes experiencia, disciplina y capacidad de decisión estratégica.
-</p>
-
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Anticipa oportunidades y maximiza tu retorno</h3>
-<p>
-        Además, administrar tus recursos de manera inteligente implica anticipar oportunidades y riesgos. Ahorrar para invertir en herramientas, libros, cursos o incluso pequeños proyectos rentables te da margen de maniobra y libertad para probar ideas sin comprometer tu estabilidad económica. Priorizar actividades de alto retorno, aprender de tus errores y documentar tus avances convierte cada día en una inversión consciente que fortalece tu carrera y tu independencia financiera. En otras palabras, mientras mantienes tu empleo para subsistir, cada acción calculada y cada decisión estratégica construyen la base para que tu futuro profesional y económico sea sólido y escalable.
-</p>
 </div>
 
 
 
-<!-- PREPARA EL SALTO -->
-<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Prepárate para el Siguiente paso en tu Carrera Profesional</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Transforma tu empleo en una plataforma de crecimiento</h3>
+<!-- PARRAFO -->
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Administra tus Recursos de forma Estratégica para Crecer</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Invierte tu tiempo y dinero como un recurso estratégico</h3>
+
 <p>
-        Estás en tu empleo actual porque necesitas cubrir tus gastos, pero tu mente no deja de imaginar tu futuro profesional. Cada día es una mezcla de obligaciones inmediatas y ambiciones personales, y sabes que el salto hacia tu carrera no puede ser improvisado. Prepararlo requiere ingenio: transformar tu tiempo limitado en avances concretos que te acerquen a tu meta. No es suficiente soñar; necesitas un plan que te permita avanzar sin arriesgar tu sustento. Cada acción cuenta, y lo que hagas hoy debe acercarte a la persona que quieres ser mañana.
+Cuando estudias y trabajas al mismo tiempo, tu tiempo y tu dinero se vuelven tus recursos más valiosos. Cada decisión financiera y cada hora invertida en proyectos personales debe generar un retorno tangible: experiencia, habilidades o conexiones que impulsen tu carrera futura. No se trata solo de ahorrar o cumplir horarios, sino de planear cada movimiento como una inversión estratégica en tu desarrollo profesional. Por ejemplo, destinar parte de tu salario a cursos que realmente agreguen valor a tu área de estudio o dedicar bloques específicos de tiempo a proyectos que puedan generar resultados medibles es mucho más efectivo que dispersarte en múltiples actividades sin rumbo.
+</p>
+
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Mide el impacto de tus acciones</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+También es clave medir el impacto de tus acciones. Cada proyecto, cada práctica o cada iniciativa paralela debe responder a la pregunta: “¿Esto me acerca a la carrera que quiero o solo consume mis recursos?”. Establecer indicadores claros como habilidades adquiridas, contactos relevantes o resultados cuantificables te permite ajustar tu enfoque constantemente y asegurarte de que cada esfuerzo realmente sume. De esta manera, tu empleo deja de ser solo un medio de subsistencia y se convierte en una plataforma donde construyes experiencia, disciplina y capacidad de decisión estratégica.
+</p>
+
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Anticipa oportunidades y maximiza tu retorno</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Además, administrar tus recursos de manera inteligente implica anticipar oportunidades y riesgos. Ahorrar para invertir en herramientas, libros, cursos o incluso pequeños proyectos rentables te da margen de maniobra y libertad para probar ideas sin comprometer tu estabilidad económica. Priorizar actividades de alto retorno, aprender de tus errores y documentar tus avances convierte cada día en una inversión consciente que fortalece tu carrera y tu independencia financiera. En otras palabras, mientras mantienes tu empleo para subsistir, cada acción calculada y cada decisión estratégica construyen la base para que tu futuro profesional y económico sea sólido y escalable.
+</p>
+
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Prepárate para el Siguiente paso en tu Carrera Profesional</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Transforma tu empleo en una plataforma de crecimiento</h3>
+
+<p>
+Estás en tu empleo actual porque necesitas cubrir tus gastos, pero tu mente no deja de imaginar tu futuro profesional. Cada día es una mezcla de obligaciones inmediatas y ambiciones personales, y sabes que el salto hacia tu carrera no puede ser improvisado. Prepararlo requiere ingenio: transformar tu tiempo limitado en avances concretos que te acerquen a tu meta. No es suficiente soñar; necesitas un plan que te permita avanzar sin arriesgar tu sustento. Cada acción cuenta, y lo que hagas hoy debe acercarte a la persona que quieres ser mañana.
 </p>
 
 <strong class="block text-stone-900 font-semibold text-lg" style="font-family: 'Poppins', sans-serif;">Con esto en mente, puedes empezar a estructurar tu camino</strong>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Acciones clave para avanzar sin riesgos</h3>
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Acciones clave para avanzar sin riesgos</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
 <ul class="list-disc list-inside mb-4 text-stone-700">
         <li>Identifica qué habilidades te faltan para tu carrera ideal y dedica bloques pequeños de tiempo a dominarlas sin descuidar tu empleo.</li>
         <li>Construye proyectos paralelos que demuestren tu capacidad: aunque sean pequeños, deben tener resultados medibles.</li>
@@ -1753,24 +1949,43 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
         <li>Evalúa riesgos y planifica tus pasos: define cuándo y cómo podrás hacer la transición, teniendo siempre un colchón financiero y estratégico.</li>
 </ul>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Convierte cada esfuerzo en una inversión en tu futuro</h3>
-<p>
-        Este enfoque transforma tu empleo actual en una plataforma, no un límite. Cada tarea, cada proyecto y cada hora invertida se convierte en una inversión en tu futuro profesional. El salto dejará de ser un riesgo incierto y se volverá un movimiento calculado, inevitable y preparado, donde tu preparación y constancia te colocan en el lugar que siempre quisiste alcanzar.
-</p>
 </div>
 
 
 
-<!-- CIERRE -->
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-32" style=" font-family: 'Montserrat', sans-serif;">Convierte tu Empleo en un Trampolín hacia tu éxito Profesional</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Convierte cada esfuerzo en una inversión en tu futuro</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Aprovecha tu empleo como plataforma de crecimiento</h3>
-<p>
-        Tu empleo actual no es solo un ingreso: es el terreno donde puedes experimentar, probar estrategias y acumular ventaja real. Cada día es una oportunidad para ganar experiencia que te hará destacar en tu carrera y, de paso, mejorar tu relación con el dinero y la toma de decisiones. Aquí tienes ideas originales que pocos considerarían, pero que realmente te entrenan para ser un profesional más valioso y estratégico.
+  <p>
+Este enfoque transforma tu empleo actual en una plataforma, no un límite. Cada tarea, cada proyecto y cada hora invertida se convierte en una inversión en tu futuro profesional. El salto dejará de ser un riesgo incierto y se volverá un movimiento calculado, inevitable y preparado, donde tu preparación y constancia te colocan en el lugar que siempre quisiste alcanzar.
 </p>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Estrategias prácticas para ganar ventaja profesional</h3>
+</div>
+
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Convierte tu Empleo en un Trampolín hacia tu éxito Profesional</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Aprovecha tu empleo como plataforma de crecimiento</h3>
+
+<p>
+Tu empleo actual no es solo un ingreso: es el terreno donde puedes experimentar, probar estrategias y acumular ventaja real. Cada día es una oportunidad para ganar experiencia que te hará destacar en tu carrera y, de paso, mejorar tu relación con el dinero y la toma de decisiones. Aquí tienes ideas originales que pocos considerarían, pero que realmente te entrenan para ser un profesional más valioso y estratégico.
+</p>
+
+</div>
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Estrategias prácticas para ganar ventaja profesional</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <ul class="list-disc list-inside mb-4 text-stone-700">
         <li>Invierte tus horas extra como si fueran acciones: mide cuánto tiempo te da retorno en habilidades y resultados concretos, igual que un portafolio financiero.</li>
@@ -1781,44 +1996,48 @@ Cuando construyes una herramienta, un servicio o un contenido con intención, es
         <li>Observa la dinámica de tu oficina como un mercado: quién mueve recursos, cómo se toman decisiones y dónde están los cuellos de botella; aprende a navegarlo estratégicamente para posicionarte.</li>
 </ul>
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">Convierte cada acción en ventaja y control</h3>
-<p>
-        Con estas estrategias, tu empleo deja de ser un límite y se convierte en un campo de entrenamiento financiero y profesional. Cada movimiento que hagas hoy te da ventaja, experiencia y control para cuando decidas dar el salto hacia la carrera y la vida que realmente deseas.
-</p>
 </div>
 
 
 
-  <!-- ESPACIO PEQUEÑO FINAL -->
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Convierte cada acción en ventaja y control</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Con estas estrategias, tu empleo deja de ser un límite y se convierte en un campo de entrenamiento financiero y profesional. Cada movimiento que hagas hoy te da ventaja, experiencia y control para cuando decidas dar el salto hacia la carrera y la vida que realmente deseas.
+</p>
+
+</div>
+
+
+
+
+
+<!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
-
-
 
   <!-- Logos compartir -->
 <div class="share-here"></div>
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
-
-
-
-
-<!-- Sección recomendada -->
+  <!-- Sección recomendada -->
 <div class="mt-5 mb-10">
+<div class="w-full h-px bg-slate-300"></div>
 
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-       <strong class="font-semibold text-slate-800">
-      Código Millonario</strong> recomienda:
-    </p>
-  </blockquote>
+<div class="mt-6 mb-4 text-center">
+  <p class="font-semibold text-slate-800"
+     style="font-family: 'Poppins', sans-serif;">
+    Código Millonario
+  </p>
+  <p class="text-[11px] text-slate-500 leading-relaxed"
+     style="font-family: 'Poppins', sans-serif;">
+    Medio de análisis sobre finanzas y crecimiento económico.
+  </p>
 </div>
 
-
-      </div>
     </main>
 
 
