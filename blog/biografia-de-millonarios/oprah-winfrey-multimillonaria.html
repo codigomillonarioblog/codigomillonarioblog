@@ -960,28 +960,23 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-
-
-
+<div style="height: 250px;"></div>
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
-
-<div class="left-block flex items-center mt-5 px-1 md:px-0 ml-3 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; color: #fff; background-color: red; padding: 2px 6px; border-radius: 3px; white-space: nowrap; display: inline-flex;">
-     Educación Financiera
-</div>
-
 <!-- Título -->
 <div class="blog-main-title relative">
+<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
 
-<span class="block mt-1 w-full md:w-[89%] h-px bg-slate-300"></span>
-<h1 class="w-full md:w-[89%]">
+<div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
+     style="font-family: 'Open Sans', sans-serif;">
+Educación Financiera
+</div>
+
+<h1 class="w-full md:w-[90%]">
 De la pobreza a la cima: el camino de Oprah Winfrey hacia la riqueza
 </h1>
-
 </div>
 
 <div class="flex flex-col justify-start gap-5 px-4 md:px-0 ml-0 md:ml-6 text-xl md:text-2xl font-light"
@@ -994,7 +989,7 @@ De la pobreza a la cima: el camino de Oprah Winfrey hacia la riqueza
 
 <style>
 .blog-main-title {
-  font-family: 'Poppins', sans-serif;
+font-family: Georgia, serif;
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.2;
@@ -1004,8 +999,8 @@ De la pobreza a la cima: el camino de Oprah Winfrey hacia la riqueza
   /* 🔥 Separación diferente por lado */
   margin-top: 30px;
   margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+  margin-left: 20px;
+  margin-right: 120px;
 }
 
 /* Responsive */
@@ -1024,7 +1019,6 @@ De la pobreza a la cima: el camino de Oprah Winfrey hacia la riqueza
   }
 }
 </style>
-
 
 <style>
 .layout-wrapper {
@@ -1058,7 +1052,6 @@ De la pobreza a la cima: el camino de Oprah Winfrey hacia la riqueza
 </style>
 
 <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
-
 <style>
 .social-container {
   font-family: Arial, sans-serif;
@@ -1101,52 +1094,57 @@ De la pobreza a la cima: el camino de Oprah Winfrey hacia la riqueza
 
 
 
- <!-- INTRODUCCIÓN GENERAL -->
-<main class="py-5">
-  <div class="layout-wrapper">
-    <article class="content-column">
+<div class="custom-left-align relative">
 
-  
+  <div class="relative">
+    <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
 
-<div class="mt-5 mb-4 w-full md:w-[150%] h-px bg-slate-300"></div>
-
-<!-- Información editorial con imagen a la izquierda, más a la izquierda -->
-<div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
-  <!-- Imagen del autor -->
-  <div class="flex-shrink-0">
-    <img src="../../assets/img/fundador-codigo-millonario.webp" 
-         alt="Francisco Urrego - Código Millonario"
-         class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
-  </div>
-
-  <!-- Texto del autor -->
-  <div class="py-1">
-    <p class="text-stone-700 leading-relaxed mb-1 font-light" style="font-family: 'Open Sans', sans-serif;">
-      Por <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
-        Francisco Urrego
+    <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
+    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+      <a href="../../contacto.html"
+         class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
+        Mensaje
       </a>
-    </p>
-  </div>
+    </div>
+
+    <div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
+      <div class="flex-shrink-0">
+        <img src="../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego - Código Millonario"
+             class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+      </div>
+
+      <div class="py-1">
+        <p class="text-stone-700 leading-relaxed mb-1 font-light text-xs sm:text-base">
+          Por 
+          <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+            Francisco Urrego
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    
+<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
 </div>
-
-<div class="mt-4 mb-5 w-full md:w-[150%] h-px bg-slate-300"></div>
-
-
 
 <div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
 
-  <!-- Texto -->
-  <div class="text-stone-700 leading-relaxed mb-2 sm:mb-0 text-center sm:text-left font-light" style="font-family: 'Open Sans', sans-serif;">
-    <p>
-    Escrito el 29 ene 2026 | 07:10 h | <span class="block md:inline"></span> ⏱ 7 min lectura
-    </p>
-  </div>
+<!-- Texto -->
+<div class="mb-2 sm:mb-0 text-center sm:text-center text-[9px] sm:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Escrito el 29 ene 2026 | 07:10 h | ⏱ 7 min lectura
+  </p>
+</div>
 
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
 
-<p class="mb-2 sm:mb-0">
- Síguenos:
+<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+  Síguenos
 </p>
 
   <!-- Iconos -->
@@ -1171,12 +1169,40 @@ De la pobreza a la cima: el camino de Oprah Winfrey hacia la riqueza
         <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
       </svg>
     </a>
+
+    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
+   class="social-icon">
+  <i class="fab fa-instagram"></i>
+</a>
   </div>
 
+</div>
 </div>
 
 <!-- Ajuste tamaño icono X -->
 <style>
+/* Simula content-column SOLO para este bloque */
+.custom-left-align {
+  width: 100%;
+}
+
+/* 💻 PC */
+@media (min-width: 768px) {
+  .custom-left-align {
+    max-width: 760px;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+}
+
+/* 📱 Móvil */
+@media (max-width: 767px) {
+  .custom-left-align {
+    padding-left: 10px;
+    padding-right: 18px;
+  }
+}
+
 .social-icon svg{
   width:14px !important;
   height:14px !important;
@@ -1185,13 +1211,11 @@ De la pobreza a la cima: el camino de Oprah Winfrey hacia la riqueza
 
 
 
-
-<div class="flex justify-center md:justify-start mt-5 relative px-4 sm:px-0 md:-ml-8">
+<div class="flex justify-center mt-20 relative px-4 sm:px-0">
   <img src="../../assets/png/riqueza-oprah-winfrey.webp"
        alt=""
-       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain relative z-10">
+       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[46rem] md:h-[26rem] object-contain">
 </div>
-
 
 
 <div class="mx-auto my-4 max-w-[90%] px-4 text-center">
@@ -1199,7 +1223,6 @@ De la pobreza a la cima: el camino de Oprah Winfrey hacia la riqueza
 Ilustración digital creada para representar a la empresaria Oprah Winfrey.
   </p>
 </div>
-
 
 
 
@@ -1426,15 +1449,31 @@ Ilustración digital creada para representar a la empresaria Oprah Winfrey.
 
 
 
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-8">
+  <div class="layout-wrapper">
+    <article class="content-column max-w-4xl mx-auto px-4 md:px-0 text-left">
 
+  <div class="mt-10 mb-6">
+  <span class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+        style="font-family: 'Open Sans', sans-serif;">
+Un Análisis Editorial
+      </span>
+
+  <div class="w-16 h-px bg-red-500"></div>
+</div>
 
 
 <!-- INTRODUCCIÓN -->
-<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo Oprah Winfrey pasó de no tener nada a construir un imperio multimillonario</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-20 mt-5" style="font-family: Georgia, serif;">Cómo Oprah Winfrey pasó de no tener nada a construir un imperio multimillonario</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
-<p> 
-  En esta oportunidad, hablar de <strong>riqueza</strong> no siempre es hablar de suerte, o al menos para quienes la construyen desde cero, la suerte no es su aliado. Sinherencias, sin contactos, solo una <strong>visión clara, firme y constante</strong>. 
+<p>
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+  E
+  </span>
+
+  n esta oportunidad, hablar de <strong>riqueza</strong> no siempre es hablar de suerte, o al menos para quienes la construyen desde cero, la suerte no es su aliado. Sinherencias, sin contactos, solo una <strong>visión clara, firme y constante</strong>. 
 </p>
 
 <p>  
@@ -1449,8 +1488,16 @@ Ilustración digital creada para representar a la empresaria Oprah Winfrey.
   En lugar de trabajar solo por un salario, buscó espacios donde pudiera <strong>crecer</strong>, <strong>aprender</strong> y, con el tiempo, tener <strong>control</strong> sobre lo que producía. 
 </p>
 
-<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5">
-Cuando el <strong>control del trabajo</strong> se convierte en <strong>riqueza</strong></h3>
+</div>
+
+
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Cuando el <strong>control del trabajo</strong> se convierte en <strong>riqueza</strong></h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p> 
   Su riqueza no nació de la fama, sino de <strong>decisiones financieras inteligentes</strong> aplicadas; al tiempo de ser reconocida, podía negociar su participación en proyectos, ser dueña de su <strong>contenido</strong> y pensar siempre en el <strong>largo plazo</strong>. Mientras otros solo cobraban por aparecer en pantalla y ser probablemente cambiados por alguien en el futuro con mejor habilidad de comunicación, ella construía <strong>propiedad, autoridad y autonomía</strong>. 
@@ -1472,11 +1519,14 @@ Cuando el <strong>control del trabajo</strong> se convierte en <strong>riqueza</
 
 
 
-<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Una infancia marcada por la escasez y los límites sociales</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
 
-<h3 class="text-xl font-semibold text-stone-900 mt-6 mb-2" style="font-family: 'Poppins', sans-serif;">
-  Los primeros años de Oprah Winfrey</h3>
+
+<!-- PARRAFO -->
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Una infancia marcada por la escasez y los límites sociales</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">
+Los primeros años de Oprah Winfrey</h3>
 
 <p>
   Oprah Gail Winfrey nació el 29 de enero de 1954 en Kosciusko, Mississippi, en el sur de Estados Unidos, una región profundamente marcada por la <strong>segregación racial</strong> y la <strong>pobreza estructural</strong> de aquella época. Fue criada inicialmente por su abuela materna en un entorno rural, sin servicios básicos estables y con recursos extremadamente limitados. Desde muy pequeña vivió la <strong>escasez</strong> como una condición permanente, no como una etapa pasajera.
@@ -1508,8 +1558,12 @@ El oro no brilla en la tierra, brilla después del proceso que lo convierte en j
 
 
 
-<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Su primer ingreso y el poder del trabajo constante</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Su primer ingreso y el poder del trabajo constante</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Oprah comenzó a generar sus primeros <strong>ingresos</strong> trabajando en radio durante su adolescencia, pero ese acceso no fue casual; es decir, como cualquier persona podría adquirir un trabajo normal. Mientras estudiaba secundaria en Nashville, para ese tiempo destacó por su <strong>habilidad para hablar en público</strong> y comunicar ideas con claridad, lo que la llevó a ganar concursos de oratoria. 
@@ -1519,7 +1573,7 @@ Oprah comenzó a generar sus primeros <strong>ingresos</strong> trabajando en ra
 Ese talento le abrió la puerta a su primer trabajo en una <strong>emisora local</strong>, donde fue contratada como locutora mientras aún era estudiante. No era famosa aun ni tenía una posición privilegiada, sus <strong>ingresos</strong> eran modestos, pero por primera vez entendió el valor de intercambiar <strong>habilidades concretas</strong> por dinero real.
 </p>
 
-<h3 class="text-3xl font-semibold text-stone-900 mb-4 mt-5" style="font-family: 'Montserrat', sans-serif;">
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">
 Cuando la <strong>experiencia</strong> pesó más que el título
 </h3>
 
@@ -1539,8 +1593,12 @@ En lugar de centrarse solo en cuánto ganaba, se enfocó en volverse <strong>dif
 
 
 
-<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">El error que casi frena su crecimiento</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">El error que casi frena su crecimiento</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   En sus primeros años en televisión nacional, Oprah fue contratada como presentadora de un <strong>noticiero</strong> en Baltimore, un formato rígido, impersonal y estrictamente estructurado que se encargaba de dar información y que las personas transmitieran dicha información como si fueran máquinas, sin expresiones, sentimientos o puntos de vista propios.
@@ -1568,8 +1626,10 @@ En lugar de centrarse solo en cuánto ganaba, se enfocó en volverse <strong>dif
 
 
 
-<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">La decisión que cambió su destino financiero</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<!-- PARRAFO -->
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">La decisión que cambió su destino financiero</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 La gran diferencia entre Oprah y muchas otras figuras públicas apareció cuando entendió una realidad incómoda de la industria: la mayoría de los presentadores ganaban bien, pero no eran dueños de nada. Su <strong>imagen</strong> generaba valor, su <strong>audiencia</strong> producía ingresos, pero los derechos y el <strong>control</strong> quedaban en manos de las cadenas.
@@ -1591,8 +1651,11 @@ Tener un <strong>ingreso elevado</strong> no significa nada; esto puede crear la
 
 
 
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cómo Oprah construyó su riqueza a través del control y la propiedad</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+<!-- PARRAFO -->
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cómo Oprah construyó su riqueza a través del control y la propiedad</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Quiero aclarar hasta este punto, que la <strong>riqueza</strong> de Oprah no se construyó a partir de un salario elevado, sino de una comprensión temprana del funcionamiento real del <strong>negocio mediático</strong>. A diferencia de otros presentadores, entendió que el verdadero <strong>valor</strong> no estaba solo en aparecer frente a una cámara, sino en controlar lo que se producía, cómo se distribuía y quién se beneficiaba de ello a largo plazo.
@@ -1621,8 +1684,11 @@ Entendió que la <strong>riqueza real</strong> no está en un solo ingreso, sino
 
 
 
-<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Cuánto dinero genera Oprah Winfrey</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+<!-- PARRAFO -->
+<h2 id="titulo7" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Cuánto dinero genera Oprah Winfrey</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 La riqueza actual de Oprah Winfrey está estimada en alrededor de USD 3.2 mil millones según el 
@@ -1659,8 +1725,10 @@ En conjunto, este enfoque no solo produjo ingresos altos mientras el programa se
 
 
 
-<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Lecciones financieras que cualquiera puede aplicar de esta historia</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+<!-- PARRAFO -->
+<h2 id="titulo8" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Lecciones financieras que cualquiera puede aplicar de esta historia</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 La historia de Oprah Winfrey deja lecciones financieras claras porque no se construyó desde la teoría, sino desde la necesidad. La primera es invertir en <strong>habilidades</strong> antes que en apariencias. Oprah no empezó acumulando dinero, empezó acumulando capacidades: comunicación, criterio, toma de decisiones y control emocional. Ese capital personal fue el que luego se convirtió en ingresos reales.
@@ -1682,8 +1750,11 @@ Finalmente, su historia refuerza la importancia de pensar en horizontes largos. 
 
 
 
-  <h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">Aspectos de su historia que no pueden replicarse</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+<!-- PARRAFO -->
+<h2 id="titulo9" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Aspectos de su historia que no pueden replicarse</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Aunque la historia de Oprah Winfrey ofrece lecciones aplicables, también contiene factores que no pueden replicarse de forma directa. El primero es el contexto histórico y mediático. Oprah construyó su <strong>imperio</strong> en una época en la que la televisión tenía un poder masivo de influencia y concentración de audiencias que hoy ya no existe de la misma forma.
@@ -1706,8 +1777,11 @@ Reconocer estos límites no resta valor a su historia; al contrario, la hace má
 
 
 
-<h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-4 mt-20" style=" font-family: 'Montserrat', sans-serif;">¿Fue suerte o estrategia?</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4" style="font-family: 'Open Sans', sans-serif;">
+
+
+<!-- PARRAFO -->
+<h2 id="titulo10" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">¿Fue suerte o estrategia?</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Reducir la historia de Oprah Winfrey a la suerte es ignorar la secuencia real de <strong>decisiones</strong> que tomó a lo largo de su vida. Si bien existieron oportunidades externas, estas solo tuvieron impacto porque ella ya había desarrollado <strong>habilidades</strong>, criterio y una comprensión clara del valor de su trabajo. La suerte, sin estructura, no genera riqueza sostenible.
@@ -1729,31 +1803,30 @@ Más que una historia inspiradora, el recorrido de Oprah es un caso práctico de
 
 
 
-  <!-- ESPACIO PEQUEÑO FINAL -->
+
+
+
+ <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
-
-
 
   <!-- Logos compartir -->
 <div class="share-here"></div>
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
-
-
-
-<!-- Sección recomendada -->
+  <!-- Sección recomendada -->
 <div class="mt-5 mb-10">
+<div class="w-full h-px bg-slate-300"></div>
 
-  <div class="w-full h-px bg-slate-300"></div>
-
-  <blockquote class="mt-6 pl-4 border-l-2 border-slate-300 mb-4">
-    <p class="text-sm text-slate-600 italic leading-relaxed"
-       style="font-family: 'Poppins', sans-serif;">
-       <strong class="font-semibold text-slate-800">
-      Código Millonario</strong> recomienda:
-    </p>
-  </blockquote>
+<div class="mt-6 mb-4 text-center">
+  <p class="font-semibold text-slate-800"
+     style="font-family: 'Poppins', sans-serif;">
+    Código Millonario
+  </p>
+  <p class="text-[11px] text-slate-500 leading-relaxed"
+     style="font-family: 'Poppins', sans-serif;">
+    Medio de análisis sobre finanzas y crecimiento económico.
+  </p>
 </div>
 
     </main>
