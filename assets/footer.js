@@ -11,7 +11,7 @@
 <footer style="font-family: Arial, sans-serif; font-size: 11px; font-weight: 400; color: #555; background-color: #333; padding-top: 
 3rem; padding-bottom: 1.5rem; padding-left: 1.5rem; padding-right: 1.5rem; margin-top: 5rem;">
 
-  <!-- CONTENEDOR PRINCIPAL -->
+ <!-- CONTENEDOR PRINCIPAL -->
   <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
     <!-- COLUMNA 1: NEWSLETTER -->
@@ -94,7 +94,7 @@ class="bg-gray-600 hover:bg-gray-700 px-2.5 py-1 flex items-center justify-cente
 
 <div>
 <h3 class="font-semibold mb-3 tracking-wide navbar-logo-footer">Contacto</h3>
-<p class="text-white text-[12px]">Colombia — Online 2026</p>
+<p class="text-white text-[12px]">Colombia — Online 2026 -</p>
 <p class="text-white text-[12px]">codigomillonarioblog@gmail.com</p>
   </div>
 </div>
