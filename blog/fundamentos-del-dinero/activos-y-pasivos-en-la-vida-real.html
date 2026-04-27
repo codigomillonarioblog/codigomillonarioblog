@@ -1,0 +1,2699 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activos y pasivos en la vida real: ejemplos claros y cómo construir riqueza | Código Millonario</title>
+    <meta name="description" content="Activos y pasivos en la vida real explicados con ejemplos claros, tipos y estrategias para construir riqueza y mejorar tus finanzas personales.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/favicon-v45.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="../../assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Recibe estrategias gratis
+    </button>
+
+    <!-- INPUT ANIMADO -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+        
+      <button type="submit" class="btn-enviar">→</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* ✨ ANIMACIÓN INPUT SOLO PC */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(-5px);
+  filter: blur(6px);
+  pointer-events: none;
+
+  transition: all 0.35s ease;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+/* INPUT */
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+</style>
+
+<script>
+  const btnPC = document.getElementById("btnTogglePC");
+  const inputBoxPC = document.getElementById("inputBoxPC");
+
+  btnPC.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    btnPC.style.opacity = "0";
+    btnPC.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      btnPC.style.display = "none";
+      inputBoxPC.classList.add("activo");
+    }, 150);
+  });
+
+  inputBoxPC.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  document.addEventListener("click", () => {
+    inputBoxPC.classList.remove("activo");
+
+    setTimeout(() => {
+      btnPC.style.display = "inline-block";
+      btnPC.style.opacity = "1";
+      btnPC.style.pointerEvents = "auto";
+    }, 200);
+  });
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="../../blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="../../blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="../../blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="../../blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="../../blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="../../blog/negocios/index.html">Modelos de Negocio</a>
+<a href="../../tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../../donar.html">Donaciones</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../../index.html">Inicio</a>
+      <a href="../../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../../herramientas.html">Herramientas</a>
+      <a href="../../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../../tienda.html">Productos</a>
+      <a href="../../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../../donar.html">Donaciones</a>
+      <a href="../../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #000; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('../../assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 250px;"></div>
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
+
+<div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
+     style="font-family: 'Open Sans', sans-serif;">
+Educación Financiera
+</div>
+
+<h1 class="w-full md:w-[90%]">
+Activos y pasivos en la vida real: la base para construir riqueza desde cero
+</h1>
+</div>
+
+<div class="flex flex-col justify-start gap-5 px-4 md:px-0 ml-0 md:ml-6 text-xl md:text-2xl font-light"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p class="w-full md:w-[80%]">
+Un activo pone dinero en tu bolsillo; un pasivo lo saca. Al dominar esta distinción, sustituyes el gasto impulsivo por decisiones estratégicas que construyen un valor neto real desde cero.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+font-family: Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 120px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+<style>
+.layout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content-column {
+  width: 100%;
+  max-width: 760px;
+  padding-left: 35px;  /* antes 60px */
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-column {
+    max-width: 720px;
+    padding-left: 25px; /* antes 40px */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column {
+    max-width: 100%;
+    padding-left: 10px; /* antes 20px */
+    padding-right: 18px;
+  }
+}
+</style>
+
+<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<style>
+.social-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;  /* borde más delgado */
+  border-radius: 50%;
+  color: #777; 
+  background: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;  /* tamaño ajustado */
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+
+
+
+
+<div class="custom-left-align relative">
+
+  <div class="relative">
+    <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
+
+    <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
+    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+      <a href="../../contacto.html"
+         class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
+        Mensaje
+      </a>
+    </div>
+
+    <div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
+      <div class="flex-shrink-0">
+        <img src="../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego - Código Millonario"
+             class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+      </div>
+
+      <div class="py-1">
+        <p class="text-stone-700 leading-relaxed mb-1 font-light text-xs sm:text-base">
+          Por 
+          <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
+            Francisco Urrego
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    
+<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
+</div>
+
+<div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
+
+<!-- Texto -->
+<div class="mb-2 sm:mb-0 text-center sm:text-center text-[9px] sm:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap"
+     style="font-family: 'Open Sans', sans-serif;">
+  <p>
+Escrito el 27 abr 2026 | 13:24 h | ⏱ 6 min lectura
+  </p>
+</div>
+
+  <!-- Línea separadora (solo en PC) -->
+  <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
+
+<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+  Síguenos
+</p>
+
+  <!-- Iconos -->
+  <div class="flex gap-4 social-container justify-center sm:justify-end">
+    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
+       class="social-icon">
+      <i class="fab fa-tiktok"></i>
+    </a>
+
+    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
+       class="social-icon">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://pin.it/3tqNXYoAA" target="_blank"
+       class="social-icon">
+      <i class="fab fa-pinterest-p"></i>
+    </a>
+
+    <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+        <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+      </svg>
+    </a>
+
+    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
+   class="social-icon">
+  <i class="fab fa-instagram"></i>
+</a>
+  </div>
+
+</div>
+</div>
+
+<!-- Ajuste tamaño icono X -->
+<style>
+/* Simula content-column SOLO para este bloque */
+.custom-left-align {
+  width: 100%;
+}
+
+/* 💻 PC */
+@media (min-width: 768px) {
+  .custom-left-align {
+    max-width: 760px;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+}
+
+/* 📱 Móvil */
+@media (max-width: 767px) {
+  .custom-left-align {
+    padding-left: 10px;
+    padding-right: 18px;
+  }
+}
+
+.social-icon svg{
+  width:14px !important;
+  height:14px !important;
+}
+</style>
+
+
+
+<img src="../../assets/png/activos-y-pasivos-ejemplos-desde-cero.webp"
+     alt=""
+     class="w-80 mx-auto mt-20 relative top-6 sm:w-[40rem] md:w-[50rem] mx-auto sm:top-4 object-contain z-10">
+
+
+
+
+<style>
+  /* ================= ACORDEÓN ================= */
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  /* Ajustamos el ancho máximo y centramos el acordeón */
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco */
+    border-radius: 0px; /* puntas cuadradas */
+    margin: 0 auto 16px auto; /* centrado horizontal */
+    max-width: 680px; /* ancho máximo deseado aumentado */
+
+    /* Delineado sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
+
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  /* Animación tipo card con sombra al pasar el mouse */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
+  .toc-container {
+    padding: 0 22px 22px 22px;
+    max-width: 100%;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none; /* sin línea en el último ítem */
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: #1a73e8; /* color de hover para indicar clickeable */
+  }
+
+  /* ================= MARGEN SUTIL EN MÓVILES ================= */
+  @media (max-width: 480px) {
+    .cf-accordion-item {
+      margin-left: 8px;
+      margin-right: 8px;
+      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
+    }
+  }
+</style>
+
+<div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+      Tabla de contenidos
+      <span class="cf-accordion-icon"></span>
+    </div>
+    <div class="cf-accordion-content">
+
+      <!-- ================= HTML ================= -->
+      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
+ 
+  <ul class="toc-list">
+    <li><a href="#titulo1">1. Activos y pasivos en la vida real: definición clara, ejemplos y cómo usarlos para generar riqueza</a></li>
+    <li><a href="#titulo2">2. Activos y pasivos: el sistema real para construir riqueza desde cero</a></li>
+    <li><a href="#titulo3">3. Diferencia entre activos y pasivos en la vida real (con ejemplos claros)</a></li>
+    <li><a href="#titulo4">4. Por qué la mayoría usa mal los activos y pasivos (y ni lo sabe)</a></li>
+    <li><a href="#titulo5">5. El cambio que transforma gastos en ingresos (sin ganar más dinero)</a></li>
+    <li><a href="#titulo6">6. No es lo que tienes: es cómo lo haces trabajar o cómo te frena</a></li>
+  </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.cf-accordion').forEach(accordion => {
+    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.cf-accordion-item');
+        const content = item.querySelector('.cf-accordion-content');
+
+        // Solo afecta los items de ESTE acordeón
+        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.cf-accordion-content').style.maxHeight = null;
+          }
+        });
+
+        item.classList.toggle('is-open');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+
+  // Cerrar acordeón al hacer clic afuera
+  document.addEventListener('click', function(event) {
+    const openItem = document.querySelector('.cf-accordion-item.is-open');
+    if (openItem && !openItem.contains(event.target)) {
+      openItem.classList.remove('is-open');
+      const content = openItem.querySelector('.cf-accordion-content');
+      content.style.maxHeight = null;
+    }
+  });
+
+  // ================= SCROLL CON OFFSET PARA TABLA =================
+  document.querySelectorAll('.toc-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if(targetElement){
+        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-8">
+  <div class="layout-wrapper">
+    <article class="content-column max-w-4xl mx-auto px-4 md:px-0 text-left">
+
+  <div class="mt-10 mb-6">
+  <span class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+        style="font-family: 'Open Sans', sans-serif;">
+Nota informativa
+      </span>
+
+  <div class="w-16 h-px bg-red-500"></div>
+</div>
+
+<!-- INTRODUCCIÓN -->
+<h2 id="titulo1" class="text-3xl font-semibold text-stone-900 mb-20 mt-5" style="font-family: Georgia, serif;">Activos y pasivos en la vida real: definición clara, ejemplos y cómo usarlos para generar riqueza</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+<span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+I 
+</span>
+niciemos más allá de los conceptos contables para entender qué hay detrás de los activos y pasivos en la vida diaria y cómo influyen en la forma en que manejas tu dinero.
+</p>
+
+<p>
+Sin dejar de lado su definición básica, lo importante es entender por qué los activos y pasivos influyen directamente en tu situación financiera, incluso cuando no eres consciente de ello.
+</p>
+
+<p>
+Esta guía te va a ayuda a identificar activos y pasivos en la vida real, las decisiones que fortalecen tu situación financiera y cuáles la debilitan con el tiempo.
+</p>
+
+<p>
+Además, veremos cómo aplicar estos conceptos para mejorar tu situación financiera de forma progresiva.
+</p>
+
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Qué es un activo: tipos, ejemplos y cómo generan ingresos reales</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Para entender el sistema de activos, primero hay que tener claro qué representa realmente un activo en la práctica.
+</p>
+
+<p>
+Para hacerlo más claro, vamos a verlo con ejemplos simples.
+</p>
+
+</div>
+
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif; padding-top: 40px;">
+  <ul style="padding-left: 20px;">
+    <li style="margin-bottom: 12px;">
+    <strong>• Activos Productivos:</strong> Generan flujo de caja directo (ej. un inmueble rentado, acciones que pagan dividendos).
+    </li>
+    <li style="margin-bottom: 12px;">
+    <strong>• Activos de Valorización:</strong> Aquellos que aumentan su precio con el tiempo, pero no dan ingresos recurrentes (ej. un terreno bien ubicado).
+    </li>
+    <li style="margin-bottom: 12px;">
+    <strong>• Activos Intangibles:</strong> Marca personal, conocimientos especializados y propiedad intelectual que te permiten cobrar más por tus servicios.
+    </li>
+  </ul>
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Qué son los pasivos: ejemplos reales y cómo te quitan dinero sin notarlo</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+En la mayoría de los casos, se trata de obligaciones que no generan valor directo, como deudas mal estructuradas, pagos recurrentes o decisiones de consumo que comprometen ingresos futuros.
+</p>
+
+<p>
+En un sentido más amplio, los pasivos representan el uso del dinero que ya no se convierte en crecimiento, sino en obligaciones o costos inevitables dentro de cómo manejas tu dinero mes a me.
+</p>
+
+</div>
+
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif; padding-top: 40px;">
+  <ul style="padding-left: 20px;">
+    <li style="margin-bottom: 12px;">
+<strong>• Pasivos Corrientes:</strong> Compromisos a corto plazo (ej. el saldo de la tarjeta de crédito, facturas por pagar, servicios mensuales o compras a cuotas pequeñas).
+    </li>
+    <li style="margin-bottom: 12px;">
+    <strong>• Pasivos No Corrientes:</strong> Compromisos a largo plazo (ej. pagar un carro a cuotas, un crédito de estudio o ayudas económicas constantes que debes mantener en el tiempo).
+    </li>
+    <li style="margin-bottom: 12px;">
+      <strong>• Pasivos de Consumo:</strong> El error más común; deudas adquiridas para comprar bienes que pierden valor rápidamente (ej. ropa o tecnología a cuotas, algunos vehículos).
+    </li>
+  </ul>
+</div>
+
+
+
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-40 mb-10" style="font-family: Georgia, serif;">Cómo los activos y pasivos determinan tu libertad financiera</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+La diferencia real en los resultados financieros no está solo en cuánto dinero entra, sino en cómo se estructura lo que haces con ese dinero a lo largo del tiempo.
+</p>
+
+<p>
+Incluso ciertos compromisos financieros pueden convertirse en herramientas de crecimiento cuando se usan como soporte para adquirir recursos que se valoricen o generen flujo de ingresos, en lugar de solo consumirlo.
+</p>
+
+<p>
+Por eso, más que pensar en categorías fijas, lo importante es entender el rol que cumple cada decisión dentro de tu economía personal y qué efecto tiene sobre tu capacidad de generar margen en el tiempo.
+</p>
+
+</div>
+
+
+<div style="overflow-x: auto; font-family: 'Open Sans', sans-serif; margin: 80px 0;">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;">
+    <thead>
+      <tr>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">Concepto</th>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">Función Principal</th>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">Efecto en el Patrimonio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Activo</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Generación de valor</td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Inyecta capital y aumenta tu solvencia.</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;"><strong>Pasivo</strong></td>
+        <td style="padding: 8px;">Financiamiento / Gasto</td>
+        <td style="padding: 8px;">Retira capital y compromete tus ingresos futuros.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20" style="font-family: 'Open Sans', sans-serif;"> 
+Te puede interesar:
+</div>
+
+<style>
+.articulo-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+  min-height: 140px; /* altura mínima para el contenido y botón */
+}
+
+.articulo-main {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  padding: 10px 15px 50px 15px; /* padding inferior para dejar espacio al botón */
+}
+
+.articulo-img {
+  width: 200px;
+  height: 110px;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.articulo-contenido {
+  flex: 1;
+  padding-left: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articulo-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #000;
+}
+
+.articulo-descripcion {
+  font-size: 12px;
+  color: #555;
+  flex: 1;
+}
+
+/* Botón Ir a la derecha con línea */
+.articulo-boton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: center;
+}
+
+.articulo-boton span {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Texto plano a la izquierda dentro del mismo botón, visible */
+.articulo-boton-texto {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Móvil */
+@media (max-width:600px) {
+  .articulo-main {
+    flex-direction: column;
+    padding: 8px 10px 50px 10px; /* dejar espacio para botón */
+  }
+
+  .articulo-img {
+    width: 120px;
+    height: 70px;
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+
+  .articulo-contenido {
+    padding-left: 0;
+  }
+
+  .articulo-titulo {
+    font-size: 12px;
+  }
+
+  .articulo-descripcion {
+    font-size: 11px;
+  }
+
+  .articulo-boton {
+    padding: 6px 10px;
+  }
+
+  .articulo-boton span {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .articulo-boton-texto {
+    font-size: 11px;
+  }
+}
+</style>
+
+<a href="https://codigomillonario.blog/blog/psicologia-del-dinero/mentalidad-de-riqueza-no-es-pensar-en-positivo.html" class="articulo-box">
+  <img src="../../assets/png/diferencia-mentalidad-riqueza-positivo.webp" class="articulo-img">
+  <div class="articulo-main">
+    <div class="articulo-contenido">
+      <div class="articulo-titulo">
+      <h2 style="font-family: 'Open Sans', sans-serif;">Qué es la mentalidad de riqueza y por qué pensar en positivo no funciona</h2>
+      </div>
+      <div class="articulo-descripcion">
+        <strong>La mentalidad de riqueza está muy alejada del pensamiento positivo, ya que cada una funciona en contextos distintos.</strong>
+      </div>
+    </div>
+  </div>
+  <div class="articulo-boton">
+    <div class="articulo-boton-texto">Lo más leído:</div>
+    <span>Ir</span>
+  </div>
+</a>
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo2" class="text-3xl font-semibold text-stone-900 mb-10 mt-60" style="font-family: Georgia, serif;">Activos y pasivos: el sistema real para construir riqueza desde cero</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+La independencia económica no depende de un solo evento, sino de la repetición de decisiones financieras coherentes a lo largo del tiempo.
+</p>
+
+<p>
+En ese proceso, la diferencia más notable nace cuando adquieres la capacidad de identificar qué decisiones fortalecen tus finanzas y cuáles las debilitan.
+</p>
+
+<p>
+Entender esto permite ver los activos como elementos que añaden una base que sirve para alimentar tu capacidad de generar ingresos futuros, mientras que los pasivos representan compromisos que reducen margen de maniobra si no se gestionan correctamente.
+</p>
+
+<p>
+Desde esa perspectiva, tu vida empieza a dar un giro: en lugar de buscar resultados lo más pronto posible, se prioriza la creación de un mecanismo que facilite el crecimiento de un plan iniciado.
+</p>
+
+<p>
+Cuando estos fundamentos se mantienen a través del tiempo, el avance financiero deja de depender de factores ajenos y pasa a depender de lo planeado.
+</p>
+
+</div>
+
+
+
+
+<!-- MODELO DEL SISTEMA FINANCIERO -->
+<div style="margin: 100px 0; font-family: 'Open Sans', sans-serif;">
+
+  <h2 style="font-family: Georgia, serif; font-size: 28px; margin-bottom: 20px;">
+  Las 4 fases del sistema financiero para lograr independencia económica
+  </h2>
+
+  <p style="margin-bottom: 40px;">
+    Este sistema funciona como un ciclo continuo donde cada fase alimenta la siguiente.
+  </p>
+
+  <ul style="padding-left: 20px; line-height: 1.8;">
+    <li><strong>Fase 1:</strong> Reducir gasto → aumenta flujo neto disponible</li>
+    <li><strong>Fase 2:</strong> Usar flujo neto → creación de activos</li>
+    <li><strong>Fase 3:</strong> Apalancamiento → aceleración del crecimiento</li>
+    <li><strong>Fase 4:</strong> Reinversión → reinicio del ciclo con base mayor</li>
+  </ul>
+
+</div>
+
+
+
+<div style="text-align: left; font-family: 'Open Sans', sans-serif; margin-top: 100px;">
+  <strong>Fase 1:</strong>
+</div>
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-10 mb-10" style="font-family: Georgia, serif;">
+Pasivos innecesarios: cómo evitarlos y mejorar tu economía personal
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El primer movimiento dentro de cualquier sistema financiero eficiente no es aumentar ingresos, sino evitar que el dinero se pierda en un proceder que no generan retorno.
+</p>
+
+<p>
+Uno de los errores más comunes es sostener un estilo de vida que no corresponde a la capacidad real de ingresos, confundiendo el nivel de consumo con el nivel de riqueza.
+</p>
+
+<p>
+Cuando esto ocurre, el dinero no se convierte en capital disponible, sino en gasto constante que limita cualquier posibilidad de crecimiento financiero.
+</p>
+
+<p>
+El punto clave de este paso es entender que cada pasivo innecesario reduce tu flujo neto, y por lo tanto disminuye la cantidad de dinero que podrías usar para construir activos en el futuro.
+</p>
+
+<p>
+Al eliminar estas cargas, no solo reduces gastos, sino que transformas tu forma de administrar tus elementos financieros: pasas de un sistema centrado en mantener un estilo de vida, a uno centrado en generar capacidad de inversión.
+</p>
+
+<p>
+En este punto, el resultado no es riqueza todavía, sino algo más importante: <strong>flujo de efectivo disponible para construir activos reales</strong>.
+</p>
+
+</div>
+
+
+
+<div style="text-align: left; font-family: 'Open Sans', sans-serif; margin-top: 100px;">
+  <strong>Fase 2:</strong>
+</div>
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-10 mb-10" style="font-family: Georgia, serif;">Generar ingresos desde cero con activos pequeños que pueden crecer</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Una vez se libera flujo de efectivo en el Paso 1, el siguiente movimiento lógico no es ahorrar ese dinero, sino convertirlo en activos que puedan generar ganancias.
+</p>
+
+<p>
+Si aún no has iniciado la construcción de un activo, este es el punto ideal para comenzar, ya que no necesitas grandes cantidades de capital, sino consistencia y dirección.
+</p>
+
+<p>
+Por lo tanto, el error más común es pensar que los activos deben empezar siendo grandes, cuando en realidad muchos sistemas de ingresos se construyen desde ideas pequeñas que escalan con el tiempo.
+</p>
+
+<p>
+No obstante, el valor de un activo inicial no está en su tamaño, sino en su capacidad de escalar y generar más flujo del que consume para funcionar.
+</p>
+
+<p>
+Por ejemplo, un sistema digital con pocas visitas, un servicio básico o una cuenta en crecimiento pueden transformarse en fuentes de ingresos jugosas si se enfocan correctamente en aumentar su alcance y valor.
+</p>
+
+<p style="margin-top: 40px;">
+Para entender cómo este proceso se vuelve un sistema real y no solo una idea, podemos expresarlo en términos dinámicos de flujo y reinversión en el tiempo.
+</p>
+
+
+<div style="margin: 120px 0; font-family: 'Open Sans', sans-serif;">
+
+  <h3 style="font-family: Georgia, serif; font-size: 26px; margin-bottom: 20px;">
+    Modelo dinámico del sistema financiero personal
+  </h3>
+
+  <div style="overflow-x: auto;">
+    <table style="width: 100%; border-collapse: collapse; min-width: 700px; text-align: left;">
+
+      <thead>
+        <tr>
+          <th style="border-bottom: 2px solid #ccc; padding: 10px;">Variable</th>
+          <th style="border-bottom: 2px solid #ccc; padding: 10px;">Expresión</th>
+          <th style="border-bottom: 2px solid #ccc; padding: 10px;">Significado</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td style="padding: 10px;"><strong>Flujo neto (t)</strong></td>
+          <td style="padding: 10px;">Ingresos(t) − Gastos(t)</td>
+          <td style="padding: 10px;">Capacidad de inversión en el tiempo t</td>
+        </tr>
+
+        <tr>
+          <td style="padding: 10px;"><strong>Reinversión (t)</strong></td>
+          <td style="padding: 10px;">Flujo neto(t) × r</td>
+          <td style="padding: 10px;">Capital destinado a nuevos activos</td>
+        </tr>
+
+        <tr>
+          <td style="padding: 10px;"><strong>Capital de activos (t+1)</strong></td>
+          <td style="padding: 10px;">Activos(t) + Reinversión(t)</td>
+          <td style="padding: 10px;">Base que genera ingresos futuros</td>
+        </tr>
+
+        <tr>
+          <td style="padding: 10px;"><strong>Ingresos (t+1)</strong></td>
+          <td style="padding: 10px;">Activos(t+1) × retorno</td>
+          <td style="padding: 10px;">Flujo generado por el sistema</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<p style="margin-top: 30px;">
+Lo importante no son las fórmulas en sí, sino cómo cada variable afecta la siguiente en el tiempo.
+</p>
+
+<p style="margin-top: 30px;">
+Este sistema es dinámico porque no describe estados fijos, sino una evolución temporal:
+cada periodo de tiempo genera un nuevo nivel de activos,
+que a su vez redefine el flujo de ingresos del siguiente ciclo.
+Esto crea retroalimentación positiva y crecimiento compuesto.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="text-align: left; font-family: 'Open Sans', sans-serif; margin-top: 100px;">
+  <strong>Fase 3:</strong>
+</div>
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-10 mb-10" style="font-family: Georgia, serif;">Cómo usar pasivos y deuda de forma inteligente en la vida real para generar riqueza</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Hasta aquí, los pasivos dejan de ser un dolor de cabeza y pueden convertirse en una oportunidad de ingresos.
+</p>
+
+<p>
+Así que no toda deuda es negativa, por lo que el único caso en el que se vuelve peligrosa es cuando no existe una fuente de ingresos que la pueda solventar. Ya que usar apalancamiento sin haber construido primero un sistema de activos que lo respalde podría romper tu economía.
+</p>
+
+<p>
+De otro modo, una inversión responsable debería sobrepasar la mensualidad del crédito a pagar para considerarse como un buen método.
+</p>
+
+<p>
+En ese escenario, la deuda es aliada y da marcha hacia el objetivo que nos hemos propuesto.
+</p>
+
+<p>
+Lo que debemos tener en cuenta: solo es apalancamiento inteligente cuando el activo financiado tiene la capacidad de pagarse a sí mismo y generar excedente sin depender de añadir otras fuentes para apagar el incendio.
+</p>
+
+</div>
+
+
+
+
+<div style="text-align: left; font-family: 'Open Sans', sans-serif; margin-top: 100px;">
+  <strong>Fase 4:</strong>
+</div>
+
+<!-- PARRAFO -->
+<h3 class="text-2xl font-semibold text-stone-900 mt-10 mb-10" style="font-family: Georgia, serif;" >Activos y pasivos en la vida real: Repite el proceso hasta que tus activos paguen tu vida</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+No cometas el error de siempre estar inventando algo nuevo para buscar ingresos, lo que sí funciona es aprender a hacer mucho mejor lo que ya funciona. Todo lo relacionado con el dinero no se abandona, solo se potencia, se optimiza y se automatiza.
+</p>
+
+<p>
+En finanzas, muchas veces es más efectivo repetir una estrategia que ya da resultados que estar buscando constantemente “la gran oportunidad” que lo cambiará todo.
+</p>
+
+<p>
+De hecho, es muy común dejarse llevar por ideas nuevas que suenan muy atractivas, pero que en realidad no están bien planteadas y requieren ensayos que pueden costarte mucho más de lo planeado.
+</p>
+
+<p>
+Cuando eso suele pasar, se recurre al abandono, trayendo consigo pérdidas por todos lados, y está de más decir que termina costando tiempo, dinero y estabilidad.
+</p>
+
+<p>
+Para entrar en razón, la estabilidad financiera no se construye con saltos al vacío. Se construye avanzando sobre lo que ya te ha funcionado, paso a paso, con menos improvisación, más claridad y más experiencia, que se multiplica en menor tiempo y se traduce en mayor ganancia.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo3" class="text-3xl font-semibold text-stone-900 mb-10 mt-60" style="font-family: Georgia, serif;">Diferencia entre activos y pasivos en la vida real (con ejemplos claros)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">
+Quién paga la cuenta
+</p>
+
+<p>
+En la vida real, la diferencia entre un activo y un pasivo no siempre está en el objeto en sí, sino en quién asume el costo y qué efecto tiene en tu flujo de dinero con el tiempo.
+</p>
+
+<p>
+Es necesario no mezclar principios cuando se habla de ganancias netas, ya que no todo lo que parece una buena compra realmente <strong>mejora tu situación</strong>, ni todo lo que parece un gasto necesariamente te perjudica si genera retorno.
+</p>
+
+</div>
+
+
+<h4 style="font-family: Georgia, serif; font-size: 22px; margin: 80px 0 30px 0;">
+Ejemplos cotidianos: cuándo algo es un activo o un pasivo sin que te des cuenta
+</h4>
+
+<div style="overflow-x: auto; font-family: 'Open Sans', sans-serif; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;">
+    <thead>
+      <tr>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">Situación</th>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">¿Cuándo es Pasivo?</th>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">¿Cuándo es Activo?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Un carro</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando lo usas para ir al súper (genera gastos de gasolina, seguro e impuestos).</td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando lo pones a trabajar en una app o para repartir mercancía que deja utilidad.</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Tu casa</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando vives en ella (pagas servicios y reparaciones de tu bolsillo).</td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando alquilas una habitación o el garaje y ese dinero cubre parte de la hipoteca.</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;"><strong>Un celular</strong></td>
+        <td style="padding: 8px;">Cuando lo sacas a cuotas para consumir redes sociales.</td>
+        <td style="padding: 8px;">Cuando lo usas como herramienta para editar videos de clientes o gestionar ventas.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+<h4 style="font-family: Georgia, serif; font-size: 22px; margin: 80px 0 30px 0;">
+Mas ejemplos reales de activos ocultos y pasivos invisibles en tu día a día
+</h4>
+
+
+<div style="overflow-x: auto; font-family: 'Open Sans', sans-serif; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;">
+    <thead>
+      <tr>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">Situación</th>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">¿Cuándo es Pasivo?</th>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">¿Cuándo es Activo?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Una bodega o cuarto útil</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando la tienes llena de objetos que no usas (pagas por espacio sin generar valor).</td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando la alquilas a alguien que necesita guardar mercancía o herramientas.</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Suscripciones de software</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando pagas mensualidades y solo lo usas por curiosidad o entretenimiento.</td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando lo usas para trabajos pagos o automatizar procesos que ahorran tiempo.</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Un computador potente</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando lo usas solo para entretenimiento o navegación básica.</td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando produces contenido, programas o editas material que genera ingresos.</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Herramientas de construcción</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando las compras para uso puntual y luego quedan guardadas sin uso.</td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Cuando las alquilas o las usas para ofrecer servicios técnicos.</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;"><strong>Licencia de conducción</strong></td>
+        <td style="padding: 8px;">Cuando la tienes solo como documento sin generar valor económico.</td>
+        <td style="padding: 8px;">Cuando la usas para acceder a trabajos de transporte o logística mejor remunerados.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo4" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Por qué la mayoría usa mal los activos y pasivos (y ni lo sabe)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+La mayoría de personas confunde <strong>riqueza</strong> con acumulación de objetos, lo que hace que tomen decisiones financieras basadas en apariencia más que en generación de valor.
+</p>
+
+<p>
+Bajo esa lógica, muchos bienes que generan gastos constantes son percibidos como activos, cuando en realidad reducen la capacidad de crecimiento financiero al consumir flujo de dinero de forma permanente.
+</p>
+
+<p>
+Un caso común es la <strong>vivienda</strong> principal, que aunque socialmente se percibe como una inversión sólida, en muchos casos funciona como una carga económica que limita la capacidad de invertir en activos productivos.
+</p>
+
+<p>
+Este patrón se repite a medida que aumentan los ingresos: en lugar de construir sistemas que generen más flujo, se incrementa el nivel de gasto para sostener una percepción de <strong>estatus</strong> financiero.
+</p>
+
+<p>
+El problema no es solo gastar, sino comprometer el dinero en estructuras que no generan retorno, lo que reduce la capacidad de reinversión y frena el crecimiento del patrimonio real.
+</p>
+
+<p>
+Con el tiempo, esto crea una ilusión de progreso: más ingresos, más bienes, pero menos libertad financiera, ya que el dinero deja de trabajar a favor de la persona y pasa a sostener su <strong>estilo</strong> de vida.
+</p>
+
+</div>
+
+
+
+<h3 style="font-family: Georgia, serif; font-size: 24px; margin: 100px 0 30px 0;">
+10 pasivos personales invisibles que están drenando tu dinero sin que lo notes
+</h3>
+
+<div style="overflow-x: auto; font-family: 'Open Sans', sans-serif; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;">
+    <thead>
+      <tr>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">Situación</th>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">¿Por qué es un pasivo?</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Suscripciones olvidadas (Netflix, Spotify, apps premium)</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Siguen cobrando mes a mes aunque ya no las uses.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Comisión bancaria de mantenimiento</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Te descuentan dinero solo por tener la cuenta activa.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Compras en cuotas (ropa, celular, tecnología)</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Pagas intereses por cosas que ya perdieron valor o no usas.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Dominios web o proyectos abandonados</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Se renuevan automáticamente sin generar ningún ingreso.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Seguros de dispositivos antiguos</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Pagas protección por cosas que ya no usas o reemplazaste.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Almacenamiento en la nube sobredimensionado</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Pagas más espacio del que realmente necesitas.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Apps de gimnasio o fitness sin uso</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Se cobran mensualidades aunque ya no entrenas.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Streaming o TV duplicado</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Pagas varias plataformas con el mismo tipo de contenido.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Multas o pagos tardíos de servicios</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Generan recargos por mala organización de pagos básicos.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px;"><strong>Compras pequeñas financiadas</strong></td>
+        <td style="padding: 8px;">Los intereses se acumulan sin que lo notes.</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+<h3 style="font-family: Georgia, serif; font-size: 24px; margin: 150px 0 30px 0;">
+10 gastos invisibles que te hacen perder dinero todos los meses sin que lo sepas
+</h3>
+
+<div style="overflow-x: auto; font-family: 'Open Sans', sans-serif; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;">
+    <thead>
+      <tr>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">Situación</th>
+        <th style="border-bottom: 2px solid #ccc; padding: 8px;">¿Por qué afecta tus finanzas?</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Restaurantes caros sin presupuesto</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Gastas más de lo planeado en salidas improvisadas.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Comida por apps todos los días</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Pagas sobreprecio por comodidad constante.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Fiestas cada fin de semana</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Gasto recurrente en alcohol, transporte y consumo social.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Tragos para impresionar</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Dinero usado para validación social, no necesidad real.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Taxis o apps por mala planificación</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Pagos extra evitables por falta de organización.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Regalos en etapas iniciales de relaciones</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Gasto emocional sin retorno ni estabilidad.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Planes sociales por presión social</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Gastas para encajar, no por beneficio personal.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Ropa para impresionar en citas</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Consumo basado en apariencia y no en necesidad.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Apps de citas pagas impulsivas</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid #eee;">Pagos sin estrategia ni resultados claros.</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 8px;"><strong>Viajes improvisados para ver a alguien</strong></td>
+        <td style="padding: 8px;">Gasto emocional sin planificación financiera.</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20" style="font-family: 'Open Sans', sans-serif;"> 
+Te puede interesar:
+</div>
+
+<a href="https://codigomillonario.blog/blog/psicologia-del-dinero/mentalidad-rico-vs-pobre.html" class="articulo-box">
+  <img src="../../assets/png/diferencias-mentalidad-rico-pobre.webp" class="articulo-img">
+  <div class="articulo-main">
+    <div class="articulo-contenido">
+      <div class="articulo-titulo">
+      <h2 style="font-family: 'Open Sans', sans-serif;">Lo que la mentalidad de rico hace diferente y que la mayoría de los pobres nunca aplican</h2>
+      </div>
+      <div class="articulo-descripcion">
+        <strong>La realidad detras de una mentalidad de rico vs pobre</strong>
+      </div>
+    </div>
+  </div>
+  <div class="articulo-boton">
+    <div class="articulo-boton-texto">Lo más leído:</div>
+    <span>Ir</span>
+  </div>
+</a>
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo5" class="text-3xl font-semibold text-stone-900 mb-10 mt-60" style="font-family: Georgia, serif;">El cambio que transforma gastos en ingresos (sin ganar más dinero)</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Pensarás que <strong>dejar de gastar debe ser la alternativa más viable</strong>; sin embargo, al analizar cada gasto como una decisión consciente que puede tener un retorno directo o indirecto en el tiempo, comienzas a ser el constructor de tu propio camino.
+</p>
+
+<p>
+Algunas salidas de dinero son inevitables, claro está, pero eso no significa que sean neutras del todo: incluso los gastos básicos pueden tener un propósito si se utilizan para aumentar tu capacidad de generar valor o reducir futuros costos.
+</p>
+
+<p>
+Por ejemplo, una herramienta, un curso o un medio de transporte no son solo consumos, sino <strong>recursos que pueden integrarse en actividades que generen ingresos</strong> o mejoren tu eficiencia si se aplican con un sentido único.
+</p>
+
+<p>
+Cuando este patrón se repite, cambia la forma en que actúas: el gasto deja de ser un acto automático y empieza a evaluarse por su impacto en tu capacidad de producir o ahorrar a futuro.
+</p>
+
+<p>
+Con el tiempo, este enfoque reorganiza tu economía personal sin necesidad de aumentar ingresos ni depender de factores externos, como deudas o pagos más altos de forma constante, <strong>transformando completamente tu relación con el dinero</strong>.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- RESULTADO FINAL DEL SISTEMA -->
+<div style="margin-top: 120px; font-family: 'Open Sans', sans-serif;">
+
+  <h3 style="font-family: Georgia, serif; font-size: 26px; margin-bottom: 20px;">
+Cuándo un sistema financiero personal empieza a generar independencia real
+  </h3>
+
+<p>
+Este modelo deja de ser aspiracional y se convierte en un sistema funcional cuando se cumple una condición simple:
+</p>
+
+<p style="margin-top: 20px; font-size: 18px;">
+  <strong>Ingresos generados por activos ≥ gastos fijos mensuales</strong>
+</p>
+
+<p>
+A partir de ese punto, el trabajo deja de ser la fuente principal de supervivencia económica y pasa a ser una alternativa opcional de expansión.
+</p>
+
+<p>
+El flujo generado por tus activos es el valor real; además, refleja la capacidad de sostener y superar tu lista de gastos sin intervención constante de tu tiempo ni dinero adicional.
+</p>
+
+</div>
+
+
+
+
+
+<!-- PARRAFO -->
+<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">No es lo que tienes: es cómo lo haces trabajar o cómo te frena</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Para finalizar, <strong>el avance financiero no depende únicamente del esfuerzo</strong>, sino de cómo se utilizan todos los recursos que ya están disponibles en tu vida.
+</p>
+
+<p>
+No obstante, <strong>los activos y pasivos no son conceptos teóricos</strong>, sino oportunidades que se reflejan en cada decisión cotidiana como una acción positiva o negativa.
+</p>
+
+<p>
+A partir de ahí, la mejora no viene de hacer más, sino de hacer un mejor uso de lo disponible, priorizando lo que ya genera resultados, reinvirtiendo las ganancias y haciéndolo sostenible en el tiempo.
+</p>
+
+<p>
+La estabilidad financiera no es un estado puntual, sino el resultado de procesos arduos que muchos no están dispuestos a asumir por su complejidad durante la elaboración. Todo esto genera una acumulación que, de tanto repetirse en el tiempo, termina definiendo tu <strong>libertad económica</strong>.
+</p>
+
+</div>
+
+
+
+
+
+
+
+ <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+  <!-- Sección recomendada -->
+<div class="mt-5 mb-10">
+<div class="w-full h-px bg-slate-300"></div>
+
+<div class="mt-6 mb-4 text-center">
+  <p class="font-semibold text-slate-800"
+     style="font-family: 'Poppins', sans-serif;">
+    Código Millonario
+  </p>
+  <p class="text-[11px] text-slate-500 leading-relaxed"
+     style="font-family: 'Poppins', sans-serif;">
+    Medio de análisis sobre finanzas y crecimiento económico.
+  </p>
+</div>
+
+    </main>
+
+   
+
+
+   
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+  <p class="interlink-heading text-center text-sm mb-4" style=" font-family: 'Montserrat', sans-serif;">
+    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style=" font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../psicologia-del-dinero/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style=" font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style=" font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+
+    <p class="interlink-heading text-center text-sm mb-6" style=" font-family: 'Montserrat', sans-serif;">
+    Lo más leído
+    </p>
+
+    <div id="interlinkGrid"></div>
+
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+/* CONTENEDOR */
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ITEM */
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* IMAGEN */
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* CONTROLES */
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb; /* 👈 NUEVA LÍNEA */
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* BOTONES */
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+/* 🔥 FUNCIÓN PARA CORTAR TEXTO */
+function truncate(text, maxLength = 60){
+  return text.length > maxLength 
+    ? text.substring(0, maxLength) + "..." 
+    : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title, 60);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <p>Este artículo relacionado puede ayudarte a mejorar tus conocimientos financieros de forma estratégica.</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../psicologia-del-dinero/index.html")
+.then(r=>r.text())
+.then(html=>{
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+
+  const links = Array.from(temp.querySelectorAll(".article a"));
+
+  allArticles = shuffle(
+    links.map(a=>{
+      const h = a.querySelector("h3");
+      return {
+        title: h ? h.textContent.trim() : a.textContent.trim(),
+        url: a.getAttribute("href"),
+        image: a.querySelector("img")?.src || "./assets/png/default.png"
+      };
+    }).filter(a => a.title.length > 15)
+  );
+
+  renderAll(allArticles);
+})
+.catch(e=>console.error("Interlink error:", e));
+</script>
+   
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
