@@ -1133,128 +1133,317 @@ fetch('posts.json')
 
 
 
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 300px;"></div>
+
     
- <div style="height: 200px;"></div>
+
+<!-- ================= SAFE SIMPLE MENU ================= -->
+
+<div id="cm-optimizador-dinero" class="cm-optimizador">
+
+  <!-- TOGGLE -->
+  <div class="cm-toggle" data-cm-toggle>
+    <span class="cm-text">Optimiza tu dinero</span>
+    <span class="cm-arrow"></span>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="cm-content">
+
+    <a href="./herramientas/oraculo-financiero.html">Oráculo Financiero</a>
+    <a href="./herramientas/examen-financiero.html">Examen Financiero</a>
+    <a href="./herramientas/interescompuesto.html">Calculadora de Interés Compuesto</a>
+    <a href="./herramientas/presupuesto.html">Planificador de Presupuesto</a>
+    <a href="./herramientas/simulador.html">Simulador de Inversión</a>
+    <a href="./herramientas/libertadfinanciera.html">Calculadora de Libertad Financiera</a>
+
+  </div>
+
+</div>
+
+<style>
+
+/* ================= SAFE SCOPE ================= */
+#cm-optimizador-dinero{
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= POSITION ================= */
+@media (min-width:1024px){
+  #cm-optimizador-dinero{ margin-left:70px; }
+}
+
+@media (max-width:768px){
+  #cm-optimizador-dinero{ margin-left:20px; }
+}
+
+/* ================= TOGGLE ================= */
+#cm-optimizador-dinero .cm-toggle{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  cursor:pointer;
+
+  font-size:16px;
+  font-weight:500;
+
+  width:280px;
+  padding:8px 10px;
+
+  box-sizing:border-box;
+  transition:background .2s ease;
+}
+
+/* activo */
+#cm-optimizador-dinero.open .cm-toggle{
+  background:#e6e6e6;
+  color:#111;
+}
+
+/* flecha */
+#cm-optimizador-dinero .cm-arrow{
+  width:8px;
+  height:8px;
+  border-right:2px solid #111;
+  border-bottom:2px solid #111;
+  transform:rotate(45deg);
+  transition:transform .25s ease;
+  flex-shrink:0;
+}
+
+#cm-optimizador-dinero.open .cm-arrow{
+  transform:rotate(-135deg);
+}
+
+/* ================= LÍNEA ENTRE BOTÓN Y DROPDOWN ================= */
+#cm-optimizador-dinero.open::after{
+  content:"";
+  position:absolute;
+
+  top:100%;
+  left:0;
+
+  width:280px;
+  height:3px;
+
+  background:#4a4a4a;
+
+  transform:translateY(-1px);
+
+  z-index:99999; /* 👈 por encima de todo */
+  pointer-events:none;
+}
+
+/* ================= DROPDOWN ================= */
+#cm-optimizador-dinero .cm-content{
+  position:absolute;
+  top:100%;
+  left:0;
+
+  width:280px;
+
+  background:#fff;
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.35),
+    0 6px 15px rgba(0,0,0,0.25);
+
+  overflow:hidden;
+  max-height:0;
+
+  display:flex;
+  flex-direction:column;
+
+  transition:max-height .35s ease;
+  z-index:1000;
+}
+
+/* links */
+#cm-optimizador-dinero .cm-content a{
+  text-decoration:none;
+  color:#111;
+  font-size:14px;
+
+  padding:10px 14px;
+  display:block;
+
+  transition:background .2s ease;
+}
+
+#cm-optimizador-dinero .cm-content a:hover{
+  background:#f5f5f5;
+}
+
+</style>
+
+<script>
+
+(function(){
+
+  const root = document.getElementById('cm-optimizador-dinero');
+  const toggle = root.querySelector('[data-cm-toggle]');
+  const content = root.querySelector('.cm-content');
+
+  toggle.addEventListener('click', function(e){
+    e.stopPropagation();
+
+    root.classList.toggle('open');
+
+    if(root.classList.contains('open')){
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
+  });
+
+  document.addEventListener('click', function(e){
+    if(!root.contains(e.target)){
+      root.classList.remove('open');
+      content.style.maxHeight = null;
+    }
+  });
+
+})();
+
+</script>
+
+
+
+
+
+ <!-- Línea inferior -->
+  <div class="section-line"></div>
+
+
+
+
 
 
 
 <div class="section-wrapper">
 
-  <!-- BLOQUE SUPERIOR -->
-  <div class="left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
-       style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-    <span class="block">
-      Tu mentor en educación financiera
-    </span>
-  </div>
-
   <div class="title-ads-row">
 
-        <!-- H1 ORIGINAL -->
-    <div class="title-area">
-      <h1 class="blog-main-title">
-      Toma la decisión de aprender a multiplicar tu dinero y potenciar tu futuro sin límites
+      <!-- IZQUIERDA (vacío tipo revista) -->
+     <div class="left-space">
 
-  <div class="marquee-line"></div>
-        <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
-          Descubre estrategias financieras probadas, herramientas efectivas y consejos prácticos para hacer crecer
-          tu dinero de manera inteligente y construir un futuro sólido y libre de preocupaciones.
-        </p>
-      </h1>
-
-
-<div class="flex gap-4 social-container">
-  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
-     class="social-icon">
-    <i class="fab fa-tiktok"></i>
-  </a>
-
-  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
-     class="social-icon">
-    <i class="fab fa-youtube"></i>
-  </a>
-
-  <a href="https://pin.it/3tqNXYoAA" target="_blank"
-     class="social-icon">
-    <i class="fab fa-pinterest-p"></i>
-  </a>
-
-  <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
-      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
-    </svg>
-  </a>
-
-</div>
-
-
-<div class="left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-    Una forma distinta de aprender sobre dinero
+  <span class="block" style="display:inline-block; border-bottom:2px solid red; padding-bottom:3px;">
+    Principios clave
   </span>
-</div>
+    <br><br>
+
+<h2>• La riqueza no se mide por lo que compras, sino por lo 
+  que ya no necesitas hacer para sobrevivir.</h2>
+  <br>
+
+<h2>
+• El ahorro no es solo dinero acumulado; es libertad comprada 
+por adelantado para tu 'yo' del futuro.
+</h2>
+<br>
+ 
+<h2>
+• Tu salario te da de comer hoy, pero tus activos 
+(lo que pones a trabajar por ti) son los que te darán de comer 
+mañana sin que tengas que estar presente.
+</h2>
+<br>
+
+<h2>
+• No importa cuánto dinero ganes si tus gastos siempre corren más rápido que tus ingresos. 
+La fortuna se construye en la brecha entre lo que entra y lo que sale.
+</h2>
+<br>
+
+<h2>
+• Riqueza no es cuánto gastas para que otros te vean, sino cuánto tiempo podrías vivir mañana si hoy dejaras de trabajar.
+</h2>
+<br>
+
+   </div>
+
+    <!-- IZQUIERDA (H1 + imagen + texto) -->
+    <div class="title-area">
+      <div class="hero-fix">
+
+        <img src="./assets/img/gestion-financiera-habitos-dinero.webp">
+
+        <h1>
+          Cómo desarrollar una mentalidad de riqueza y mejorar tus finanzas personales
+        </h1>
+
+<p class="modern">
+Llegar a fin de mes no debería ser un deporte de riesgo.
+</p>
+
+<p>
+La gestión del dinero no es exclusiva de expertos; es una habilidad que se puede desarrollar. 
+Tomar el control es más simple de lo que parece, y el primer paso es entender que no necesitas ser un experto para mejorar tus finanzas.
+
+<a href="https://codigomillonario.blog/blog/psicologia-del-dinero/bloqueos-mentales-dinero.html" target="_blank" class="text-blue-600 hover:underline leer-mas">
+Leer más...
+</a>
+</p>
+<br><br>
+
+<h2 class="subtitulo-editorial">
+¿Cómo puedes empezar a cambiar tu mentalidad financiera?
+</h2>
+
+<p>
+Finanzas reales son libertad comprada, no lujos exhibidos.
+</p>
+
+<p>
+El primer paso no es abrir una cuenta de inversión, sino entender tus "porqués". 
+Analiza en qué gastas cuando estás estresado o qué miedos heredaste de tu familia sobre el dinero.
+<a href="https://codigomillonario.blog/blog/psicologia-del-dinero/mentalidad-rico-vs-pobre.html" target="_blank" class="text-blue-600 hover:underline leer-mas">
+Leer más...
+</a>
 
 
-<div class="articles-wrapper">
+</p>
 
-  <!-- Línea superior -->
-  <div class="section-line"></div>
+<p>
+La mentalidad financiera cambia cuando dejas de ser un espectador de tus propias cuentas. 
+Empieza por lo básico: separa tus necesidades de tus deseos y ponle nombre a cada moneda que sale de tu bolsillo.
+</p>
 
-  <div class="articles-row">
-
-    <div class="article-block">
-      <div class="text-content">
-<h3>La acumulación de<br> capital no depende de la suerte, sino de decisiones consistentes y conocimiento estratégico</h3>
-<p>El proceso detrás del progreso financiero sostenible</p>
       </div>
-      <img src="./assets/png/planificación-financiera-exitosa.webp" alt="Imagen 3" class="article-image">
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-<h3>El dinero es una consecuencia; sin mentalidad, conocimiento y sistemas sólidos, cualquier ganancia será temporal</h3>
-<p>Los fundamentos que realmente determinan la estabilidad financiera</p>
-      </div>
-      <img src="./assets/png/aumento-de-ingresos-y-ahorro.webp" alt="Imagen 4" class="article-image">
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-<h3>Construir riqueza es un proceso acumulativo donde la disciplina diaria supera cualquier resultado inmediato</h3>
-<p>Pequeñas acciones sostenidas que generan grandes resultados</p>
-      </div>
-      <img src="./assets/png/educacion-financiera-control-de-gastos-presupuesto.webp" alt="Imagen 4" class="article-image">
     </div>
 
 
-  </div>
 
-  <!-- Línea inferior -->
-  <div class="section-line"></div>
-
-</div>
-
-    </div>
-
-    <!-- ANUNCIOS -->
+    <!-- DERECHA (ANUNCIOS) -->
     <div class="ads-right">
 
-<div style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-  Lo más leído
+      <div style="font-family: Georgia, serif;">
+  <span class="block" style="display:inline-block; border-bottom:2px solid red; padding-bottom:3px;">
+    Lo más leído
   </span>
 </div>
 
-      <div class="ad-box">
+
+  <div class="ad-box">
+
         <div class="article-divider"></div>
         <a href="./blog/mentalidad-de-exito/habitos-financieros-antes-de-los-30.html" target="_blank">
-          <div class="ad-text" style="font-family: 'Open Sans', sans-serif;">¿Qué hábitos financieros diferencian a las personas que logran tener éxito económico antes de cumplir los 30?
-          <p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-          Estos son los 5 hábitos financieros que usan los jóvenes exitosos antes de los 30 para generar libertad económica.
-          </p>
-          </div>
+
+<p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
+El éxito financiero antes de los 30 no depende del azar, sino de hábitos consistentes. 
+Estas prácticas marcan la diferencia en la construcción de riqueza a largo plazo.
+</p>
+
+<h2 class="ad-text" style="font-family: Georgia, serif;">
+5 hábitos financieros que ayudan a construir riqueza antes de los 30
+</h2>
+
           <img src="./assets/png/5-habitos-financieros-personas-exitosas.webp" alt="Anuncio 1">
         </a>
         <div class="article-divider"></div>
@@ -1262,13 +1451,18 @@ fetch('posts.json')
 
       <div class="ad-box">
         <div class="article-divider"></div>
-        <a href="./blog/psicologia-del-dinero/bloqueos-mentales-dinero.html" target="_blank">
-          <div class="ad-text" style="font-family: 'Open Sans', sans-serif;">Cómo tus creencias afectan la percepción que tienes sobre el dinero y cómo cambiar para lograr estabilidad financiera.
-          <p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-          Cómo los patrones de pensamiento afectan tu percepción del dinero y por qué cambiar tu mentalidad es clave para construir riqueza sostenible.
-          </p>
-          </div>
-          <img src="./assets/png/pensamientos-erroneos-dinero.webp" alt="Anuncio 2">
+        <a href="./blog/psicologia-del-dinero/no-avanzas-economicamente-patron-diario.html" target="_blank">
+
+<p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
+Salir del bache financiero es más sencillo cuando tomas control de tus gastos. Aprende a organizar tu dinero, 
+liberar flujo de caja y crear un plan que funcione desde hoy.
+</p>
+
+<h2 class="ad-text" style="font-family: Georgia, serif;">
+Cómo salir del estancamiento financiero y mejorar tu economía personal
+</h2>
+
+          <img src="./assets/png/patron-financiero-diario-1-porciento.webp" alt="Anuncio 2">
         </a>
         <div class="article-divider"></div>
       </div>
@@ -1276,23 +1470,258 @@ fetch('posts.json')
       <div class="ad-box">
         <div class="article-divider"></div>
         <a href="./blog/negocios/ideas-de-negocios/asi-empezaria-un-negocio-hoy.html" target="_blank">
-          <div class="ad-text" style="font-family: 'Open Sans', sans-serif;">Emprender no es cuestión de ideas, sino de ejecución: método probado para comenzar tu negocio hoy.
-          <p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-          Un método comprobado para iniciar tu negocio desde hoy, enfocándote en la ejecución, decisiones consistentes y pasos prácticos que generan resultados reales.
-          </p>
-          </div>
+
+<p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
+Deja de planear y empieza a facturar: el método práctico para lanzar tu negocio hoy con pasos reales y resultados medibles.
+</p>
+
+<h2 class="ad-text" style="font-family: Georgia, serif;">
+Qué hacer para empezar un negocio desde cero paso a paso
+</h2>
+
           <img src="./assets/png/asi-empezaria-un-negocio-desde-cero.webp" alt="Anuncio 3">
         </a>
         <div class="article-divider"></div>
       </div>
 
 
+
+
     </div>
+
   </div>
+
 </div>
 
 <style>
-/* BLOQUE COMPLETAMENTE A LA IZQUIERDA */
+/* ============================= */
+/* RESET */
+/* ============================= */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* ============================= */
+/* CONTENEDOR GENERAL */
+/* ============================= */
+.section-wrapper{
+  width:100%;
+}
+
+/* ============================= */
+/* LAYOUT REVISTA (3 COLUMNAS) */
+/* ============================= */
+.title-ads-row{
+  display:grid;
+  grid-template-columns: 160px minmax(0, 640px) 260px; /* 👈 FIX REAL */
+  gap:40px;
+  max-width:1200px;
+  margin:0 auto;
+  padding:20px 0;
+}
+
+/* IZQUIERDA */
+.left-space{
+  width:100%;
+}
+
+/* ============================= */
+/* CENTRO */
+/* ============================= */
+.center-content{
+  display:flex;
+  justify-content:flex-start;
+  padding-right:20px;
+  min-width:0; /* 👈 evita que rompa el grid */
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+.hero-fix{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  width:100%;
+  max-width:600px; /* 👈 limita el contenido */
+}
+
+/* IMAGEN */
+.hero-fix img{
+  width:100%;
+  max-width:600px;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  margin-bottom:15px;
+}
+
+/* H1 */
+.hero-fix h1{
+  font-family: Georgia, serif;
+  font-size:2rem;
+  font-weight:800;
+  line-height:1.3;
+  width:100%;
+  text-align:left;
+}
+
+/* TEXTO */
+.hero-fix p{
+  font-family: Arial, sans-serif;
+  font-size:18px;
+  width:100%;
+  margin-top:10px;
+}
+
+/* ============================= */
+/* ANUNCIOS DERECHA */
+/* ============================= */
+.ads-right{
+  width:260px;
+  min-width:260px; /* 👈 PROTEGE DEFORMACIÓN */
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+  border-left:1px solid #d1d5db;
+  padding-left:20px;
+}
+
+/* ANUNCIO */
+.ad-box a{
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column-reverse;
+}
+
+/* TEXTO ANUNCIO */
+.ad-text{
+  font-family:Arial,sans-serif;
+  font-size:14px;
+  font-weight:600;
+  margin-top:8px;
+  color:#111;
+}
+
+/* HOVER */
+@media (min-width:769px){
+  .ad-box a:hover .ad-text{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+}
+
+/* IMAGEN ANUNCIO */
+.ad-box img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  display:block;
+}
+
+/* ============================= */
+/* STICKY ADS */
+/* ============================= */
+@media (min-width:1024px){
+  .ads-right{
+    position:sticky;
+    top:100px;
+  }
+}
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+@media (max-width:1024px){
+
+  .title-ads-row{
+    grid-template-columns: 1fr 260px;
+  }
+
+  .left-space{
+    display:none;
+  }
+
+  .hero-fix h1{
+    font-size:1.8rem;
+  }
+}
+
+/* ============================= */
+/* MÓVIL */
+/* ============================= */
+@media (max-width:768px){
+
+  .title-ads-row{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .center-content{
+    width:100%;
+    padding:0 15px;
+  }
+
+  .hero-fix{
+    align-items:flex-start;
+  }
+
+  .hero-fix h1{
+    font-size:1.4rem;
+  }
+
+  .hero-fix p{
+    font-size:16px;
+  }
+
+  .ads-right{
+    width:100%;
+    min-width:unset;
+    border-left:none;
+    padding-left:0;
+    margin-top:40px;
+    align-items:center;
+  }
+
+  .ad-box{
+    width:85%;
+    max-width:400px;
+  }
+}
+
+.left-space{
+  border-right:1px solid #d1d5db;
+  padding-right:20px;
+}
+
+
+
+
+body p{
+  font-family: Georgia, serif !important;
+  font-size:16px;
+  line-height:1.7;
+  color:#222;
+}
+.classic{
+  font-family: Georgia, serif;
+}
+
+.modern{
+  font-family: Arial, sans-serif;
+}
+</style>
+
+   
+
+
+
+<style>
+/* CSS DE LOS ANUNCIOS */
 .section-wrapper{
   width:100%;
   margin:0;
@@ -1312,32 +1741,49 @@ fetch('posts.json')
   max-width:800px;
 }
 
-/* ANUNCIOS */
+/* ANUNCIOS (AJUSTADO + LÍNEA) */
 .ads-right{
-  width:320px;
+  width:260px;           
   display:flex;
   flex-direction:column;
   gap:25px;
+  margin-left:auto;      
+  margin-right:80px;
+  padding-left:20px;
+  border-left:1px solid #d1d5db;
 }
 
 /* ANUNCIO */
 .ad-box a{
   text-decoration:none;
   color:inherit;
-  display:block;
+  display:flex;
+  flex-direction:column-reverse;
 }
 
+/* H2 (TÍTULO) */
 .ad-text{
   font-family:Arial,sans-serif;
   font-size:14px;
   font-weight:600;
-  margin-bottom:8px;
+  margin-top:8px;
+  margin-bottom:0;
   color:#111;
+}
+
+/* EFECTO LÍNEA SOLO EN PC */
+@media (min-width:769px){
+  .ad-box a:hover .ad-text{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px; /* 👈 separación perfecta del texto */
+  }
 }
 
 /* IMÁGENES RECTANGULARES */
 .ad-box img{
   width:100%;
+  max-width:260px;       
   aspect-ratio:16/9;
   object-fit:cover;
   border-radius:0;
@@ -1372,10 +1818,9 @@ fetch('posts.json')
 
   .title-ads-row{
     flex-direction:column;
-    align-items:center; /* anuncios centrados */
+    align-items:center;
   }
 
-  /* BLOQUE SUPERIOR: alineado a la izquierda en móvil */
   .left-block{
     text-align:left;
     align-items:flex-start !important;
@@ -1383,12 +1828,11 @@ fetch('posts.json')
     margin-right:5%;
   }
 
-  /* H1 tipo editorial en móvil */
   .title-area{
     max-width:90%; 
     margin-left:auto;
     margin-right:auto;
-    text-align:left; /* alineado a la izquierda dentro del contenedor centrado */
+    text-align:left;
   }
 
   .blog-main-title{
@@ -1401,10 +1845,12 @@ fetch('posts.json')
     width:100%;
     align-items:center;
     margin-top:40px;
+    border-left:none;
+    padding-left:0;
   }
 
   .ad-box{
-    width:85%; /* no ocupa toda la pantalla */
+    width:85%;
     max-width:400px;
   }
 
@@ -1419,179 +1865,60 @@ fetch('posts.json')
 </style>
 
 
-<!-- TAMAÑO INCONO TWITTER -->
+
+
+
+
+
+
+
+
+
+
+  <!-- CSS LINEA PRINCIPAL -->
 <style>
-.social-icon svg{
-  width:14px !important;
-  height:14px !important;
+.section-line{
+  height:1px;
+  width:100%;
+  background-color:#d1d5db;
+  margin:20px 0;
 }
 </style>
 
 
-<style>
-/* 🖥 Desktop: alineado a la izquierda */
-.left-block {
-  margin-left: 20px;
-  margin-top: 80px;  /* reemplaza mt-20 de Tailwind */
-  margin-right: 0;
-}
+<div style="margin-left:25px;">
+  <h2 class="subtitulo-editorial">
+    Tendencias
+  </h2>
+</div>
 
-/* 📱 Mobile: centrado y margen superior más grande */
-@media (max-width: 768px) {
-  .left-block {
-    margin: 40px auto 0 auto; /* suficiente separación arriba en móvil */
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-</style>
-
-<!-- ESTILOS DE LAS TAREJETAS Una forma distinta de aprender sobre dinero -->
 
 <style>
-.articles-wrapper {
-  max-width: 64rem;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.subtitulo-editorial{
+  font-family: Georgia, serif;
+  font-size:1.6rem;   /* 👈 base (móvil/tablet) */
+  font-weight:700;
+  line-height:1.25;
+  color:#111;
+
+  width:100%;
+  text-align:left;
+  letter-spacing:-0.3px;
+
+  margin-top:20px;
+  margin-bottom:15px;
 }
 
-.section-line {
-  height: 1px;
-  width: 100%;
-  background-color: #d1d5db;
-  margin: 16px 0;
-}
-
-.articles-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow-x: hidden;
-}
-
-.article-block {
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 12px 0;
-  background: none;
-  border: none;
-  transition: transform 0.2s;
-}
-
-.article-block:hover {
-  transform: translateY(-2px);
-}
-
-.text-content {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
-
-.article-block h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1c1c1c;
-  margin: 0 0 4px 0;
-}
-
-.article-block p {
-  font-size: 0.8rem;
-  color: #555;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.article-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 4px;
-  display: block;
-  margin-bottom: 8px;
-}
-
-/* Línea divisoria entre artículos */
-.article-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #e5e7eb;
-  margin-top: 12px;
-  display: none; /* solo se activa en móvil */
-}
-
-@media (max-width: 768px) {
-  .articles-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 15px;
-  }
-  .articles-row {
-    flex-direction: column; /* apilados verticalmente */
-    gap: 0;
-  }
-  .article-block {
-    flex: 1 0 100%;
-    margin-bottom: 0;
-    background: #fff;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  .article-divider {
-    display: block; /* línea divisoria visible en móvil */
+/* SOLO PC */
+@media (min-width:1024px){
+  .subtitulo-editorial{
+    font-size:2.2rem;   /* 👈 grande en PC */
+    text-align:left;   /* 👈 izquierda */
   }
 }
 </style>
 
 
-<!-- ESTILO DE LOS ICONOS DE REDES SOCIALES -->
-
-<style>
-.social-container {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #777;
-  margin-left: 20px;
-}
-
-.social-icon {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #777;  /* borde más delgado */
-  border-radius: 50%;
-  color: #777; 
-  background: transparent;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.social-icon svg {
-  width: 20px;  /* tamaño ajustado */
-  height: 20px;
-  fill: currentColor;
-  vertical-align: middle;
-}
-
-.social-icon:hover {
-  color: #fff;
-  background: #777;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-</style>
 
 
 
@@ -1604,7 +1931,6 @@ fetch('posts.json')
   <!-- Sidebar ahora queda a la IZQUIERDA -->
   <aside class="sidebar">
 
-    <h2 class="sidebar-title">Tendencias</h2>
   <div class="w-full h-px bg-slate-300"></div>
 
 
@@ -1708,13 +2034,10 @@ esta guía te mostrará paso a paso cuánto deberías haber ahorrado a cada edad
   <!-- Sidebar izquierda -->
   <aside class="sidebar">
 
-  <h2 class="sidebar-title">Finanzas y Oportunidades</h2>
-
-
-<div style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-    Secciones
-  </span>
+<div style="margin-left:25px;">
+  <h2 class="subtitulo-editorial">
+  Finanzas y Oportunidades
+  </h2>
 </div>
 
   <div class="w-full h-px bg-slate-300"></div>
@@ -1793,7 +2116,13 @@ imperio financiero desde cero visto desde un punto de vista financiero que aport
   <!-- Sidebar izquierda -->
   <aside class="sidebar">
 
-  <h2 class="sidebar-title">Aprende a dominar el juego</h2>
+
+<div style="margin-left:25px;">
+  <h2 class="subtitulo-editorial">
+  Aprende a dominar el juego
+  </h2>
+</div>
+
 
  <div class="w-full h-px bg-slate-300"></div>
 
@@ -1967,7 +2296,11 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 <section class="main-layout reviews-block">
   <aside class="sidebar">
 
-    <h2 class="sidebar-title">Lo que dicen nuestros lectores</h2>
+<div style="margin-left:25px;">
+  <h2 class="subtitulo-editorial">
+Lo que dicen nuestros lectores
+  </h2>
+</div>
 
       <div class="w-full h-px bg-slate-300"></div>
 
