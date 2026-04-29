@@ -1804,7 +1804,6 @@ Qué hacer para empezar un negocio desde cero paso a paso
    
 
 
-
 <style>
 /* CSS DE LOS ANUNCIOS */
 .section-wrapper{
@@ -1861,7 +1860,7 @@ Qué hacer para empezar un negocio desde cero paso a paso
   .ad-box a:hover .ad-text{
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-underline-offset: 3px; /* 👈 separación perfecta del texto */
+    text-underline-offset: 3px;
   }
 }
 
@@ -1889,8 +1888,6 @@ Qué hacer para empezar un negocio desde cero paso a paso
   margin-right:0;
 }
 
-/* RESPONSIVE */
-
 /* Tablets */
 @media (max-width:1024px){
   .blog-main-title{
@@ -1898,19 +1895,12 @@ Qué hacer para empezar un negocio desde cero paso a paso
   }
 }
 
-/* Móviles */
+/* 🔥 MÓVILES ARREGLADO */
 @media (max-width:768px){
 
   .title-ads-row{
     flex-direction:column;
     align-items:center;
-  }
-
-  .left-block{
-    text-align:left;
-    align-items:flex-start !important;
-    margin-left:5%;
-    margin-right:5%;
   }
 
   .title-area{
@@ -1929,14 +1919,27 @@ Qué hacer para empezar un negocio desde cero paso a paso
   .ads-right{
     width:100%;
     align-items:center;
-    margin-top:40px;
+    justify-content:center;
+    margin:40px auto 0 auto; /* ← centrado real */
     border-left:none;
     padding-left:0;
   }
 
   .ad-box{
-    width:85%;
-    max-width:400px;
+    width:90%;
+    max-width:320px; /* ← evita que el texto se salga */
+    margin:0 auto;
+  }
+
+  .ad-box img{
+    width:100%;
+    max-width:100%;
+  }
+
+  .ad-text{
+    width:100%;
+    text-align:left;
+    word-wrap:break-word; /* ← evita desbordes */
   }
 
 }
@@ -1946,7 +1949,6 @@ Qué hacer para empezar un negocio desde cero paso a paso
     font-size:1.8rem;
   }
 }
-
 </style>
 
 
@@ -1965,7 +1967,7 @@ Qué hacer para empezar un negocio desde cero paso a paso
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  margin: 0 auto; /* ← centrado horizontal */
+  margin: 0 auto;
   max-width:900px;
 }
 
@@ -1992,7 +1994,7 @@ Qué hacer para empezar un negocio desde cero paso a paso
 /* IMAGEN DERECHA */
 .imagen-lado {
   max-width:260px;
-  margin-top: 30px; /* ← baja la imagen */
+  margin-top: 30px;
 }
 
 .imagen-lado img{
@@ -2001,15 +2003,26 @@ Qué hacer para empezar un negocio desde cero paso a paso
   display:block;
 }
 
-/* Responsive */
+/* 🔥 FIX MÓVIL */
 @media (max-width: 900px){
   .contenedor-finanzas{
     flex-direction: column;
+    padding: 0 15px; /* ← evita que todo se salga */
+  }
+
+  .texto-contenido{
+    max-width:100%;
   }
 
   .imagen-lado{
     max-width:100%;
+    width:100%;
     margin-top:20px;
+  }
+
+  .imagen-lado img{
+    width:100%;
+    max-width:100%;
   }
 }
 </style>
@@ -2166,7 +2179,6 @@ Qué hacer para empezar un negocio desde cero paso a paso
 </div>
 
 
-<div class="block md:hidden" style="height:30px; margin:30px 0;"></div>
 
 
 
@@ -2553,11 +2565,7 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 <section class="main-layout reviews-block">
   <aside class="sidebar">
 
-    <div class="headline-wrapper">
-      <h2 class="subtitulo-editorial">
-        Pequeños cambios financieros que pueden mejorar tu relación con el dinero
-      </h2>
-    </div>
+
 
     <div class="w-full h-px bg-slate-300"></div>
 
