@@ -1132,6 +1132,32 @@ fetch('posts.json')
 </style>
 
 
+ <!-- CSS ESTILO PARA TITULOS TIPOGRAFIA -->
+<style>
+.subtitulo-editorial{
+  font-family: Georgia, serif;
+  font-size:1.6rem;   /* 👈 base (móvil/tablet) */
+  font-weight:700;
+  line-height:1.25;
+  color:#111;
+
+  width:100%;
+  text-align:left;
+  letter-spacing:-0.3px;
+
+  margin-top:20px;
+  margin-bottom:15px;
+}
+
+/* SOLO PC */
+@media (min-width:1024px){
+  .subtitulo-editorial{
+    font-size:2.2rem;   /* 👈 grande en PC */
+    text-align:left;   /* 👈 izquierda */
+  }
+}
+</style>
+
 
 
 
@@ -1139,6 +1165,9 @@ fetch('posts.json')
  <div style="height: 300px;"></div>
 
     
+
+<div class="section-line-short"></div> <!-- línea corta -->
+
 
 <!-- ================= SAFE SIMPLE MENU ================= -->
 
@@ -1279,8 +1308,9 @@ fetch('posts.json')
 #cm-optimizador-dinero .cm-content a:hover{
   background:#f5f5f5;
 }
-
 </style>
+
+
 
 <script>
 
@@ -1316,11 +1346,39 @@ fetch('posts.json')
 
 
 
+<div class="section-line"></div>       <!-- línea larga -->
 
- <!-- Línea inferior -->
-  <div class="section-line"></div>
+<!-- CSS LINEAS PRINCIPALES -->
+<style>
+.section-line{
+  height:1px;
+  width:100%;
+  background-color:#d1d5db;
+  margin:5px 0; /* espacio MUY pequeño arriba y abajo */
+}
 
+/* Línea corta centrada (estilo revista) */
+.section-line-short{
+  height:1px;
+  width:75%;
+  background-color:#d1d5db;
+  margin:5px auto; /* centrada con poco espacio */
+}
 
+/* Ajuste para tablet */
+@media (max-width: 768px){
+  .section-line-short{
+    width:85%;
+  }
+}
+
+/* Ajuste para móviles pequeños */
+@media (max-width: 480px){
+  .section-line-short{
+    width:90%;
+  }
+}
+</style>
 
 
 
@@ -1350,21 +1408,58 @@ por adelantado para tu 'yo' del futuro.
  
 <h2>
 • Tu salario te da de comer hoy, pero tus activos 
-(lo que pones a trabajar por ti) son los que te darán de comer 
-mañana sin que tengas que estar presente.
+ son los que te darán de comer 
+mañana sin estar presente.
 </h2>
+
+<br><br>
+
+
+  <span class="block" style="display:inline-block; border-bottom:2px solid red; padding-bottom:3px;">
+  Destacados
+  </span>
+    <br><br>
+
+
+  <div class="ad-box">
+
+        <div class="article-divider"></div>
+        <a href="./blog/fundamentos-del-dinero/activos-y-pasivos-en-la-vida-real.html" target="_blank">
+
+<p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
+¿Quieres entender cómo funciona el dinero?
+</p>
+
+<h2 class="ad-text" style="font-family: Georgia, serif;">
+ACTIVOS Y PASIVOS
+</h2>
+
+          <img src="./assets/png/activos-y-pasivos-ejemplos-desde-cero.webp" alt="Anuncio 1">
+        </a>
+        <div class="article-divider"></div>
+      </div>
+
 <br>
 
-<h2>
-• No importa cuánto dinero ganes si tus gastos siempre corren más rápido que tus ingresos. 
-La fortuna se construye en la brecha entre lo que entra y lo que sale.
-</h2>
-<br>
 
-<h2>
-• Riqueza no es cuánto gastas para que otros te vean, sino cuánto tiempo podrías vivir mañana si hoy dejaras de trabajar.
+  <div class="ad-box">
+
+        <div class="article-divider"></div>
+        <a href="./blog/psicologia-del-dinero/no-ahorrar-te-roba-libertad-financiera.html" target="_blank">
+
+<p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
+¿Por qué vivir en modo supervivencia?
+</p>
+
+<h2 class="ad-text" style="font-family: Georgia, serif;">
+FALTA DE AHORRO
 </h2>
-<br>
+
+          <img src="./assets/png/sin-ahorro-no-decides-tu.webp" alt="Anuncio 1">
+        </a>
+        <div class="article-divider"></div>
+      </div>
+
 
    </div>
 
@@ -1375,17 +1470,13 @@ La fortuna se construye en la brecha entre lo que entra y lo que sale.
         <img src="./assets/img/gestion-financiera-habitos-dinero.webp">
 
         <h1>
-          Cómo desarrollar una mentalidad de riqueza y mejorar tus finanzas personales
+         Cómo mejorar tus finanzas personales y desarrollar una mentalidad financiera sólida
         </h1>
 
-<p class="modern">
-Llegar a fin de mes no debería ser un deporte de riesgo.
-</p>
-
 <p>
-La gestión del dinero no es exclusiva de expertos; es una habilidad que se puede desarrollar. 
-Tomar el control es más simple de lo que parece, y el primer paso es entender que no necesitas ser un experto para mejorar tus finanzas.
-
+Llegar a fin de mes no debería ser un deporte de riesgo. Por eso, 
+la gestión del dinero no es exclusiva de expertos; es una habilidad que se puede desarrollar. 
+Tomar el control es más simple de lo que parece, y el primer paso es entender que no necesitas ser un experto para mejorar tus finanzas.  
 <a href="https://codigomillonario.blog/blog/psicologia-del-dinero/bloqueos-mentales-dinero.html" target="_blank" class="text-blue-600 hover:underline leer-mas">
 Leer más...
 </a>
@@ -1393,26 +1484,21 @@ Leer más...
 <br><br>
 
 <h2 class="subtitulo-editorial">
-¿Cómo puedes empezar a cambiar tu mentalidad financiera?
+Hábitos financieros inteligentes para ahorrar dinero, organizar tus gastos y construir estabilidad económica a largo plazo
 </h2>
 
 <p>
-Finanzas reales son libertad comprada, no lujos exhibidos.
-</p>
-
-<p>
-El primer paso no es abrir una cuenta de inversión, sino entender tus "porqués". 
-Analiza en qué gastas cuando estás estresado o qué miedos heredaste de tu familia sobre el dinero.
+Las finanzas reales son libertad comprada, no lujos exhibidos.  
+El mejor movimiento no es abrir una cuenta de inversión, sino entender tus porqués.  
+Analiza en qué gastas cuando estás estresado o qué miedos heredaste de tu familia sobre el dinero.  
 <a href="https://codigomillonario.blog/blog/psicologia-del-dinero/mentalidad-rico-vs-pobre.html" target="_blank" class="text-blue-600 hover:underline leer-mas">
 Leer más...
 </a>
-
-
 </p>
 
 <p>
-La mentalidad financiera cambia cuando dejas de ser un espectador de tus propias cuentas. 
-Empieza por lo básico: separa tus necesidades de tus deseos y ponle nombre a cada moneda que sale de tu bolsillo.
+La mentalidad financiera cambia cuando dejas de ser un espectador de tus propias cuentas.
+Empieza por lo básico. Separa tus necesidades de tus deseos y ponle nombre a cada moneda que sale de tu bolsillo.
 </p>
 
       </div>
@@ -1436,8 +1522,7 @@ Empieza por lo básico: separa tus necesidades de tus deseos y ponle nombre a ca
         <a href="./blog/mentalidad-de-exito/habitos-financieros-antes-de-los-30.html" target="_blank">
 
 <p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
-El éxito financiero antes de los 30 no depende del azar, sino de hábitos consistentes. 
-Estas prácticas marcan la diferencia en la construcción de riqueza a largo plazo.
+Hábitos financieros prácticos para construir riqueza desde joven.
 </p>
 
 <h2 class="ad-text" style="font-family: Georgia, serif;">
@@ -1454,8 +1539,7 @@ Estas prácticas marcan la diferencia en la construcción de riqueza a largo pla
         <a href="./blog/psicologia-del-dinero/no-avanzas-economicamente-patron-diario.html" target="_blank">
 
 <p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
-Salir del bache financiero es más sencillo cuando tomas control de tus gastos. Aprende a organizar tu dinero, 
-liberar flujo de caja y crear un plan que funcione desde hoy.
+Tu situación financiera puede cambiar antes de lo que imaginas.
 </p>
 
 <h2 class="ad-text" style="font-family: Georgia, serif;">
@@ -1472,7 +1556,7 @@ Cómo salir del estancamiento financiero y mejorar tu economía personal
         <a href="./blog/negocios/ideas-de-negocios/asi-empezaria-un-negocio-hoy.html" target="_blank">
 
 <p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
-Deja de planear y empieza a facturar: el método práctico para lanzar tu negocio hoy con pasos reales y resultados medibles.
+Crear un negocio rentable comienza con bases sólidas y visión clara.
 </p>
 
 <h2 class="ad-text" style="font-family: Georgia, serif;">
@@ -1515,16 +1599,20 @@ Qué hacer para empezar un negocio desde cero paso a paso
 /* ============================= */
 .title-ads-row{
   display:grid;
-  grid-template-columns: 160px minmax(0, 640px) 260px; /* 👈 FIX REAL */
+  grid-template-columns:220px minmax(0,620px) 260px;
   gap:40px;
   max-width:1200px;
   margin:0 auto;
   padding:20px 0;
 }
 
-/* IZQUIERDA */
+/* ============================= */
+/* COLUMNA IZQUIERDA */
+/* ============================= */
 .left-space{
   width:100%;
+  border-right:1px solid #d1d5db;
+  padding-right:20px;
 }
 
 /* ============================= */
@@ -1534,7 +1622,7 @@ Qué hacer para empezar un negocio desde cero paso a paso
   display:flex;
   justify-content:flex-start;
   padding-right:20px;
-  min-width:0; /* 👈 evita que rompa el grid */
+  min-width:0;
 }
 
 /* ============================= */
@@ -1545,10 +1633,10 @@ Qué hacer para empezar un negocio desde cero paso a paso
   flex-direction:column;
   align-items:flex-start;
   width:100%;
-  max-width:600px; /* 👈 limita el contenido */
+  max-width:600px;
 }
 
-/* IMAGEN */
+/* IMAGEN HERO */
 .hero-fix img{
   width:100%;
   max-width:600px;
@@ -1557,9 +1645,9 @@ Qué hacer para empezar un negocio desde cero paso a paso
   margin-bottom:15px;
 }
 
-/* H1 */
+/* TITULO */
 .hero-fix h1{
-  font-family: Georgia, serif;
+  font-family:Georgia, serif;
   font-size:2rem;
   font-weight:800;
   line-height:1.3;
@@ -1567,20 +1655,20 @@ Qué hacer para empezar un negocio desde cero paso a paso
   text-align:left;
 }
 
-/* TEXTO */
+/* PÁRRAFOS HERO */
 .hero-fix p{
-  font-family: Arial, sans-serif;
+  font-family:Arial, sans-serif;
   font-size:18px;
   width:100%;
   margin-top:10px;
 }
 
 /* ============================= */
-/* ANUNCIOS DERECHA */
+/* COLUMNA DERECHA */
 /* ============================= */
 .ads-right{
   width:260px;
-  min-width:260px; /* 👈 PROTEGE DEFORMACIÓN */
+  min-width:260px;
   display:flex;
   flex-direction:column;
   gap:25px;
@@ -1588,7 +1676,9 @@ Qué hacer para empezar un negocio desde cero paso a paso
   padding-left:20px;
 }
 
-/* ANUNCIO */
+/* ============================= */
+/* TARJETAS ARTÍCULOS */
+/* ============================= */
 .ad-box a{
   text-decoration:none;
   color:inherit;
@@ -1596,25 +1686,16 @@ Qué hacer para empezar un negocio desde cero paso a paso
   flex-direction:column-reverse;
 }
 
-/* TEXTO ANUNCIO */
+/* TITULO TARJETA */
 .ad-text{
-  font-family:Arial,sans-serif;
+  font-family:Arial, sans-serif;
   font-size:14px;
   font-weight:600;
   margin-top:8px;
   color:#111;
 }
 
-/* HOVER */
-@media (min-width:769px){
-  .ad-box a:hover .ad-text{
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
-}
-
-/* IMAGEN ANUNCIO */
+/* IMAGEN TARJETA */
 .ad-box img{
   width:100%;
   aspect-ratio:16/9;
@@ -1622,9 +1703,16 @@ Qué hacer para empezar un negocio desde cero paso a paso
   display:block;
 }
 
-/* ============================= */
-/* STICKY ADS */
-/* ============================= */
+/* HOVER SOLO PC */
+@media (min-width:769px){
+  .ad-box a:hover .ad-text{
+    text-decoration:underline;
+    text-decoration-thickness:1px;
+    text-underline-offset:3px;
+  }
+}
+
+/* STICKY DERECHA SOLO PC */
 @media (min-width:1024px){
   .ads-right{
     position:sticky;
@@ -1638,7 +1726,7 @@ Qué hacer para empezar un negocio desde cero paso a paso
 @media (max-width:1024px){
 
   .title-ads-row{
-    grid-template-columns: 1fr 260px;
+    grid-template-columns:1fr 260px;
   }
 
   .left-space{
@@ -1651,7 +1739,7 @@ Qué hacer para empezar un negocio desde cero paso a paso
 }
 
 /* ============================= */
-/* MÓVIL */
+/* MOBILE */
 /* ============================= */
 @media (max-width:768px){
 
@@ -1659,6 +1747,7 @@ Qué hacer para empezar un negocio desde cero paso a paso
     display:flex;
     flex-direction:column;
     align-items:center;
+    gap:30px;
   }
 
   .center-content{
@@ -1685,6 +1774,7 @@ Qué hacer para empezar un negocio desde cero paso a paso
     padding-left:0;
     margin-top:40px;
     align-items:center;
+    position:static;
   }
 
   .ad-box{
@@ -1693,29 +1783,24 @@ Qué hacer para empezar un negocio desde cero paso a paso
   }
 }
 
-.left-space{
-  border-right:1px solid #d1d5db;
-  padding-right:20px;
-}
-
-
-
-
-body p{
-  font-family: Georgia, serif !important;
+/* ============================= */
+/* TIPOGRAFÍA LOCAL */
+/* ============================= */
+.section-wrapper p{
+  font-family:Georgia, serif;
   font-size:16px;
   line-height:1.7;
   color:#222;
 }
+
 .classic{
-  font-family: Georgia, serif;
+  font-family:Georgia, serif;
 }
 
 .modern{
-  font-family: Arial, sans-serif;
+  font-family:Arial, sans-serif;
 }
 </style>
-
    
 
 
@@ -1867,59 +1952,218 @@ body p{
 
 
 
+<div class="section-line"></div>       <!-- línea larga -->
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 200px;"></div>
 
 
 
-
-
-
-
-
-  <!-- CSS LINEA PRINCIPAL -->
 <style>
-.section-line{
-  height:1px;
-  width:100%;
-  background-color:#d1d5db;
-  margin:20px 0;
+.contenedor-finanzas {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 0 auto; /* ← centrado horizontal */
+  max-width:900px;
 }
-</style>
 
+/* COLUMNA IZQUIERDA (texto) */
+.texto-contenido{
+  max-width:700px;
+}
 
-<div style="margin-left:25px;">
-  <h2 class="subtitulo-editorial">
-    Tendencias
-  </h2>
-</div>
-
-
-<style>
-.subtitulo-editorial{
+/* Texto principal */
+.subtitulo-editorial {
   font-family: Georgia, serif;
-  font-size:1.6rem;   /* 👈 base (móvil/tablet) */
-  font-weight:700;
-  line-height:1.25;
-  color:#111;
-
-  width:100%;
-  text-align:left;
-  letter-spacing:-0.3px;
-
-  margin-top:20px;
-  margin-bottom:15px;
 }
 
-/* SOLO PC */
-@media (min-width:1024px){
-  .subtitulo-editorial{
-    font-size:2.2rem;   /* 👈 grande en PC */
-    text-align:left;   /* 👈 izquierda */
+/* TEXTO DEBAJO DEL H2 */
+.texto-derecha {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000;
+  font-family: Arial, sans-serif;
+  opacity: 0.9;
+  margin-top:10px;
+}
+
+/* IMAGEN DERECHA */
+.imagen-lado {
+  max-width:260px;
+  margin-top: 30px; /* ← baja la imagen */
+}
+
+.imagen-lado img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .contenedor-finanzas{
+    flex-direction: column;
+  }
+
+  .imagen-lado{
+    max-width:100%;
+    margin-top:20px;
   }
 }
 </style>
 
+<div class="contenedor-finanzas">
+
+  <div class="texto-contenido">
+    <h2 class="subtitulo-editorial">
+      ¿Por dónde empezar a mejorar tus finanzas?
+    </h2>
+
+    <p class="texto-derecha">
+      Construir una mejor relación con el dinero no depende de hacerlo todo perfecto desde el primer día. 
+      A veces solo necesitas información clara, estrategias prácticas y una guía que te ayude a avanzar con mayor dirección financiera.
+    </p>
+  </div>
+
+  <div class="imagen-lado">
+    <img src="./assets/png/organizacion-economica.webp" alt="Imagen financiera">
+  </div>
+
+</div>
 
 
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 50px;"></div>
+
+
+<style>
+.blog-section {
+  background-color: #000;
+  padding: 60px 20px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.blog-main-title {
+  font-family: Georgia, serif !important;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: left;
+  color: #fff;
+  margin: 30px 0 20px 0;
+  max-width: 800px;
+}
+
+/* TEXTO DERECHO */
+.side-message {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  max-width: 260px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 1.9rem;
+    max-width: 600px;
+  }
+
+  .side-message {
+    right: 20px;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+
+  .side-message {
+    position: static;
+    margin-top: 20px;
+    font-size: 12px;
+    max-width: 100%;
+  }
+}
+
+.blog-section p{
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #fff;
+  max-width: 700px;
+  margin: 0;
+  text-align: left;
+}
+
+.classic{
+  font-family: Georgia, serif;
+}
+
+.modern{
+  font-family: Arial, sans-serif;
+}
+</style>
+
+<div class="blog-section">
+
+  <div style="font-family: Georgia, serif; margin-bottom: 10px; color: #fff;">
+    <span style="display:inline-block;">
+      <span style="border-bottom:2px solid red; padding-bottom:3px;">
+        Educación financiera
+      </span> gratuita
+    </span>
+  </div>
+
+  <h2 class="blog-main-title">
+    Recibe estrategias prácticas para ahorrar dinero, mejorar tus hábitos financieros y tomar decisiones más inteligentes con tu dinero
+  </h2>
+
+  <p>
+    Accede gratis a contenido útil sobre ahorro, control de gastos, organización financiera, mentalidad económica y construcción de activos para fortalecer tu estabilidad financiera a largo plazo.
+  </p>
+
+  <div class="side-message">
+    <strong>Empieza gratis hoy</strong><br><br>
+    Si quieres mejorar tu relación con el dinero y desarrollar hábitos financieros más sólidos, 
+    ve al botón rojo superior o abre el menú y selecciona:
+    <br><br>
+    <strong>“Recibe estrategias gratis”</strong>
+  </div>
+
+</div>
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 200px;"></div>
+
+
+
+
+
+<div style="margin: 0 auto; max-width:700px; padding:0 15px;">
+  <h2 class="subtitulo-editorial" style="margin-bottom:60px; line-height:1.3;">
+    Tendencias financieras
+    <span style="display:block; font-size:0.75em; font-weight:400; margin-top:5px;">
+      que están cambiando la forma de ahorrar y usar el dinero
+    </span>
+  </h2>
+</div>
 
 
 <div class="block md:hidden" style="height:30px; margin:30px 0;"></div>
@@ -2029,16 +2273,24 @@ esta guía te mostrará paso a paso cuánto deberías haber ahorrado a cada edad
 
 
 
+
+
+
+<div style="margin: 0 auto; max-width:700px; padding:0 15px;">
+  <h2 class="subtitulo-editorial" style="margin-bottom:60px; line-height:1.3;">
+    Oportunidades para crecer financieramente
+    <span style="display:block; font-size:0.75em; font-weight:400; margin-top:5px;">
+      historias, ahorro, inversión y desarrollo profesional
+    </span>
+  </h2>
+</div>
+
+
 <section class="main-layout">
 
   <!-- Sidebar izquierda -->
   <aside class="sidebar">
 
-<div style="margin-left:25px;">
-  <h2 class="subtitulo-editorial">
-  Finanzas y Oportunidades
-  </h2>
-</div>
 
   <div class="w-full h-px bg-slate-300"></div>
 
@@ -2111,18 +2363,23 @@ imperio financiero desde cero visto desde un punto de vista financiero que aport
 
 
 
+
+
+<div style="margin: 0 auto; max-width:700px; padding:0 15px;">
+  <h2 class="subtitulo-editorial" style="margin-bottom:60px; line-height:1.3;">
+    Cómo dominar tus finanzas personales
+    <span style="display:block; font-size:0.75em; font-weight:400; margin-top:5px;">
+      mentalidad, negocios y estrategias para generar dinero
+    </span>
+  </h2>
+</div>
+
+
+
 <section class="main-layout">
 
   <!-- Sidebar izquierda -->
   <aside class="sidebar">
-
-
-<div style="margin-left:25px;">
-  <h2 class="subtitulo-editorial">
-  Aprende a dominar el juego
-  </h2>
-</div>
-
 
  <div class="w-full h-px bg-slate-300"></div>
 
@@ -2187,7 +2444,6 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 
 </section>
 
-
 <style>
 /* CONTENEDOR GENERAL */
 .main-layout {
@@ -2202,23 +2458,23 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 /* Sidebar más ancho */
 .sidebar {
   flex: 1;
-  max-width: 700px; /* ← MÁS ANCHO */
+  max-width: 700px;
 }
 
 /* Título */
 .sidebar-title {
-  font-size: 26px;
+  font-size: 24px; /* ↓ un poco más pequeño */
   font-weight: 800;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 /* Tarjeta noticia estilo portal */
 .news-item {
   display: flex;
-  gap: 24px;
+  gap: 20px; /* ↓ menos espacio */
   text-decoration: none;
   color: inherit;
-  padding: 22px 0;
+  padding: 18px 0; /* ↓ menos alto */
   border-bottom: 1px solid #e5e5e5;
   align-items: center;
   transition: opacity 0.2s ease;
@@ -2230,8 +2486,8 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 
 /* Imagen RECTANGULAR horizontal */
 .news-thumb {
-  width: 260px;      /* más larga */
-  height: 140px;     /* menos alta */
+  width: 220px;   /* ↓ más pequeña */
+  height: 120px;  /* ↓ más baja */
   flex-shrink: 0;
 }
 
@@ -2249,20 +2505,20 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 }
 
 .news-text h3 {
-  font-size: 20px; /* más grande */
+  font-size: 18px; /* ↓ más compacto */
   font-weight: 800;
   line-height: 1.3;
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
 }
 
 .news-text p {
-  font-size: 15px;
+  font-size: 14px; /* ↓ ligeramente menor */
   color: #555;
   line-height: 1.5;
   margin: 0;
 }
 
-/* Responsive */
+/* Responsive (NO se toca) */
 @media (max-width: 1024px) {
 
   .main-layout {
@@ -2293,53 +2549,54 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 
 
 
+
 <section class="main-layout reviews-block">
   <aside class="sidebar">
 
-<div style="margin-left:25px;">
-  <h2 class="subtitulo-editorial">
-Lo que dicen nuestros lectores
-  </h2>
-</div>
+    <div class="headline-wrapper">
+      <h2 class="subtitulo-editorial">
+        Pequeños cambios financieros que pueden mejorar tu relación con el dinero
+      </h2>
+    </div>
 
-      <div class="w-full h-px bg-slate-300"></div>
+    <div class="w-full h-px bg-slate-300"></div>
 
-    <!-- Testimonio 1 -->
+    <h3 class="reviews-title">Lo que encontrarás en Código Millonario</h3>
+
+    <!-- Item 1 -->
     <div class="review-item">
-      <img class="review-avatar" src="https://i.pravatar.cc/80?img=32" alt="Mariana Rodríguez">
+      <div class="review-icon">01</div>
       <div class="review-content">
-        <h3>Mariana Rodríguez</h3>
-        <span class="review-location">
-          Colombia
-          <span class="review-stars">★★★★★</span>
-        </span>
-        <p>Antes veía el dinero como algo que siempre se iba. Con tu contenido aprendí a tomar decisiones más conscientes.</p>
+        <h3>Educación financiera práctica</h3>
+        <span class="review-label">Ahorro · Control de gastos · Organización financiera</span>
+        <p>
+          Aprende principios financieros aplicables a la vida real para mejorar tu relación con el dinero 
+          y desarrollar hábitos económicos más inteligentes.
+        </p>
       </div>
     </div>
 
-    <!-- Testimonio 2 -->
+    <!-- Item 2 -->
     <div class="review-item">
-      <img class="review-avatar" src="https://i.pravatar.cc/80?img=12" alt="Alejandro Ramírez">
+      <div class="review-icon">02</div>
       <div class="review-content">
-        <h3>Alejandro Ramírez</h3>
-        <span class="review-location">
-          México
-          <span class="review-stars">★★★★★</span>
-        </span>
-        <p>Con este contenido entendí los conceptos clave y aprendí a evaluar riesgos antes de mover mi dinero.</p>
+        <h3>Mentalidad financiera</h3>
+        <span class="review-label">Psicología del dinero · Hábitos</span>
+        <p>
+          Comprende cómo tus decisiones, creencias y patrones diarios influyen directamente en tu estabilidad económica.
+        </p>
       </div>
     </div>
 
-    <!-- Testimonio 3 -->
+    <!-- Item 3 -->
     <div class="review-item">
-      <img class="review-avatar" src="https://i.pravatar.cc/80?img=48" alt="Camila Rojas">
+      <div class="review-icon">03</div>
       <div class="review-content">
-        <h3>Camila Rojas</h3>
-        <span class="review-location">
-          Chile
-          <span class="review-stars">★★★★★</span>
-        </span>
-        <p>Me ayudó a cambiar la forma en que tomo decisiones con mi dinero. Dejé de improvisar y empecé a planificar mejor.</p>
+        <h3>Construcción de activos</h3>
+        <span class="review-label">Patrimonio · Crecimiento a largo plazo</span>
+        <p>
+          Descubre conceptos clave sobre activos, generación de valor y estrategias para construir una base financiera más sólida.
+        </p>
       </div>
     </div>
 
@@ -2347,58 +2604,112 @@ Lo que dicen nuestros lectores
 </section>
 
 <style>
-  /* Contenedor principal: aislado con reviews-block */
-  .reviews-block .review-item {
-    display: flex;
-    align-items: flex-start; /* alinea la imagen con la parte superior del texto */
-    gap: 0.5rem; /* espacio entre imagen y texto */
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #e5e7eb; /* línea delgada separadora */
+.reviews-block{
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* NUEVO: H2 más cómodo */
+.headline-wrapper{
+  max-width: 700px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+.headline-wrapper .subtitulo-editorial{
+  line-height: 1.4;
+  font-size: 1.8rem;
+  max-width: 700px;
+}
+
+.reviews-title{
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #111;
+  line-height: 1.3;
+}
+
+.review-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.review-item:last-child{
+  border-bottom: none;
+}
+
+.review-icon{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: Arial, sans-serif;
+}
+
+.review-content h3{
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  font-family: Georgia, serif;
+}
+
+.review-label{
+  display: block;
+  font-size: 0.75rem;
+  color: #78716c;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.review-content p{
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .reviews-block{
+    max-width: 100%;
+    padding: 0 15px;
   }
 
-  /* Quitar borde del último item */
-  .reviews-block .review-item:last-child {
-    border-bottom: none;
+  .headline-wrapper{
+    margin-left: 0;
+    max-width: 100%;
   }
 
-  /* Imagen estilo icono */
-  .reviews-block .review-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
+  .headline-wrapper .subtitulo-editorial{
+    font-size: 1.4rem;
+    max-width: 100%;
   }
 
-  /* Contenido del review */
-  .reviews-block .review-content h3 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
+  .reviews-title{
+    font-size: 1.2rem;
   }
 
-  .reviews-block .review-location {
-    display: flex;
-    align-items: center;
-    font-size: 0.75rem;
-    color: #78716c; /* gris estilo stone-500 */
-    margin-bottom: 0.25rem;
-    font-family: 'Poppins', sans-serif;
+  .review-content p{
+    font-size: 0.85rem;
   }
-
-  .reviews-block .review-stars {
-    display: inline-flex;
-    margin-left: 0.25rem;
-    color: #facc15; /* amarillo */
-    font-size: 0.75rem;
-  }
-
-  .reviews-block .review-content p {
-    margin: 0;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
+}
 </style>
+
 
 
 
@@ -2407,14 +2718,13 @@ Lo que dicen nuestros lectores
 
 
 
-<div class="flex flex-col justify-center items-start mt-20 mb-8 max-w-4xl mx-auto px-4 md:px-0" 
-style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
+
+
+<div style="margin: 0 auto; max-width:700px; padding:0 15px;">
+  <h2 class="subtitulo-editorial" style="margin-bottom:30px; line-height:1.3;">
     Preguntas frecuentes
-  </span>
+  </h2>
 </div>
-
-
 
 
 
