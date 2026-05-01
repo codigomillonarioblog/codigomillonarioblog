@@ -19,6 +19,11 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
+
+<!-- NUEVA TIPOGRAFIA -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
 <script>
@@ -28,6 +33,10 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+
+
+
 
 <style>
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
@@ -57,9 +66,10 @@
 
 </style>
 
+
 <style>
 
-/* ===================== PAGINACIÓN ===================== */
+/* ===================== BLOQUE DE COMPAGINADO ===================== */
 .pager-container { 
     background: #ffffff; 
     border-radius: 8px; 
@@ -147,28 +157,78 @@ input[type="number"].goto-page {
 }
 </style>
 
+
 <style>
-/* ===================== Tarejetas dentro de la Compaginacion ===================== */
-/* CONTENEDOR */
-.articles-container {
+/* ===================== TARJETAS DE PAGINACIÓN ===================== */
+
+#articlesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
     align-items: stretch;
 }
 
-/* TARJETA ENVOLVENTE */
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+@media (max-width: 640px) {
+    #articlesGrid {
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: center;
+        max-width: 1200px;
+    }
+}
+
+.article {
+    display: flex;
+    justify-content: center;
     height: 100%;
 }
 
-/* CARD */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    padding: 12px; 
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ===================== TARJETAS ===================== */
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
 .article-card {
     width: 100%;
-    max-width: 250px;
+    max-width: none;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -176,50 +236,14 @@ input[type="number"].goto-page {
     box-shadow: none;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
 }
 
-/* BLOQUE SUPERIOR DE TEXTO */
+/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    text-align: left;
-}
-
-/* CARD FLEX */
-.article-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.article {
-    display: flex;
-}
-
-.article article {
-    flex: 1;
-    display: flex;
-}
-
-.article-link {
-    display: flex;
-    flex: 1;
-}
-
-/* TÍTULO */
-.article-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1c1c1c;
-    margin: 0 0 4px 0;
-    line-height: 1.4;
     text-align: left;
 }
 
@@ -231,15 +255,67 @@ input[type="number"].goto-page {
     margin: 0;
     padding-bottom: 6px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: none;
 }
 
-/* IMAGEN 16:9 */
+/* TEXTO ANALISIS */
+.badge.editorial {
+  color: #000000;
+  margin-top: 10px;
+  display: inline-flex;
+  width: fit-content;
+  padding: 1px 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+/* TÍTULO */
+.article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+    text-align: left;
+}
+
+@media (min-width:769px){
+  .article-link:hover .article-title{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+}
+
+/* ===================== IMAGEN (SOLO BRILLO) ===================== */
+
 .article-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 6px;
+    transition: filter 0.25s ease;
+}
+
+/* 🔥 SOLO BRILLO (SIN ZOOM) */
+.article-card:hover img {
+    filter: brightness(1.10);
+}
+
+/* FECHA + ICONO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ICONO */
+.card-icon {
+    margin-left: 10px;
+    flex-shrink: 0;
 }
 
 /* OCULTOS */
@@ -254,31 +330,64 @@ body, html {
 }
 </style>
 
-<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+
+<!-- TEXTO LEER MAS Y FLECHA COMPLETOS -->
 <style>
-  /* ICONO FLECHA */
-  .article-card .card-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(-45deg); /* Apunta a la derecha */
-    transition: transform 0.35s ease;
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-  }
+/* Contenedor relativo */
+.article-card {
+  position: relative;
+}
 
-  /* Contenedor relativo para que el icono se posicione correctamente */
-  .article-card {
-    position: relative;
-  }
+/* TEXTO "LEER MÁS" */
+.article-card .card-icon {
+  position: absolute;
+  bottom: 23px;
+  right: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #d63039;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-  /* Opcional: rotar al hacer click */
-  .article-card.open .card-icon {
-    transform: rotate(135deg);
-  }
+/* Línea debajo (oculta por defecto) */
+.article-card .card-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: #d63039;
+  opacity: 0;
+}
+
+/* Aparece de inmediato al hover (sin transición) */
+.article-card:hover .card-icon::before {
+  opacity: 1;
+}
+
+/* FLECHA */
+.article-card .card-icon::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg);
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+/* Animación opcional */
+.article-card.open .card-icon::after {
+  transform: rotate(135deg);
+}
 </style>
+
+
+
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1488,7 +1597,9 @@ Aprende a identificar patrones y tomar decisiones más conscientes y efectivas.
 
 
 
-<!-- ARTÍCULO 1 -->
+
+
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./mentalidad-de-riqueza-no-es-pensar-en-positivo.html" class="article-link">
@@ -1496,21 +1607,28 @@ Aprende a identificar patrones y tomar decisiones más conscientes y efectivas.
 
         <div style="position: relative;">
           <img src="../../assets/png/diferencia-mentalidad-riqueza-positivo.webp" alt="mentalidad de riqueza vs pensar en positivo diferencia real">
-          <div class="badge">El pensamiento positivo calma tu mente, pero no construye ingresos. Descubre cómo la mentalidad de riqueza transforma decisiones en resultados.</div>
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-Por qué sigues sin avanzar aunque pienses en positivo (y cómo solucionarlo)
+          Por qué Sigues sin Avanzar aunque Pienses en Positivo (y cómo Solucionarlo)
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 07 Abr 2026 | 18:15 h <br> ⏱ 6 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
-<!-- ARTÍCULO 1 -->
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./no-avanzas-economicamente-patron-diario.html" class="article-link">
@@ -1518,21 +1636,28 @@ Por qué sigues sin avanzar aunque pienses en positivo (y cómo solucionarlo)
 
         <div style="position: relative;">
           <img src="../../assets/png/patron-financiero-diario-1-porciento.webp" alt="Persona trabajando en su crecimiento económico con pequeños avances diarios">
-          <div class="badge">Rompe el ciclo de repetición que frena tu progreso económico. Aprende a avanzar con constancia diaria sin agotarte ni rendirte antes de tiempo.</div>
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Si no avanzas económicamente, necesitas aplicar el 1% diario
+          Si no Avanzas Económicamente, necesitas Aplicar el 1% Diario
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 20 Mar 2026 | 17:43 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
-  <!-- ARTÍCULO 1 -->
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./mentalidad-rico-vs-pobre.html" class="article-link">
@@ -1540,21 +1665,28 @@ Por qué sigues sin avanzar aunque pienses en positivo (y cómo solucionarlo)
 
         <div style="position: relative;">
           <img src="../../assets/png/diferencias-mentalidad-rico-pobre.webp" alt="Comparación de pensamientos entre personas ricas y pobres y sus resultados económicos">
-          <div class="badge">La brecha que separa a los ricos de los pobres no es el dinero en realidad, sino su forma de aplicar el conocimiento de manera oportuna y rápida.</div>
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Estos 7 datos son lo que realmente separa a ricos y pobres
+          Estos 7 Datos son los que Realmente Separa a Ricos y Pobres
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 10 Mar 2026 | 08:23 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
-  <!-- ARTÍCULO 1 -->
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./bloqueos-mentales-dinero.html" class="article-link">
@@ -1562,21 +1694,28 @@ Por qué sigues sin avanzar aunque pienses en positivo (y cómo solucionarlo)
 
         <div style="position: relative;">
           <img src="../../assets/png/pensamientos-erroneos-dinero.webp" alt="Persona confundida por pensamientos negativos sobre el dinero y falta de abundancia">
-          <div class="badge">El dinero no se aleja por mala suerte; se aleja por una forma de pensar determinada, que, repetida con constancia, va causando pérdidas económicas.</div>
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-          Cómo ciertas creencias equivocadas frenan tu abundancia
+          Cómo Ciertas Creencias Equivocadas Frenan tu Abundancia
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 17 Feb 2026 | 20:21 h <br> ⏱ 6 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
-  <!-- ARTÍCULO 1 -->
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./no-ahorrar-te-roba-libertad-financiera.html" class="article-link">
@@ -1584,25 +1723,35 @@ Por qué sigues sin avanzar aunque pienses en positivo (y cómo solucionarlo)
 
         <div style="position: relative;">
           <img src="../../assets/png/sin-ahorro-no-decides-tu.webp" alt="Persona estresada por no tener dinero ahorrado y falta de libertad financiera">
-          <div class="badge">No tener ahorros frena tu crecimiento económico y te mantiene en el ciclo de la pobreza, haciendo que dependas de factores externos.</div>
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        La trampa de no tener ahorros y depender de factores externos
+          La Trampa de no Tener Ahorros y Depender de Factores Externos
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 11 Feb 2026 | 12:33 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
+
 
   
                 <!-- Puedes duplicar más artículos aquí con la clase "article" -->
             </div>
         </div>
     </section>
+
+
 
 
 <div class="left-block flex flex-col justify-center items-start md:items-center mt-40 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
