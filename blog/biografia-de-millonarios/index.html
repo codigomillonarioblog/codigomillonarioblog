@@ -20,6 +20,12 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
+
+<!-- NUEVA TIPOGRAFIA -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
 <script>
@@ -29,6 +35,8 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+
 
 <style>
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
@@ -58,9 +66,10 @@
 
 </style>
 
+
 <style>
 
-/* ===================== PAGINACIÓN ===================== */
+/* ===================== BLOQUE DE COMPAGINADO ===================== */
 .pager-container { 
     background: #ffffff; 
     border-radius: 8px; 
@@ -148,28 +157,78 @@ input[type="number"].goto-page {
 }
 </style>
 
+
 <style>
-/* ===================== Tarejetas dentro de la Compaginacion ===================== */
-/* CONTENEDOR */
-.articles-container {
+/* ===================== TARJETAS DE PAGINACIÓN ===================== */
+
+#articlesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
     align-items: stretch;
 }
 
-/* TARJETA ENVOLVENTE */
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+@media (max-width: 640px) {
+    #articlesGrid {
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: center;
+        max-width: 1200px;
+    }
+}
+
+.article {
+    display: flex;
+    justify-content: center;
     height: 100%;
 }
 
-/* CARD */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    padding: 12px; 
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ===================== TARJETAS ===================== */
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
 .article-card {
     width: 100%;
-    max-width: 250px;
+    max-width: none;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -177,50 +236,14 @@ input[type="number"].goto-page {
     box-shadow: none;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
 }
 
-/* BLOQUE SUPERIOR DE TEXTO */
+/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    text-align: left;
-}
-
-/* CARD FLEX */
-.article-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.article {
-    display: flex;
-}
-
-.article article {
-    flex: 1;
-    display: flex;
-}
-
-.article-link {
-    display: flex;
-    flex: 1;
-}
-
-/* TÍTULO */
-.article-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1c1c1c;
-    margin: 0 0 4px 0;
-    line-height: 1.4;
     text-align: left;
 }
 
@@ -232,15 +255,67 @@ input[type="number"].goto-page {
     margin: 0;
     padding-bottom: 6px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: none;
 }
 
-/* IMAGEN 16:9 */
+/* TEXTO ANALISIS */
+.badge.editorial {
+  color: #000000;
+  margin-top: 10px;
+  display: inline-flex;
+  width: fit-content;
+  padding: 1px 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+/* TÍTULO */
+.article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+    text-align: left;
+}
+
+@media (min-width:769px){
+  .article-link:hover .article-title{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+}
+
+/* ===================== IMAGEN (SOLO BRILLO) ===================== */
+
 .article-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 6px;
+    transition: filter 0.25s ease;
+}
+
+/* 🔥 SOLO BRILLO (SIN ZOOM) */
+.article-card:hover img {
+    filter: brightness(1.10);
+}
+
+/* FECHA + ICONO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ICONO */
+.card-icon {
+    margin-left: 10px;
+    flex-shrink: 0;
 }
 
 /* OCULTOS */
@@ -255,31 +330,64 @@ body, html {
 }
 </style>
 
-<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+
+<!-- TEXTO LEER MAS Y FLECHA COMPLETOS -->
 <style>
-  /* ICONO FLECHA */
-  .article-card .card-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(-45deg); /* Apunta a la derecha */
-    transition: transform 0.35s ease;
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-  }
+/* Contenedor relativo */
+.article-card {
+  position: relative;
+}
 
-  /* Contenedor relativo para que el icono se posicione correctamente */
-  .article-card {
-    position: relative;
-  }
+/* TEXTO "LEER MÁS" */
+.article-card .card-icon {
+  position: absolute;
+  bottom: 23px;
+  right: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #d63039;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-  /* Opcional: rotar al hacer click */
-  .article-card.open .card-icon {
-    transform: rotate(135deg);
-  }
+/* Línea debajo (oculta por defecto) */
+.article-card .card-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: #d63039;
+  opacity: 0;
+}
+
+/* Aparece de inmediato al hover (sin transición) */
+.article-card:hover .card-icon::before {
+  opacity: 1;
+}
+
+/* FLECHA */
+.article-card .card-icon::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg);
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+/* Animación opcional */
+.article-card.open .card-icon::after {
+  transform: rotate(135deg);
+}
 </style>
+
+
+
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1493,160 +1601,210 @@ pueden inspirarte a tomar control de tu propio camino hacia la libertad financie
         <!-- Ejemplo de artículos -->
 
 
-  <div class="article">
+
+        
+<!-- ARTÍCULO -->
+<div class="article">
   <article>
     <a href="./thomas-alva-edison-biografia.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../assets/png/thomas-alva-edison-inventor.webp" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">Thomas Edison no se hizo millonario solo por inventar, sino por convertir sus ideas en sistemas de negocio completos. En lugar de vender productos aislados.</div>
+          <img src="../../assets/png/thomas-alva-edison-inventor.webp" alt="Thomas Alva Edison inventor y estrategia de riqueza">
         </div>
+
+        <div class="badge editorial">Análisis Editorial</div>
 
         <h2 class="article-title">
           La clave de la riqueza de Edison: convertir ideas en sistemas de negocio
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 18 Feb 2026 | 19:06 h <br> ⏱ 7 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./fundador-de-kfc-construyo-su-fortuna.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../assets/png/colonel-sanders-historia-de-riqueza.webp" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">La historia de Harland David Sanders demuestra que el éxito no siempre llega temprano ni de forma fácil. Más de mil rechazos al intentar vender su receta.</div>
+          <img src="../../assets/png/colonel-sanders-historia-de-riqueza.webp" alt="Harland Sanders fundador de KFC historia de riqueza">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-           Así nació la fortuna del fundador de KFC Harland David Sanders
+          Así nació la fortuna del fundador de KFC Harland David Sanders
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 01 Feb 2026 | 13:17 h <br> ⏱ 7 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./oprah-winfrey-multimillonaria.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../assets/png/riqueza-oprah-winfrey.webp" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">La trayectoria de Oprah Winfrey demuestra que el cambio financiero ocurre cuando una persona deja de vender solo su tiempo y empieza a construir propiedad.</div>
+          <img src="../../assets/png/riqueza-oprah-winfrey.webp" alt="Oprah Winfrey imperio mediático historia de éxito">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        La estrategia que llevó a Oprah de empleada a dueña de su propio imperio
+          La estrategia que llevó a Oprah de empleada a dueña de su propio imperio
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 29 Ene 2026 | 07:10 h <br> ⏱ 7 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./jeff-bezos-ceo-amazon.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../assets/png/jeff-bezos-estrategia-amazon.webp" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">Jeff Bezos identificó el potencial del internet cuando aún era ignorado por muchos y tomó decisiones arriesgadas como reinvertir constantemente.</div>
-          </div>
+          <img src="../../assets/png/jeff-bezos-estrategia-amazon.webp" alt="Jeff Bezos Amazon imperio estrategia empresarial">
+        </div>
+
+        <div class="badge editorial">Análisis Editorial</div>
 
         <h2 class="article-title">
-        La estrategia fría que convirtió a Amazon en un imperio global
+          La estrategia fría que convirtió a Amazon en un imperio global
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 22 Ene 2026 | 09:12 h <br> ⏱ 9 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./como-carlos-slim-se-hizo-rico.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../assets/png/carlos-slim-millonario-mexicano.webp" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">A diferencia de muchos empresarios que persiguen oportunidades llamativas, Carlos Slim construyó su fortuna mediante una estrategia silenciosa basada en análisis.</div>
+          <img src="../../assets/png/carlos-slim-millonario-mexicano.webp" alt="Carlos Slim historia de riqueza y estrategia silenciosa">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Carlos Slim: cómo logró con paciencia crear una riqueza real sin hacer ruido
+          Carlos Slim: cómo logró con paciencia crear una riqueza real sin hacer ruido
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 20 Ene 2026 | 18:26 h <br> ⏱ 8 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
- <div class="article">
+<!-- ARTÍCULO -->
+<div class="article">
   <article>
     <a href="./jack-ma-de-profesor-a-millonario-alibaba.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../assets/png/jack-ma-de-profesor-a-multimillonario.webp" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">La historia de Jack Ma demuestra que el éxito empresarial no siempre comienza con dinero o conexiones, sino con perseverancia y visión. Tras enfrentar múltiples rechazos.</div>
+          <img src="../../assets/png/jack-ma-de-profesor-a-multimillonario.webp" alt="Jack Ma de profesor a fundador de Alibaba historia de éxito">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Cuando nadie lo contrataba, Jack Ma decidió crear su propio sistema
+          Cuando nadie lo contrataba, Jack Ma decidió crear su propio sistema
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 15 Ene 2026 | 15:09 h <br> ⏱ 8 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
- <div class="article">
+<!-- ARTÍCULO -->
+<div class="article">
   <article>
     <a href="./jk-rowling-harry-potter-fortuna.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../assets/png/jk-rowling-historia-fortuna.webp" 
-               alt="Asi se hizo millonario desde cero">
-          <div class="badge">Años antes de convertirse en una de las autoras más ricas del mundo, J. K. Rowling escribía mientras enfrentaba dificultades económicas, rechazos editoriales.</div>
+          <img src="../../assets/png/jk-rowling-historia-fortuna.webp" alt="J.K. Rowling Harry Potter historia de fortuna y éxito">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        El proceso que transformó la obra de Harry Potter en una fortuna
+          El proceso que transformó la obra de Harry Potter en una fortuna
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 08 Ene 2026 | 19:22 h <br> ⏱ 9 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
-
 
 
 
