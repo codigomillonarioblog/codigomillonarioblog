@@ -20,6 +20,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 
+<!-- NUEVA TIPOGRAFIA -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
 <script>
@@ -29,6 +33,8 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+
 
 <style>
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
@@ -58,9 +64,10 @@
 
 </style>
 
+
 <style>
 
-/* ===================== PAGINACIÓN ===================== */
+/* ===================== BLOQUE DE COMPAGINADO ===================== */
 .pager-container { 
     background: #ffffff; 
     border-radius: 8px; 
@@ -148,28 +155,78 @@ input[type="number"].goto-page {
 }
 </style>
 
+
 <style>
-/* ===================== Tarejetas dentro de la Compaginacion ===================== */
-/* CONTENEDOR */
-.articles-container {
+/* ===================== TARJETAS DE PAGINACIÓN ===================== */
+
+#articlesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
     align-items: stretch;
 }
 
-/* TARJETA ENVOLVENTE */
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+@media (max-width: 640px) {
+    #articlesGrid {
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: center;
+        max-width: 1200px;
+    }
+}
+
+.article {
+    display: flex;
+    justify-content: center;
     height: 100%;
 }
 
-/* CARD */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    padding: 12px; 
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ===================== TARJETAS ===================== */
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
 .article-card {
     width: 100%;
-    max-width: 250px;
+    max-width: none;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -177,50 +234,14 @@ input[type="number"].goto-page {
     box-shadow: none;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
 }
 
-/* BLOQUE SUPERIOR DE TEXTO */
+/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    text-align: left;
-}
-
-/* CARD FLEX */
-.article-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.article {
-    display: flex;
-}
-
-.article article {
-    flex: 1;
-    display: flex;
-}
-
-.article-link {
-    display: flex;
-    flex: 1;
-}
-
-/* TÍTULO */
-.article-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1c1c1c;
-    margin: 0 0 4px 0;
-    line-height: 1.4;
     text-align: left;
 }
 
@@ -232,15 +253,67 @@ input[type="number"].goto-page {
     margin: 0;
     padding-bottom: 6px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: none;
 }
 
-/* IMAGEN 16:9 */
+/* TEXTO ANALISIS */
+.badge.editorial {
+  color: #000000;
+  margin-top: 10px;
+  display: inline-flex;
+  width: fit-content;
+  padding: 1px 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+/* TÍTULO */
+.article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+    text-align: left;
+}
+
+@media (min-width:769px){
+  .article-link:hover .article-title{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+}
+
+/* ===================== IMAGEN (SOLO BRILLO) ===================== */
+
 .article-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 6px;
+    transition: filter 0.25s ease;
+}
+
+/* 🔥 SOLO BRILLO (SIN ZOOM) */
+.article-card:hover img {
+    filter: brightness(1.10);
+}
+
+/* FECHA + ICONO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ICONO */
+.card-icon {
+    margin-left: 10px;
+    flex-shrink: 0;
 }
 
 /* OCULTOS */
@@ -255,31 +328,64 @@ body, html {
 }
 </style>
 
-<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+
+<!-- TEXTO LEER MAS Y FLECHA COMPLETOS -->
 <style>
-  /* ICONO FLECHA */
-  .article-card .card-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(-45deg); /* Apunta a la derecha */
-    transition: transform 0.35s ease;
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-  }
+/* Contenedor relativo */
+.article-card {
+  position: relative;
+}
 
-  /* Contenedor relativo para que el icono se posicione correctamente */
-  .article-card {
-    position: relative;
-  }
+/* TEXTO "LEER MÁS" */
+.article-card .card-icon {
+  position: absolute;
+  bottom: 25px;
+  right: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #d63039;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-  /* Opcional: rotar al hacer click */
-  .article-card.open .card-icon {
-    transform: rotate(135deg);
-  }
+/* Línea debajo (oculta por defecto) */
+.article-card .card-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: #d63039;
+  opacity: 0;
+}
+
+/* Aparece de inmediato al hover (sin transición) */
+.article-card:hover .card-icon::before {
+  opacity: 1;
+}
+
+/* FLECHA */
+.article-card .card-icon::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg);
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+/* Animación opcional */
+.article-card.open .card-icon::after {
+  transform: rotate(135deg);
+}
 </style>
+
+
+
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1504,7 +1610,7 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
 
 
-
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/mentalidad-de-exito/index.html" class="article-link">
@@ -1512,20 +1618,28 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/el-exito-empieza-en-la-mente.webp" alt="">
-          <div class="badge">La mente maestra detrás de los grandes logros, dejando atrás la idea de que la suerte es la causa de prosperidad en la mentalidad del éxito.</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        El éxito no es suerte: es mentalidad, un principio fundamental
-        </h2>         
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+          El éxito no es Suerte: es Mentalidad, un Principio Fundamental
+        </h2>
+
+        <div class="badge badge-row">
+          <span>
+            Mentalidad de Éxito | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/psicologia-del-dinero/index.html" class="article-link">
@@ -1533,20 +1647,28 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/patrones-mentales-y-dinero.webp" alt="">
-          <div class="badge">¿Qué se esconde detrás de una mentalidad de éxito en la psicología del dinero? Analicemos los rasgos mentales que separan a los que triunfan de los que se quedan atrás.</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        La forma de pensar que cambia tu destino financiero en la vida real
+          La Forma de Pensar que Cambia tu Destino Financiero en la Vida Real
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Psicología del Dinero | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/hechos-lujos-curiosidades/index.html" class="article-link">
@@ -1554,20 +1676,28 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/detectar-oportunidades-de-mercado.webp" alt="">
-          <div class="badge">Sumérgete en el lado más sorprendente del dinero y las finanzas. Descubre récords insólitos, inversiones que superan toda expectativa y curiosidades.</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        Récords y Curiosidades del Mundo del Dinero que Rompen Expectativas
+          Récords y Curiosidades del Mundo del Dinero que Rompen Expectativas
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Hechos, Lujos y Curiosidades | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/biografia-de-millonarios/index.html" class="article-link">
@@ -1575,21 +1705,28 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/como-se-hicieron-millonarios.webp" alt="">
-          <div class="badge">Un análisis de las decisiones financieras, hábitos y estrategias que llevaron a varios millonarios hechos a sí mismos a construir su riqueza: casos reales.</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        Aprende sobre las biografías detrás de grandes fortunas y cómo lo lograron
+          Aprende sobre las Biografías detrás de Grandes Fortunas y cómo lo Lograron
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Biografía de Millonarios | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
-<!-- Repite tus artículos -->
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/ahorro/index.html" class="article-link">
@@ -1597,20 +1734,28 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="">
-          <div class="badge">Desarrolla una mente dispuesta a lograr lo que se proponga, con un enfoque práctico para ahorrar y cumplir tus objetivos sin contratiempos.</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        Mentalidad y hábitos para ahorrar y cumplir tus objetivos
+          Mentalidad y Hábitos para Ahorrar y Cumplir tus Objetivos
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Ahorro | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/inversiones/index.html" class="article-link">
@@ -1618,20 +1763,28 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/inversion-inteligente-segura.webp" alt="">
-          <div class="badge">Modelos que fortalecen tus conocimientos y previenen riesgos antes de ejecutar estrategias financieras para hacer crecer tu dinero con una inversión.</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        Sistemas para proteger y multiplicar tu dinero de forma clara
+          Sistemas para Proteger y Multiplicar tu Dinero de Forma Clara
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Inversiones | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/fundamentos-del-dinero/index.html" class="article-link">
@@ -1639,20 +1792,28 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/fundamentos-del-dinero.webp" alt="">
-          <div class="badge">Dominar los fundamentos del dinero es el primer paso hacia la riqueza. Aprende cómo piensan quienes construyen éxito financiero: control y manejo de los recursos</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        Cómo dominar el dinero desde los fundamentos financieros
-        </h2>         
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+          Cómo Dominar el Dinero desde los Fundamentos Financieros
+        </h2>
+
+        <div class="badge badge-row">
+          <span>
+            Fundamentos del Dinero | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/deudas/index.html" class="article-link">
@@ -1660,20 +1821,28 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/eliminar-deudas-rapido.webp" alt="">
-          <div class="badge">Cómo mantenerse actualizado con los pilares principales para recuperar el control del dinero, priorizar pagos y construir un plan realista para salir de las deudas</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        El problema silencioso de las deudas que nunca desaparecen
+          El Problema Silencioso de las Deudas que Nunca Desaparecen
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Deudas | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/empleo/index.html" class="article-link">
@@ -1681,20 +1850,28 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
-          <div class="badge">Esta seccion es un enfoque para identificar oportunidades, mejorar tu desarrollo profesional y construir un camino laboral con mayor proyección</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        ¿Es normal sentir que tu carrera profesional se ha quedado estancada?
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Empleo | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/negocios/index.html" class="article-link">
@@ -1702,20 +1879,26 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
         <div style="position: relative;">
           <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
-          <div class="badge">Los fundamentos prácticos de cómo entender los negocios, mejorar las estrategias, crecer tu negocio y crear empresas con un nivel de éxito y beneficios</div>
         </div>
 
+        <div class="badge editorial">Selección Categorías</div>
+
         <h2 class="article-title">
-        El desafío detrás de convertir una idea en un negocio rentable
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Negocios | Artículos <br> Relacionados
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
-
 
 
 
