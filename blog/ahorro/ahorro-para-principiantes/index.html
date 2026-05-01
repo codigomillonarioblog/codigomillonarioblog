@@ -19,6 +19,11 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
+
+<!-- NUEVA TIPOGRAFIA -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
 <script>
@@ -28,6 +33,8 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+
 
 <style>
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
@@ -57,9 +64,10 @@
 
 </style>
 
+
 <style>
 
-/* ===================== PAGINACIÓN ===================== */
+/* ===================== BLOQUE DE COMPAGINADO ===================== */
 .pager-container { 
     background: #ffffff; 
     border-radius: 8px; 
@@ -147,28 +155,78 @@ input[type="number"].goto-page {
 }
 </style>
 
+
 <style>
-/* ===================== Tarejetas dentro de la Compaginacion ===================== */
-/* CONTENEDOR */
-.articles-container {
+/* ===================== TARJETAS DE PAGINACIÓN ===================== */
+
+#articlesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
     align-items: stretch;
 }
 
-/* TARJETA ENVOLVENTE */
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+@media (max-width: 640px) {
+    #articlesGrid {
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: center;
+        max-width: 1200px;
+    }
+}
+
+.article {
+    display: flex;
+    justify-content: center;
     height: 100%;
 }
 
-/* CARD */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    padding: 12px; 
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ===================== TARJETAS ===================== */
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
 .article-card {
     width: 100%;
-    max-width: 250px;
+    max-width: none;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -176,50 +234,14 @@ input[type="number"].goto-page {
     box-shadow: none;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
 }
 
-/* BLOQUE SUPERIOR DE TEXTO */
+/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    text-align: left;
-}
-
-/* CARD FLEX */
-.article-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.article {
-    display: flex;
-}
-
-.article article {
-    flex: 1;
-    display: flex;
-}
-
-.article-link {
-    display: flex;
-    flex: 1;
-}
-
-/* TÍTULO */
-.article-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1c1c1c;
-    margin: 0 0 4px 0;
-    line-height: 1.4;
     text-align: left;
 }
 
@@ -231,15 +253,67 @@ input[type="number"].goto-page {
     margin: 0;
     padding-bottom: 6px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: none;
 }
 
-/* IMAGEN 16:9 */
+/* TEXTO ANALISIS */
+.badge.editorial {
+  color: #000000;
+  margin-top: 10px;
+  display: inline-flex;
+  width: fit-content;
+  padding: 1px 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+/* TÍTULO */
+.article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+    text-align: left;
+}
+
+@media (min-width:769px){
+  .article-link:hover .article-title{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+}
+
+/* ===================== IMAGEN (SOLO BRILLO) ===================== */
+
 .article-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 6px;
+    transition: filter 0.25s ease;
+}
+
+/* 🔥 SOLO BRILLO (SIN ZOOM) */
+.article-card:hover img {
+    filter: brightness(1.10);
+}
+
+/* FECHA + ICONO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ICONO */
+.card-icon {
+    margin-left: 10px;
+    flex-shrink: 0;
 }
 
 /* OCULTOS */
@@ -254,31 +328,63 @@ body, html {
 }
 </style>
 
-<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+
+<!-- TEXTO LEER MAS Y FLECHA COMPLETOS -->
 <style>
-  /* ICONO FLECHA */
-  .article-card .card-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(-45deg); /* Apunta a la derecha */
-    transition: transform 0.35s ease;
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-  }
+/* Contenedor relativo */
+.article-card {
+  position: relative;
+}
 
-  /* Contenedor relativo para que el icono se posicione correctamente */
-  .article-card {
-    position: relative;
-  }
+/* TEXTO "LEER MÁS" */
+.article-card .card-icon {
+  position: absolute;
+  bottom: 23px;
+  right: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #d63039;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-  /* Opcional: rotar al hacer click */
-  .article-card.open .card-icon {
-    transform: rotate(135deg);
-  }
+/* Línea debajo (oculta por defecto) */
+.article-card .card-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: #d63039;
+  opacity: 0;
+}
+
+/* Aparece de inmediato al hover (sin transición) */
+.article-card:hover .card-icon::before {
+  opacity: 1;
+}
+
+/* FLECHA */
+.article-card .card-icon::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg);
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+/* Animación opcional */
+.article-card.open .card-icon::after {
+  transform: rotate(135deg);
+}
 </style>
+
+
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1489,258 +1595,354 @@ gastos innecesarios y construir hábitos financieros sólidos que te permitan em
 
 
 
-
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./plantillas-ahorro-dinero-pdf-gratis.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/plantilla-ahorro-dinero-codigo-millonario.webp" alt="">
-          <div class="badge">Descarga plantillas de ahorro en PDF gratis para controlar tus gastos, organizar tu dinero y empezar a ahorrar de forma simple y sin complicaciones.</div>
+          <img src="../../../assets/png/plantilla-ahorro-dinero-codigo-millonario.webp" alt="plantillas de ahorro de dinero en PDF gratis">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-Cómo ahorrar dinero con plantillas en PDF (descarga gratis y empieza hoy)
+          Cómo ahorrar dinero con plantillas en PDF (descarga gratis y empieza hoy)
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 31 Mar 2026 | 11:20 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./cuanto-dinero-debes-tener-ahorrado-segun-tu-edad.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/cuanto-dinero-ahorrado-segun-edad.webp" alt="cuanto dinero debes tener ahorrado segun tu edad">
-          <div class="badge">¿Vas bien con tus ahorros o estás por debajo de lo recomendado? cuanto deben tener
-            ahorrado las personas según su edad y qué hacer si aún estás lejos de esa cifra.</div>
+          <img src="../../../assets/png/cuanto-dinero-ahorrado-segun-edad.webp" alt="cuánto dinero debes tener ahorrado según tu edad">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-         Cuánto dinero deberías tener ahorrado según tu edad y por donde iniciar
+          Cuánto dinero deberías tener ahorrado según tu edad y por donde iniciar
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 14 Mar 2026 | 16:13 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./nequi-daviplata-uala-comparacion.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/herramientas-para-ahorrar-mejor.webp" alt="nequi daviplata uala comparacion">
-          <div class="badge">Las billeteras digitales se han convertido en una de las formas más prácticas de manejar dinero en Colombia, pero no todas ofrecen las mismas ventajas para ahorrar.</div>
+          <img src="../../../assets/png/herramientas-para-ahorrar-mejor.webp" alt="comparación Nequi Daviplata Ualá billeteras digitales ahorro">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-         Nequi, Daviplata o Ualá: cuál billetera digital conviene más para ahorrar
+          Nequi, Daviplata o Ualá: cuál billetera digital conviene más para ahorrar
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 24 Ene 2026 | 06:10 h <br> ⏱ 3 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./fondo-de-emergencia.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-crear-un-fondo-de-emergencia.webp" alt="fondo de emergencia">
-          <div class="badge">Un fondo de emergencia es uno de los pilares más importantes para proteger tu estabilidad financiera frente a imprevistos de emergencia o gastos inesperados.</div>
+          <img src="../../../assets/png/como-crear-un-fondo-de-emergencia.webp" alt="fondo de emergencia ahorro financiero seguridad">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Qué es un fondo de emergencia y por qué es clave para tu estabilidad financiera
+          Qué es un fondo de emergencia y por qué es clave para tu estabilidad financiera
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 23 Ene 2026 | 10:34 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./cuenta-estudiantes-colombia.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/que-beneficios-tienen-cuentas-estudiantiles.webp" alt="Cuenta de estudiantes">
-          <div class="badge">Elegir una cuenta de ahorros como estudiante es una de las primeras decisiones financieras importantes. Más allá de guardar dinero, una buena cuenta puede ayudarte.</div>
+          <img src="../../../assets/png/que-beneficios-tienen-cuentas-estudiantiles.webp" alt="cuentas de ahorro para estudiantes en Colombia">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-         Cómo elegir una cuenta de ahorros siendo estudiante en Colombia 
+          Cómo elegir una cuenta de ahorros siendo estudiante en Colombia
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 23 Ene 2026 | 09:34 h <br> ⏱ 6 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./como-empezar-a-ahorrar-dinero.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/ahorrar-con-ingresos-limitados.webp" alt="Empieza a ahorrar dinero">
-          <div class="badge">Ahorrar no depende únicamente de cuánto dinero ganas, sino de las decisiones que tomas con lo que tienes. Incluso con ingresos bajos es posible construir un hábito.</div>
+          <img src="../../../assets/png/ahorrar-con-ingresos-limitados.webp" alt="cómo empezar a ahorrar dinero con poco ingreso">
         </div>
+
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Sí puedes ahorrar aunque ganes poco: así empieza el hábito
+          Sí puedes ahorrar aunque ganes poco: así empieza el hábito
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 18 Ene 2026 | 12:01 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ahorrar-con-ingreso-bajo.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/ahorro-real-con-salario-minimo.webp" alt="Ahorrar con salario mínimo">
-          <div class="badge">Ahorrar dinero con ingresos bajos puede parecer difícil, pero con hábitos simples y decisiones conscientes es posible comenzar a construir estabilidad financiera.</div>
+          <img src="../../../assets/png/ahorro-real-con-salario-minimo.webp" alt="ahorrar con ingresos bajos salario mínimo">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Cómo ahorrar dinero incluso si tienes ingresos bajos: empieza hoy
+          Cómo ahorrar dinero incluso si tienes ingresos bajos: empieza hoy
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 17 Ene 2026 | 16:12 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./app-que-si-ahorra.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/apps-para-ahorrar-dinero-funcionan.webp" alt="App para ahorrar">
-          <div class="badge">Las aplicaciones de ahorro se han convertido en una herramienta clave para quienes quieren organizar mejor su dinero y construir hábitos financieros más saludables.</div>
+          <img src="../../../assets/png/apps-para-ahorrar-dinero-funcionan.webp" alt="apps para ahorrar dinero y organizar finanzas">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Apps de ahorro: la herramienta que te ayuda a organizar mejor tu dinero
+          Apps de ahorro: la herramienta que te ayuda a organizar mejor tu dinero
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 17 Ene 2026 | 13:23 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
-        
+
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ahorrar-sin-renunciar.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/controlar-gastos-sin-sacrificios.webp" alt="Cómo dejar de gastar de más">
-          <div class="badge">Ahorrar dinero no significa vivir limitado ni renunciar a lo que disfrutas. El verdadero cambio ocurre cuando empiezas a tomar decisiones más conscientes.</div>
+          <img src="../../../assets/png/controlar-gastos-sin-sacrificios.webp" alt="equilibrio entre gastar y ahorrar finanzas personales">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        El equilibrio entre gastar y ahorrar: la clave para una vida financiera saludable
+          El equilibrio entre gastar y ahorrar: la clave para una vida financiera saludable
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 09 Ene 2026 | 21:09 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ahorrar-100-mil.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/ahorrar-con-100-mil-pesos.webp" alt="Cómo ahorrar 100 mil pesos">
-          <div class="badge">Ahorrar 100.000 pesos en 30 días es posible incluso con ingresos bajos si se sigue un plan simple y constante. El artículo explica claramente los pasos a seguir.</div>
+          <img src="../../../assets/png/ahorrar-con-100-mil-pesos.webp" alt="cómo ahorrar 100 mil pesos en 30 días">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Por qué no logras ahorrar y cómo juntar 100.000 pesos en 30 días
+          Por qué no logras ahorrar y cómo juntar 100.000 pesos en 30 días
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 10 Ene 2026 | 18:05 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./30-dias-cambia-finanzas-5-habitos.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-hacer-crecer-tu-dinero.webp" alt="Cambia tus finanzas">
-          <div class="badge">Es posible empezar a recuperar el control de tu economía en solo 30 días puedes notar cambios reales en tu forma de gastar, ahorrar y tomar mejores decisiones financieras.</div>
+          <img src="../../../assets/png/como-hacer-crecer-tu-dinero.webp" alt="mejorar finanzas personales en 30 días">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Haz que tu dinero trabaje para ti: mejoras reales en solo 30 días
+          Haz que tu dinero trabaje para ti: mejoras reales en solo 30 días
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 09 Ene 2026 | 21:09 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./presupuesto-mensual-facil.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/debo-contar-cada-peso-que-gasto.webp" alt="Presupuesto mensual">
-          <div class="badge">Con pasos prácticos y adaptables, podrás tener claridad sobre tus ingresos, priorizar tus necesidades, manejar caprichos y ajustar tu economía mes a mes.</div>
+          <img src="../../../assets/png/debo-contar-cada-peso-que-gasto.webp" alt="cómo hacer un presupuesto mensual fácil">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Domina tus finanzas: organiza tu dinero paso a paso y sin estrés
+          Domina tus finanzas: organiza tu dinero paso a paso y sin estrés
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 08 Ene 2026 | 14:37 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
+
 
 
       </div>
