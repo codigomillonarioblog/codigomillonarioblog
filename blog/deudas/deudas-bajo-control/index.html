@@ -13,11 +13,19 @@
 <!-- Favicon -->
 <link rel="icon" href="../../../assets/img/favicon-v45.png" type="image/png">
 
+
 <!-- Google Fonts Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+<!-- NUEVA TIPOGRAFIA -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
@@ -28,6 +36,8 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+
 
 <style>
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
@@ -57,9 +67,10 @@
 
 </style>
 
+
 <style>
 
-/* ===================== PAGINACIÓN ===================== */
+/* ===================== BLOQUE DE COMPAGINADO ===================== */
 .pager-container { 
     background: #ffffff; 
     border-radius: 8px; 
@@ -147,28 +158,78 @@ input[type="number"].goto-page {
 }
 </style>
 
+
 <style>
-/* ===================== Tarejetas dentro de la Compaginacion ===================== */
-/* CONTENEDOR */
-.articles-container {
+/* ===================== TARJETAS DE PAGINACIÓN ===================== */
+
+#articlesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
     align-items: stretch;
 }
 
-/* TARJETA ENVOLVENTE */
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+@media (max-width: 640px) {
+    #articlesGrid {
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: center;
+        max-width: 1200px;
+    }
+}
+
+.article {
+    display: flex;
+    justify-content: center;
     height: 100%;
 }
 
-/* CARD */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    padding: 12px; 
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ===================== TARJETAS ===================== */
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
 .article-card {
     width: 100%;
-    max-width: 250px;
+    max-width: none;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -176,50 +237,14 @@ input[type="number"].goto-page {
     box-shadow: none;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
 }
 
-/* BLOQUE SUPERIOR DE TEXTO */
+/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    text-align: left;
-}
-
-/* CARD FLEX */
-.article-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.article {
-    display: flex;
-}
-
-.article article {
-    flex: 1;
-    display: flex;
-}
-
-.article-link {
-    display: flex;
-    flex: 1;
-}
-
-/* TÍTULO */
-.article-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1c1c1c;
-    margin: 0 0 4px 0;
-    line-height: 1.4;
     text-align: left;
 }
 
@@ -231,15 +256,67 @@ input[type="number"].goto-page {
     margin: 0;
     padding-bottom: 6px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: none;
 }
 
-/* IMAGEN 16:9 */
+/* TEXTO ANALISIS */
+.badge.editorial {
+  color: #000000;
+  margin-top: 10px;
+  display: inline-flex;
+  width: fit-content;
+  padding: 1px 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+/* TÍTULO */
+.article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+    text-align: left;
+}
+
+@media (min-width:769px){
+  .article-link:hover .article-title{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+}
+
+/* ===================== IMAGEN (SOLO BRILLO) ===================== */
+
 .article-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 6px;
+    transition: filter 0.25s ease;
+}
+
+/* 🔥 SOLO BRILLO (SIN ZOOM) */
+.article-card:hover img {
+    filter: brightness(1.10);
+}
+
+/* FECHA + ICONO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ICONO */
+.card-icon {
+    margin-left: 10px;
+    flex-shrink: 0;
 }
 
 /* OCULTOS */
@@ -254,31 +331,64 @@ body, html {
 }
 </style>
 
-<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+
+<!-- TEXTO LEER MAS Y FLECHA COMPLETOS -->
 <style>
-  /* ICONO FLECHA */
-  .article-card .card-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(-45deg); /* Apunta a la derecha */
-    transition: transform 0.35s ease;
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-  }
+/* Contenedor relativo */
+.article-card {
+  position: relative;
+}
 
-  /* Contenedor relativo para que el icono se posicione correctamente */
-  .article-card {
-    position: relative;
-  }
+/* TEXTO "LEER MÁS" */
+.article-card .card-icon {
+  position: absolute;
+  bottom: 23px;
+  right: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #d63039;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-  /* Opcional: rotar al hacer click */
-  .article-card.open .card-icon {
-    transform: rotate(135deg);
-  }
+/* Línea debajo (oculta por defecto) */
+.article-card .card-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: #d63039;
+  opacity: 0;
+}
+
+/* Aparece de inmediato al hover (sin transición) */
+.article-card:hover .card-icon::before {
+  opacity: 1;
+}
+
+/* FLECHA */
+.article-card .card-icon::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg);
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+/* Animación opcional */
+.article-card.open .card-icon::after {
+  transform: rotate(135deg);
+}
 </style>
+
+
+
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1482,257 +1592,358 @@ y convertir la presión financiera en un punto de partida para tomar decisiones 
                 </div>
             </div>
 
+
+
             <!-- GRID DE ARTÍCULOS -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="articlesGrid">
 
 
+
+
+              
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ley-borron-y-cuenta-nueva-colombia.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/ley-borron-y-cuenta-nueva-colombia.webp" alt="Hábitos financieros sanos">
-          <div class="badge">No todo está perdido. Aquí te explico cómo funciona la Ley de Borrón y Cuenta Nueva, cuándo se borra un reporte y qué puedes hacer paso a paso en Colombia.</div>
+          <img src="../../../assets/png/ley-borron-y-cuenta-nueva-colombia.webp" alt="ley borrón y cuenta nueva Colombia explicación financiera">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-         La verdad sobre la Ley de Borrón y Cuenta Nueva. Esto te interesa
+          La verdad sobre la Ley de Borrón y Cuenta Nueva. Esto te interesa
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 20 Feb 2026 | 11:17 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./habitos-financieros-sanos.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-evitar-volver-a-endeudarse.jpg" alt="Hábitos financieros sanos">
-          <div class="badge">Pagar todo es solo el primer paso. Aquí te cuento cómo organizar tu dinero, evitar caer otra vez en el mismo ciclo y construir una estabilidad financiera.</div>
+          <img src="../../../assets/png/como-evitar-volver-a-endeudarse.jpg" alt="hábitos financieros para no volver a endeudarse">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Saliste de deudas, pero el reto real es no volver a caer: así puedes lograrlo
+          Saliste de deudas, pero el reto real es no volver a caer: así puedes lograrlo
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 07:20 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./banco-reporte-mora.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/estoy-reportado-por-mora-que-hago.jpg" alt="Reporte por mora">
-          <div class="badge">Sí, estar reportado asusta… pero tiene salida. Con los pasos correctos puedes ordenar tu situación, limpiar tu historial y volver a tener tranquilidad financiera.</div>
+          <img src="../../../assets/png/estoy-reportado-por-mora-que-hago.jpg" alt="qué hacer si estás reportado por mora en Colombia">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        ¿Te reportaron por mora? Esto es lo que debes hacer para salir de ahí
+          ¿Te reportaron por mora? Esto es lo que debes hacer para salir de ahí
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 17:09 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./evitar-creditos-peligrosos.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/creditos-que-debes-evitar.jpg" alt="Evitar créditos peligrosos">
-          <div class="badge">Antes de aceptar un crédito de libre inversión, revisa bien las tasas. Lo que parece una ayuda rápida puede terminar costándote mucho más si no haces las cuentas desde el inicio.</div>
+          <img src="../../../assets/png/creditos-que-debes-evitar.jpg" alt="créditos peligrosos préstamos de libre inversión errores financieros">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        El error más común al pedir un préstamo de libre inversión (y cómo evitarlo)
+          El error más común al pedir un préstamo de libre inversión (y cómo evitarlo)
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 11:09 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./refinanciar-reestructurar.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/que-sucede-al-adquirir-otra-deuda.jpg" alt="Refinanciar vs reestructurar">
-          <div class="badge">¿Tu deuda te está apretando? Ojo con esto. Refinanciar y reestructurar suenan parecido, pero funcionan distinto. Elegir bien hace toda la diferencia.</div>
+          <img src="../../../assets/png/que-sucede-al-adquirir-otra-deuda.jpg" alt="refinanciar o reestructurar diferencias financieras">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        ¿Refinanciar o reestructurar? La diferencia que puede cambiar tus finanzas
+          ¿Refinanciar o reestructurar? La diferencia que puede cambiar tus finanzas
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 11:35 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./alertas-financieras.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-recuperar-control-de-mi-dinero.jpg" alt="Alertas financieras">
-          <div class="badge">Cubrir solo intereses, usar crédito para vivir o llegar justo a fin de mes no es normal. Son señales claras de que necesitas ajustar ya antes de que la situación empeore.</div>
+          <img src="../../../assets/png/como-recuperar-control-de-mi-dinero.jpg" alt="señales de alerta financiera y deudas críticas">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Señales de que tus deudas ya están afectando tu estabilidad financiera
+          Señales de que tus deudas ya están afectando tu estabilidad financiera
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 10:15 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./pagar-deudas-rapido.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-funciona-metodo-bola-de-nieve.jpg" alt="Método bola de nieve">
-          <div class="badge">Si sigues pagando igual, vas a tardar años en salir de deudas. Hay una forma más inteligente de hacerlo y avanzar mucho más rápido sin ahogarte.</div>
+          <img src="../../../assets/png/como-funciona-metodo-bola-de-nieve.jpg" alt="método bola de nieve para pagar deudas rápido">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        La forma más rápida de salir de deudas (y por qué no lo estás logrando)
+          La forma más rápida de salir de deudas (y por qué no lo estás logrando)
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 08:12 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./consolidar-deudas.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-pagar-varias-deudas-en-una.jpg" alt="Consolidar deudas">
-          <div class="badge">Unir tus deudas puede ayudarte… o meterte en más problemas. Menos cuotas suena bien, pero si no haces bien las cuentas, puedes terminar pagando más de lo que imaginas.</div>
+          <img src="../../../assets/png/como-pagar-varias-deudas-en-una.jpg" alt="consolidación de deudas ventajas y riesgos">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        ¿Unir tus deudas es buena idea? Ventajas, riesgos y lo que debes saber
+          ¿Unir tus deudas es buena idea? Ventajas, riesgos y lo que debes saber
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 13:08 h <br> ⏱ 3 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./renegociar-pagos.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-pagar-menos-cada-mes.jpg" alt="Renegociar pagos">
-          <div class="badge">Si tu cuota ya no te da, no te quedes quieto. Negociar con el banco sí funciona, pero solo si llegas con números claros y una propuesta real que puedas cumplir.</div>
+          <img src="../../../assets/png/como-pagar-menos-cada-mes.jpg" alt="renegociar pagos con el banco cuotas más bajas">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        ¿Cuotas muy altas? Así puedes negociar con tu banco y pagar menos al mes
+          ¿Cuotas muy altas? Así puedes negociar con tu banco y pagar menos al mes
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 06:34 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./mejorar-historial-crediticio.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-subir-puntaje-crediticio-rapido.jpg" alt="Mejorar historial crediticio">
-          <div class="badge">Mejorar tu puntaje no es cuestión de suerte, es cuestión de hábitos. Si pagas a tiempo, no saturas tu tarjeta y mantienes actividad financiera puede subir.</div>
+          <img src="../../../assets/png/como-subir-puntaje-crediticio-rapido.jpg" alt="cómo mejorar historial crediticio y subir puntaje rápido">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        ¿Puntaje bajo? Así empiezas a recuperarlo desde hoy sin complicarte
+          ¿Puntaje bajo? Así empiezas a recuperarlo desde hoy sin complicarte
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 14:23 h <br> ⏱ 5 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./salir-obligaciones.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-liberarme-de-compromisos-financieros.jpg" alt="Salir de obligaciones">
-          <div class="badge">Salir de deudas no es pagar desesperado, es tener claro qué debes y cómo lo vas a atacar. Si cambias de estrategia cada mes, no avanzas. solo das vueltas.</div>
+          <img src="../../../assets/png/como-liberarme-de-compromisos-financieros.jpg" alt="errores que mantienen el endeudamiento activo">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        El error que te mantiene endeudado (aunque estés pagando)
+          El error que te mantiene endeudado (aunque estés pagando)
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 09:20 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./consecuencias-prestamo.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/deje-de-pagar-un-prestamo-que-hago.jpg" alt="Hacer un mal préstamo">
-          <div class="badge">Cada día sin pagar suma intereses, daña tu historial y te cierra puertas. Pero aquí está la verdad: todavía puedes recuperar el control. Habla con tu banco, negocia y actúa.</div>
+          <img src="../../../assets/png/deje-de-pagar-un-prestamo-que-hago.jpg" alt="qué pasa si dejas de pagar un préstamo consecuencias financieras">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        ¿Dejaste de pagar? Esto es lo que realmente pasa (y cómo salvarte)
+          ¿Dejaste de pagar? Esto es lo que realmente pasa (y cómo salvarte)
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 12 Feb 2026 | 18:12 h <br> ⏱ 4 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
