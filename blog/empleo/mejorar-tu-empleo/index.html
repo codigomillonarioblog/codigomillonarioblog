@@ -13,11 +13,19 @@
 <!-- Favicon -->
 <link rel="icon" href="../../../assets/img/favicon-v45.png" type="image/png">
 
+
 <!-- Google Fonts Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+<!-- NUEVA TIPOGRAFIA -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
@@ -28,6 +36,9 @@
 
   gtag('config', 'G-0826LEMPPY');
 </script>
+
+
+
 
 <style>
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
@@ -57,9 +68,10 @@
 
 </style>
 
+
 <style>
 
-/* ===================== PAGINACIÓN ===================== */
+/* ===================== BLOQUE DE COMPAGINADO ===================== */
 .pager-container { 
     background: #ffffff; 
     border-radius: 8px; 
@@ -147,28 +159,78 @@ input[type="number"].goto-page {
 }
 </style>
 
+
 <style>
-/* ===================== Tarejetas dentro de la Compaginacion ===================== */
-/* CONTENEDOR */
-.articles-container {
+/* ===================== TARJETAS DE PAGINACIÓN ===================== */
+
+#articlesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
     align-items: stretch;
 }
 
-/* TARJETA ENVOLVENTE */
-.article-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+@media (max-width: 640px) {
+    #articlesGrid {
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: center;
+        max-width: 1200px;
+    }
+}
+
+.article {
+    display: flex;
+    justify-content: center;
     height: 100%;
 }
 
-/* CARD */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    padding: 12px; 
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ===================== TARJETAS ===================== */
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
 .article-card {
     width: 100%;
-    max-width: 250px;
+    max-width: none;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -176,50 +238,14 @@ input[type="number"].goto-page {
     box-shadow: none;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
 }
 
-/* BLOQUE SUPERIOR DE TEXTO */
+/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    text-align: left;
-}
-
-/* CARD FLEX */
-.article-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.article {
-    display: flex;
-}
-
-.article article {
-    flex: 1;
-    display: flex;
-}
-
-.article-link {
-    display: flex;
-    flex: 1;
-}
-
-/* TÍTULO */
-.article-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1c1c1c;
-    margin: 0 0 4px 0;
-    line-height: 1.4;
     text-align: left;
 }
 
@@ -231,15 +257,67 @@ input[type="number"].goto-page {
     margin: 0;
     padding-bottom: 6px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: none;
 }
 
-/* IMAGEN 16:9 */
+/* TEXTO ANALISIS */
+.badge.editorial {
+  color: #000000;
+  margin-top: 10px;
+  display: inline-flex;
+  width: fit-content;
+  padding: 1px 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+/* TÍTULO */
+.article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+    text-align: left;
+}
+
+@media (min-width:769px){
+  .article-link:hover .article-title{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+}
+
+/* ===================== IMAGEN (SOLO BRILLO) ===================== */
+
 .article-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 6px;
+    transition: filter 0.25s ease;
+}
+
+/* 🔥 SOLO BRILLO (SIN ZOOM) */
+.article-card:hover img {
+    filter: brightness(1.10);
+}
+
+/* FECHA + ICONO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ICONO */
+.card-icon {
+    margin-left: 10px;
+    flex-shrink: 0;
 }
 
 /* OCULTOS */
@@ -254,31 +332,64 @@ body, html {
 }
 </style>
 
-<!-- Flecha en la esquina inferior derecha de la tarjeta -->
+
+<!-- TEXTO LEER MAS Y FLECHA COMPLETOS -->
 <style>
-  /* ICONO FLECHA */
-  .article-card .card-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(-45deg); /* Apunta a la derecha */
-    transition: transform 0.35s ease;
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-  }
+/* Contenedor relativo */
+.article-card {
+  position: relative;
+}
 
-  /* Contenedor relativo para que el icono se posicione correctamente */
-  .article-card {
-    position: relative;
-  }
+/* TEXTO "LEER MÁS" */
+.article-card .card-icon {
+  position: absolute;
+  bottom: 23px;
+  right: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #d63039;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-  /* Opcional: rotar al hacer click */
-  .article-card.open .card-icon {
-    transform: rotate(135deg);
-  }
+/* Línea debajo (oculta por defecto) */
+.article-card .card-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: #d63039;
+  opacity: 0;
+}
+
+/* Aparece de inmediato al hover (sin transición) */
+.article-card:hover .card-icon::before {
+  opacity: 1;
+}
+
+/* FLECHA */
+.article-card .card-icon::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg);
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+/* Animación opcional */
+.article-card.open .card-icon::after {
+  transform: rotate(135deg);
+}
 </style>
+
+
+
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1487,158 +1598,222 @@ En esta sección descubrirás cómo fortalecer tu perfil, aportar más valor y p
         <!-- ARTÍCULOS -->
 
 
-   <div class="article">
-    <article>
+
+        
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
     <a href="./trabajar-mas-no-alcanza.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/trabajar-mas-avanzar-menos.webp" alt="Decide con claridad">
-          <div class="badge">Cada vez más personas dedican más horas, tienen más compromisos y aun así sienten que su progreso económico no llega. El costo de vida sube, el tiempo se reduce.</div>
+          <img src="../../../assets/png/trabajar-mas-avanzar-menos.webp" alt="trabajar más no significa avanzar más productividad">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Más horas, menos progreso: la trampa del trabajo moderno no se refleja en tu progreso
+          Más horas, menos progreso: la trampa del trabajo moderno no se refleja en tu progreso
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Escrito el 31 Ene 2026 | 21:05 h <br> ⏱ 8 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ganar-mas-sin-cambiar-trabajo.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-aumentar-ingresos-sin-cambiar-de-trabajo.webp" alt="Ganar más sin cambiar de trabajo">
-          <div class="badge">Pide aumentos estratégicos, aprovecha bonos y comisiones, optimiza gastos y convierte tus habilidades en oportunidades reales. No necesitas un nuevo empleo.</div>
+          <img src="../../../assets/png/como-aumentar-ingresos-sin-cambiar-de-trabajo.webp" alt="cómo aumentar ingresos sin cambiar de trabajo estrategia financiera">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Incrementa tus ganancias hoy sin cambiar de empleo de forma estrategica
+          Incrementa tus ganancias hoy sin cambiar de empleo de forma estrategica
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Mejorado el 16 Mar 2026 | 13:30 h <br> ⏱ 8 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./errores-carrera.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/7-errores-comunes-en-la-carrera-laboral.webp" alt="Errores en tu carrera">
-          <div class="badge">Todos cometemos errores, pero algunos son más peligrosos de lo que creemos: bloquean nuestro crecimiento profesional y afectan nuestras finanzas.</div>
+          <img src="../../../assets/png/7-errores-comunes-en-la-carrera-laboral.webp" alt="errores comunes en la carrera profesional estancamiento laboral">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Los 7 errores que te mantienen estancado sin darte cuenta
+          Los 7 errores que te mantienen estancado sin darte cuenta
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 29 Dic 2025 | 16:28 h <br> ⏱ 9 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./habilidades-que-valen.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/como-evitar-ser-reemplazado-en-trabajo.webp" alt="Habilidades indispensables hoy">
-          <div class="badge">En un mercado laboral cada vez más competitivo, ya no basta con títulos o experiencia: los empleadores buscan profesionales capaces de generar resultados.</div>
+          <img src="../../../assets/png/como-evitar-ser-reemplazado-en-trabajo.webp" alt="habilidades indispensables para el trabajo actual y empleabilidad">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-         ¿Que habilidades que te hacen indispensable en el trabajo actual?
+          ¿Qué habilidades te hacen indispensable en el trabajo actual?
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 27 Dic 2025 | 12:34 h <br> ⏱ 8 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./avanzar-carrera-trabajo.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/quiero-renunciar-a-mi-trabajo-que-hago.webp" alt="Avanza sin renunciar">
-          <div class="badge">Muchos profesionales creen que para crecer deben arriesgar su empleo actual, pero la verdad es que puedes avanzar paso a paso sin sacrificar tu estabilidad.</div>
+          <img src="../../../assets/png/quiero-renunciar-a-mi-trabajo-que-hago.webp" alt="cómo avanzar profesionalmente sin renunciar al empleo">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        Haz de tu empleo tu ventaja: tu catapulta al éxito profesional
+          Haz de tu empleo tu ventaja: tu catapulta al éxito profesional
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 26 Dic 2025 | 19:12 h <br> ⏱ 9 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
-  <div class="article">
+<!-- ARTÍCULO -->
+<div class="article">
   <article>
     <a href="./pensar-mejor-para-avanzar.html" class="article-link">
       <div class="article-card">
 
         <div style="position: relative;">
-          <img src="../../../assets/png/me-siento-estancado-en-mi-trabajo.webp" alt="Decide con claridad">
-          <div class="badge">Aprende a anticipar problemas, tomar decisiones conscientes, comunicar tu valor y elegir habilidades con retorno real, para crecer de forma inteligente.</div>
+          <img src="../../../assets/png/me-siento-estancado-en-mi-trabajo.webp" alt="cómo dejar de sentirse estancado en el trabajo y crecer profesionalmente">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-        De estancado a imparable: Administra tu energía y crece en el empleo
+          De estancado a imparable: administra tu energía y crece en el empleo
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 25 Dic 2025 | 17:09 h <br> ⏱ 9 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
 
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./tacticas-sobresalir-carrera.html" class="article-link">
       <div class="article-card">
+
         <div style="position: relative;">
-          <img src="../../../assets/png/consejos-para-destacar-en-el-empleo.webp" alt="Errores en carrera" class="w-full h-1/2 object-cover">
-          <div class="badge">Aprende a destacar sin agotarte, optimizando tu enfoque, organización y constancia para generar resultados reales y sostenibles en tu empleo.</div>
+          <img src="../../../assets/png/consejos-para-destacar-en-el-empleo.webp" alt="tácticas para destacar y avanzar en el empleo">
         </div>
 
+        <div class="badge editorial">Análisis Editorial</div>
+
         <h2 class="article-title">
-         Cómo destacar y avanzar sin esfuerzo innecesario en tu empleo
+          Cómo destacar y avanzar sin esfuerzo innecesario en tu empleo
         </h2>
-          <!-- ICONO -->
-          <span class="card-icon"></span>
-          <div class="meta"></div>
+
+        <div class="badge badge-row">
+          <span>
+            Actualizado el 28 Dic 2025 | 21:09 h <br> ⏱ 7 min lectura
+          </span>
+        </div>
+
+        <span class="card-icon">Leer más</span>
+
       </div>
     </a>
   </article>
 </div>
-        
+
+
+
+
 
         <!-- Agrega más artículos aquí siguiendo la misma estructura -->
          
         </div>
     </div>
 </section>
+
+
 
 
 
