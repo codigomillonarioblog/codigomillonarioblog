@@ -1397,12 +1397,16 @@ picture img {
 /* 🔥 SOLO MÓVIL */
 @media (max-width: 768px) {
   picture {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    width: 96vw; /* 🔽 un poco más angosta que 100vw */
+    margin-left: calc(50% - 48vw);
   }
 
   picture img {
-    min-height: 95vh;
+    width: 100%;
+    height: auto;
+
+    /* 🔽 un poco menos alta */
+    min-height: 85vh;
   }
 }
 </style>
