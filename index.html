@@ -1381,6 +1381,34 @@ fetch('posts.json')
 </style>
 
 
+<!-- CSS DEL H1 DE LA IMAGENPRINCIPAL -->
+<style>
+picture {
+  display: block;
+  width: 100%;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  picture {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  picture img {
+    width: 100%;
+    height: auto;
+    min-height: 100vh; /* vuelve a hacerla alta */
+  }
+}
+</style>
+
+
 
 
 
@@ -1463,16 +1491,23 @@ FALTA DE AHORRO
 
    </div>
 
+
     <!-- IZQUIERDA (H1 + imagen + texto) -->
     <div class="title-area">
       <div class="hero-fix">
 
-        <img src="./assets/img/gestion-financiera-habitos-dinero.webp">
+        <picture>
+          <!-- Móvil (imagen vertical) -->
+         <source srcset="./assets/img/proceso-riqueza-tiempo-grafica.webp" media="(max-width: 768px)">
+         <img src="./assets/img/crecimiento-financiero-realidad-vs-expectativa.webp"
+         alt="Gráfico sobre el crecimiento financiero comparando realidad vs expectativa">
+        </picture>
 
         <h1>
          Cómo mejorar tus finanzas personales y desarrollar una mentalidad financiera sólida
         </h1>
 
+        
 <p>
 Llegar a fin de mes no debería ser un deporte de riesgo. Por eso, 
 la gestión del dinero no es exclusiva de expertos; es una habilidad que se puede desarrollar. 
