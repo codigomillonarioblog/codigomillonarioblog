@@ -123,6 +123,27 @@ document.addEventListener("DOMContentLoaded", function () {
 </footer>
 
 <style>
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-icon:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 /* =========================
    TIPOGRAFÍA SOLO FOOTER
 ========================= */
