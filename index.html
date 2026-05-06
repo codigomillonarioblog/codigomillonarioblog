@@ -1127,13 +1127,14 @@ fetch('posts.json')
 
 <style>
 .marquee-line {
-  height: 1px;                 /* 🔥 mínimo seguro visible */
-  background: rgba(203,213,225,0.6); /* más suave tipo premium */
+  height: 1px;
+  background: rgba(203,213,225,0.6);
 
-  width: 100vw;
+  width: 100%;          /* 🔥 cambio clave */
+  max-width: 1200px;    /* opcional si usas layout centrado */
+  margin: 0 auto;       /* centra correctamente */
+
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 </style>
 
