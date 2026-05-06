@@ -123,62 +123,239 @@ document.addEventListener("DOMContentLoaded", function () {
 </footer>
 
 <style>
+/* =========================
+   TIPOGRAFÍA SOLO FOOTER
+========================= */
 
 .footer {
   font-family: 'Poppins', sans-serif;
 }
+
+.footer h1,
+.footer h2,
+.footer h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* =========================
+   ESTRUCTURA GENERAL
+========================= */
 
 .footer-main {
   display: flex;
   flex-wrap: wrap;
 }
 
+/* =========================
+   IZQUIERDA (NEWSLETTER)
+========================= */
+
 .footer-newsletter {
   background: #fff;
   color: #000;
   flex: 1;
+  min-width: 280px;
   padding: 50px 40px;
 }
+
+.footer-newsletter h3 {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* BRAND */
+.footer-brand-box {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 3px 6px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* FORM */
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-newsletter input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* CHECKBOX */
+.check-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.check-container input {
+  width: 18px;
+  height: 18px;
+  accent-color: #000;
+}
+
+/* BOTÓN */
+.footer-newsletter button {
+  width: 100%;
+  padding: 10px 14px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 60px;
+}
+
+.footer-newsletter button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =========================
+   DERECHA
+========================= */
 
 .footer-info {
   background: #000;
   color: #fff;
   flex: 2;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   padding: 70px 40px;
 }
 
-/* ICONOS ARREGLADOS */
+/* COLUMNAS */
+.footer-col h4 {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+/* =========================
+   REDES
+========================= */
+
 .footer-social {
   width: 100%;
   display: flex;
   gap: 15px;
   margin-top: 60px;
   margin-left: 60px;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  color: #ccc;
-  transition: 0.3s;
 }
 
-.social-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #fff;
+  text-align: left;
+  color: #aaa;
+  font-size: 14px;
 }
 
-.social-icon:hover {
-  color: #fff;
-  transform: translateY(-2px);
+/* =========================
+   PRIVACIDAD
+========================= */
+
+.privacy-link {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #000;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .footer-newsletter {
+    padding: 40px 20px;
+    text-align: left;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .footer-social {
+    margin-left: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footer-newsletter input {
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .footer-newsletter button {
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .footer-col {
+    margin-bottom: 25px;
+  }
+
+  .footer-info .footer-col {
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  .footer-info .footer-col:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
 </style>
 
 `;
