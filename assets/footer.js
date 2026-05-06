@@ -7,74 +7,77 @@ document.addEventListener("DOMContentLoaded", function () {
 <footer class="footer">
 <div class="footer-main">
 
-<!-- IZQUIERDA -->
-<div class="footer-newsletter">
+    <!-- IZQUIERDA -->
+    <div class="footer-newsletter">
 
-<div class="footer-brand-box">
-Código Millonario
-</div>
+      <div class="footer-brand-box">
+        Código Millonario
+      </div>
 
-<h3>Mantente conectado</h3>
+      <h3>Mantente conectado</h3>
+      <br>
+      <p>Regístrate para recibir contenido sobre finanzas personales directamente en tu correo.</p>
+      <br>
 
-<p>Regístrate para recibir contenido sobre finanzas personales directamente en tu correo.</p>
+      <form action="https://api.web3forms.com/submit" method="POST">
 
-<form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+        <input type="hidden" name="subject" value="🚀 Nuevo usuario registrado desde el FOOTER - Código Millonario">
+        <input type="hidden" name="from_name" value="Código Millonario Footer">
+        <input type="hidden" name="message" value="Nuevo registro desde el footer para recibir guías semanales.">
+        <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
 
-<input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
-<input type="hidden" name="subject" value="🚀 Nuevo usuario registrado desde el FOOTER - Código Millonario">
-<input type="hidden" name="from_name" value="Código Millonario Footer">
-<input type="hidden" name="message" value="Nuevo registro desde el footer para recibir guías semanales.">
-<input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
 
-<input type="text" name="nombre" placeholder="Nombre" required>
-<input type="email" name="email" placeholder="Correo electrónico" required>
+        <label class="check-container">
+          <input type="checkbox" name="terminos" required>
+          <span>Acepto los términos de protección de datos</span>
+        </label>
 
-<label class="check-container">
-<input type="checkbox" name="terminos" required>
-<span>Acepto los términos de protección de datos</span>
-</label>
+        <p style="font-size:12px; color:#555;">
+          Puedes cancelar tu suscripción en cualquier momento.<br><br>
+          La información que envíes estará regida por el 
+          <a href="/aviso-privacidad" class="privacy-link">
+            Aviso de privacidad de nuestro sitio.
+          </a>
+        </p>
 
-<p class="legal-text">
-Puedes cancelar tu suscripción en cualquier momento.<br><br>
-La información que envíes estará regida por el 
-<a href="/aviso-privacidad" class="privacy-link">Aviso de privacidad</a>
-</p>
+        <button type="submit">ENVIAR</button>
 
-<button type="submit">ENVIAR</button>
+      </form>
+    </div>
 
-</form>
-</div>
+    <!-- DERECHA -->
+    <div class="footer-info">
 
-<!-- DERECHA -->
-<div class="footer-info">
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/educacionfinanciera.html">Artículos</a></li>
+          <li><a href="/herramientas.html">Calculadoras</a></li>
+          <li><a href="/opiniones.html">Historias</a></li>
+          <li><a href="/blog/negocios/index.html">Emprendimiento</a></li>
+          <li><a href="/blog/inversiones/index.html">Guías de inversión</a></li>
+        </ul>
+      </div>
 
-<div class="footer-col">
-<h4>Recursos</h4>
-<ul>
-<li><a href="/educacionfinanciera.html">Artículos</a></li>
-<li><a href="/herramientas.html">Calculadoras</a></li>
-<li><a href="/opiniones.html">Historias</a></li>
-<li><a href="/blog/negocios/index.html">Emprendimiento</a></li>
-<li><a href="/blog/inversiones/index.html">Guías de inversión</a></li>
-</ul>
-</div>
+      <div class="footer-col">
+        <h4>Información Legal</h4>
+        <ul>
+          <li><a href="/informacion-legal#sobre-el-blog">Sobre el Blog</a></li>
+          <li><a href="/informacion-legal#politica-privacidad">Política de Privacidad</a></li>
+          <li><a href="/informacion-legal#terminos-condiciones">Términos y Condiciones</a></li>
+          <li><a href="/informacion-legal#aviso-legal">Aviso Legal</a></li>
+        </ul>
+      </div>
 
-<div class="footer-col">
-<h4>Información Legal</h4>
-<ul>
-<li><a href="/informacion-legal#sobre-el-blog">Sobre el Blog</a></li>
-<li><a href="/informacion-legal#politica-privacidad">Política de Privacidad</a></li>
-<li><a href="/informacion-legal#terminos-condiciones">Términos y Condiciones</a></li>
-<li><a href="/informacion-legal#aviso-legal">Aviso Legal</a></li>
-</ul>
-</div>
-
-<div class="footer-col">
-<h4>Contacto</h4>
-<ul>
-<li><a href="/contacto.html">Soporte</a></li>
-</ul>
-</div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="/contacto.html">Soporte</a></li>
+        </ul>
+      </div>
 
 <!-- REDES -->
 <div class="footer-social">
@@ -109,92 +112,271 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 
 </div>
 
-<div class="footer-bottom">
-<p>© 2026 Código Millonario — Todos los derechos reservados.</p>
-</div>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Código Millonario — Todos los derechos reservados.
+        </p>
+      </div>
 
-</div>
-</div>
+    </div>
+  </div>
 </footer>
 
 <style>
 
-/* ICONOS */
-.footer-social {
-display: flex;
-gap: 15px;
-margin-top: 60px;
-margin-left: 60px;
-}
-
 .social-icon {
-width: 40px;
-height: 40px;
-display: flex;
-align-items: center;
-justify-content: center;
-color: #ccc;
-transition: 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
 }
 
 .social-icon svg {
-width: 20px;
-height: 20px;
-fill: currentColor;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .social-icon:hover {
-color: #fff;
-transform: translateY(-2px);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
-/* BASE */
+/* =========================
+   TIPOGRAFÍA SOLO FOOTER
+========================= */
+
 .footer {
-font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
+.footer h1,
+.footer h2,
+.footer h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* =========================
+   ESTRUCTURA GENERAL
+========================= */
 
 .footer-main {
-display: flex;
-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+/* =========================
+   IZQUIERDA (NEWSLETTER)
+========================= */
 
 .footer-newsletter {
-background: #fff;
-color: #000;
-flex: 1;
-padding: 50px;
+  background: #fff;
+  color: #000;
+  flex: 1;
+  min-width: 280px;
+  padding: 50px 40px;
 }
+
+.footer-newsletter h3 {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* BRAND */
+.footer-brand-box {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 3px 6px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* FORM */
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-newsletter input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* CHECKBOX */
+.check-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.check-container input {
+  width: 18px;
+  height: 18px;
+  accent-color: #000;
+}
+
+/* BOTÓN */
+.footer-newsletter button {
+  width: 100%;
+  padding: 10px 14px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 60px;
+}
+
+.footer-newsletter button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =========================
+   DERECHA
+========================= */
 
 .footer-info {
-background: #000;
-color: #fff;
-flex: 2;
-display: flex;
-flex-wrap: wrap;
-padding: 70px;
+  background: #000;
+  color: #fff;
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 70px 40px;
 }
 
-.footer-col {
-margin-right: 40px;
+/* COLUMNAS */
+.footer-col h4 {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
 }
 
 .footer-col a {
-color: #ccc;
-text-decoration: none;
+  color: #ccc;
+  text-decoration: none;
 }
 
 .footer-col a:hover {
-color: #fff;
+  color: #fff;
 }
+
+/* =========================
+   REDES
+========================= */
+
+.footer-social {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin-top: 60px;
+  margin-left: 60px;
+  align-items: center;
+}
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
 
 .footer-bottom {
-width: 100%;
-margin-top: 40px;
-border-top: 1px solid #fff;
-padding-top: 20px;
-color: #aaa;
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #fff;
+  text-align: left;
+  color: #aaa;
+  font-size: 14px;
 }
 
+/* =========================
+   PRIVACIDAD
+========================= */
+
+.privacy-link {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #000;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .footer-newsletter {
+    padding: 40px 20px;
+    text-align: left;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .footer-social {
+    margin-left: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footer-newsletter input {
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .footer-newsletter button {
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .footer-col {
+    margin-bottom: 25px;
+  }
+
+  .footer-info .footer-col {
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  .footer-info .footer-col:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
 </style>
 
 `;
