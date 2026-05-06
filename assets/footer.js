@@ -38,9 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <p style="font-size:12px; color:#555;">
           Puedes cancelar tu suscripción en cualquier momento.<br><br>
           La información que envíes estará regida por el 
-          <a href="/aviso-privacidad" class="privacy-link">
+          <a href="/informacion-legal" class="privacy-link">
             Aviso de privacidad de nuestro sitio.
           </a>
+          Al enviar tu información, aceptas recibir contenido por correo electrónico.
         </p>
 
         <button type="submit">ENVIAR</button>
@@ -114,7 +115,8 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 
       <div class="footer-bottom">
         <p>
-          © 2026 Código Millonario — Todos los derechos reservados.
+          © 2026 Código Millonario — Todos los derechos reservados.<br>
+          Plataforma de análisis sobre finanzas personales y crecimiento económico.
         </p>
       </div>
 
