@@ -1029,84 +1029,145 @@ emailInput.addEventListener('input', () => {
 
 
 
-<!-- TARJETA DE NUEVO ARTICULO ACTUALIZABLE COLOR NARANJA -->
-<div id="new-article-bubble" style="display:none;">
+<!-- TARJETA DE NUEVO ARTÍCULO ACTUALIZABLE -->
+<div id="new-article-bubble">
+  
+  <div class="bubble-header">
+    <span class="bubble-label">Informe reciente</span>
+    <span id="close-bubble">✖</span>
+  </div>
+
   <a id="new-article-link" href="" target="_blank"></a>
-  <span id="close-bubble">✖</span>
 </div>
 
 <style>
   #new-article-bubble {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #FF6A00;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    bottom: 24px;
+    right: 24px;
+    width: 320px;
+    max-width: calc(100vw - 40px);
+
+    background: #111; /* más acorde a modo oscuro */
+    color: #fff;
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    max-width: 300px;
+
+    padding: 14px 14px 16px 14px;
+
+    display: none;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.35s ease;
+
     z-index: 9999;
-    display: flex; /* flex pero sigue oculto por inline display:none */
+  }
+
+  /* Encabezado */
+  .bubble-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 8px;
   }
 
-  #new-article-bubble a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    flex: 1;
-    margin-right: 10px;
+  .bubble-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
   }
 
-  #new-article-bubble span#close-bubble {
+  /* Botón cerrar en esquina superior derecha */
+  #close-bubble {
     cursor: pointer;
-    font-weight: bold;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    transition: 0.2s;
+  }
+
+  #close-bubble:hover {
+    color: #ff4d4d;
+    transform: scale(1.1);
+  }
+
+  /* Título del artículo */
+  #new-article-link {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    word-break: break-word;
+  }
+
+  #new-article-link:hover {
+    color: #ff8a3d;
+  }
+
+  /* Responsive móvil */
+  @media (max-width: 480px) {
+    #new-article-bubble {
+      width: 90%;
+      right: 5%;
+      bottom: 16px;
+    }
   }
 </style>
-
 
 <script>
 fetch('posts.json')
   .then(response => response.json())
   .then(posts => {
     const lastPost = posts[0];
-    if(!lastPost) return;
+    if (!lastPost) return;
 
     const bubble = document.getElementById('new-article-bubble');
     const link = document.getElementById('new-article-link');
 
     const closed = sessionStorage.getItem('bubbleClosed');
-    if(closed) return; // si ya cerró, no mostrar
+    if (closed) return;
 
-    link.textContent = "Nuevo artículo: " + lastPost.title;
+    link.textContent = lastPost.title;
     link.href = lastPost.url;
 
-    // Temporizador para todos los dispositivos
-    const delay = 20000; // 20 segundos
+    const delay = 20000;
+
     setTimeout(() => {
-      bubble.style.display = 'flex';       // se muestra el div
-      // Suavemente hacemos aparecer la burbuja
+      bubble.style.display = 'flex';
+
       setTimeout(() => {
         bubble.style.opacity = '1';
         bubble.style.transform = 'translateY(0)';
-      }, 50); // pequeña pausa para que la transición funcione
+      }, 50);
+
     }, delay);
 
-    // Cerrar burbuja
     document.getElementById('close-bubble').onclick = () => {
-      bubble.style.display = 'none';
       bubble.style.opacity = '0';
       bubble.style.transform = 'translateY(20px)';
+
+      setTimeout(() => {
+        bubble.style.display = 'none';
+      }, 300);
+
       sessionStorage.setItem('bubbleClosed', 'true');
-    }
+    };
 
   })
   .catch(err => console.error(err));
 </script>
+
 </body>
 
 
