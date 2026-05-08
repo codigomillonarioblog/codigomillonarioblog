@@ -959,7 +959,9 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 <!-- Redes sociales alineadas a la izquierda con espacio arriba -->
 <style>
-.social-container {
+
+/* SOLO este bloque */
+.cm-social-container {
   font-family: Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -967,34 +969,40 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   margin-left: 20px;
 }
 
-.social-icon {
+/* SOLO iconos de este bloque */
+.cm-social-container .cm-social-icon {
   width: 36px;
   height: 36px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #777;  /* borde más delgado */
+
+  border: 1px solid #777;
   border-radius: 50%;
-  color: #777; 
+
+  color: #777;
   background: transparent;
+
   font-size: 16px;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
-.social-icon svg {
-  width: 20px;  /* tamaño ajustado */
+/* SVG SOLO de este bloque */
+.cm-social-container .cm-social-icon svg {
+  width: 20px;
   height: 20px;
   fill: currentColor;
   vertical-align: middle;
 }
 
-.social-icon:hover {
-  color: #fff;
-  background: #777;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+/* HOVER SOLO de este bloque */
+.cm-social-container .cm-social-icon:hover {
+  color: #000;
+  border-color: #000;
 }
+
 </style>
 
 
@@ -1189,7 +1197,6 @@ Escrito el 02 mar 2026 | 20:00 h | ⏱ 4 min lectura
 
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
-
 
 
 <p class="mb-2 sm:mb-0 mr-4 text-xs uppercase tracking-widest text-stone-500">
