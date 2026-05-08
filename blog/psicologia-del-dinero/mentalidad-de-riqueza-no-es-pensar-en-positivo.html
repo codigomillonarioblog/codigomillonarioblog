@@ -968,7 +968,7 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 <!-- Título -->
 <div class="blog-main-title relative">
-<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
+<span class="block mt-1 w-full md:w-[87%] h-px bg-slate-300"></span>
 
 <div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
      style="font-family: 'Open Sans', sans-serif;">
@@ -1053,44 +1053,51 @@ font-family: Georgia, serif;
 }
 </style>
 
-<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<!-- Redes sociales blindadas (NO afecta footer ni otros iconos) -->
 <style>
-.social-container {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #777;
-  margin-left: 20px;
+
+/* CONTENEDOR ÚNICO */
+.cm-social-container {
+  display: flex;
+  gap: 16px;
 }
 
-.social-icon {
+/* ICONOS SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon {
   width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #777;  /* borde más delgado */
+
+  border: 1px solid #777;
   border-radius: 50%;
-  color: #777; 
+
+  color: #777;
   background: transparent;
+
   font-size: 16px;
-  transition: all 0.3s ease;
   text-decoration: none;
+
+  transition: all 0.3s ease;
 }
 
-.social-icon svg {
-  width: 20px;  /* tamaño ajustado */
+/* SVG SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon svg {
+  width: 20px;
   height: 20px;
   fill: currentColor;
   vertical-align: middle;
 }
 
-.social-icon:hover {
+/* HOVER SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon:hover {
   color: #fff;
   background: #777;
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
 </style>
 
 
@@ -1102,7 +1109,7 @@ font-family: Georgia, serif;
     <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
 
     <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
-    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+    <div class="absolute inset-0 flex items-center justify-end pointer-events-none">
       <a href="../../contacto.html"
          class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
         Mensaje
@@ -1129,7 +1136,7 @@ font-family: Georgia, serif;
 
 
     
-<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
+<div class="mt-3 mb-3 w-full md:w-[136%] h-px bg-slate-300"></div>
 </div>
 
 <div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
@@ -1147,45 +1154,61 @@ Actualizado 07 May 2026 | 10:16 h
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
 
-<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+
+<p class="mb-2 sm:mb-0 mr-4 text-xs uppercase tracking-widest text-stone-500">
   Síguenos
 </p>
 
-  <!-- Iconos -->
-  <div class="flex gap-4 social-container justify-center sm:justify-end">
-    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
-       class="social-icon">
-      <i class="fab fa-tiktok"></i>
-    </a>
+<!-- Iconos -->
+<div class="flex gap-4 cm-social-container justify-center sm:justify-end">
 
-    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
-       class="social-icon">
-      <i class="fab fa-youtube"></i>
-    </a>
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
+     target="_blank"
+     class="cm-social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
 
-    <a href="https://pin.it/3tqNXYoAA" target="_blank"
-       class="social-icon">
-      <i class="fab fa-pinterest-p"></i>
-    </a>
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
+     target="_blank"
+     class="cm-social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
 
-    <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
-        <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
-      </svg>
-    </a>
+  <a href="https://pin.it/3tqNXYoAA"
+     target="_blank"
+     class="cm-social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
 
-    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
-   class="social-icon">
-  <i class="fab fa-instagram"></i>
-</a>
-  </div>
+  <a href="https://x.com/CMillonarioblog"
+     target="_blank"
+     class="cm-social-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1200 1227"
+         width="20"
+         height="20"
+         fill="currentColor">
+
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+
+  </a>
+
+  <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
+     target="_blank"
+     class="cm-social-icon">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+</div>
 
 </div>
 </div>
 
-<!-- Ajuste tamaño icono X -->
 <style>
-/* Simula content-column SOLO para este bloque */
+
+/* CONTENEDOR VISUAL ORIGINAL */
 .custom-left-align {
   width: 100%;
 }
@@ -1207,10 +1230,46 @@ Actualizado 07 May 2026 | 10:16 h
   }
 }
 
-.social-icon svg{
-  width:14px !important;
-  height:14px !important;
+/* =========================
+   ICONOS BLINDADOS
+========================= */
+
+.cm-social-container .cm-social-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #777;
+  border-radius: 50%;
+
+  color: #777;
+  background: transparent;
+
+  font-size: 16px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
 }
+
+/* SVG SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon svg {
+  width: 14px !important;
+  height: 14px !important;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+/* HOVER SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 </style>
 
 
