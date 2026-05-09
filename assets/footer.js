@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p style="font-size:12px; color:#555;">
           Puedes cancelar tu suscripción en cualquier momento.<br><br>
           La información que envíes estará regida por el 
-          <a href="/informacion-legal" class="privacy-link">
+          <a href="/informacion-legal#registro-newsletter" class="privacy-link">
             Aviso de privacidad de nuestro sitio.
           </a>
           Al enviar tu información, aceptas recibir contenido por correo electrónico.
