@@ -969,7 +969,7 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 <!-- Título -->
 <div class="blog-main-title relative">
-<span class="block mt-1 w-full md:w-[108%] h-px bg-slate-300"></span>
+<span class="block mt-1 w-full md:w-[87%] h-px bg-slate-300"></span>
 
 <div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
      style="font-family: 'Open Sans', sans-serif;">
@@ -1053,44 +1053,51 @@ font-family: Georgia, serif;
 }
 </style>
 
-<!-- Redes sociales alineadas a la izquierda con espacio arriba -->
+<!-- Redes sociales blindadas (NO afecta footer ni otros iconos) -->
 <style>
-.social-container {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #777;
-  margin-left: 20px;
+
+/* CONTENEDOR ÚNICO */
+.cm-social-container {
+  display: flex;
+  gap: 16px;
 }
 
-.social-icon {
+/* ICONOS SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon {
   width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #777;  /* borde más delgado */
+
+  border: 1px solid #777;
   border-radius: 50%;
-  color: #777; 
+
+  color: #777;
   background: transparent;
+
   font-size: 16px;
-  transition: all 0.3s ease;
   text-decoration: none;
+
+  transition: all 0.3s ease;
 }
 
-.social-icon svg {
-  width: 20px;  /* tamaño ajustado */
+/* SVG SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon svg {
+  width: 20px;
   height: 20px;
   fill: currentColor;
   vertical-align: middle;
 }
 
-.social-icon:hover {
+/* HOVER SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon:hover {
   color: #fff;
   background: #777;
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
 </style>
 
 
@@ -1102,7 +1109,7 @@ font-family: Georgia, serif;
     <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
 
     <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
-    <div class="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none">
+    <div class="absolute inset-0 flex items-center justify-end pointer-events-none">
       <a href="../../contacto.html"
          class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
         Mensaje
@@ -1129,7 +1136,7 @@ font-family: Georgia, serif;
 
 
     
-<div class="mt-3 mb-3 w-full md:w-[100%] h-px bg-slate-300"></div>
+<div class="mt-3 mb-3 w-full md:w-[136%] h-px bg-slate-300"></div>
 </div>
 
 <div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
@@ -1145,45 +1152,61 @@ Escrito el 02 May 2026 | 20:42 h | ⏱ 4 min lectura
   <!-- Línea separadora (solo en PC) -->
   <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
 
-<p class="mb-2 sm:mb-0 text-xs uppercase tracking-widest text-stone-500">
+
+<p class="mb-2 sm:mb-0 mr-4 text-xs uppercase tracking-widest text-stone-500">
   Síguenos
 </p>
 
-  <!-- Iconos -->
-  <div class="flex gap-4 social-container justify-center sm:justify-end">
-    <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG" target="_blank"
-       class="social-icon">
-      <i class="fab fa-tiktok"></i>
-    </a>
+<!-- Iconos -->
+<div class="flex gap-4 cm-social-container justify-center sm:justify-end">
 
-    <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag" target="_blank"
-       class="social-icon">
-      <i class="fab fa-youtube"></i>
-    </a>
+  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
+     target="_blank"
+     class="cm-social-icon">
+    <i class="fab fa-tiktok"></i>
+  </a>
 
-    <a href="https://pin.it/3tqNXYoAA" target="_blank"
-       class="social-icon">
-      <i class="fab fa-pinterest-p"></i>
-    </a>
+  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
+     target="_blank"
+     class="cm-social-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
 
-    <a href="https://x.com/CMillonarioblog" target="_blank" class="social-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
-        <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
-      </svg>
-    </a>
+  <a href="https://pin.it/3tqNXYoAA"
+     target="_blank"
+     class="cm-social-icon">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
 
-    <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw==" target="_blank"
-   class="social-icon">
-  <i class="fab fa-instagram"></i>
-</a>
-  </div>
+  <a href="https://x.com/CMillonarioblog"
+     target="_blank"
+     class="cm-social-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1200 1227"
+         width="20"
+         height="20"
+         fill="currentColor">
+
+      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
+    </svg>
+
+  </a>
+
+  <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
+     target="_blank"
+     class="cm-social-icon">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+</div>
 
 </div>
 </div>
 
-<!-- Ajuste tamaño icono X -->
 <style>
-/* Simula content-column SOLO para este bloque */
+
+/* CONTENEDOR VISUAL ORIGINAL */
 .custom-left-align {
   width: 100%;
 }
@@ -1205,10 +1228,46 @@ Escrito el 02 May 2026 | 20:42 h | ⏱ 4 min lectura
   }
 }
 
-.social-icon svg{
-  width:14px !important;
-  height:14px !important;
+/* =========================
+   ICONOS BLINDADOS
+========================= */
+
+.cm-social-container .cm-social-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #777;
+  border-radius: 50%;
+
+  color: #777;
+  background: transparent;
+
+  font-size: 16px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
 }
+
+/* SVG SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon svg {
+  width: 14px !important;
+  height: 14px !important;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+/* HOVER SOLO DE ESTE BLOQUE */
+.cm-social-container .cm-social-icon:hover {
+  color: #fff;
+  background: #777;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 </style>
 
 
@@ -1958,11 +2017,7 @@ Entender este mecanismo no reduce impuestos, pero sí evita errores de interpret
 
 
 
-
-
-
-
- <!-- ESPACIO PEQUEÑO FINAL -->
+  <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
 
   <!-- Logos compartir -->
@@ -1970,43 +2025,43 @@ Entender este mecanismo no reduce impuestos, pero sí evita errores de interpret
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
-  <!-- Sección recomendada -->
-<div class="mt-5 mb-10">
-<div class="w-full h-px bg-slate-300"></div>
 
-<div class="mt-6 mb-4 text-center">
-  <p class="font-semibold text-slate-800"
-     style="font-family: 'Poppins', sans-serif;">
-    Código Millonario
-  </p>
-  <p class="text-[11px] text-slate-500 leading-relaxed"
-     style="font-family: 'Poppins', sans-serif;">
-    Medio de análisis sobre finanzas y crecimiento económico.
-  </p>
-</div>
-
-    </main>
-
-   
+ 
 
 
-   
+<p class="interlink-heading text-left mb-6 mt-40"
+   style="font-family: 'Playfair Display', serif;
+          font-size: clamp(30px, 5vw, 34px);
+          font-weight: 700;
+          letter-spacing: -0.3px;">
+  Artículos relacionados:
+</p>
+
+<p class="interlink-heading text-left text-sm mb-4"
+   style="font-family: 'Open Sans', sans-serif;">
+  ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+</p>
+
+</main>
+
+
+
+<!-- ================= NUEVA TIPOGRAFIA ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 <!-- ================= INTERLINK FUNCIONAL ================= -->
 <div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
-  <p class="interlink-heading text-center text-sm mb-4" style=" font-family: 'Montserrat', sans-serif;">
-    ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
-  </p>
 
   <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
     <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
     <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
-    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style=" font-family: 'Montserrat', sans-serif;">Ir</button>
-    <a id="viewAllBtn" href="../finanzas-personales/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style=" font-family: 'Montserrat', sans-serif;">
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../finanzas-personales/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
       Ver todos
     </a>
   </div>
 
-  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style=" font-family: 'Montserrat', sans-serif;">
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style="font-family: 'Montserrat', sans-serif;">
     Total <span id="totalArticles" class="mx-1">0</span> artículos
   </div>
 </div>
@@ -2014,19 +2069,12 @@ Entender este mecanismo no reduce impuestos, pero sí evita errores de interpret
 <!-- ================= NUEVO DISEÑO VISUAL ================= -->
 <section class="main-layout">
   <aside class="sidebar">
-
-    <p class="interlink-heading text-center text-sm mb-6" style=" font-family: 'Montserrat', sans-serif;">
-    Lo más leído
-    </p>
-
     <div id="interlinkGrid"></div>
-
   </aside>
 </section>
 
 <!-- ================= ESTILOS ================= -->
 <style>
-/* CONTENEDOR */
 .main-layout {
   width: 100%;
   display: flex;
@@ -2039,7 +2087,6 @@ Entender este mecanismo no reduce impuestos, pero sí evita errores de interpret
   max-width: 700px;
 }
 
-/* ITEM */
 .news-item {
   display: flex;
   gap: 18px;
@@ -2055,7 +2102,6 @@ Entender este mecanismo no reduce impuestos, pero sí evita errores de interpret
   opacity: 0.8;
 }
 
-/* IMAGEN */
 .news-thumb {
   width: 220px;
   height: 120px;
@@ -2066,35 +2112,43 @@ Entender este mecanismo no reduce impuestos, pero sí evita errores de interpret
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* TEXTO */
-.news-text {
-  flex: 1;
-}
-
+/* ================= TITULO ================= */
 .news-text h3 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.3;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
   margin-bottom: 4px;
-  color: #222;
+  color: #1a1a1a;
+  letter-spacing: -0.2px;
 }
 
+/* METADATA */
+.news-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+/* TEXTO SECUNDARIO */
 .news-text p {
   font-size: 13px;
   color: #666;
   line-height: 1.4;
 }
 
-/* CONTROLES */
+.news-text {
+  flex: 1;
+}
+
 .interlink-container {
   border-radius: 16px;
   padding: 24px;
   background: #fff;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  border: 1px solid #e5e7eb; /* 👈 NUEVA LÍNEA */
+  border: 1px solid #e5e7eb;
 }
 
 .select-pages, .goto-page {
@@ -2105,7 +2159,6 @@ Entender este mecanismo no reduce impuestos, pero sí evita errores de interpret
   font-size: 14px;
 }
 
-/* BOTONES */
 .interlink-button {
   background: #fff;
   border: 1px solid #c0c0c0;
@@ -2115,8 +2168,9 @@ Entender este mecanismo no reduce impuestos, pero sí evita errores de interpret
   font-size: 13px;
 }
 
-/* RESPONSIVE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
   .news-item {
     flex-direction: column;
     align-items: flex-start;
@@ -2125,6 +2179,12 @@ Entender este mecanismo no reduce impuestos, pero sí evita errores de interpret
   .news-thumb {
     width: 100%;
     height: 180px;
+  }
+
+  /* 👇 TITULO MÁS GRANDE EN MÓVIL */
+  .news-text h3 {
+    font-size: 24px;
+    line-height: 1.2;
   }
 }
 </style>
@@ -2140,15 +2200,14 @@ const interlinkGrid = document.getElementById("interlinkGrid");
 const perPage = 6;
 let allArticles = [];
 
-/* 🔥 FUNCIÓN PARA CORTAR TEXTO */
-function truncate(text, maxLength = 60){
-  return text.length > maxLength 
-    ? text.substring(0, maxLength) + "..." 
-    : text;
+function truncate(text, maxLength = 65){
+  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 }
 
 function shuffle(array){
-  return array.map(v => ({v, s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+  return array.map(v => ({v, s: Math.random()}))
+              .sort((a,b)=>a.s-b.s)
+              .map(o=>o.v);
 }
 
 function renderSelect(list){
@@ -2165,7 +2224,7 @@ function renderSelect(list){
   list.slice(0, perPage).forEach(a=>{
     const opt = document.createElement("option");
     opt.value = a.url;
-    opt.textContent = truncate(a.title, 60);
+    opt.textContent = truncate(a.title);
     select.appendChild(opt);
   });
 }
@@ -2177,11 +2236,11 @@ function renderCards(list){
     interlinkGrid.innerHTML += `
       <a href="${a.url}" class="news-item">
         <div class="news-thumb">
-          <img src="${a.image}" alt="">
+          <img src="${a.image}" alt="${a.title}">
         </div>
         <div class="news-text">
           <h3>${a.title}</h3>
-          <p>Este artículo relacionado puede ayudarte a mejorar tus conocimientos financieros de forma estratégica.</p>
+          <div class="news-meta">${a.meta}</div>
         </div>
       </a>
     `;
@@ -2204,33 +2263,41 @@ searchInput.addEventListener("input", ()=>{
 });
 
 fetch("../finanzas-personales/index.html")
-.then(r=>r.text())
-.then(html=>{
-  const temp = document.createElement("div");
-  temp.innerHTML = html;
+.then(r => r.text())
+.then(html => {
 
-  const links = Array.from(temp.querySelectorAll(".article a"));
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
 
-  allArticles = shuffle(
-    links.map(a=>{
-      const h = a.querySelector("h3");
-      return {
-        title: h ? h.textContent.trim() : a.textContent.trim(),
-        url: a.getAttribute("href"),
-        image: a.querySelector("img")?.src || "./assets/png/default.png"
-      };
-    }).filter(a => a.title.length > 15)
-  );
+  const articles = doc.querySelectorAll(".article");
+
+  allArticles = shuffle(Array.from(articles).map(article => {
+
+    const link = article.querySelector("a.article-link");
+    const title = article.querySelector("h2.article-title");
+    const img = article.querySelector("img");
+    const meta = article.querySelector(".badge-row span");
+
+    return {
+      title: title ? title.textContent.trim() : "Sin título",
+      url: link ? link.getAttribute("href") : "#",
+      image: img ? img.getAttribute("src") : "./assets/png/default.png",
+      meta: meta ? meta.textContent.trim() : ""
+    };
+
+  }).filter(a => a.title.length > 5));
 
   renderAll(allArticles);
+
 })
-.catch(e=>console.error("Interlink error:", e));
+.catch(err => console.error("Interlink error:", err));
 </script>
+
+
    
-
-
   <!-- ESPACIO PEQUEÑO FINAL -->
-<section class="py-20"></section>
+<section class="py-28"></section>
+
 
 
 
