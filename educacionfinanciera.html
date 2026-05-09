@@ -64,16 +64,15 @@
 
 </style>
 
-
 <style>
 
 /* ===================== BLOQUE DE COMPAGINADO ===================== */
 .pager-container { 
     background: #ffffff; 
     border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
     padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1); /* delineación sutil */
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 .page-box { 
@@ -147,16 +146,6 @@ input[type="number"].goto-page {
     transition: opacity 0.4s ease; 
 }
 
-@media (max-width: 640px) {
-  .pager-grid { grid-template-columns: 1fr; gap: 8px; }
-  .page-box { min-width: 34px; height: 34px; }
-  .compact-btn { min-width: 34px; height: 34px; }
-  input[type="number"].goto-page { width: 64px; }
-}
-</style>
-
-
-<style>
 /* ===================== TARJETAS DE PAGINACIÓN ===================== */
 
 #articlesGrid {
@@ -170,9 +159,10 @@ input[type="number"].goto-page {
 
 @media (max-width: 640px) {
     #articlesGrid {
-        grid-template-columns: repeat(auto-fit, 250px);
+        grid-template-columns: 1fr;
         justify-content: center;
-        max-width: 1200px;
+        max-width: 100%;
+        padding: 0 12px;
     }
 }
 
@@ -256,6 +246,15 @@ input[type="number"].goto-page {
     border-bottom: none;
 }
 
+/* 👉 TEXTO SECUNDARIO (INTER + MÁS PEQUEÑO + NEGRITA) */
+.text-content p,
+.badge:not(.editorial) {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #666;
+}
+
 /* TEXTO ANALISIS */
 .badge.editorial {
   color: #000000;
@@ -265,7 +264,7 @@ input[type="number"].goto-page {
   padding: 1px 6px;
   font-family: "Poppins", sans-serif;
   font-size: 11px;
-border: 1px solid #000000;
+  border: 1px solid #000000;
   border-radius: 6px;
 }
 
@@ -288,7 +287,7 @@ border: 1px solid #000000;
   }
 }
 
-/* ===================== IMAGEN (SOLO BRILLO) ===================== */
+/* ===================== IMAGEN ===================== */
 
 .article-card img {
     width: 100%;
@@ -298,7 +297,6 @@ border: 1px solid #000000;
     transition: filter 0.25s ease;
 }
 
-/* 🔥 SOLO BRILLO (SIN ZOOM) */
 .article-card:hover img {
     filter: brightness(1.10);
 }
@@ -310,82 +308,19 @@ border: 1px solid #000000;
     justify-content: space-between;
 }
 
-/* ICONO */
-.card-icon {
-    margin-left: 10px;
-    flex-shrink: 0;
-}
-
 /* OCULTOS */
 .meta,
-.arrow-btn {
-    display: none;
+.arrow-btn,
+.card-icon {
+    display: none !important;
 }
 
 /* Fondo */
 body, html {
     background-color: #ffffff !important;
 }
+
 </style>
-
-
-<!-- TEXTO LEER MAS Y FLECHA COMPLETOS -->
-<style>
-/* Contenedor relativo */
-.article-card {
-  position: relative;
-}
-
-/* TEXTO "LEER MÁS" */
-.article-card .card-icon {
-  position: absolute;
-  bottom: 25px;
-  right: 12px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #d63039;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* Línea debajo (oculta por defecto) */
-.article-card .card-icon::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 100%;
-  height: 1px;
-  background-color: #d63039;
-  opacity: 0;
-}
-
-/* Aparece de inmediato al hover (sin transición) */
-.article-card:hover .card-icon::before {
-  opacity: 1;
-}
-
-/* FLECHA */
-.article-card .card-icon::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-  transform: rotate(-45deg);
-  display: inline-block;
-  transition: transform 0.35s ease;
-}
-
-/* Animación opcional */
-.article-card.open .card-icon::after {
-  transform: rotate(135deg);
-}
-</style>
-
-
-
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1610,29 +1545,30 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
 
 
+
 <!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/mentalidad-de-exito/index.html" class="article-link">
       <div class="article-card">
 
+        <!-- IMAGEN -->
         <div style="position: relative;">
           <img src="./assets/png/el-exito-empieza-en-la-mente.webp" alt="">
         </div>
 
+        <!-- CATEGORÍA -->
         <div class="badge editorial">Selección Categorías</div>
 
+        <!-- TÍTULO -->
         <h2 class="article-title">
           El éxito no es Suerte: es Mentalidad, un Principio Fundamental
         </h2>
 
+        <!-- META -->
         <div class="badge badge-row">
-          <span>
-            Mentalidad de Éxito | Artículos <br> Relacionados
-          </span>
+          <span>Mentalidad de Éxito |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
@@ -1656,12 +1592,8 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         </h2>
 
         <div class="badge badge-row">
-          <span>
-            Psicología del Dinero | Artículos <br> Relacionados
-          </span>
+          <span>Psicología del Dinero |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
@@ -1685,12 +1617,8 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         </h2>
 
         <div class="badge badge-row">
-          <span>
-            Hechos, Lujos y Curiosidades | Artículos <br> Relacionados
-          </span>
+          <span>Hechos, Lujos y Curiosidades |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
@@ -1714,12 +1642,8 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         </h2>
 
         <div class="badge badge-row">
-          <span>
-            Biografía de Millonarios | Artículos <br> Relacionados
-          </span>
+          <span>Biografía de Millonarios |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
@@ -1732,23 +1656,23 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
     <a href="./blog/ahorro/index.html" class="article-link">
       <div class="article-card">
 
+        <!-- IMAGEN -->
         <div style="position: relative;">
           <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="">
         </div>
 
+        <!-- CATEGORÍA -->
         <div class="badge editorial">Selección Categorías</div>
 
+        <!-- TÍTULO -->
         <h2 class="article-title">
           Mentalidad y Hábitos para Ahorrar y Cumplir tus Objetivos
         </h2>
 
+        <!-- META -->
         <div class="badge badge-row">
-          <span>
-            Ahorro | Artículos <br> Relacionados
-          </span>
+          <span>Ahorro |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
@@ -1772,12 +1696,8 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         </h2>
 
         <div class="badge badge-row">
-          <span>
-            Inversiones | Artículos <br> Relacionados
-          </span>
+          <span>Inversiones |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
@@ -1801,19 +1721,13 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         </h2>
 
         <div class="badge badge-row">
-          <span>
-            Fundamentos del Dinero | Artículos <br> Relacionados
-          </span>
+          <span>Fundamentos del Dinero |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
   </article>
 </div>
-
-
 
 <!-- ARTÍCULO -->
 <div class="article">
@@ -1828,16 +1742,12 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         <div class="badge editorial">Selección Categorías</div>
 
         <h2 class="article-title">
-        Aprende a Gestionar tu Dinero, Impuestos y Flujo Financiero
+          Aprende a Gestionar tu Dinero, Impuestos y Flujo Financiero
         </h2>
 
         <div class="badge badge-row">
-          <span>
-            Finanzas Personales | Artículos <br> Relacionados
-          </span>
+          <span>Finanzas Personales |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
@@ -1850,23 +1760,23 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
     <a href="./blog/deudas/index.html" class="article-link">
       <div class="article-card">
 
+        <!-- IMAGEN -->
         <div style="position: relative;">
           <img src="./assets/png/eliminar-deudas-rapido.webp" alt="">
         </div>
 
+        <!-- CATEGORÍA -->
         <div class="badge editorial">Selección Categorías</div>
 
+        <!-- TÍTULO -->
         <h2 class="article-title">
           El Problema Silencioso de las Deudas que Nunca Desaparecen
         </h2>
 
+        <!-- META -->
         <div class="badge badge-row">
-          <span>
-            Deudas | Artículos <br> Relacionados
-          </span>
+          <span>Deudas |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
@@ -1890,12 +1800,8 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         </h2>
 
         <div class="badge badge-row">
-          <span>
-            Empleo | Artículos <br> Relacionados
-          </span>
+          <span>Empleo |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
@@ -1919,12 +1825,8 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
         </h2>
 
         <div class="badge badge-row">
-          <span>
-            Negocios | Artículos <br> Relacionados
-          </span>
+          <span>Negocios |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
