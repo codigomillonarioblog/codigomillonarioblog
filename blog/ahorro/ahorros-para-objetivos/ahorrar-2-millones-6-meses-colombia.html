@@ -1774,6 +1774,7 @@ conservación e inversión, más un propósito definido.
 
 
 
+
   <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
 
@@ -1800,7 +1801,6 @@ conservación e inversión, más un propósito definido.
 </p>
 
 </main>
-
 
 
 
@@ -1872,18 +1872,18 @@ conservación e inversión, más un propósito definido.
   object-fit: cover;
 }
 
-/* TITULO */
+/* ================= TITULO ================= */
 .news-text h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: clamp(18px, 2.2vw, 28px);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
   margin-bottom: 4px;
   color: #1a1a1a;
   letter-spacing: -0.2px;
 }
 
-/* METADATA NUEVA */
+/* METADATA */
 .news-meta {
   font-size: 12px;
   color: #888;
@@ -1926,7 +1926,9 @@ conservación e inversión, más un propósito definido.
   font-size: 13px;
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
   .news-item {
     flex-direction: column;
     align-items: flex-start;
@@ -1937,8 +1939,10 @@ conservación e inversión, más un propósito definido.
     height: 180px;
   }
 
+  /* 👇 TITULO MÁS GRANDE EN MÓVIL */
   .news-text h3 {
-    font-size: 18px;
+    font-size: 24px;
+    line-height: 1.2;
   }
 }
 </style>
@@ -1964,7 +1968,6 @@ function shuffle(array){
               .map(o=>o.v);
 }
 
-/* ================= RENDER SELECT ================= */
 function renderSelect(list){
   select.innerHTML = "";
 
@@ -1984,7 +1987,6 @@ function renderSelect(list){
   });
 }
 
-/* ================= CARDS CON META ================= */
 function renderCards(list){
   interlinkGrid.innerHTML = "";
 
@@ -2018,7 +2020,6 @@ searchInput.addEventListener("input", ()=>{
   renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
 });
 
-/* ================= PARSEO CORRECTO ================= */
 fetch("../ahorros-para-objetivos/index.html")
 .then(r => r.text())
 .then(html => {
@@ -2054,6 +2055,7 @@ fetch("../ahorros-para-objetivos/index.html")
    
   <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-28"></section>
+
 
 
 
