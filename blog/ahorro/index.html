@@ -67,16 +67,15 @@
 
 </style>
 
-
 <style>
 
 /* ===================== BLOQUE DE COMPAGINADO ===================== */
 .pager-container { 
     background: #ffffff; 
     border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
     padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1); /* delineación sutil */
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 .page-box { 
@@ -150,16 +149,6 @@ input[type="number"].goto-page {
     transition: opacity 0.4s ease; 
 }
 
-@media (max-width: 640px) {
-  .pager-grid { grid-template-columns: 1fr; gap: 8px; }
-  .page-box { min-width: 34px; height: 34px; }
-  .compact-btn { min-width: 34px; height: 34px; }
-  input[type="number"].goto-page { width: 64px; }
-}
-</style>
-
-
-<style>
 /* ===================== TARJETAS DE PAGINACIÓN ===================== */
 
 #articlesGrid {
@@ -173,9 +162,10 @@ input[type="number"].goto-page {
 
 @media (max-width: 640px) {
     #articlesGrid {
-        grid-template-columns: repeat(auto-fit, 250px);
+        grid-template-columns: 1fr;
         justify-content: center;
-        max-width: 1200px;
+        max-width: 100%;
+        padding: 0 12px;
     }
 }
 
@@ -259,6 +249,15 @@ input[type="number"].goto-page {
     border-bottom: none;
 }
 
+/* 👉 TEXTO SECUNDARIO (INTER + MÁS PEQUEÑO + NEGRITA) */
+.text-content p,
+.badge:not(.editorial) {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #666;
+}
+
 /* TEXTO ANALISIS */
 .badge.editorial {
   color: #000000;
@@ -268,7 +267,7 @@ input[type="number"].goto-page {
   padding: 1px 6px;
   font-family: "Poppins", sans-serif;
   font-size: 11px;
-border: 1px solid #000000;
+  border: 1px solid #000000;
   border-radius: 6px;
 }
 
@@ -291,7 +290,7 @@ border: 1px solid #000000;
   }
 }
 
-/* ===================== IMAGEN (SOLO BRILLO) ===================== */
+/* ===================== IMAGEN ===================== */
 
 .article-card img {
     width: 100%;
@@ -301,7 +300,6 @@ border: 1px solid #000000;
     transition: filter 0.25s ease;
 }
 
-/* 🔥 SOLO BRILLO (SIN ZOOM) */
 .article-card:hover img {
     filter: brightness(1.10);
 }
@@ -313,81 +311,19 @@ border: 1px solid #000000;
     justify-content: space-between;
 }
 
-/* ICONO */
-.card-icon {
-    margin-left: 10px;
-    flex-shrink: 0;
-}
-
 /* OCULTOS */
 .meta,
-.arrow-btn {
-    display: none;
+.arrow-btn,
+.card-icon {
+    display: none !important;
 }
 
 /* Fondo */
 body, html {
     background-color: #ffffff !important;
 }
+
 </style>
-
-
-<!-- TEXTO LEER MAS Y FLECHA COMPLETOS -->
-<style>
-/* Contenedor relativo */
-.article-card {
-  position: relative;
-}
-
-/* TEXTO "LEER MÁS" */
-.article-card .card-icon {
-  position: absolute;
-  bottom: 23px;
-  right: 12px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #d63039;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* Línea debajo (oculta por defecto) */
-.article-card .card-icon::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 100%;
-  height: 1px;
-  background-color: #d63039;
-  opacity: 0;
-}
-
-/* Aparece de inmediato al hover (sin transición) */
-.article-card:hover .card-icon::before {
-  opacity: 1;
-}
-
-/* FLECHA */
-.article-card .card-icon::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-  transform: rotate(-45deg);
-  display: inline-block;
-  transition: transform 0.35s ease;
-}
-
-/* Animación opcional */
-.article-card.open .card-icon::after {
-  transform: rotate(135deg);
-}
-</style>
-
-
 
 
 </head>
@@ -1600,35 +1536,34 @@ Accede a guías prácticas y completas para aprender a gestionar tu dinero, opti
 
 
 
-        <!-- ARTÍCULO -->
+<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ahorro-para-principiantes/index.html" class="article-link">
       <div class="article-card">
 
+        <!-- IMAGEN -->
         <div style="position: relative;">
           <img src="../../assets/png/como-empezar-a-ahorrar.jpg" alt="hábitos de ahorro para principiantes">
         </div>
 
+        <!-- CATEGORÍA -->
         <div class="badge editorial">Selección Categorías</div>
 
+        <!-- TÍTULO -->
         <h2 class="article-title">
           Inicia y construye hábitos de ahorro desde hoy sin aplazar tu meta
         </h2>
 
+        <!-- META -->
         <div class="badge badge-row">
-          <span>
-            Ahorro para principiantes | Artículos <br> Relacionados
-          </span>
+          <span>Ahorro para principiantes |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
   </article>
 </div>
-
 
 <!-- ARTÍCULO -->
 <div class="article">
@@ -1647,12 +1582,8 @@ Accede a guías prácticas y completas para aprender a gestionar tu dinero, opti
         </h2>
 
         <div class="badge badge-row">
-          <span>
-            Ahorros para objetivos | Artículos <br> Relacionados
-          </span>
+          <span>Ahorros para objetivos |</span>
         </div>
-
-        <span class="card-icon">Leer más</span>
 
       </div>
     </a>
