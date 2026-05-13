@@ -1,0 +1,1442 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Oráculo Financiero para Tomar Decisiones Inteligentes y Multiplicar Tu Fortuna - Código Millonario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../assets/img/favicon-v45.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+<style>
+body, html {
+  background-color: #ffffff !important;
+}
+</style>
+
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="../assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Recibe estrategias gratis
+    </button>
+
+    <!-- INPUT ANIMADO -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+        
+      <button type="submit" class="btn-enviar">→</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* ✨ ANIMACIÓN INPUT SOLO PC */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(-5px);
+  filter: blur(6px);
+  pointer-events: none;
+
+  transition: all 0.35s ease;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+/* INPUT */
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+</style>
+
+<script>
+  const btnPC = document.getElementById("btnTogglePC");
+  const inputBoxPC = document.getElementById("inputBoxPC");
+
+  btnPC.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    btnPC.style.opacity = "0";
+    btnPC.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      btnPC.style.display = "none";
+      inputBoxPC.classList.add("activo");
+    }, 150);
+  });
+
+  inputBoxPC.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  document.addEventListener("click", () => {
+    inputBoxPC.classList.remove("activo");
+
+    setTimeout(() => {
+      btnPC.style.display = "inline-block";
+      btnPC.style.opacity = "1";
+      btnPC.style.pointerEvents = "auto";
+    }, 200);
+  });
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="../assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="../blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="../blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="../blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="../blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="../blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="../blog/negocios/index.html">Modelos de Negocio</a>
+<a href="../tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../educacionfinanciera.html">Educación Financiera</a></li>
+      <li><a href="../herramientas.html">Herramientas</a></li>
+      <li><a href="../opiniones.html">Opiniones</a></li>
+      <li><a href="../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../donar.html">Donaciones</a></li>
+      <li><a href="../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../index.html">Inicio</a>
+      <a href="../educacionfinanciera.html">Educación Financiera</a>
+      <a href="../herramientas.html">Herramientas</a>
+      <a href="../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../tienda.html">Productos</a>
+      <a href="../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../donar.html">Donaciones</a>
+      <a href="../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #000; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('../assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-12"></section>
+
+
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+<style>
+.marquee-line {
+  height: 1px;            /* línea delgada */
+  background-color: #ccc;  /* gris claro */
+  width: 100%;            /* ocupa todo el contenedor */
+  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
+}
+</style>
+
+
+<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+  <span class="block">
+    Oráculo financiero 
+  </span>
+</div>
+
+<!-- Título -->
+<div class="blog-main-title relative">
+    <h1>
+ Consejo práctico al azar para mejorar <br> tus finanzas, tomar decisiones inteligentes y atraer buena suerte 
+    </h1>
+    <span class="block mt-1 w-full h-px bg-slate-300"></span>
+
+  <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
+Recibe un consejo práctico y accionable que te ayudará a fortalecer tus hábitos financieros, <br>
+ tomar decisiones más estratégicas y mejorar tu relación con el dinero.
+Pequeños cambios constantes pueden marcar una gran diferencia en tu estabilidad económica y abrirte nuevas oportunidades cada día.
+  </p>
+</div>
+
+<style>
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  color: #111;
+
+  /* 🔥 Separación diferente por lado */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;   /* poquito espacio a la izquierda */
+  margin-right: 120px; /* mucho más espacio a la derecha */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-main-title {
+    font-size: 2.2rem;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+</style>
+
+
+
+
+   <!-- ESPACIO FINAL -->
+<section class="py-20"></section>
+
+
+
+
+<!-- ===================== ORÁCULO FINANCIERO COMPLETO ===================== -->
+ <section id="oracle" class="p-8 bg-white rounded-3xl shadow max-w-xl mx-auto my-12 relative border border-stone-200">
+  <h2 class="text-3xl font-bold mb-4 text-green-700 text-center"> Bola de Cristal Financiera </h2>
+  
+  <!-- Bola de cristal con animación permanente -->
+  <div id="crystalBall" class="animate-pulse mx-auto mb-4 w-32 h-32 rounded-full bg-gradient-to-br from-green-200 via-white to-green-400 shadow-lg flex items-center justify-center text-4xl text-white font-bold opacity-50">🔮</div>
+  
+  <div id="oracleAnswer" class="mt-4 p-4 bg-gray-100 rounded text-stone-800 font-semibold min-h-[80px] text-center text-lg"></div>
+
+  <!-- Botón para recibir conocimiento -->
+  <div class="text-center mt-6">
+    <button id="receiveKnowledgeBtn" class="bg-green-700 text-white px-6 py-3 rounded font-bold hover:bg-green-800 transition">
+      Recibir conocimiento Ancestral
+    </button>
+  </div>
+</section>
+
+<style>
+  #oracleAnswer {
+    min-height: 80px;
+    font-family: 'Lora', serif;
+  }
+
+  #crystalBall {
+    transition: all 0.5s ease;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.6; }
+  }
+  .animate-pulse {
+    animation: pulse 1.5s infinite;
+  }
+
+  #receiveKnowledgeBtn {
+    cursor: pointer;
+    font-weight: 700;
+  }
+</style>
+
+<script>
+const oracleAnswer = document.getElementById("oracleAnswer");
+const crystalBall = document.getElementById("crystalBall");
+const receiveBtn = document.getElementById("receiveKnowledgeBtn");
+
+// 100 respuestas únicas del Oráculo
+const allAnswers = [
+  "Ahorra, pequeño saltamontes financiero.",
+  "No gastes hoy lo que tu yo del futuro agradecería.",
+  "Tu libertad depende de tu disciplina.",
+  "Si no entiendes lo que compras, mejor no lo compres.",
+  "Cripto puede ser divertido, pero no pongas tu arriendo en riesgo.",
+  "La paciencia es la inversión más rentable.",
+  "Si quieres libertad, evita las cuotas eternas.",
+  "Cada compra debe responder a un plan, no al impulso.",
+  "Antes de gastar, pregúntate: ¿me acerca a mi objetivo financiero?",
+  "El dinero dormido en el bolsillo nunca te dará intereses.",
+  "Invierte solo en lo que entiendas, no en rumores de amigos.",
+  "El ahorro pequeño de hoy es el capital grande de mañana.",
+  "Gastar con conciencia es un superpoder que pocos tienen.",
+  "No pongas todo tu oro en una sola canasta.",
+  "El mejor momento para invertir es cuando lo entiendes, no cuando todos lo hacen.",
+  "Si el corazón compra, la cabeza paga.",
+  "No dejes que las modas financieras dicten tu futuro.",
+  "Cada peso cuenta, incluso los que parecen insignificantes.",
+  "La libertad financiera empieza con una decisión y un plan.",
+  "No compres por impulso, compra con intención.",
+  "Lo barato puede salir caro, pero lo caro no siempre es sabio.",
+  "Invierte como si fueras a vivir 100 años, pero gasta como si mañana no existiera.",
+  "No todo lo que brilla es oro, sobre todo en finanzas.",
+  "Ahorrar es como plantar árboles: tu yo futuro lo agradecerá.",
+  "Los errores financieros son lecciones disfrazadas.",
+  "Si compras hoy, asegúrate de no arrepentirte mañana.",
+  "La mejor inversión es la que protege tu tranquilidad.",
+  "No pongas tu felicidad en ventas pasajeras.",
+  "Cada deuda que evitas es un paso hacia la libertad.",
+  "El dinero bien pensado nunca se pierde.",
+  "Un plan sin acción es solo un sueño financiero.",
+  "Gastar menos de lo que ganas es la regla de oro.",
+  "Si quieres ganar, primero aprende a conservar.",
+  "El interés compuesto es tu amigo más poderoso.",
+  "Evita compras que te hagan decir '¿y por qué lo hice?'.",
+  "La educación financiera es el mejor patrimonio.",
+  "No sigas a la multitud, sigue tu plan.",
+  "Invertir sin estrategia es como navegar sin mapa.",
+  "Si algo parece demasiado bueno para ser verdad, probablemente lo sea.",
+  "Un presupuesto bien hecho es libertad disfrazada.",
+  "El dinero inteligente trabaja incluso mientras duermes.",
+  "Ahorrar no es sacrificio, es inversión en ti.",
+  "El exceso de deuda es el enemigo silencioso de la felicidad.",
+  "Invierte en conocimientos, no solo en activos.",
+  "Tu futuro te agradecerá cada peso que controles hoy.",
+  "El mejor gasto es el que tiene propósito.",
+  "No sacrifiques tu tranquilidad por apariencias.",
+  "Aprende a decir no a compras innecesarias.",
+  "El ahorro no es castigo, es poder.",
+  "El dinero se va rápido si no tiene reglas.",
+  "La paciencia en inversiones multiplica resultados.",
+  "Gastar menos es más difícil que ganar más, pero más seguro.",
+  "No pongas tu seguridad financiera en apuestas riesgosas.",
+  "Invertir es como cocinar: sigue la receta y tendrás éxito.",
+  "No compares tu progreso financiero con otros.",
+  "El dinero debe servirte, no controlarte.",
+  "Aprende a diferenciar deseo de necesidad.",
+  "La libertad financiera se construye un paso a la vez.",
+  "No todas las oportunidades son realmente oportunidades.",
+  "Si te estresas por dinero, algo va mal en tu plan.",
+  "Ahorrar ahora evita preocupaciones mañana.",
+  "Invertir sin educación es jugar a la ruleta rusa.",
+  "Cada vez que dices 'no puedo', tu libertad financiera se aleja.",
+  "El dinero no da felicidad, pero la mala gestión sí da problemas.",
+  "Diversifica para dormir tranquilo.",
+  "La disciplina vence al impulso todos los días.",
+  "Cada meta financiera merece un plan.",
+  "Si compras sin pensar, vendes tu paz interior.",
+  "No pongas todos los huevos en la inversión de moda.",
+  "La riqueza real es tranquilidad, no lujos.",
+  "Tu futuro se construye con cada decisión de hoy.",
+  "Gasta en experiencias, no en cosas que se olvidan.",
+  "El ahorro constante supera la ganancia ocasional.",
+  "Evita deudas que te encadenen.",
+  "El conocimiento financiero es más valioso que el dinero mismo.",
+  "Si tu presupuesto sangra, revisa tus hábitos.",
+  "Las oportunidades vienen para quienes están preparados.",
+  "El tiempo es el activo más poderoso en finanzas.",
+  "Si compras sin necesidad, tu cartera llora.",
+  "Invierte en proyectos que entiendas y apoyes.",
+  "El dinero ama la claridad y la estrategia.",
+  "No compres con miedo ni con envidia.",
+  "Aprender a ahorrar es aprender a vivir libre.",
+  "Cada gasto impulsivo es una pequeña derrota.",
+  "Invierte como un sabio, gasta como un niño consciente.",
+  "No todas las inversiones prometen lo que muestran.",
+  "La seguridad financiera es un estado mental.",
+  "El dinero que guardas hoy puede ser tu superpoder mañana.",
+  "Si algo no suma a tu tranquilidad, mejor no lo hagas.",
+  "La riqueza se construye con constancia, no con suerte.",
+  "Evita consejos financieros de quien nunca los practica.",
+  "Gastar sin intención es regalar tu futuro.",
+  "El ahorro inteligente no duele, libera.",
+  "Cada decisión financiera es un voto a tu futuro.",
+  "No te endeudes para impresionar a nadie.",
+  "Invierte en ti mismo, siempre es rentable.",
+  "El dinero es herramienta, no objetivo.",
+  "Si no controlas tus gastos, tus gastos te controlan.",
+  "Cada peso cuenta, incluso los más pequeños.",
+  "No compres emociones, compra tranquilidad.",
+  "Aprender a manejar dinero es aprender a vivir mejor.",
+  "La riqueza comienza en tu mente y tu plan."
+];
+
+// Función efecto de máquina de escribir
+function typeWriter(text, element, speed=30){
+  element.textContent = "";
+  let i = 0;
+  const interval = setInterval(() => {
+    element.textContent += text.charAt(i);
+    i++;
+    if(i >= text.length) clearInterval(interval);
+  }, speed);
+}
+
+// Función para mostrar una respuesta cuando se hace clic
+function showAnswer() {
+  // Elegir respuesta aleatoria
+  const randomAnswer = allAnswers[Math.floor(Math.random() * allAnswers.length)];
+
+  // Mostrar respuesta con efecto de máquina de escribir
+  typeWriter(randomAnswer, oracleAnswer, 40);
+}
+
+// Evento del botón
+receiveBtn.addEventListener("click", showAnswer);
+</script>
+
+
+</section>
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+
+
+<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+  <span class="block">
+      Consejos prácticos de finanzas personales
+  </span>
+</div>
+
+
+
+ <section class="mb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
+
+    <!-- ================= ACORDEÓN ================= -->
+
+    <style>
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco fijo */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transform: translateY(0);
+    will-change: transform; /* optimiza animación */
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+
+  /* Animación tipo card con sombra */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+</style>
+
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
+          No es predicción, es aprendizaje financiero
+          <span class="cf-accordion-icon"></span>
+        </div>
+        <div class="cf-accordion-content">
+  
+         <p>
+El 
+<strong>
+Oráculo Financiero
+</strong>
+es una herramienta interactiva que ofrece
+<strong>
+consejos financieros aleatorios
+</strong>,
+basados en principios prácticos de educación financiera, para ayudarte a tomar
+mejores decisiones con tu dinero.
+</p>
+
+<p>
+A diferencia de otros recursos llenos de teoría, este oráculo te muestra mensajes
+claros y directos cada vez que lo consultas, invitándote a reflexionar sobre tu
+forma de ahorrar, gastar, invertir y planificar tu futuro financiero.
+</p>
+
+<p>
+
+<strong>
+No es una predicción del futuro ni asesoría personalizada
+</strong>.
+Es una forma simple y dinámica de fortalecer tu mentalidad financiera y desarrollar
+una relación más consciente con el dinero.
+</p>
+
+<p>
+<strong>
+Esta herramienta es ideal para:
+</strong>
+</p>
+
+<ul style="padding-left: 30px;">
+  <li>→ Personas que desean mejorar su relación con el dinero.</li>
+  <li>→ Principiantes en educación financiera.</li>
+  <li>→ Quienes buscan consejos para ahorrar, invertir o planificar metas.</li>
+  <li>→ Lectores que quieren desarrollar hábitos financieros saludables.</li>
+</ul>
+
+<p>
+Cada consejo funciona como una pausa mental que te ayuda a pensar con mayor claridad
+y propósito antes de tomar decisiones económicas importantes.
+</p>
+
+<p>
+Usa el Oráculo Financiero como una fuente diaria de inspiración para reforzar
+buenos hábitos financieros y aplicar pequeños cambios que, con el tiempo,
+generan grandes resultados.
+</p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+    document.querySelectorAll('.cf-accordion').forEach(accordion => {
+  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.cf-accordion-item');
+      const content = item.querySelector('.cf-accordion-content');
+
+      // Solo afecta los items de ESTE acordeón
+      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+        }
+      });
+
+      item.classList.toggle('is-open');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+    </script>
+
+
+</section>
+    </main>
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+  
+
+
+
+</body>
+</html>
