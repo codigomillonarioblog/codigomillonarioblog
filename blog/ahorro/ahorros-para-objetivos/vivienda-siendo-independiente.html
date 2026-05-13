@@ -1664,10 +1664,15 @@ Así que, para entenderlos mejor, puedes verlos como los tres caminos de mayor v
 
 
 
+
+
+
+
 <div class="text-stone-700 leading-relaxed mb-4 mt-20" style="font-family: 'Open Sans', sans-serif;"> 
-Te puede interesar:
+También te puede interesar:
 </div>
 
+<!-- ================= FUENTE ================= -->
 <style>
 .articulo-box {
   display: flex;
@@ -1681,14 +1686,19 @@ Te puede interesar:
   color: #000;
   overflow: hidden;
   position: relative;
-  min-height: 140px; /* altura mínima para el contenido y botón */
+  min-height: 140px;
+  transition: opacity 0.2s ease;
+}
+
+.articulo-box:hover {
+  opacity: 0.85;
 }
 
 .articulo-main {
   display: flex;
   width: 100%;
   align-items: flex-start;
-  padding: 10px 15px 50px 15px; /* padding inferior para dejar espacio al botón */
+  padding: 10px 15px 50px 15px;
 }
 
 .articulo-img {
@@ -1711,19 +1721,26 @@ Te puede interesar:
 }
 
 .articulo-titulo {
-  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.articulo-titulo h2 {
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 3px;
+  line-height: 1.3;
+  margin: 0;
   color: #000;
+  font-family: Arial, sans-serif;
 }
 
 .articulo-descripcion {
-  font-size: 12px;
+  font-size: 13px;
   color: #555;
+  line-height: 1.4;
   flex: 1;
 }
 
-/* Botón Ir a la derecha con línea */
+/* ================= BOTON ================= */
 .articulo-boton {
   position: absolute;
   bottom: 0;
@@ -1733,7 +1750,7 @@ Te puede interesar:
   padding: 8px 15px;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between; /* izquierda y derecha */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -1742,81 +1759,123 @@ Te puede interesar:
   background: #fff;
   color: #000;
   border: 1px solid #ddd;
-  padding: 3px 8px;
-  border-radius: 3px;
+  padding: 4px 10px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: bold;
 }
 
-/* Texto plano a la izquierda dentro del mismo botón, visible */
 .articulo-boton-texto {
   font-size: 12px;
   font-weight: bold;
   color: #000;
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
 }
 
-/* Móvil */
+/* ================= MOBILE PREMIUM ================= */
 @media (max-width:600px) {
+
+  .articulo-box{
+    min-height: auto;
+    border: none;
+    border-bottom: 1px solid #ececec;
+    margin: 0;
+    padding: 10px 0;
+  }
+
   .articulo-main {
     flex-direction: column;
-    padding: 8px 10px 50px 10px; /* dejar espacio para botón */
+    align-items: flex-start;
+    padding: 0;
   }
 
   .articulo-img {
-    width: 120px;
-    height: 70px;
+    width: 100%;
+    height: 165px;
     position: relative;
     margin: 0 0 10px 0;
+    object-fit: cover;
   }
 
   .articulo-contenido {
     padding-left: 0;
+    width: 100%;
   }
 
   .articulo-titulo {
-    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .articulo-titulo h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    line-height: 1.12;
+    font-weight: 700;
+    margin: 0;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
   }
 
   .articulo-descripcion {
-    font-size: 11px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.32;
+    margin-top: 2px;
   }
 
+  /* ===== BOTON MÁS COMPACTO ===== */
   .articulo-boton {
-    padding: 6px 10px;
-  }
-
-  .articulo-boton span {
-    font-size: 11px;
-    padding: 2px 6px;
+    position: relative;
+    margin-top: 8px;
+    padding: 8px 0 0 0;
+    border-top: 1px solid #ececec;
+    background: transparent;
   }
 
   .articulo-boton-texto {
-    font-size: 11px;
+    font-size: 12px;
+    color: #777;
+    line-height: 1;
+  }
+
+  .articulo-boton span {
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 4px 10px;
+    line-height: 1;
   }
 }
 </style>
 
+<!-- ================= TARJETA ================= -->
 <a href="https://codigomillonario.blog/blog/ahorro/ahorro-para-principiantes/30-dias-cambia-finanzas-5-habitos.html" class="articulo-box">
-  <img src="../../../assets/png/como-hacer-crecer-tu-dinero.webp" class="articulo-img">
+
+  <img 
+    src="../../../assets/png/como-hacer-crecer-tu-dinero.webp" 
+    class="articulo-img"
+    alt="Historias reales">
+
   <div class="articulo-main">
     <div class="articulo-contenido">
       <div class="articulo-titulo">
-      <h2 style="font-family: 'Open Sans', sans-serif;">Cómo mejorar tus finanzas personales en 30 días con 5 hábitos</h2>
+        <h2>
+          En 30 días puedes cambiar tu economía: 5 hábitos que transformarán tu dinero
+        </h2>
       </div>
+
       <div class="articulo-descripcion">
-        <strong>¿Nadie te enseñó a darle dirección a tu dinero? En los próximos 30 días puedes pasar del desorden financiero al control total, si aplicas reglas simples y constantes.</strong>
+¿Nadie te enseñó a darle dirección a tu dinero? En los próximos 30 días puedes pasar del desorden financiero al control total.
       </div>
     </div>
+
   </div>
   <div class="articulo-boton">
-    <div class="articulo-boton-texto">Lo más leído:</div>
+    <div class="articulo-boton-texto">
+      Lo más leído:
+    </div>
     <span>Ir</span>
   </div>
 </a>
+
 
 
 
@@ -2255,159 +2314,44 @@ En esta estrategia, la eficiencia reside en la suma de micro-inversiones: cada u
 
 
 
+
+
+
 <div class="text-stone-700 leading-relaxed mb-4 mt-20" style="font-family: 'Open Sans', sans-serif;"> 
-Te puede interesar:
+También te puede interesar:
 </div>
 
-<style>
-.articulo-box {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 0;
-  margin: 20px 0;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
-  color: #000;
-  overflow: hidden;
-  position: relative;
-  min-height: 140px; /* altura mínima para el contenido y botón */
-}
-
-.articulo-main {
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  padding: 10px 15px 50px 15px; /* padding inferior para dejar espacio al botón */
-}
-
-.articulo-img {
-  width: 200px;
-  height: 110px;
-  object-fit: cover;
-  margin: 0;
-  border: none;
-  flex-shrink: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.articulo-contenido {
-  flex: 1;
-  padding-left: 210px;
-  display: flex;
-  flex-direction: column;
-}
-
-.articulo-titulo {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 3px;
-  color: #000;
-}
-
-.articulo-descripcion {
-  font-size: 12px;
-  color: #555;
-  flex: 1;
-}
-
-/* Botón Ir a la derecha con línea */
-.articulo-boton {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  border-top: 1px solid #ddd;
-  background: #fff;
-  padding: 8px 15px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between; /* izquierda y derecha */
-  align-items: center;
-}
-
-.articulo-boton span {
-  display: inline-block;
-  background: #fff;
-  color: #000;
-  border: 1px solid #ddd;
-  padding: 3px 8px;
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-/* Texto plano a la izquierda dentro del mismo botón, visible */
-.articulo-boton-texto {
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Móvil */
-@media (max-width:600px) {
-  .articulo-main {
-    flex-direction: column;
-    padding: 8px 10px 50px 10px; /* dejar espacio para botón */
-  }
-
-  .articulo-img {
-    width: 120px;
-    height: 70px;
-    position: relative;
-    margin: 0 0 10px 0;
-  }
-
-  .articulo-contenido {
-    padding-left: 0;
-  }
-
-  .articulo-titulo {
-    font-size: 12px;
-  }
-
-  .articulo-descripcion {
-    font-size: 11px;
-  }
-
-  .articulo-boton {
-    padding: 6px 10px;
-  }
-
-  .articulo-boton span {
-    font-size: 11px;
-    padding: 2px 6px;
-  }
-
-  .articulo-boton-texto {
-    font-size: 11px;
-  }
-}
-</style>
-
+<!-- ================= TARJETA ================= -->
 <a href="https://codigomillonario.blog/blog/ahorro/ahorros-para-objetivos/vivienda-siendo-independiente.html" class="articulo-box">
-  <img src="../../../assets/png/ahorro-real-con-salario-minimo.webp" class="articulo-img">
+
+  <img 
+    src="../../../assets/png/ahorro-real-con-salario-minimo.webp" 
+    class="articulo-img"
+    alt="Historias reales">
+
   <div class="articulo-main">
     <div class="articulo-contenido">
       <div class="articulo-titulo">
-      <h2 style="font-family: 'Open Sans', sans-serif;">Ahorrar dinero con salario mínimo: ¿cómo lograrlo?</h2>
+        <h2>
+          Cómo ahorrar dinero con salario mínimo (aunque parezca imposible)
+        </h2>
       </div>
+
       <div class="articulo-descripcion">
-        <strong>Si ganas poco y no avanzas, ¿significa que estás condenado a no ahorrar? Tal vez el problema no es el ingreso.</strong>
+Si ganas poco y no avanzas, ¿significa que estás condenado a no ahorrar? Tal vez el problema no es el ingreso.
       </div>
     </div>
+
   </div>
   <div class="articulo-boton">
-    <div class="articulo-boton-texto">Lo más leído:</div>
+    <div class="articulo-boton-texto">
+      Lo más leído:
+    </div>
     <span>Ir</span>
   </div>
 </a>
+
+ 
 
 
 
