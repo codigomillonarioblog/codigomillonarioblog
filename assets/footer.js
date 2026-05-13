@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="footer-col">
         <h4>Recursos</h4>
         <ul>
-          <li><a href="/educacionfinanciera.html">Artículos</a></li>
+          <li><a href="/educacion-financiera.html">Artículos</a></li>
           <li><a href="/herramientas.html">Calculadoras</a></li>
           <li><a href="/opiniones.html">Historias</a></li>
           <li><a href="/blog/negocios/index.html">Emprendimiento</a></li>
