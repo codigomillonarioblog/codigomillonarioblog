@@ -34,20 +34,17 @@
   gtag('config', 'G-0826LEMPPY');
 </script>
 
-
-
-
-
 <style>
+
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
 
-#articlesGrid {
+#articlesGrid { 
     display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
-    justify-content: center; /* 🔥 centra las tarjetas */
-    gap: 24px; /* espacio uniforme entre tarjetas */
-    max-width: 1200px;
-    margin: 0 auto; /* centra todo el bloque */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: stretch;
 }
 
 /* Evita espacios extra */
@@ -61,7 +58,128 @@
 .pager-container {
     margin-top: 40px;
     display: flex;
-    justify-content: center; /* 🔥 centra la paginación */
+    justify-content: center;
+}
+
+.page-box,
+.compact-btn {
+    min-width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    border: 1px solid #d6d3d1;
+    background: white;
+    transition: .2s;
+}
+
+.page-box:hover,
+.compact-btn:hover {
+    background: #f5f5f4;
+}
+
+.active-page {
+    background: black;
+    color: white;
+    border-color: black;
+}
+
+/* ===================== MOBILE PAGINATION ===================== */
+
+@media (max-width: 768px) {
+
+    .pager-container {
+        width: 100%;
+        padding: 12px;
+        overflow: hidden;
+    }
+
+    .pager-container .flex.flex-col.md\:flex-row {
+        width: 100%;
+        gap: 14px;
+    }
+
+    /* 🔥 INFO SUPERIOR EN MÓVIL */
+    .pager-container .text-sm {
+
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        width: 100%;
+        text-align: center;
+
+        font-size: 13px;
+        line-height: 1.4;
+
+        order: 0;
+    }
+
+    /* FILA BOTONES */
+    #pageNumbers {
+
+        gap: 8px !important;
+        flex-wrap: nowrap;
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 1;
+
+    }
+
+    .page-box,
+    .compact-btn {
+
+        min-width: 38px;
+        width: 38px;
+        height: 38px;
+
+        font-size: 14px;
+        border-radius: 12px;
+
+        padding: 0;
+    }
+
+    /* CONTROLES ABAJO */
+    .select-pages {
+        width: 100%;
+        max-width: 130px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .goto-page {
+        width: 64px !important;
+        height: 38px !important;
+        font-size: 13px;
+    }
+
+    /* BOTÓN IR */
+    #gotoBtn {
+        width: auto;
+        padding: 0 12px;
+    }
+
+    /* CONTENEDOR GENERAL */
+    .pager-container .justify-center.items-center.gap-2.px-2 {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+
+    }
+
+    /* FLECHAS ABAJO */
+    #firstBtn,
+    #prevBtn,
+    #nextBtn,
+    #lastBtn {
+
+        order: 2;
+
+    }
+
 }
 
 </style>
@@ -323,6 +441,7 @@ body, html {
 }
 
 </style>
+
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1734,75 +1853,127 @@ No es casualidad que no nos enseñen esto en la escuela: entender la diferencia 
 
 </main>
 
-
-<!-- SCRIPT DE PAGINACIÓN -->
+<!-- ================= SCRIP COMPAGINACION ================= -->
 <script>
-const articles = document.querySelectorAll('.article');
-const articlesGrid = document.getElementById('articlesGrid');
-const perPageSelect = document.getElementById('perPageSelect');
-const currentPageText = document.getElementById('currentPageText');
-const totalPagesText = document.getElementById('totalPagesText');
-const totalResults = document.getElementById('totalResults');
-const pageNumbers = document.getElementById('pageNumbers');
-const firstBtn = document.getElementById('firstBtn');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const lastBtn = document.getElementById('lastBtn');
-const gotoInput = document.getElementById('gotoInput');
-const gotoBtn = document.getElementById('gotoBtn');
+document.addEventListener('DOMContentLoaded', () => {
+    const articles = Array.from(document.querySelectorAll('.article'));
+    const articlesGrid = document.getElementById('articlesGrid');
 
-let currentPage = 1;
-let perPage = parseInt(perPageSelect.value);
-let totalArticles = articles.length;
-let totalPages = Math.ceil(totalArticles / perPage);
+    const totalResultsEl = document.getElementById('totalResults');
+    const currentPageText = document.getElementById('currentPageText');
+    const totalPagesText = document.getElementById('totalPagesText');
+    const perPageSelect = document.getElementById('perPageSelect');
+    const gotoInput = document.getElementById('gotoInput');
+    const gotoBtn = document.getElementById('gotoBtn');
+    const firstBtn = document.getElementById('firstBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const lastBtn = document.getElementById('lastBtn');
+    const pageNumbersContainer = document.getElementById('pageNumbers');
 
-function renderArticles() {
-    articles.forEach((article, index) => {
+    let perPage = parseInt(perPageSelect.value, 10);
+    let currentPage = 1;
+    let totalPages = Math.max(1, Math.ceil(articles.length / perPage));
+
+    function showPage(page) {
+        if (page < 1) page = 1;
+        if (page > totalPages) page = totalPages;
+        currentPage = page;
         const start = (currentPage - 1) * perPage;
         const end = start + perPage;
-        article.style.display = (index >= start && index < end) ? 'block' : 'none';
-    });
-    currentPageText.textContent = currentPage;
-    totalPagesText.textContent = totalPages;
-    totalResults.textContent = totalArticles;
-    renderPageNumbers();
-}
 
-function renderPageNumbers() {
-    pageNumbers.innerHTML = '';
-    for(let i = 1; i <= totalPages; i++) {
-        const btn = document.createElement('div');
-        btn.textContent = i;
-        btn.className = 'page-box' + (i === currentPage ? ' active' : '');
-        btn.addEventListener('click', () => {
-            currentPage = i;
-            renderArticles();
+        articles.forEach((article, idx) => {
+            if (idx >= start && idx < end) {
+                article.style.display = '';
+                setTimeout(() => article.style.opacity = 1, 10);
+            } else {
+                article.style.opacity = 0;
+                setTimeout(() => article.style.display = 'none', 400);
+            }
         });
-        pageNumbers.appendChild(btn);
+
+        currentPageText.textContent = currentPage;
+        totalPagesText.textContent = totalPages;
+
+        updateButtons();
+        renderPageNumbers();
     }
-}
 
-firstBtn.addEventListener('click', () => { currentPage = 1; renderArticles(); });
-prevBtn.addEventListener('click', () => { if(currentPage > 1){ currentPage--; renderArticles(); } });
-nextBtn.addEventListener('click', () => { if(currentPage < totalPages){ currentPage++; renderArticles(); } });
-lastBtn.addEventListener('click', () => { currentPage = totalPages; renderArticles(); });
-
-perPageSelect.addEventListener('change', () => {
-    perPage = parseInt(perPageSelect.value);
-    totalPages = Math.ceil(totalArticles / perPage);
-    currentPage = 1;
-    renderArticles();
-});
-
-gotoBtn.addEventListener('click', () => {
-    let page = parseInt(gotoInput.value);
-    if(page >= 1 && page <= totalPages){
-        currentPage = page;
-        renderArticles();
+    function updateButtons() {
+        firstBtn.disabled = currentPage === 1;
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages;
+        lastBtn.disabled = currentPage === totalPages;
     }
-});
 
-renderArticles();
+    function renderPageNumbers() {
+        pageNumbersContainer.innerHTML = '';
+        if (totalPages <= 5) {
+            for (let i = 1; i <= totalPages; i++) {
+                pageNumbersContainer.appendChild(createPageButton(i));
+            }
+            return;
+        }
+        pageNumbersContainer.appendChild(createPageButton(1));
+        let start = Math.max(2, currentPage - 1);
+        let end = Math.min(totalPages - 1, currentPage + 1);
+
+        if (start > 2) {
+            const dots = document.createElement('div');
+            dots.textContent = '...';
+            dots.className = 'text-stone-400 px-1';
+            pageNumbersContainer.appendChild(dots);
+        }
+
+        for (let i = start; i <= end; i++) {
+            pageNumbersContainer.appendChild(createPageButton(i));
+        }
+
+        if (end < totalPages - 1) {
+            const dots = document.createElement('div');
+            dots.textContent = '...';
+            dots.className = 'text-stone-400 px-1';
+            pageNumbersContainer.appendChild(dots);
+        }
+
+        pageNumbersContainer.appendChild(createPageButton(totalPages));
+    }
+
+    function createPageButton(num) {
+        const btn = document.createElement('button');
+        btn.textContent = num;
+        btn.className = 'page-box';
+        if (num === currentPage) btn.classList.add('active');
+        btn.addEventListener('click', () => showPage(num));
+        return btn;
+    }
+
+    perPageSelect.addEventListener('change', () => {
+        perPage = parseInt(perPageSelect.value, 10);
+        totalPages = Math.ceil(articles.length / perPage);
+        currentPage = 1;
+        showPage(currentPage);
+    });
+
+    firstBtn.addEventListener('click', () => showPage(1));
+    prevBtn.addEventListener('click', () => showPage(currentPage - 1));
+    nextBtn.addEventListener('click', () => showPage(currentPage + 1));
+    lastBtn.addEventListener('click', () => showPage(totalPages));
+
+    gotoBtn.addEventListener('click', () => {
+        const val = parseInt(gotoInput.value, 10);
+        if (!isNaN(val)) showPage(val);
+        gotoInput.value = '';
+    });
+
+    gotoInput.addEventListener('keydown', e => {
+        if (e.key === 'Enter') gotoBtn.click();
+    });
+
+    totalResultsEl.textContent = articles.length;
+    totalPages = Math.ceil(articles.length / perPage);
+    showPage(currentPage);
+});
 </script>
 
 </body>
