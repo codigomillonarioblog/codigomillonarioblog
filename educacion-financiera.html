@@ -35,120 +35,11 @@
 </script>
 
 
-
 <style>
+
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
 
-#articlesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
-    justify-content: center; /* 🔥 centra las tarjetas */
-    gap: 24px; /* espacio uniforme entre tarjetas */
-    max-width: 1200px;
-    margin: 0 auto; /* centra todo el bloque */
-}
-
-/* Evita espacios extra */
-.article {
-    display: flex;
-    justify-content: center;
-}
-
-/* ===================== PAGINACIÓN CENTRADA ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center; /* 🔥 centra la paginación */
-}
-
-</style>
-
-<style>
-
-/* ===================== BLOQUE DE COMPAGINADO ===================== */
-.pager-container { 
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-.page-box { 
-    min-width: 38px; 
-    height: 38px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    user-select: none; 
-    font-weight: 600; 
-    color: #0f172a; 
-    transition: all 0.2s ease; 
-}
-
-.page-box:hover { 
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06); 
-    transform: translateY(-1px); 
-}
-
-.page-box.active { 
-    border-color: #94a3b8; 
-    box-shadow: 0 0 0 3px rgba(14,165,233,0.06); 
-    background: #f8fafc; 
-}
-
-.compact-btn { 
-    min-width: 40px; 
-    height: 40px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    transition: all 0.2s ease; 
-}
-
-.compact-btn[disabled] { 
-    opacity: 0.45; 
-    cursor: default; 
-    pointer-events: none; 
-}
-
-.select-pages { 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-}
-
-input[type="number"].goto-page { 
-    border: 1px solid #e6e6e6; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-    width: 80px; 
-    background: #fff; 
-}
-
 #articlesGrid { 
-    transition: all 0.5s ease; 
-}
-
-.article { 
-    transition: opacity 0.4s ease; 
-}
-
-/* ===================== TARJETAS DE PAGINACIÓN ===================== */
-
-#articlesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -157,19 +48,12 @@ input[type="number"].goto-page {
     align-items: stretch;
 }
 
-@media (max-width: 640px) {
-    #articlesGrid {
-        grid-template-columns: 1fr;
-        justify-content: center;
-        max-width: 100%;
-        padding: 0 12px;
-    }
-}
-
+/* Evita espacios extra */
 .article {
     display: flex;
     justify-content: center;
     height: 100%;
+    transition: opacity 0.4s ease;
 }
 
 .article-card {
@@ -178,149 +62,490 @@ input[type="number"].goto-page {
     height: 100%;
 }
 
-/* ===================== PAGINACIÓN ===================== */
+/* ===================== PAGINACIÓN CENTRADA ===================== */
 
 .pager-container {
     margin-top: 40px;
     display: flex;
     justify-content: center;
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* 🔥 SOLO CAMBIO A NEGRO CONSERVANDO TODO */
+
+.pager-container .flex.flex-col.md\:flex-row {
+
+    background: #000000;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+}
+
+/* TEXTO GENERAL */
+
+.pager-container .text-sm {
+    color: white;
+}
+
+/* INPUTS */
+
+.select-pages {
+
+    border: 1px solid #2a2a2a;
+    background: #111111;
+    color: white;
+
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+input[type="number"].goto-page {
+
+    border: 1px solid #2a2a2a;
+    background: #111111;
+    color: white;
+
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    width: 80px;
+}
+
+/* BOTONES */
+
+.page-box {
+
+    min-width: 38px;
+    height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    border: 1px solid #2a2a2a;
+
+    background: #111111;
+
+    cursor: pointer;
+    user-select: none;
+
+    font-weight: 600;
+
+    color: white;
+
+    transition: all 0.2s ease;
+}
+
+.page-box:hover {
+
+    background: #1b1b1b;
+
+    box-shadow: 0 1px 3px rgba(255,255,255,0.04);
+
+    transform: translateY(-1px);
+}
+
+.page-box.active {
+
+    border-color: #444444;
+
+    background: #ffffff;
+
+    color: #000000;
+
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.06);
+}
+
+.compact-btn {
+
+    min-width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    border: 1px solid #2a2a2a;
+
+    background: #111111;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.compact-btn:hover {
+
+    background: #1b1b1b;
+}
+
+.compact-btn[disabled] {
+
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* ===================== MOBILE PAGINATION ===================== */
+
+@media (max-width: 768px) {
+
+    .pager-container {
+
+        width: 100%;
+        padding: 12px 6px; /* MÁS ANCHO EN TELÉFONOS */
+        overflow: visible;
+    }
+
+    .pager-container .flex.flex-col.md\:flex-row {
+
+        width: calc(100% + 12px); /* EXPANSIÓN LATERAL */
+        margin-left: -6px;
+        margin-right: -6px;
+
+        gap: 14px;
+    }
+
+    /* INFO SUPERIOR EN MÓVIL */
+
+    .pager-container .text-sm {
+
+        display: flex !important;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 13px;
+        line-height: 1.4;
+
+        order: 0;
+
+        color: white;
+    }
+
+    /* FILA BOTONES */
+
+    #pageNumbers {
+
+        gap: 8px !important;
+
+        flex-wrap: nowrap;
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        order: 1;
+    }
+
+    .page-box,
+    .compact-btn {
+
+        min-width: 38px;
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 14px;
+
+        border-radius: 12px;
+
+        padding: 0;
+    }
+
+    /* CONTROLES ABAJO */
+
+    .select-pages {
+
+        width: 100%;
+        max-width: 130px;
+
+        height: 38px;
+
+        font-size: 13px;
+    }
+
+    .goto-page {
+
+        width: 64px !important;
+
+        height: 38px !important;
+
+        font-size: 13px;
+    }
+
+    /* BOTÓN IR */
+
+    #gotoBtn {
+
+        width: auto;
+
+        padding: 0 12px;
+    }
+
+    /* CONTENEDOR GENERAL */
+
+    .pager-container .justify-center.items-center.gap-2.px-2 {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    /* FLECHAS ABAJO */
+
+    #firstBtn,
+    #prevBtn,
+    #nextBtn,
+    #lastBtn {
+
+        order: 2;
+    }
+
 }
 
 /* ===================== TARJETAS ===================== */
 
 .articles-container {
+
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 24px;
+
     width: 100%;
 }
 
 @media (max-width: 900px) {
+
     .articles-container {
+
         grid-template-columns: 1fr;
     }
 }
 
+@media (max-width: 640px) {
+
+    #articlesGrid {
+
+        grid-template-columns: 1fr;
+
+        justify-content: center;
+
+        max-width: 100%;
+
+        padding: 0 12px;
+    }
+}
+
 .article-link {
+
     display: flex;
+
     flex-direction: column;
+
     flex: 1;
+
     text-decoration: none;
+
     color: inherit;
 }
 
 .article-card {
+
     width: 100%;
+
     max-width: none;
+
     background: transparent;
+
     border: none;
+
     border-radius: 0;
+
     padding: 12px 0;
+
     box-shadow: none;
+
     font-family: 'Montserrat', sans-serif;
+
     cursor: pointer;
 }
 
 /* BLOQUE SUPERIOR */
+
 .text-content {
+
     min-height: 90px;
+
     border-bottom: 1px solid #e5e5e5;
+
     padding-bottom: 10px;
+
     margin-bottom: 10px;
+
     text-align: left;
 }
 
 /* BADGE */
+
 .badge {
+
     font-size: 0.8rem;
+
     font-weight: 500;
+
     color: #555;
+
     margin: 0;
+
     padding-bottom: 6px;
+
     margin-bottom: 8px;
+
     border-bottom: none;
 }
 
-/* 👉 TEXTO SECUNDARIO (INTER + MÁS PEQUEÑO + NEGRITA) */
+/* TEXTO SECUNDARIO */
+
 .text-content p,
 .badge:not(.editorial) {
+
     font-family: 'Inter', sans-serif;
+
     font-size: 0.78rem;
+
     font-weight: 600;
+
     color: #666;
 }
 
 /* TEXTO ANALISIS */
+
 .badge.editorial {
-  color: #000000;
-  margin-top: 10px;
-  display: inline-flex;
-  width: fit-content;
-  padding: 1px 6px;
-  font-family: "Poppins", sans-serif;
-  font-size: 11px;
-  border: 1px solid #000000;
-  border-radius: 6px;
+
+    color: #000000;
+
+    margin-top: 10px;
+
+    display: inline-flex;
+
+    width: fit-content;
+
+    padding: 1px 6px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    border: 1px solid #000000;
+
+    border-radius: 6px;
 }
 
 /* TÍTULO */
+
 .article-title {
+
     font-family: 'Playfair Display', serif;
+
     font-size: 1.6rem;
+
     font-weight: 700;
+
     color: #1c1c1c;
+
     margin: 0 0 4px 0;
+
     line-height: 1.3;
+
     text-align: left;
 }
 
 @media (min-width:769px){
-  .article-link:hover .article-title{
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
+
+    .article-link:hover .article-title{
+
+        text-decoration: underline;
+
+        text-decoration-thickness: 1px;
+
+        text-underline-offset: 3px;
+    }
 }
 
 /* ===================== IMAGEN ===================== */
 
 .article-card img {
+
     width: 100%;
+
     aspect-ratio: 16 / 9;
+
     object-fit: cover;
+
     border-radius: 6px;
+
     transition: filter 0.25s ease;
 }
 
 .article-card:hover img {
+
     filter: brightness(1.10);
 }
 
 /* FECHA + ICONO */
+
 .badge:last-of-type {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
 /* OCULTOS */
+
 .meta,
 .arrow-btn,
 .card-icon {
+
     display: none !important;
 }
 
 /* Fondo */
-body, html {
+
+body,
+html {
+
     background-color: #ffffff !important;
 }
 
 </style>
+
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1253,248 +1478,704 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
-<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
-  <span class="block">
-    Educación Financiera
-  </span>
-</div>
 
-<!-- Título -->
-<div class="blog-main-title relative">
+
+
+
+<!-- =========================
+     HERO TITULO
+========================= -->
+
+<section class="hero-blog">
+
+  <div class="hero-blog-content">
+
+    <!-- ETIQUETA -->
+    <span class="hero-tag">
+      EDUCACIÓN FINANCIERA
+    </span>
+
+    <!-- TITULO -->
     <h1>
-El Camino hacia la Libertad Financiera (dinero, éxito, trabajo y decisiones)
+      El Camino hacia la Libertad Financiera
     </h1>
-    <span class="block mt-1 w-full h-px bg-slate-300"></span>
 
-  <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
-Explora consejos prácticos, experiencias y estrategias para mejorar tus finanzas, alcanzar tus<br>
-metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
-  </p>
-</div>
+    <!-- SUBTITULO -->
+    <p>
+      Consejos, estrategias y decisiones inteligentes para mejorar tus finanzas,
+      crecer profesionalmente y construir una vida con mayor estabilidad económica.
+    </p>
+
+  </div>
+
+</section>
 
 <style>
-.blog-main-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: left;
-  color: #111;
+/* =========================
+   HERO BLOG
+========================= */
 
-  /* 🔥 Separación diferente por lado */
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+.hero-blog{
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-bottom: 45px;
+
+    padding-left: 90px;
+
+    padding-right: 90px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .blog-main-title {
-    font-size: 2.2rem;
-    margin-right: 40px;
-  }
+/* CONTENIDO */
+
+.hero-blog-content{
+
+    max-width: 980px;
 }
 
-@media (max-width: 640px) {
-  .blog-main-title {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+/* ETIQUETA */
+
+.hero-tag{
+
+    display: inline-block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8b7355;
+
+    margin-bottom: 18px;
+}
+
+/* TITULO */
+
+.hero-blog h1{
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 4.2rem;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    color: #111111;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 24px;
+}
+
+/* SUBTITULO */
+
+.hero-blog p{
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: #555555;
+
+    max-width: 760px;
+
+    margin-bottom: 0;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1024px){
+
+    .hero-blog{
+
+        padding-left: 40px;
+
+        padding-right: 40px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 3.2rem;
+    }
+
+}
+
+/* =========================
+   TELEFONOS
+========================= */
+
+@media (max-width: 640px){
+
+    .hero-blog{
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        margin-top: 35px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 2.2rem;
+
+        line-height: 1.1;
+    }
+
+    .hero-blog p{
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
 }
 </style>
 
 
 
 
-<div class="left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-  Un analicis editorial de Código Millonario
+
+<!-- TITULO -->
+<div class="titulo-seccion">
+
+  <span>
+  Analicis editorial Código Millonario
   </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
 </div>
 
-<style>
-/* 🖥 Desktop: alineado a la izquierda */
-.left-block {
-  margin-left: 20px;
-  margin-top: 80px;  /* reemplaza mt-20 de Tailwind */
-  margin-right: 0;
-}
-
-/* 📱 Mobile: centrado y margen superior más grande */
-@media (max-width: 768px) {
-  .left-block {
-    margin: 40px auto 0 auto; /* suficiente separación arriba en móvil */
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-</style>
 
 
 
 
-<div class="articles-wrapper" style="font-family: 'Open Sans', sans-serif;">
+<section class="editorial-section">
 
-  <!-- Línea superior -->
-  <div class="section-line"></div>
+  <div class="editorial-grid">
 
-  <div class="articles-row">
+    <!-- =========================
+         ARTÍCULO PRINCIPAL
+    ========================= -->
+    <article class="main-article">
 
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Tomar control de tu dinero no es hacerte rico rápido, es entender cómo funciona y usarlo a tu favor sin falsas promesas</h3>
-        <hr style="width:100%;">
-        <p>El dinero no necesita milagros, necesita comprensión</p>
+      <!-- TEXTO ARRIBA -->
+      <div class="main-content">
+
+        <span class="category">
+          EDUCACIÓN FINANCIERA
+        </span>
+
+        <h2>
+          Cómo administrar tu dinero y mejorar tus finanzas personales
+        </h2>
+
+        <p>
+          Aprender finanzas personales cambia tu relación con el dinero.
+        </p>
+
       </div>
-      <img src="assets/png/finanzas-personales-ahorro-dinero-estrategia.webp" alt="Imagen 1" class="article-image">
-      <div class="article-divider"></div>
-    </div>
 
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Aquí no hay fórmulas mágicas, solo ideas reales y aplicables que, con mentalidad emprendedora, amplían tus oportunidades</h3>
-        <hr style="width:100%;">
-        <p>El dinero favorece a quien entiende sus reglas</p>
-      </div>
-      <img src="assets/png/educacion-financiera-control-de-gastos-presupuesto.webp" alt="Imagen 2" class="article-image">
-      <div class="article-divider"></div>
-    </div>
+      <!-- IMAGEN ABAJO -->
+      <div class="main-image-wrapper">
 
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Cada artículo es un paso hacia más claridad, estabilidad y decisiones conscientes construidas con tiempo y disciplina</h3>
-        <hr style="width:100%;">
-        <p>Esta seccion está pensada para ayudarte a ver el dinero con más claridad</p>
-      </div>
-      <img src="assets/png/como-ahorrar-dinero-gestion-financiera-diaria.webp" alt="Imagen 3" class="article-image">
-      <div class="article-divider"></div>
-    </div>
+        <img
+          src="assets/png/finanzas-personales-ahorro-dinero-estrategia.webp"
+          alt="Finanzas personales"
+        >
 
-    <div class="article-block">
-      <div class="text-content">
-        <h3>El dinero crece después de que la mente lo hace. Sin conocimiento, sistemas y proceso, no hay fortuna sostenible</h3>
-        <hr style="width:100%;">
-        <p>La mente construye primero lo que el dinero refleja después</p>
       </div>
-      <img src="assets/png/libertad-financiera-inversion-ahorro-inteligente.webp" alt="Imagen 4" class="article-image">
+
+    </article>
+
+    <!-- =========================
+         ARTÍCULOS DERECHA
+    ========================= -->
+    <div class="side-articles">
+
+      <!-- ITEM -->
+      <article class="side-article">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            FINANZAS
+          </span>
+
+          <h3>
+            Educación financiera y mentalidad emprendedora
+          </h3>
+
+          <p>
+            La educación financiera ayuda a tomar mejores decisiones.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- ITEM -->
+      <article class="side-article">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            AHORRO
+          </span>
+
+          <h3>
+            Hábitos financieros inteligentes para ahorrar dinero
+          </h3>
+
+          <p>
+            Ahorrar dinero comienza con mejores hábitos financieros.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- ITEM -->
+      <article class="side-article no-border">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            INVERSIÓN
+          </span>
+
+          <h3>
+            Libertad financiera e inversión inteligente
+          </h3>
+
+          <p>
+            Invertir en conocimiento fortalece tu futuro financiero.
+          </p>
+
+        </div>
+
+      </article>
+
     </div>
 
   </div>
 
-  <!-- Línea inferior -->
-  <div class="section-line"></div>
-
-</div>
+</section>
 
 <style>
-.articles-wrapper {
-  max-width: 64rem;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+/* =========================
+   SECCIÓN GENERAL
+========================= */
+
+.editorial-section{
+
+    max-width: 1600px;
+
+    margin: 70px auto;
+
+    padding-left: 90px;
+    padding-right: 90px;
+
+    font-family: 'Open Sans', sans-serif;
 }
 
-.section-line {
-  height: 1px;
-  width: 100%;
-  background-color: #d1d5db;
-  margin: 16px 0;
+/* =========================
+   GRID
+========================= */
+
+.editorial-grid{
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.95fr;
+
+    gap: 28px;
+
+    align-items: start;
 }
 
-.articles-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow-x: hidden; /* quita el scroll horizontal */
+/* =========================
+   ARTÍCULO PRINCIPAL
+========================= */
+
+.main-article{
+
+    background: #0d0d0d;
+
+    padding: 46px;
+
+    overflow: hidden;
+
+    min-height: 720px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
 }
 
-.article-block {
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 12px 0;
-  background: none;
-  border: none;
+/* =========================
+   CONTENIDO
+========================= */
+
+.main-content{
+
+    margin-bottom: 40px;
 }
 
-.text-content {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8px;
+/* CATEGORÍA */
+
+.category{
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #c7a46a;
+
+    display: inline-block;
+
+    margin-bottom: 18px;
 }
 
-.article-block h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1c1c1c;
-  margin: 0 0 4px 0;
+/* TITULO */
+
+.main-content h2{
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.5rem;
+
+    line-height: 1.15;
+
+    color: white;
+
+    margin-bottom: 18px;
+
+    max-width: 90%;
 }
 
-.article-block p {
-  font-size: 0.8rem;
-  color: #555;
-  line-height: 1.4;
-  margin: 0;
+/* TEXTO */
+
+.main-content p{
+
+    color: #b5b5b5;
+
+    line-height: 1.8;
+
+    font-size: 1.05rem;
+
+    max-width: 85%;
 }
 
-.article-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 4px;
-  display: block;
-  margin-bottom: 8px;
+/* =========================
+   IMAGEN
+========================= */
+
+.main-image-wrapper{
+
+    width: 100%;
 }
 
-/* Línea divisoria entre artículos */
-.article-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #e5e7eb;
-  margin-top: 12px;
-  display: none; /* solo se activa en móvil */
+.main-image-wrapper img{
+
+    width: 100%;
+
+    max-width: 560px;
+
+    height: 340px;
+
+    object-fit: cover;
+
+    display: block;
 }
 
-@media (max-width: 768px) {
-  .articles-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 15px;
-  }
-  .articles-row {
-    flex-direction: column; /* full-width, uno por uno */
-    gap: 0; /* ya hay línea divisoria */
-  }
-  .article-block {
-    flex: 1 0 100%;
+/* =========================
+   LADO DERECHO
+========================= */
+
+.side-articles{
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding-top: 0;
+}
+
+/* ITEM */
+
+.side-article{
+
+    padding: 0 0 22px 0;
+
+    margin-bottom: 22px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.no-border{
+
+    border-bottom: none;
+
     margin-bottom: 0;
-  }
-  .article-divider {
-    display: block; /* se muestra en móvil */
-  }
+
+    padding-bottom: 0;
+}
+
+/* CATEGORIA */
+
+.category-small{
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8a8a8a;
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+}
+
+/* TITULO */
+
+.side-text h3{
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.2rem;
+
+    line-height: 1.45;
+
+    color: #111111;
+
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+
+.side-text p{
+
+    color: #666666;
+
+    line-height: 1.65;
+
+    font-size: 0.96rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px){
+
+    .editorial-section{
+
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .editorial-grid{
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .main-article{
+
+        min-height: auto;
+
+        padding: 30px;
+    }
+
+    .main-content h2{
+
+        font-size: 2rem;
+
+        max-width: 100%;
+    }
+
+    .main-content p{
+
+        max-width: 100%;
+    }
+
+    .main-image-wrapper img{
+
+        max-width: 100%;
+
+        height: 300px;
+    }
+
+}
+
+/* =========================
+   TELÉFONOS
+========================= */
+
+@media (max-width: 480px){
+
+    .editorial-section{
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .main-article{
+
+        padding: 24px;
+    }
+
+    .main-content h2{
+
+        font-size: 1.6rem;
+    }
+
+    .main-content p{
+
+        font-size: 0.95rem;
+    }
+
+    .main-image-wrapper img{
+
+        height: 220px;
+    }
+
+    .side-text h3{
+
+        font-size: 1rem;
+    }
+
+}
+
+</style>
+
+
+
+
+
+
+
+<style>
+/* =========================
+   TITULO SECCION
+========================= */
+
+.titulo-seccion{
+
+    max-width: 1400px;
+
+    margin: 80px auto 45px auto;
+
+    padding: 0 90px;
+}
+
+/* TEXTO */
+
+.titulo-seccion span{
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: #111111;
+
+    letter-spacing: -0.5px;
+
+    display: inline-block;
+}
+
+/* LINEA NEGRA */
+
+.linea-seccion{
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #111111;
+
+    margin-top: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+    .titulo-seccion{
+
+        padding: 0 30px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 24px;
+    }
+
+    .linea-seccion{
+
+        height: 4px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .titulo-seccion{
+
+        padding: 0 18px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 22px;
+    }
+
 }
 </style>
-           
 
 
+<!-- TITULO -->
+<div class="titulo-seccion">
 
-
-
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-20 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-  Lo más destacado
+  <span>
+    Lo más destacado
   </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
 </div>
+
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 120px;"></div>
+
 
 
                 <section class="mb-40" style=>
@@ -1837,7 +2518,815 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
                       <!-- DUPLICA MÁS ARTÍCULOS PARA PRUEBAS -->
+
+
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/desarrollo-profesional/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          ¿Es Normal sentir que tu Carrera Profesional se ha Quedado Estancada?
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Desarrollo Profesional |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="article">
+  <article>
+    <a href="./blog/negocios/index.html" class="article-link">
+      <div class="article-card">
+
+        <div style="position: relative;">
+          <img src="./assets/png/negocios-rentables-desde-cero.webp" alt="">
+        </div>
+
+        <div class="badge editorial">Selección Categorías</div>
+
+        <h2 class="article-title">
+          El Desafío detrás de Convertir una Idea en un Negocio Rentable
+        </h2>
+
+        <div class="badge badge-row">
+          <span>Negocios |</span>
+        </div>
+
+      </div>
+    </a>
+  </article>
+</div>
+
+
 
         </div>
     </div>
@@ -1845,12 +3334,24 @@ metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
 
 
 
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-40 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-   Preguntas frecuentes Educación financiera
+
+
+
+
+
+<!-- TITULO -->
+<div class="titulo-seccion">
+
+  <span>
+   Preguntas frecuentes
   </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
 </div>
+
+
 
 
 
@@ -2078,11 +3579,13 @@ En resumen, empezar a mejorar tu educación financiera es un proceso accesible p
 
 
 
-<div class="flex flex-col justify-center items-start mt-20 mb-10 max-w-4xl mx-auto px-4 md:px-0" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-    Fundamentos prácticos para construir tu libertad financiera
-  </span>
-</div>
+
+
+
+
+
+
+
 
 
 
@@ -2224,9 +3727,9 @@ Si alguna vez has sentido que nadie te explicó cómo funciona el dinero en la v
 
 
 <!-- Espacio de 80px -->
-<div style="height: 80px;"></div>
+<div style="height: 150px;"></div>
 
-
+<!-- ================= SCRIP COMPAGINACION ================= -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const articles = Array.from(document.querySelectorAll('.article'));
@@ -2350,9 +3853,10 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
-</body>
-</html>
 
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 100px;"></div>
 
 
 
