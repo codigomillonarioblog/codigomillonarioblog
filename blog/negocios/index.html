@@ -38,236 +38,6 @@
 
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
 
-#articlesGrid { 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1400px;
-    margin: 0 auto;
-    align-items: stretch;
-}
-
-/* Evita espacios extra */
-.article {
-    display: flex;
-    justify-content: center;
-}
-
-/* ===================== PAGINACIÓN CENTRADA ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.page-box,
-.compact-btn {
-    min-width: 38px;
-    height: 38px;
-    border-radius: 12px;
-    border: 1px solid #d6d3d1;
-    background: white;
-    transition: .2s;
-}
-
-.page-box:hover,
-.compact-btn:hover {
-    background: #f5f5f4;
-}
-
-.active-page {
-    background: black;
-    color: white;
-    border-color: black;
-}
-
-/* ===================== MOBILE PAGINATION ===================== */
-
-@media (max-width: 768px) {
-
-    .pager-container {
-        width: 100%;
-        padding: 12px;
-        overflow: hidden;
-    }
-
-    .pager-container .flex.flex-col.md\:flex-row {
-        width: 100%;
-        gap: 14px;
-    }
-
-    /* 🔥 INFO SUPERIOR EN MÓVIL */
-    .pager-container .text-sm {
-
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-
-        width: 100%;
-        text-align: center;
-
-        font-size: 13px;
-        line-height: 1.4;
-
-        order: 0;
-    }
-
-    /* FILA BOTONES */
-    #pageNumbers {
-
-        gap: 8px !important;
-        flex-wrap: nowrap;
-
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        order: 1;
-
-    }
-
-    .page-box,
-    .compact-btn {
-
-        min-width: 38px;
-        width: 38px;
-        height: 38px;
-
-        font-size: 14px;
-        border-radius: 12px;
-
-        padding: 0;
-    }
-
-    /* CONTROLES ABAJO */
-    .select-pages {
-        width: 100%;
-        max-width: 130px;
-        height: 38px;
-        font-size: 13px;
-    }
-
-    .goto-page {
-        width: 64px !important;
-        height: 38px !important;
-        font-size: 13px;
-    }
-
-    /* BOTÓN IR */
-    #gotoBtn {
-        width: auto;
-        padding: 0 12px;
-    }
-
-    /* CONTENEDOR GENERAL */
-    .pager-container .justify-center.items-center.gap-2.px-2 {
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-
-    }
-
-    /* FLECHAS ABAJO */
-    #firstBtn,
-    #prevBtn,
-    #nextBtn,
-    #lastBtn {
-
-        order: 2;
-
-    }
-
-}
-
-</style>
-
-<style>
-
-/* ===================== BLOQUE DE COMPAGINADO ===================== */
-.pager-container { 
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-.page-box { 
-    min-width: 38px; 
-    height: 38px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    user-select: none; 
-    font-weight: 600; 
-    color: #0f172a; 
-    transition: all 0.2s ease; 
-}
-
-.page-box:hover { 
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06); 
-    transform: translateY(-1px); 
-}
-
-.page-box.active { 
-    border-color: #94a3b8; 
-    box-shadow: 0 0 0 3px rgba(14,165,233,0.06); 
-    background: #f8fafc; 
-}
-
-.compact-btn { 
-    min-width: 40px; 
-    height: 40px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    transition: all 0.2s ease; 
-}
-
-.compact-btn[disabled] { 
-    opacity: 0.45; 
-    cursor: default; 
-    pointer-events: none; 
-}
-
-.select-pages { 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-}
-
-input[type="number"].goto-page { 
-    border: 1px solid #e6e6e6; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-    width: 80px; 
-    background: #fff; 
-}
-
-#articlesGrid { 
-    transition: all 0.5s ease; 
-}
-
-.article { 
-    transition: opacity 0.4s ease; 
-}
-
-/* ===================== TARJETAS DE PAGINACIÓN ===================== */
-
 #articlesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -275,6 +45,7 @@ input[type="number"].goto-page {
     max-width: 1400px;
     margin: 0 auto;
     align-items: stretch;
+    transition: all 0.5s ease;
 }
 
 @media (max-width: 640px) {
@@ -286,32 +57,29 @@ input[type="number"].goto-page {
     }
 }
 
+/* ===================== TARJETAS ===================== */
+
 .article {
     display: flex;
     justify-content: center;
     height: 100%;
+    transition: opacity 0.4s ease;
 }
 
 .article-card {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+    max-width: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 12px 0;
+    box-shadow: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
-
-/* ===================== PAGINACIÓN ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-/* ===================== TARJETAS ===================== */
 
 .articles-container {
     display: grid;
@@ -334,19 +102,8 @@ input[type="number"].goto-page {
     color: inherit;
 }
 
-.article-card {
-    width: 100%;
-    max-width: none;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 12px 0;
-    box-shadow: none;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-}
+/* ===================== BLOQUE SUPERIOR ===================== */
 
-/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
@@ -355,7 +112,8 @@ input[type="number"].goto-page {
     text-align: left;
 }
 
-/* BADGE */
+/* ===================== BADGES ===================== */
+
 .badge {
     font-size: 0.8rem;
     font-weight: 500;
@@ -366,7 +124,6 @@ input[type="number"].goto-page {
     border-bottom: none;
 }
 
-/* 👉 TEXTO SECUNDARIO (INTER + MÁS PEQUEÑO + NEGRITA) */
 .text-content p,
 .badge:not(.editorial) {
     font-family: 'Inter', sans-serif;
@@ -375,20 +132,26 @@ input[type="number"].goto-page {
     color: #666;
 }
 
-/* TEXTO ANALISIS */
 .badge.editorial {
-  color: #000000;
-  margin-top: 10px;
-  display: inline-flex;
-  width: fit-content;
-  padding: 1px 6px;
-  font-family: "Poppins", sans-serif;
-  font-size: 11px;
-  border: 1px solid #000000;
-  border-radius: 6px;
+    color: #000000;
+    margin-top: 10px;
+    display: inline-flex;
+    width: fit-content;
+    padding: 1px 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    border: 1px solid #000000;
+    border-radius: 6px;
 }
 
-/* TÍTULO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===================== TÍTULO ===================== */
+
 .article-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
@@ -399,12 +162,12 @@ input[type="number"].goto-page {
     text-align: left;
 }
 
-@media (min-width:769px){
-  .article-link:hover .article-title{
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
+@media (min-width: 769px) {
+    .article-link:hover .article-title {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+    }
 }
 
 /* ===================== IMAGEN ===================== */
@@ -421,27 +184,191 @@ input[type="number"].goto-page {
     filter: brightness(1.10);
 }
 
-/* FECHA + ICONO */
-.badge:last-of-type {
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    background: #000000;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #ffffff;
 }
 
-/* OCULTOS */
+/* 🔥 TEXTO TOTAL RESULTADOS Y PÁGINA */
+.pager-container,
+.pager-container *,
+.pager-container .text-sm,
+.pager-container span,
+.pager-container p,
+.pager-container div {
+    color: #ffffff;
+}
+
+.page-box,
+.compact-btn {
+    min-width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: #111111;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.compact-btn {
+    min-width: 40px;
+    height: 40px;
+}
+
+.page-box:hover,
+.compact-btn:hover {
+    background: #1c1c1c;
+    box-shadow: 0 1px 3px rgba(255,255,255,0.06);
+    transform: translateY(-1px);
+}
+
+.page-box.active,
+.active-page {
+    background: #ffffff;
+    color: #000000 !important;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
+}
+
+.compact-btn[disabled] {
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* ===================== INPUTS PAGINACIÓN ===================== */
+
+.select-pages {
+    border: 1px solid rgba(255,255,255,0.18);
+    background: #111111;
+    color: #ffffff;
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+input[type="number"].goto-page {
+    border: 1px solid rgba(255,255,255,0.18);
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    width: 80px;
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ===================== MOBILE PAGINATION ===================== */
+
+@media (max-width: 768px) {
+
+    .pager-container {
+        width: 100%;
+        padding: 12px;
+        overflow: hidden;
+    }
+
+    .pager-container .flex.flex-col.md\:flex-row {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .pager-container .text-sm {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.4;
+        order: 0;
+        color: #ffffff;
+    }
+
+    #pageNumbers {
+        gap: 8px !important;
+        flex-wrap: nowrap;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 1;
+    }
+
+    .page-box,
+    .compact-btn {
+        min-width: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+        border-radius: 12px;
+        padding: 0;
+    }
+
+    .select-pages {
+        width: 100%;
+        max-width: 130px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .goto-page {
+        width: 64px !important;
+        height: 38px !important;
+        font-size: 13px;
+    }
+
+    #gotoBtn {
+        width: auto;
+        padding: 0 12px;
+    }
+
+    .pager-container .justify-center.items-center.gap-2.px-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #firstBtn,
+    #prevBtn,
+    #nextBtn,
+    #lastBtn {
+        order: 2;
+    }
+
+}
+
+/* ===================== OCULTOS ===================== */
+
 .meta,
 .arrow-btn,
 .card-icon {
     display: none !important;
 }
 
-/* Fondo */
-body, html {
+/* ===================== FONDO ===================== */
+
+body,
+html {
     background-color: #ffffff !important;
 }
 
 </style>
-
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1364,238 +1291,417 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
+
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
-
-
+<div style="height: 250px;"></div>
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
 
+<!-- =========================
+     HERO BLOG
+========================= -->
 
-<style>
-.marquee-line {
-  height: 1px;            /* línea delgada */
-  background-color: #ccc;  /* gris claro */
-  width: 100%;            /* ocupa todo el contenedor */
-  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
-}
-</style>
+<section class="hero-blog">
 
+  <div class="hero-blog-content">
 
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-2 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-   Triunfa en el mundo del emprendimiento
-  </span>
-</div>
+    <span class="hero-tag">
+      EMPRENDIMIENTO
+    </span>
 
-<!-- Título -->
-<div class="blog-main-title relative">
     <h1>
-Modelos de Negocio que Funcionan Hoy <br>y Cómo Implementarlos
+      Modelos de Negocio que Funcionan<br>
+      y Cómo Implementarlos
     </h1>
-    <span class="block mt-1 w-full h-px bg-slate-300"></span>
 
-  <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
-Transforma tus ideas en proyectos concretos y exitosos. Aprende a planificar, ejecutar y optimizar <br>cada paso
-para que tus conceptos realmente funcionen y generen impacto."
-  </p>
+    <p>
+      Transforma tus ideas en proyectos concretos y exitosos. Aprende a planificar, ejecutar y optimizar cada paso
+      para que tus conceptos realmente funcionen y generen impacto.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     TITULO SECCIÓN
+========================= -->
+
+<div class="titulo-seccion">
+
+  <span>
+    De la creatividad al éxito
+  </span>
+
+  <div class="linea-seccion"></div>
+
 </div>
 
+<!-- =========================
+     EDITORIAL SECTION
+========================= -->
+
+<section class="editorial-section">
+
+  <div class="editorial-grid">
+
+    <!-- PRINCIPAL -->
+    <article class="main-article">
+
+      <div class="main-content">
+
+        <span class="category">
+          EMPRENDIMIENTO
+        </span>
+
+        <h2>
+          La creatividad funciona mejor cuando se aplica a conocimientos, habilidades y necesidades reales
+        </h2>
+
+        <p>
+          Lo que sabes + lo que necesitas = creatividad
+        </p>
+
+      </div>
+
+      <!-- IMAGEN (AQUÍ ESTÁ LA QUE FALTABA) -->
+      <div class="main-image-wrapper">
+
+        <img src="../../assets/png/negocios-rentables-desde-cero.webp"
+             alt="Negocios rentables">
+
+      </div>
+
+    </article>
+
+    <!-- SIDE -->
+    <div class="side-articles">
+
+      <article class="side-article">
+        <div class="side-text">
+          <span class="category-small">APRENDIZAJE</span>
+          <h3>Equivocarte, ajustar y volver a intentar son pasos naturales</h3>
+          <p>De los errores encuentras caminos que nunca imaginaste</p>
+        </div>
+      </article>
+
+      <article class="side-article">
+        <div class="side-text">
+          <span class="category-small">EVOLUCIÓN</span>
+          <h3>Un negocio creativo aprende, se adapta y evoluciona</h3>
+          <p>Cada decisión y acción hace que un negocio creativo evolucione</p>
+        </div>
+      </article>
+
+      <article class="side-article no-border">
+        <div class="side-text">
+          <span class="category-small">CRECIMIENTO</span>
+          <h3>La creatividad con intención transforma ideas simples</h3>
+          <p>La creatividad tiene propósito, incluso lo simple</p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
 <style>
-.blog-main-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: left;
-  color: #111;
 
-  /* 🔥 Separación diferente por lado */
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+/* HERO */
+.hero-blog{
+  width:100%;
+  margin-top:50px;
+  margin-bottom:45px;
+  padding-left:90px;
+  padding-right:90px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .blog-main-title {
-    font-size: 2.2rem;
-    margin-right: 40px;
-  }
+.hero-blog-content{max-width:980px;}
+
+.hero-tag{
+  font-family:'Montserrat',sans-serif;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:1px;
+  color:#8b7355;
+  display:inline-block;
+  margin-bottom:18px;
 }
 
-@media (max-width: 640px) {
-  .blog-main-title {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+.hero-blog h1{
+  font-family:'Playfair Display',serif;
+  font-size:4rem;
+  line-height:1.05;
+  font-weight:700;
+  color:#111;
+  letter-spacing:-2px;
+  margin-bottom:24px;
+}
+
+.hero-blog p{
+  font-family:'Open Sans',sans-serif;
+  font-size:1.1rem;
+  line-height:1.8;
+  color:#555;
+  max-width:760px;
+}
+
+/* TITULO SECCION */
+
+.titulo-seccion{
+  max-width:1400px;
+  margin:80px auto 45px auto;
+  padding:0 90px;
+}
+
+.titulo-seccion span{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  font-weight:700;
+  color:#111;
+}
+
+.linea-seccion{
+  width:100%;
+  height:5px;
+  background:#111;
+  margin-top:16px;
+}
+
+/* EDITORIAL */
+
+.editorial-section{
+  max-width:1600px;
+  margin:70px auto;
+  padding:0 90px;
+  font-family:'Open Sans',sans-serif;
+}
+
+.editorial-grid{
+  display:grid;
+  grid-template-columns:1.15fr .95fr;
+  gap:28px;
+}
+
+/* MAIN */
+
+.main-article{
+  background:#0d0d0d;
+  padding:38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.category{
+  color:#c7a46a;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:18px;
+  display:inline-block;
+}
+
+.main-content h2{
+  font-family:'Montserrat',sans-serif;
+  font-size:2.3rem;
+  color:#fff;
+  line-height:1.15;
+  margin-bottom:16px;
+}
+
+.main-content p{
+  color:#b5b5b5;
+  line-height:1.7;
+}
+
+/* IMAGEN */
+
+.main-image-wrapper{
+  margin-top:10px;
+  overflow:hidden;
+}
+
+.main-image-wrapper img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  transform:scale(1.02);
+}
+
+/* SIDE */
+
+.side-articles{
+  display:flex;
+  flex-direction:column;
+}
+
+.side-article{
+  padding-bottom:22px;
+  margin-bottom:22px;
+  border-bottom:1px solid #e5e5e5;
+}
+
+.no-border{
+  border:none;
+  margin:0;
+  padding:0;
+}
+
+.category-small{
+  font-size:.72rem;
+  font-weight:700;
+  color:#8a8a8a;
+  margin-bottom:10px;
+  display:inline-block;
+}
+
+.side-text h3{
+  font-family:'Montserrat',sans-serif;
+  font-size:1.2rem;
+  color:#111;
+  margin-bottom:10px;
+}
+
+.side-text p{
+  font-size:.96rem;
+  color:#666;
+  line-height:1.65;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+  .editorial-grid{grid-template-columns:1fr;}
+  .hero-blog,.titulo-seccion,.editorial-section{padding:0 20px;}
+  .hero-blog h1{font-size:3rem;}
+}
+
+@media (max-width:480px){
+  .hero-blog h1{font-size:2.2rem;}
+  .main-content h2{font-size:1.6rem;}
+}
+</style>
+
+<style>
+/* =========================
+   TITULO SECCION
+========================= */
+
+.titulo-seccion{
+
+    max-width: 1400px;
+
+    margin: 80px auto 45px auto;
+
+    padding: 0 90px;
+}
+
+/* TEXTO */
+
+.titulo-seccion span{
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: #111111;
+
+    letter-spacing: -0.5px;
+
+    display: inline-block;
+}
+
+/* LINEA NEGRA */
+
+.linea-seccion{
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #111111;
+
+    margin-top: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+    .titulo-seccion{
+
+        padding: 0 30px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 24px;
+    }
+
+    .linea-seccion{
+
+        height: 4px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .titulo-seccion{
+
+        padding: 0 18px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 22px;
+    }
+
 }
 </style>
 
 
+<!-- TITULO -->
+<div class="titulo-seccion">
 
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-0 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-  De la creatividad al éxito
+  <span>
+    Lo más destacado
   </span>
-</div>
 
-
-
-
-<div class="articles-wrapper" style="font-family: 'Open Sans', sans-serif;">
-
-  <!-- Línea superior -->
-  <div class="section-line"></div>
-
-  <div class="articles-row">
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>La creatividad funciona mejor cuando se aplica a tus conocimientos, habilidades y a las necesidades.</h3>
-        <p>Lo que sabes + lo que necesitas = creatividad</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Equivocarte, ajustar y volver a intentar son pasos naturales para generar nuevas ideas y caminos inesperados.</h3>
-        <p>De los errores encuentras caminos que nunca imaginaste</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Un negocio creativo aprende, se adapta y evoluciona con cada decisión y acción que tomas.</h3>
-        <p>Cada decisión y acción hace que un negocio creativo evolucione</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>La creatividad con <br>intención transforma ideas simples en resultados y <br>abren la puerta a crecer.</h3>
-        <p>La creatividad tiene propósito, incluso lo simple</p>
-      </div>
-    </div>
-</div>
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
 
 </div>
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+<div class="top-space"></div>
 
 <style>
-.articles-wrapper {
-  max-width: 64rem;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.top-space{
+    height:120px;
 }
 
-.section-line {
-  height: 1px;
-  width: 100%;
-  background-color: #d1d5db;
-  margin: 16px 0;
-}
+/* OCULTAR SOLO EN TELÉFONOS */
+@media (max-width:768px){
 
-.articles-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch; /* Alinea los bloques con la misma altura */
-  overflow-x: hidden;
-}
-
-.article-block {
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribuye el espacio interno */
-  padding: 12px 0;
-  background: none;
-  border: none;
-}
-
-.text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1; /* Hace que cada bloque crezca para igualar alturas */
-  margin-bottom: 8px;
-}
-
-.article-block h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1c1c1c;
-  margin: 0 0 6px 0;
-  line-height: 1.4;
-}
-
-.article-block p {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.article-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #e5e7eb;
-  margin-top: 16px;
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .articles-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 15px;
-  }
-
-  .articles-row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .article-block {
-    flex: 1 0 100%;
-  }
-
-  .article-divider {
-    display: block;
-  }
+    .top-space{
+        display:none;
+    }
 }
 </style>
 
-
-<div class="flex justify-center md:justify-start mt-2 md:mt-5 relative px-4 sm:px-0 md:-ml-8">
-  <img src="../../assets/png/negocios-rentables-desde-cero.webp"
-       alt=""
-       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[50rem] md:h-[26rem] object-contain relative z-10 md:translate-x-4">
-</div>
-
-   <!-- INTRODUCCIÓN GENERAL -->
-      <main class="py-10">
-
-
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-20 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-  Ideas y negocios
-  </span>
-</div>
 
 
 
@@ -1793,14 +1899,20 @@ para que tus conceptos realmente funcionen y generen impacto."
     
 
 
-    
+  
 
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-40 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
+<!-- TITULO -->
+<div class="titulo-seccion">
+
+  <span>
   De los errores a los resultados
   </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
 </div>
+
 
 
 
@@ -1930,6 +2042,7 @@ para que tus conceptos realmente funcionen y generen impacto."
       </div>
 
     </div>
+    </section>
 
     <script>
     document.querySelectorAll('.cf-accordion').forEach(accordion => {
