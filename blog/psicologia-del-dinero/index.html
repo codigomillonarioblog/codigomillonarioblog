@@ -38,236 +38,6 @@
 
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
 
-#articlesGrid { 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1400px;
-    margin: 0 auto;
-    align-items: stretch;
-}
-
-/* Evita espacios extra */
-.article {
-    display: flex;
-    justify-content: center;
-}
-
-/* ===================== PAGINACIÓN CENTRADA ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.page-box,
-.compact-btn {
-    min-width: 38px;
-    height: 38px;
-    border-radius: 12px;
-    border: 1px solid #d6d3d1;
-    background: white;
-    transition: .2s;
-}
-
-.page-box:hover,
-.compact-btn:hover {
-    background: #f5f5f4;
-}
-
-.active-page {
-    background: black;
-    color: white;
-    border-color: black;
-}
-
-/* ===================== MOBILE PAGINATION ===================== */
-
-@media (max-width: 768px) {
-
-    .pager-container {
-        width: 100%;
-        padding: 12px;
-        overflow: hidden;
-    }
-
-    .pager-container .flex.flex-col.md\:flex-row {
-        width: 100%;
-        gap: 14px;
-    }
-
-    /* 🔥 INFO SUPERIOR EN MÓVIL */
-    .pager-container .text-sm {
-
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-
-        width: 100%;
-        text-align: center;
-
-        font-size: 13px;
-        line-height: 1.4;
-
-        order: 0;
-    }
-
-    /* FILA BOTONES */
-    #pageNumbers {
-
-        gap: 8px !important;
-        flex-wrap: nowrap;
-
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        order: 1;
-
-    }
-
-    .page-box,
-    .compact-btn {
-
-        min-width: 38px;
-        width: 38px;
-        height: 38px;
-
-        font-size: 14px;
-        border-radius: 12px;
-
-        padding: 0;
-    }
-
-    /* CONTROLES ABAJO */
-    .select-pages {
-        width: 100%;
-        max-width: 130px;
-        height: 38px;
-        font-size: 13px;
-    }
-
-    .goto-page {
-        width: 64px !important;
-        height: 38px !important;
-        font-size: 13px;
-    }
-
-    /* BOTÓN IR */
-    #gotoBtn {
-        width: auto;
-        padding: 0 12px;
-    }
-
-    /* CONTENEDOR GENERAL */
-    .pager-container .justify-center.items-center.gap-2.px-2 {
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-
-    }
-
-    /* FLECHAS ABAJO */
-    #firstBtn,
-    #prevBtn,
-    #nextBtn,
-    #lastBtn {
-
-        order: 2;
-
-    }
-
-}
-
-</style>
-
-<style>
-
-/* ===================== BLOQUE DE COMPAGINADO ===================== */
-.pager-container { 
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-.page-box { 
-    min-width: 38px; 
-    height: 38px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    user-select: none; 
-    font-weight: 600; 
-    color: #0f172a; 
-    transition: all 0.2s ease; 
-}
-
-.page-box:hover { 
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06); 
-    transform: translateY(-1px); 
-}
-
-.page-box.active { 
-    border-color: #94a3b8; 
-    box-shadow: 0 0 0 3px rgba(14,165,233,0.06); 
-    background: #f8fafc; 
-}
-
-.compact-btn { 
-    min-width: 40px; 
-    height: 40px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    transition: all 0.2s ease; 
-}
-
-.compact-btn[disabled] { 
-    opacity: 0.45; 
-    cursor: default; 
-    pointer-events: none; 
-}
-
-.select-pages { 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-}
-
-input[type="number"].goto-page { 
-    border: 1px solid #e6e6e6; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-    width: 80px; 
-    background: #fff; 
-}
-
-#articlesGrid { 
-    transition: all 0.5s ease; 
-}
-
-.article { 
-    transition: opacity 0.4s ease; 
-}
-
-/* ===================== TARJETAS DE PAGINACIÓN ===================== */
-
 #articlesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -275,6 +45,7 @@ input[type="number"].goto-page {
     max-width: 1400px;
     margin: 0 auto;
     align-items: stretch;
+    transition: all 0.5s ease;
 }
 
 @media (max-width: 640px) {
@@ -286,32 +57,29 @@ input[type="number"].goto-page {
     }
 }
 
+/* ===================== TARJETAS ===================== */
+
 .article {
     display: flex;
     justify-content: center;
     height: 100%;
+    transition: opacity 0.4s ease;
 }
 
 .article-card {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+    max-width: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 12px 0;
+    box-shadow: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
-
-/* ===================== PAGINACIÓN ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-/* ===================== TARJETAS ===================== */
 
 .articles-container {
     display: grid;
@@ -334,19 +102,8 @@ input[type="number"].goto-page {
     color: inherit;
 }
 
-.article-card {
-    width: 100%;
-    max-width: none;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 12px 0;
-    box-shadow: none;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-}
+/* ===================== BLOQUE SUPERIOR ===================== */
 
-/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
@@ -355,7 +112,8 @@ input[type="number"].goto-page {
     text-align: left;
 }
 
-/* BADGE */
+/* ===================== BADGES ===================== */
+
 .badge {
     font-size: 0.8rem;
     font-weight: 500;
@@ -366,7 +124,6 @@ input[type="number"].goto-page {
     border-bottom: none;
 }
 
-/* 👉 TEXTO SECUNDARIO (INTER + MÁS PEQUEÑO + NEGRITA) */
 .text-content p,
 .badge:not(.editorial) {
     font-family: 'Inter', sans-serif;
@@ -375,20 +132,26 @@ input[type="number"].goto-page {
     color: #666;
 }
 
-/* TEXTO ANALISIS */
 .badge.editorial {
-  color: #000000;
-  margin-top: 10px;
-  display: inline-flex;
-  width: fit-content;
-  padding: 1px 6px;
-  font-family: "Poppins", sans-serif;
-  font-size: 11px;
-  border: 1px solid #000000;
-  border-radius: 6px;
+    color: #000000;
+    margin-top: 10px;
+    display: inline-flex;
+    width: fit-content;
+    padding: 1px 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    border: 1px solid #000000;
+    border-radius: 6px;
 }
 
-/* TÍTULO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===================== TÍTULO ===================== */
+
 .article-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
@@ -399,12 +162,12 @@ input[type="number"].goto-page {
     text-align: left;
 }
 
-@media (min-width:769px){
-  .article-link:hover .article-title{
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
+@media (min-width: 769px) {
+    .article-link:hover .article-title {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+    }
 }
 
 /* ===================== IMAGEN ===================== */
@@ -421,27 +184,191 @@ input[type="number"].goto-page {
     filter: brightness(1.10);
 }
 
-/* FECHA + ICONO */
-.badge:last-of-type {
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    background: #000000;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #ffffff;
 }
 
-/* OCULTOS */
+/* 🔥 TEXTO TOTAL RESULTADOS Y PÁGINA */
+.pager-container,
+.pager-container *,
+.pager-container .text-sm,
+.pager-container span,
+.pager-container p,
+.pager-container div {
+    color: #ffffff;
+}
+
+.page-box,
+.compact-btn {
+    min-width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: #111111;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.compact-btn {
+    min-width: 40px;
+    height: 40px;
+}
+
+.page-box:hover,
+.compact-btn:hover {
+    background: #1c1c1c;
+    box-shadow: 0 1px 3px rgba(255,255,255,0.06);
+    transform: translateY(-1px);
+}
+
+.page-box.active,
+.active-page {
+    background: #ffffff;
+    color: #000000 !important;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
+}
+
+.compact-btn[disabled] {
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* ===================== INPUTS PAGINACIÓN ===================== */
+
+.select-pages {
+    border: 1px solid rgba(255,255,255,0.18);
+    background: #111111;
+    color: #ffffff;
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+input[type="number"].goto-page {
+    border: 1px solid rgba(255,255,255,0.18);
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    width: 80px;
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ===================== MOBILE PAGINATION ===================== */
+
+@media (max-width: 768px) {
+
+    .pager-container {
+        width: 100%;
+        padding: 12px;
+        overflow: hidden;
+    }
+
+    .pager-container .flex.flex-col.md\:flex-row {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .pager-container .text-sm {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.4;
+        order: 0;
+        color: #ffffff;
+    }
+
+    #pageNumbers {
+        gap: 8px !important;
+        flex-wrap: nowrap;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 1;
+    }
+
+    .page-box,
+    .compact-btn {
+        min-width: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+        border-radius: 12px;
+        padding: 0;
+    }
+
+    .select-pages {
+        width: 100%;
+        max-width: 130px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .goto-page {
+        width: 64px !important;
+        height: 38px !important;
+        font-size: 13px;
+    }
+
+    #gotoBtn {
+        width: auto;
+        padding: 0 12px;
+    }
+
+    .pager-container .justify-center.items-center.gap-2.px-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #firstBtn,
+    #prevBtn,
+    #nextBtn,
+    #lastBtn {
+        order: 2;
+    }
+
+}
+
+/* ===================== OCULTOS ===================== */
+
 .meta,
 .arrow-btn,
 .card-icon {
     display: none !important;
 }
 
-/* Fondo */
-body, html {
+/* ===================== FONDO ===================== */
+
+body,
+html {
     background-color: #ffffff !important;
 }
 
 </style>
-
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1365,245 +1292,471 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
-   <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
 
+
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 250px;"></div>
 
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
 
-<style>
-.marquee-line {
-  height: 1px;            /* línea delgada */
-  background-color: #ccc;  /* gris claro */
-  width: 100%;            /* ocupa todo el contenedor */
-  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
-}
-</style>
 
+<!-- =========================
+     HERO BLOG
+========================= -->
 
+<section class="hero-blog">
 
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-2 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-   Tus creencias, miedos y urgencias decidían por ti
-  </span>
-</div>
+  <div class="hero-blog-content">
 
-<!-- Título -->
-<div class="blog-main-title relative">
+    <span class="hero-tag">
+      PSICOLOGÍA FINANCIERA
+    </span>
+
     <h1>
-     La Psicología del Dinero: ¿Por Qué los Ricos <br>Piensan Diferente?
+      La Psicología del Dinero: ¿Por Qué los Ricos<br>
+      Piensan Diferente?
     </h1>
-    <span class="block mt-1 w-full h-px bg-slate-300"></span>
 
-  <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
-Cómo tus hábitos, pensamientos y creencias impactan tus decisiones financieras mucho antes de que el dinero entre en juego.<br>
-Aprende a identificar patrones y tomar decisiones más conscientes y efectivas.
-  </p>
-</div>
+    <p>
+      Cómo tus hábitos, pensamientos y creencias impactan tus decisiones financieras mucho antes de que el dinero entre en juego.
+      Aprende a identificar patrones y tomar decisiones más conscientes y efectivas.
+    </p>
 
-<style>
-.blog-main-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: left;
-  color: #111;
+  </div>
 
-  /* 🔥 Separación diferente por lado */
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
-}
+</section>
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .blog-main-title {
-    font-size: 2.2rem;
-    margin-right: 40px;
-  }
-}
+<!-- =========================
+     TITULO SECCIÓN
+========================= -->
 
-@media (max-width: 640px) {
-  .blog-main-title {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
-</style>
+<div class="titulo-seccion">
 
-
-
-
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-0 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-    De la mente a la consecuencia realidad
+  <span>
+    De la mente a la realidad
   </span>
-</div>
 
-
-
-
-<div class="articles-wrapper" style="font-family: 'Open Sans', sans-serif;">
-
-  <!-- Línea superior -->
-  <div class="section-line"></div>
-
-  <div class="articles-row">
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Las malas decisiones financieras nacen cuando la mente está saturada, confundida o actuando desde la urgencia.</h3>
-        <hr style="width:100%;">
-        <p>Las peores decisiones financieras se toman cuando la mente está saturada</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>La mayoría de los errores económicos no se cometen por falta de información, sino por dejar que la emoción decida por encima.</h3>
-        <hr style="width:100%;">
-        <p>Muchos errores con el dinero nacen cuando la emoción decide por nosotros</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Cuando no se analiza una mala decisión, esta no desaparece: se convierte en un patrón que se repite una y otra vez.</h3>
-        <hr style="width:100%;">
-        <p>Una decisión mal pensada puede vuelve un mal hábito cuando no se cuestiona</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Pensar a largo plazo no es optimismo, es la capacidad de no sacrificar el futuro por alivio inmediato. Sostener <br>es ganar.</h3>
-        <hr style="width:100%;">
-        <p>Sostener una decisión en el <br>tiempo es lo que realmente marca la diferencia</p>
-      </div>
-    </div>
-</div>
+  <div class="linea-seccion"></div>
 
 </div>
+
+<!-- =========================
+     EDITORIAL SECTION
+========================= -->
+
+<section class="editorial-section">
+
+  <div class="editorial-grid">
+
+    <!-- PRINCIPAL -->
+    <article class="main-article">
+
+      <div class="main-content">
+
+        <span class="category">
+          PSICOLOGÍA DEL DINERO
+        </span>
+
+        <h2>
+          Las creencias y emociones influyen más en tus decisiones financieras de lo que imaginas
+        </h2>
+
+        <p>
+          Las peores decisiones financieras se toman cuando la mente está saturada o actúa desde la urgencia.
+        </p>
+
+      </div>
+
+      <!-- IMAGEN -->
+      <div class="main-image-wrapper">
+
+        <img src="../../assets/png/patrones-mentales-y-dinero.webp"
+             alt="Psicología del dinero">
+
+      </div>
+
+    </article>
+
+    <!-- SIDE -->
+    <div class="side-articles">
+
+      <article class="side-article">
+        <div class="side-text">
+
+          <span class="category-small">EMOCIONES</span>
+
+          <h3>
+            Muchos errores financieros ocurren cuando la emoción decide por encima de la lógica
+          </h3>
+
+          <p>
+            Las decisiones impulsivas suelen tener consecuencias duraderas.
+          </p>
+
+        </div>
+      </article>
+
+      <article class="side-article">
+        <div class="side-text">
+
+          <span class="category-small">HÁBITOS</span>
+
+          <h3>
+            Lo que no analizas se convierte en un patrón repetitivo
+          </h3>
+
+          <p>
+            Una mala decisión no corregida se transforma en costumbre.
+          </p>
+
+        </div>
+      </article>
+
+      <article class="side-article no-border">
+        <div class="side-text">
+
+          <span class="category-small">MENTALIDAD</span>
+
+          <h3>
+            Pensar a largo plazo evita sacrificar el futuro por alivio inmediato
+          </h3>
+
+          <p>
+            Sostener una decisión en el tiempo es lo que genera resultados reales.
+          </p>
+
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
 
 <style>
-.articles-wrapper {
-  max-width: 64rem;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.section-line {
-  height: 1px;
+/* =========================
+   HERO BLOG
+========================= */
+
+.hero-blog{
   width: 100%;
-  background-color: #d1d5db;
-  margin: 16px 0;
+  margin-top: 50px;
+  margin-bottom: 45px;
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
-.articles-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch; /* Alinea los bloques con la misma altura */
-  overflow-x: hidden;
+.hero-blog-content{
+  max-width: 980px;
 }
 
-.article-block {
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribuye el espacio interno */
-  padding: 12px 0;
-  background: none;
-  border: none;
+.hero-tag{
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #8b7355;
+  margin-bottom: 18px;
 }
 
-.text-content {
+.hero-blog h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  line-height: 1.05;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.hero-blog p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 760px;
+}
+
+/* =========================
+   TITULO SECCIÓN
+========================= */
+
+.titulo-seccion{
+  max-width: 1400px;
+  margin: 80px auto 45px auto;
+  padding: 0 90px;
+}
+
+.titulo-seccion span{
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+}
+
+.linea-seccion{
+  width: 100%;
+  height: 5px;
+  background: #111;
+  margin-top: 16px;
+}
+
+/* =========================
+   EDITORIAL
+========================= */
+
+.editorial-section{
+  max-width: 1600px;
+  margin: 70px auto;
+  padding: 0 90px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.editorial-grid{
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 28px;
+}
+
+/* MAIN */
+
+.main-article{
+  background: #0d0d0d;
+  padding: 38px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1; /* Hace que cada bloque crezca para igualar alturas */
-  margin-bottom: 8px;
 }
 
-.article-block h3 {
+.category{
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #c7a46a;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.main-content h2{
   font-family: 'Montserrat', sans-serif;
+  font-size: 2.3rem;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.main-content p{
+  color: #b5b5b5;
+  line-height: 1.7;
   font-size: 1rem;
-  font-weight: 600;
-  color: #1c1c1c;
-  margin: 0 0 6px 0;
-  line-height: 1.4;
 }
 
-.article-block p {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.5;
-  margin: 0;
+/* IMAGE */
+
+.main-image-wrapper{
+  margin-top: 10px;
+  overflow: hidden;
 }
 
-.article-divider {
+.main-image-wrapper img{
   width: 100%;
-  height: 1px;
-  background-color: #e5e7eb;
-  margin-top: 16px;
-  display: none;
+  height: 420px;
+  object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .articles-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 15px;
+/* SIDE */
+
+.side-articles{
+  display: flex;
+  flex-direction: column;
+}
+
+.side-article{
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.no-border{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category-small{
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #8a8a8a;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.side-text h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #111;
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+.side-text p{
+  font-size: 0.96rem;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px){
+  .editorial-grid{
+    grid-template-columns: 1fr;
   }
 
-  .articles-row {
-    flex-direction: column;
-    gap: 0;
+  .hero-blog,
+  .titulo-seccion,
+  .editorial-section{
+    padding: 0 20px;
   }
 
-  .article-block {
-    flex: 1 0 100%;
+  .hero-blog h1{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px){
+  .hero-blog h1{
+    font-size: 2.2rem;
   }
 
-  .article-divider {
-    display: block;
+  .main-content h2{
+    font-size: 1.6rem;
   }
+}
+
+</style>
+
+<style>
+/* =========================
+   TITULO SECCION
+========================= */
+
+.titulo-seccion{
+
+    max-width: 1400px;
+
+    margin: 80px auto 45px auto;
+
+    padding: 0 90px;
+}
+
+/* TEXTO */
+
+.titulo-seccion span{
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: #111111;
+
+    letter-spacing: -0.5px;
+
+    display: inline-block;
+}
+
+/* LINEA NEGRA */
+
+.linea-seccion{
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #111111;
+
+    margin-top: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+    .titulo-seccion{
+
+        padding: 0 30px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 24px;
+    }
+
+    .linea-seccion{
+
+        height: 4px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .titulo-seccion{
+
+        padding: 0 18px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 22px;
+    }
+
 }
 </style>
 
 
+<!-- TITULO -->
+<div class="titulo-seccion">
 
-<div class="flex justify-center md:justify-start mt-2 md:mt-5 relative px-4 sm:px-0 md:-ml-8">
-  <img src="../../assets/png/patrones-mentales-y-dinero.webp"
-       alt=""
-       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[50rem] md:h-[26rem] object-contain relative z-10 md:translate-x-4">
-</div>
-
-   <!-- INTRODUCCIÓN GENERAL -->
-      <main class="py-10">
-
-
-
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-20 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-    Mente y decisiones
+  <span>
+    Lo más destacado
   </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
 </div>
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+<div class="top-space"></div>
+
+<style>
+.top-space{
+    height:120px;
+}
+
+/* OCULTAR SOLO EN TELÉFONOS */
+@media (max-width:768px){
+
+    .top-space{
+        display:none;
+    }
+}
+</style>
+
 
 
 
@@ -1825,15 +1978,17 @@ Aprende a identificar patrones y tomar decisiones más conscientes y efectivas.
 
 
 
+<!-- TITULO -->
+<div class="titulo-seccion">
 
-
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-40 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
+  <span>
   De los patrones a los resultados
   </span>
-</div>
 
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
+</div>
 
 
 
@@ -1967,6 +2122,7 @@ Aprende a identificar patrones y tomar decisiones más conscientes y efectivas.
   </div>
 </div>
 </div>
+    </section>
 
     <script>
     document.querySelectorAll('.cf-accordion').forEach(accordion => {
