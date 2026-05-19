@@ -38,236 +38,6 @@
 
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
 
-#articlesGrid { 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1400px;
-    margin: 0 auto;
-    align-items: stretch;
-}
-
-/* Evita espacios extra */
-.article {
-    display: flex;
-    justify-content: center;
-}
-
-/* ===================== PAGINACIÓN CENTRADA ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.page-box,
-.compact-btn {
-    min-width: 38px;
-    height: 38px;
-    border-radius: 12px;
-    border: 1px solid #d6d3d1;
-    background: white;
-    transition: .2s;
-}
-
-.page-box:hover,
-.compact-btn:hover {
-    background: #f5f5f4;
-}
-
-.active-page {
-    background: black;
-    color: white;
-    border-color: black;
-}
-
-/* ===================== MOBILE PAGINATION ===================== */
-
-@media (max-width: 768px) {
-
-    .pager-container {
-        width: 100%;
-        padding: 12px;
-        overflow: hidden;
-    }
-
-    .pager-container .flex.flex-col.md\:flex-row {
-        width: 100%;
-        gap: 14px;
-    }
-
-    /* 🔥 INFO SUPERIOR EN MÓVIL */
-    .pager-container .text-sm {
-
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-
-        width: 100%;
-        text-align: center;
-
-        font-size: 13px;
-        line-height: 1.4;
-
-        order: 0;
-    }
-
-    /* FILA BOTONES */
-    #pageNumbers {
-
-        gap: 8px !important;
-        flex-wrap: nowrap;
-
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        order: 1;
-
-    }
-
-    .page-box,
-    .compact-btn {
-
-        min-width: 38px;
-        width: 38px;
-        height: 38px;
-
-        font-size: 14px;
-        border-radius: 12px;
-
-        padding: 0;
-    }
-
-    /* CONTROLES ABAJO */
-    .select-pages {
-        width: 100%;
-        max-width: 130px;
-        height: 38px;
-        font-size: 13px;
-    }
-
-    .goto-page {
-        width: 64px !important;
-        height: 38px !important;
-        font-size: 13px;
-    }
-
-    /* BOTÓN IR */
-    #gotoBtn {
-        width: auto;
-        padding: 0 12px;
-    }
-
-    /* CONTENEDOR GENERAL */
-    .pager-container .justify-center.items-center.gap-2.px-2 {
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-
-    }
-
-    /* FLECHAS ABAJO */
-    #firstBtn,
-    #prevBtn,
-    #nextBtn,
-    #lastBtn {
-
-        order: 2;
-
-    }
-
-}
-
-</style>
-
-<style>
-
-/* ===================== BLOQUE DE COMPAGINADO ===================== */
-.pager-container { 
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-.page-box { 
-    min-width: 38px; 
-    height: 38px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    user-select: none; 
-    font-weight: 600; 
-    color: #0f172a; 
-    transition: all 0.2s ease; 
-}
-
-.page-box:hover { 
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06); 
-    transform: translateY(-1px); 
-}
-
-.page-box.active { 
-    border-color: #94a3b8; 
-    box-shadow: 0 0 0 3px rgba(14,165,233,0.06); 
-    background: #f8fafc; 
-}
-
-.compact-btn { 
-    min-width: 40px; 
-    height: 40px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    transition: all 0.2s ease; 
-}
-
-.compact-btn[disabled] { 
-    opacity: 0.45; 
-    cursor: default; 
-    pointer-events: none; 
-}
-
-.select-pages { 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-}
-
-input[type="number"].goto-page { 
-    border: 1px solid #e6e6e6; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-    width: 80px; 
-    background: #fff; 
-}
-
-#articlesGrid { 
-    transition: all 0.5s ease; 
-}
-
-.article { 
-    transition: opacity 0.4s ease; 
-}
-
-/* ===================== TARJETAS DE PAGINACIÓN ===================== */
-
 #articlesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -275,6 +45,7 @@ input[type="number"].goto-page {
     max-width: 1400px;
     margin: 0 auto;
     align-items: stretch;
+    transition: all 0.5s ease;
 }
 
 @media (max-width: 640px) {
@@ -286,32 +57,29 @@ input[type="number"].goto-page {
     }
 }
 
+/* ===================== TARJETAS ===================== */
+
 .article {
     display: flex;
     justify-content: center;
     height: 100%;
+    transition: opacity 0.4s ease;
 }
 
 .article-card {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+    max-width: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 12px 0;
+    box-shadow: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
-
-/* ===================== PAGINACIÓN ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-/* ===================== TARJETAS ===================== */
 
 .articles-container {
     display: grid;
@@ -334,19 +102,8 @@ input[type="number"].goto-page {
     color: inherit;
 }
 
-.article-card {
-    width: 100%;
-    max-width: none;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 12px 0;
-    box-shadow: none;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-}
+/* ===================== BLOQUE SUPERIOR ===================== */
 
-/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
@@ -355,7 +112,8 @@ input[type="number"].goto-page {
     text-align: left;
 }
 
-/* BADGE */
+/* ===================== BADGES ===================== */
+
 .badge {
     font-size: 0.8rem;
     font-weight: 500;
@@ -366,7 +124,6 @@ input[type="number"].goto-page {
     border-bottom: none;
 }
 
-/* 👉 TEXTO SECUNDARIO (INTER + MÁS PEQUEÑO + NEGRITA) */
 .text-content p,
 .badge:not(.editorial) {
     font-family: 'Inter', sans-serif;
@@ -375,20 +132,26 @@ input[type="number"].goto-page {
     color: #666;
 }
 
-/* TEXTO ANALISIS */
 .badge.editorial {
-  color: #000000;
-  margin-top: 10px;
-  display: inline-flex;
-  width: fit-content;
-  padding: 1px 6px;
-  font-family: "Poppins", sans-serif;
-  font-size: 11px;
-  border: 1px solid #000000;
-  border-radius: 6px;
+    color: #000000;
+    margin-top: 10px;
+    display: inline-flex;
+    width: fit-content;
+    padding: 1px 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    border: 1px solid #000000;
+    border-radius: 6px;
 }
 
-/* TÍTULO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===================== TÍTULO ===================== */
+
 .article-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
@@ -399,12 +162,12 @@ input[type="number"].goto-page {
     text-align: left;
 }
 
-@media (min-width:769px){
-  .article-link:hover .article-title{
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
+@media (min-width: 769px) {
+    .article-link:hover .article-title {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+    }
 }
 
 /* ===================== IMAGEN ===================== */
@@ -421,27 +184,191 @@ input[type="number"].goto-page {
     filter: brightness(1.10);
 }
 
-/* FECHA + ICONO */
-.badge:last-of-type {
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    background: #000000;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #ffffff;
 }
 
-/* OCULTOS */
+/* 🔥 TEXTO TOTAL RESULTADOS Y PÁGINA */
+.pager-container,
+.pager-container *,
+.pager-container .text-sm,
+.pager-container span,
+.pager-container p,
+.pager-container div {
+    color: #ffffff;
+}
+
+.page-box,
+.compact-btn {
+    min-width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: #111111;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.compact-btn {
+    min-width: 40px;
+    height: 40px;
+}
+
+.page-box:hover,
+.compact-btn:hover {
+    background: #1c1c1c;
+    box-shadow: 0 1px 3px rgba(255,255,255,0.06);
+    transform: translateY(-1px);
+}
+
+.page-box.active,
+.active-page {
+    background: #ffffff;
+    color: #000000 !important;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
+}
+
+.compact-btn[disabled] {
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* ===================== INPUTS PAGINACIÓN ===================== */
+
+.select-pages {
+    border: 1px solid rgba(255,255,255,0.18);
+    background: #111111;
+    color: #ffffff;
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+input[type="number"].goto-page {
+    border: 1px solid rgba(255,255,255,0.18);
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    width: 80px;
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ===================== MOBILE PAGINATION ===================== */
+
+@media (max-width: 768px) {
+
+    .pager-container {
+        width: 100%;
+        padding: 12px;
+        overflow: hidden;
+    }
+
+    .pager-container .flex.flex-col.md\:flex-row {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .pager-container .text-sm {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.4;
+        order: 0;
+        color: #ffffff;
+    }
+
+    #pageNumbers {
+        gap: 8px !important;
+        flex-wrap: nowrap;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 1;
+    }
+
+    .page-box,
+    .compact-btn {
+        min-width: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+        border-radius: 12px;
+        padding: 0;
+    }
+
+    .select-pages {
+        width: 100%;
+        max-width: 130px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .goto-page {
+        width: 64px !important;
+        height: 38px !important;
+        font-size: 13px;
+    }
+
+    #gotoBtn {
+        width: auto;
+        padding: 0 12px;
+    }
+
+    .pager-container .justify-center.items-center.gap-2.px-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #firstBtn,
+    #prevBtn,
+    #nextBtn,
+    #lastBtn {
+        order: 2;
+    }
+
+}
+
+/* ===================== OCULTOS ===================== */
+
 .meta,
 .arrow-btn,
 .card-icon {
     display: none !important;
 }
 
-/* Fondo */
-body, html {
+/* ===================== FONDO ===================== */
+
+body,
+html {
     background-color: #ffffff !important;
 }
 
 </style>
-
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1365,9 +1292,10 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
-   <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
 
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 250px;"></div>
 
 
 <!-- popup Descargar Guia -->
@@ -1375,235 +1303,771 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
-<style>
-.marquee-line {
-  height: 1px;            /* línea delgada */
-  background-color: #ccc;  /* gris claro */
-  width: 100%;            /* ocupa todo el contenedor */
-  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
-}
-</style>
 
+<!-- =========================
+     HERO TITULO
+========================= -->
 
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-2 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-  Avanza en tu carrera, mejorar tus habilidades
-  </span>
-</div>
+<section class="hero-blog">
 
-<!-- Título -->
-<div class="blog-main-title relative">
+  <div class="hero-blog-content">
+
+    <!-- ETIQUETA -->
+    <span class="hero-tag">
+      CRECIMIENTO PROFESIONAL
+    </span>
+
+    <!-- TITULO -->
     <h1>
-Triunfa en tu Profesión con Tácticas que Solo <br>Usan los Mejores CEOs
+      Triunfa en tu Profesión con Tácticas que Solo Usan los Mejores CEOs
     </h1>
-    <span class="block mt-1 w-full h-px bg-slate-300"></span>
 
-  <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
-Impulsa tu carrera desarrollando habilidades clave, aumentando tu experiencia y destacando tu valor profesional.<br> 
-Cada paso que das hoy se traduce en mayores oportunidades y reconocimiento mañana.
-  </p>
-</div>
+    <!-- SUBTITULO -->
+    <p>
+      Impulsa tu carrera desarrollando habilidades clave, aumentando tu experiencia y destacando tu valor profesional.
+      Cada paso que das hoy se traduce en mayores oportunidades y reconocimiento mañana.
+    </p>
+
+  </div>
+
+</section>
 
 <style>
-.blog-main-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: left;
-  color: #111;
 
-  /* 🔥 Separación diferente por lado */
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+/* =========================
+   HERO BLOG
+========================= */
+
+.hero-blog{
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-bottom: 45px;
+
+    padding-left: 90px;
+
+    padding-right: 90px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .blog-main-title {
-    font-size: 2.2rem;
-    margin-right: 40px;
-  }
+/* CONTENIDO */
+
+.hero-blog-content{
+
+    max-width: 980px;
 }
 
-@media (max-width: 640px) {
-  .blog-main-title {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+/* ETIQUETA */
+
+.hero-tag{
+
+    display: inline-block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8b7355;
+
+    margin-bottom: 18px;
 }
+
+/* TITULO */
+
+.hero-blog h1{
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 4.2rem;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    color: #111111;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 24px;
+
+    max-width: 1100px;
+}
+
+/* SUBTITULO */
+
+.hero-blog p{
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: #555555;
+
+    max-width: 760px;
+
+    margin-bottom: 0;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1024px){
+
+    .hero-blog{
+
+        padding-left: 40px;
+
+        padding-right: 40px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 3.2rem;
+    }
+
+}
+
+/* =========================
+   TELEFONOS
+========================= */
+
+@media (max-width: 640px){
+
+    .hero-blog{
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        margin-top: 35px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 2.2rem;
+
+        line-height: 1.1;
+    }
+
+    .hero-blog p{
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+}
+
 </style>
 
 
 
 
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-0 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-Avanza en tu Trabajo y Crece Profesionalmente
+
+<!-- TITULO -->
+<div class="titulo-seccion">
+
+  <span>
+    Desarrollo Profesional y Estrategia Laboral
   </span>
-</div>
 
-
-
-<div class="articles-wrapper" style="font-family: 'Open Sans', sans-serif;">
-
-  <!-- Línea superior -->
-  <div class="section-line"></div>
-
-  <div class="articles-row">
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Los avances en un empleo pueden tomar años debido a factores fuera de tu control: experiencia, políticas internas y criterios de ascenso en las empresas.</h3>
-        <hr style="width:100%;">
-        <p>El crecimiento profesional no siempre depende solo de tu esfuerzo</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Las políticas y reglas del trabajo limitan oportunidades de crecimiento, favoreciendo a quienes están mejor preparados o tienen más experiencia.</h3>
-        <hr style="width:100%;">
-        <p>Usualmente, dentro de una empresa el progreso no siempre está al alcance de todos</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Quienes se especializan y se preparan durante años pueden alcanzar el puesto deseado, demostrando que la constancia tiene su recompensa.</h3>
-        <hr style="width:100%;">
-        <p>las metas importantes suelen ser el resultado de años de preparación que se mantuvo</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Avanzar con conciencia te permite entender el sistema económico y posicionarte estratégicamente, aprovechando cada oportunidad para aprender.</h3>
-        <hr style="width:100%;">
-        <p>Posicionarse estratégicamente requiere atención y aprendizaje constante que tardará</p>
-      </div>
-    </div>
-</div>
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
 
 </div>
+
+
+
+
+
+<section class="editorial-section">
+
+  <div class="editorial-grid">
+
+    <!-- =========================
+         ARTÍCULO PRINCIPAL
+    ========================= -->
+    <article class="main-article">
+
+      <!-- TEXTO ARRIBA -->
+      <div class="main-content">
+
+        <span class="category">
+          CRECIMIENTO PROFESIONAL
+        </span>
+
+        <h2>
+          Avanzar en tu carrera requiere preparación, estrategia y constancia
+        </h2>
+
+        <p>
+          El crecimiento profesional no ocurre de la noche a la mañana. Desarrollar habilidades,
+          adquirir experiencia y tomar decisiones inteligentes son claves para destacar.
+        </p>
+
+      </div>
+
+      <!-- IMAGEN ABAJO -->
+      <div class="main-image-wrapper">
+
+        <img
+          src="../../assets/png/oportunidades-financieras-reales.webp"
+          alt="Crecimiento profesional"
+        >
+
+      </div>
+
+    </article>
+
+    <!-- =========================
+         ARTÍCULOS DERECHA
+    ========================= -->
+    <div class="side-articles">
+
+      <!-- ITEM -->
+      <article class="side-article">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            EXPERIENCIA
+          </span>
+
+          <h3>
+            Los grandes avances laborales suelen tomar años de preparación
+          </h3>
+
+          <p>
+            La experiencia y el aprendizaje constante fortalecen tu perfil profesional.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- ITEM -->
+      <article class="side-article">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            ESTRATEGIA
+          </span>
+
+          <h3>
+            Comprender cómo funciona una empresa te ayuda a crecer con inteligencia
+          </h3>
+
+          <p>
+            Posicionarte estratégicamente puede abrir nuevas oportunidades dentro de tu carrera.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- ITEM -->
+      <article class="side-article no-border">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            DISCIPLINA
+          </span>
+
+          <h3>
+            La constancia profesional es una ventaja competitiva a largo plazo
+          </h3>
+
+          <p>
+            Quienes mantienen el enfoque y siguen aprendiendo aumentan sus posibilidades de éxito.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
 
 <style>
-.articles-wrapper {
-  max-width: 64rem;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+/* =========================
+   SECCIÓN GENERAL
+========================= */
+
+.editorial-section{
+
+    max-width: 1600px;
+
+    margin: 70px auto;
+
+    padding-left: 90px;
+    padding-right: 90px;
+
+    font-family: 'Open Sans', sans-serif;
 }
 
-.section-line {
-  height: 1px;
-  width: 100%;
-  background-color: #d1d5db;
-  margin: 16px 0;
+/* =========================
+   GRID
+========================= */
+
+.editorial-grid{
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.95fr;
+
+    gap: 28px;
+
+    align-items: start;
 }
 
-.articles-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch; /* Alinea los bloques con la misma altura */
-  overflow-x: hidden;
-}
+/* =========================
+   ARTÍCULO PRINCIPAL
+========================= */
 
-.article-block {
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribuye el espacio interno */
-  padding: 12px 0;
-  background: none;
-  border: none;
-}
+.main-article{
 
-.text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1; /* Hace que cada bloque crezca para igualar alturas */
-  margin-bottom: 8px;
-}
+    background: #0d0d0d;
 
-.article-block h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1c1c1c;
-  margin: 0 0 6px 0;
-  line-height: 1.4;
-}
+    padding: 38px;
 
-.article-block p {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.5;
-  margin: 0;
-}
+    overflow: hidden;
 
-.article-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #e5e7eb;
-  margin-top: 16px;
-  display: none;
-}
+    min-height: 620px;
 
-@media (max-width: 768px) {
-  .articles-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 15px;
-  }
+    display: flex;
 
-  .articles-row {
     flex-direction: column;
-    gap: 0;
-  }
 
-  .article-block {
-    flex: 1 0 100%;
-  }
-
-  .article-divider {
-    display: block;
-  }
+    justify-content: space-between;
 }
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.main-content{
+
+    margin-bottom: 28px;
+}
+
+/* CATEGORÍA */
+
+.category{
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #c7a46a;
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+}
+
+/* TITULO */
+
+.main-content h2{
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.3rem;
+
+    line-height: 1.15;
+
+    color: white;
+
+    margin-bottom: 16px;
+
+    max-width: 90%;
+}
+
+/* TEXTO */
+
+.main-content p{
+
+    color: #b5b5b5;
+
+    line-height: 1.7;
+
+    font-size: 1rem;
+
+    max-width: 85%;
+}
+
+/* =========================
+   IMAGEN MODERNA
+========================= */
+
+.main-image-wrapper{
+
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 10px;
+}
+
+.main-image-wrapper img{
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    transform: scale(1.02);
+
+    transition: transform 0.7s ease,
+                filter 0.7s ease;
+
+    filter: contrast(1.05)
+            saturate(1.08)
+            brightness(0.98);
+}
+
+/* EFECTO HOVER */
+
+.main-article:hover .main-image-wrapper img{
+
+    transform: scale(1.06);
+
+    filter: contrast(1.08)
+            saturate(1.12)
+            brightness(1);
+}
+
+/* CAPA OSCURA SUAVE */
+
+.main-image-wrapper::after{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.28),
+        rgba(0,0,0,0.05),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+/* =========================
+   LADO DERECHO
+========================= */
+
+.side-articles{
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding-top: 0;
+}
+
+/* ITEM */
+
+.side-article{
+
+    padding: 0 0 22px 0;
+
+    margin-bottom: 22px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.no-border{
+
+    border-bottom: none;
+
+    margin-bottom: 0;
+
+    padding-bottom: 0;
+}
+
+/* CATEGORIA */
+
+.category-small{
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8a8a8a;
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+}
+
+/* TITULO */
+
+.side-text h3{
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.2rem;
+
+    line-height: 1.45;
+
+    color: #111111;
+
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+
+.side-text p{
+
+    color: #666666;
+
+    line-height: 1.65;
+
+    font-size: 0.96rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px){
+
+    .editorial-section{
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .editorial-grid{
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .main-article{
+
+        min-height: auto;
+
+        padding: 28px;
+    }
+
+    .main-content h2{
+
+        font-size: 2rem;
+
+        max-width: 100%;
+    }
+
+    .main-content p{
+
+        max-width: 100%;
+    }
+
+    .main-image-wrapper img{
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 340px;
+    }
+
+}
+
+/* =========================
+   TELÉFONOS
+========================= */
+
+@media (max-width: 480px){
+
+    .editorial-section{
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .main-article{
+
+        padding: 18px;
+    }
+
+    .main-content h2{
+
+        font-size: 1.6rem;
+    }
+
+    .main-content p{
+
+        font-size: 0.95rem;
+    }
+
+    .main-image-wrapper img{
+
+        width: 100%;
+
+        height: 300px;
+    }
+
+    .side-text h3{
+
+        font-size: 1rem;
+    }
+
+}
+
 </style>
 
 
 
-<div class="flex justify-center md:justify-start mt-2 md:mt-5 relative px-4 sm:px-0 md:-ml-8">
-  <img src="../../assets/png/oportunidades-financieras-reales.webp"
-       alt=""
-       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[50rem] md:h-[26rem] object-contain relative z-10 md:translate-x-4">
-</div>
+
+<style>
+/* =========================
+   TITULO SECCION
+========================= */
+
+.titulo-seccion{
+
+    max-width: 1400px;
+
+    margin: 80px auto 45px auto;
+
+    padding: 0 90px;
+}
+
+/* TEXTO */
+
+.titulo-seccion span{
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: #111111;
+
+    letter-spacing: -0.5px;
+
+    display: inline-block;
+}
+
+/* LINEA NEGRA */
+
+.linea-seccion{
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #111111;
+
+    margin-top: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+    .titulo-seccion{
+
+        padding: 0 30px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 24px;
+    }
+
+    .linea-seccion{
+
+        height: 4px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .titulo-seccion{
+
+        padding: 0 18px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 22px;
+    }
+
+}
+</style>
 
 
-   <!-- INTRODUCCIÓN GENERAL -->
-      <main class="py-10">
+<!-- TITULO -->
+<div class="titulo-seccion">
 
-
-        
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-20 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-    Tu Ruta hacia el Éxito Profesional
+  <span>
+    Lo más destacado
   </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
 </div>
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+<div class="top-space"></div>
+
+<style>
+.top-space{
+    height:120px;
+}
+
+/* OCULTAR SOLO EN TELÉFONOS */
+@media (max-width:768px){
+
+    .top-space{
+        display:none;
+    }
+}
+</style>
+
 
 
 
@@ -1861,17 +2325,24 @@ Avanza en tu Trabajo y Crece Profesionalmente
 </section>
 
 
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-40 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
+
+
+<!-- TITULO -->
+<div class="titulo-seccion">
+
+  <span>
     Más allá del puesto
   </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
 </div>
 
 
 
+              <section class="mb-16">
 
- <section class="mb-16">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
 
     <!-- ================= ACORDEÓN ================= -->
@@ -1989,8 +2460,10 @@ Cómo avanzar en tu empleo entendiendo las reglas del juego
 
         </div>
       </div>
+  </div>
 
-    </div>
+</section>
+
 
     <script>
     document.querySelectorAll('.cf-accordion').forEach(accordion => {
@@ -2019,129 +2492,73 @@ Cómo avanzar en tu empleo entendiendo las reglas del juego
 });
     </script>
 
+
+
+
 </main>
 
-
-<!-- ================= SCRIP COMPAGINACION ================= -->
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const articles = Array.from(document.querySelectorAll('.article'));
-    const articlesGrid = document.getElementById('articlesGrid');
+// ====== PAGINACIÓN ======
+document.addEventListener("DOMContentLoaded", function() {
+    const articlesGrid = document.getElementById("articlesGrid");
+    const articles = Array.from(articlesGrid.getElementsByClassName("article"));
+    const perPageSelect = document.getElementById("perPageSelect");
+    const currentPageText = document.getElementById("currentPageText");
+    const totalPagesText = document.getElementById("totalPagesText");
+    const totalResults = document.getElementById("totalResults");
+    const pageNumbers = document.getElementById("pageNumbers");
+    const firstBtn = document.getElementById("firstBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const lastBtn = document.getElementById("lastBtn");
+    const gotoInput = document.getElementById("gotoInput");
+    const gotoBtn = document.getElementById("gotoBtn");
 
-    const totalResultsEl = document.getElementById('totalResults');
-    const currentPageText = document.getElementById('currentPageText');
-    const totalPagesText = document.getElementById('totalPagesText');
-    const perPageSelect = document.getElementById('perPageSelect');
-    const gotoInput = document.getElementById('gotoInput');
-    const gotoBtn = document.getElementById('gotoBtn');
-    const firstBtn = document.getElementById('firstBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const lastBtn = document.getElementById('lastBtn');
-    const pageNumbersContainer = document.getElementById('pageNumbers');
-
-    let perPage = parseInt(perPageSelect.value, 10);
     let currentPage = 1;
-    let totalPages = Math.max(1, Math.ceil(articles.length / perPage));
+    let perPage = parseInt(perPageSelect.value);
 
-    function showPage(page) {
-        if (page < 1) page = 1;
-        if (page > totalPages) page = totalPages;
-        currentPage = page;
-        const start = (currentPage - 1) * perPage;
-        const end = start + perPage;
+    function renderPage(page) {
+        const totalPages = Math.ceil(articles.length / perPage);
+        currentPage = Math.min(Math.max(page, 1), totalPages);
 
-        articles.forEach((article, idx) => {
-            if (idx >= start && idx < end) {
-                article.style.display = '';
-                setTimeout(() => article.style.opacity = 1, 10);
-            } else {
-                article.style.opacity = 0;
-                setTimeout(() => article.style.display = 'none', 400);
-            }
+        articles.forEach((article, index) => {
+            article.style.display = (index >= (currentPage-1)*perPage && index < currentPage*perPage) ? "block" : "none";
         });
 
         currentPageText.textContent = currentPage;
         totalPagesText.textContent = totalPages;
+        totalResults.textContent = articles.length;
 
-        updateButtons();
-        renderPageNumbers();
+        renderPageNumbers(totalPages);
     }
 
-    function updateButtons() {
-        firstBtn.disabled = currentPage === 1;
-        prevBtn.disabled = currentPage === 1;
-        nextBtn.disabled = currentPage === totalPages;
-        lastBtn.disabled = currentPage === totalPages;
+    function renderPageNumbers(totalPages) {
+        pageNumbers.innerHTML = "";
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement("div");
+            btn.className = "page-box" + (i === currentPage ? " active" : "");
+            btn.textContent = i;
+            btn.addEventListener("click", () => renderPage(i));
+            pageNumbers.appendChild(btn);
+        }
     }
 
-    function renderPageNumbers() {
-        pageNumbersContainer.innerHTML = '';
-        if (totalPages <= 5) {
-            for (let i = 1; i <= totalPages; i++) {
-                pageNumbersContainer.appendChild(createPageButton(i));
-            }
-            return;
-        }
-        pageNumbersContainer.appendChild(createPageButton(1));
-        let start = Math.max(2, currentPage - 1);
-        let end = Math.min(totalPages - 1, currentPage + 1);
-
-        if (start > 2) {
-            const dots = document.createElement('div');
-            dots.textContent = '...';
-            dots.className = 'text-stone-400 px-1';
-            pageNumbersContainer.appendChild(dots);
-        }
-
-        for (let i = start; i <= end; i++) {
-            pageNumbersContainer.appendChild(createPageButton(i));
-        }
-
-        if (end < totalPages - 1) {
-            const dots = document.createElement('div');
-            dots.textContent = '...';
-            dots.className = 'text-stone-400 px-1';
-            pageNumbersContainer.appendChild(dots);
-        }
-
-        pageNumbersContainer.appendChild(createPageButton(totalPages));
-    }
-
-    function createPageButton(num) {
-        const btn = document.createElement('button');
-        btn.textContent = num;
-        btn.className = 'page-box';
-        if (num === currentPage) btn.classList.add('active');
-        btn.addEventListener('click', () => showPage(num));
-        return btn;
-    }
-
-    perPageSelect.addEventListener('change', () => {
-        perPage = parseInt(perPageSelect.value, 10);
-        totalPages = Math.ceil(articles.length / perPage);
-        currentPage = 1;
-        showPage(currentPage);
+    perPageSelect.addEventListener("change", () => {
+        perPage = parseInt(perPageSelect.value);
+        renderPage(1);
     });
 
-    firstBtn.addEventListener('click', () => showPage(1));
-    prevBtn.addEventListener('click', () => showPage(currentPage - 1));
-    nextBtn.addEventListener('click', () => showPage(currentPage + 1));
-    lastBtn.addEventListener('click', () => showPage(totalPages));
+    firstBtn.addEventListener("click", () => renderPage(1));
+    prevBtn.addEventListener("click", () => renderPage(currentPage-1));
+    nextBtn.addEventListener("click", () => renderPage(currentPage+1));
+    lastBtn.addEventListener("click", () => renderPage(Math.ceil(articles.length / perPage)));
 
-    gotoBtn.addEventListener('click', () => {
-        const val = parseInt(gotoInput.value, 10);
-        if (!isNaN(val)) showPage(val);
-        gotoInput.value = '';
+    gotoBtn.addEventListener("click", () => {
+        const page = parseInt(gotoInput.value);
+        if(!isNaN(page)) renderPage(page);
     });
 
-    gotoInput.addEventListener('keydown', e => {
-        if (e.key === 'Enter') gotoBtn.click();
-    });
-
-    totalResultsEl.textContent = articles.length;
-    totalPages = Math.ceil(articles.length / perPage);
-    showPage(currentPage);
+    renderPage(1);
 });
 </script>
 
@@ -2151,8 +2568,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         
 
-  <!-- ESPACIO PEQUEÑO FINAL -->
-<section class="py-20"></section>
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 120px;"></div>
 
 
 
