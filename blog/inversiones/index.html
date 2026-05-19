@@ -38,236 +38,6 @@
 
 /* ===================== GRID DE TARJETAS CENTRADO ===================== */
 
-#articlesGrid { 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1400px;
-    margin: 0 auto;
-    align-items: stretch;
-}
-
-/* Evita espacios extra */
-.article {
-    display: flex;
-    justify-content: center;
-}
-
-/* ===================== PAGINACIÓN CENTRADA ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.page-box,
-.compact-btn {
-    min-width: 38px;
-    height: 38px;
-    border-radius: 12px;
-    border: 1px solid #d6d3d1;
-    background: white;
-    transition: .2s;
-}
-
-.page-box:hover,
-.compact-btn:hover {
-    background: #f5f5f4;
-}
-
-.active-page {
-    background: black;
-    color: white;
-    border-color: black;
-}
-
-/* ===================== MOBILE PAGINATION ===================== */
-
-@media (max-width: 768px) {
-
-    .pager-container {
-        width: 100%;
-        padding: 12px;
-        overflow: hidden;
-    }
-
-    .pager-container .flex.flex-col.md\:flex-row {
-        width: 100%;
-        gap: 14px;
-    }
-
-    /* 🔥 INFO SUPERIOR EN MÓVIL */
-    .pager-container .text-sm {
-
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-
-        width: 100%;
-        text-align: center;
-
-        font-size: 13px;
-        line-height: 1.4;
-
-        order: 0;
-    }
-
-    /* FILA BOTONES */
-    #pageNumbers {
-
-        gap: 8px !important;
-        flex-wrap: nowrap;
-
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        order: 1;
-
-    }
-
-    .page-box,
-    .compact-btn {
-
-        min-width: 38px;
-        width: 38px;
-        height: 38px;
-
-        font-size: 14px;
-        border-radius: 12px;
-
-        padding: 0;
-    }
-
-    /* CONTROLES ABAJO */
-    .select-pages {
-        width: 100%;
-        max-width: 130px;
-        height: 38px;
-        font-size: 13px;
-    }
-
-    .goto-page {
-        width: 64px !important;
-        height: 38px !important;
-        font-size: 13px;
-    }
-
-    /* BOTÓN IR */
-    #gotoBtn {
-        width: auto;
-        padding: 0 12px;
-    }
-
-    /* CONTENEDOR GENERAL */
-    .pager-container .justify-center.items-center.gap-2.px-2 {
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-
-    }
-
-    /* FLECHAS ABAJO */
-    #firstBtn,
-    #prevBtn,
-    #nextBtn,
-    #lastBtn {
-
-        order: 2;
-
-    }
-
-}
-
-</style>
-
-<style>
-
-/* ===================== BLOQUE DE COMPAGINADO ===================== */
-.pager-container { 
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-.page-box { 
-    min-width: 38px; 
-    height: 38px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    user-select: none; 
-    font-weight: 600; 
-    color: #0f172a; 
-    transition: all 0.2s ease; 
-}
-
-.page-box:hover { 
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06); 
-    transform: translateY(-1px); 
-}
-
-.page-box.active { 
-    border-color: #94a3b8; 
-    box-shadow: 0 0 0 3px rgba(14,165,233,0.06); 
-    background: #f8fafc; 
-}
-
-.compact-btn { 
-    min-width: 40px; 
-    height: 40px; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 6px; 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    cursor: pointer; 
-    transition: all 0.2s ease; 
-}
-
-.compact-btn[disabled] { 
-    opacity: 0.45; 
-    cursor: default; 
-    pointer-events: none; 
-}
-
-.select-pages { 
-    border: 1px solid #e6e6e6; 
-    background: #fff; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-}
-
-input[type="number"].goto-page { 
-    border: 1px solid #e6e6e6; 
-    height: 40px; 
-    border-radius: 6px; 
-    padding: 6px 10px; 
-    width: 80px; 
-    background: #fff; 
-}
-
-#articlesGrid { 
-    transition: all 0.5s ease; 
-}
-
-.article { 
-    transition: opacity 0.4s ease; 
-}
-
-/* ===================== TARJETAS DE PAGINACIÓN ===================== */
-
 #articlesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -275,6 +45,7 @@ input[type="number"].goto-page {
     max-width: 1400px;
     margin: 0 auto;
     align-items: stretch;
+    transition: all 0.5s ease;
 }
 
 @media (max-width: 640px) {
@@ -286,32 +57,29 @@ input[type="number"].goto-page {
     }
 }
 
+/* ===================== TARJETAS ===================== */
+
 .article {
     display: flex;
     justify-content: center;
     height: 100%;
+    transition: opacity 0.4s ease;
 }
 
 .article-card {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+    max-width: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 12px 0;
+    box-shadow: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
-
-/* ===================== PAGINACIÓN ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
-    padding: 12px; 
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-/* ===================== TARJETAS ===================== */
 
 .articles-container {
     display: grid;
@@ -334,19 +102,8 @@ input[type="number"].goto-page {
     color: inherit;
 }
 
-.article-card {
-    width: 100%;
-    max-width: none;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 12px 0;
-    box-shadow: none;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-}
+/* ===================== BLOQUE SUPERIOR ===================== */
 
-/* BLOQUE SUPERIOR */
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
@@ -355,7 +112,8 @@ input[type="number"].goto-page {
     text-align: left;
 }
 
-/* BADGE */
+/* ===================== BADGES ===================== */
+
 .badge {
     font-size: 0.8rem;
     font-weight: 500;
@@ -366,7 +124,6 @@ input[type="number"].goto-page {
     border-bottom: none;
 }
 
-/* 👉 TEXTO SECUNDARIO (INTER + MÁS PEQUEÑO + NEGRITA) */
 .text-content p,
 .badge:not(.editorial) {
     font-family: 'Inter', sans-serif;
@@ -375,20 +132,26 @@ input[type="number"].goto-page {
     color: #666;
 }
 
-/* TEXTO ANALISIS */
 .badge.editorial {
-  color: #000000;
-  margin-top: 10px;
-  display: inline-flex;
-  width: fit-content;
-  padding: 1px 6px;
-  font-family: "Poppins", sans-serif;
-  font-size: 11px;
-  border: 1px solid #000000;
-  border-radius: 6px;
+    color: #000000;
+    margin-top: 10px;
+    display: inline-flex;
+    width: fit-content;
+    padding: 1px 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    border: 1px solid #000000;
+    border-radius: 6px;
 }
 
-/* TÍTULO */
+.badge:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===================== TÍTULO ===================== */
+
 .article-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
@@ -399,12 +162,12 @@ input[type="number"].goto-page {
     text-align: left;
 }
 
-@media (min-width:769px){
-  .article-link:hover .article-title{
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
+@media (min-width: 769px) {
+    .article-link:hover .article-title {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+    }
 }
 
 /* ===================== IMAGEN ===================== */
@@ -421,27 +184,191 @@ input[type="number"].goto-page {
     filter: brightness(1.10);
 }
 
-/* FECHA + ICONO */
-.badge:last-of-type {
+/* ===================== PAGINACIÓN ===================== */
+
+.pager-container {
+    margin-top: 40px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    background: #000000;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #ffffff;
 }
 
-/* OCULTOS */
+/* 🔥 TEXTO TOTAL RESULTADOS Y PÁGINA */
+.pager-container,
+.pager-container *,
+.pager-container .text-sm,
+.pager-container span,
+.pager-container p,
+.pager-container div {
+    color: #ffffff;
+}
+
+.page-box,
+.compact-btn {
+    min-width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: #111111;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.compact-btn {
+    min-width: 40px;
+    height: 40px;
+}
+
+.page-box:hover,
+.compact-btn:hover {
+    background: #1c1c1c;
+    box-shadow: 0 1px 3px rgba(255,255,255,0.06);
+    transform: translateY(-1px);
+}
+
+.page-box.active,
+.active-page {
+    background: #ffffff;
+    color: #000000 !important;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
+}
+
+.compact-btn[disabled] {
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* ===================== INPUTS PAGINACIÓN ===================== */
+
+.select-pages {
+    border: 1px solid rgba(255,255,255,0.18);
+    background: #111111;
+    color: #ffffff;
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+input[type="number"].goto-page {
+    border: 1px solid rgba(255,255,255,0.18);
+    height: 40px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    width: 80px;
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ===================== MOBILE PAGINATION ===================== */
+
+@media (max-width: 768px) {
+
+    .pager-container {
+        width: 100%;
+        padding: 12px;
+        overflow: hidden;
+    }
+
+    .pager-container .flex.flex-col.md\:flex-row {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .pager-container .text-sm {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.4;
+        order: 0;
+        color: #ffffff;
+    }
+
+    #pageNumbers {
+        gap: 8px !important;
+        flex-wrap: nowrap;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 1;
+    }
+
+    .page-box,
+    .compact-btn {
+        min-width: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+        border-radius: 12px;
+        padding: 0;
+    }
+
+    .select-pages {
+        width: 100%;
+        max-width: 130px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .goto-page {
+        width: 64px !important;
+        height: 38px !important;
+        font-size: 13px;
+    }
+
+    #gotoBtn {
+        width: auto;
+        padding: 0 12px;
+    }
+
+    .pager-container .justify-center.items-center.gap-2.px-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #firstBtn,
+    #prevBtn,
+    #nextBtn,
+    #lastBtn {
+        order: 2;
+    }
+
+}
+
+/* ===================== OCULTOS ===================== */
+
 .meta,
 .arrow-btn,
 .card-icon {
     display: none !important;
 }
 
-/* Fondo */
-body, html {
+/* ===================== FONDO ===================== */
+
+body,
+html {
     background-color: #ffffff !important;
 }
 
 </style>
-
 
 </head>
 <body class="bg-stone-50 text-stone-900">
@@ -1365,242 +1292,778 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
+
+
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
+<div style="height: 250px;"></div>
 
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
 
-<style>
-.marquee-line {
-  height: 1px;            /* línea delgada */
-  background-color: #ccc;  /* gris claro */
-  width: 100%;            /* ocupa todo el contenedor */
-  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
-}
-</style>
 
+<!-- =========================
+     HERO TITULO
+========================= -->
 
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-2 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-   Explora el mundo de las inversiones
-  </span>
-</div>
+<section class="hero-blog inversiones-hero">
 
-<!-- Título -->
-<div class="blog-main-title relative">
+  <div class="hero-blog-content">
+
+    <!-- ETIQUETA -->
+    <span class="hero-tag">
+      INVERSIONES
+    </span>
+
+    <!-- TITULO -->
     <h1>
-Multiplica tu Dinero con Inversiones Efectivas <br>y Bien Planificadas
+      Multiplica tu Dinero con Inversiones Efectivas y Bien Planificadas
     </h1>
-    <span class="block mt-1 w-full h-px bg-slate-300"></span>
 
-  <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
-Invierte de manera inteligente y toma decisiones financieras con confianza. Descubre los conceptos clave,<br>
-estrategias básicas y herramientas para entender exactamente cómo y dónde colocar tu dinero.
-  </p>
-</div>
+    <!-- SUBTITULO -->
+    <p>
+      Invierte de manera inteligente y toma decisiones financieras con confianza.
+      Descubre conceptos clave, estrategias y herramientas para entender cómo y dónde colocar tu dinero.
+    </p>
+
+  </div>
+
+</section>
 
 <style>
-.blog-main-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: left;
-  color: #111;
 
-  /* 🔥 Separación diferente por lado */
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+/* =========================
+   HERO BLOG
+========================= */
+
+.inversiones-hero{
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-bottom: 45px;
+
+    padding-left: 90px;
+
+    padding-right: 90px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .blog-main-title {
-    font-size: 2.2rem;
-    margin-right: 40px;
-  }
+/* CONTENIDO */
+
+.inversiones-hero .hero-blog-content{
+
+    max-width: 980px;
 }
 
-@media (max-width: 640px) {
-  .blog-main-title {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+/* ETIQUETA */
+
+.inversiones-hero .hero-tag{
+
+    display: inline-block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8b7355;
+
+    margin-bottom: 18px;
 }
+
+/* TITULO */
+
+.inversiones-hero h1{
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 4.2rem;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    color: #111111;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 24px;
+
+    max-width: 1100px;
+}
+
+/* SUBTITULO */
+
+.inversiones-hero p{
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: #555555;
+
+    max-width: 760px;
+
+    margin-bottom: 0;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1024px){
+
+    .inversiones-hero{
+
+        padding-left: 40px;
+
+        padding-right: 40px;
+    }
+
+    .inversiones-hero h1{
+
+        font-size: 3.2rem;
+    }
+
+}
+
+/* =========================
+   TELEFONOS
+========================= */
+
+@media (max-width: 640px){
+
+    .inversiones-hero{
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        margin-top: 35px;
+    }
+
+    .inversiones-hero h1{
+
+        font-size: 2.2rem;
+
+        line-height: 1.1;
+    }
+
+    .inversiones-hero p{
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+}
+
 </style>
 
 
-<div class="left-block flex flex-col justify-center items-start mt-20 mb-0 max-w-4xl px-4 md:px-0 ml-0 md:ml-6"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-    Cambiar tu Forma de Invertir
+
+
+
+<!-- TITULO -->
+<div class="titulo-seccion inversiones-titulo-seccion">
+
+  <span>
+    Estrategias Inteligentes de Inversión
   </span>
-</div>
 
-
-
-
-
-<div class="articles-wrapper" style="font-family: 'Open Sans', sans-serif;">
-
-  <!-- Línea superior -->
-  <div class="section-line"></div>
-
-  <div class="articles-row">
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>El dinero no aparece por casualidad. Si la riqueza fuera suerte, los que no hacen nada serían tan exitosos como los que se esfuerzan.</h3>
-        <hr style="width:100%;">
-        <p>El dinero no sigue a la suerte, sigue a las acciones</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>El dinero se mueve donde hay personas resolviendo problemas reales. Ahí es donde nacen las verdaderas oportunidades.</h3>
-        <hr style="width:100%;">
-        <p>El dinero no se persigue, se acerca a quien crea</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>La mayoría no ve oportunidades porque vive distraída. El ruido mata la concentración y ciega frente a lo importante.</h3>
-        <hr style="width:100%;">
-        <p>Cuando todo es ruido, lo importante se vuelve invisible</p>
-      </div>
-      <div class="article-divider"></div>
-    </div>
-
-    <div class="article-block">
-      <div class="text-content">
-        <h3>Ver oportunidades no es mirar, es entender. El conocimiento es la luz que permite ver lo que otros ignoran.</h3>
-        <hr style="width:100%;">
-        <p>Las oportunidades no se ven, se entienden con la mente</p>
-      </div>
-    </div>
-</div>
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
 
 </div>
+
+
+
+
+
+<section class="editorial-section inversiones-editorial-section">
+
+  <div class="editorial-grid inversiones-editorial-grid">
+
+    <!-- =========================
+         ARTÍCULO PRINCIPAL
+    ========================= -->
+    <article class="main-article inversiones-main-article">
+
+      <!-- TEXTO ARRIBA -->
+      <div class="main-content inversiones-main-content">
+
+        <span class="category">
+          INVERSIÓN INTELIGENTE
+        </span>
+
+        <h2>
+          Las oportunidades aparecen cuando entiendes cómo funciona realmente el dinero
+        </h2>
+
+        <p>
+          Invertir no es cuestión de suerte. Es aprender a identificar oportunidades,
+          actuar con estrategia y desarrollar una mentalidad enfocada en el crecimiento financiero.
+        </p>
+
+      </div>
+
+      <!-- IMAGEN ABAJO -->
+      <div class="main-image-wrapper inversiones-main-image-wrapper">
+
+        <img
+          src="../../assets/png/inversion-inteligente-segura.webp"
+          alt="Inversión inteligente"
+        >
+
+      </div>
+
+    </article>
+
+    <!-- =========================
+         ARTÍCULOS DERECHA
+    ========================= -->
+    <div class="side-articles inversiones-side-articles">
+
+      <!-- ITEM -->
+      <article class="side-article inversiones-side-article">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            ACCIÓN
+          </span>
+
+          <h3>
+            El dinero sigue a quienes toman decisiones y crean valor
+          </h3>
+
+          <p>
+            Las oportunidades financieras aparecen cuando las personas resuelven problemas reales.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- ITEM -->
+      <article class="side-article inversiones-side-article">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            ENFOQUE
+          </span>
+
+          <h3>
+            La distracción hace que muchas personas nunca detecten oportunidades
+          </h3>
+
+          <p>
+            Mantener claridad mental y concentración permite identificar posibilidades que otros ignoran.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- ITEM -->
+      <article class="side-article inversiones-side-article no-border">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            CONOCIMIENTO
+          </span>
+
+          <h3>
+            Entender cómo funciona una inversión vale más que solo observarla
+          </h3>
+
+          <p>
+            La educación financiera permite analizar mejor los riesgos y las oportunidades.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
 
 <style>
-.articles-wrapper {
-  max-width: 64rem;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+/* =========================
+   SECCIÓN GENERAL
+========================= */
+
+.inversiones-editorial-section{
+
+    max-width: 1600px;
+
+    margin: 70px auto;
+
+    padding-left: 90px;
+    padding-right: 90px;
+
+    font-family: 'Open Sans', sans-serif;
 }
 
-.section-line {
-  height: 1px;
-  width: 100%;
-  background-color: #d1d5db;
-  margin: 16px 0;
+/* =========================
+   GRID
+========================= */
+
+.inversiones-editorial-grid{
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.95fr;
+
+    gap: 28px;
+
+    align-items: start;
 }
 
-.articles-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch; /* Alinea los bloques con la misma altura */
-  overflow-x: hidden;
-}
+/* =========================
+   ARTÍCULO PRINCIPAL
+========================= */
 
-.article-block {
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribuye el espacio interno */
-  padding: 12px 0;
-  background: none;
-  border: none;
-}
+.inversiones-main-article{
 
-.text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1; /* Hace que cada bloque crezca para igualar alturas */
-  margin-bottom: 8px;
-}
+    background: #0d0d0d;
 
-.article-block h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1c1c1c;
-  margin: 0 0 6px 0;
-  line-height: 1.4;
-}
+    padding: 38px;
 
-.article-block p {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.5;
-  margin: 0;
-}
+    overflow: hidden;
 
-.article-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #e5e7eb;
-  margin-top: 16px;
-  display: none;
-}
+    min-height: 620px;
 
-@media (max-width: 768px) {
-  .articles-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 15px;
-  }
+    display: flex;
 
-  .articles-row {
     flex-direction: column;
-    gap: 0;
-  }
 
-  .article-block {
-    flex: 1 0 100%;
-  }
+    justify-content: space-between;
+}
 
-  .article-divider {
+/* =========================
+   CONTENIDO
+========================= */
+
+.inversiones-main-content{
+
+    margin-bottom: 28px;
+}
+
+/* CATEGORÍA */
+
+.inversiones-main-article .category{
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #c7a46a;
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+}
+
+/* TITULO */
+
+.inversiones-main-content h2{
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.3rem;
+
+    line-height: 1.15;
+
+    color: white;
+
+    margin-bottom: 16px;
+
+    max-width: 90%;
+}
+
+/* TEXTO */
+
+.inversiones-main-content p{
+
+    color: #b5b5b5;
+
+    line-height: 1.7;
+
+    font-size: 1rem;
+
+    max-width: 85%;
+}
+
+/* =========================
+   IMAGEN MODERNA
+========================= */
+
+.inversiones-main-image-wrapper{
+
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 10px;
+}
+
+.inversiones-main-image-wrapper img{
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+
+    object-position: center;
+
     display: block;
-  }
+
+    transform: scale(1.02);
+
+    transition: transform 0.7s ease,
+                filter 0.7s ease;
+
+    filter: contrast(1.05)
+            saturate(1.08)
+            brightness(0.98);
+}
+
+/* EFECTO HOVER */
+
+.inversiones-main-article:hover .inversiones-main-image-wrapper img{
+
+    transform: scale(1.06);
+
+    filter: contrast(1.08)
+            saturate(1.12)
+            brightness(1);
+}
+
+/* CAPA OSCURA SUAVE */
+
+.inversiones-main-image-wrapper::after{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.28),
+        rgba(0,0,0,0.05),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+/* =========================
+   LADO DERECHO
+========================= */
+
+.inversiones-side-articles{
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding-top: 0;
+}
+
+/* ITEM */
+
+.inversiones-side-article{
+
+    padding: 0 0 22px 0;
+
+    margin-bottom: 22px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.inversiones-side-article.no-border{
+
+    border-bottom: none;
+
+    margin-bottom: 0;
+
+    padding-bottom: 0;
+}
+
+/* CATEGORIA */
+
+.inversiones-side-article .category-small{
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8a8a8a;
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+}
+
+/* TITULO */
+
+.inversiones-side-article .side-text h3{
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.2rem;
+
+    line-height: 1.45;
+
+    color: #111111;
+
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+
+.inversiones-side-article .side-text p{
+
+    color: #666666;
+
+    line-height: 1.65;
+
+    font-size: 0.96rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px){
+
+    .inversiones-editorial-section{
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .inversiones-editorial-grid{
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .inversiones-main-article{
+
+        min-height: auto;
+
+        padding: 28px;
+    }
+
+    .inversiones-main-content h2{
+
+        font-size: 2rem;
+
+        max-width: 100%;
+    }
+
+    .inversiones-main-content p{
+
+        max-width: 100%;
+    }
+
+    .inversiones-main-image-wrapper img{
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 340px;
+    }
+
+}
+
+/* =========================
+   TELÉFONOS
+========================= */
+
+@media (max-width: 480px){
+
+    .inversiones-editorial-section{
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .inversiones-main-article{
+
+        padding: 18px;
+    }
+
+    .inversiones-main-content h2{
+
+        font-size: 1.6rem;
+    }
+
+    .inversiones-main-content p{
+
+        font-size: 0.95rem;
+    }
+
+    .inversiones-main-image-wrapper img{
+
+        width: 100%;
+
+        height: 300px;
+    }
+
+    .inversiones-side-article .side-text h3{
+
+        font-size: 1rem;
+    }
+
+}
+
+</style>
+
+
+<style>
+/* =========================
+   TITULO SECCION
+========================= */
+
+.titulo-seccion{
+
+    max-width: 1400px;
+
+    margin: 80px auto 45px auto;
+
+    padding: 0 90px;
+}
+
+/* TEXTO */
+
+.titulo-seccion span{
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: #111111;
+
+    letter-spacing: -0.5px;
+
+    display: inline-block;
+}
+
+/* LINEA NEGRA */
+
+.linea-seccion{
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #111111;
+
+    margin-top: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+    .titulo-seccion{
+
+        padding: 0 30px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 24px;
+    }
+
+    .linea-seccion{
+
+        height: 4px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .titulo-seccion{
+
+        padding: 0 18px;
+    }
+
+    .titulo-seccion span{
+
+        font-size: 22px;
+    }
+
 }
 </style>
 
 
+<!-- TITULO -->
+<div class="titulo-seccion">
 
-<div class="flex justify-center md:justify-start mt-2 md:mt-5 relative px-4 sm:px-0 md:-ml-8">
-  <img src="../../assets/png/inversion-inteligente-segura.webp"
-       alt=""
-       class="w-80 h-56 sm:w-[40rem] sm:h-96 md:w-[50rem] md:h-[26rem] object-contain relative z-10 md:translate-x-4">
-</div>
-
-
-   <!-- INTRODUCCIÓN GENERAL -->
-      <main class="py-10">
-
-
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-20 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
-    Haz que tu dinero avance
+  <span>
+    Lo más destacado
   </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
 </div>
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+<div class="top-space"></div>
+
+<style>
+.top-space{
+    height:120px;
+}
+
+/* OCULTAR SOLO EN TELÉFONOS */
+@media (max-width:768px){
+
+    .top-space{
+        display:none;
+    }
+}
+</style>
 
 
 
@@ -2048,12 +2511,16 @@ estrategias básicas y herramientas para entender exactamente cómo y dónde col
 
 
 
+<!-- TITULO -->
+<div class="titulo-seccion">
 
-<div class="left-block flex flex-col justify-center items-start md:items-center mt-40 mb-10 max-w-4xl px-4 md:px-0 ml-0 md:ml-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777;">
-  <span class="block">
+  <span>
    Convierte tu dinero en oportunidades
   </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
 </div>
 
 
