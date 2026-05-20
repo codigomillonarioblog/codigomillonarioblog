@@ -2234,7 +2234,7 @@ Un negocio sólido no se construye evitando problemas, sino aprendiendo a correg
     <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
     <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
     <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
-    <a id="viewAllBtn" href="../NOMBRE DE CARPETA/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
+    <a id="viewAllBtn" href="../negocios/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
       Ver todos
     </a>
   </div>
@@ -2440,7 +2440,7 @@ searchInput.addEventListener("input", ()=>{
   renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
 });
 
-fetch("../NOMBRE DE CARPETA/index.html")
+fetch("../negocios/index.html")
 .then(r => r.text())
 .then(html => {
 
