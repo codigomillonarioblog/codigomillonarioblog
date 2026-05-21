@@ -1229,33 +1229,64 @@ fetch('posts.json')
 
 
 
+
+
+
+
 <!-- ESPACIO ARRIBA -->
  <div style="height: 300px;"></div>
 
     
 
-<div class="section-line-short"></div> <!-- línea corta -->
 
 
-<!-- ================= SAFE SIMPLE MENU ================= -->
 
-<div id="cm-optimizador-dinero" class="cm-optimizador">
+
+
+
+<div class="section-line-short"></div>
+
+<!-- ================= MENÚ FINANCIERO SERIO ================= -->
+
+<div id="cm-optimizador-dinero">
 
   <!-- TOGGLE -->
-  <div class="cm-toggle" data-cm-toggle>
-    <span class="cm-text">Optimiza tu dinero</span>
-    <span class="cm-arrow"></span>
-  </div>
+  <button class="cm-toggle" data-cm-toggle>
 
-  <!-- CONTENT -->
+    <span class="cm-title">
+      Optimiza tu dinero
+    </span>
+
+    <span class="cm-arrow"></span>
+
+  </button>
+
+  <!-- DROPDOWN -->
   <div class="cm-content">
 
-    <a href="./herramientas/oraculo-financiero.html">Oráculo Financiero</a>
-    <a href="./herramientas/examen-financiero.html">Examen Financiero</a>
-    <a href="./herramientas/interescompuesto.html">Calculadora de Interés Compuesto</a>
-    <a href="./herramientas/presupuesto.html">Planificador de Presupuesto</a>
-    <a href="./herramientas/simulador.html">Simulador de Inversión</a>
-    <a href="./herramientas/libertadfinanciera.html">Calculadora de Libertad Financiera</a>
+    <a href="./herramientas/oraculo-financiero.html">
+      Oráculo Financiero
+    </a>
+
+    <a href="./herramientas/examen-financiero.html">
+      Examen Financiero
+    </a>
+
+    <a href="./herramientas/interes-compuesto.html">
+      Calculadora de Interés Compuesto
+    </a>
+
+    <a href="./herramientas/presupuesto-financiero.html">
+      Planificador de Presupuesto
+    </a>
+
+    <a href="./herramientas/simulador-de-invercion.html">
+      Simulador de Inversión
+    </a>
+
+    <a href="./herramientas/libertad-financiera.html">
+      Calculadora de Libertad Financiera
+    </a>
 
   </div>
 
@@ -1263,149 +1294,226 @@ fetch('posts.json')
 
 <style>
 
-/* ================= SAFE SCOPE ================= */
+/* ================= ROOT ================= */
+
 #cm-optimizador-dinero{
-  font-family: Arial, sans-serif;
-  position: relative;
-  z-index: 1;
+
+  position:relative;
+
+  width:320px;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  z-index:100;
+
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+
+  text-rendering:optimizeLegibility;
 }
 
 /* ================= POSITION ================= */
+
 @media (min-width:1024px){
-  #cm-optimizador-dinero{ margin-left:70px; }
+
+  #cm-optimizador-dinero{
+    margin-left:70px;
+  }
 }
 
 @media (max-width:768px){
-  #cm-optimizador-dinero{ margin-left:20px; }
+
+  #cm-optimizador-dinero{
+    margin-left:20px;
+    width:calc(100% - 40px);
+  }
 }
 
 /* ================= TOGGLE ================= */
+
 #cm-optimizador-dinero .cm-toggle{
+
+  width:100%;
+
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
+
+  padding:14px 0;
+
+  background:none;
+  border:none;
+
+  border-bottom:
+    1px solid #d6d6d6;
 
   cursor:pointer;
 
-  font-size:16px;
-  font-weight:500;
-
-  width:280px;
-  padding:8px 10px;
-
-  box-sizing:border-box;
-  transition:background .2s ease;
+  text-align:left;
 }
 
-/* activo */
-#cm-optimizador-dinero.open .cm-toggle{
-  background:#e6e6e6;
+/* título */
+
+#cm-optimizador-dinero .cm-title{
+
+  font-size:15px;
+
+  font-weight:700;
+
+  letter-spacing:-0.01em;
+
   color:#111;
 }
 
-/* flecha */
+/* ================= ARROW ================= */
+
 #cm-optimizador-dinero .cm-arrow{
+
   width:8px;
   height:8px;
-  border-right:2px solid #111;
-  border-bottom:2px solid #111;
+
+  border-right:1.5px solid #555;
+  border-bottom:1.5px solid #555;
+
   transform:rotate(45deg);
-  transition:transform .25s ease;
-  flex-shrink:0;
+
+  transition:transform .22s ease;
 }
+
+/* open */
 
 #cm-optimizador-dinero.open .cm-arrow{
   transform:rotate(-135deg);
 }
 
-/* ================= LÍNEA ENTRE BOTÓN Y DROPDOWN ================= */
-#cm-optimizador-dinero.open::after{
-  content:"";
-  position:absolute;
+/* ================= CONTENT ================= */
 
-  top:100%;
-  left:0;
-
-  width:280px;
-  height:3px;
-
-  background:#4a4a4a;
-
-  transform:translateY(-1px);
-
-  z-index:99999; /* 👈 por encima de todo */
-  pointer-events:none;
-}
-
-/* ================= DROPDOWN ================= */
 #cm-optimizador-dinero .cm-content{
+
   position:absolute;
+
   top:100%;
   left:0;
 
-  width:280px;
+  width:100%;
 
   background:#fff;
 
+  border:
+    1px solid #e9e9e9;
+
   box-shadow:
-    0 18px 45px rgba(0,0,0,0.35),
-    0 6px 15px rgba(0,0,0,0.25);
+    0 10px 30px rgba(0,0,0,.08);
 
-  overflow:hidden;
-  max-height:0;
+  opacity:0;
+  visibility:hidden;
 
-  display:flex;
-  flex-direction:column;
+  transform:
+    translateY(8px);
 
-  transition:max-height .35s ease;
-  z-index:1000;
+  transition:
+    opacity .2s ease,
+    transform .2s ease,
+    visibility .2s ease;
+
+  z-index:999;
 }
 
-/* links */
-#cm-optimizador-dinero .cm-content a{
-  text-decoration:none;
-  color:#111;
-  font-size:14px;
+/* open */
 
-  padding:10px 14px;
+#cm-optimizador-dinero.open .cm-content{
+
+  opacity:1;
+  visibility:visible;
+
+  transform:
+    translateY(0);
+}
+
+/* ================= LINKS ================= */
+
+#cm-optimizador-dinero .cm-content a{
+
   display:block;
 
-  transition:background .2s ease;
+  padding:14px 18px;
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  font-weight:500;
+
+  letter-spacing:-0.01em;
+
+  color:#222;
+
+  border-bottom:
+    1px solid #f1f1f1;
+
+  transition:
+    background .18s ease,
+    color .18s ease,
+    padding-left .18s ease;
 }
+
+/* último */
+
+#cm-optimizador-dinero .cm-content a:last-child{
+  border-bottom:none;
+}
+
+/* hover */
 
 #cm-optimizador-dinero .cm-content a:hover{
-  background:#f5f5f5;
+
+  background:#fafafa;
+
+  padding-left:22px;
+
+  color:#000;
 }
+
 </style>
-
-
 
 <script>
 
 (function(){
 
-  const root = document.getElementById('cm-optimizador-dinero');
-  const toggle = root.querySelector('[data-cm-toggle]');
-  const content = root.querySelector('.cm-content');
+  const root =
+    document.getElementById(
+      'cm-optimizador-dinero'
+    );
 
-  toggle.addEventListener('click', function(e){
-    e.stopPropagation();
+  const toggle =
+    root.querySelector(
+      '[data-cm-toggle]'
+    );
 
-    root.classList.toggle('open');
+  toggle.addEventListener(
+    'click',
+    function(e){
 
-    if(root.classList.contains('open')){
-      content.style.maxHeight = content.scrollHeight + "px";
-    } else {
-      content.style.maxHeight = null;
+      e.stopPropagation();
+
+      root.classList.toggle('open');
     }
-  });
+  );
 
-  document.addEventListener('click', function(e){
-    if(!root.contains(e.target)){
-      root.classList.remove('open');
-      content.style.maxHeight = null;
+  document.addEventListener(
+    'click',
+    function(e){
+
+      if(!root.contains(e.target)){
+        root.classList.remove('open');
+      }
     }
-  });
+  );
 
 })();
 
@@ -1414,709 +1522,413 @@ fetch('posts.json')
 
 
 
-<div class="section-line"></div>       <!-- línea larga -->
-
-<!-- CSS LINEAS PRINCIPALES -->
-<style>
-.section-line{
-  height:1px;
-  width:100%;
-  background-color:#d1d5db;
-  margin:5px 0; /* espacio MUY pequeño arriba y abajo */
-}
-
-/* Línea corta centrada (estilo revista) */
-.section-line-short{
-  height:1px;
-  width:75%;
-  background-color:#d1d5db;
-  margin:5px auto; /* centrada con poco espacio */
-}
-
-/* Ajuste para tablet */
-@media (max-width: 768px){
-  .section-line-short{
-    width:85%;
-  }
-}
-
-/* Ajuste para móviles pequeños */
-@media (max-width: 480px){
-  .section-line-short{
-    width:90%;
-  }
-}
-</style>
-
-
-<!-- CSS DEL H1 DE LA IMAGENPRINCIPAL -->
-<style>
-picture {
-  display: block;
-  width: 100%;
-}
-
-picture img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* 🔥 SOLO MÓVIL */
-@media (max-width: 768px) {
-  picture {
-    width: 96vw; /* 🔽 un poco más angosta que 100vw */
-    margin-left: calc(50% - 48vw);
-  }
-
-  picture img {
-    width: 100%;
-    height: auto;
-
-    /* 🔽 un poco menos alta */
-    min-height: 85vh;
-  }
-}
-</style>
 
 
 
+<!-- ========================================= -->
+<!-- GOOGLE FONTS -->
+<!-- ========================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
+<!-- ========================================= -->
+<!-- FORBES STYLE HERO -->
+<!-- ========================================= -->
 
-<div class="section-wrapper">
+<section class="forbes-home">
 
-  <div class="title-ads-row">
+  <div class="forbes-grid">
 
-    <!-- IZQUIERDA (vacío tipo revista) -->
-    <div class="left-space">
+    <!-- LEFT COLUMN -->
+    <aside class="editorial-column">
 
-      <span class="block" style="display:inline-block; border-bottom:2px solid red; padding-bottom:3px;">
+      <span class="editorial-label">
         Principios clave
       </span>
 
-      <br><br>
+      <div class="editorial-points">
 
-      <h2>
-        • La riqueza no se mide por lo que compras, sino por lo 
-        que ya no necesitas hacer para sobrevivir.
-      </h2>
+        <a href="#">
+          La riqueza no se mide por lo que compras, sino por lo que ya no necesitas hacer para sobrevivir.
+        </a>
 
+        <a href="#">
+          El ahorro no es dinero guardado; es libertad financiera comprada para el futuro.
+        </a>
+
+        <a href="#">
+          Tu salario te alimenta hoy. Tus activos pueden alimentarte mañana sin estar presente.
+        </a>
+
+        <a href="#">
+          Tu salario te alimenta hoy. Tus activos pueden alimentarte mañana sin estar presente.
+        </a>
+
+      </div>
+      
       <br>
-
-      <h2>
-        • El ahorro no es solo dinero acumulado; es libertad comprada 
-        por adelantado para tu 'yo' del futuro.
-      </h2>
-
-      <br>
-
-      <h2>
-        • Tu salario te da de comer hoy, pero tus activos 
-        son los que te darán de comer 
-        mañana sin estar presente.
-      </h2>
-
-      <br><br>
-
-      <span class="block" style="display:inline-block; border-bottom:2px solid red; padding-bottom:3px;">
-        Destacados
+      <span class="editorial-label">
+        Contenidos
       </span>
 
-      <br><br>
+      <!-- (SE DEJA COMO ESTABA: sin cambios ni estructura adicional) -->
 
-      <div class="ad-box">
+    </aside>
 
-        <div class="article-divider"></div>
 
-        <a href="./blog/fundamentos-del-dinero/activos-y-pasivos-en-la-vida-real.html" target="_blank">
+    <!-- CENTER HERO -->
+    <main class="hero-main">
 
-          <p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
-            ¿Quieres entender cómo funciona el dinero?
+      <a href="./blog/psicologia-del-dinero/bloqueos-mentales-dinero.html">
+
+        <div class="hero-image">
+
+          <picture>
+
+            <source srcset="./assets/img/proceso-riqueza-tiempo-grafica.webp" media="(max-width:768px)">
+
+            <img src="./assets/img/crecimiento-financiero-realidad-vs-expectativa.webp" alt="Crecimiento financiero">
+
+          </picture>
+
+        </div>
+
+        <div class="hero-content">
+
+          <span class="hero-category">Finanzas personales</span>
+
+          <h1>
+            Cómo mejorar tus finanzas personales y desarrollar una mentalidad financiera sólida
+          </h1>
+
+         <span>Éxito financiero</span>
+
+          <p>
+            Llegar a fin de mes no debería ser un deporte de riesgo. 
+            La gestión del dinero no es exclusiva de expertos; es una habilidad que puede desarrollarse.
           </p>
 
-          <h2>
-            Activos y pasivos en la creación de riqueza
-          </h2>
+        </div>
 
-          <img src="./assets/png/activos-y-pasivos-ejemplos-desde-cero.webp" alt="Anuncio 1">
+      </a>
 
-        </a>
+      <!-- 🔥 NUEVOS ARTÍCULOS EN EL CENTRO -->
+      <div class="hero-bottom-cards">
 
-        <div class="article-divider"></div>
+        <!-- CARD 1 -->
+        <article class="side-article">
+          <a href="./blog/fundamentos-del-dinero/activos-y-pasivos-en-la-vida-real.html">
+            <img src="./assets/png/activos-y-pasivos-ejemplos-desde-cero.webp" alt="">
+            <div class="side-content">
+              <span>Activos y pasivos</span>
+              <h3>Cómo se hacen los ricos: entendiendo 2 principios</h3>
+            </div>
+          </a>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="side-article">
+          <a href="./blog/psicologia-del-dinero/como-dejar-de-ser-pobre-en-colombia.html">
+            <img src="./assets/png/como-salir-de-la-pobreza-en-colombia.webp" alt="">
+            <div class="side-content">
+              <span>Análisis Editorial</span>
+              <h3>8 pasos para salir de la pobreza en Colombia</h3>
+            </div>
+          </a>
+        </article>
 
       </div>
 
-      <br>
+    </main>
 
-      <div class="ad-box">
 
-        <div class="article-divider"></div>
+    <!-- RIGHT COLUMN -->
+    <aside class="sidebar-news">
 
-        <a href="./blog/psicologia-del-dinero/no-ahorrar-te-roba-libertad-financiera.html" target="_blank">
+      <span class="editorial-label">
+        Lo más leído
+      </span>
 
-          <p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
-            ¿Por qué vivir en modo supervivencia?
-          </p>
-
-          <h2>
-            Sin ahorro: vivir en modo supervivencia financiera
-          </h2>
-
-          <img src="./assets/png/sin-ahorro-no-decides-tu.webp" alt="Anuncio 1">
-
+      <article class="side-article">
+        <a href="./blog/mentalidad-de-exito/habitos-financieros-antes-de-los-30.html">
+          <img src="./assets/png/5-habitos-financieros-personas-exitosas.webp" alt="">
+          <div class="side-content">
+            <span>Hábitos financieros</span>
+            <h3>5 hábitos financieros que ayudan a construir riqueza antes de los 30</h3>
+          </div>
         </a>
+      </article>
 
-        <div class="article-divider"></div>
+      <article class="side-article">
+        <a href="./blog/inversiones/etoro-vs-binance-principiantes.html">
+          <img src="./assets/png/mejor-plataforma-trading-etoro-binance.jpg" alt="">
+          <div class="side-content">
+            <span>Trading</span>
+            <h3>eToro vs Binance 2026: ¿Cuál es mejor para empezar?</h3>
+          </div>
+        </a>
+      </article>
 
-      </div>
+      <article class="side-article">
+        <a href="./blog/ahorro/ingresos-extra-prima.html">
+          <img src="./assets/png/que-hacer-con-tu-prima-ingresos-extra.webp" alt="">
+          <div class="side-content">
+            <span>Ahorro</span>
+            <h3>Cómo ahorrar e invertir tu prima sin desperdiciarla</h3>
+          </div>
+        </a>
+      </article>
 
-    </div>
-
-    <!-- CENTRO (H1 + imagen + texto) -->
-    <div class="title-area">
-
-      <div class="hero-fix">
-
-        <picture>
-
-          <!-- Móvil (imagen vertical) -->
-          <source srcset="./assets/img/proceso-riqueza-tiempo-grafica.webp" media="(max-width: 768px)">
-
-          <img src="./assets/img/crecimiento-financiero-realidad-vs-expectativa.webp"
-               alt="Gráfico sobre el crecimiento financiero comparando realidad vs expectativa">
-
-        </picture>
-
-        <h1>
-          Cómo mejorar tus finanzas personales y desarrollar una mentalidad financiera sólida
-        </h1>
-
-        <p>
-  Llegar a fin de mes no debería ser un deporte de riesgo. Por eso, 
-  la gestión del dinero no es exclusiva de expertos; es una habilidad que se puede desarrollar. 
-  <a href="https://codigomillonario.blog/blog/psicologia-del-dinero/bloqueos-mentales-dinero.html" target="_blank" class="text-blue-600 hover:underline leer-mas">
-    Leer más...
-  </a>
-</p>
-
-<br><br>
-
-<h2 class="subtitulo-editorial">
-  Hábitos financieros inteligentes para ahorrar dinero, organizar tus gastos y construir estabilidad económica a largo plazo
-</h2>
-
-<p>
-  Las finanzas reales son libertad comprada, no lujos exhibidos.  
-  El mejor movimiento no es abrir una cuenta de inversión, sino entender tus porqués.  
-</p>
-
-<p>
-  Analiza en qué gastas cuando estás estresado o qué miedos heredaste de tu familia sobre el dinero.  
-  <a href="https://codigomillonario.blog/blog/psicologia-del-dinero/mentalidad-rico-vs-pobre.html" target="_blank" class="text-blue-600 hover:underline leer-mas">
-    Leer más...
-  </a>
-</p>
-
-<p>
-</p>
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-<!-- DERECHA (ANUNCIOS) -->
-<div class="ads-right">
-
-  <div style="font-family: Georgia, serif;">
-    <span class="block" style="display:inline-block; border-bottom:2px solid red; padding-bottom:3px;">
-      Lo más leído
-    </span>
-  </div>
-
-  <div class="ad-box">
-
-    <div class="article-divider"></div>
-
-    <a href="./blog/mentalidad-de-exito/habitos-financieros-antes-de-los-30.html" target="_blank">
-
-      <p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
-        Hábitos financieros prácticos para construir riqueza desde joven.
-      </p>
-
-      <h2>
-        5 hábitos financieros que ayudan a construir riqueza antes de los 30
-      </h2>
-
-      <img src="./assets/png/5-habitos-financieros-personas-exitosas.webp" alt="Anuncio 1">
-
-    </a>
-
-    <div class="article-divider"></div>
+    </aside>
 
   </div>
 
-  <div class="ad-box">
+</section>
 
-    <div class="article-divider"></div>
 
-    <a href="./blog/inversiones/etoro-vs-binance-principiantes.html" target="_blank">
-
-      <p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
-¿Cuál es mejor para principiantes en trading: eToro o Binance?
-      </p>
-
-      <h2>
-eToro vs Binance 2026: ¿Cuál es Mejor para Empezar en Trading?
-      </h2>
-
-      <img src="./assets/png/mejor-plataforma-trading-etoro-binance.jpg" alt="Anuncio 2">
-
-    </a>
-
-    <div class="article-divider"></div>
-
-  </div>
-
-  <div class="ad-box">
-
-    <div class="article-divider"></div>
-
-    <a href="./blog/ahorro/ingresos-extra-prima.html" target="_blank">
-
-      <p style="font-family: Georgia, serif; font-size: 14px; font-weight: 400; color: #777;">
-      La prima en Colombia puede ayudarte a mejorar tus finanzas personales.
-      </p>
-
-      <h2>
-        Guía completa para calcular, ahorrar e invertir tu prima sin desperdiciarla
-      </h2>
-
-      <img src="./assets/png/que-hacer-con-tu-prima-ingresos-extra.webp" alt="Anuncio 3">
-
-    </a>
-
-    <div class="article-divider"></div>
-
-  </div>
-
-</div>
-
-</div>
-
-</div>
+<!-- ========================================= -->
+<!-- CSS -->
+<!-- ========================================= -->
 
 <style>
-/* ============================= */
+
 /* RESET */
-/* ============================= */
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
-/* ============================= */
-/* CONTENEDOR GENERAL */
-/* ============================= */
-.section-wrapper{
+body{
+  background:#fff;
+  color:#111;
+  font-family:'Inter',sans-serif;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
   width:100%;
+  display:block;
 }
 
-/* ============================= */
-/* LAYOUT REVISTA (3 COLUMNAS) */
-/* ============================= */
-.title-ads-row{
-  display:grid;
-  grid-template-columns:220px minmax(0,620px) 260px;
-  gap:40px;
-  max-width:1200px;
+/* MAIN WRAPPER */
+.forbes-home{
+  width:100%;
+  padding:40px 40px 80px;
+}
+
+.forbes-grid{
+  max-width:1500px;
   margin:0 auto;
-  padding:20px 0;
+  display:grid;
+  grid-template-columns:280px 1fr 340px;
+  gap:70px;
+  align-items:start;
 }
 
-/* ============================= */
-/* COLUMNA IZQUIERDA */
-/* ============================= */
-.left-space{
-  width:100%;
-  border-right:1px solid #d1d5db;
-  padding-right:20px;
+/* LEFT COLUMN (RESTO EXACTO COMO ESTABA) */
+.editorial-column{
+  padding-top:10px;
 }
 
-/* ============================= */
-/* CENTRO */
-/* ============================= */
-.center-content{
-  display:flex;
-  justify-content:flex-start;
-  padding-right:20px;
-  min-width:0;
+.editorial-label{
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  border-bottom:2px solid #111;
+  padding-bottom:10px;
+  display:inline-block;
 }
 
-/* ============================= */
-/* HERO */
-/* ============================= */
-.hero-fix{
+.editorial-points{
+  margin-top:40px;
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
-  width:100%;
-  max-width:600px;
 }
 
-/* IMAGEN HERO */
-.hero-fix img{
+.editorial-points a{
+  font-size:20px;
+  line-height:1.45;
+  font-weight:500;
+  color:#111;
+
+  padding:18px 0;
+  border-bottom:1px solid #ececec;
+
+  transition:opacity .25s ease;
+}
+
+.editorial-points a:last-child{
+  border-bottom:none;
+}
+
+.editorial-points a:hover{
+  opacity:.6;
+}
+
+/* HERO */
+.hero-main{
   width:100%;
-  max-width:600px;
+}
+
+.hero-image{
+  overflow:hidden;
+}
+
+.hero-image img{
   aspect-ratio:16/9;
   object-fit:cover;
+}
+
+.hero-content{
+  margin-top:35px;
+  display:flex;
+  flex-direction:column;
+}
+
+.hero-category{
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#666;
+
+  padding-bottom:12px;
+  border-bottom:1px solid #ececec;
   margin-bottom:15px;
 }
 
-/* ============================= */
-/* TITULO (H1) - TIPOGRAFÍA NUEVA */
-/* ============================= */
-.hero-fix h1{
-  font-family:'Playfair Display', Georgia, serif;
-  font-size:2rem;
-  font-weight:700;
-  line-height:1.3;
-  width:100%;
-  text-align:left;
+.hero-main h1{
+  font-size:clamp(1.8rem,3vw,3.2rem);
+  line-height:1.05;
+  font-weight:800;
+  letter-spacing:-1.5px;
+
+  max-width:700px;
+
+  padding-bottom:20px;
+  border-bottom:1px solid #ececec;
+  margin-bottom:20px;
 }
 
-/* ============================= */
-/* H2 (si existe en la sección) */
-/* ============================= */
-.hero-fix h2{
-  font-family:'Playfair Display', Georgia, serif;
-  font-weight:600;
-  line-height:1.3;
-}
-
-/* ============================= */
-/* TIPOGRAFIA TODOS LOS H2 */
-/* ============================= */
-.section-wrapper h2{
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 600;
-  line-height: 1.3;
-  color: #111;
-}
-
-/* PÁRRAFOS HERO */
-.hero-fix p{
-  font-family:Arial, sans-serif;
-  font-size:18px;
-  width:100%;
-  margin-top:10px;
-}
-
-/* ============================= */
-/* COLUMNA DERECHA */
-/* ============================= */
-.ads-right{
-  width:260px;
-  min-width:260px;
-  display:flex;
-  flex-direction:column;
-  gap:25px;
-  border-left:1px solid #d1d5db;
-  padding-left:20px;
-}
-
-/* ============================= */
-/* TARJETAS ARTÍCULOS */
-/* ============================= */
-.ad-box a{
-  text-decoration:none;
-  color:inherit;
-  display:flex;
-  flex-direction:column-reverse;
-}
-
-/* TITULO TARJETA */
-.ad-text{
-  font-family:Arial, sans-serif;
-  font-size:14px;
-  font-weight:600;
-  margin-top:8px;
+.hero-content p{
+  font-size:20px;
+  line-height:1.45;
+  font-weight:500;
   color:#111;
+
+  padding-top:18px;
+  border-top:1px solid #ececec;
+  margin-top:15px;
 }
 
-/* IMAGEN TARJETA */
-.ad-box img{
-  width:100%;
+/* 🔥 NUEVOS ARTÍCULOS EN EL CENTRO */
+.hero-bottom-cards{
+  display:flex;
+  gap:25px;
+  margin-top:30px;
+
+  border-top:1px solid #ececec;
+  padding-top:25px;
+}
+
+.hero-bottom-cards .side-article{
+  flex:1;
+}
+
+/* SIDEBAR */
+.sidebar-news{
+  border-left:1px solid #e5e7eb;
+  padding-left:35px;
+}
+
+.side-article{
+  padding:28px 0;
+  border-bottom:1px solid #ececec;
+}
+
+.side-article img{
   aspect-ratio:16/9;
   object-fit:cover;
-  display:block;
+  margin-bottom:18px;
 }
 
-/* HOVER SOLO PC */
-@media (min-width:769px){
-  .ad-box a:hover .ad-text{
-    text-decoration:underline;
-    text-decoration-thickness:1px;
-    text-underline-offset:3px;
-  }
+.side-content span{
+  font-size:12px;
+  text-transform:uppercase;
+  font-weight:700;
+  color:#777;
+  letter-spacing:1px;
 }
 
-/* STICKY DERECHA SOLO PC */
-@media (min-width:1024px){
-  .ads-right{
-    position:sticky;
-    top:100px;
-  }
+.side-content h3{
+  margin-top:10px;
+  font-size:25px;
+  line-height:1.15;
+  font-weight:800;
+  transition:opacity .25s ease;
 }
 
-/* ============================= */
-/* TABLET */
-/* ============================= */
-@media (max-width:1024px){
+.side-article:hover h3{
+  opacity:.6;
+}
 
-  .title-ads-row{
-    grid-template-columns:1fr 260px;
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .forbes-grid{
+    grid-template-columns:1fr;
+    gap:60px;
   }
 
-  .left-space{
+  .editorial-column{
     display:none;
   }
 
-  .hero-fix h1{
-    font-size:1.8rem;
-  }
-}
-
-/* ============================= */
-/* MOBILE */
-/* ============================= */
-@media (max-width:768px){
-
-  .title-ads-row{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:30px;
-  }
-
-  .center-content{
-    width:100%;
-    padding:0 15px;
-  }
-
-  .hero-fix{
-    align-items:flex-start;
-  }
-
-  .hero-fix h1{
-    font-size:1.4rem;
-  }
-
-  .hero-fix p{
-    font-size:16px;
-  }
-
-  .ads-right{
-    width:100%;
-    min-width:unset;
+  .sidebar-news{
     border-left:none;
     padding-left:0;
-    margin-top:40px;
-    align-items:center;
-    position:static;
+    max-width:800px;
   }
 
-  .ad-box{
-    width:85%;
-    max-width:400px;
-  }
-}
-
-/* ============================= */
-/* TIPOGRAFÍA LOCAL */
-/* ============================= */
-.section-wrapper p{
-  font-family:Georgia, serif;
-  font-size:16px;
-  line-height:1.7;
-  color:#222;
-}
-
-.classic{
-  font-family:Georgia, serif;
-}
-
-.modern{
-  font-family:Arial, sans-serif;
-}
-</style>
-   
-
-
-<style>
-/* CSS DE LOS ANUNCIOS */
-.section-wrapper{
-  width:100%;
-  margin:0;
-  padding:0;
-}
-
-/* H1 + ANUNCIOS EN FILA */
-.title-ads-row{
-  display:flex;
-  align-items:flex-start;
-  gap:40px;
-}
-
-/* ÁREA DEL TÍTULO */
-.title-area{
-  flex:0 0 auto;
-  max-width:800px;
-}
-
-/* ANUNCIOS (AJUSTADO + LÍNEA) */
-.ads-right{
-  width:260px;           
-  display:flex;
-  flex-direction:column;
-  gap:25px;
-  margin-left:auto;      
-  margin-right:80px;
-  padding-left:20px;
-  border-left:1px solid #d1d5db;
-}
-
-/* ANUNCIO */
-.ad-box a{
-  text-decoration:none;
-  color:inherit;
-  display:flex;
-  flex-direction:column-reverse;
-}
-
-/* H2 (TÍTULO) */
-.ad-text{
-  font-family:Arial,sans-serif;
-  font-size:14px;
-  font-weight:600;
-  margin-top:8px;
-  margin-bottom:0;
-  color:#111;
-}
-
-/* EFECTO LÍNEA SOLO EN PC */
-@media (min-width:769px){
-  .ad-box a:hover .ad-text{
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
-}
-
-/* IMÁGENES RECTANGULARES */
-.ad-box img{
-  width:100%;
-  max-width:260px;       
-  aspect-ratio:16/9;
-  object-fit:cover;
-  border-radius:0;
-  display:block;
-}
-
-/* H1 */
-.blog-main-title{
-  font-family:'Poppins',sans-serif;
-  font-size:2.8rem;
-  font-weight:800;
-  line-height:1.2;
-  text-align:left;
-  color:#111;
-  margin-top:30px;
-  margin-bottom:20px;
-  margin-left:20px;
-  margin-right:0;
-}
-
-/* Tablets */
-@media (max-width:1024px){
-  .blog-main-title{
-    font-size:2.2rem;
-  }
-}
-
-/* 🔥 MÓVILES ARREGLADO */
-@media (max-width:768px){
-
-  .title-ads-row{
+  .hero-bottom-cards{
     flex-direction:column;
-    align-items:center;
-  }
-
-  .title-area{
-    max-width:90%; 
-    margin-left:auto;
-    margin-right:auto;
-    text-align:left;
-  }
-
-  .blog-main-title{
-    text-align:left;
-    margin-left:0;
-    margin-right:0;
-  }
-
-  .ads-right{
-    width:100%;
-    align-items:center;
-    justify-content:center;
-    margin:40px auto 0 auto; /* ← centrado real */
-    border-left:none;
-    padding-left:0;
-  }
-
-  .ad-box{
-    width:90%;
-    max-width:320px; /* ← evita que el texto se salga */
-    margin:0 auto;
-  }
-
-  .ad-box img{
-    width:100%;
-    max-width:100%;
-  }
-
-  .ad-text{
-    width:100%;
-    text-align:left;
-    word-wrap:break-word; /* ← evita desbordes */
-  }
-
-}
-
-@media (max-width:640px){
-  .blog-main-title{
-    font-size:1.8rem;
   }
 }
+
+@media(max-width:768px){
+
+  .forbes-home{
+    padding:20px 20px 60px;
+  }
+
+  .hero-main h1{
+    font-size:1.9rem;
+  }
+
+  .hero-content p{
+    font-size:17px;
+  }
+
+  .side-content h3{
+    font-size:22px;
+  }
+}
+
 </style>
 
 
 
 
-<div class="section-line"></div>       <!-- línea larga -->
 
-
-
-<!-- ESPACIO ARRIBA -->
- <div style="height: 100px;"></div>
 
 
 
@@ -2613,6 +2425,341 @@ prevBtn.addEventListener('click', () => {
 
 
 
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 100px;"></div>
+
+
+
+
+<div class="cm-brand-separator">
+  <span class="cm-brand-text">
+
+    <span class="cm-brand-box">
+      Código Millonario
+    </span>
+
+    <br>
+
+    <span class="cm-brand-sub">
+      Liderando en educación financiera
+    </span>
+
+  </span>
+</div>
+
+<style>
+
+/* ================= CONTENEDOR ================= */
+
+.cm-brand-separator{
+  width:100%;
+  padding:70px 20px 20px; /* 🔥 menos padding abajo para acercar la línea */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  background:#fff;
+}
+
+/* ================= TEXTO BASE ================= */
+
+.cm-brand-text{
+  font-family:"Inter", sans-serif;
+  font-size:13px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:#666;
+  text-align:center;
+  line-height:1.6;
+}
+
+/* ================= BLOQUE NEGRO (MARCA PRINCIPAL) ================= */
+
+.cm-brand-box{
+  display:inline-block;
+  background:#111;
+  color:#fff;
+  padding:8px 14px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+/* ================= SUBTEXTO ================= */
+
+.cm-brand-sub{
+  display:inline-block;
+  margin-top:10px;
+  color:#666;
+}
+
+/* ================= LÍNEA GRUESA CENTRADA (MÁS PEGADA) ================= */
+
+.cm-brand-separator::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:8px; /* 🔥 antes estaba en 0, ahora más cerca del texto */
+
+  width:min(420px, 70%);
+  height:5px;
+  background:#111;
+}
+
+</style>
+
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 110px;"></div>
+
+
+
+
+
+
+<style>
+
+/* ================= CONTENEDOR ================= */
+
+.contenedor-finanzas {
+
+  display:flex;
+  align-items:flex-start;
+  gap:48px;
+
+  margin:0 auto;
+
+  max-width:950px;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+
+  text-rendering:optimizeLegibility;
+}
+
+/* ================= COLUMNA TEXTO ================= */
+
+.texto-contenido{
+  max-width:700px;
+}
+
+/* ================= TÍTULO ================= */
+
+.subtitulo-editorial {
+
+  font-size:
+    clamp(2rem,4vw,3.8rem);
+
+  line-height:1;
+
+  letter-spacing:-2px;
+
+  font-weight:900;
+
+  color:#111;
+
+  font-family:
+    "Inter",
+    sans-serif;
+}
+
+/* ================= TEXTO ================= */
+
+.texto-derecha {
+
+  margin-top:24px;
+
+  max-width:640px;
+
+  font-size:1.05rem;
+
+  line-height:1.8;
+
+  font-weight:400;
+
+  letter-spacing:-0.01em;
+
+  color:#555;
+
+  font-family:
+    "Inter",
+    sans-serif;
+}
+
+/* ================= BOTÓN ================= */
+
+.cm-read-btn{
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-top:34px;
+
+  padding:16px 28px;
+
+  border:1px solid #dcdcdc;
+  border-radius:999px;
+
+  background:#fff;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  letter-spacing:-0.01em;
+
+  color:#111;
+
+  text-decoration:none;
+
+  transition:
+    background .18s ease,
+    border-color .18s ease,
+    transform .18s ease,
+    color .18s ease;
+}
+
+/* hover */
+
+.cm-read-btn:hover{
+
+  background:#111;
+
+  border-color:#111;
+
+  color:#fff;
+
+  transform:translateY(-1px);
+}
+
+/* ================= IMAGEN ================= */
+
+.imagen-lado {
+
+  max-width:260px;
+
+  margin-top:10px;
+
+  flex-shrink:0;
+}
+
+.imagen-lado img{
+
+  width:100%;
+  height:auto;
+
+  display:block;
+
+  border-radius:0;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:900px){
+
+  .contenedor-finanzas{
+
+    flex-direction:column;
+
+    gap:30px;
+
+    padding:0 20px;
+  }
+
+  .texto-contenido{
+    max-width:100%;
+
+    /* 🔥 convierte en columna interna */
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* 🔥 orden EXACTO en móvil */
+  .subtitulo-editorial{
+    order:1;
+  }
+
+  .imagen-lado{
+    order:2;
+
+    width:100%;
+    max-width:100%;
+  }
+
+  .texto-derecha{
+    order:3;
+  }
+
+  .cm-read-btn{
+    order:4;
+  }
+
+  .imagen-lado img{
+    width:100%;
+    max-width:100%;
+  }
+
+  .subtitulo-editorial{
+    letter-spacing:-1.5px;
+  }
+}
+
+</style>
+
+<div class="contenedor-finanzas">
+
+  <div class="texto-contenido">
+
+    <h2 class="subtitulo-editorial">
+      ¿Por dónde empezar a mejorar tus finanzas?
+    </h2>
+
+    <p class="texto-derecha">
+
+      Construir una mejor relación con el dinero no depende de hacerlo todo perfecto desde el primer día.
+
+      A veces solo necesitas información clara, estrategias prácticas y una guía que te ayude a avanzar con mayor dirección financiera.
+
+    </p>
+
+    <a href="./educacion-financiera.html" class="cm-read-btn">
+      Leer artículos
+    </a>
+
+  </div>
+
+  <div class="imagen-lado">
+
+    <img
+      src="./assets/png/organizacion-economica.webp"
+      alt="Imagen financiera"
+    >
+
+  </div>
+
+</div>
+
+
+
+
+
+
 <!-- ESPACIO ARRIBA -->
  <div style="height: 100px;"></div>
 
@@ -2620,90 +2767,160 @@ prevBtn.addEventListener('click', () => {
 
 
 
+
+ <section class="cm-trust-bar">
+
+  <div class="cm-trust-grid">
+
+    <div class="cm-trust-item">
+
+      <h3>+120</h3>
+
+      <p>
+        Artículos sobre dinero, ahorro e inversión.
+      </p>
+
+    </div>
+
+
+    <div class="cm-trust-item">
+
+      <h3>100%</h3>
+
+      <p>
+        Contenido práctico explicado sin humo.
+      </p>
+
+    </div>
+
+
+    <div class="cm-trust-item">
+
+      <h3>Real</h3>
+
+      <p>
+        Finanzas personales aplicadas a la vida diaria.
+      </p>
+
+    </div>
+
+
+    <div class="cm-trust-item">
+
+      <h3>2026</h3>
+
+      <p>
+        Estrategias modernas para el mundo actual.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
 <style>
-.contenedor-finanzas {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  margin: 0 auto;
-  max-width:900px;
-}
 
-/* COLUMNA IZQUIERDA (texto) */
-.texto-contenido{
-  max-width:700px;
-}
+/* ================= TRUST BAR ================= */
 
-/* Texto principal (H2) */
-.subtitulo-editorial {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 600;
-}
-
-/* TEXTO DEBAJO DEL H2 */
-.texto-derecha {
-  font-size: 13px;
-  line-height: 1.5;
-  color: #000;
-  font-family: Arial, sans-serif;
-  opacity: 0.9;
-  margin-top:10px;
-}
-
-/* IMAGEN DERECHA */
-.imagen-lado {
-  max-width:260px;
-  margin-top: 30px;
-}
-
-.imagen-lado img{
+.cm-trust-bar{
   width:100%;
-  height:auto;
+  padding:48px 20px;
+  border-top:1px solid #e9e9e9;
+  border-bottom:1px solid #e9e9e9;
+  font-family:"Inter", sans-serif;
+  background: #fff;
+}
+
+/* ================= GRID ================= */
+
+.cm-trust-grid{
+  width:min(1200px,100%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+/* ================= ITEM ================= */
+
+.cm-trust-item{
+  padding: 18px 16px;
+  border-left: 1px solid #f0f0f0;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* elimina borde en el primero */
+.cm-trust-item:first-child{
+  border-left: none;
+}
+
+/* hover sutil, nada futurista */
+.cm-trust-item:hover{
+  transform: translateY(-2px);
+}
+
+/* ================= NUMERO ================= */
+
+.cm-trust-item h3{
+  font-size:2.8rem;
+  line-height:1;
+  letter-spacing:-2px;
+  font-weight:900;
+  color:#111;
+  margin:0;
+}
+
+/* ================= TEXTO ================= */
+
+.cm-trust-item p{
+  margin-top:12px;
+  max-width:240px;
+  font-size:15.5px;
+  line-height:1.65;
+  color:#555;
+}
+
+/* ================= MICRO DETALLE (subrayado visual) ================= */
+
+.cm-trust-item h3::after{
+  content:"";
   display:block;
+  width:40px;
+  height:3px;
+  background:#111;
+  margin-top:10px;
+  opacity:0.15;
 }
 
-/* 🔥 FIX MÓVIL */
-@media (max-width: 900px){
-  .contenedor-finanzas{
-    flex-direction: column;
-    padding: 0 15px; /* ← evita que todo se salga */
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .cm-trust-grid{
+    grid-template-columns:1fr;
+    gap:26px;
   }
 
-  .texto-contenido{
-    max-width:100%;
+  .cm-trust-item{
+    border-left:none;
+    border-bottom:1px solid #f0f0f0;
+    padding-bottom:20px;
   }
 
-  .imagen-lado{
-    max-width:100%;
-    width:100%;
-    margin-top:20px;
+  .cm-trust-item:last-child{
+    border-bottom:none;
   }
 
-  .imagen-lado img{
-    width:100%;
-    max-width:100%;
+  .cm-trust-item h3{
+    font-size:2.3rem;
   }
 }
+
 </style>
 
-<div class="contenedor-finanzas">
 
-  <div class="texto-contenido">
-    <h2 class="subtitulo-editorial">
-      ¿Por dónde empezar a mejorar tus finanzas?
-    </h2>
 
-    <p class="texto-derecha">
-      Construir una mejor relación con el dinero no depende de hacerlo todo perfecto desde el primer día. 
-      A veces solo necesitas información clara, estrategias prácticas y una guía que te ayude a avanzar con mayor dirección financiera.
-    </p>
-  </div>
-
-  <div class="imagen-lado">
-    <img src="./assets/png/organizacion-economica.webp" alt="Imagen financiera">
-  </div>
-
-</div>
 
 
 
@@ -2712,249 +2929,351 @@ prevBtn.addEventListener('click', () => {
  <div style="height: 50px;"></div>
 
 
+
+
+<section class="cm-newsletter">
+
+  <div class="cm-news-box">
+
+    <span class="cm-news-label">
+      Newsletter financiera
+    </span>
+
+    <h2>
+      Recibe ideas financieras realmente útiles.
+    </h2>
+
+    <p>
+      Aprende ahorro, inversión y mentalidad financiera con contenido práctico y sin humo.
+    </p>
+
+    <!-- FORMULARIO WEB3FORMS -->
+    <form class="cm-news-form" action="https://api.web3forms.com/submit" method="POST" id="newsletterForm">
+
+      <!-- CONFIG WEB3FORMS -->
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <!-- IDENTIFICADOR -->
+      <input type="hidden" name="tipo" value="suscriptor">
+
+      <!-- REDIRECCIÓN -->
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Tu correo electrónico"
+        required
+      >
+
+      <button type="submit" id="btnSubmit">
+        Suscribirme
+      </button>
+
+    </form>
+
+    <!-- MENSAJE -->
+    <p id="successMessage" style="display:none; margin-top:20px; color:#111; font-weight:600;">
+      Usuario registrado para recibir contenido ✔
+    </p>
+
+  </div>
+
+</section>
+
+
 <style>
-.blog-section {
-  background-color: #000;
-  padding: 60px 20px;
-  margin: 40px 0;
-  position: relative;
+
+/* ================= SECTION ================= */
+
+.cm-newsletter{
+
+  width:100%;
+
+  padding:90px 20px;
+
+  font-family:
+    "Inter",
+    sans-serif;
 }
 
-.blog-main-title {
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-size: 2.2rem;
-  font-weight: 700;
-  line-height: 1.3;
-  text-align: left;
-  color: #fff;
-  margin: 30px 0 20px 0;
-  max-width: 800px;
+/* ================= BOX ================= */
+
+.cm-news-box{
+
+  max-width:980px;
+
+  margin:auto;
+
+  padding:70px 60px;
+
+  background:#f7f7f7;
+
+  border-radius:36px;
+
+  text-align:center;
 }
 
-/* TEXTO DERECHO */
-.side-message {
-  position: absolute;
-  top: 80px;
-  right: 40px;
-  max-width: 260px;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  opacity: 0.9;
+/* label */
+
+.cm-news-label{
+
+  font-size:12px;
+
+  font-weight:700;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+  color:#777;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .blog-main-title {
-    font-size: 1.9rem;
-    max-width: 600px;
+/* title */
+
+.cm-news-box h2{
+
+  margin-top:20px;
+
+  font-size:
+    clamp(2rem,4vw,4rem);
+
+  line-height:1;
+
+  letter-spacing:-2px;
+
+  font-weight:900;
+
+  color:#111;
+}
+
+/* text */
+
+.cm-news-box p{
+
+  max-width:700px;
+
+  margin:24px auto 0;
+
+  font-size:1.05rem;
+
+  line-height:1.8;
+
+  color:#555;
+}
+
+/* ================= FORM ================= */
+
+.cm-news-form{
+
+  margin-top:40px;
+
+  display:flex;
+  justify-content:center;
+  gap:14px;
+}
+
+/* input */
+
+.cm-news-form input{
+
+  width:360px;
+
+  padding:18px 22px;
+
+  border:none;
+
+  border-radius:999px;
+
+  background:#fff;
+
+  font-family:"Inter",sans-serif;
+
+  font-size:15px;
+
+  color:#111;
+
+  outline:none;
+}
+
+/* button */
+
+.cm-news-form button{
+
+  border:none;
+
+  padding:18px 30px;
+
+  border-radius:999px;
+
+  background:#111;
+
+  color:#fff;
+
+  font-family:"Inter",sans-serif;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:
+    opacity .18s ease,
+    transform .18s ease;
+}
+
+/* hover */
+
+.cm-news-form button:hover{
+
+  opacity:.92;
+
+  transform:translateY(-1px);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .cm-news-box{
+
+    padding:45px 24px;
   }
 
-  .side-message {
-    right: 20px;
-    max-width: 220px;
+  .cm-news-form{
+
+    flex-direction:column;
+  }
+
+  .cm-news-form input{
+
+    width:100%;
   }
 }
 
-@media (max-width: 640px) {
-  .blog-main-title {
-    font-size: 1.6rem;
-    max-width: 100%;
-  }
-
-  .side-message {
-    position: static;
-    margin-top: 20px;
-    font-size: 12px;
-    max-width: 100%;
-  }
-}
-
-.blog-section p{
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #fff;
-  max-width: 700px;
-  margin: 0;
-  text-align: left;
-}
-
-.classic{
-  font-family: Georgia, serif;
-}
-
-.modern{
-  font-family: Arial, sans-serif;
-}
 </style>
 
-<div class="blog-section">
+<script>
+document.getElementById("newsletterForm").addEventListener("submit", function () {
+  
+  // Mostrar mensaje inmediato
+  setTimeout(() => {
+    document.getElementById("successMessage").style.display = "block";
+  }, 300);
 
-  <div style="font-family: Georgia, serif; margin-bottom: 10px; color: #fff;">
-    <span style="display:inline-block;">
-      <span style="border-bottom:2px solid red; padding-bottom:3px;">
-        Educación financiera
-      </span> gratuita
-    </span>
-  </div>
+});
+</script>
 
-  <h2 class="blog-main-title">
-    Recibe estrategias prácticas para ahorrar dinero, mejorar tus hábitos financieros y tomar decisiones más inteligentes con tu dinero
-  </h2>
-
-  <p>
-    Accede gratis a contenido útil sobre ahorro, control de gastos, organización financiera, mentalidad económica y construcción de activos para fortalecer tu estabilidad financiera a largo plazo.
-  </p>
-
-  <div class="side-message">
-    <strong>Empieza gratis hoy</strong><br><br>
-    Si quieres mejorar tu relación con el dinero y desarrollar hábitos financieros más sólidos, 
-    ve al botón rojo superior o abre el menú y selecciona:
-    <br><br>
-    <strong>“Recibe estrategias gratis”</strong>
-  </div>
-
-</div>
 
 
 
 
 <!-- ESPACIO ARRIBA -->
- <div style="height: 200px;"></div>
+ <div style="height: 100px;"></div>
 
 
 
 
+<div class="cm-container">
 
-<div style="margin: 0 auto; max-width:700px; padding:0 15px;">
-  <h2 class="subtitulo-editorial" style="margin-bottom:60px; line-height:1.3;">
-    Tendencias financieras
-    <span style="display:block; font-size:0.75em; font-weight:400; margin-top:5px;">
-      que están cambiando la forma de ahorrar y usar el dinero
+  <!-- ================= HEADER ================= -->
+  <div class="cm-editorial-line">
+    <span class="cm-editorial-label">
+      Tendencias
     </span>
-  </h2>
+  </div>
+
+  <!-- ================= LISTA DE ARTÍCULOS ================= -->
+  <section class="main-layout mt-1">
+
+    <aside class="sidebar">
+
+      <div class="w-full h-px bg-slate-300"></div>
+
+      <!-- Noticia 1 -->
+      <a href="#" class="news-item">
+
+        <div class="news-thumb">
+          <img src="./assets/png/banana-pegada-pared-subasta-arte.webp" alt="">
+        </div>
+
+        <div class="news-text">
+          <h3>Las 5 cosas más absurdas que millonarios han comprado en subastas</h3>
+          <p>Cuando se trata de millonarios, el dinero puede convertir casi cualquier cosa en un objeto de colección.</p>
+        </div>
+
+      </a>
+
+      <!-- Noticia 2 -->
+      <a href="#" class="news-item">
+
+        <div class="news-thumb">
+          <img src="./assets/png/ley-borron-y-cuenta-nueva-colombia.webp" alt="">
+        </div>
+
+        <div class="news-text">
+          <h3>Cómo funciona la Ley de Borrón y Cuenta Nueva</h3>
+          <p>Un análisis sobre los beneficios y condiciones para limpiar reportes negativos en Colombia.</p>
+        </div>
+
+      </a>
+
+      <!-- Noticia 3 -->
+      <a href="#" class="news-item">
+
+        <div class="news-thumb">
+          <img src="./assets/png/thomas-alva-edison-inventor.webp" alt="">
+        </div>
+
+        <div class="news-text">
+          <h3>Thomas Alva Edison y la innovación moderna</h3>
+          <p>Un contraste entre innovación, industria y estrategias empresariales actuales.</p>
+        </div>
+
+      </a>
+
+      <!-- Noticia 4 -->
+      <a href="#" class="news-item">
+
+        <div class="news-thumb">
+          <img src="./assets/png/cuanto-dinero-ahorrado-segun-edad.webp" alt="">
+        </div>
+
+        <div class="news-text">
+          <h3>Cuánto deberías tener ahorrado según tu edad</h3>
+          <p>Guía clara para entender tu progreso financiero y cómo ponerte al día.</p>
+        </div>
+
+      </a>
+
+    </aside>
+
+  </section>
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 100px;"></div>
+
+
+
+
+
+<div class="cm-editorial-line">
+
+  <span class="cm-editorial-label">
+Oportunidades
+  </span>
+
 </div>
 
 
 
 
-
-<section class="main-layout mt-1" >
-
-  <!-- Sidebar ahora queda a la IZQUIERDA -->
-  <aside class="sidebar">
-
-  <div class="w-full h-px bg-slate-300"></div>
-
-
-    <!-- Noticia 1 -->
-    <a href="./blog/hechos-lujos-curiosidades/compras-absurdas-millonarios-subastas.html" class="news-item">
-      
-      <!-- Imagen cuadrada a la izquierda -->
-      <div class="news-thumb">
-        <img src="./assets/png/banana-pegada-pared-subasta-arte.webp" alt="">
-      </div>
-
-      <!-- Texto -->
-      <div class="news-text">
-        <h3>
-Las 5 cosas más absurdas que millonarios han comprado en subastas
-        </h3>
-        <p>
-Cuando se trata de millonarios, el dinero puede convertir casi cualquier cosa en un objeto de colección. 
-En el extraño mundo de las subastas.
-        </p>
-      </div>
-
-    </a>
-
-    <!-- Noticia 2 -->
-    <a href="./blog/deudas/deudas-bajo-control/ley-borron-y-cuenta-nueva-colombia.html" class="news-item">
-      
-      <!-- Imagen cuadrada a la izquierda -->
-      <div class="news-thumb">
-        <img src="./assets/png/ley-borron-y-cuenta-nueva-colombia.webp" alt="">
-      </div>
-
-      <!-- Texto -->
-      <div class="news-text">
-        <h3>
-Cómo funciona la Ley de Borrón y Cuenta Nueva y 
-qué implica para tu historial crediticio
-        </h3>
-        <p>
-Un análisis sobre los beneficios, límites y condiciones 
-para limpiar reportes negativos en Colombia
-        </p>
-      </div>
-
-    </a>
-
-    <!-- Noticia 3 -->
-    <a href="./blog/biografia-de-millonarios/thomas-alva-edison-biografia.html" class="news-item">
-
-      <div class="news-thumb">
-        <img src="./assets/png/thomas-alva-edison-inventor.webp" alt="">
-      </div>
-
-      <div class="news-text">
-        <h3>
-Thomas Alva Edison: el empresario de la 
-innovación que redefinió la industria moderna
-        </h3>
-        <p>
-Un contraste entre el modelo de innovación y comercialización de Edison y las 
-estrategias que hoy pueden adoptar quienes buscan construir empresas sostenibles
-        </p>
-      </div>
-
-    </a>
-
-
-        <!-- Noticia 4 -->
-    <a href="./blog/ahorro/cuanto-dinero-debes-tener-ahorrado-segun-tu-edad.html" class="news-item">
-      
-      <!-- Imagen cuadrada a la izquierda -->
-      <div class="news-thumb">
-        <img src="./assets/png/cuanto-dinero-ahorrado-segun-edad.webp" alt="">
-      </div>
-
-      <!-- Texto -->
-      <div class="news-text">
-        <h3>
-Cuánto dinero deberías tener ahorrado a cada edad (y por qué la mayoría nunca lo consigue)
-        </h3>
-        <p>
-No importa si estás empezando o si sientes que llegaste tarde: 
-esta guía te mostrará paso a paso cuánto deberías haber ahorrado a cada edad y cómo ponerte al día sin estrés.
-        </p>
-      </div>
-
-    </a>
-
-  </aside>
-
-</section>
-
-
-
-<div style="height:30px; margin:30px 0;"></div>
-
-
-
-
-
-
-<div style="margin: 0 auto; max-width:700px; padding:0 15px;">
-  <h2 class="subtitulo-editorial" style="margin-bottom:60px; line-height:1.3;">
-    Oportunidades para crecer financieramente
-    <span style="display:block; font-size:0.75em; font-weight:400; margin-top:5px;">
-      historias, ahorro, inversión y desarrollo profesional
-    </span>
-  </h2>
-</div>
 
 
 <section class="main-layout">
@@ -3030,20 +3349,26 @@ imperio financiero desde cero visto desde un punto de vista financiero que aport
 
 
 
-<div style="height:30px; margin:30px 0;"></div>
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 100px;"></div>
 
 
 
 
 
-<div style="margin: 0 auto; max-width:700px; padding:0 15px;">
-  <h2 class="subtitulo-editorial" style="margin-bottom:60px; line-height:1.3;">
-    Cómo dominar tus finanzas personales
-    <span style="display:block; font-size:0.75em; font-weight:400; margin-top:5px;">
-      mentalidad, negocios y estrategias para generar dinero
-    </span>
-  </h2>
+<div class="cm-editorial-line">
+
+  <span class="cm-editorial-label">
+   Finanzas
+  </span>
+
 </div>
+
+
+
+
 
 
 
@@ -3115,113 +3440,155 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 
 </section>
 
+</div>
+
+
 <style>
-/* CONTENEDOR GENERAL */
-.main-layout {
+.cm-container{
+  width: min(1280px, 88%);
+  margin: 0 auto;
+}
+
+/* ================= TÍTULO EDITORIAL ================= */
+.cm-editorial-line{
+  position:relative;
   width: 100%;
-  margin: 0;
+  margin:40px 0 0px;
+  padding-top:45px;
+}
+
+.cm-editorial-label{
+  position:absolute;
+  top:0;
+  left:0;
+  font-family:"Inter", sans-serif;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
+  color:#111;
+  letter-spacing:-0.5px;
+}
+
+.cm-editorial-line::after{
+  content:"";
+  display:block;
+  width:100%;
+  height:5px;
+  background:#111;
+}
+
+/* ================= LAYOUT ================= */
+.main-layout{
+  width: 100%;
   display: flex;
   gap: 40px;
-  padding: 40px 20px;
+  padding: 0px 0 40px;
   box-sizing: border-box;
 }
 
-/* Sidebar más ancho */
-.sidebar {
-  flex: 1;
-  max-width: 700px;
+.sidebar{
+  width: 100%;
+  max-width: 100%;
 }
 
-/* Título */
-.sidebar-title {
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 24px;
+/* ================= ❌ ELIMINAR LÍNEA GRIS ================= */
+.sidebar .w-full.h-px.bg-slate-300{
+  display: none !important;
 }
 
-/* Tarjeta noticia estilo portal */
-.news-item {
+/* ================= NEWS ITEM ================= */
+.news-item{
   display: flex;
-  gap: 20px;
+  gap: 22px;
   text-decoration: none;
   color: inherit;
-  padding: 18px 0;
+  padding: 20px 0;
   border-bottom: 1px solid #e5e5e5;
-  align-items: center;
+  align-items: flex-start;
   transition: opacity 0.2s ease;
 }
 
-.news-item:hover {
-  opacity: 0.8;
+.news-item:hover{
+  opacity: 0.85;
 }
 
-/* Imagen RECTANGULAR horizontal */
-.news-thumb {
-  width: 220px;
-  height: 120px;
+/* ================= IMAGEN ================= */
+.news-thumb{
+  width: 200px;
+  height: 170px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
-.news-thumb img {
+.news-thumb img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0;
   display: block;
 }
 
-/* Texto */
-.news-text {
+/* ================= TEXTO ================= */
+.news-text{
   flex: 1;
 }
 
-/* 🔥 H3 CORREGIDO Y FORZADO */
-.news-item .news-text h3 {
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.3;
-  margin: 0 0 8px 0;
+/* ================= TITULO (MÁS GRANDE) ================= */
+.news-item .news-text h3{
+  font-family: "Inter", sans-serif;
+  font-size: 26px; /* 🔥 antes 23px */
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 10px 0;
   color: #111;
+  letter-spacing: -0.4px;
+  max-width: 100%;
 }
 
-/* PÁRRAFO */
-.news-text p {
-  font-size: 14px;
+/* ================= PÁRRAFO (MÁS GRANDE) ================= */
+.news-text p{
+  font-size: 16px; /* 🔥 antes 14px */
   color: #555;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px){
 
-  .main-layout {
+  .main-layout{
     flex-direction: column;
   }
 
-  .sidebar {
-    max-width: 100%;
+  .news-item{
+    flex-direction: row;
   }
 
-  .news-thumb {
+  .news-thumb{
+    width: 170px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px){
+
+  .news-item{
+    flex-direction: column;
+  }
+
+  .news-thumb{
     width: 100%;
-    height: 180px;
+    height: 240px;
   }
 
-  .news-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 </style>
 
 
 
-<div style="height:30px; margin:30px 0;"></div>
 
 
-
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 100px;"></div>
 
 
 
@@ -3230,9 +3597,7 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 <section class="main-layout reviews-block">
   <aside class="sidebar">
 
-
-
-    <div class="w-full h-px bg-slate-300"></div>
+    <div class="divider"></div>
 
     <h3 class="reviews-title">Lo que encontrarás en Código Millonario</h3>
 
@@ -3276,118 +3641,110 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
   </aside>
 </section>
 
-
 <style>
+
 .reviews-block{
-  max-width: 420px;
+  max-width: 520px;
   margin: 0 auto;
-  padding: 10px 0;
-  font-family: Arial, sans-serif;
-}
-
-/* NUEVO: H2 más cómodo */
-.headline-wrapper{
-  max-width: 700px;
-  margin-left: 25px;
-  margin-bottom: 25px;
-}
-
-.headline-wrapper .subtitulo-editorial{
-  line-height: 1.4;
-  font-size: 1.8rem;
-  max-width: 700px;
-}
-
-.reviews-title{
-  font-family: Georgia, serif;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
+  padding: 20px 0;
+  font-family: "Inter", sans-serif;
   color: #111;
-  line-height: 1.3;
 }
 
+/* DIVISOR */
+.divider{
+  width: 100%;
+  height: 1px;
+  background: #e5e7eb;
+  margin-bottom: 20px;
+}
+
+/* TÍTULO PRINCIPAL */
+.reviews-title{
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 28px;
+  line-height: 1.2;
+}
+
+/* ITEM */
 .review-item{
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 18px 0;
-  border-bottom: 1px solid #e5e7eb;
+  gap: 16px;
+  padding: 22px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .review-item:last-child{
   border-bottom: none;
 }
 
+/* NÚMERO */
 .review-icon{
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
   background: #111;
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-family: Arial, sans-serif;
 }
 
+/* CONTENIDO */
 .review-content h3{
   margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #111;
-  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
 }
 
 .review-label{
   display: block;
-  font-size: 0.75rem;
-  color: #78716c;
-  margin-top: 4px;
-  margin-bottom: 8px;
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin-top: 6px;
+  margin-bottom: 10px;
   line-height: 1.4;
 }
 
 .review-content p{
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #333;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #374151;
 }
 
-/* Responsive */
-@media (max-width:768px){
+/* RESPONSIVE */
+@media (max-width: 768px){
   .reviews-block{
     max-width: 100%;
-    padding: 0 15px;
-  }
-
-  .headline-wrapper{
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .headline-wrapper .subtitulo-editorial{
-    font-size: 1.4rem;
-    max-width: 100%;
+    padding: 0 16px;
   }
 
   .reviews-title{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .review-content p{
-    font-size: 0.85rem;
+    font-size: 0.88rem;
   }
 }
+
 </style>
 
 
 
 
-<div style="height:30px; margin:30px 0;"></div>
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 140px;"></div>
+
 
 
 
