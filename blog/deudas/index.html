@@ -77,7 +77,7 @@
     border-radius: 0;
     padding: 12px 0;
     box-shadow: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
     cursor: pointer;
 }
 
@@ -115,21 +115,26 @@
 /* ===================== BADGES ===================== */
 
 .badge {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #555;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #777;
     margin: 0;
     padding-bottom: 6px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     border-bottom: none;
+    font-family: 'Inter', sans-serif;
 }
 
 .text-content p,
 .badge:not(.editorial) {
     font-family: 'Inter', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 700;
     color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .badge.editorial {
@@ -138,10 +143,13 @@
     display: inline-flex;
     width: fit-content;
     padding: 1px 6px;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 11px;
+    font-weight: 700;
     border: 1px solid #000000;
     border-radius: 6px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
 }
 
 .badge:last-of-type {
@@ -153,20 +161,20 @@
 /* ===================== TÍTULO ===================== */
 
 .article-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #1c1c1c;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #111111;
     margin: 0 0 4px 0;
-    line-height: 1.3;
+    line-height: 1.12;
+    letter-spacing: -1.2px;
     text-align: left;
+    transition: opacity .25s ease;
 }
 
 @media (min-width: 769px) {
     .article-link:hover .article-title {
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
+        opacity: .6;
     }
 }
 
@@ -176,7 +184,7 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 0;
     transition: filter 0.25s ease;
 }
 
@@ -190,7 +198,7 @@
     margin-top: 40px;
     display: flex;
     justify-content: center;
-    background: #000000;
+    background: #1a1a1a;
     border-radius: 8px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     padding: 12px;
@@ -217,7 +225,7 @@
     justify-content: center;
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.18);
-    background: #111111;
+    background: #242424;
     color: #ffffff;
     cursor: pointer;
     user-select: none;
@@ -232,7 +240,7 @@
 
 .page-box:hover,
 .compact-btn:hover {
-    background: #1c1c1c;
+    background: #2e2e2e;
     box-shadow: 0 1px 3px rgba(255,255,255,0.06);
     transform: translateY(-1px);
 }
@@ -349,6 +357,11 @@ input[type="number"].goto-page {
     #nextBtn,
     #lastBtn {
         order: 2;
+    }
+
+    .article-title{
+        font-size:1.55rem;
+        line-height:1.15;
     }
 
 }
@@ -1294,49 +1307,188 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
-   <!-- ESPACIO FINAL -->
-<div style="height: 250px;"></div>
 
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 300px;"></div>
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
 
 
+<!-- ========================================= -->
+<!-- GOOGLE FONTS -->
+<!-- ========================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
 <!-- =========================
-     WRAPPER AISLADO
+     HERO TITULO
 ========================= -->
 
-<section class="cm-deudas-page">
+<section class="hero-blog">
 
-  <!-- =========================
-       HERO TITULO
-  ========================= -->
+  <div class="hero-blog-content">
 
-  <section class="cm-hero-blog">
-
-    <div class="cm-hero-blog-content">
-
-      <!-- ETIQUETA -->
-      <span class="cm-hero-tag">
+    <!-- ETIQUETA -->
+    <span class="hero-tag">
         LIBERTAD FINANCIERA
-      </span>
+    </span>
 
-      <!-- TITULO -->
-      <h1>
+    <!-- TITULO -->
+    <h1>
         Sal de Deudas Paso a Paso y Recupera tu Tranquilidad Financiera
-      </h1>
+    </h1>
 
-      <!-- SUBTITULO -->
-      <p>
+    <!-- SUBTITULO -->
+    <p>
         Accede a guías prácticas y completas para aprender a gestionar tu dinero,
         optimizar tus ahorros y construir una base financiera sólida paso a paso.
-      </p>
+    </p>
 
-    </div>
+  </div>
 
-  </section>
+</section>
+
+  <style>
+
+/* =========================
+   HERO BLOG
+========================= */
+
+.hero-blog{
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-bottom: 45px;
+
+    padding-left: 90px;
+
+    padding-right: 90px;
+}
+
+/* CONTENIDO */
+
+.hero-blog-content{
+
+    max-width: 980px;
+}
+
+/* ETIQUETA */
+
+.hero-tag{
+
+    display: inline-block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8b7355;
+
+    margin-bottom: 18px;
+}
+
+/* TITULO */
+
+.hero-blog h1{
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 4.2rem;
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    color: #111111;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 24px;
+}
+
+/* SUBTITULO */
+
+.hero-blog p{
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: #555555;
+
+    max-width: 760px;
+
+    margin-bottom: 0;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1024px){
+
+    .hero-blog{
+
+        padding-left: 40px;
+
+        padding-right: 40px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 3.2rem;
+    }
+
+}
+
+/* =========================
+   TELEFONOS
+========================= */
+
+@media (max-width: 640px){
+
+    .hero-blog{
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        margin-top: 35px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 2.2rem;
+
+        line-height: 1.05;
+    }
+
+    .hero-blog p{
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+}
+
+</style>
+
+
 
 
 
@@ -1360,46 +1512,82 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
-  <!-- =========================
-       SECCION EDITORIAL
-  ========================= -->
 
-  <section class="cm-editorial-section">
 
-    <div class="cm-editorial-grid">
 
-      <!-- =========================
-           ARTÍCULO PRINCIPAL
-      ========================= -->
 
-      <article class="cm-main-article">
+<!-- =========================
+     SECCION EDITORIAL
+========================= -->
 
-        <!-- TEXTO -->
-        <div class="cm-main-content">
+<section class="editorial-section">
 
-          <span class="cm-category">
-            MENTALIDAD FINANCIERA
+  <div class="editorial-grid">
+
+    <!-- =========================
+         ARTÍCULO PRINCIPAL
+    ========================= -->
+
+    <article class="main-article">
+
+      <!-- TEXTO -->
+      <div class="main-content">
+
+        <span class="category">
+          MENTALIDAD FINANCIERA
+        </span>
+
+        <h2>
+          Recuperar tu tranquilidad financiera comienza cambiando tu forma de pensar
+        </h2>
+
+        <p>
+          Tener claridad, disciplina y hábitos conscientes es el primer paso
+          para dejar atrás las deudas y construir una vida económica estable.
+        </p>
+
+      </div>
+
+      <!-- IMAGEN -->
+
+      <div class="main-image-wrapper">
+
+        <img
+          src="../../assets/png/eliminar-deudas-rapido.webp"
+          alt="Eliminar deudas"
+        >
+
+      </div>
+
+    </article>
+
+
+
+
+
+    <!-- =========================
+         ARTICULOS LATERALES
+    ========================= -->
+
+    <div class="side-articles">
+
+      <!-- ITEM -->
+
+      <article class="side-article">
+
+        <div class="side-text">
+
+          <span class="category-small">
+            RESPONSABILIDAD
           </span>
 
-          <h2>
-            Recuperar tu tranquilidad financiera comienza cambiando tu forma de pensar
-          </h2>
+          <h3>
+            La ambición financiera saludable nace de asumir control sobre tu vida
+          </h3>
 
           <p>
-            Tener claridad, disciplina y hábitos conscientes es el primer paso
-            para dejar atrás las deudas y construir una vida económica estable.
+            Tener visión y querer mejorar económicamente es parte del crecimiento personal.
           </p>
-
-        </div>
-
-        <!-- IMAGEN -->
-
-        <div class="cm-main-image-wrapper">
-
-          <img
-            src="../../assets/png/eliminar-deudas-rapido.webp"
-            alt="Eliminar deudas"
-          >
 
         </div>
 
@@ -1409,579 +1597,443 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
-      <!-- =========================
-           ARTICULOS LATERALES
-      ========================= -->
+      <!-- ITEM -->
 
-      <div class="cm-side-articles">
+      <article class="side-article">
 
-        <!-- ITEM -->
+        <div class="side-text">
 
-        <article class="cm-side-article">
+          <span class="category-small">
+            ACCIÓN
+          </span>
 
-          <div class="cm-side-text">
+          <h3>
+            Pensar diferente no basta si tus acciones siguen siendo las mismas
+          </h3>
 
-            <span class="cm-category-small">
-              RESPONSABILIDAD
-            </span>
+          <p>
+            La verdadera transformación financiera ocurre cuando empiezas a actuar.
+          </p>
 
-            <h3>
-              La ambición financiera saludable nace de asumir control sobre tu vida
-            </h3>
+        </div>
 
-            <p>
-              Tener visión y querer mejorar económicamente es parte del crecimiento personal.
-            </p>
-
-          </div>
-
-        </article>
+      </article>
 
 
 
 
 
-        <!-- ITEM -->
+      <!-- ITEM -->
 
-        <article class="cm-side-article">
+      <article class="side-article no-border">
 
-          <div class="cm-side-text">
+        <div class="side-text">
 
-            <span class="cm-category-small">
-              ACCIÓN
-            </span>
+          <span class="category-small">
+            LIBERTAD
+          </span>
 
-            <h3>
-              Pensar diferente no basta si tus acciones siguen siendo las mismas
-            </h3>
+          <h3>
+            Tus decisiones financieras deben basarse en claridad y no en impulsos
+          </h3>
 
-            <p>
-              La verdadera transformación financiera ocurre cuando empiezas a actuar.
-            </p>
+          <p>
+            Entender que lo necesario es suficiente reduce presión y mejora tu estabilidad.
+          </p>
 
-          </div>
+        </div>
 
-        </article>
-
-
-
-
-
-        <!-- ITEM -->
-
-        <article class="cm-side-article cm-no-border">
-
-          <div class="cm-side-text">
-
-            <span class="cm-category-small">
-              LIBERTAD
-            </span>
-
-            <h3>
-              Tus decisiones financieras deben basarse en claridad y no en impulsos
-            </h3>
-
-            <p>
-              Entender que lo necesario es suficiente reduce presión y mejora tu estabilidad.
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
+      </article>
 
     </div>
 
-  </section>
+  </div>
 
 </section>
 
 <style>
 
 /* =========================
-   WRAPPER AISLADO
+   SECCIÓN GENERAL
 ========================= */
 
-.cm-deudas-page *{
-    box-sizing: border-box;
-}
+.editorial-section{
 
-/* =========================
-   HERO BLOG
-========================= */
+    max-width:1600px;
 
-.cm-hero-blog{
+    margin:70px auto;
 
-    width: 100%;
+    padding-left:90px;
+    padding-right:90px;
 
-    margin-top: 50px;
-
-    margin-bottom: 45px;
-
-    padding-left: 90px;
-
-    padding-right: 90px;
-}
-
-/* CONTENIDO */
-
-.cm-hero-blog-content{
-
-    max-width: 980px;
-}
-
-/* ETIQUETA */
-
-.cm-hero-tag{
-
-    display: inline-block;
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 0.78rem;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #8b7355;
-
-    margin-bottom: 18px;
-}
-
-/* TITULO */
-
-.cm-hero-blog h1{
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 4.2rem;
-
-    line-height: 1.05;
-
-    font-weight: 700;
-
-    color: #111111;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 24px;
-
-    max-width: 1100px;
-}
-
-/* SUBTITULO */
-
-.cm-hero-blog p{
-
-    font-family: 'Open Sans', sans-serif;
-
-    font-size: 1.15rem;
-
-    line-height: 1.8;
-
-    color: #555555;
-
-    max-width: 760px;
-
-    margin-bottom: 0;
-}
-
-/* =========================
-   TITULO SECCION
-========================= */
-
-.cm-titulo-seccion{
-
-    padding-left: 90px;
-
-    padding-right: 90px;
-
-    margin-bottom: 25px;
-}
-
-.cm-titulo-seccion span{
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 0.95rem;
-
-    font-weight: 700;
-
-    color: #111111;
-
-    letter-spacing: 1px;
-}
-
-.cm-linea-seccion{
-
-    width: 100%;
-
-    height: 1px;
-
-    background: #111111;
-
-    margin-top: 14px;
-}
-
-/* =========================
-   SECCION GENERAL
-========================= */
-
-.cm-editorial-section{
-
-    max-width: 1600px;
-
-    margin: 70px auto;
-
-    padding-left: 90px;
-
-    padding-right: 90px;
-
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Inter',sans-serif;
 }
 
 /* =========================
    GRID
 ========================= */
 
-.cm-editorial-grid{
+.editorial-grid{
 
-    display: grid;
+    display:grid;
 
-    grid-template-columns: 1.15fr 0.95fr;
+    grid-template-columns:1.15fr 0.95fr;
 
-    gap: 28px;
+    gap:28px;
 
-    align-items: start;
+    align-items:start;
 }
 
 /* =========================
-   ARTICULO PRINCIPAL
+   ARTÍCULO PRINCIPAL
 ========================= */
 
-.cm-main-article{
+.main-article{
 
-    background: #0d0d0d;
+    background:#1a1a1a;
 
-    padding: 38px;
+    overflow:hidden;
 
-    overflow: hidden;
+    min-height:620px;
 
-    min-height: 620px;
+    display:flex;
 
-    display: flex;
+    flex-direction:column;
 
-    flex-direction: column;
-
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
-/* CONTENIDO */
+/* =========================
+   CONTENIDO
+========================= */
 
-.cm-main-content{
+.main-content{
 
-    margin-bottom: 28px;
+    padding:38px 38px 0 38px;
+
+    margin-bottom:28px;
 }
 
-/* CATEGORIA */
+/* CATEGORÍA */
 
-.cm-category{
+.category{
 
-    font-size: 0.78rem;
+    font-size:12px;
 
-    font-weight: 700;
+    font-weight:700;
 
-    letter-spacing: 1px;
+    letter-spacing:1px;
 
-    color: #c7a46a;
+    text-transform:uppercase;
 
-    display: inline-block;
+    color:#d2b07a;
 
-    margin-bottom: 18px;
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    font-family:'Inter',sans-serif;
 }
 
 /* TITULO */
 
-.cm-main-content h2{
+.main-content h2{
 
-    font-family: 'Montserrat', sans-serif;
+    font-family:'Inter',sans-serif;
 
-    font-size: 2.3rem;
+    font-size:2.5rem;
 
-    line-height: 1.15;
+    line-height:1.05;
 
-    color: white;
+    font-weight:800;
 
-    margin-bottom: 16px;
+    letter-spacing:-1.8px;
 
-    max-width: 90%;
+    color:white;
+
+    margin-bottom:16px;
+
+    max-width:90%;
 }
 
 /* TEXTO */
 
-.cm-main-content p{
+.main-content p{
 
-    color: #b5b5b5;
+    color:#c2c2c2;
 
-    line-height: 1.7;
+    line-height:1.7;
 
-    font-size: 1rem;
+    font-size:1rem;
 
-    max-width: 85%;
+    max-width:85%;
 }
 
 /* =========================
-   IMAGEN
+   IMAGEN MODERNA
 ========================= */
 
-.cm-main-image-wrapper{
+.main-image-wrapper{
 
-    width: 100%;
+    width:100%;
 
-    position: relative;
+    position:relative;
 
-    overflow: hidden;
+    overflow:hidden;
 
-    margin-top: 10px;
+    margin-top:auto;
 }
 
-.cm-main-image-wrapper img{
+.main-image-wrapper img{
 
-    width: 100%;
+    width:100%;
 
-    max-width: 100%;
+    max-width:100%;
 
-    height: 420px;
+    height:420px;
 
-    object-fit: cover;
+    object-fit:cover;
 
-    object-position: center;
+    object-position:center;
 
-    display: block;
+    display:block;
 
-    transform: scale(1.02);
+    transform:scale(1.02);
 
-    transition: transform 0.7s ease,
-                filter 0.7s ease;
+    transition:
+    transform .7s ease,
+    filter .7s ease;
 
-    filter: contrast(1.05)
-            saturate(1.08)
-            brightness(0.98);
+    filter:
+    contrast(1.05)
+    saturate(1.08)
+    brightness(.98);
 }
 
-/* HOVER */
+/* EFECTO HOVER */
 
-.cm-main-article:hover .cm-main-image-wrapper img{
+.main-article:hover .main-image-wrapper img{
 
-    transform: scale(1.06);
+    transform:scale(1.06);
 
-    filter: contrast(1.08)
-            saturate(1.12)
-            brightness(1);
+    filter:
+    contrast(1.08)
+    saturate(1.12)
+    brightness(1);
 }
 
-/* CAPA OSCURA */
+/* CAPA OSCURA SUAVE */
 
-.cm-main-image-wrapper::after{
+.main-image-wrapper::after{
 
-    content: "";
+    content:"";
 
-    position: absolute;
+    position:absolute;
 
-    inset: 0;
+    inset:0;
 
     background:
     linear-gradient(
         to top,
-        rgba(0,0,0,0.28),
-        rgba(0,0,0,0.05),
+        rgba(0,0,0,.28),
+        rgba(0,0,0,.05),
         transparent
     );
 
-    pointer-events: none;
+    pointer-events:none;
 }
 
 /* =========================
    LADO DERECHO
 ========================= */
 
-.cm-side-articles{
+.side-articles{
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
+
+    padding-top:0;
 }
 
 /* ITEM */
 
-.cm-side-article{
+.side-article{
 
-    padding: 0 0 22px 0;
+    padding:0 0 22px 0;
 
-    margin-bottom: 22px;
+    margin-bottom:22px;
 
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
 }
 
-.cm-no-border{
+.no-border{
 
-    border-bottom: none;
+    border-bottom:none;
 
-    margin-bottom: 0;
+    margin-bottom:0;
 
-    padding-bottom: 0;
+    padding-bottom:0;
 }
 
 /* CATEGORIA */
 
-.cm-category-small{
+.category-small{
 
-    font-size: 0.72rem;
+    font-size:12px;
 
-    font-weight: 700;
+    font-weight:700;
 
-    letter-spacing: 1px;
+    letter-spacing:1px;
 
-    color: #8a8a8a;
+    text-transform:uppercase;
 
-    display: inline-block;
+    color:#777777;
 
-    margin-bottom: 10px;
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    font-family:'Inter',sans-serif;
 }
 
 /* TITULO */
 
-.cm-side-text h3{
+.side-text h3{
 
-    font-family: 'Montserrat', sans-serif;
+    font-family:'Inter',sans-serif;
 
-    font-size: 1.2rem;
+    font-size:1.9rem;
 
-    line-height: 1.45;
+    font-weight:800;
 
-    color: #111111;
+    line-height:1.12;
 
-    margin-bottom: 10px;
+    letter-spacing:-1.2px;
+
+    color:#111111;
+
+    margin-bottom:10px;
+
+    transition:opacity .25s ease;
+}
+
+.side-article:hover h3{
+
+    opacity:.6;
 }
 
 /* TEXTO */
 
-.cm-side-text p{
+.side-text p{
 
-    color: #666666;
+    color:#666666;
 
-    line-height: 1.65;
+    line-height:1.65;
 
-    font-size: 0.96rem;
+    font-size:1rem;
+
+    font-weight:500;
+
+    font-family:'Inter',sans-serif;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media (max-width: 900px){
+@media (max-width:900px){
 
-    .cm-hero-blog,
-    .cm-editorial-section,
-    .cm-titulo-seccion{
+    .editorial-section{
 
-        padding-left: 20px;
-
-        padding-right: 20px;
+        padding-left:20px;
+        padding-right:20px;
     }
 
-    .cm-editorial-grid{
+    .editorial-grid{
 
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
 
-        gap: 45px;
+        gap:45px;
     }
 
-    .cm-main-article{
+    .main-article{
 
-        min-height: auto;
-
-        padding: 28px;
+        min-height:auto;
     }
 
-    .cm-main-content h2{
+    .main-content{
 
-        font-size: 2rem;
-
-        max-width: 100%;
+        padding:28px 28px 0 28px;
     }
 
-    .cm-main-content p{
+    .main-content h2{
 
-        max-width: 100%;
+        font-size:2rem;
+
+        max-width:100%;
     }
 
-    .cm-main-image-wrapper img{
+    .main-content p{
 
-        height: 340px;
+        max-width:100%;
     }
 
-    .cm-hero-blog h1{
+    .main-image-wrapper img{
 
-        font-size: 3.2rem;
+        width:100%;
+
+        max-width:100%;
+
+        height:340px;
+    }
+
+    .side-text h3{
+
+        font-size:1.55rem;
+
+        line-height:1.15;
     }
 
 }
 
 /* =========================
-   MOVIL
+   TELÉFONOS
 ========================= */
 
-@media (max-width: 480px){
+@media (max-width:480px){
 
-    .cm-hero-blog,
-    .cm-editorial-section,
-    .cm-titulo-seccion{
+    .editorial-section{
 
-        padding-left: 10px;
-
-        padding-right: 10px;
+        padding-left:10px;
+        padding-right:10px;
     }
 
-    .cm-main-article{
+    .main-content{
 
-        padding: 18px;
+        padding:18px 18px 0 18px;
     }
 
-    .cm-main-content h2{
+    .main-content h2{
 
-        font-size: 1.6rem;
+        font-size:1.6rem;
     }
 
-    .cm-main-content p{
+    .main-content p{
 
-        font-size: 0.95rem;
+        font-size:.95rem;
     }
 
-    .cm-main-image-wrapper img{
+    .main-image-wrapper img{
 
-        height: 300px;
+        width:100%;
+
+        height:300px;
     }
 
-    .cm-side-text h3{
+    .side-text h3{
 
-        font-size: 1rem;
-    }
-
-    .cm-hero-blog h1{
-
-        font-size: 2.2rem;
-
-        line-height: 1.1;
-    }
-
-    .cm-hero-blog p{
-
-        font-size: 1rem;
-
-        line-height: 1.7;
+        font-size:1.2rem;
     }
 
 }
@@ -1991,16 +2043,17 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
+
 <style>
 /* =========================
-   TITULO SECCION
+   TITULO SECCION NUEVO
 ========================= */
 
 .titulo-seccion{
 
     max-width: 1400px;
 
-    margin: 80px auto 45px auto;
+    margin: 70px auto 35px auto;
 
     padding: 0 90px;
 }
@@ -2009,85 +2062,79 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 .titulo-seccion span{
 
-    font-family: 'Playfair Display', serif;
+    font-family:'Inter',sans-serif;
 
-    font-size: 28px;
+    font-size:1.55rem;
 
-    font-weight: 700;
+    font-weight:900;
 
-    color: #111111;
+    color:#111111;
 
-    letter-spacing: -0.5px;
+    letter-spacing:-1px;
 
-    display: inline-block;
+    line-height:1;
+
+    display:inline-block;
+
+    text-transform:uppercase;
 }
 
-/* LINEA NEGRA */
+/* LINEA */
 
 .linea-seccion{
 
-    width: 100%;
+    width:100%;
 
-    height: 5px;
+    height:4px;
 
-    background: #111111;
+    background:#111111;
 
-    margin-top: 16px;
+    margin-top:10px;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media (max-width: 768px){
+@media(max-width:768px){
 
     .titulo-seccion{
 
-        padding: 0 30px;
+        padding:0 30px;
+
+        margin:55px auto 28px auto;
     }
 
     .titulo-seccion span{
 
-        font-size: 24px;
+        font-size:1.35rem;
+
+        letter-spacing:-0.8px;
     }
 
     .linea-seccion{
 
-        height: 4px;
+        height:3px;
+
+        margin-top:8px;
     }
 
 }
 
-@media (max-width: 480px){
+@media(max-width:480px){
 
     .titulo-seccion{
 
-        padding: 0 18px;
+        padding:0 18px;
     }
 
     .titulo-seccion span{
 
-        font-size: 22px;
+        font-size:1.2rem;
     }
 
 }
 </style>
-
-
-<!-- TITULO -->
-<div class="titulo-seccion">
-
-  <span>
-    Lo más destacado
-  </span>
-
-  <!-- LINEA NEGRA -->
-  <div class="linea-seccion"></div>
-
-</div>
-
-
-
 
 <!-- ESPACIO ARRIBA -->
 <div class="top-space"></div>
@@ -2106,6 +2153,88 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 }
 </style>
 
+
+
+
+
+
+
+<div class="cm-brand-separator">
+  <span class="cm-brand-text">
+
+<span class="cm-brand-box">
+  Tendencias
+</span>
+
+<br>
+
+<span class="cm-brand-sub">
+  Análisis, ahorro e inversión
+</span>
+
+  </span>
+</div>
+
+<style>
+
+/* ================= CONTENEDOR ================= */
+
+.cm-brand-separator{
+  width:100%;
+  padding:70px 20px 20px; /* 🔥 menos padding abajo para acercar la línea */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  background:#fff;
+}
+
+/* ================= TEXTO BASE ================= */
+
+.cm-brand-text{
+  font-family:"Inter", sans-serif;
+  font-size:13px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:#666;
+  text-align:center;
+  line-height:1.6;
+}
+
+/* ================= BLOQUE NEGRO (MARCA PRINCIPAL) ================= */
+
+.cm-brand-box{
+  display:inline-block;
+  background:#111;
+  color:#fff;
+  padding:8px 14px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+/* ================= SUBTEXTO ================= */
+
+.cm-brand-sub{
+  display:inline-block;
+  margin-top:10px;
+  color:#666;
+}
+
+/* ================= LÍNEA GRUESA CENTRADA (MÁS PEGADA) ================= */
+
+.cm-brand-separator::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:8px; /* 🔥 antes estaba en 0, ahora más cerca del texto */
+
+  width:min(420px, 70%);
+  height:5px;
+  background:#111;
+}
+
+</style>
 
 
 
@@ -2500,11 +2629,8 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 <div class="titulo-seccion">
 
   <span>
-    Rompe el ciclo y recupera tu libertad financiera
+Preguntas frecuentes
   </span>
-
-  <!-- LINEA NEGRA -->
-  <div class="linea-seccion"></div>
 
 </div>
 
