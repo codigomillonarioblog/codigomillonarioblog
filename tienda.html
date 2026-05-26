@@ -976,108 +976,70 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 
 
-<style>
-.marquee-line {
-  height: 1px;            /* línea delgada */
-  background-color: #ccc;  /* gris claro */
-  width: 100%;            /* ocupa todo el contenedor */
-  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
-}
-</style>
+<!-- ========================================= -->
+<!-- GOOGLE FONTS -->
+<!-- ========================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- =========================
+     HERO TITULO
+========================= -->
+
+<section class="hero-blog tienda-hero">
+
+  <div class="hero-blog-content">
+
+    <!-- ETIQUETA -->
+    <span class="hero-tag">
+      TIENDA Y RECURSOS
+    </span>
+
+    <!-- TITULO -->
+    <h1>
+      Recursos y herramientas para potenciar tu crecimiento financiero
+    </h1>
+
+    <!-- LINEA -->
+    <span class="hero-line"></span>
+
+    <!-- SUBTITULO -->
+    <p>
+      Descubre materiales, herramientas y recursos seleccionados para ayudarte a mejorar tu relación con el dinero,
+      desarrollar nuevas habilidades y ampliar tus posibilidades de crecimiento personal y financiero.
+    </p>
+
+  </div>
+
+</section>
 
 
 
 
+  <!--  Esoaciado al final  -->
+<div style="height: 100px;"></div>
 
 
-<style>
-.blog-section {
-  background-color: #000;
-  padding: 60px 20px;
-  margin: 40px 0;
-  position: relative; /* necesario para posicionar el texto */
-}
-
-.blog-main-title {
-  font-family: Georgia, serif !important;
-  font-size: 2.2rem;
-  font-weight: 800;
-  line-height: 1.3;
-  text-align: left;
-  color: #fff;
-
-  margin: 30px 0 20px 0;
-  max-width: 800px;
-}
-
-/* TEXTO DERECHO */
-.side-message {
-  position: absolute;
-  top: 80px;
-  right: 40px;
-  max-width: 260px;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  opacity: 0.9;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .blog-main-title {
-    font-size: 1.9rem;
-    max-width: 600px;
-  }
-
-  .side-message {
-    right: 20px;
-    max-width: 220px;
-  }
-}
-
-@media (max-width: 640px) {
-  .blog-main-title {
-    font-size: 1.6rem;
-    max-width: 100%;
-  }
-
-  .side-message {
-    position: static; /* baja el texto */
-    margin-top: 20px;
-    font-size: 12px; /* más pequeño en móvil */
-    max-width: 100%;
-  }
-}
-
-.blog-section p{
-  font-family: Arial, sans-serif;
-  font-size:14px;
-  line-height:1.7;
-  color:#fff;
-
-  max-width: 700px;
-  margin: 0;
-  text-align: left;
-}
-
-.classic{
-  font-family: Georgia, serif;
-}
-
-.modern{
-  font-family: Arial, sans-serif;
-}
-</style>
+<!-- =========================
+     BLOG SECTION
+========================= -->
 
 <div class="blog-section">
 
-  <div style="font-family: Georgia, serif; margin-bottom: 10px; color: #fff;">
-    <span style="display:inline-block;">
-      <span style="border-bottom:2px solid red; padding-bottom:3px;">
+  <div class="blog-label">
+
+    <span>
+      <span class="label-underline">
         Disponibilidad
-      </span> de recursos 
+      </span>
+
+      de recursos
     </span>
+
   </div>
 
   <h1 class="blog-main-title">
@@ -1089,13 +1051,324 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
   </p>
 
   <div class="side-message">
-    <strong>¿Prefieres empezar gratis?</strong><br><br>
-Si ahora mismo estás en cero o no sabes por dónde empezar, puedes recibir estrategias 
-reales cada semana directamente en tu correo.
-Solo ve al botón rojo de arriba o al menú: “Recibe estrategias gratis”.
+
+    <strong>
+      ¿Prefieres empezar gratis?
+    </strong>
+
+    <br><br>
+
+    Si ahora mismo estás en cero o no sabes por dónde empezar, puedes recibir estrategias
+    reales cada semana directamente en tu correo.
+    Solo ve al botón rojo de arriba o al menú: “Recibe estrategias gratis”.
+
   </div>
 
 </div>
+
+
+<style>
+
+/* =========================================
+   HERO BLOG
+========================================= */
+
+.hero-blog{
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-bottom: 45px;
+
+    padding-left: 90px;
+
+    padding-right: 90px;
+}
+
+.hero-blog-content{
+
+    max-width: 980px;
+}
+
+/* ETIQUETA */
+
+.hero-tag{
+
+    display: inline-block;
+
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: #8b7355;
+
+    margin-bottom: 18px;
+}
+
+/* TITULO */
+
+.hero-blog h1{
+
+    font-family: 'Inter', sans-serif !important;
+
+    font-size: 4.2rem;
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    color: #111111;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 24px;
+
+    margin-top: 0;
+}
+
+/* LINEA */
+
+.hero-line{
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 760px;
+
+    height: 1px;
+
+    background: #d7dce2;
+
+    margin-bottom: 28px;
+}
+
+/* SUBTITULO */
+
+.hero-blog p{
+
+    font-family: 'Open Sans', sans-serif !important;
+
+    font-size: 1.15rem;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    color: #555555;
+
+    max-width: 760px;
+
+    margin-bottom: 0;
+
+    margin-top: 0;
+}
+
+/* =========================================
+   BLOG SECTION
+========================================= */
+
+.blog-section {
+
+    background-color: #000;
+
+    padding: 60px 20px;
+
+    margin: 40px 0;
+
+    position: relative;
+}
+
+/* ETIQUETA */
+
+.blog-label{
+
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    margin-bottom: 14px;
+}
+
+.label-underline{
+
+    border-bottom: 2px solid #ff3b30;
+
+    padding-bottom: 3px;
+}
+
+/* TITULO */
+
+.blog-main-title {
+
+    font-family: 'Inter', sans-serif !important;
+
+    font-size: 3rem;
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    text-align: left;
+
+    color: #fff;
+
+    letter-spacing: -2px;
+
+    margin: 30px 0 20px 0;
+
+    max-width: 850px;
+}
+
+/* TEXTO */
+
+.blog-section p{
+
+    font-family: 'Open Sans', sans-serif !important;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: #d6d6d6;
+
+    max-width: 700px;
+
+    margin: 0;
+
+    text-align: left;
+}
+
+/* TEXTO DERECHO */
+
+.side-message {
+
+    position: absolute;
+
+    top: 80px;
+
+    right: 40px;
+
+    max-width: 260px;
+
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+
+    color: #ffffff;
+
+    font-family: 'Open Sans', sans-serif !important;
+
+    opacity: 0.9;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-blog{
+
+        padding-left: 40px;
+
+        padding-right: 40px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 3.2rem;
+    }
+
+    .blog-main-title {
+
+        font-size: 2.3rem;
+
+        max-width: 600px;
+    }
+
+    .side-message {
+
+        right: 20px;
+
+        max-width: 220px;
+    }
+
+}
+
+/* =========================================
+   TELEFONOS
+========================================= */
+
+@media (max-width: 640px) {
+
+    .hero-blog{
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        margin-top: 35px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 2.2rem;
+
+        line-height: 1.05;
+    }
+
+    .hero-blog p{
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+    .blog-main-title {
+
+        font-size: 1.7rem;
+
+        max-width: 100%;
+    }
+
+    .side-message {
+
+        position: static;
+
+        margin-top: 20px;
+
+        font-size: 0.82rem;
+
+        max-width: 100%;
+    }
+
+    .blog-section{
+
+        padding: 45px 18px;
+    }
+
+}
+
+</style>
+
+
+
 
 
 
