@@ -985,7 +985,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     <!-- CATEGORY -->
     <div class="uvo-category">
-      Educación Financiera
+      Trading y Finanzas
     </div>
 
     <!-- TITLE -->
@@ -1022,7 +1022,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           </p>
 
           <p class="uvo-date">
-            Escrito el 27 May 2026 | 18:15 h • 6 min lectura
+            Escrito el 27 May 2026 / 18:15 h / 6 min lectura
           </p>
 
         </div>
@@ -1084,15 +1084,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
   </div>
 
-    <!-- IMAGE -->
-  <div class="uvo-image-wrapper">
+<!-- IMAGE -->
+<div class="uvo-image-wrapper">
 
-<img src="../../assets/png/vivir-del-trading-cuanto-dinero-necesitas.webp"
-     alt="Trader analizando gráficos financieros para entender cuánto dinero se necesita para vivir del trading"
-     class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] mx-auto sm:top-4 object-contain z-10">
+  <img 
+    src="../../assets/png/vivir-del-trading-cuanto-dinero-necesitas.webp"
+    alt="Trader analizando gráficos financieros para entender cuánto dinero se necesita para vivir del trading"
+    class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] sm:top-4 object-contain z-10"
+  >
 
+  <!-- 👇 TEXTO DEBAJO CON MÁS SEPARACIÓN -->
+  <div class="max-w-[50rem] mx-auto w-80 sm:w-[40rem] md:w-[50rem] mt-10 text-left">
+
+    <span 
+      class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+      style="font-family: 'Open Sans', sans-serif;"
+    >
+      Un Análisis Editorial
+    </span>
+
+    <div class="w-16 h-px bg-red-500"></div>
 
   </div>
+
+</div>
 
 </section>
 
@@ -1131,7 +1146,7 @@ font-size:11px;
 font-weight:600;
 letter-spacing:.18em;
 text-transform:uppercase;
-color:#b91c1c;
+color:#8b7355;
 }
 
 /* TITLE */
@@ -1310,223 +1325,10 @@ margin-top:38px;
 
 
 
-<style>
-  /* ================= ACORDEÓN ================= */
-  .cf-accordion {
-    margin-top: 60px;
-  }
 
-  .cf-accordion * {
-    box-sizing: border-box;
-  }
 
-  /* Ajustamos el ancho máximo y centramos el acordeón */
-  .cf-accordion-item {
-    background: #ffffff; /* fondo blanco */
-    border-radius: 0px; /* puntas cuadradas */
-    margin: 0 auto 16px auto; /* centrado horizontal */
-    max-width: 680px; /* ancho máximo deseado aumentado */
 
-    /* Delineado sutil */
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
 
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: translateY(0);
-    will-change: transform;
-  }
-
-  /* Animación tipo card con sombra al pasar el mouse */
-  .cf-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
-  }
-
-  .cf-accordion-header {
-    padding: 14px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000;
-    user-select: none;
-    background: #ffffff;
-    transition: none;
-  }
-
-  .cf-accordion-header:hover {
-    background: #ffffff;
-  }
-
-  /* ICONO */
-  .cf-accordion-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(45deg);
-    transform-origin: center;
-    transition: transform 0.35s ease;
-    margin-left: 12px;
-    flex-shrink: 0;
-  }
-
-  .cf-accordion-item.is-open .cf-accordion-icon {
-    transform: rotate(-135deg);
-  }
-
-  .cf-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: relative;
-  }
-
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
-  .cf-accordion-item.is-open .cf-accordion-content::before {
-    content: "";
-    display: block;
-    width: 88%;
-    margin: 0 auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .cf-accordion-content p {
-    padding: 18px 22px 22px;
-    margin: 0;
-    color: #000000;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-
-  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
-  .toc-container {
-    padding: 0 22px 22px 22px;
-    max-width: 100%;
-  }
-
-  .toc-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .toc-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
-  }
-
-  .toc-list li:last-child {
-    border-bottom: none; /* sin línea en el último ítem */
-  }
-
-  .toc-list li a {
-    text-decoration: none;
-    color: #000000;
-    display: block;
-    transition: color 0.2s ease;
-  }
-
-  .toc-list li a:hover {
-    color: #1a73e8; /* color de hover para indicar clickeable */
-  }
-
-  /* ================= MARGEN SUTIL EN MÓVILES ================= */
-  @media (max-width: 480px) {
-    .cf-accordion-item {
-      margin-left: 8px;
-      margin-right: 8px;
-      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
-    }
-  }
-</style>
-
-<div class="cf-accordion">
-
-  <div class="cf-accordion-item">
-    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
-      Tabla de contenidos
-      <span class="cf-accordion-icon"></span>
-    </div>
-    <div class="cf-accordion-content">
-
-      <!-- ================= HTML ================= -->
-      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
- 
-  <ul class="toc-list">
-    <li><a href="#titulo1">1. Cómo la confusión entre rentabilidad y estabilidad afecta a los traders</a></li>
-    <li><a href="#titulo2">2. ¿Cuánto dinero necesitas para vivir del trading?</a></li>
-    <li><a href="#titulo3">3. Cuánto dinero necesitas para vivir del trading realmente</a></li>
-    <li><a href="#titulo4">4. Cómo el riesgo en trading puede destruir una cuenta rentable</a></li>
-    <li><a href="#titulo5">5. Por qué la mayoría no logra vivir del trading: errores que destruyen el capital</a></li>
-    <li><a href="#titulo6">6. Estrategias reales para hacer crecer el capital en trading de forma progresiva</a></li>
-    <li><a href="#titulo7">7. ¿Se puede vivir del trading? La respuesta real basada en capital, riesgo y expectativas</a></li>
-    <li><a href="#titulo8">8. La verdad final sobre el trading: lo que realmente determina si es sostenible o no</a></li>
-  </ul>
-
-      </div>
-
-    </div>
-  </div>
-
-</div>
-
-<script>
-  document.querySelectorAll('.cf-accordion').forEach(accordion => {
-    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const item = header.closest('.cf-accordion-item');
-        const content = item.querySelector('.cf-accordion-content');
-
-        // Solo afecta los items de ESTE acordeón
-        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-          if (other !== item) {
-            other.classList.remove('is-open');
-            other.querySelector('.cf-accordion-content').style.maxHeight = null;
-          }
-        });
-
-        item.classList.toggle('is-open');
-
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      });
-    });
-  });
-
-  // Cerrar acordeón al hacer clic afuera
-  document.addEventListener('click', function(event) {
-    const openItem = document.querySelector('.cf-accordion-item.is-open');
-    if (openItem && !openItem.contains(event.target)) {
-      openItem.classList.remove('is-open');
-      const content = openItem.querySelector('.cf-accordion-content');
-      content.style.maxHeight = null;
-    }
-  });
-
-  // ================= SCROLL CON OFFSET PARA TABLA =================
-  document.querySelectorAll('.toc-list a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetID = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetID);
-      if(targetElement){
-        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
-        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-          top: elementPosition - offset,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-</script>
 
 
 
@@ -1539,22 +1341,16 @@ margin-top:38px;
 
     <article class="max-w-5xl mx-auto px-6 md:px-8 text-left">
 
-      <div class="mt-10 mb-6">
+      <div class="mt-5 mb-6">
 
-        <span 
-          class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
-          style="font-family: 'Open Sans', sans-serif;"
-        >
-          Un Análisis Editorial
-        </span>
 
-        <div class="w-16 h-px bg-red-500 mb-10"></div>
+
 
 
 
 
 <!-- INTRODUCCIÓN -->
-<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+<div class="text-stone-700 leading-relaxed mb-1 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
   <p>
     <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
@@ -1580,6 +1376,232 @@ margin-top:38px;
   </p>
 
 </div>
+
+
+
+
+
+
+
+<style>
+
+/* =========================
+   TOC CUADRADO MODERNO
+========================= */
+
+.cf-accordion{
+  margin-top:60px;
+  font-family:'Inter',sans-serif;
+}
+
+/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
+.cf-accordion-inner{
+  max-width:80rem;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+
+/* CUADRO */
+.cf-accordion-item{
+  width:260px;
+  min-height:70px;
+
+  margin:0;
+
+  border:1px solid red;
+
+  border-radius:6px; /* 👈 MENOS REDONDEZ */
+
+  background:#fff;
+
+  overflow:hidden;
+
+  transition:width .35s ease;
+}
+
+/* EXPANSIÓN */
+.cf-accordion-item.is-open{
+  width:680px;
+}
+
+/* HEADER */
+.cf-accordion-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 16px;
+
+  cursor:pointer;
+
+  font-size:17px;
+  font-weight:600;
+
+  color:#111827;
+  background:#fff;
+
+  border-bottom:none;
+}
+
+/* ICONO */
+.cf-menu-icon{
+  width:30px;
+  height:30px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  border:1px solid red;
+  border-radius:6px;
+
+  gap:4px;
+  box-sizing:border-box;
+}
+
+.cf-menu-icon span{
+  height:2px;
+  width:16px;
+  background:red;
+  border-radius:2px;
+}
+
+/* CONTENT */
+.cf-accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+}
+
+/* LISTA */
+.toc-container{
+  padding:8px 14px 14px 14px;
+}
+
+.toc-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+/* ITEMS ULTRA COMPACTOS */
+.toc-list li{
+  padding:6px 0;
+  margin:0;
+  border:none;
+}
+
+/* LINKS */
+.toc-list a{
+  text-decoration:none;
+  color:#374151;
+
+  font-size:14px;
+  line-height:1.35;
+
+  display:block;
+
+  transition:all .2s ease;
+}
+
+/* HOVER AZUL */
+.toc-list a:hover{
+  color:blue;
+  transform:translateX(4px);
+}
+
+/* MOBILE */
+@media (max-width:480px){
+
+  .cf-accordion-item{
+    width:88%;
+  }
+
+  .cf-accordion-item.is-open{
+    width:100%;
+  }
+
+}
+
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+
+  <div class="cf-accordion-inner">
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+
+        <!-- HEADER -->
+        <div class="cf-accordion-header">
+
+          Tabla de contenidos
+
+          <div class="cf-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="cf-accordion-content">
+
+          <div class="toc-container">
+
+            <ul class="toc-list">
+              <li><a href="#titulo1">1. Cómo la confusión entre rentabilidad y estabilidad afecta a los traders</a></li>
+              <li><a href="#titulo2">2. ¿Cuánto dinero necesitas para vivir del trading?</a></li>
+              <li><a href="#titulo3">3. Cuánto dinero necesitas para vivir del trading realmente</a></li>
+              <li><a href="#titulo4">4. Cómo el riesgo en trading puede destruir una cuenta rentable</a></li>
+              <li><a href="#titulo5">5. Por qué la mayoría no logra vivir del trading</a></li>
+              <li><a href="#titulo6">6. Estrategias reales para hacer crecer el capital</a></li>
+              <li><a href="#titulo7">7. ¿Se puede vivir del trading?</a></li>
+              <li><a href="#titulo8">8. La verdad final del trading</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<script>
+
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+  header.addEventListener('click',()=>{
+
+    const item = header.closest('.cf-accordion-item');
+    const content = item.querySelector('.cf-accordion-content');
+
+    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+      if(other!==item){
+        other.querySelector('.cf-accordion-content').style.maxHeight=null;
+      }
+    });
+
+    item.classList.toggle('is-open');
+
+    if(content.style.maxHeight){
+      content.style.maxHeight=null;
+    }else{
+      content.style.maxHeight=content.scrollHeight+'px';
+    }
+
+  });
+});
+
+</script>
 
 
 
