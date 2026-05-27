@@ -1388,6 +1388,16 @@ margin-top:38px;
    TOC CUADRADO MODERNO
 ========================= */
 
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:140px;
+}
+
+/* SOLO esto para anclas */
+[id]{
+  scroll-margin-top:140px;
+}
+
 .cf-accordion{
   margin-top:60px;
   font-family:'Inter',sans-serif;
@@ -1409,7 +1419,7 @@ margin-top:38px;
 
   border:1px solid red;
 
-  border-radius:6px; /* 👈 MENOS REDONDEZ */
+  border-radius:6px;
 
   background:#fff;
 
@@ -1478,6 +1488,7 @@ margin-top:38px;
   padding:8px 14px 14px 14px;
 }
 
+/* LISTA */
 .toc-list{
   list-style:none;
   margin:0;
@@ -1577,6 +1588,10 @@ margin-top:38px;
 
 <script>
 
+/* =========================
+   ACORDEÓN (IGUAL)
+========================= */
+
 document.querySelectorAll('.cf-accordion-header').forEach(header=>{
   header.addEventListener('click',()=>{
 
@@ -1600,7 +1615,59 @@ document.querySelectorAll('.cf-accordion-header').forEach(header=>{
   });
 });
 
+
+/* =========================
+   SCROLL 100% SIN SALTO (FIX REAL)
+========================= */
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+  link.addEventListener('click', function(e){
+
+    e.preventDefault(); // 🔥 BLOQUEA HASH JUMP COMPLETAMENTE
+
+    const id = this.getAttribute('href').replace('#','');
+    const target = document.getElementById(id);
+
+    if(!target) return;
+
+    const offset = 140;
+
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 700;
+
+    let start = null;
+
+    function smoothScroll(timestamp){
+      if(!start) start = timestamp;
+
+      const progress = timestamp - start;
+      const percent = Math.min(progress / duration, 1);
+
+      // easing más suave (tipo iOS)
+      const ease = percent < 0.5
+        ? 4 * percent * percent * percent
+        : 1 - Math.pow(-2 * percent + 2, 3) / 2;
+
+      window.scrollTo(0, startPosition + distance * ease);
+
+      if(progress < duration){
+        requestAnimationFrame(smoothScroll);
+      }
+    }
+
+    requestAnimationFrame(smoothScroll);
+
+    // evita salto del navegador + mantiene URL
+    history.replaceState(null, null, '#' + id);
+
+  });
+});
+
 </script>
+
 
 
 
