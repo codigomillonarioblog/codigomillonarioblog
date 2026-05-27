@@ -1589,7 +1589,7 @@ html{
 <script>
 
 /* =========================
-   ACORDEÓN (IGUAL)
+   ACORDEÓN (IGUAL QUE EL TUYO)
 ========================= */
 
 document.querySelectorAll('.cf-accordion-header').forEach(header=>{
@@ -1617,51 +1617,49 @@ document.querySelectorAll('.cf-accordion-header').forEach(header=>{
 
 
 /* =========================
-   SCROLL 100% SIN SALTO (FIX REAL)
+   SCROLL 100% CONTROLADO (SIN HASH JUMP)
 ========================= */
 
 document.querySelectorAll('.toc-list a').forEach(link=>{
   link.addEventListener('click', function(e){
 
-    e.preventDefault(); // 🔥 BLOQUEA HASH JUMP COMPLETAMENTE
+    e.preventDefault(); // 🔥 BLOQUEA EL SALTO DEL NAVEGADOR
 
-    const id = this.getAttribute('href').replace('#','');
+    const id = this.getAttribute('href').substring(1);
     const target = document.getElementById(id);
 
     if(!target) return;
 
     const offset = 140;
 
-    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    const start = window.pageYOffset;
+    const end = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const duration = 700;
+    const distance = end - start;
+    const duration = 650; // 🔥 velocidad del scroll (más alto = más suave)
 
-    let start = null;
+    let startTime = null;
 
-    function smoothScroll(timestamp){
-      if(!start) start = timestamp;
+    function animationScroll(currentTime){
+      if(startTime === null) startTime = currentTime;
 
-      const progress = timestamp - start;
-      const percent = Math.min(progress / duration, 1);
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
 
-      // easing más suave (tipo iOS)
-      const ease = percent < 0.5
-        ? 4 * percent * percent * percent
-        : 1 - Math.pow(-2 * percent + 2, 3) / 2;
+      // easing suave (no lineal, tipo premium UI)
+      const ease = 1 - Math.pow(1 - progress, 3);
 
-      window.scrollTo(0, startPosition + distance * ease);
+      window.scrollTo(0, start + distance * ease);
 
-      if(progress < duration){
-        requestAnimationFrame(smoothScroll);
+      if(timeElapsed < duration){
+        requestAnimationFrame(animationScroll);
       }
     }
 
-    requestAnimationFrame(smoothScroll);
+    requestAnimationFrame(animationScroll);
 
-    // evita salto del navegador + mantiene URL
-    history.replaceState(null, null, '#' + id);
+    // mantiene URL sin disparar scroll nativo
+    history.pushState(null, null, '#' + id);
 
   });
 });
