@@ -1942,10 +1942,12 @@ img{
 
   <div class="contenedor-documentales">
 
-    <h2>Documentales Destacados</h2>
+    <h2>
+    Psicología del Dinero
+    </h2>
 
     <p class="descripcion-documentales">
-      Historias reales de éxito, negocios y grandes imperios que cambiaron el mundo.
+Historias reales y análisis de decisiones financieras que muestran cómo se gana y se pierde dinero en la vida real.
     </p>
 
     <!-- CONTENEDOR SLIDER -->
@@ -1978,7 +1980,7 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
             </p>
 
             <a href="https://youtu.be/kzjEUWnd--U?si=ooGDK5-o_OlGDhcI">
-              Ver documental
+              Ver Análisis
               </a>
 
           </div>
@@ -2004,7 +2006,7 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
             </p>
 
             <a href="https://www.youtube.com/watch?v=M5w2Bs4840Q" target="_blank">
-              Ver documental
+              Ver Análisis
             </a>
 
           </div>
@@ -2083,8 +2085,8 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
 ========================= */
 
 .documentales{
-    padding: 80px 20px;
-    background: #0f0f0f;
+    padding: 90px 20px;
+    background: #111111;
     overflow: hidden;
 }
 
@@ -2093,22 +2095,27 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
     margin: auto;
 }
 
-/* TITULOS */
+/* =========================
+   TITULOS
+========================= */
 
 .documentales h2{
-    color: #fff;
-    font-size: 42px;
-    text-align: center;
-    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 34px;
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    font-weight: 700;
 }
 
 .descripcion-documentales{
-    color: #bdbdbd;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 750px;
-    margin: 0 auto 50px auto;
+    color: #9f9f9f;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 0 50px 0;
 }
 
 /* =========================
@@ -2121,10 +2128,22 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
 
 .slider-documentales{
     display: flex;
-    gap: 22px;
-    overflow-x: hidden;
+    gap: 24px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
     scroll-behavior: smooth;
-    padding: 10px 5px;
+
+    padding: 8px 2px;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+}
+
+.slider-documentales::-webkit-scrollbar{
+    display: none;
 }
 
 /* =========================
@@ -2133,38 +2152,43 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
 
 .btn-slider{
     position: absolute;
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
-    width: 55px;
-    height: 55px;
+
+    width: 46px;
+    height: 46px;
+
     border-radius: 50%;
-    border: none;
+    border: 1px solid rgba(255,255,255,0.08);
+
     cursor: pointer;
     z-index: 10;
 
-    background: rgba(255,255,255,0.18);
-    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.06);
 
-    color: white;
-    font-size: 28px;
-    transition: 0.3s ease;
+    color: #d4d4d4;
+
+    font-size: 20px;
+
+    transition: background 0.25s ease,
+                color 0.25s ease;
 }
 
 /* HOVER */
 
 .btn-slider:hover{
-    background: rgba(255,255,255,0.35);
-    transform: translateY(-50%) scale(1.08);
+    background: rgba(255,255,255,0.12);
+    color: white;
 }
 
 /* POSICIONES */
 
 .prev{
-    left: -15px;
+    left: -10px;
 }
 
 .next{
-    right: -15px;
+    right: -10px;
 }
 
 /* =========================
@@ -2175,78 +2199,105 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
     min-width: 340px;
     max-width: 340px;
 
-    background: #181818;
-    border-radius: 18px;
+    background: #171717;
+
+    border-radius: 12px;
+
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.04);
 
-    transition: all 0.3s ease;
+    transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+
     flex-shrink: 0;
 }
 
 .card-documental:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    transform: translateY(-4px);
+
+    box-shadow:
+    0 8px 22px rgba(0,0,0,0.28);
 }
 
-/* MINIATURA */
+/* =========================
+   MINIATURA
+========================= */
 
 .miniatura-documental{
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: #000;
+
+    background: #0c0c0c;
+
     overflow: hidden;
 }
 
 .miniatura-documental img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+
+    object-fit: cover;
+
     display: block;
 }
 
-/* CONTENIDO */
+/* =========================
+   CONTENIDO
+========================= */
 
 .contenido-documental{
     padding: 22px;
 }
 
 .contenido-documental h3{
-    color: white;
-    font-size: 22px;
-    line-height: 1.4;
-    margin-bottom: 14px;
+    color: #ffffff;
+
+    font-size: 20px;
+
+    line-height: 1.35;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
 }
 
 .contenido-documental p{
-    color: #cfcfcf;
-    line-height: 1.7;
-    margin-bottom: 22px;
-    font-size: 15px;
+    color: #b8b8b8;
+
+    line-height: 1.75;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
 }
 
-/* BOTÓN */
+/* =========================
+   LINK
+========================= */
 
 .contenido-documental a{
     display: inline-flex;
-    justify-content: center;
     align-items: center;
 
-    background: #c49b63;
-    color: white;
+    color: #d0a56f;
 
     text-decoration: none;
-    padding: 13px 20px;
-    border-radius: 10px;
 
-    font-weight: bold;
-    transition: 0.3s ease;
+    font-weight: 600;
+
+    font-size: 14px;
+
+    transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .contenido-documental a:hover{
-    background: #d8ab70;
-    transform: scale(1.03);
+    color: #efbc82;
+
+    transform: translateX(4px);
 }
 
 /* =========================
@@ -2256,16 +2307,16 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
 @media (max-width: 768px){
 
     .documentales{
-        padding: 60px 15px;
+        padding: 70px 15px;
     }
 
     .documentales h2{
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .descripcion-documentales{
-        font-size: 16px;
-        margin-bottom: 35px;
+        font-size: 14px;
+        margin-bottom: 38px;
     }
 
     .card-documental{
@@ -2274,17 +2325,17 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
     }
 
     .btn-slider{
-        width: 48px;
-        height: 48px;
-        font-size: 24px;
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
     }
 
     .prev{
-        left: -5px;
+        left: -4px;
     }
 
     .next{
-        right: -5px;
+        right: -4px;
     }
 }
 
@@ -2294,16 +2345,23 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
 
 @media (max-width: 480px){
 
+    .documentales{
+        padding: 60px 14px;
+    }
+
     .documentales h2{
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .descripcion-documentales{
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.7;
     }
 
     .slider-documentales{
         scroll-snap-type: x mandatory;
+        gap: 18px;
+        padding-left: 2px;
     }
 
     .card-documental{
@@ -2311,6 +2369,13 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
         max-width: 85vw;
 
         scroll-snap-align: center;
+
+        transition: none;
+    }
+
+    .card-documental:hover{
+        transform: none;
+        box-shadow: none;
     }
 
     .contenido-documental{
@@ -2318,23 +2383,21 @@ Cómo Miles Arriesgaron Todo por Volverse Ricos Rápidamente en el Evento que At
     }
 
     .contenido-documental h3{
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .contenido-documental p{
-        font-size: 14px;
+        font-size: 13.5px;
     }
 
     .contenido-documental a{
-        width: 100%;
-        padding: 13px 18px;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .btn-slider{
-        width: 42px;
-        height: 42px;
-        font-size: 20px;
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
     }
 }
 
