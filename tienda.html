@@ -44,16 +44,15 @@ body, html {
 </head>
 <body class="bg-stone-50 text-stone-900">
 
-
-
 <!-- Tipografia de codigo millonario menu -->
 <style>
 .navbar-logo {
-    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
-    font-weight: bold;
-    font-size: 24px;
-    color: #000; /* color negro para el menú */
-    text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Versión para footer con fondo oscuro */
@@ -65,8 +64,6 @@ body, html {
     text-decoration: none;
 }
 </style>
-
-
 
 
 
@@ -133,6 +130,8 @@ window.addEventListener('scroll', () => {
 
 
 
+
+
 <!-- CONTENEDOR SUSCRIPCION SOLO PC -->
 <div class="btn-container pc-only">
 
@@ -150,10 +149,10 @@ window.addEventListener('scroll', () => {
 
     <!-- BOTÓN -->
     <button type="button" class="btn-rojo" id="btnTogglePC">
-      Recibe estrategias gratis
+      Newsletter
     </button>
 
-    <!-- INPUT ANIMADO -->
+    <!-- INPUT -->
     <div class="input-box" id="inputBoxPC">
       <input 
         type="email" 
@@ -161,8 +160,8 @@ window.addEventListener('scroll', () => {
         required
         placeholder="Tu correo"
         class="input-email">
-        
-      <button type="submit" class="btn-enviar">→</button>
+
+      <button type="submit" class="btn-enviar">Enviar</button>
     </div>
 
   </form>
@@ -193,22 +192,22 @@ window.addEventListener('scroll', () => {
 
 /* BOTÓN */
 .btn-rojo {
-  background-color: #e60000; 
+  background-color: #e60000;
   color: #fff;
   border: none;
   padding: 8px 28px;
   border-radius: 10px;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
 .btn-rojo:hover {
   background-color: #cc0000;
 }
 
-/* ✨ ANIMACIÓN INPUT SOLO PC */
+/* INPUT */
 .input-box {
   position: absolute;
   top: 0;
@@ -218,21 +217,14 @@ window.addEventListener('scroll', () => {
   align-items: center;
 
   opacity: 0;
-  transform: translateY(-5px);
-  filter: blur(6px);
   pointer-events: none;
-
-  transition: all 0.35s ease;
 }
 
 .input-box.activo {
   opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
   pointer-events: auto;
 }
 
-/* INPUT */
 .input-email {
   padding: 8px 10px;
   border: none;
@@ -250,39 +242,35 @@ window.addEventListener('scroll', () => {
   padding: 8px 12px;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
 }
 
 </style>
 
 <script>
-  const btnPC = document.getElementById("btnTogglePC");
-  const inputBoxPC = document.getElementById("inputBoxPC");
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
 
-  btnPC.addEventListener("click", (e) => {
-    e.stopPropagation();
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
 
-    btnPC.style.opacity = "0";
-    btnPC.style.pointerEvents = "none";
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
 
-    setTimeout(() => {
-      btnPC.style.display = "none";
-      inputBoxPC.classList.add("activo");
-    }, 150);
-  });
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
 
-  inputBoxPC.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
-
-  document.addEventListener("click", () => {
-    inputBoxPC.classList.remove("activo");
-
-    setTimeout(() => {
-      btnPC.style.display = "inline-block";
-      btnPC.style.opacity = "1";
-      btnPC.style.pointerEvents = "auto";
-    }, 200);
-  });
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
 </script>
 
 
@@ -322,6 +310,7 @@ window.addEventListener('scroll', () => {
 <a href="./blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
 <a href="./blog/negocios/index.html">Modelos de Negocio</a>
 <a href="./tienda.html">Productos</a>
+
   </div>
 
   <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
@@ -629,6 +618,8 @@ document.addEventListener("click", () => {
 
 
 
+
+
 <!-- MENU ORITIGNAL PC Y TELEFONOS -->
 <div class="navbar-line"></div>
   <div class="navbar-container">
@@ -639,11 +630,11 @@ document.addEventListener("click", () => {
     <ul class="navbar-menu">
       <li><a href="./index.html">Inicio</a></li>
       <li><a href="./educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="./mentalidad/index.html">Mentalidad</a></li>
+      <li><a href="./blog/negocios/index.html">Negocios</a></li>
       <li><a href="./herramientas.html">Herramientas</a></li>
       <li><a href="./opiniones.html">Opiniones</a></li>
-      <li><a href="./sobre-el-autor.html">Sobre el autor</a></li>
-      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
-      <li><a href="./donar.html">Donaciones</a></li>
+      <li><a href="./nuestro-equipo.html">Staff</a></li>
       <li><a href="./contacto.html">Contacto</a></li>
     </ul>
 
@@ -658,35 +649,49 @@ document.addEventListener("click", () => {
   <!-- Overlay oscuro -->
   <div id="mobileOverlay"></div>
 
-  <!-- Menú móvil -->
-  <div id="mobileMenu">
-    <div class="menu-header">
-      <span class="navbar-logo">Código Millonario</span>
-    </div>
+<div id="mobileMenu">
 
-    <div class="mobile-section">
-      <h3>Secciones</h3>
-      <a href="./index.html">Inicio</a>
-      <a href="./educacion-financiera.html">Educación Financiera</a>
-      <a href="./herramientas.html">Herramientas</a>
-      <a href="./opiniones.html">Opiniones</a>
-    </div>
+  <button id="closeMobileMenu">&times;</button>
 
-    <div class="mobile-section">
-      <h3>Recursos</h3>
-      <a href="./tienda.html">Productos</a>
-      <a href="./sobre-el-autor.html">Sobre el autor</a>
-      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
-    </div>
-
-    <div class="mobile-section">
-      <h3>Apoyo</h3>
-      <a href="./donar.html">Donaciones</a>
-      <a href="./contacto.html">Contacto</a>
-    </div>
+  <div class="mobile-menu-logo">
+    <img src="./assets/img/codigo-millonario-logo.png" alt="Código Millonario">
   </div>
 
-  <div class="navbar-line"></div>
+  <div class="mobile-menu-links">
+
+    <a href="./index.html">Inicio</a>
+
+    <a href="./educacion-financiera.html">
+      Educación Financiera
+    </a>
+
+    <a href="./mentalidad/index.html">
+      Mentalidad
+    </a>
+
+    <a href="./blog/negocios/index.html">
+      Negocios
+    </a>
+
+    <a href="./herramientas.html">
+      Herramientas
+    </a>
+
+    <a href="./opiniones.html">
+      Opiniones
+    </a>
+
+    <a href="./nuestro-equipo.html">
+      Staff
+    </a>
+
+    <a href="./contacto.html">
+      Contacto
+    </a>
+
+  </div>
+</div>
+
 </nav>
 
 <style>
@@ -697,7 +702,7 @@ document.addEventListener("click", () => {
   width: 100%;
 background: #0f0f0f; 
   z-index: 9999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -812,7 +817,7 @@ background: #0f0f0f;
   width: 80%;
   max-width: 320px;
   height: 100%;
-  background: #000; /* negro */
+  background: #111111; /* negro */
   z-index: 1001;
   overflow-y: auto;
   transition: 0.3s ease;
@@ -823,33 +828,74 @@ background: #0f0f0f;
   left: 0;
 }
 
-#mobileMenu .menu-header {
-  padding: 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
+.mobile-menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.mobile-menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+#closeMobileMenu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
   color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
 }
 
-.mobile-section {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
 }
 
-.mobile-section h3 {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  color: #aaa;
-}
-
-#mobileMenu a {
-  display: block;
-  font-size: 0.95rem;
-  padding: 0.5rem 0;
+.mobile-menu-links a {
   color: #fff;
   text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+}
+
+.mobile-menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+@media(min-width: 768px) {
+  .navbar-menu li:nth-child(4) {
+    position: relative;
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+
+  .navbar-menu li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: -9px; /* mover la línea hacia el centro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: rgba(223, 222, 222, 0.85);
+  }
 }
 
 @media(max-width: 767px) {
@@ -961,7 +1007,17 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
     mobileOverlay.classList.remove('show');
   });
 });
+const closeMobileMenu =
+document.getElementById('closeMobileMenu');
+
+closeMobileMenu.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
 </script>
+
+
 
 
 
@@ -972,9 +1028,6 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 
 <!-- popup Descargar Guia -->
 <script src="https://codigomillonario.blog/assets/popup.js"></script>
-
-
-
 
 <!-- ========================================= -->
 <!-- GOOGLE FONTS -->
