@@ -1,0 +1,2595 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentalidad Financiera: Psicología del Dinero, Hábitos y Éxito | Código Millonario</title>
+<meta name="description" content="Descubre estrategias de mentalidad, disciplina, enfoque, productividad y crecimiento personal utilizadas por personas exitosas para alcanzar objetivos y desarrollar su máximo potencial.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../assets/img/favicon-v45.png" type="image/png">
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- NUEVA TIPOGRAFIA -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000; /* color negro para el menú */
+    text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="../assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Recibe estrategias gratis
+    </button>
+
+    <!-- INPUT ANIMADO -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+        
+      <button type="submit" class="btn-enviar">→</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* ✨ ANIMACIÓN INPUT SOLO PC */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(-5px);
+  filter: blur(6px);
+  pointer-events: none;
+
+  transition: all 0.35s ease;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+/* INPUT */
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+</style>
+
+<script>
+  const btnPC = document.getElementById("btnTogglePC");
+  const inputBoxPC = document.getElementById("inputBoxPC");
+
+  btnPC.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    btnPC.style.opacity = "0";
+    btnPC.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      btnPC.style.display = "none";
+      inputBoxPC.classList.add("activo");
+    }, 150);
+  });
+
+  inputBoxPC.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  document.addEventListener("click", () => {
+    inputBoxPC.classList.remove("activo");
+
+    setTimeout(() => {
+      btnPC.style.display = "inline-block";
+      btnPC.style.opacity = "1";
+      btnPC.style.pointerEvents = "auto";
+    }, 200);
+  });
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="../assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="../blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="../blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="../blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="../blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="../blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="../blog/negocios/index.html">Modelos de Negocio</a>
+<a href="../tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="../herramientas.html">Herramientas</a></li>
+      <li><a href="../opiniones.html">Opiniones</a></li>
+      <li><a href="../sobre-el-autor.html">Sobre el autor</a></li>
+      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
+      <li><a href="../donar.html">Donaciones</a></li>
+      <li><a href="../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+  <!-- Menú móvil -->
+  <div id="mobileMenu">
+    <div class="menu-header">
+      <span class="navbar-logo">Código Millonario</span>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Secciones</h3>
+      <a href="../index.html">Inicio</a>
+      <a href="../educacion-financiera.html">Educación Financiera</a>
+      <a href="../herramientas.html">Herramientas</a>
+      <a href="../opiniones.html">Opiniones</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Recursos</h3>
+      <a href="../tienda.html">Productos</a>
+      <a href="../sobre-el-autor.html">Sobre el autor</a>
+      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
+    </div>
+
+    <div class="mobile-section">
+      <h3>Apoyo</h3>
+      <a href="../donar.html">Donaciones</a>
+      <a href="../contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="navbar-line"></div>
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #000; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+#mobileMenu .menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.mobile-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+#mobileMenu a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('../assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+</script>
+
+
+
+
+
+<!-- ESPACIO FINAL -->
+<div style="height: 300px;"></div>
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+<!-- ========================================= -->
+<!-- GOOGLE FONTS -->
+<!-- ========================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+<!-- =========================
+     HERO TITULO
+========================= -->
+
+<section class="hero-blog">
+
+  <div class="hero-blog-content">
+
+<!-- ETIQUETA -->
+<span class="hero-tag">
+MENTALIDAD
+</span>
+
+<!-- TITULO -->
+<h1>
+Cómo piensan las personas cuando toman decisiones sobre dinero
+</h1>
+
+<!-- SUBTITULO -->
+<p>
+Análisis sobre psicología financiera, comportamiento económico, sesgos cognitivos, hábitos de consumo y los factores que influyen en la forma en que las personas administran, gastan e invierten su dinero.
+</p>
+
+  </div>
+
+</section>
+
+<style>
+
+/* =========================
+   HERO BLOG
+========================= */
+
+.hero-blog{
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-bottom: 45px;
+
+    padding-left: 90px;
+
+    padding-right: 90px;
+}
+
+/* CONTENIDO */
+
+.hero-blog-content{
+
+    max-width: 980px;
+}
+
+/* ETIQUETA */
+
+.hero-tag{
+
+    display: inline-block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8b7355;
+
+    margin-bottom: 18px;
+}
+
+/* TITULO */
+
+.hero-blog h1{
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 4.2rem;
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    color: #111111;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 24px;
+}
+
+/* SUBTITULO */
+
+.hero-blog p{
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: #555555;
+
+    max-width: 760px;
+
+    margin-bottom: 0;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1024px){
+
+    .hero-blog{
+
+        padding-left: 40px;
+
+        padding-right: 40px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 3.2rem;
+    }
+
+}
+
+/* =========================
+   TELEFONOS
+========================= */
+
+@media (max-width: 640px){
+
+    .hero-blog{
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        margin-top: 35px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 2.2rem;
+
+        line-height: 1.05;
+    }
+
+    .hero-blog p{
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+}
+
+</style>
+
+
+
+
+<!-- TITULO -->
+<div class="titulo-seccion">
+
+  <span>
+Análisis de la Mentalidad Financiera
+  </span>
+
+  <!-- LINEA NEGRA -->
+  <div class="linea-seccion"></div>
+
+</div>
+
+
+
+
+
+
+
+<section class="editorial-section">
+
+  <div class="editorial-grid">
+
+<!-- =========================
+     ARTÍCULO PRINCIPAL
+========================= -->
+<article class="main-article">
+
+  <!-- TEXTO ARRIBA -->
+  <div class="main-content">
+
+    <span class="category">
+      MENTALIDAD
+    </span>
+
+    <h2>
+      La forma en que piensas determina cómo reaccionas ante las oportunidades y los problemas
+    </h2>
+
+    <p>
+      La mentalidad influye en las decisiones, los hábitos y la capacidad de adaptarse a los desafíos de la vida cotidiana.
+    </p>
+
+  </div>
+
+  <!-- IMAGEN ABAJO -->
+  <div class="main-image-wrapper">
+
+    <img
+      src="../assets/png/mentalidad-y-desarrollo-personal.webp"
+      alt="Mentalidad y crecimiento personal">
+
+  </div>
+
+</article>
+
+<!-- =========================
+     ARTÍCULOS DERECHA
+========================= -->
+<div class="side-articles">
+
+  <!-- ITEM -->
+  <article class="side-article">
+
+    <div class="side-text">
+
+      <span class="category-small">
+        DECISIONES
+      </span>
+
+      <h3>
+        Las personas exitosas suelen pensar diferente antes de actuar
+      </h3>
+
+      <p>
+        Analizar las consecuencias y mantener una visión de largo plazo puede producir mejores resultados.
+      </p>
+
+    </div>
+
+  </article>
+
+  <!-- ITEM -->
+  <article class="side-article">
+
+    <div class="side-text">
+
+      <span class="category-small">
+        PERSPECTIVA
+      </span>
+
+      <h3>
+        La forma de interpretar una situación puede cambiar completamente el resultado
+      </h3>
+
+      <p>
+        Una misma circunstancia puede convertirse en una oportunidad o en una limitación según la perspectiva adoptada.
+      </p>
+
+    </div>
+
+  </article>
+
+  <!-- ITEM -->
+  <article class="side-article no-border">
+
+    <div class="side-text">
+
+      <span class="category-small">
+        CRECIMIENTO
+      </span>
+
+      <h3>
+        Aprender constantemente es una de las ventajas más difíciles de reemplazar
+      </h3>
+
+      <p>
+        El conocimiento acumulado y la adaptación continua suelen marcar diferencias importantes con el tiempo.
+      </p>
+
+    </div>
+
+  </article>
+
+</div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+/* =========================
+   SECCIÓN GENERAL
+========================= */
+
+.editorial-section{
+
+    max-width:1600px;
+
+    margin:70px auto;
+
+    padding-left:90px;
+    padding-right:90px;
+
+    font-family:'Inter',sans-serif;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.editorial-grid{
+
+    display:grid;
+
+    grid-template-columns:1.15fr 0.95fr;
+
+    gap:28px;
+
+    align-items:start;
+}
+
+/* =========================
+   ARTÍCULO PRINCIPAL
+========================= */
+
+.main-article{
+
+    background:#1a1a1a;
+
+    overflow:hidden;
+
+    min-height:620px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.main-content{
+
+    padding:38px 38px 0 38px;
+
+    margin-bottom:28px;
+}
+
+/* CATEGORÍA */
+
+.category{
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:#d2b07a;
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    font-family:'Inter',sans-serif;
+}
+
+/* TITULO */
+
+.main-content h2{
+
+    font-family:'Inter',sans-serif;
+
+    font-size:2.5rem;
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    letter-spacing:-1.8px;
+
+    color:white;
+
+    margin-bottom:16px;
+
+    max-width:90%;
+}
+
+/* TEXTO */
+
+.main-content p{
+
+    color:#c2c2c2;
+
+    line-height:1.7;
+
+    font-size:1rem;
+
+    max-width:85%;
+}
+
+/* =========================
+   IMAGEN MODERNA
+========================= */
+
+.main-image-wrapper{
+
+    width:100%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-top:auto;
+}
+
+.main-image-wrapper img{
+
+    width:100%;
+
+    max-width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    display:block;
+
+    transform:scale(1.02);
+
+    transition:
+    transform .7s ease,
+    filter .7s ease;
+
+    filter:
+    contrast(1.05)
+    saturate(1.08)
+    brightness(.98);
+}
+
+/* EFECTO HOVER */
+
+.main-article:hover .main-image-wrapper img{
+
+    transform:scale(1.06);
+
+    filter:
+    contrast(1.08)
+    saturate(1.12)
+    brightness(1);
+}
+
+/* CAPA OSCURA SUAVE */
+
+.main-image-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.28),
+        rgba(0,0,0,.05),
+        transparent
+    );
+
+    pointer-events:none;
+}
+
+/* =========================
+   LADO DERECHO
+========================= */
+
+.side-articles{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding-top:0;
+}
+
+/* ITEM */
+
+.side-article{
+
+    padding:0 0 22px 0;
+
+    margin-bottom:22px;
+
+    border-bottom:1px solid #e5e5e5;
+}
+
+.no-border{
+
+    border-bottom:none;
+
+    margin-bottom:0;
+
+    padding-bottom:0;
+}
+
+/* CATEGORIA */
+
+.category-small{
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:#777777;
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    font-family:'Inter',sans-serif;
+}
+
+/* TITULO */
+
+.side-text h3{
+
+    font-family:'Inter',sans-serif;
+
+    font-size:1.9rem;
+
+    font-weight:800;
+
+    line-height:1.12;
+
+    letter-spacing:-1.2px;
+
+    color:#111111;
+
+    margin-bottom:10px;
+
+    transition:opacity .25s ease;
+}
+
+.side-article:hover h3{
+
+    opacity:.6;
+}
+
+/* TEXTO */
+
+.side-text p{
+
+    color:#666666;
+
+    line-height:1.65;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+    font-family:'Inter',sans-serif;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:900px){
+
+    .editorial-section{
+
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .editorial-grid{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+    }
+
+    .main-article{
+
+        min-height:auto;
+    }
+
+    .main-content{
+
+        padding:28px 28px 0 28px;
+    }
+
+    .main-content h2{
+
+        font-size:2rem;
+
+        max-width:100%;
+    }
+
+    .main-content p{
+
+        max-width:100%;
+    }
+
+    .main-image-wrapper img{
+
+        width:100%;
+
+        max-width:100%;
+
+        height:340px;
+    }
+
+    .side-text h3{
+
+        font-size:1.55rem;
+
+        line-height:1.15;
+    }
+
+}
+
+/* =========================
+   TELÉFONOS
+========================= */
+
+@media (max-width:480px){
+
+    .editorial-section{
+
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .main-content{
+
+        padding:18px 18px 0 18px;
+    }
+
+    .main-content h2{
+
+        font-size:1.6rem;
+    }
+
+    .main-content p{
+
+        font-size:.95rem;
+    }
+
+    .main-image-wrapper img{
+
+        width:100%;
+
+        height:300px;
+    }
+
+    .side-text h3{
+
+        font-size:1.2rem;
+    }
+
+}
+
+</style>
+
+
+
+
+
+<style>
+/* =========================
+   TITULO SECCION NUEVO
+========================= */
+
+.titulo-seccion{
+
+    max-width: 1400px;
+
+    margin: 70px auto 35px auto;
+
+    padding: 0 90px;
+}
+
+/* TEXTO */
+
+.titulo-seccion span{
+
+    font-family:'Inter',sans-serif;
+
+    font-size:1.55rem;
+
+    font-weight:900;
+
+    color:#111111;
+
+    letter-spacing:-1px;
+
+    line-height:1;
+
+    display:inline-block;
+
+    text-transform:uppercase;
+}
+
+/* LINEA */
+
+.linea-seccion{
+
+    width:100%;
+
+    height:4px;
+
+    background:#111111;
+
+    margin-top:10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .titulo-seccion{
+
+        padding:0 30px;
+
+        margin:55px auto 28px auto;
+    }
+
+    .titulo-seccion span{
+
+        font-size:1.35rem;
+
+        letter-spacing:-0.8px;
+    }
+
+    .linea-seccion{
+
+        height:3px;
+
+        margin-top:8px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .titulo-seccion{
+
+        padding:0 18px;
+    }
+
+    .titulo-seccion span{
+
+        font-size:1.2rem;
+    }
+
+}
+</style>
+
+<!-- ESPACIO ARRIBA -->
+<div class="top-space"></div>
+
+<style>
+.top-space{
+    height:120px;
+}
+
+/* OCULTAR SOLO EN TELÉFONOS */
+@media (max-width:768px){
+
+    .top-space{
+        display:none;
+    }
+}
+</style>
+
+
+
+
+
+
+
+<div class="cm-brand-separator">
+  <span class="cm-brand-text">
+
+<span class="cm-brand-box">
+  Tendencias
+</span>
+
+<br>
+
+<span class="cm-brand-sub">
+  Análisis, ahorro e inversión
+</span>
+
+  </span>
+</div>
+
+<style>
+
+/* ================= CONTENEDOR ================= */
+
+.cm-brand-separator{
+  width:100%;
+  padding:70px 20px 20px; /* 🔥 menos padding abajo para acercar la línea */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  background:#fff;
+}
+
+/* ================= TEXTO BASE ================= */
+
+.cm-brand-text{
+  font-family:"Inter", sans-serif;
+  font-size:13px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:#666;
+  text-align:center;
+  line-height:1.6;
+}
+
+/* ================= BLOQUE NEGRO (MARCA PRINCIPAL) ================= */
+
+.cm-brand-box{
+  display:inline-block;
+  background:#111;
+  color:#fff;
+  padding:8px 14px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+/* ================= SUBTEXTO ================= */
+
+.cm-brand-sub{
+  display:inline-block;
+  margin-top:10px;
+  color:#666;
+}
+
+/* ================= LÍNEA GRUESA CENTRADA (MÁS PEGADA) ================= */
+
+.cm-brand-separator::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:8px; /* 🔥 antes estaba en 0, ahora más cerca del texto */
+
+  width:min(420px, 70%);
+  height:5px;
+  background:#111;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="cm-container">
+
+  <!-- ================= HEADER ================= -->
+  <div class="cm-editorial-line">
+    <span class="cm-editorial-label">
+      Tendencias
+    </span>
+  </div>
+
+  <!-- ================= LISTA DE ARTÍCULOS ================= -->
+  <section class="main-layout mt-1">
+
+    <aside class="sidebar">
+
+      <div class="w-full h-px bg-slate-300"></div>
+
+      <!-- Noticia 1 -->
+      <a href="#" class="news-item">
+
+        <div class="news-thumb">
+          <img src="./assets/png/banana-pegada-pared-subasta-arte.webp" alt="">
+        </div>
+
+        <div class="news-text">
+          <h3>Las 5 cosas más absurdas que millonarios han comprado en subastas</h3>
+          <p>Cuando se trata de millonarios, el dinero puede convertir casi cualquier cosa en un objeto de colección.</p>
+        </div>
+
+      </a>
+
+      <!-- Noticia 2 -->
+      <a href="#" class="news-item">
+
+        <div class="news-thumb">
+          <img src="./assets/png/ley-borron-y-cuenta-nueva-colombia.webp" alt="">
+        </div>
+
+        <div class="news-text">
+          <h3>Cómo funciona la Ley de Borrón y Cuenta Nueva</h3>
+          <p>Un análisis sobre los beneficios y condiciones para limpiar reportes negativos en Colombia.</p>
+        </div>
+
+      </a>
+
+      <!-- Noticia 3 -->
+      <a href="#" class="news-item">
+
+        <div class="news-thumb">
+          <img src="./assets/png/thomas-alva-edison-inventor.webp" alt="">
+        </div>
+
+        <div class="news-text">
+          <h3>Thomas Alva Edison y la innovación moderna</h3>
+          <p>Un contraste entre innovación, industria y estrategias empresariales actuales.</p>
+        </div>
+
+      </a>
+
+      <!-- Noticia 4 -->
+      <a href="#" class="news-item">
+
+        <div class="news-thumb">
+          <img src="./assets/png/cuanto-dinero-ahorrado-segun-edad.webp" alt="">
+        </div>
+
+        <div class="news-text">
+          <h3>Cuánto deberías tener ahorrado según tu edad</h3>
+          <p>Guía clara para entender tu progreso financiero y cómo ponerte al día.</p>
+        </div>
+
+      </a>
+
+    </aside>
+
+  </section>
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 100px;"></div>
+
+
+
+
+
+<div class="cm-editorial-line">
+
+  <span class="cm-editorial-label">
+Oportunidades
+  </span>
+
+</div>
+
+
+
+
+
+
+<section class="main-layout">
+
+  <!-- Sidebar izquierda -->
+  <aside class="sidebar">
+
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+    <!-- Noticia 3 -->
+    <a href="./blog/biografia-de-millonarios/index.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/como-se-hicieron-millonarios.webp" alt="">
+      </div>
+      <div class="news-text">
+        <h3>La historia real de cómo se hizo millonario desde cero</h3>
+        <p>
+ El relato real de cómo transformó cada desafío en oportunidad y construyó un
+imperio financiero desde cero visto desde un punto de vista financiero que aporta alto valor sobre el exito de estas personas.
+        </p>
+      </div>
+    </a>
+
+    <!-- Noticia 1 -->
+    <a href="./blog/ahorro/index.html" class="news-item">
+      <!-- Imagen a la izquierda -->
+      <div class="news-thumb">
+        <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="">
+      </div>
+      <!-- Texto a la derecha -->
+      <div class="news-text">
+        <h3>Una forma de gestionar tu dinero sin problemas</h3>
+        <p>
+          Esta sección te enseña a tomar el control de tu dinero, manejar tus gastos de forma eficiente, 
+          ahorrar sin complicaciones y sacar el máximo provecho a cada peso que ingresas.
+        </p>
+      </div>
+    </a>
+
+    <!-- Noticia 2 -->
+    <a href="./blog/desarrollo-profesional/index.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
+      </div>
+      <div class="news-text">
+        <h3>Conviértete en la persona que todos buscan y genera oportunidades únicas</h3>
+        <p>
+          Aprende a destacar en tu trabajo, desarrollar habilidades clave y posicionarte como alguien 
+          indispensable que atrae oportunidades únicas para crecer profesionalmente.
+        </p>
+      </div>
+    </a>
+
+    <!-- Noticia 3 -->
+    <a href="./blog/inversiones/index.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/inversion-inteligente-segura.webp" alt="">
+      </div>
+      <div class="news-text">
+        <h3>Cómo invertir con claridad y buscar oportunidades financieras</h3>
+        <p>
+          Esta sección te enseña a invertir con conocimiento y seguridad, tomar decisiones financieras 
+          inteligentes y aprovechar al máximo cada oportunidad para hacer crecer tu dinero.
+        </p>
+      </div>
+    </a>
+
+  </aside>
+
+</section>
+
+
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 100px;"></div>
+
+
+
+
+
+<div class="cm-editorial-line">
+
+  <span class="cm-editorial-label">
+   Finanzas
+  </span>
+
+</div>
+
+
+
+
+
+
+
+<section class="main-layout">
+
+  <!-- Sidebar izquierda -->
+  <aside class="sidebar">
+
+ <div class="w-full h-px bg-slate-300"></div>
+
+    <!-- Noticia 3 -->
+    <a href="./blog/psicologia-del-dinero/mentalidad-rico-vs-pobre.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/diferencias-mentalidad-rico-pobre.webp" alt="">
+      </div>
+      <div class="news-text">
+        <h3>Lo que la mentalidad de rico hace diferente y que la mayoría de los pobres nunca aplican</h3>
+        <p>
+La realidad detras de una mentalidad de rico vs pobre: descubre las claves que cambian tu relación 
+con el dinero y tu futuro financiero.
+        </p>
+      </div>
+    </a>
+
+        <!-- Noticia 3 -->
+    <a href="./blog/negocios/negocios-millonarios-ocultos.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/negocios-que-hacen-ricos-a-millonarios.jpg" alt="">
+      </div>
+      <div class="news-text">
+        <h3>Estos son los negocios en los que invierten los ricos después de salir de la pobreza</h3>
+        <p>
+La riqueza rara vez aparece en lo visible; los negocios silenciosos son los que sostienen fortunas. 
+No busques lo que brilla hoy, busca lo que resuelve problemas reales y se mantiene en el tiempo.
+        </p>
+      </div>
+    </a>
+
+
+            <!-- Noticia 3 -->
+    <a href="./blog/ahorro/ahorrar-para-una-moto-meta.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/plan-de-ahorro-para-comprar-una-moto.webp" alt="">
+      </div>
+      <div class="news-text">
+        <h3>Comprar una moto sin endeudarte sí es posible: así puedes pagarla al contado</h3>
+        <p>
+No necesitas la moto más cara ni un crédito eterno para cumplir tu sueño. Con ahorro inteligente 
+y decisiones claras, puedes comprarla y dormir tranquilo sin deudas.        
+        </p>
+      </div>
+    </a>
+
+
+                <!-- Noticia 3 -->
+    <a href="./blog/ahorro/ahorrar-sin-renunciar.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/controlar-gastos-sin-sacrificios.webp" alt="">
+      </div>
+      <div class="news-text">
+        <h3>Cómo dejar de gastar dinero sin renunciar a tu estilo de vida, método real</h3>
+        <p>
+Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de vivir bien hoy sin descuidar tu futuro.      
+        </p>
+      </div>
+    </a>
+
+  </aside>
+
+</section>
+
+</div>
+
+
+<style>
+.cm-container{
+  width: min(1280px, 88%);
+  margin: 0 auto;
+}
+
+/* ================= TÍTULO EDITORIAL ================= */
+.cm-editorial-line{
+  position:relative;
+  width: 100%;
+  margin:40px 0 0px;
+  padding-top:45px;
+}
+
+.cm-editorial-label{
+  position:absolute;
+  top:0;
+  left:0;
+  font-family:"Inter", sans-serif;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
+  color:#111;
+  letter-spacing:-0.5px;
+}
+
+.cm-editorial-line::after{
+  content:"";
+  display:block;
+  width:100%;
+  height:5px;
+  background:#111;
+}
+
+/* ================= LAYOUT ================= */
+.main-layout{
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 0px 0 40px;
+  box-sizing: border-box;
+}
+
+.sidebar{
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ================= ❌ ELIMINAR LÍNEA GRIS ================= */
+.sidebar .w-full.h-px.bg-slate-300{
+  display: none !important;
+}
+
+/* ================= NEWS ITEM ================= */
+.news-item{
+  display: flex;
+  gap: 22px;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: flex-start;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover{
+  opacity: 0.85;
+}
+
+/* ================= IMAGEN ================= */
+.news-thumb{
+  width: 200px;
+  height: 170px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.news-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= TEXTO ================= */
+.news-text{
+  flex: 1;
+}
+
+/* ================= TITULO (MÁS GRANDE) ================= */
+.news-item .news-text h3{
+  font-family: "Inter", sans-serif;
+  font-size: 26px; /* 🔥 antes 23px */
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 10px 0;
+  color: #111;
+  letter-spacing: -0.4px;
+  max-width: 100%;
+}
+
+/* ================= PÁRRAFO (MÁS GRANDE) ================= */
+.news-text p{
+  font-size: 16px; /* 🔥 antes 14px */
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px){
+
+  .main-layout{
+    flex-direction: column;
+  }
+
+  .news-item{
+    flex-direction: row;
+  }
+
+  .news-thumb{
+    width: 170px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px){
+
+  .news-item{
+    flex-direction: column;
+  }
+
+  .news-thumb{
+    width: 100%;
+    height: 240px;
+  }
+
+}
+</style>
+
+
+
+
+
+  
+<!-- TITULO -->
+<div class="titulo-seccion">
+
+  <span>
+Preguntas frecuenteS
+  </span>
+
+</div>
+
+
+
+
+
+
+ <section class="mb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
+
+    <!-- ================= ACORDEÓN ================= -->
+
+    <style>
+  .cf-accordion {
+    margin-top: 60px;
+  }
+
+  .cf-accordion * {
+    box-sizing: border-box;
+  }
+
+  .cf-accordion-item {
+    background: #ffffff; /* fondo blanco fijo */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transform: translateY(0);
+    will-change: transform; /* optimiza animación */
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+
+  /* Animación tipo card con sombra */
+  .cf-accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+  }
+
+  .cf-accordion-header {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
+    background: #ffffff;
+    transition: none;
+  }
+
+  .cf-accordion-header:hover {
+    background: #ffffff;
+  }
+
+  /* ICONO */
+  .cf-accordion-icon {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .cf-accordion-item.is-open .cf-accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  .cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+  }
+
+  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
+  .cf-accordion-item.is-open .cf-accordion-content::before {
+    content: "";
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .cf-accordion-content p {
+    padding: 18px 22px 22px;
+    margin: 0;
+    color: #000000;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+</style>
+
+    <div class="cf-accordion">
+
+  <div class="cf-accordion-item">
+
+<div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
+Cómo funcionan los servicios financieros
+  <span class="cf-accordion-icon"></span>
+</div>
+
+<div class="cf-accordion-content">
+
+  <p>
+Detrás de cada banco, tarjeta de crédito, préstamo o aplicación financiera existen condiciones, costos y beneficios que influyen directamente en tus finanzas.
+  </p>
+
+  <p>
+Analizar estos servicios permite identificar mejores oportunidades, reducir gastos innecesarios y utilizar las herramientas financieras de forma más inteligente.
+  </p>
+
+</div>
+
+    </div>
+  </div>
+</div>
+
+    </section>
+
+
+    <script>
+    document.querySelectorAll('.cf-accordion').forEach(accordion => {
+  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.cf-accordion-item');
+      const content = item.querySelector('.cf-accordion-content');
+
+      // Solo afecta los items de ESTE acordeón
+      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+        }
+      });
+
+      item.classList.toggle('is-open');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+    </script>
+
+
+
+</main>
+
+<!-- ================= SCRIP COMPAGINACION ================= -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const articles = Array.from(document.querySelectorAll('.article'));
+    const articlesGrid = document.getElementById('articlesGrid');
+
+    const totalResultsEl = document.getElementById('totalResults');
+    const currentPageText = document.getElementById('currentPageText');
+    const totalPagesText = document.getElementById('totalPagesText');
+    const perPageSelect = document.getElementById('perPageSelect');
+    const gotoInput = document.getElementById('gotoInput');
+    const gotoBtn = document.getElementById('gotoBtn');
+    const firstBtn = document.getElementById('firstBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const lastBtn = document.getElementById('lastBtn');
+    const pageNumbersContainer = document.getElementById('pageNumbers');
+
+    let perPage = parseInt(perPageSelect.value, 10);
+    let currentPage = 1;
+    let totalPages = Math.max(1, Math.ceil(articles.length / perPage));
+
+    function showPage(page) {
+        if (page < 1) page = 1;
+        if (page > totalPages) page = totalPages;
+        currentPage = page;
+        const start = (currentPage - 1) * perPage;
+        const end = start + perPage;
+
+        articles.forEach((article, idx) => {
+            if (idx >= start && idx < end) {
+                article.style.display = '';
+                setTimeout(() => article.style.opacity = 1, 10);
+            } else {
+                article.style.opacity = 0;
+                setTimeout(() => article.style.display = 'none', 400);
+            }
+        });
+
+        currentPageText.textContent = currentPage;
+        totalPagesText.textContent = totalPages;
+
+        updateButtons();
+        renderPageNumbers();
+    }
+
+    function updateButtons() {
+        firstBtn.disabled = currentPage === 1;
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages;
+        lastBtn.disabled = currentPage === totalPages;
+    }
+
+    function renderPageNumbers() {
+        pageNumbersContainer.innerHTML = '';
+        if (totalPages <= 5) {
+            for (let i = 1; i <= totalPages; i++) {
+                pageNumbersContainer.appendChild(createPageButton(i));
+            }
+            return;
+        }
+        pageNumbersContainer.appendChild(createPageButton(1));
+        let start = Math.max(2, currentPage - 1);
+        let end = Math.min(totalPages - 1, currentPage + 1);
+
+        if (start > 2) {
+            const dots = document.createElement('div');
+            dots.textContent = '...';
+            dots.className = 'text-stone-400 px-1';
+            pageNumbersContainer.appendChild(dots);
+        }
+
+        for (let i = start; i <= end; i++) {
+            pageNumbersContainer.appendChild(createPageButton(i));
+        }
+
+        if (end < totalPages - 1) {
+            const dots = document.createElement('div');
+            dots.textContent = '...';
+            dots.className = 'text-stone-400 px-1';
+            pageNumbersContainer.appendChild(dots);
+        }
+
+        pageNumbersContainer.appendChild(createPageButton(totalPages));
+    }
+
+    function createPageButton(num) {
+        const btn = document.createElement('button');
+        btn.textContent = num;
+        btn.className = 'page-box';
+        if (num === currentPage) btn.classList.add('active');
+        btn.addEventListener('click', () => showPage(num));
+        return btn;
+    }
+
+    perPageSelect.addEventListener('change', () => {
+        perPage = parseInt(perPageSelect.value, 10);
+        totalPages = Math.ceil(articles.length / perPage);
+        currentPage = 1;
+        showPage(currentPage);
+    });
+
+    firstBtn.addEventListener('click', () => showPage(1));
+    prevBtn.addEventListener('click', () => showPage(currentPage - 1));
+    nextBtn.addEventListener('click', () => showPage(currentPage + 1));
+    lastBtn.addEventListener('click', () => showPage(totalPages));
+
+    gotoBtn.addEventListener('click', () => {
+        const val = parseInt(gotoInput.value, 10);
+        if (!isNaN(val)) showPage(val);
+        gotoInput.value = '';
+    });
+
+    gotoInput.addEventListener('keydown', e => {
+        if (e.key === 'Enter') gotoBtn.click();
+    });
+
+    totalResultsEl.textContent = articles.length;
+    totalPages = Math.ceil(articles.length / perPage);
+    showPage(currentPage);
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-20"></section>
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
