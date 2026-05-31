@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cómo organizar tus finanzas personales en Colombia en 30 días (5 hábitos que sí funcionan)</title>
     <meta name="description" content="¿El dinero se te va y nunca logras avanzar? Descubre 5 hábitos simples que pueden transformar tus finanzas en solo 30 días y devolverte el control de tu dinero.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -30,7 +31,6 @@
 <!-- Redes sociales iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-
 <style>
 /* Fondo */
 body, html {
@@ -41,15 +41,15 @@ body, html {
 </head>
 <body class="bg-stone-50 text-stone-900">
 
-
 <!-- Tipografia de codigo millonario menu -->
 <style>
 .navbar-logo {
-    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
-    font-weight: bold;
-    font-size: 24px;
-    color: #000; /* color negro para el menú */
-    text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Versión para footer con fondo oscuro */
@@ -61,6 +61,7 @@ body, html {
     text-decoration: none;
 }
 </style>
+
 
 
 
@@ -126,6 +127,8 @@ window.addEventListener('scroll', () => {
 
 
 
+
+
 <!-- CONTENEDOR SUSCRIPCION SOLO PC -->
 <div class="btn-container pc-only">
 
@@ -143,10 +146,10 @@ window.addEventListener('scroll', () => {
 
     <!-- BOTÓN -->
     <button type="button" class="btn-rojo" id="btnTogglePC">
-      Recibe estrategias gratis
+      Newsletter
     </button>
 
-    <!-- INPUT ANIMADO -->
+    <!-- INPUT -->
     <div class="input-box" id="inputBoxPC">
       <input 
         type="email" 
@@ -154,8 +157,8 @@ window.addEventListener('scroll', () => {
         required
         placeholder="Tu correo"
         class="input-email">
-        
-      <button type="submit" class="btn-enviar">→</button>
+
+      <button type="submit" class="btn-enviar">Enviar</button>
     </div>
 
   </form>
@@ -186,22 +189,22 @@ window.addEventListener('scroll', () => {
 
 /* BOTÓN */
 .btn-rojo {
-  background-color: #e60000; 
+  background-color: #e60000;
   color: #fff;
   border: none;
   padding: 8px 28px;
   border-radius: 10px;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
 .btn-rojo:hover {
   background-color: #cc0000;
 }
 
-/* ✨ ANIMACIÓN INPUT SOLO PC */
+/* INPUT */
 .input-box {
   position: absolute;
   top: 0;
@@ -211,21 +214,14 @@ window.addEventListener('scroll', () => {
   align-items: center;
 
   opacity: 0;
-  transform: translateY(-5px);
-  filter: blur(6px);
   pointer-events: none;
-
-  transition: all 0.35s ease;
 }
 
 .input-box.activo {
   opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
   pointer-events: auto;
 }
 
-/* INPUT */
 .input-email {
   padding: 8px 10px;
   border: none;
@@ -243,39 +239,35 @@ window.addEventListener('scroll', () => {
   padding: 8px 12px;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
 }
 
 </style>
 
 <script>
-  const btnPC = document.getElementById("btnTogglePC");
-  const inputBoxPC = document.getElementById("inputBoxPC");
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
 
-  btnPC.addEventListener("click", (e) => {
-    e.stopPropagation();
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
 
-    btnPC.style.opacity = "0";
-    btnPC.style.pointerEvents = "none";
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
 
-    setTimeout(() => {
-      btnPC.style.display = "none";
-      inputBoxPC.classList.add("activo");
-    }, 150);
-  });
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
 
-  inputBoxPC.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
-
-  document.addEventListener("click", () => {
-    inputBoxPC.classList.remove("activo");
-
-    setTimeout(() => {
-      btnPC.style.display = "inline-block";
-      btnPC.style.opacity = "1";
-      btnPC.style.pointerEvents = "auto";
-    }, 200);
-  });
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
 </script>
 
 
@@ -623,6 +615,10 @@ document.addEventListener("click", () => {
 
 
 
+
+
+
+
 <!-- MENU ORITIGNAL PC Y TELEFONOS -->
 <div class="navbar-line"></div>
   <div class="navbar-container">
@@ -633,11 +629,11 @@ document.addEventListener("click", () => {
     <ul class="navbar-menu">
       <li><a href="../../index.html">Inicio</a></li>
       <li><a href="../../educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="../../mentalidad/index.html">Mentalidad</a></li>
+      <li><a href="../../blog/negocios/index.html">Negocios</a></li>
       <li><a href="../../herramientas.html">Herramientas</a></li>
       <li><a href="../../opiniones.html">Opiniones</a></li>
-      <li><a href="../../sobre-el-autor.html">Sobre el autor</a></li>
-      <li><a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a></li>
-      <li><a href="../../donar.html">Donaciones</a></li>
+      <li><a href="../../nuestro-equipo.html">Staff</a></li>
       <li><a href="../../contacto.html">Contacto</a></li>
     </ul>
 
@@ -652,35 +648,49 @@ document.addEventListener("click", () => {
   <!-- Overlay oscuro -->
   <div id="mobileOverlay"></div>
 
-  <!-- Menú móvil -->
-  <div id="mobileMenu">
-    <div class="menu-header">
-      <span class="navbar-logo">Código Millonario</span>
-    </div>
+<div id="mobileMenu">
 
-    <div class="mobile-section">
-      <h3>Secciones</h3>
-      <a href="../../index.html">Inicio</a>
-      <a href="../../educacion-financiera.html">Educación Financiera</a>
-      <a href="../../herramientas.html">Herramientas</a>
-      <a href="../../opiniones.html">Opiniones</a>
-    </div>
+  <button id="closeMobileMenu">&times;</button>
 
-    <div class="mobile-section">
-      <h3>Recursos</h3>
-      <a href="../../tienda.html">Productos</a>
-      <a href="../../sobre-el-autor.html">Sobre el autor</a>
-      <a href="#" onclick="openPopup(); event.preventDefault();">Descargar guía gratis</a>
-    </div>
-
-    <div class="mobile-section">
-      <h3>Apoyo</h3>
-      <a href="../../donar.html">Donaciones</a>
-      <a href="../../contacto.html">Contacto</a>
-    </div>
+  <div class="mobile-menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Código Millonario">
   </div>
 
-  <div class="navbar-line"></div>
+  <div class="mobile-menu-links">
+
+    <a href="../../index.html">Inicio</a>
+
+    <a href="../../educacion-financiera.html">
+      Educación Financiera
+    </a>
+
+    <a href="../../mentalidad/index.html">
+      Mentalidad
+    </a>
+
+    <a href="../../blog/negocios/index.html">
+      Negocios
+    </a>
+
+    <a href="../../herramientas.html">
+      Herramientas
+    </a>
+
+    <a href="../../opiniones.html">
+      Opiniones
+    </a>
+
+    <a href="../../nuestro-equipo.html">
+      Staff
+    </a>
+
+    <a href="../../contacto.html">
+      Contacto
+    </a>
+
+  </div>
+</div>
+
 </nav>
 
 <style>
@@ -691,7 +701,7 @@ document.addEventListener("click", () => {
   width: 100%;
 background: #0f0f0f; 
   z-index: 9999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -817,33 +827,74 @@ background: #0f0f0f;
   left: 0;
 }
 
-#mobileMenu .menu-header {
-  padding: 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
+.mobile-menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.mobile-menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+#closeMobileMenu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
   color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
 }
 
-.mobile-section {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
 }
 
-.mobile-section h3 {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  color: #aaa;
-}
-
-#mobileMenu a {
-  display: block;
-  font-size: 0.95rem;
-  padding: 0.5rem 0;
+.mobile-menu-links a {
   color: #fff;
   text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+}
+
+.mobile-menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+@media(min-width: 768px) {
+  .navbar-menu li:nth-child(4) {
+    position: relative;
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+
+  .navbar-menu li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: -9px; /* mover la línea hacia el centro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: rgba(223, 222, 222, 0.85);
+  }
 }
 
 @media(max-width: 767px) {
@@ -955,562 +1006,391 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
     mobileOverlay.classList.remove('show');
   });
 });
+const closeMobileMenu =
+document.getElementById('closeMobileMenu');
+
+closeMobileMenu.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
 </script>
 
 
 
-   <!-- ESPACIO FINAL -->
-<div style="height: 250px;"></div>
-
-<!-- popup Descargar Guia -->
-<script src="https://codigomillonario.blog/assets/popup.js"></script>
-
-<!-- Título -->
-<div class="blog-main-title relative">
-<span class="block mt-1 w-full md:w-[87%] h-px bg-slate-300"></span>
-
-<div class="mt-3 mb-2 ml-2 md:ml-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-red-500 font-semibold"
-     style="font-family: 'Open Sans', sans-serif;">
-Educación Financiera
-</div>
-
-<h1 class="w-full md:w-[90%]">
-Cómo organizar tus finanzas personales en Colombia en 30 días con 5 hábitos simples
-</h1>
-</div>
-
-<div class="flex flex-col justify-start gap-5 px-4 md:px-0 ml-0 md:ml-6 text-xl md:text-2xl font-light"
-     style="font-family: 'Open Sans', sans-serif;">
-  <p class="w-full md:w-[80%]">
-    ¿Nadie te enseñó a darle dirección a tu dinero? En los próximos 30 días puedes pasar del desorden financiero al control total,
-    si aplicas reglas simples y constantes.
-  </p>
-</div>
-
-<style>
-.blog-main-title {
-font-family: Georgia, serif;
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: left;
-  color: #111;
-
-  /* 🔥 Separación diferente por lado */
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 120px;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .blog-main-title {
-    font-size: 2.2rem;
-    margin-right: 40px;
-  }
-}
-
-@media (max-width: 640px) {
-  .blog-main-title {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
-</style>
-
-<style>
-.layout-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.content-column {
-  width: 100%;
-  max-width: 760px;
-  padding-left: 35px;  /* antes 60px */
-  padding-right: 20px;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .content-column {
-    max-width: 720px;
-    padding-left: 25px; /* antes 40px */
-  }
-}
-
-@media (max-width: 768px) {
-  .content-column {
-    max-width: 100%;
-    padding-left: 10px; /* antes 20px */
-    padding-right: 18px;
-  }
-}
-</style>
-
-<!-- Redes sociales blindadas (NO afecta footer ni otros iconos) -->
-<style>
-
-/* CONTENEDOR ÚNICO */
-.cm-social-container {
-  display: flex;
-  gap: 16px;
-}
-
-/* ICONOS SOLO DE ESTE BLOQUE */
-.cm-social-container .cm-social-icon {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #777;
-  border-radius: 50%;
-
-  color: #777;
-  background: transparent;
-
-  font-size: 16px;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
-}
-
-/* SVG SOLO DE ESTE BLOQUE */
-.cm-social-container .cm-social-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  vertical-align: middle;
-}
-
-/* HOVER SOLO DE ESTE BLOQUE */
-.cm-social-container .cm-social-icon:hover {
-  color: #fff;
-  background: #777;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-</style>
 
 
 
 
-<div class="custom-left-align relative">
 
-  <div class="relative">
-    <div class="mt-1 w-full md:w-[136%] h-px bg-slate-300"></div>
+<!-- ESPACIO FINAL -->
+<div style="height: 300px;"></div>
 
-    <!-- CONTENEDOR DEL BOTÓN (NO BLOQUEA CLICS) -->
-    <div class="absolute inset-0 flex items-center justify-end pointer-events-none">
-      <a href="../../contacto.html"
-         class="pointer-events-auto px-4 py-1 text-xs md:text-sm md:px-5 md:py-2 font-medium text-slate-600 bg-white border border-slate-300 rounded-full shadow-sm hover:shadow-md transition">
-        Mensaje
-      </a>
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- HERO -->
+<section class="uvo-hero">
+
+  <div class="uvo-container">
+
+    <!-- CATEGORY -->
+    <div class="uvo-category">
+      Educación Financiera
     </div>
 
-    <div class="max-w-4xl mt-3 ml-0 px-4 md:px-0 flex items-start space-x-4">
-      <div class="flex-shrink-0">
+    <!-- TITLE -->
+    <h1 class="uvo-title">
+      Cómo organizar tus finanzas personales en Colombia en 30 días con 5 hábitos simples
+    </h1>
+
+    <!-- DESCRIPTION -->
+    <p class="uvo-description">
+      ¿Nadie te enseñó a darle dirección a tu dinero?<br><br>
+      En los próximos 30 días puedes pasar del desorden financiero al control total,
+      si aplicas hábitos simples, reglas constantes y una estructura clara para administrar mejor tus ingresos.
+    </p>
+
+    <!-- META -->
+    <div class="uvo-meta">
+
+      <!-- AUTHOR -->
+      <div class="uvo-author">
+
         <img src="../../assets/img/fundador-codigo-millonario.webp"
-             alt="Francisco Urrego - Código Millonario"
-             class="w-8 h-8 sm:w-8 md:w-10 md:h-10 rounded-full object-cover shadow-lg ring-2 ring-slate-200">
+             alt="Francisco Urrego"
+             class="uvo-avatar">
+
+        <div class="uvo-author-info">
+
+          <p class="uvo-label">
+            AUTOR
+          </p>
+
+          <p class="uvo-author-name">
+            Equipo Editorial • <a href="../../sobre-el-autor.html" class="uvo-author-link">Francisco Urrego</a>
+          </p>
+
+          <p class="uvo-date">
+            Escrito el 09 Ene 2026 / 21:09 h / 5 min lectura
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="py-1">
-        <p class="text-stone-700 leading-relaxed mb-1 font-light text-xs sm:text-base">
-          Por 
-          <a href="../../sobre-el-autor.html" class="font-semibold text-slate-800 hover:underline">
-            Francisco Urrego
-          </a>
-        </p>
-      </div>
-    </div>
+      <!-- SOCIALS -->
+      <div class="uvo-socials">
 
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
 
-<div class="mt-3 mb-3 w-full md:w-[136%] h-px bg-slate-300"></div>
-</div>
+        <!-- X -->
+        <a href="https://x.com/CMillonarioblog"
+           target="_blank"
+           aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 1200 1227"
+               fill="currentColor">
+            <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163Z"/>
+          </svg>
+        </a>
 
-<div class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
+        <!-- YouTube -->
+        <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
 
-<!-- Texto -->
-<div class="mb-2 sm:mb-0 text-center sm:text-center text-[9px] sm:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap"
-     style="font-family: 'Open Sans', sans-serif;">
-  <p>
-Escrito el 09 ene 2026 | 21:09 h | ⏱ 5 min lectura<br>
-Actualizado 20 May 2026 | 14:38 h
-  </p>
-</div>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1FVSBquigd/"
+           target="_blank"
+           aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
 
-  <!-- Línea separadora (solo en PC) -->
-  <div class="hidden sm:block sm:w-px sm:h-6 bg-slate-300 sm:mx-4"></div>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
+           target="_blank"
+           aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
 
+        <!-- Pinterest -->
+        <a href="https://pin.it/3tqNXYoAA"
+           target="_blank"
+           aria-label="Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
 
-
-<p class="mb-2 sm:mb-0 mr-4 text-xs uppercase tracking-widest text-stone-500">
-  Síguenos
-</p>
-
-<!-- Iconos -->
-<div class="flex gap-4 cm-social-container justify-center sm:justify-end">
-
-  <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
-     target="_blank"
-     class="cm-social-icon">
-    <i class="fab fa-tiktok"></i>
-  </a>
-
-  <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
-     target="_blank"
-     class="cm-social-icon">
-    <i class="fab fa-youtube"></i>
-  </a>
-
-  <a href="https://pin.it/3tqNXYoAA"
-     target="_blank"
-     class="cm-social-icon">
-    <i class="fab fa-pinterest-p"></i>
-  </a>
-
-  <a href="https://x.com/CMillonarioblog"
-     target="_blank"
-     class="cm-social-icon">
-
-    <svg xmlns="http://www.w3.org/2000/svg"
-         viewBox="0 0 1200 1227"
-         width="20"
-         height="20"
-         fill="currentColor">
-
-      <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163ZM567.3 687.828L520.12 620.49L159.88 103.118H325.42L610.51 509.02L657.69 576.358L1044.3 1123.77H878.76L567.3 687.828Z"/>
-    </svg>
-
-  </a>
-
-  <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
-     target="_blank"
-     class="cm-social-icon">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-</div>
-
-</div>
-</div>
-
-<style>
-
-/* CONTENEDOR VISUAL ORIGINAL */
-.custom-left-align {
-  width: 100%;
-}
-
-/* 💻 PC */
-@media (min-width: 768px) {
-  .custom-left-align {
-    max-width: 760px;
-    margin-left: 35px;
-    margin-right: auto;
-  }
-}
-
-/* 📱 Móvil */
-@media (max-width: 767px) {
-  .custom-left-align {
-    padding-left: 10px;
-    padding-right: 18px;
-  }
-}
-
-/* =========================
-   ICONOS BLINDADOS
-========================= */
-
-.cm-social-container .cm-social-icon {
-  width: 36px;
-  height: 36px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #777;
-  border-radius: 50%;
-
-  color: #777;
-  background: transparent;
-
-  font-size: 16px;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
-}
-
-/* SVG SOLO DE ESTE BLOQUE */
-.cm-social-container .cm-social-icon svg {
-  width: 14px !important;
-  height: 14px !important;
-  fill: currentColor;
-  vertical-align: middle;
-}
-
-/* HOVER SOLO DE ESTE BLOQUE */
-.cm-social-container .cm-social-icon:hover {
-  color: #fff;
-  background: #777;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-</style>
-
-
-
-
-<img src="../../assets/png/como-hacer-crecer-tu-dinero.webp"
-     alt=""
-     class="w-80 mx-auto mt-20 relative top-6 sm:w-[40rem] md:w-[50rem] mx-auto sm:top-4 object-contain z-10">
-
-
-
-
-<style>
-  /* ================= ACORDEÓN ================= */
-  .cf-accordion {
-    margin-top: 60px;
-  }
-
-  .cf-accordion * {
-    box-sizing: border-box;
-  }
-
-  /* Ajustamos el ancho máximo y centramos el acordeón */
-  .cf-accordion-item {
-    background: #ffffff; /* fondo blanco */
-    border-radius: 0px; /* puntas cuadradas */
-    margin: 0 auto 16px auto; /* centrado horizontal */
-    max-width: 680px; /* ancho máximo deseado aumentado */
-
-    /* Delineado sutil */
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* sombra muy ligera */
-
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: translateY(0);
-    will-change: transform;
-  }
-
-  /* Animación tipo card con sombra al pasar el mouse */
-  .cf-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.12); /* sombra un poco más marcada */
-  }
-
-  .cf-accordion-header {
-    padding: 14px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000;
-    user-select: none;
-    background: #ffffff;
-    transition: none;
-  }
-
-  .cf-accordion-header:hover {
-    background: #ffffff;
-  }
-
-  /* ICONO */
-  .cf-accordion-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(45deg);
-    transform-origin: center;
-    transition: transform 0.35s ease;
-    margin-left: 12px;
-    flex-shrink: 0;
-  }
-
-  .cf-accordion-item.is-open .cf-accordion-icon {
-    transform: rotate(-135deg);
-  }
-
-  .cf-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: relative;
-  }
-
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
-  .cf-accordion-item.is-open .cf-accordion-content::before {
-    content: "";
-    display: block;
-    width: 88%;
-    margin: 0 auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .cf-accordion-content p {
-    padding: 18px 22px 22px;
-    margin: 0;
-    color: #000000;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-
-  /* ================= ESTILOS PARA LA TABLA DE CONTENIDOS ================= */
-  .toc-container {
-    padding: 0 22px 22px 22px;
-    max-width: 100%;
-  }
-
-  .toc-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .toc-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.08); /* línea sutil entre ítems */
-  }
-
-  .toc-list li:last-child {
-    border-bottom: none; /* sin línea en el último ítem */
-  }
-
-  .toc-list li a {
-    text-decoration: none;
-    color: #000000;
-    display: block;
-    transition: color 0.2s ease;
-  }
-
-  .toc-list li a:hover {
-    color: #1a73e8; /* color de hover para indicar clickeable */
-  }
-
-  /* ================= MARGEN SUTIL EN MÓVILES ================= */
-  @media (max-width: 480px) {
-    .cf-accordion-item {
-      margin-left: 8px;
-      margin-right: 8px;
-      max-width: calc(100% - 16px); /* ancho un poquito mayor en móviles */
-    }
-  }
-</style>
-
-<div class="cf-accordion">
-
-  <div class="cf-accordion-item">
-    <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
-      Tabla de contenidos
-      <span class="cf-accordion-icon"></span>
-    </div>
-    <div class="cf-accordion-content">
-
-      <!-- ================= HTML ================= -->
-      <div class="toc-container" style="font-family: 'Open Sans', sans-serif;">
-        <ul class="toc-list">
-          <li><a href="#titulo1">1. Hábito 1: Registra todos tus gastos para ahorrar dinero y mejorar tus finanzas</a></li>
-          <li><a href="#titulo2">2. Hábito 2: Cómo ahorrar dinero separando tu ahorro apenas recibes tu sueldo</a></li>
-          <li><a href="#titulo3">3. Hábito 3: Evita las compras impulsivas con la regla de las 48 horas</a></li>
-          <li><a href="#titulo4">4. Hábito 4: Cómo usar la deuda inteligentemente y evitar problemas financieros</a></li>
-          <li><a href="#titulo5">5. Hábito 5: Cómo administrar tu dinero y planificar tus finanzas personales</a></li>
-          <li><a href="#titulo6">6. Toma el control de tu dinero con mejores hábitos financieros</a></li>
-        </ul>
       </div>
 
     </div>
+
+  </div>
+
+<!-- IMAGE -->
+<div class="uvo-image-wrapper">
+
+  <img 
+    src="../../assets/png/como-hacer-crecer-tu-dinero.webp"
+    alt="Persona organizando sus finanzas personales y creando hábitos para mejorar el manejo del dinero"
+    class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] sm:top-4 object-contain z-10"
+  >
+
+  <!-- TEXTO DEBAJO -->
+  <div class="max-w-[50rem] mx-auto w-80 sm:w-[40rem] md:w-[50rem] mt-10 text-left">
+
+    <span 
+      class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+      style="font-family: 'Open Sans', sans-serif;"
+    >
+      Un Análisis Editorial
+    </span>
+
+    <div class="w-16 h-px bg-amber-800"></div>
+
   </div>
 
 </div>
 
-<script>
-  document.querySelectorAll('.cf-accordion').forEach(accordion => {
-    accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const item = header.closest('.cf-accordion-item');
-        const content = item.querySelector('.cf-accordion-content');
+</section>
 
-        // Solo afecta los items de ESTE acordeón
-        accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-          if (other !== item) {
-            other.classList.remove('is-open');
-            other.querySelector('.cf-accordion-content').style.maxHeight = null;
-          }
-        });
+<style>
 
-        item.classList.toggle('is-open');
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      });
-    });
-  });
+body{
+background:#fff;
+}
 
-  // Cerrar acordeón al hacer clic afuera
-  document.addEventListener('click', function(event) {
-    const openItem = document.querySelector('.cf-accordion-item.is-open');
-    if (openItem && !openItem.contains(event.target)) {
-      openItem.classList.remove('is-open');
-      const content = openItem.querySelector('.cf-accordion-content');
-      content.style.maxHeight = null;
-    }
-  });
+/* HERO */
+.uvo-hero{
+padding:72px 0 88px;
+}
 
-  // ================= SCROLL CON OFFSET PARA TABLA =================
-  document.querySelectorAll('.toc-list a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetID = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetID);
-      if(targetElement){
-        const offset = 200; // <--- Aquí aumentamos el desplazamiento para que quede mucho más abajo
-        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-          top: elementPosition - offset,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-</script>
+/* CONTAINER */
+.uvo-container{
+max-width:920px;
+margin:auto;
+padding:0 32px;
+}
 
+/* CATEGORY */
+.uvo-category{
+display:inline-block;
+margin-bottom:30px;
 
+font-family:'Inter',sans-serif;
+font-size:11px;
+font-weight:600;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:#8b7355;
+}
+
+/* TITLE */
+.uvo-title{
+max-width:860px;
+
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3rem,5vw,5rem);
+font-weight:600;
+line-height:1.04;
+letter-spacing:-0.032em;
+color:#111827;
+
+text-wrap:balance;
+}
+
+/* DESCRIPTION */
+.uvo-description{
+max-width:760px;
+margin-top:34px;
+
+font-family:'Inter',sans-serif;
+font-size:1.08rem;
+line-height:1.95;
+color:#4b5563;
+}
+
+/* META */
+.uvo-meta{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+margin-top:52px;
+padding-top:24px;
+border-top:1px solid #e5e7eb;
+}
+
+/* AUTHOR */
+.uvo-author{
+display:flex;
+align-items:center;
+gap:12px;
+flex-wrap:wrap;
+}
+
+/* AVATAR */
+.uvo-avatar{
+width:44px;
+height:44px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* LABEL (AUTOR) */
+.uvo-label{
+font-family:'Inter',sans-serif;
+font-size:10px;
+font-weight:600;
+letter-spacing:.14em;
+text-transform:uppercase;
+
+color:#111827;
+margin-bottom:2px;
+}
+
+/* AUTHOR NAME */
+.uvo-author-name{
+font-family:'Inter',sans-serif;
+font-size:13px;
+font-weight:600;
+color:#111827;
+}
+
+/* LINK AUTHOR */
+.uvo-author-link{
+color:#111827;
+text-decoration:none;
+border-bottom:1px solid transparent;
+transition:.2s ease;
+}
+
+.uvo-author-link:hover{
+border-bottom:1px solid #111827;
+}
+
+/* DATE */
+.uvo-date{
+margin-top:4px;
+
+font-family:'Inter',sans-serif;
+font-size:11px;
+font-weight:500;
+letter-spacing:.02em;
+
+color:#4b5563;
+}
+
+/* SOCIALS */
+.uvo-socials{
+display:flex;
+gap:8px;
+}
+
+/* BOTONES CUADRADOS */
+.uvo-socials a{
+width:42px;
+height:42px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border:1px solid #e5e7eb;
+background:#fff;
+
+color:#6b7280;
+
+text-decoration:none;
+
+transition:all .2s ease;
+}
+
+.uvo-socials a:hover{
+transform:translateY(-2px);
+
+background:#111827;
+border-color:#111827;
+color:#fff;
+}
+
+/* ICONOS */
+.uvo-socials i,
+.uvo-socials svg{
+font-size:15px;
+width:15px;
+height:15px;
+fill:currentColor;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+.uvo-hero{
+padding:42px 0 60px;
+}
+
+.uvo-container{
+padding:0 20px;
+}
+
+.uvo-title{
+font-size:2.18rem;
+line-height:1.12;
+letter-spacing:-0.012em;
+}
+
+.uvo-description{
+margin-top:24px;
+font-size:1rem;
+line-height:1.82;
+}
+
+.uvo-meta{
+flex-direction:column;
+align-items:flex-start;
+gap:24px;
+margin-top:38px;
+}
+
+}
+
+</style>
 
 
 <!-- INTRODUCCIÓN GENERAL -->
 <main class="py-8">
-  <div class="layout-wrapper">
-    <article class="content-column max-w-4xl mx-auto px-4 md:px-0 text-left">
 
-  <div class="mt-10 mb-6">
-  <span class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
-        style="font-family: 'Open Sans', sans-serif;">
-        Nota informativa
-      </span>
+  <div class="w-full">
 
-  <div class="w-16 h-px bg-red-500"></div>
-</div>
+    <article class="max-w-5xl mx-auto px-6 md:px-8 text-left">
+
+      <div class="mt-5 mb-6">
+
+
+
+
 
 <!-- INTRODUCCIÓN -->
-<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<div class="text-stone-700 leading-relaxed mb-1 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
@@ -1537,13 +1417,311 @@ En este artículo descubrirás <strong>5 hábitos simples pero efectivos</strong
 
 
 
-<h2 id="titulo1" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-40 mb-6 tracking-wide">
+
+
+
+<!-- TABLA DE CONTENIDOS -->
+<style>
+
+/* =========================
+   TOC CUADRADO MODERNO
+========================= */
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:140px;
+}
+
+/* SOLO esto para anclas */
+[id]{
+  scroll-margin-top:140px;
+}
+
+.cf-accordion{
+  margin-top:60px;
+  font-family:'Inter',sans-serif;
+}
+
+/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
+.cf-accordion-inner{
+  max-width:80rem;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+
+/* CUADRO */
+.cf-accordion-item{
+  width:260px;
+  min-height:70px;
+
+  margin:0;
+
+  border:1px solid red;
+
+  border-radius:6px;
+
+  background:#fff;
+
+  overflow:hidden;
+
+  transition:width .35s ease;
+}
+
+/* EXPANSIÓN */
+.cf-accordion-item.is-open{
+  width:680px;
+}
+
+/* HEADER */
+.cf-accordion-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 16px;
+
+  cursor:pointer;
+
+  font-size:17px;
+  font-weight:600;
+
+  color:#111827;
+  background:#fff;
+
+  border-bottom:none;
+}
+
+/* ICONO */
+.cf-menu-icon{
+  width:30px;
+  height:30px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  border:1px solid red;
+  border-radius:6px;
+
+  gap:4px;
+  box-sizing:border-box;
+}
+
+.cf-menu-icon span{
+  height:2px;
+  width:16px;
+  background:red;
+  border-radius:2px;
+}
+
+/* CONTENT */
+.cf-accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+}
+
+/* LISTA */
+.toc-container{
+  padding:8px 14px 14px 14px;
+}
+
+/* LISTA */
+.toc-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+/* ITEMS ULTRA COMPACTOS */
+.toc-list li{
+  padding:6px 0;
+  margin:0;
+  border:none;
+}
+
+/* LINKS */
+.toc-list a{
+  text-decoration:none;
+  color:#374151;
+
+  font-size:14px;
+  line-height:1.35;
+
+  display:block;
+
+  transition:all .2s ease;
+}
+
+/* HOVER AZUL */
+.toc-list a:hover{
+  color:blue;
+  transform:translateX(4px);
+}
+
+/* MOBILE */
+@media (max-width:480px){
+
+  .cf-accordion-item{
+    width:88%;
+  }
+
+  .cf-accordion-item.is-open{
+    width:100%;
+  }
+
+}
+
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+
+  <div class="cf-accordion-inner">
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+
+        <!-- HEADER -->
+        <div class="cf-accordion-header">
+
+          Tabla de contenidos
+
+          <div class="cf-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="cf-accordion-content">
+
+          <div class="toc-container">
+
+            <ul class="toc-list">
+          <li><a href="#titulo1">1. Hábito 1: Registra todos tus gastos para ahorrar dinero y mejorar tus finanzas</a></li>
+          <li><a href="#titulo2">2. Hábito 2: Cómo ahorrar dinero separando tu ahorro apenas recibes tu sueldo</a></li>
+          <li><a href="#titulo3">3. Hábito 3: Evita las compras impulsivas con la regla de las 48 horas</a></li>
+          <li><a href="#titulo4">4. Hábito 4: Cómo usar la deuda inteligentemente y evitar problemas financieros</a></li>
+          <li><a href="#titulo5">5. Hábito 5: Cómo administrar tu dinero y planificar tus finanzas personales</a></li>
+          <li><a href="#titulo6">6. Toma el control de tu dinero con mejores hábitos financieros</a></li>
+          </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<script>
+
+/* =========================
+   ACORDEÓN (igual)
+========================= */
+
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+  header.addEventListener('click',()=>{
+
+    const item = header.closest('.cf-accordion-item');
+    const content = item.querySelector('.cf-accordion-content');
+
+    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+      if(other!==item){
+        other.querySelector('.cf-accordion-content').style.maxHeight=null;
+      }
+    });
+
+    item.classList.toggle('is-open');
+
+    if(content.style.maxHeight){
+      content.style.maxHeight=null;
+    }else{
+      content.style.maxHeight=content.scrollHeight+'px';
+    }
+
+  });
+});
+
+
+/* =========================
+   SCROLL HÍBRIDO (FIX MÓVIL + PC)
+========================= */
+
+const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+  link.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    const id = this.getAttribute('href').substring(1);
+    const target = document.getElementById(id);
+
+    if(!target) return;
+
+    const offset = 140;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    history.pushState(null, null, '#' + id);
+
+    if(isMobile){
+      /* 🔥 MÓVIL: usa scroll nativo (más estable) */
+      window.scrollTo({
+        top: top,
+        behavior: 'smooth'
+      });
+    } else {
+      /* 💻 PC: animación más controlada */
+      const start = window.pageYOffset;
+      const distance = top - start;
+      const duration = 650;
+
+      let startTime = null;
+
+      function animate(time){
+        if(!startTime) startTime = time;
+
+        const progress = Math.min((time - startTime) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+
+        window.scrollTo(0, start + distance * ease);
+
+        if(progress < 1){
+          requestAnimationFrame(animate);
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+  });
+});
+
+</script>
+
+
+
+
+
+
+<h2 id="titulo1" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-20 mb-6 tracking-wide">
   Hábito 1
 </h2>
 
 <!-- TEXTO 1 -->
-<h2 class="text-3xl font-semibold text-stone-900 mb-10 mt-5" style="font-family: Georgia, serif;">Registra todos tus gastos para ahorrar dinero y mejorar tus finanzas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+ <h2 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+Registra todos tus gastos para ahorrar dinero y mejorar tus finanzas
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
    Independientemente de cuáles sean tus gastos, el primer paso para mejorar tus finanzas no es ahorrar más, sino conocer exactamente a dónde se va tu dinero. Este paso es más importante de lo que la mayoría cree. 
@@ -1571,7 +1749,7 @@ Este hábito te ayudará a identificar patrones de gasto, reducir gastos inneces
 
   <div class="w-20 h-[2px] bg-black mx-auto mb-4"></div>
 
-  <p class="text-sm md:text-base text-stone-700 italic tracking-wide leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+  <p class="text-sm md:text-base text-stone-700 italic tracking-wide leading-relaxed"">
     El éxito financiero empieza con un simple hábito: anotar todo.
   </p>
 
@@ -1581,7 +1759,9 @@ Este hábito te ayudará a identificar patrones de gasto, reducir gastos inneces
 
 
 
-<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">¿Qué gastos registrar para mejorar tus finanzas personales?</h3>
+
+
+<h3 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">¿Qué gastos registrar para mejorar tus finanzas personales?</h3>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
@@ -1618,14 +1798,13 @@ Beneficio:</strong> En
 
 
 
-
-<h2 id="titulo2" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-40 mb-6 tracking-wide">
+<h2 id="titulo2" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-20 mb-6 tracking-wide">
   Hábito 2
 </h2>
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-stone-900 mb-10 mt-5" style="font-family: Georgia, serif;">Cómo ahorrar dinero separando tu ahorro apenas recibes tu sueldo</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<h2 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">Cómo ahorrar dinero separando tu ahorro apenas recibes tu sueldo</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Es muy común recibir el pago y emocionarse con tu dinero. Esto puede cegar a muchos, una emoción que los lleva a sentirse más confiados y tomar decisiones apresuradas acerca de su dinero. Un pago no te hará rico; sin embargo, lo que muchos no analizan en realidad no es el pago, sino la acción detrás de él. 
@@ -1652,7 +1831,7 @@ Si acostumbras a tu cerebro y dopamina a gastar poco de forma recurrente, cuando
 
   <div class="w-20 h-[2px] bg-black mx-auto mb-4"></div>
 
-  <p class="text-sm md:text-base text-stone-700 italic tracking-wide leading-relaxed" style="font-family: 'Poppins', sans-serif;">
+  <p class="text-sm md:text-base text-stone-700 italic tracking-wide leading-relaxed">
 La libertad financiera empieza guardando antes de gastar.
   </p>
 
@@ -1662,8 +1841,11 @@ La libertad financiera empieza guardando antes de gastar.
 
 
 
-<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Cómo ahorrar dinero cada vez que recibes ingresos</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight"
+>Cómo ahorrar dinero cada vez que recibes ingresos
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <ul class="list-disc pl-6 text-stone-700 space-y-2">
   <li>Separa un porcentaje 
@@ -1692,226 +1874,274 @@ La libertad financiera empieza guardando antes de gastar.
 
 
 
-<div class="text-stone-700 leading-relaxed mb-4 mt-20" style="font-family: 'Open Sans', sans-serif;"> 
-También te puede interesar:
-</div>
 
-<!-- ================= FUENTE ================= -->
-<style>
-.articulo-box {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 0;
-  margin: 20px 0;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
-  color: #000;
-  overflow: hidden;
+
+<!-- ================= CONTENEDOR ================= -->
+ <div class="articulo-wrapper mt-20">
+
+  <!-- TEXTO SUPERIOR -->
+  <div class="texto-interes">
+    También te puede interesar:
+  </div>
+
+  <style>
+
+  /* ================= CONTENEDOR PADRE ================= */
+.articulo-wrapper{
   position: relative;
-  min-height: 140px;
-  transition: opacity 0.2s ease;
-}
-
-.articulo-box:hover {
-  opacity: 0.85;
-}
-
-.articulo-main {
-  display: flex;
   width: 100%;
-  align-items: flex-start;
-  padding: 10px 15px 50px 15px;
+  max-width: 720px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
 }
 
-.articulo-img {
-  width: 200px;
-  height: 110px;
-  object-fit: cover;
-  margin: 0;
-  border: none;
-  flex-shrink: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  /* ================= TEXTO SUPERIOR (MODERNO) ================= */
+  .texto-interes{
+    position: absolute;
+    top: -28px;
+    left: 0;
+
+    font-family: 'Inter', sans-serif; /* 👈 moderno */
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  /* ================= TARJETA ================= */
+  .articulo-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    width: 100%;
+    max-width: 720px;
+    margin: 0;
+
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 0;
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: #000;
+
+    min-height: 140px;
+    transition: opacity 0.2s ease;
+  }
+
+  /* ================= HOVER SOLO DESKTOP ================= */
+  @media (min-width: 769px) {
+    .articulo-box:hover {
+      opacity: 0.85;
+    }
+  }
+
+  /* ================= MAIN ================= */
+  .articulo-main {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    padding: 10px 15px 50px 15px;
+  }
+
+  /* ================= IMAGEN ================= */
+  .articulo-img {
+    width: 200px;
+    height: 110px;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* ================= CONTENIDO ================= */
+  .articulo-contenido {
+    flex: 1;
+    padding-left: 210px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ================= TITULO ================= */
+  .articulo-titulo h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+    color: #000;
+  }
+
+  /* ================= DESCRIPCIÓN ================= */
+  .articulo-descripcion {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  /* ================= BOTÓN ================= */
+  .articulo-boton {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    border-top: 1px solid #ddd;
+    background: #fff;
+
+    padding: 8px 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .articulo-boton-texto{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #444;
+  }
+
+  .articulo-boton span {
+    background: #fff;
+    color: #000;
+
+    border: 1px solid #ddd;
+    padding: 4px 10px;
+
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  /* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .articulo-box:hover {
+    opacity: 1 !important;
+  }
+
+  .articulo-descripcion {
+  display: none;
 }
 
-.articulo-contenido {
-  flex: 1;
-  padding-left: 210px;
-  display: flex;
-  flex-direction: column;
-}
+  .texto-interes{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 10px;
 
-.articulo-titulo {
-  margin-bottom: 4px;
-}
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #333;
+  }
 
-.articulo-titulo h2 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin: 0;
-  color: #000;
-  font-family: Arial, sans-serif;
-}
-
-.articulo-descripcion {
-  font-size: 13px;
-  color: #555;
-  line-height: 1.4;
-  flex: 1;
-}
-
-/* ================= BOTON ================= */
-.articulo-boton {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  border-top: 1px solid #ddd;
-  background: #fff;
-  padding: 8px 15px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.articulo-boton span {
-  display: inline-block;
-  background: #fff;
-  color: #000;
-  border: 1px solid #ddd;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.articulo-boton-texto {
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-}
-
-/* ================= MOBILE PREMIUM ================= */
-@media (max-width:600px) {
-
-  .articulo-box{
-    min-height: auto;
+  .articulo-box {
+    max-width: 100%;
     border: none;
     border-bottom: 1px solid #ececec;
-    margin: 0;
-    padding: 10px 0;
+    padding: 10px 0 0 0;   /* 👈 IMPORTANTE: quitamos padding inferior */
   }
 
   .articulo-main {
     flex-direction: column;
-    align-items: flex-start;
     padding: 0;
   }
 
   .articulo-img {
     width: 100%;
-    height: 165px;
+    height: 120px;
     position: relative;
-    margin: 0 0 10px 0;
-    object-fit: cover;
   }
 
   .articulo-contenido {
     padding-left: 0;
-    width: 100%;
   }
 
-  .articulo-titulo {
-    margin-bottom: 4px;
-  }
-
-  .articulo-titulo h2{
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    line-height: 1.12;
-    font-weight: 700;
-    margin: 0;
-    color: #1a1a1a;
-    letter-spacing: -0.3px;
+  .articulo-titulo h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    letter-spacing: -0.6px;
   }
 
   .articulo-descripcion {
     font-size: 13px;
     color: #666;
-    line-height: 1.32;
-    margin-top: 2px;
   }
 
-  /* ===== BOTON MÁS COMPACTO ===== */
   .articulo-boton {
     position: relative;
-    margin-top: 8px;
-    padding: 8px 0 0 0;
+    margin-top: 6px;       /* 👈 más natural */
+    padding-top: 8px;      /* 👈 línea mejor alineada */
     border-top: 1px solid #ececec;
     background: transparent;
   }
-
-  .articulo-boton-texto {
-    font-size: 12px;
-    color: #777;
-    line-height: 1;
-  }
-
-  .articulo-boton span {
-    font-size: 12px;
-    border-radius: 6px;
-    padding: 4px 10px;
-    line-height: 1;
-  }
 }
-</style>
+  </style>
 
-<!-- ================= TARJETA ================= -->
+  <!-- ================= TARJETA ================= -->
 <a href="https://codigomillonario.blog/blog/mentalidad-de-exito/como-hacerse-millonario-colombia.html" class="articulo-box">
 
-  <img 
-    src="../../assets/png/como-hacerse-millonario-colombia-desde-cero-2026.webp" 
-    class="articulo-img"
-    alt="Historias reales">
+    <img 
+      src="../../assets/png/como-hacerse-millonario-colombia-desde-cero-2026.webp" 
+      class="articulo-img"
+      alt="DESCRIPCIONIMAGEN">
 
-  <div class="articulo-main">
-    <div class="articulo-contenido">
-      <div class="articulo-titulo">
-        <h2>
+    <div class="articulo-main">
+      <div class="articulo-contenido">
+
+        <div class="articulo-titulo">
+          <h2>
 Cómo hacerse millonario en Colombia desde cero sin mentiras ni atajos
-        </h2>
-      </div>
+          </h2>
+        </div>
 
-      <div class="articulo-descripcion">
+        <div class="articulo-descripcion">
 Por qué algunas personas logran hacerse millonarias en Colombia y otras no (Qué principios siguen quienes acumulan riqueza)
+        </div>
+
       </div>
     </div>
 
-  </div>
-  <div class="articulo-boton">
-    <div class="articulo-boton-texto">
-      Lo más leído:
+    <div class="articulo-boton">
+      <div class="articulo-boton-texto">
+        Lo más leído:
+      </div>
+      <span>Ir</span>
     </div>
-    <span>Ir</span>
-  </div>
-</a>
+
+  </a>
+
+</div>
 
 
 
 
 
 
-<h2 id="titulo3" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-40 mb-6 tracking-wide">
+<h2 id="titulo3" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-20 mb-6 tracking-wide">
   Hábito 3
 </h2>
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-stone-900 mb-10 mt-5" style="font-family: Georgia, serif;">Evita las compras impulsivas con la regla de las 48 horas</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<h2 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+  Evita las compras impulsivas con la regla de las 48 horas
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Una gran mayoría de personas vive esta situación de forma estereotipada, una acción que puede llegar a ser más destructiva que cualquier otra cuando involucra sentimientos. <strong>¿Quién no quiere comprarse buena ropa, zapatos u objetos?</strong> De hecho, todo el mundo quiere verse bien y vivir bien. El problema real surge cuando ya no es necesario hacerlo y, aun así, se continúa con esta práctica.
@@ -1947,8 +2177,11 @@ Comprar por impulso alivia el momento, pero entenderlo cambia tu futuro.
 
 
 
-<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Espera 48 horas antes de comprar</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+  Espera 48 horas antes de comprar
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Durante ese tiempo, pregúntate:
@@ -1978,13 +2211,13 @@ herramientas financieras
 
 
 
-<h2 id="titulo4" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-40 mb-6 tracking-wide">
+<h2 id="titulo4" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-20 mb-6 tracking-wide">
   Hábito 4
 </h2>
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-stone-900 mb-10 mt-5" style="font-family: Georgia, serif;">Cómo usar la deuda inteligentemente y evitar problemas financieros</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<h2 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">Cómo usar la deuda inteligentemente y evitar problemas financieros</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Siempre nos ha dicho, que la deuda es mala, porque roba tu libertad y te mantiene esclavo de alguien, y que es buena porque puedes usarla para invertir y sacar rentabilidad del dinero de alguien más, sin embargo, la deuda no es buena ni mala por sí sola; todo tiene sus matices y depende del contexto en sí y para que se se usó ese dinero prestado. 
@@ -2015,8 +2248,8 @@ Endeudarte sin pensar resuelve hoy, pero te cobra mañana.
 
 
 
-<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">Errores al endeudarte que debes evitar para no perder dinero</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">Errores al endeudarte que debes evitar para no perder dinero</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Durante ese momento, pregúntate:
@@ -2042,13 +2275,13 @@ Beneficio:</strong> Evitas deudas innecesarias y mantienes tu estabilidad financ
 
 
 
-<h2 id="titulo5" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-40 mb-6 tracking-wide">
+<h2 id="titulo5" class="text-lg md:text-xl font-extrabold bg-black text-white px-5 py-3 rounded-lg shadow-md inline-block mt-20 mb-6 tracking-wide">
   Hábito 5
 </h2>
 
 <!-- PARRAFO -->
-<h2 class="text-3xl font-semibold text-stone-900 mb-10 mt-5" style="font-family: Georgia, serif;">Cómo administrar tu dinero y planificar tus finanzas personales</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<h2 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">Cómo administrar tu dinero y planificar tus finanzas personales</h2>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Algunas personas no ven la realidad de tomarse en serio su economía sino hasta que llegan a ser ancianos. Son del tipo de personas que dicen: “No sé cuándo moriré, mejor disfruto ahora”, y luego, vaya sorpresa, viven hasta los 
@@ -2069,8 +2302,8 @@ Sin embargo, a largo plazo, es una de las principales razones por las que no se 
 
 
 
-<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">La clave para organizar tus finanzas y salir del ciclo de gasto</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<h3 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">La clave para organizar tus finanzas y salir del ciclo de gasto</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Es como elegir qué quieres ser o hacer en la vida y seguir ese camino. Tu dinero también debería tener un propósito, una idea clara a seguir, y no simplemente llegar, gastar, volver al trabajo y continuar con la rueda del hámster hasta envejecer. En lugar de reaccionar cada vez que surge un gasto, establece reglas simples que guíen tus decisiones. 
@@ -2111,10 +2344,7 @@ El orden financiero no nace del control excesivo, sino de la claridad.
 <!-- BLOQUE SEO - ERRORES FINANCIEROS -->
 <div class="mt-40 mb-16">
 
-  <h2 
-    class="text-3xl font-semibold text-stone-900 mb-10 mt-5 leading-tight"
-    style="font-family: Georgia, serif;"
-  >
+  <h2 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
     Errores financieros más comunes en Colombia
   </h2>
 
@@ -2184,224 +2414,63 @@ El orden financiero no nace del control excesivo, sino de la claridad.
 
 
 
+<!-- ================= CONTENEDOR ================= -->
+ <div class="articulo-wrapper mt-20">
 
-
-
-<div class="text-stone-700 leading-relaxed mb-4 mt-28" style="font-family: 'Open Sans', sans-serif;"> 
-También te puede interesar:
-</div>
-
-<!-- ================= FUENTE ================= -->
-<style>
-.articulo-box {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 0;
-  margin: 20px 0;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
-  color: #000;
-  overflow: hidden;
-  position: relative;
-  min-height: 140px;
-  transition: opacity 0.2s ease;
-}
-
-.articulo-box:hover {
-  opacity: 0.85;
-}
-
-.articulo-main {
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  padding: 10px 15px 50px 15px;
-}
-
-.articulo-img {
-  width: 200px;
-  height: 110px;
-  object-fit: cover;
-  margin: 0;
-  border: none;
-  flex-shrink: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.articulo-contenido {
-  flex: 1;
-  padding-left: 210px;
-  display: flex;
-  flex-direction: column;
-}
-
-.articulo-titulo {
-  margin-bottom: 4px;
-}
-
-.articulo-titulo h2 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin: 0;
-  color: #000;
-  font-family: Arial, sans-serif;
-}
-
-.articulo-descripcion {
-  font-size: 13px;
-  color: #555;
-  line-height: 1.4;
-  flex: 1;
-}
-
-/* ================= BOTON ================= */
-.articulo-boton {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  border-top: 1px solid #ddd;
-  background: #fff;
-  padding: 8px 15px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.articulo-boton span {
-  display: inline-block;
-  background: #fff;
-  color: #000;
-  border: 1px solid #ddd;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.articulo-boton-texto {
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-}
-
-/* ================= MOBILE PREMIUM ================= */
-@media (max-width:600px) {
-
-  .articulo-box{
-    min-height: auto;
-    border: none;
-    border-bottom: 1px solid #ececec;
-    margin: 0;
-    padding: 10px 0;
-  }
-
-  .articulo-main {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-  }
-
-  .articulo-img {
-    width: 100%;
-    height: 165px;
-    position: relative;
-    margin: 0 0 10px 0;
-    object-fit: cover;
-  }
-
-  .articulo-contenido {
-    padding-left: 0;
-    width: 100%;
-  }
-
-  .articulo-titulo {
-    margin-bottom: 4px;
-  }
-
-  .articulo-titulo h2{
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    line-height: 1.12;
-    font-weight: 700;
-    margin: 0;
-    color: #1a1a1a;
-    letter-spacing: -0.3px;
-  }
-
-  .articulo-descripcion {
-    font-size: 13px;
-    color: #666;
-    line-height: 1.32;
-    margin-top: 2px;
-  }
-
-  /* ===== BOTON MÁS COMPACTO ===== */
-  .articulo-boton {
-    position: relative;
-    margin-top: 8px;
-    padding: 8px 0 0 0;
-    border-top: 1px solid #ececec;
-    background: transparent;
-  }
-
-  .articulo-boton-texto {
-    font-size: 12px;
-    color: #777;
-    line-height: 1;
-  }
-
-  .articulo-boton span {
-    font-size: 12px;
-    border-radius: 6px;
-    padding: 4px 10px;
-    line-height: 1;
-  }
-}
-</style>
+  <!-- TEXTO SUPERIOR -->
+  <div class="texto-interes">
+    También te puede interesar:
+  </div>
 
 <!-- ================= TARJETA ================= -->
 <a href="https://codigomillonario.blog/blog/negocios/errores-negocios-nuevos-como-evitar-fracaso.html" class="articulo-box">
 
-  <img 
-    src="../../assets/png/errores-negocios-nuevos-emprendimiento.webp" 
-    class="articulo-img"
-    alt="Historias reales">
+    <img 
+      src="../../assets/png/errores-negocios-nuevos-emprendimiento.webp" 
+      class="articulo-img"
+      alt="DESCRIPCIONIMAGEN">
 
-  <div class="articulo-main">
-    <div class="articulo-contenido">
-      <div class="articulo-titulo">
-        <h2>
+    <div class="articulo-main">
+      <div class="articulo-contenido">
+
+        <div class="articulo-titulo">
+          <h2>
 Conoce los errores que hacen fracasar a la mayoría de negocios nuevos (y cómo evitarlos)
-        </h2>
-      </div>
+          </h2>
+        </div>
 
-      <div class="articulo-descripcion">
+        <div class="articulo-descripcion">
 La mayoría de emprendedores se enfocan tanto en crecer que olvidan analizar por qué su negocio podría fracasar.
+       </div>
+
       </div>
     </div>
 
-  </div>
-  <div class="articulo-boton">
-    <div class="articulo-boton-texto">
-      Lo más leído:
+    <div class="articulo-boton">
+      <div class="articulo-boton-texto">
+        Lo más leído:
+      </div>
+      <span>Ir</span>
     </div>
-    <span>Ir</span>
-  </div>
-</a>
+
+  </a>
+
+</div>
+
+
+
+
 
 
 
 
 
 <!-- PARRAFO -->
-<h2 id="titulo6" class="text-3xl font-semibold text-stone-900 mb-10 mt-40" style="font-family: Georgia, serif;">Toma el control de tu dinero con mejores hábitos financieros</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+  Toma el control de tu dinero con mejores hábitos financieros
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   Al final del día, la última decisión siempre la toma el lector sobre qué hacer y qué no hacer con su dinero. Nadie puede obligarte a cambiar tus hábitos financieros, pero sí puedes elegir ser más consciente de cada decisión que tomas. 
@@ -2435,7 +2504,7 @@ La mayoría de emprendedores se enfocan tanto en crecer que olvidan analizar por
 
 
 
-<h3 class="text-2xl font-semibold text-stone-900 mt-20 mb-10" style="font-family: Georgia, serif;">
+<h3 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
   El paso final para mejorar tus finanzas personales en 30 días
 </h3>
 
@@ -2477,23 +2546,22 @@ La mayoría de emprendedores se enfocan tanto en crecer que olvidan analizar por
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
 
- 
 
-
-<p class="interlink-heading text-left mb-6 mt-40"
-   style="font-family: 'Playfair Display', serif;
-          font-size: clamp(30px, 5vw, 34px);
-          font-weight: 700;
-          letter-spacing: -0.3px;">
-  Artículos relacionados:
-</p>
+<p class="text-3xl font-semibold text-stone-900 mb-5 mt-20">Artículos relacionados:</p>
 
 <p class="interlink-heading text-left text-sm mb-4"
    style="font-family: 'Open Sans', sans-serif;">
   ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
 </p>
 
+
+
+
+  </div>
 </main>
+
+
+
 
 
 
@@ -2752,11 +2820,11 @@ fetch("../ahorro/index.html")
 
 
 
+
   <!--  Footer  -->
 <div class="footer-here"></div>
 
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
-
 
 
 
