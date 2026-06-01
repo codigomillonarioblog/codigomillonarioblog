@@ -1019,163 +1019,6 @@ closeMobileMenu.addEventListener('click', () => {
 
 
 
-<!-- TABLA DE CONTENIDOS -->
-<style>
-
-/* =========================
-   TOC CUADRADO MODERNO
-========================= */
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:140px;
-}
-
-/* SOLO esto para anclas */
-[id]{
-  scroll-margin-top:140px;
-}
-
-.cf-accordion{
-  margin-top:60px;
-  font-family:'Inter',sans-serif;
-}
-
-/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
-.cf-accordion-inner{
-  max-width:80rem;
-  margin:0 auto;
-  padding:0 1.5rem;
-}
-
-/* CUADRO */
-.cf-accordion-item{
-  width:260px;
-  min-height:70px;
-
-  margin:0;
-
-  border:1px solid red;
-
-  border-radius:6px;
-
-  background:#fff;
-
-  overflow:hidden;
-
-  transition:width .35s ease;
-}
-
-/* EXPANSIÓN */
-.cf-accordion-item.is-open{
-  width:680px;
-}
-
-/* HEADER */
-.cf-accordion-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:18px 16px;
-
-  cursor:pointer;
-
-  font-size:17px;
-  font-weight:600;
-
-  color:#111827;
-  background:#fff;
-
-  border-bottom:none;
-}
-
-/* ICONO */
-.cf-menu-icon{
-  width:30px;
-  height:30px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
-  border:1px solid red;
-  border-radius:6px;
-
-  gap:4px;
-  box-sizing:border-box;
-}
-
-.cf-menu-icon span{
-  height:2px;
-  width:16px;
-  background:red;
-  border-radius:2px;
-}
-
-/* CONTENT */
-.cf-accordion-content{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height .4s ease;
-}
-
-/* LISTA */
-.toc-container{
-  padding:8px 14px 14px 14px;
-}
-
-/* LISTA */
-.toc-list{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-/* ITEMS ULTRA COMPACTOS */
-.toc-list li{
-  padding:6px 0;
-  margin:0;
-  border:none;
-}
-
-/* LINKS */
-.toc-list a{
-  text-decoration:none;
-  color:#374151;
-
-  font-size:14px;
-  line-height:1.35;
-
-  display:block;
-
-  transition:all .2s ease;
-}
-
-/* HOVER AZUL */
-.toc-list a:hover{
-  color:blue;
-  transform:translateX(4px);
-}
-
-/* MOBILE */
-@media (max-width:480px){
-
-  .cf-accordion-item{
-    width:88%;
-  }
-
-  .cf-accordion-item.is-open{
-    width:100%;
-  }
-
-}
-
-</style>
-
-
-
 
 
 <!-- ESPACIO FINAL -->
@@ -1203,15 +1046,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     <!-- TITLE -->
     <h1 class="uvo-title">
-    Todo lo que debes saber sobre Aval Pay Center y sus Transacciones
+Aval Pay Center en Colombia: qué es, por qué aparece y si es seguro
     </h1>
 
     <!-- DESCRIPTION -->
     <p class="uvo-description">
-      Si encontraste el nombre Aval Pay Center en una transacción, aquí te explicamos qué significa.<br><br>
+    La aparición de Aval Pay Center en una transacción suele generar dudas sobre el origen de un pago o un cargo.<br><br>
     
-      Cómo funciona y cuándo debes prestar atención a un cargo.
-    </p>
+    Analizamos qué es este servicio, cómo opera dentro del sistema financiero colombiano y cuándo una operación merece una verificación adicional.
+   </p>
 
     <!-- META -->
     <div class="uvo-meta">
@@ -1234,7 +1077,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           </p>
 
           <p class="uvo-date">
-            Escrito el 00 Mar 2026 / 00:00 h / 3 min lectura
+            Escrito el 01 Jun 2026 / 11:04 h / 5 min lectura
           </p>
 
         </div>
@@ -1548,7 +1391,7 @@ margin-top:38px;
 <div class="text-stone-700 leading-relaxed mb-1 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-  ¿Apareció <strong>Aval Pay Center</strong> en tu cuenta bancaria y no sabes qué significa? Esta situación es más común de lo que parece y suele generar dudas sobre el origen de un pago o la posibilidad de un cargo no reconocido.
+¿Apareció <strong>Aval Pay Center</strong> en tu cuenta bancaria y no sabes qué significa? Esta situación suele generar dudas sobre el origen de un pago o la posibilidad de un cargo no reconocido.
 </p>
 
 <p>
@@ -1566,83 +1409,35 @@ margin-top:38px;
 
 
 
-<!-- INTRO / CONTENEDOR EDITORIAL -->
-<main class="py-8">
-
-  <div class="cf-accordion-inner">
-
-    <div class="cf-accordion">
-
-      <div class="cf-accordion-item">
-
-        <!-- HEADER -->
-        <div class="cf-accordion-header">
-
-          Tabla de contenidos
-
-          <div class="cf-menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-
-        <!-- CONTENT -->
-        <div class="cf-accordion-content">
-
-          <div class="toc-container">
-
-            <ul class="toc-list">
-    <li><a href="#titulo1">1. </a></li>
-    <li><a href="#titulo2">2. </a></li>
-    <li><a href="#titulo3">3. </a></li>
-    <li><a href="#titulo4">4. </a></li>
-    <li><a href="#titulo5">5. </a></li>
-    <li><a href="#titulo6">6. </a></li>
-    <li><a href="#titulo7">7. </a></li>
-    <li><a href="#titulo8">8. </a></li>
-    <li><a href="#titulo9">9. </a></li>
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-
-
-
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+<h2 id="titulo1" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Qué es Aval Pay Center en Colombia?
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-  <strong>Aval Pay Center</strong> es una plataforma de procesamiento de pagos vinculada al ecosistema financiero del Grupo Aval en Colombia. Su principal función consiste en facilitar la gestión de pagos electrónicos entre usuarios, comercios, empresas y entidades financieras.
+  <strong>Aval Pay Center</strong> o Centro de pagos Aval es una plataforma de procesamiento de pagos vinculada al ecosistema financiero del Grupo Aval en Colombia. 
+</p>
+
+<p>  
+  Su función aparente es facilitar la gestión de pagos electrónicos entre usuarios, comercios, empresas y entidades financieras dentro del flujo habitual de transacciones digitales.
 </p>
 
 <p>
-  Gracias a esta infraestructura tecnológica, diferentes operaciones digitales pueden procesarse de forma segura y eficiente. Por esta razón, el nombre Aval Pay Center puede aparecer registrado en movimientos bancarios, comprobantes de pago o extractos financieros relacionados con compras y recaudos electrónicos.
+  A partir de esta base de sistemas digitales, diferentes operaciones pueden procesarse de forma segura y eficiente. 
+</p>
+
+<p>  
+  Por esta razón, el nombre Aval Pay Center puede aparecer registrado en movimientos bancarios, comprobantes de pago o extractos financieros relacionados con compras y recaudos electrónicos.
 </p>
 
 <p>
-  Aunque muchas personas creen que se trata de un banco o una entidad independiente, en realidad funciona como un intermediario tecnológico encargado de procesar determinadas transacciones dentro del sistema financiero colombiano.
+  Aunque en algunos casos puede confundirse con un banco o una entidad independiente, en la práctica suele funcionar como un intermediario tecnológico encargado de procesar determinadas transacciones dentro del sistema financiero colombiano.
 </p>
 
 </div>
-
-
 
 
 
@@ -1656,11 +1451,15 @@ margin-top:38px;
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-  Una de las dudas más frecuentes surge cuando una persona encuentra el nombre <strong>Aval Pay Center</strong> en su cuenta bancaria o extracto financiero sin recordar haber realizado una operación directamente con ese nombre.
+  Es muy común que una persona encuentre el nombre <strong>Aval Pay Center</strong> en su cuenta bancaria o extracto financiero sin recordar haber realizado una operación directamente con ese nombre.
 </p>
 
 <p>
-  Esto ocurre porque el sistema puede aparecer como referencia de procesamiento de una compra, recaudo o pago electrónico. En muchos casos, el nombre visible en el movimiento corresponde al procesador de pagos y no al comercio donde realmente se efectuó la transacción.
+  Esto ocurre porque el sistema puede aparecer como referencia de procesamiento de una compra, recaudo o pago electrónico. 
+</p>
+
+<p>  
+  En muchos casos, el nombre visible en el movimiento corresponde al intermediario de pagos y no necesariamente al comercio donde realmente se efectuó la transacción.
 </p>
 
 <p>
@@ -1673,23 +1472,204 @@ margin-top:38px;
 
 
 
+
+
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+<h2 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Cómo funcionan los procesadores de pago en Colombia?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+  Cuando una persona realiza una compra con tarjeta débito, crédito o mediante un canal digital, el dinero no pasa directamente del comprador al comercio de forma instantánea.
+</p>
+
+<p>  
+  Detrás de cada pago existe una infraestructura tecnológica compuesta por bancos, redes de pago y <strong>plataformas de procesamiento de pagos</strong> que permiten validar y procesar la operación.
+</p>
+
+<p>
+  El proceso comienza en el comercio donde se realiza la compra.
+</p>
+
+<p>  
+  Una vez el cliente autoriza el pago, la solicitud es enviada a través de diferentes sistemas financieros que verifican la información y consultan con el <strong>banco emisor de la tarjeta</strong> si existen fondos disponibles o si la operación puede ser aprobada.
+</p>
+
+</div>
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-28 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+  Durante este recorrido intervienen las redes de pago y los procesadores de transacciones, cuya función consiste en transmitir, validar y enrutar la información entre las distintas entidades participantes.
+</p>
+
+<p>  
+  Gracias a esta infraestructura, millones de <strong>pagos electrónicos</strong> pueden realizarse diariamente en cuestión de segundos.
+</p>
+
+<p>
+  Finalmente, cuando todas las verificaciones son satisfactorias, el sistema envía una <strong>confirmación de aprobación</strong> y la transacción queda registrada tanto para el comercio como para la entidad financiera del usuario.
+</p>
+
+<p>  
+  En algunos casos, el nombre visible en el extracto bancario puede corresponder a uno de estos intermediarios tecnológicos y no necesariamente al establecimiento donde se efectuó la compra.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+    Un ejemplo común de por qué aparece Aval Pay Center en un pago
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+  Imagina a una persona que va a un centro comercial en Colombia, compra ropa en una tienda de marca reconocida y paga con tarjeta débito <strong>sin darle mayor importancia al proceso</strong>.
+</p>
+
+<p>
+  Horas después, al revisar su aplicación bancaria, nota un movimiento con el nombre <strong>“Aval Pay Center”</strong> en lugar del nombre de la tienda donde realizó la compra.
+</p>
+
+<p>
+  En ese momento puede surgir confusión o incluso preocupación, ya que parece un cargo desconocido. La persona piensa que el dinero pudo haberse enviado a otro lugar o que se trata de un movimiento <strong>que no reconoce a primera vista</strong>.
+</p>
+
+<p>
+  Sin embargo, lo que en muchos casos ocurre es que el pago fue procesado a través de una plataforma intermediaria del sistema financiero, encargada de gestionar la transacción entre el comercio y el banco. 
+</p>
+
+<p>  
+  Por eso el nombre que aparece no siempre coincide con el del establecimiento donde se realizó la compra <strong>en el extracto bancario</strong>.
+</p>
+
+<p>
+  Este tipo de situaciones es más común de lo que parece, especialmente en compras físicas o digitales donde intervienen procesadores de pago que actúan como intermediarios <strong>dentro del ecosistema financiero</strong>.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+    Por qué Aval Pay Center no es el banco aunque esté relacionado con él
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+  Para entenderlo de forma simple, el banco es la entidad donde tienes tu dinero y con la que mantienes tu cuenta. En cambio, una procesadora de pagos es el sistema que se encarga de “conectar” la transacción entre el comercio y los bancos involucrados cuando realizas un pago <strong>dentro del ecosistema financiero</strong>.
+</p>
+
+<p>
+  Esto significa que cuando compras algo en una tienda física o en línea, el dinero no siempre se mueve directamente desde el comercio hacia el banco de forma visible. En muchos casos, primero pasa por una red de sistemas financieros que valida, enruta y autoriza la operación <strong>en tiempo real</strong>.
+</p>
+
+<p>
+  Aval Pay Center puede aparecer asociado a este tipo de procesos dentro del ecosistema financiero relacionado con Grupo Aval. Por eso su nombre puede aparecer en lugar del nombre del comercio o del banco, aunque la operación siga siendo completamente bancaria y regulada <strong>bajo las normas del sistema de pagos electrónicos</strong>.
+</p>
+
+<p>
+  En resumen, el banco guarda tu dinero, mientras que plataformas como esta ayudan a que los pagos se procesen de forma rápida, segura y automatizada entre diferentes entidades.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+  ¿Tiene costos para el usuario usar Aval Pay Center y a quién pertenece realmente?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+  En la estructura actual del sistema de pagos electrónicos en Colombia, el usuario final generalmente no identifica ni asume de forma separada los costos de las plataformas de procesamiento dentro de cada transacción.
+</p>
+ 
+<p>  
+<strong>Aval Pay Center</strong> no funciona como un servicio contratado directamente por el cliente, sino como una infraestructura de procesamiento que opera dentro del flujo normal de la transacción.
+</p>
+
+<p>
+  Cuando se realiza una compra con tarjeta débito, crédito o mediante canales digitales, el valor de la operación se liquida a través de redes de adquirencia y esquemas de pago que distribuyen los costos entre el comercio y las entidades financieras participantes. 
+</p>
+ 
+<p>  
+  Estos cargos suelen estar agrupados dentro de comisiones operativas que no aparecen desglosadas para el usuario final en cada transacción.
+</p>
+
+<p>
+  En cuanto a su naturaleza, Aval Pay Center se asocia al ecosistema tecnológico del Grupo Aval en Colombia. 
+</p>
+
+<p>
+  No suele identificarse como una entidad bancaria independiente, sino como una referencia asociada a procesos de pago y transacciones electrónicas.
+</p>
+
+<p>
+  Su nombre puede aparecer vinculado a operaciones que involucran la infraestructura de procesamiento de pagos utilizada para conectar comercios, adquirentes y entidades financieras dentro del sistema de pagos electrónico.
+</p>
+
+<p>
+  Desde el punto de vista técnico, este tipo de plataformas suelen actuar como capas de intermediación que permiten la autorización, validación y enrutamiento de transacciones en tiempo real. 
+</p>
+
+<p>  
+  Su función es facilitar la interoperabilidad entre entidades financieras, garantizando trazabilidad y cumplimiento de los estándares del sistema de pagos electrónicos.
+</p>
+
+</div>
+
+
+
+
+
+  <img 
+    src="../../assets/png/como-funcionan-los-procesadores-de-pago-en-colombia.webp"
+    alt="Cómo funcionan los procesadores de pago en Colombia durante una transacción electrónica"
+    class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] sm:top-4 object-contain z-10">
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
 ¿Aval Pay Center funciona solo en Colombia?
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-  Sí. <strong>Aval Pay Center</strong> está relacionado principalmente con el sistema financiero colombiano y con los servicios digitales vinculados al ecosistema del Grupo Aval.
+  Hasta la fecha actual, <strong>Aval Pay Center</strong> está relacionado principalmente con el sistema financiero colombiano y con los servicios digitales vinculados al ecosistema del Grupo Aval.
 </p>
 
 <p>
-  Las personas que encuentran este nombre en sus movimientos bancarios suelen tener relación con entidades financieras colombianas o haber realizado pagos y transacciones procesadas dentro de esta infraestructura tecnológica.
+  Las personas que encuentran este nombre en sus movimientos bancarios suelen tener relación con entidades financieras colombianas o haber realizado pagos y transacciones procesadas dentro de esta plataforma tecnológica.
 </p>
 
 <p>
-  Por esta razón, la mayoría de las consultas sobre Aval Pay Center provienen de usuarios en Colombia que desean comprender el origen de determinados cargos, pagos o movimientos registrados en sus cuentas bancarias.
+  Por esta razón, la mayoría de las consultas sobre Aval Pay Center provienen de usuarios en Colombia que buscan comprender el origen de determinados cargos, pagos o movimientos registrados en sus cuentas bancarias.
 </p>
 
 </div>
@@ -1697,24 +1677,39 @@ margin-top:38px;
 
 
 
-
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+<h2 id="titulo7" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
 ¿Aval Pay Center es seguro?
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-  La seguridad es una de las principales preocupaciones cuando aparece un movimiento desconocido en una cuenta bancaria. Por ello, muchas personas buscan información sobre Aval Pay Center antes de asumir que se trata de un cargo legítimo.
+  La seguridad en las transacciones electrónicas es una de las principales preocupaciones cuando un usuario identifica un movimiento que no reconoce de inmediato en su cuenta bancaria. 
+</p>
+
+<p>  
+  En estos casos, es habitual que se busque información sobre el origen del registro antes de asumir que se trata de un cargo no autorizado.
 </p>
 
 <p>
-  Aval Pay Center participa en procesos financieros regulados y utiliza mecanismos de validación para procesar pagos electrónicos dentro del ecosistema financiero colombiano. Su función consiste en facilitar y gestionar determinadas transacciones digitales de forma segura.
+  En el contexto del sistema de pagos electrónicos en Colombia, los movimientos asociados a plataformas como <strong>Aval Pay Center</strong> suelen corresponder a procesos de intermediación utilizados para la autorización y procesamiento de transacciones dentro de redes financieras reguladas. 
+</p>
+
+<p>  
+  Estas capas tecnológicas forman parte de la infraestructura que permite la operación de pagos digitales entre comercios y entidades financieras.
 </p>
 
 <p>
-  Sin embargo, como ocurre con cualquier movimiento financiero, siempre es recomendable verificar el origen del cargo y confirmar que corresponde a una operación autorizada por el titular de la cuenta. Si no reconoces una transacción, lo más prudente es revisar los detalles del movimiento y contactar a tu entidad financiera.
+  Aun así, desde una perspectiva de seguridad operativa, cualquier movimiento en una cuenta bancaria debe ser verificado directamente con la entidad financiera correspondiente. 
+</p>
+  
+<p>  
+  Esto se debe a que los bancos son los únicos con acceso completo al detalle de la transacción, incluyendo comercio, canal y origen exacto del cargo.
+</p>
+
+<p>
+  En caso de no reconocer un movimiento, la práctica recomendada dentro del sistema financiero es revisar el extracto detallado y contactar de inmediato al banco para validar si la operación fue autorizada o requiere un proceso de revisión adicional.
 </p>
 
 </div>
@@ -1722,9 +1717,8 @@ margin-top:38px;
 
 
 
-
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-28 leading-tight tracking-tight">
+<h2 id="titulo8" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-28 leading-tight tracking-tight">
 ¿Qué hacer si no reconozco una transacción de Aval Pay Center?
 </h2>
 
@@ -1739,11 +1733,19 @@ Verifica tus compras recientes
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-  Antes de asumir que existe un problema, conviene revisar las compras, pagos, transferencias o suscripciones realizadas en los últimos días. En muchos casos, un movimiento que parece desconocido corresponde en realidad a una operación legítima efectuada previamente.
+  Antes de asumir que existe un problema, conviene revisar las compras, pagos, transferencias o suscripciones realizadas en los últimos días. 
+</p>
+
+<p> 
+  En muchos casos, un movimiento que parece desconocido corresponde en realidad a una transacción válida efectuada previamente.
 </p>
 
 <p>
-  Esto sucede porque algunos cargos pueden registrarse bajo el nombre del procesador de pagos y no bajo el nombre comercial del establecimiento donde se realizó la compra. Por esa razón, una transacción asociada a Aval Pay Center puede corresponder a un pago autorizado aunque inicialmente no resulte familiar.
+  Esto sucede porque algunos cargos pueden registrarse bajo el nombre de la plataforma de pagos y no necesariamente bajo el nombre comercial del establecimiento donde se realizó la compra. 
+</p>
+
+<p>  
+  Por esa razón, una transacción asociada a Aval Pay Center puede corresponder a un pago autorizado aunque inicialmente no resulte familiar.
 </p>
 
 </div>
@@ -1758,11 +1760,19 @@ Consulta los detalles de la operación
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-  Si no reconoces una transacción asociada a Aval Pay Center, revisa primero la información disponible en tu aplicación bancaria o en el extracto de la cuenta. Estos canales suelen mostrar datos adicionales que ayudan a comprender el origen del movimiento.
+  Si no reconoces una transacción asociada a Aval Pay Center, revisa primero la información disponible en tu aplicación bancaria o en el extracto de la cuenta. 
+</p>
+
+<p>  
+  Estos canales suelen mostrar datos adicionales que ayudan a comprender el origen del movimiento.
 </p>
 
 <p>
-  Elementos como la fecha, el valor, la referencia de pago o la descripción de la operación pueden aportar pistas importantes para identificar la compra o servicio relacionado con el cargo. En muchos casos, esta información es suficiente para confirmar que se trata de una transacción legítima.
+  Elementos como la fecha, el valor, la referencia de pago o la descripción de la operación pueden aportar pistas importantes para identificar la compra o servicio relacionado con el cargo. 
+</p>
+
+<p>  
+  En muchos casos, esta información suele ser suficiente para confirmar que se trata de una transacción legítima.
 </p>
 
 </div>
@@ -1772,7 +1782,7 @@ Consulta los detalles de la operación
 
 <!-- BLOQUE -->
 <h3 class="text-2xl md:text-3xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
-Contacta a tu banco
+Como última opción, puedes contactar a tu banco
 </h3>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
@@ -1782,7 +1792,7 @@ Contacta a tu banco
 </p>
 
 <p>
-  El banco podrá proporcionar información adicional sobre la operación, confirmar si se trata de una transacción autorizada y orientarte sobre los pasos a seguir en caso de detectar un movimiento sospechoso o no reconocido.
+  El banco podrá proporcionar información adicional sobre la operación, confirmar si se trata de una transacción autorizada y orientar sobre los pasos a seguir en caso de detectar un movimiento sospechoso o no reconocido.
 </p>
 
 </div>
@@ -1791,23 +1801,37 @@ Contacta a tu banco
 
 
 
+
+
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+<h2 id="titulo9" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Aval Pay Center es fraude o una transacción legítima?
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-  La aparición del nombre <strong>Aval Pay Center</strong> en un extracto bancario o en el historial de movimientos no significa automáticamente que exista fraude. De hecho, en la mayoría de los casos se trata de una referencia asociada al procesamiento de pagos electrónicos.
+  La aparición del nombre <strong>Aval Pay Center</strong> en un extracto bancario o en el historial de movimientos no implica automáticamente la existencia de fraude. 
+</p>
+
+<p> 
+  En la mayoría de los casos, se trata de una referencia asociada al procesamiento de pagos electrónicos dentro del sistema financiero.
 </p>
 
 <p>
-  Este nombre puede utilizarse para identificar transacciones gestionadas dentro del sistema, incluso cuando el usuario recuerda únicamente el comercio, la plataforma o el servicio donde realizó el pago. Por ello, la presencia de Aval Pay Center no es, por sí sola, una señal de actividad irregular.
+  Este nombre puede utilizarse para identificar transacciones gestionadas dentro del sistema, incluso cuando el usuario recuerda únicamente el comercio, la plataforma o el servicio donde realizó el pago. 
+</p>
+
+<p>  
+  Por ello, la presencia de Aval Pay Center no constituye por sí sola una señal de actividad irregular.
 </p>
 
 <p>
-  La diferencia entre una operación legítima y un posible cargo fraudulento depende de si la transacción fue autorizada por el titular de la cuenta. Más que centrarse en el nombre que aparece en el movimiento, lo importante es verificar si existe relación entre el cargo registrado y alguna actividad financiera realizada recientemente.
+  La diferencia entre una operación autorizada y un posible cargo fraudulento depende de si la transacción fue efectivamente autorizada por el titular de la cuenta. 
+</p>
+
+<p>  
+  Más que centrarse únicamente en el nombre que aparece en el movimiento, lo relevante es verificar si existe relación entre el cargo registrado y alguna actividad financiera realizada recientemente.
 </p>
 
 </div>
@@ -1815,15 +1839,158 @@ Contacta a tu banco
 
 
 
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-10"></section>
+
+
+
+<!-- =========================
+     MITOS Y VERDADES
+========================= -->
+<section class="mitos-verdades">
+
+  <h2>
+    Mitos y verdades sobre Aval Pay Center
+  </h2>
+
+  <div class="mv-grid">
+
+    <!-- MITO 1 -->
+    <div class="mv-item mito">
+      <h3>Mito: Aval Pay Center es un cobro extraño o fraudulento</h3>
+      <p>
+        Muchas personas creen que se trata de un cargo desconocido o sospechoso. En realidad, suele ser solo el nombre del motor de pagos que aparece en el extracto bancario.
+      </p>
+    </div>
+
+    <!-- VERDAD 1 -->
+    <div class="mv-item verdad">
+      <h3>Verdad: Suele aparecer como referencia en procesos de pago electrónicos</h3>
+      <p>
+Su nombre suele estar relacionado con operaciones y procesos de pago dentro del sistema financiero.
+      </p>
+    </div>
+
+    <!-- MITO 2 -->
+    <div class="mv-item mito">
+      <h3>Mito: Si aparece Aval Pay Center, significa fraude</h3>
+      <p>
+        Su aparición no implica automáticamente actividad sospechosa. En la mayoría de casos corresponde a compras legítimas procesadas por intermediarios financieros.
+      </p>
+    </div>
+
+    <!-- VERDAD 2 -->
+    <div class="mv-item verdad">
+      <h3>Verdad: El cargo depende de una compra real del usuario</h3>
+      <p>
+        La transacción normalmente está vinculada a una compra, pago o servicio realizado previamente, aunque el nombre visible no coincida con el comercio.
+      </p>
+    </div>
+
+    <!-- MITO 3 -->
+    <div class="mv-item mito">
+      <h3>Mito: Es un banco independiente</h3>
+      <p>
+        No es un banco ni una entidad financiera separada, sino una plataforma tecnológica dentro del ecosistema del sistema financiero colombiano.
+      </p>
+    </div>
+
+    <!-- VERDAD 3 -->
+    <div class="mv-item verdad">
+      <h3>Verdad: Suele aparecer asociado al ecosistema financiero de Grupo Aval</h3>
+      <p>
+      Su nombre suele encontrarse en operaciones relacionadas con servicios y procesos de pago vinculados al ecosistema financiero de Grupo Aval y sus aliados para procesar pagos de forma segura y eficiente.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.mitos-verdades{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mitos-verdades h2{
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+/* GRID */
+.mv-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* ITEM */
+.mv-item{
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+}
+
+/* MITO */
+.mv-item.mito{
+  border-left: 4px solid #e60000;
+}
+
+/* VERDAD */
+.mv-item.verdad{
+  border-left: 4px solid #1a7f37;
+}
+
+/* TITULOS */
+.mv-item h3{
+  font-size: 1rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+/* TEXTO */
+.mv-item p{
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+  .mv-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+
+
+
+
+
+
+
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
-titulo
+<h2 id="titulo10" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+Por qué ves Aval Pay Center en tus transacciones bancarias
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-  La transformación digital de los servicios financieros ha hecho que cada vez más pagos, compras y recaudos se procesen mediante plataformas tecnológicas que suelen pasar desapercibidas para los usuarios. <strong>Aval Pay Center</strong> es uno de esos sistemas que, aunque participa activamente en el procesamiento de transacciones electrónicas, puede generar dudas cuando aparece por primera vez en un extracto bancario.
+  La transformación digital de los servicios financieros ha hecho que cada vez más pagos, compras y recaudos se procesen mediante plataformas tecnológicas que suelen pasar desapercibidas para los usuarios. 
+</p>
+
+<p>  
+  <strong>Aval Pay Center</strong> es uno de esos sistemas que, aunque participa activamente en el procesamiento de transacciones electrónicas, puede generar dudas cuando aparece por primera vez en un extracto bancario.
 </p>
 
 <p>
@@ -1831,7 +1998,11 @@ titulo
 </p>
 
 <p>
-  En la mayoría de los casos, la aparición de Aval Pay Center corresponde a una operación legítima. Sin embargo, siempre es recomendable verificar el origen de cualquier transacción que no reconozcas y consultar con tu entidad financiera si persisten las dudas sobre un movimiento específico.
+En muchos casos, la aparición de Aval Pay Center está relacionada con una transacción previamente autorizada por el usuario.
+</p>
+
+<p> 
+  Sin embargo, siempre es recomendable verificar el origen de cualquier transacción que no reconozcas y consultar con tu entidad financiera si persisten las dudas sobre un movimiento específico.
 </p>
 
 </div>
@@ -1840,24 +2011,23 @@ titulo
 
 
 
-
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
-Conclusión
+<h2 id="titulo11" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+Qué debes entender sobre Aval Pay Center
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-  <strong>Aval Pay Center</strong> es una plataforma de procesamiento de pagos vinculada al ecosistema financiero del Grupo Aval en Colombia. Debido a su participación en la gestión de determinadas transacciones electrónicas, su nombre puede aparecer en extractos bancarios, comprobantes de pago y movimientos financieros realizados a través de diferentes canales digitales.
+Aunque la aparición de Aval Pay Center puede generar confusión al revisar un extracto bancario, en la mayoría de los casos corresponde a un intermediario tecnológico utilizado para procesar pagos electrónicos. 
 </p>
 
 <p>
-  Para muchos usuarios, encontrar esta referencia por primera vez puede generar dudas o preocupación. Sin embargo, en la mayoría de los casos se trata simplemente de una operación legítima procesada mediante esta infraestructura tecnológica y no de un indicio automático de fraude.
+Comprender cómo funcionan estas plataformas ayuda a interpretar mejor los movimientos financieros y a diferenciar una transacción legítima de un posible cargo no autorizado. 
 </p>
 
 <p>
-  Si identificas un movimiento asociado a Aval Pay Center en tu cuenta bancaria, lo más recomendable es revisar los detalles de la operación y verificar si existe relación con alguna compra, pago o servicio utilizado recientemente. Ante cualquier inconsistencia o cargo que no reconozcas, siempre es aconsejable contactar a tu entidad financiera para solicitar una validación adicional.
+Ante cualquier duda, la verificación con la entidad financiera sigue siendo la forma más segura de confirmar el origen de una operación.
 </p>
 
 </div>
@@ -2144,96 +2314,6 @@ fetch("../NOMBRE DE CARPETA/index.html")
 </script>
 
 
-
-
-
-  <!--  SCRIP MENU TABLA DE ACORDEÓN  -->
-
-<script>
-
-/* =========================
-   ACORDEÓN (igual)
-========================= */
-
-document.querySelectorAll('.cf-accordion-header').forEach(header=>{
-  header.addEventListener('click',()=>{
-
-    const item = header.closest('.cf-accordion-item');
-    const content = item.querySelector('.cf-accordion-content');
-
-    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
-      if(other!==item){
-        other.querySelector('.cf-accordion-content').style.maxHeight=null;
-      }
-    });
-
-    item.classList.toggle('is-open');
-
-    if(content.style.maxHeight){
-      content.style.maxHeight=null;
-    }else{
-      content.style.maxHeight=content.scrollHeight+'px';
-    }
-
-  });
-});
-
-
-/* =========================
-   SCROLL HÍBRIDO (FIX MÓVIL + PC)
-========================= */
-
-const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
-
-document.querySelectorAll('.toc-list a').forEach(link=>{
-  link.addEventListener('click', function(e){
-
-    e.preventDefault();
-
-    const id = this.getAttribute('href').substring(1);
-    const target = document.getElementById(id);
-
-    if(!target) return;
-
-    const offset = 140;
-    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-    history.pushState(null, null, '#' + id);
-
-    if(isMobile){
-      /* 🔥 MÓVIL: usa scroll nativo (más estable) */
-      window.scrollTo({
-        top: top,
-        behavior: 'smooth'
-      });
-    } else {
-      /* 💻 PC: animación más controlada */
-      const start = window.pageYOffset;
-      const distance = top - start;
-      const duration = 650;
-
-      let startTime = null;
-
-      function animate(time){
-        if(!startTime) startTime = time;
-
-        const progress = Math.min((time - startTime) / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 3);
-
-        window.scrollTo(0, start + distance * ease);
-
-        if(progress < 1){
-          requestAnimationFrame(animate);
-        }
-      }
-
-      requestAnimationFrame(animate);
-    }
-
-  });
-});
-
-</script>
 
 
    
