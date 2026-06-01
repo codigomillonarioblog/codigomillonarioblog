@@ -1232,6 +1232,281 @@ closeMobileMenu.addEventListener('click', () => {
 
 
 
+<a href="./opiniones.html#FORMULARIO-HISTORIA">
+  Compartir mi historia
+</a>
+
+
+
+
+
+
+
+
+<!-- FORMULARIO COMPARTIR HISTORIA -->
+
+<section class="max-w-3xl mx-auto px-6 py-12">
+
+  <div id="FORMULARIO-HISTORIA" class="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm">
+
+    <div class="text-center mb-8">
+
+      <span class="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-semibold mb-4">
+        Código Millonario
+      </span>
+
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
+          style="font-family:'Poppins',sans-serif;">
+        Comparte tu Historia
+      </h1>
+
+    </div>
+    
+<form id="historiaForm"
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      class="space-y-6"
+      novalidate>
+
+  <!-- WEB3FORMS -->
+  <input type="hidden" name="access_key" value="TU_ACCESS_KEY">
+  <input type="hidden" name="subject" value="NUEVA HISTORIA SUPERACION">
+  <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+  <!-- Honeypot anti spam -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+  <!-- Nombre -->
+  <div>
+    <label class="block text-sm font-medium text-slate-700 mb-2">
+      Nombre o seudónimo
+    </label>
+
+    <input
+      id="nombre"
+      type="text"
+      name="nombre"
+      required
+      minlength="2"
+      maxlength="60"
+      placeholder="Ejemplo: Juan Pérez"
+      class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500">
+
+    <p id="nombreError" class="hidden text-sm text-red-600 mt-2">
+      Debes ingresar un nombre válido.
+    </p>
+  </div>
+
+  <!-- Correo -->
+  <div>
+    <label class="block text-sm font-medium text-slate-700 mb-2">
+      Correo electrónico
+    </label>
+
+    <input
+      id="correo"
+      type="email"
+      name="correo"
+      required
+      minlength="6"
+      maxlength="100"
+      placeholder="correo@ejemplo.com"
+      class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500">
+
+    <p id="correoError" class="hidden text-sm text-red-600 mt-2">
+      Debes ingresar un correo válido.
+    </p>
+  </div>
+
+  <!-- Historia -->
+  <div>
+    <label class="block text-sm font-medium text-slate-700 mb-2">
+      Tu historia
+    </label>
+
+    <textarea
+      id="historia"
+      name="historia"
+      rows="12"
+      required
+      minlength="100"
+      maxlength="10000"
+      placeholder="Cuéntanos tu experiencia relacionada con dinero, negocios, emprendimiento, inversiones, ahorro, deudas, trabajo o crecimiento financiero..."
+      class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+
+    <p id="historiaError" class="hidden text-sm text-red-600 mt-2">
+      La historia debe tener al menos 100 caracteres.
+    </p>
+  </div>
+
+  <!-- Políticas -->
+  <div class="flex items-start gap-3">
+
+    <input
+      type="checkbox"
+      id="politicas"
+      required
+      class="mt-1 w-5 h-5">
+
+    <label for="politicas" class="text-sm text-slate-600 leading-relaxed">
+
+      Acepto las
+      <a href="/politicas-compartir-historias.html"
+         class="text-amber-600 hover:text-amber-700 font-medium">
+        políticas para compartir historias
+      </a>
+
+      y autorizo a Código Millonario a revisar, editar,
+      adaptar y publicar mi historia si es seleccionada.
+
+    </label>
+
+  </div>
+
+  <p id="politicasError" class="hidden text-sm text-red-600">
+    Debes aceptar las políticas para continuar.
+  </p>
+
+  <!-- Requisitos -->
+  <div class="flex items-start gap-3">
+
+    <input
+      type="checkbox"
+      id="requisitos"
+      required
+      class="mt-1 w-5 h-5">
+
+    <label for="requisitos" class="text-sm text-slate-600 leading-relaxed">
+
+      He leído los
+      <a href="/requisitos-para-enviar-historias.html"
+         class="text-amber-600 hover:text-amber-700 font-medium">
+        requisitos para enviar historias
+      </a>
+
+      y confirmo que mi contenido cumple con las condiciones establecidas.
+
+    </label>
+
+  </div>
+
+  <p id="requisitosError" class="hidden text-sm text-red-600">
+    Debes confirmar que leíste los requisitos.
+  </p>
+
+  <!-- Aviso -->
+  <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+
+    <p class="text-sm text-slate-600">
+      <strong>Aviso editorial:</strong>
+      El envío de una historia no garantiza su publicación.
+      Todas las historias son revisadas antes de ser publicadas.
+    </p>
+
+  </div>
+
+  <!-- Botón -->
+  <button
+    type="submit"
+    class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-4 rounded-xl transition duration-300">
+
+    Enviar Historia
+
+  </button>
+
+</form>
+
+<script>
+
+const form = document.getElementById('historiaForm');
+
+const nombre = document.getElementById('nombre');
+const correo = document.getElementById('correo');
+const historia = document.getElementById('historia');
+
+const politicas = document.getElementById('politicas');
+const requisitos = document.getElementById('requisitos');
+
+const nombreError = document.getElementById('nombreError');
+const correoError = document.getElementById('correoError');
+const historiaError = document.getElementById('historiaError');
+
+const politicasError = document.getElementById('politicasError');
+const requisitosError = document.getElementById('requisitosError');
+
+function validarCampo(campo, error) {
+
+  if (!campo.value.trim() || !campo.checkValidity()) {
+    error.classList.remove('hidden');
+    return false;
+  }
+
+  error.classList.add('hidden');
+  return true;
+}
+
+function validarCheckbox(box, error) {
+
+  if (!box.checked) {
+    error.classList.remove('hidden');
+    return false;
+  }
+
+  error.classList.add('hidden');
+  return true;
+}
+
+[nombre, correo, historia].forEach(campo => {
+
+  campo.addEventListener('input', () => {
+
+    if (campo === nombre) validarCampo(nombre, nombreError);
+    if (campo === correo) validarCampo(correo, correoError);
+    if (campo === historia) validarCampo(historia, historiaError);
+
+  });
+
+});
+
+politicas.addEventListener('change', () => {
+  validarCheckbox(politicas, politicasError);
+});
+
+requisitos.addEventListener('change', () => {
+  validarCheckbox(requisitos, requisitosError);
+});
+
+form.addEventListener('submit', function(e) {
+
+  const nombreValido = validarCampo(nombre, nombreError);
+  const correoValido = validarCampo(correo, correoError);
+  const historiaValida = validarCampo(historia, historiaError);
+
+  const politicasValidas = validarCheckbox(politicas, politicasError);
+  const requisitosValidos = validarCheckbox(requisitos, requisitosError);
+
+  if (
+    !nombreValido ||
+    !correoValido ||
+    !historiaValida ||
+    !politicasValidas ||
+    !requisitosValidos
+  ) {
+    e.preventDefault();
+  }
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
 
 
 
