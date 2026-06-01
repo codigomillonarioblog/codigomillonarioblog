@@ -1410,6 +1410,308 @@ margin-top:38px;
 
 
 
+
+<!-- TABLA DE CONTENIDOS -->
+<style>
+
+/* =========================
+   TOC CUADRADO MODERNO
+========================= */
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:140px;
+}
+
+/* SOLO esto para anclas */
+[id]{
+  scroll-margin-top:140px;
+}
+
+.cf-accordion{
+  margin-top:60px;
+  font-family:'Inter',sans-serif;
+}
+
+/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
+.cf-accordion-inner{
+  max-width:80rem;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+
+/* CUADRO */
+.cf-accordion-item{
+  width:260px;
+  min-height:70px;
+
+  margin:0;
+
+  border:1px solid red;
+
+  border-radius:6px;
+
+  background:#fff;
+
+  overflow:hidden;
+
+  transition:width .35s ease;
+}
+
+/* EXPANSIÓN */
+.cf-accordion-item.is-open{
+  width:680px;
+}
+
+/* HEADER */
+.cf-accordion-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 16px;
+
+  cursor:pointer;
+
+  font-size:17px;
+  font-weight:600;
+
+  color:#111827;
+  background:#fff;
+
+  border-bottom:none;
+}
+
+/* ICONO */
+.cf-menu-icon{
+  width:30px;
+  height:30px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  border:1px solid red;
+  border-radius:6px;
+
+  gap:4px;
+  box-sizing:border-box;
+}
+
+.cf-menu-icon span{
+  height:2px;
+  width:16px;
+  background:red;
+  border-radius:2px;
+}
+
+/* CONTENT */
+.cf-accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+}
+
+/* LISTA */
+.toc-container{
+  padding:8px 14px 14px 14px;
+}
+
+/* LISTA */
+.toc-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+/* ITEMS ULTRA COMPACTOS */
+.toc-list li{
+  padding:6px 0;
+  margin:0;
+  border:none;
+}
+
+/* LINKS */
+.toc-list a{
+  text-decoration:none;
+  color:#374151;
+
+  font-size:14px;
+  line-height:1.35;
+
+  display:block;
+
+  transition:all .2s ease;
+}
+
+/* HOVER AZUL */
+.toc-list a:hover{
+  color:blue;
+  transform:translateX(4px);
+}
+
+/* MOBILE */
+@media (max-width:480px){
+
+  .cf-accordion-item{
+    width:88%;
+  }
+
+  .cf-accordion-item.is-open{
+    width:100%;
+  }
+
+}
+
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+
+  <div class="cf-accordion-inner">
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+
+        <!-- HEADER -->
+        <div class="cf-accordion-header">
+
+          Tabla de contenidos
+
+          <div class="cf-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="cf-accordion-content">
+
+          <div class="toc-container">
+
+            <ul class="toc-list">
+    <li><a href="#titulo1">1. ¿Qué es Aval Pay Center en Colombia?</a></li>
+    <li><a href="#titulo2">2. ¿Por qué aparece Aval Pay Center en mi extracto bancario?</a></li>
+    <li><a href="#titulo3">3. ¿Cómo funcionan los procesadores de pago en Colombia?</a></li>
+    <li><a href="#titulo4">4. Un ejemplo común de por qué aparece Aval Pay Center en un pago</a></li>
+    <li><a href="#titulo5">5. Por qué Aval Pay Center no es el banco aunque esté relacionado con él</a></li>
+    <li><a href="#titulo6">6. ¿Tiene costos para el usuario usar Aval Pay Center y a quién pertenece realmente?</a></li>
+    <li><a href="#titulo7">7. ¿Aval Pay Center funciona solo en Colombia?</a></li>
+    <li><a href="#titulo8">8. ¿Aval Pay Center es seguro?</a></li>
+    <li><a href="#titulo9">9. ¿Qué hacer si no reconozco una transacción de Aval Pay Center?</a></li>
+    <li><a href="#titulo10">10. ¿Aval Pay Center es fraude o una transacción legítima?</a></li>
+    <li><a href="#titulo11">11. Por qué ves Aval Pay Center en tus transacciones bancarias</a></li>
+    <li><a href="#titulo12">12. Qué debes entender sobre Aval Pay Center</a></li>
+    <li><a href="#titulo13">13. Opinión del autor</a></li>
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<script>
+
+/* =========================
+   ACORDEÓN (igual)
+========================= */
+
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+  header.addEventListener('click',()=>{
+
+    const item = header.closest('.cf-accordion-item');
+    const content = item.querySelector('.cf-accordion-content');
+
+    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+      if(other!==item){
+        other.querySelector('.cf-accordion-content').style.maxHeight=null;
+      }
+    });
+
+    item.classList.toggle('is-open');
+
+    if(content.style.maxHeight){
+      content.style.maxHeight=null;
+    }else{
+      content.style.maxHeight=content.scrollHeight+'px';
+    }
+
+  });
+});
+
+
+/* =========================
+   SCROLL HÍBRIDO (FIX MÓVIL + PC)
+========================= */
+
+const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+  link.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    const id = this.getAttribute('href').substring(1);
+    const target = document.getElementById(id);
+
+    if(!target) return;
+
+    const offset = 140;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    history.pushState(null, null, '#' + id);
+
+    if(isMobile){
+      /* 🔥 MÓVIL: usa scroll nativo (más estable) */
+      window.scrollTo({
+        top: top,
+        behavior: 'smooth'
+      });
+    } else {
+      /* 💻 PC: animación más controlada */
+      const start = window.pageYOffset;
+      const distance = top - start;
+      const duration = 650;
+
+      let startTime = null;
+
+      function animate(time){
+        if(!startTime) startTime = time;
+
+        const progress = Math.min((time - startTime) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+
+        window.scrollTo(0, start + distance * ease);
+
+        if(progress < 1){
+          requestAnimationFrame(animate);
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+  });
+});
+
+</script>
+
+
+
+
+
+
 <!-- BLOQUE -->
 <h2 id="titulo1" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Qué es Aval Pay Center en Colombia?
@@ -1475,7 +1777,7 @@ margin-top:38px;
 
 
 <!-- BLOQUE -->
-<h2 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Cómo funcionan los procesadores de pago en Colombia?
 </h2>
 
@@ -1528,9 +1830,263 @@ margin-top:38px;
 
 
 
+<!-- ================= CONTENEDOR ================= -->
+ <div class="articulo-wrapper mt-20">
+
+  <!-- TEXTO SUPERIOR -->
+  <div class="texto-interes">
+    También te puede interesar:
+  </div>
+
+  <style>
+
+  /* ================= CONTENEDOR PADRE ================= */
+.articulo-wrapper{
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+  /* ================= TEXTO SUPERIOR (MODERNO) ================= */
+  .texto-interes{
+    position: absolute;
+    top: -28px;
+    left: 0;
+
+    font-family: 'Inter', sans-serif; /* 👈 moderno */
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  /* ================= TARJETA ================= */
+  .articulo-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    width: 100%;
+    max-width: 720px;
+    margin: 0;
+
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 0;
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: #000;
+
+    min-height: 140px;
+    transition: opacity 0.2s ease;
+  }
+
+  /* ================= HOVER SOLO DESKTOP ================= */
+  @media (min-width: 769px) {
+    .articulo-box:hover {
+      opacity: 0.85;
+    }
+  }
+
+  /* ================= MAIN ================= */
+  .articulo-main {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    padding: 10px 15px 50px 15px;
+  }
+
+  /* ================= IMAGEN ================= */
+  .articulo-img {
+    width: 200px;
+    height: 110px;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* ================= CONTENIDO ================= */
+  .articulo-contenido {
+    flex: 1;
+    padding-left: 210px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ================= TITULO ================= */
+  .articulo-titulo h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+    color: #000;
+  }
+
+  /* ================= DESCRIPCIÓN ================= */
+  .articulo-descripcion {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  /* ================= BOTÓN ================= */
+  .articulo-boton {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    border-top: 1px solid #ddd;
+    background: #fff;
+
+    padding: 8px 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .articulo-boton-texto{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #444;
+  }
+
+  .articulo-boton span {
+    background: #fff;
+    color: #000;
+
+    border: 1px solid #ddd;
+    padding: 4px 10px;
+
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  /* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .articulo-box:hover {
+    opacity: 1 !important;
+  }
+
+  .articulo-descripcion {
+  display: none;
+}
+
+  .texto-interes{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 10px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  .articulo-box {
+    max-width: 100%;
+    border: none;
+    border-bottom: 1px solid #ececec;
+    padding: 10px 0 0 0;   /* 👈 IMPORTANTE: quitamos padding inferior */
+  }
+
+  .articulo-main {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .articulo-img {
+    width: 100%;
+    height: 120px;
+    position: relative;
+  }
+
+  .articulo-contenido {
+    padding-left: 0;
+  }
+
+  .articulo-titulo h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    letter-spacing: -0.6px;
+  }
+
+  .articulo-descripcion {
+    font-size: 13px;
+    color: #666;
+  }
+
+  .articulo-boton {
+    position: relative;
+    margin-top: 6px;       /* 👈 más natural */
+    padding-top: 8px;      /* 👈 línea mejor alineada */
+    border-top: 1px solid #ececec;
+    background: transparent;
+  }
+}
+  </style>
+
+  <!-- ================= TARJETA ================= -->
+  <a href="https://codigomillonario.blog/blog/mentalidad-de-exito/como-hacerse-millonario-colombia.html" class="articulo-box">
+
+    <img 
+      src="../../assets/png/como-hacerse-millonario-colombia-desde-cero-2026.webp" 
+      class="articulo-img"
+      alt="Persona construyendo riqueza y patrimonio para hacerse millonario en Colombia desde cero">
+
+    <div class="articulo-main">
+      <div class="articulo-contenido">
+
+        <div class="articulo-titulo">
+          <h2>
+Cómo hacerse millonario en Colombia sin herencias, sin suerte y sin atajos
+          </h2>
+        </div>
+
+        <div class="articulo-descripcion">
+Descubre qué se necesita realmente para construir riqueza en Colombia desde cero.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="articulo-boton">
+      <div class="articulo-boton-texto">
+        Lo más leído:
+      </div>
+      <span>Ir</span>
+    </div>
+
+  </a>
+
+</div>
+
+
+
+
 
 <!-- BLOQUE -->
-<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
     Un ejemplo común de por qué aparece Aval Pay Center en un pago
 </h2>
 
@@ -1567,7 +2123,7 @@ margin-top:38px;
 
 
 <!-- BLOQUE -->
-<h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
     Por qué Aval Pay Center no es el banco aunque esté relacionado con él
 </h2>
 
@@ -1597,7 +2153,7 @@ margin-top:38px;
 
 
 <!-- BLOQUE -->
-<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
   ¿Tiene costos para el usuario usar Aval Pay Center y a quién pertenece realmente?
 </h2>
 
@@ -1622,6 +2178,14 @@ margin-top:38px;
 <p>
   En cuanto a su naturaleza, Aval Pay Center se asocia al ecosistema tecnológico del Grupo Aval en Colombia. 
 </p>
+
+</div>
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
   No suele identificarse como una entidad bancaria independiente, sino como una referencia asociada a procesos de pago y transacciones electrónicas.
@@ -1654,7 +2218,7 @@ margin-top:38px;
 
 
 <!-- BLOQUE -->
-<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+<h2 id="titulo7" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
 ¿Aval Pay Center funciona solo en Colombia?
 </h2>
 
@@ -1678,7 +2242,7 @@ margin-top:38px;
 
 
 <!-- BLOQUE -->
-<h2 id="titulo7" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+<h2 id="titulo8" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
 ¿Aval Pay Center es seguro?
 </h2>
 
@@ -1718,7 +2282,7 @@ margin-top:38px;
 
 
 <!-- BLOQUE -->
-<h2 id="titulo8" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-28 leading-tight tracking-tight">
+<h2 id="titulo9" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-28 leading-tight tracking-tight">
 ¿Qué hacer si no reconozco una transacción de Aval Pay Center?
 </h2>
 
@@ -1802,9 +2366,56 @@ Como última opción, puedes contactar a tu banco
 
 
 
+<!-- ================= CONTENEDOR ================= -->
+ <div class="articulo-wrapper mt-20">
+
+  <!-- TEXTO SUPERIOR -->
+  <div class="texto-interes">
+    También te puede interesar:
+  </div>
+
+  <!-- ================= TARJETA ================= -->
+  <a href="https://codigomillonario.blog/blog/negocios/errores-negocios-nuevos-como-evitar-fracaso.html" class="articulo-box">
+
+    <img 
+      src="../../assets/png/errores-negocios-nuevos-emprendimiento.webp" 
+      class="articulo-img"
+      alt="Persona revisando documentos financieros mientras planifica un nuevo negocio">
+
+    <div class="articulo-main">
+      <div class="articulo-contenido">
+
+        <div class="articulo-titulo">
+          <h2>
+La dura realidad de los negocios nuevos: errores que debes evitar
+          </h2>
+        </div>
+
+        <div class="articulo-descripcion">
+Conoce los errores más comunes que llevan al fracaso a muchos negocios nuevos.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="articulo-boton">
+      <div class="articulo-boton-texto">
+        Lo más leído:
+      </div>
+      <span>Ir</span>
+    </div>
+
+  </a>
+
+</div>
+
+
+
+
+
 
 <!-- BLOQUE -->
-<h2 id="titulo9" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo10" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Aval Pay Center es fraude o una transacción legítima?
 </h2>
 
@@ -1979,7 +2590,7 @@ Su nombre suele estar relacionado con operaciones y procesos de pago dentro del 
 
 
 <!-- BLOQUE -->
-<h2 id="titulo10" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo11" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 Por qué ves Aval Pay Center en tus transacciones bancarias
 </h2>
 
@@ -2012,7 +2623,7 @@ En muchos casos, la aparición de Aval Pay Center está relacionada con una tran
 
 
 <!-- BLOQUE -->
-<h2 id="titulo11" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo12" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 Qué debes entender sobre Aval Pay Center
 </h2>
 
@@ -2065,7 +2676,7 @@ Ante cualquier duda, la verificación con la entidad financiera sigue siendo la 
 
 </section>
 
-<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+<div id="titulo13" class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Al investigar este tema encontré que muchas personas no se preocupan por cómo se procesa un pago hasta que aparece un nombre desconocido en su cuenta bancaria. Es justamente en ese momento cuando suelen surgir las dudas relacionadas con Aval Pay Center.
