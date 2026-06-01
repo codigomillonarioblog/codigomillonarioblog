@@ -1,0 +1,1475 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre el Medio: Educación Financiera y desarroyo de mentalidad | Código Millonario</title>
+    <meta name="description" content="Código Millonario es un medio de educación financiera y emprendimiento online. Encuentra guías, consejos y recursos para mejorar tus finanzas y crecer tu negocio.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/favicon-v45.png" type="image/png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+<style>
+ html, body { height: 100%; font-family: 'Poppins', sans-serif; margin:0; padding:0; }
+
+body, html {
+  background-color: #ffffff !important;
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="./assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Newsletter
+    </button>
+
+    <!-- INPUT -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* INPUT */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
+}
+
+</style>
+
+<script>
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
+
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
+
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="./assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="./blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="./blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="./blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="./blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="./blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="./blog/negocios/index.html">Modelos de Negocio</a>
+<a href="./tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="./index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="./index.html">Inicio</a></li>
+      <li><a href="./educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="./mentalidad/index.html">Mentalidad</a></li>
+      <li><a href="./blog/negocios/index.html">Negocios</a></li>
+      <li><a href="./herramientas.html">Herramientas</a></li>
+      <li><a href="./opiniones.html">Opiniones</a></li>
+      <li><a href="./nuestro-equipo.html">Staff</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+<div id="mobileMenu">
+
+  <button id="closeMobileMenu">&times;</button>
+
+  <div class="mobile-menu-logo">
+    <img src="./assets/img/codigo-millonario-logo.png" alt="Código Millonario">
+  </div>
+
+  <div class="mobile-menu-links">
+
+    <a href="./index.html">Inicio</a>
+
+    <a href="./educacion-financiera.html">
+      Educación Financiera
+    </a>
+
+    <a href="./mentalidad/index.html">
+      Mentalidad
+    </a>
+
+    <a href="./blog/negocios/index.html">
+      Negocios
+    </a>
+
+    <a href="./herramientas.html">
+      Herramientas
+    </a>
+
+    <a href="./opiniones.html">
+      Opiniones
+    </a>
+
+    <a href="./nuestro-equipo.html">
+      Staff
+    </a>
+
+    <a href="./contacto.html">
+      Contacto
+    </a>
+
+  </div>
+</div>
+
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #111111; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+.mobile-menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.mobile-menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+#closeMobileMenu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.mobile-menu-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+}
+
+.mobile-menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+@media(min-width: 768px) {
+  .navbar-menu li:nth-child(4) {
+    position: relative;
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+
+  .navbar-menu li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: -9px; /* mover la línea hacia el centro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: rgba(223, 222, 222, 0.85);
+  }
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('./assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+const closeMobileMenu =
+document.getElementById('closeMobileMenu');
+
+closeMobileMenu.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+</script>
+
+
+
+
+
+
+
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 250px;"></div>
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+
+
+<style>
+.marquee-line {
+  height: 1px;            /* línea delgada */
+  background-color: #ccc;  /* gris claro */
+  width: 100%;            /* ocupa todo el contenedor */
+  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
+}
+</style>
+
+
+<style>
+.marquee-line {
+  width: 100%;
+}
+</style>
+
+
+
+<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+  <span class="block">
+Equipo Editorial de Código Millonario
+  </span>
+</div>
+
+
+<div class="flex flex-col items-center justify-center mt-6 gap-2 text-center lg:-ml-40"
+     style="font-family: 'Montserrat', sans-serif;">
+
+<img src="./assets/img/fundador-codigo-millonario.webp" 
+     alt="Francisco Urrego - Código Millonario"
+     class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover shadow-sm">
+
+       <h1 style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
+
+<p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+Director Editorial – Código Millonario
+</p>
+
+  
+    Francisco Javier Urrego Zapata<br>
+
+    <a href="mailto:codigomillonarioblog@gmail.com?subject=Contacto%20desde%20el%20blog"
+   style="display:inline-flex;
+          align-items:center;
+          gap:5px;
+          text-decoration:none;
+          color:#666;
+          font-family:Arial, sans-serif;
+          font-size:12px;">
+
+  <span style="display:inline-block; width:16px; height:16px;">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="#888888"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         width="100%"
+         height="100%">
+      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+      <polyline points="3,7 12,13 21,7"></polyline>
+    </svg>
+  </span>
+
+  codigomillonarioblog@gmail.com
+
+</a>
+  </h1>
+</div>
+
+
+
+
+<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+  <span class="block">
+    Detalles
+  </span>
+</div>
+
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-10">
+  <div class="max-w-4xl px-4 md:px-8" style="margin-left:0;">
+    <article class="content-column">
+
+      <div class="text-stone-700 leading-relaxed space-y-4 md:space-y-6" style="font-family: 'Open Sans', sans-serif; text-align: left;">
+
+        <p>
+          Francisco Javier Urrego Zapata es el fundador y Director Editorial de Código Millonario, medio digital enfocado en educación financiera, pensamiento estratégico y desarrollo de mentalidad patrimonial.
+          Especialista en educación financiera, mentalidad estratégica y construcción de patrimonio en Latinoamérica.
+        </p>
+
+        <p>
+          Además, Francisco es un escritor colombiano y autor de libros publicados en fuentes reconocidas.
+        </p>
+
+        <p>
+          Su trabajo se centra en analizar hábitos financieros, modelos de riqueza y estrategias de crecimiento personal desde una perspectiva realista y aplicada al contexto latinoamericano.
+        </p>
+
+        <p>
+          A través de artículos de análisis, biografías empresariales y guías prácticas, busca ofrecer contenido estructurado, profundo y libre de promesas irreales.
+        </p>
+
+        <p>
+          Código Millonario no promueve atajos financieros ni fórmulas de enriquecimiento rápido.  
+          La línea editorial se basa en disciplina financiera, pensamiento a largo plazo y construcción progresiva de activos.
+        </p>
+
+        <p>
+          <strong>Especialización</strong><br>
+          Educación financiera básica y avanzada
+        </p>
+
+        <p>Construcción de patrimonio</p>
+        <p>Mentalidad empresarial</p>
+        <p>Análisis de modelos de negocio</p>
+        <p>Biografías de empresarios y fundadores</p>
+
+        <p>
+Código Millonario es un proyecto editorial sobre dinero, mentalidad financiera, éxito y negocios.
+El sitio fue publicado en septiembre de 2025.
+        </p>
+
+      </div>
+
+    </article>
+  </div>
+</main>
+
+
+
+
+<div class="mt-20 left-block flex flex-col justify-center items-start mb-0 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+  <span class="block">
+Publicaciones destacadas
+  </span>
+</div>
+
+
+
+<section class="main-layout mt-1" >
+
+  <!-- Sidebar ahora queda a la IZQUIERDA -->
+  <aside class="sidebar">
+
+  <div class="w-full h-px bg-slate-300"></div>
+
+    <!-- Noticia 1 -->
+    <a href="./blog/mentalidad-de-exito/errores-comunes-de-la-clase-media.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/claridad-mental-resultados-reales.webp" alt="Invertir con claridad">
+      </div>
+      <div class="news-text">
+          <h3>Estos son los 9 errores comunes que comete la clase media y frenan el progreso financiero que debes evitar.</h3>
+          <p>La clase media no está en crisis por falta de ingresos, sino por falta de estructura financiera que transforme 
+            el salario en libertad real.</p>
+      </div>
+    </a>
+
+        <!-- Noticia 2 -->
+    <a href="./blog/psicologia-del-dinero/no-ahorrar-te-roba-libertad-financiera.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/sin-ahorro-no-decides-tu.webp" alt="Invertir con claridad">
+      </div>
+      <div class="news-text">
+          <h3>¿Sabías que la falta de ahorro te puede empujar a vivir en modo supervivencia por mucho tiempo sin darte cuenta?</h3>
+          <p>Ahorrar no es acumular dinero, es recuperar la capacidad de decir ‘no’ y elegir tu propio camino con 
+            claridad en todo momento.</p>
+      </div>
+    </a>
+        <!-- Noticia 3 -->
+    <a href="./blog/empleo/mejorar-tu-empleo/errores-carrera.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/7-errores-comunes-en-la-carrera-laboral.webp" alt="Invertir con claridad">
+      </div>
+      <div class="news-text">
+          <h3>Los 7 errores típicos que están frenando tu crecimiento profesional sin darte cuenta (y cómo corregirlos a tiempo) </h3>
+          <p>El estancamiento casi nunca llega de golpe; empieza cuando dejas de actualizarte y te convences de que “con lo 
+            que sabes es suficiente”.</p>
+      </div>
+    </a>
+        <!-- Noticia 4 -->
+    <a href="./blog/biografia-de-millonarios/fundador-de-kfc-construyo-su-fortuna.html" class="news-item">
+      <div class="news-thumb">
+        <img src="./assets/png/colonel-sanders-historia-de-riqueza.webp" alt="Invertir con claridad">
+      </div>
+      <div class="news-text">
+          <h3>cómo un hombre fracasó durante décadas antes de triunfar a los 65 con KFC. Mentalidad exitosa o fue suerte?</h3>
+          <p>Muchos creen que a los 60 ya es tarde para empezar algo grande.
+          La historia de Sanders demuestra que la persistencia estratégica vence cualquier fracaso.</p>
+      </div>
+    </a>
+
+      </aside>
+</section>
+
+<style>
+/* CONTENEDOR GENERAL */
+.main-layout {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Sidebar más ancho */
+.sidebar {
+  flex: 1;
+  max-width: 700px; /* ← MÁS ANCHO */
+}
+
+/* Título */
+.sidebar-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+/* Tarjeta noticia estilo portal */
+.news-item {
+  display: flex;
+  gap: 24px;
+  text-decoration: none;
+  color: inherit;
+  padding: 22px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+/* Imagen RECTANGULAR horizontal */
+.news-thumb {
+  width: 260px;      /* más larga */
+  height: 140px;     /* menos alta */
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+/* Texto */
+.news-text {
+  flex: 1;
+}
+
+.news-text h3 {
+  font-size: 20px; /* más grande */
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+}
+
+.news-text p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    max-width: 100%;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+
+
+
+
+
+
+<div class="mt-20 left-block flex flex-col justify-center items-start mb-0 max-w-4xl px-4 md:px-0"
+     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
+  <span class="block">
+  Sus Obras
+  </span>
+</div>
+
+
+<!-- INTRODUCCIÓN GENERAL -->
+<main class="py-10">
+  <div class="max-w-4xl px-4 md:px-8" style="margin-left:0;">
+    <article class="content-column">
+
+      <div class="text-stone-700 leading-relaxed space-y-4 md:space-y-6"
+           style="font-family: 'Open Sans', sans-serif; text-align: left;">
+
+Además de este proyecto, Francisco es creador de diversas obras que exploran la ficción, la mentalidad de éxito y el desarrollo personal. 
+Estas publicaciones forman parte de la trayectoria como escritor 
+y reflejan su interés constante por las ideas, el crecimiento y la construcción a largo plazo.
+
+      </div>
+
+    </article>
+  </div>
+</main>
+
+<!-- Libros -->
+<div class="flex flex-col sm:flex-row gap-8 mt-20 justify-center text-center">
+
+  <!-- Libro 1 -->
+  <div class="flex flex-col items-center w-48">
+    
+    <div class="min-h-[110px] flex flex-col justify-start">
+      <p>
+        📙 <strong>Los 4 Bloques de la <br>Mentalidad Millonaria</strong><br>
+        <a href="https://hotmart.com/es/marketplace/productos/los-4-bloques-de-la-mentalidad-millonaria/M102522956G" 
+           target="_blank" 
+           class="text-blue-600 hover:underline">
+          Ver en Hotmart
+        </a>
+      </p>
+    </div>
+
+    <img src="./assets/img/Los-4-Bloques-Mentalidad-Millonaria.webp"
+         alt="Portada del libro Los 4 Bloques de la Mentalidad Millonaria - Francisco Urrego"
+         class="w-32 h-48 object-cover rounded-lg shadow-md mt-3">
+  </div>
+
+  <!-- Libro 2 -->
+  <div class="flex flex-col items-center w-48">
+    
+    <div class="min-h-[110px] flex flex-col justify-start">
+      <p>
+        📘 <strong>La Mente del Mañana</strong><br>
+        <a href="https://www.amazon.com/-/es/FRANCISCO-JAVIER-URREGO-ZAPATA-ebook/dp/B0B1TYJ2H4" 
+           target="_blank" 
+           class="text-blue-600 hover:underline">
+          Ver en Amazon
+        </a><br>
+        <strong>2022</strong>
+      </p>
+    </div>
+
+    <img src="./assets/img/la-mente-del-manana.webp"
+         alt="Portada del libro La Mente del Mañana - Francisco Urrego"
+         class="w-32 h-48 object-cover rounded-lg shadow-md mt-3">
+  </div>
+
+  <!-- Libro 3 -->
+  <div class="flex flex-col items-center w-48">
+    
+    <div class="min-h-[110px] flex flex-col justify-start">
+      <p>
+        📙 <strong>TIEMPO</strong><br>
+        <a href="https://www.amazon.com/TIEMPO-Spanish-FRANCISCO-JAVIER-URREGO/dp/B09ZZXHS56" 
+           target="_blank" 
+           class="text-blue-600 hover:underline">
+          Ver en Amazon
+        </a><br>
+        <strong>2022</strong>
+      </p>
+    </div>
+
+    <img src="./assets/img/el-tiempo-libro.webp"
+         alt="Portada del libro TIEMPO - Francisco Urrego"
+         class="w-32 h-48 object-cover rounded-lg shadow-md mt-3">
+  </div>
+
+</div>
+
+<!-- Línea legal -->
+<div class="max-w-3xl mx-auto px-4 sm:px-6 mt-16">
+    <div class="w-full h-px bg-slate-200"></div>
+</div>
+
+
+
+
+<p style="font-family: 'Open Sans', sans-serif; 
+          text-align: center; 
+          margin-top: 80px; 
+          margin-bottom: 80px;">
+  “La educación financiera no es motivación temporal, es estructura mental permanente.”
+</p>
+
+ 
+
+
+
+
+
+
+<script>
+lucide.createIcons();
+
+document.querySelectorAll('.toggle-desc').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const desc = btn.nextElementSibling;
+    const isOpen = desc.style.display === 'block';
+    desc.style.display = isOpen ? 'none' : 'block';
+    btn.innerHTML = isOpen ? '&gt; Leer descripción' : 'Cerrar descripción';
+  });
+});
+</script>
+
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+
+</body>
+</html>
+
