@@ -3863,150 +3863,87 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 
 
 
-<section class="main-layout reviews-block">
-  <aside class="sidebar">
+<!-- SECCIÓN EDITORIAL UNIFICADA -->
+<section class="max-w-3xl mx-auto px-4 py-12 font-[Inter] text-slate-900">
 
-    <div class="divider"></div>
+  <!-- BLOQUE PRINCIPAL -->
+  <div class="border-t border-slate-200 pt-8">
 
-    <h3 class="reviews-title">Lo que encontrarás en Código Millonario</h3>
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-6">
+      Lo que encontrarás en Código Millonario
+    </h2>
 
-    <!-- Item 1 -->
-    <div class="review-item">
-      <div class="review-icon">01</div>
-      <div class="review-content">
-        <h3>Educación financiera práctica</h3>
-        <span class="review-label">Ahorro · Control de gastos · Organización financiera</span>
-        <p>
-          Aprende principios financieros aplicables a la vida real para mejorar tu relación con el dinero 
+    <!-- ITEM 1 -->
+    <div class="flex gap-4 py-5 border-b border-slate-100">
+      <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-900 text-white text-sm font-bold">
+        01
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg">Educación financiera práctica</h3>
+        <p class="text-sm text-slate-500 mt-1">
+          Ahorro · Control de gastos · Organización financiera
+        </p>
+        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+          Aprende principios financieros aplicables a la vida real para mejorar tu relación con el dinero
           y desarrollar hábitos económicos más inteligentes.
         </p>
       </div>
     </div>
 
-    <!-- Item 2 -->
-    <div class="review-item">
-      <div class="review-icon">02</div>
-      <div class="review-content">
-        <h3>Mentalidad financiera</h3>
-        <span class="review-label">Psicología del dinero · Hábitos</span>
-        <p>
+    <!-- ITEM 2 -->
+    <div class="flex gap-4 py-5 border-b border-slate-100">
+      <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-900 text-white text-sm font-bold">
+        02
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg">Mentalidad financiera</h3>
+        <p class="text-sm text-slate-500 mt-1">
+          Psicología del dinero · Hábitos
+        </p>
+        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
           Comprende cómo tus decisiones, creencias y patrones diarios influyen directamente en tu estabilidad económica.
         </p>
       </div>
     </div>
 
-    <!-- Item 3 -->
-    <div class="review-item">
-      <div class="review-icon">03</div>
-      <div class="review-content">
-        <h3>Construcción de activos</h3>
-        <span class="review-label">Patrimonio · Crecimiento a largo plazo</span>
-        <p>
-          Descubre conceptos clave sobre activos, generación de valor y estrategias para construir una base financiera más sólida.
+    <!-- ITEM 3 -->
+    <div class="flex gap-4 py-5 border-b border-slate-100">
+      <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-900 text-white text-sm font-bold">
+        03
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg">Construcción de activos</h3>
+        <p class="text-sm text-slate-500 mt-1">
+          Patrimonio · Crecimiento a largo plazo
+        </p>
+        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+          Descubre conceptos clave sobre activos, generación de valor y estrategias para construir una base financiera sólida.
         </p>
       </div>
     </div>
 
-  </aside>
+    <!-- CTA FINAL (UNIFICADO) -->
+    <div class="pt-10 mt-6 border-t border-slate-200">
+
+      <h3 class="text-lg font-semibold mb-2">
+        ¿Tienes una historia financiera que contar?
+      </h3>
+
+      <p class="text-sm text-slate-600 leading-relaxed mb-4">
+        En Código Millonario recopilamos experiencias reales sobre dinero, emprendimiento,
+        inversiones, trabajo y crecimiento financiero. Tu historia puede ayudar a otros.
+      </p>
+
+      <a href="./opiniones.html#FORMULARIO-HISTORIA"
+         class="inline-block font-medium text-amber-600 hover:text-amber-700 transition">
+        Compartir mi historia
+      </a>
+
+    </div>
+
+  </div>
+
 </section>
-
-<style>
-
-.reviews-block{
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 20px 0;
-  font-family: "Inter", sans-serif;
-  color: #111;
-}
-
-/* DIVISOR */
-.divider{
-  width: 100%;
-  height: 1px;
-  background: #e5e7eb;
-  margin-bottom: 20px;
-}
-
-/* TÍTULO PRINCIPAL */
-.reviews-title{
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  margin-bottom: 28px;
-  line-height: 1.2;
-}
-
-/* ITEM */
-.review-item{
-  display: flex;
-  gap: 16px;
-  padding: 22px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.review-item:last-child{
-  border-bottom: none;
-}
-
-/* NÚMERO */
-.review-icon{
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: #111;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-/* CONTENIDO */
-.review-content h3{
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-}
-
-.review-label{
-  display: block;
-  font-size: 0.78rem;
-  color: #6b7280;
-  margin-top: 6px;
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-
-.review-content p{
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: #374151;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px){
-  .reviews-block{
-    max-width: 100%;
-    padding: 0 16px;
-  }
-
-  .reviews-title{
-    font-size: 1.3rem;
-  }
-
-  .review-content p{
-    font-size: 0.88rem;
-  }
-}
-
-</style>
-
-
 
 
 
@@ -4016,14 +3953,13 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 
 
 
-
-
-
 <div style="margin: 0 auto; max-width:700px; padding:0 15px;">
-  <h2 class="subtitulo-editorial" style="margin-bottom:30px; line-height:1.3;">
+  <h2 class="subtitulo-editorial text-xl md:text-lg lg:text-sm"
+      style="margin-bottom:30px; line-height:1.3;">
     Preguntas frecuentes
   </h2>
 </div>
+
 
 
 
