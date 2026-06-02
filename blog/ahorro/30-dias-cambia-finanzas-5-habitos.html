@@ -1168,225 +1168,245 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 /* RESET */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-background:#fff;
+  background:#fff;
 }
 
 /* HERO */
 .uvo-hero{
-padding:72px 0 88px;
+  padding:72px 0 88px;
 }
 
 /* CONTAINER */
 .uvo-container{
-max-width:920px;
-margin:auto;
-padding:0 32px;
+  max-width:920px;
+  margin:auto;
+  padding:0 32px;
+}
+
+/* IMAGE WRAPPER */
+.uvo-image-wrapper{
+  width:100%;
+  overflow:hidden;
+}
+
+.uvo-image-wrapper img{
+  display:block;
+  max-width:100%;
+  height:auto;
 }
 
 /* CATEGORY */
 .uvo-category{
-display:inline-block;
-margin-bottom:30px;
+  display:inline-block;
+  margin-bottom:30px;
 
-font-family:'Inter',sans-serif;
-font-size:11px;
-font-weight:600;
-letter-spacing:.18em;
-text-transform:uppercase;
-color:#8b7355;
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#8b7355;
 }
 
 /* TITLE */
 .uvo-title{
-max-width:860px;
+  max-width:860px;
 
-font-family:'Cormorant Garamond',serif;
-font-size:clamp(3rem,5vw,5rem);
-font-weight:600;
-line-height:1.04;
-letter-spacing:-0.032em;
-color:#111827;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5vw,5rem);
+  font-weight:600;
+  line-height:1.04;
+  letter-spacing:-0.032em;
+  color:#111827;
 
-text-wrap:balance;
+  text-wrap:balance;
 }
 
 /* DESCRIPTION */
 .uvo-description{
-max-width:760px;
-margin-top:34px;
+  max-width:760px;
+  margin-top:34px;
 
-font-family:'Inter',sans-serif;
-font-size:1.08rem;
-line-height:1.95;
-color:#4b5563;
+  font-family:'Inter',sans-serif;
+  font-size:1.08rem;
+  line-height:1.95;
+  color:#4b5563;
 }
 
 /* META */
 .uvo-meta{
-display:flex;
-justify-content:space-between;
-align-items:center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-margin-top:52px;
-padding-top:24px;
-border-top:1px solid #e5e7eb;
+  margin-top:52px;
+  padding-top:24px;
+  border-top:1px solid #e5e7eb;
 }
 
 /* AUTHOR */
 .uvo-author{
-display:flex;
-align-items:center;
-gap:12px;
-flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
 /* AVATAR */
 .uvo-avatar{
-width:44px;
-height:44px;
-border-radius:50%;
-object-fit:cover;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
 }
 
-/* LABEL (AUTOR) */
+/* LABEL */
 .uvo-label{
-font-family:'Inter',sans-serif;
-font-size:10px;
-font-weight:600;
-letter-spacing:.14em;
-text-transform:uppercase;
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
 
-color:#111827;
-margin-bottom:2px;
+  color:#111827;
+  margin-bottom:2px;
 }
 
 /* AUTHOR NAME */
 .uvo-author-name{
-font-family:'Inter',sans-serif;
-font-size:13px;
-font-weight:600;
-color:#111827;
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:600;
+  color:#111827;
 }
 
 /* LINK AUTHOR */
 .uvo-author-link{
-color:#111827;
-text-decoration:none;
-border-bottom:1px solid transparent;
-transition:.2s ease;
+  color:#111827;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:.2s ease;
 }
 
 .uvo-author-link:hover{
-border-bottom:1px solid #111827;
+  border-bottom:1px solid #111827;
 }
 
 /* DATE */
 .uvo-date{
-margin-top:4px;
+  margin-top:4px;
 
-font-family:'Inter',sans-serif;
-font-size:11px;
-font-weight:500;
-letter-spacing:.02em;
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.02em;
 
-color:#4b5563;
+  color:#4b5563;
 }
 
 /* SOCIALS */
 .uvo-socials{
-display:flex;
-gap:8px;
+  display:flex;
+  gap:8px;
 }
 
-/* BOTONES CUADRADOS */
 .uvo-socials a{
-width:42px;
-height:42px;
+  width:42px;
+  height:42px;
 
-display:flex;
-align-items:center;
-justify-content:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-border:1px solid #e5e7eb;
-background:#fff;
+  border:1px solid #e5e7eb;
+  background:#fff;
 
-color:#6b7280;
+  color:#6b7280;
+  text-decoration:none;
 
-text-decoration:none;
-
-transition:all .2s ease;
+  transition:all .2s ease;
 }
 
 .uvo-socials a:hover{
-transform:translateY(-2px);
-
-background:#111827;
-border-color:#111827;
-color:#fff;
+  transform:translateY(-2px);
+  background:#111827;
+  border-color:#111827;
+  color:#fff;
 }
 
-/* ICONOS */
 .uvo-socials i,
 .uvo-socials svg{
-font-size:15px;
-width:15px;
-height:15px;
-fill:currentColor;
+  width:15px;
+  height:15px;
+  font-size:15px;
+  fill:currentColor;
 }
 
 /* MOBILE */
 @media (max-width:768px){
 
-.uvo-hero{
-padding:42px 0 60px;
-}
+  .uvo-hero{
+    padding:42px 0 60px;
+  }
 
-.uvo-container{
-padding:0 20px;
-}
+  .uvo-container{
+    padding:0 20px;
+  }
 
-.uvo-title{
-font-size:2.18rem;
-line-height:1.12;
-letter-spacing:-0.012em;
-}
+  .uvo-title{
+    font-size:2.18rem;
+    line-height:1.12;
+    letter-spacing:-0.012em;
+  }
 
-.uvo-description{
-margin-top:24px;
-font-size:1rem;
-line-height:1.82;
-}
+  .uvo-description{
+    margin-top:24px;
+    font-size:1rem;
+    line-height:1.82;
+  }
 
-.uvo-meta{
-flex-direction:column;
-align-items:flex-start;
-gap:24px;
-margin-top:38px;
-}
+  .uvo-meta{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    margin-top:38px;
+  }
+
+  .uvo-socials{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    max-width:100%;
+  }
+
+  .uvo-image-wrapper > div{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px;
+    padding-right:20px;
+    box-sizing:border-box;
+  }
 
 }
 
 </style>
 
 
-<!-- INTRODUCCIÓN GENERAL -->
-<main class="py-8">
-
-  <div class="w-full">
-
-    <article class="max-w-5xl mx-auto px-6 md:px-8 text-left">
-
-      <div class="mt-5 mb-6">
 
 
 
 
+
+
+<!-- CONTENEDOR -->
+<main>
+<article class="max-w-5xl mx-auto px-6 md:px-8">
 
 <!-- INTRODUCCIÓN -->
 <div class="text-stone-700 leading-relaxed mb-1 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
@@ -2536,6 +2556,7 @@ La mayoría de emprendedores se enfocan tanto en crecer que olvidan analizar por
 
 
 
+
   <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
 
@@ -2545,7 +2566,6 @@ La mayoría de emprendedores se enfocan tanto en crecer que olvidan analizar por
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
 
-
 <p class="text-3xl font-semibold text-stone-900 mb-5 mt-20">Artículos relacionados:</p>
 
 <p class="interlink-heading text-left text-sm mb-4"
@@ -2553,11 +2573,10 @@ La mayoría de emprendedores se enfocan tanto en crecer que olvidan analizar por
   ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
 </p>
 
-
-
-
-  </div>
+</article>
 </main>
+
+
 
 
 
