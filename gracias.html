@@ -26,40 +26,82 @@
 </head>
 
 
-<body class="bg-stone-50 text-stone-900 flex items-center justify-center min-h-screen" style="font-family: 'Poppins', sans-serif;">
 
-    <div class="bg-white shadow-xl rounded-2xl p-10 max-w-lg mx-auto text-center animate-fadeIn">
 
-        <div class="flex justify-center mb-6">
-            <i data-lucide="check-circle" class="w-16 h-16 text-green-600"></i>
-        </div>
 
-        <h1 class="text-3xl font-bold text-stone-900 mb-3">
-            ¡Mensaje enviado correctamente!
-        </h1>
 
-        <p class="text-lg text-stone-600 mb-6 leading-relaxed">
-            Gracias por ponerte en contacto conmigo.  
-            Te responderé lo antes posible.
-        </p>
+<body class="bg-stone-50 text-stone-900 min-h-screen flex items-center"
+      style="font-family:'Inter',sans-serif;">
 
-        <a href="./index.html"
-           class="inline-block bg-green-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-green-700 transition shadow">
-            Volver al Inicio
-        </a>
+  <main class="max-w-4xl mx-auto px-6 py-10 md:py-16 animate-fadeIn">
+
+    <div class="w-12 h-px bg-stone-400 mb-5"></div>
+
+    <p class="text-xs uppercase tracking-[0.25em] text-stone-500 mb-4">
+      Confirmación
+    </p>
+
+    <h1 class="text-3xl md:text-6xl font-normal text-stone-700 leading-tight tracking-tight mb-5">
+      Mensaje enviado correctamente.
+    </h1>
+
+    <p class="text-base md:text-xl text-stone-600 leading-relaxed max-w-2xl">
+      Gracias por ponerte en contacto con Código Millonario.
+      Tu mensaje ha sido recibido y será revisado lo antes posible.
+    </p>
+
+    <div class="mt-8">
+
+      <a href="./index.html"
+         class="inline-flex items-center text-stone-700 hover:text-stone-900 transition-colors">
+        Volver al inicio →
+      </a>
+
     </div>
 
+    <!-- Logo de marca -->
 
-    <!-- Animación suave -->
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-            animation: fadeIn 0.5s ease-out;
-        }
-    </style>
+    <div class="mt-10 pt-6 border-t border-stone-200">
+
+      <img
+        src="./assets/img/favicon-v45.png"
+        alt="Código Millonario"
+        class="h-10 md:h-12 w-auto opacity-90"
+      >
+
+      <p class="mt-3 text-sm text-stone-500">
+        Educación financiera, negocios y construcción de patrimonio.
+      </p>
+
+    </div>
+
+  </main>
+
+  <style>
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .animate-fadeIn{
+      animation:fadeIn .7s ease-out;
+    }
+
+  </style>
+
+</body>
+
+
+
+
+
 
     <script>
         lucide.createIcons();

@@ -25,53 +25,106 @@
 </script>
 </head>
 
-<body class="bg-stone-50 text-stone-900 flex items-center justify-center min-h-screen" style="font-family: 'Poppins', sans-serif;">
 
-    <div class="bg-white shadow-xl rounded-2xl p-10 max-w-lg mx-auto text-center animate-fadeIn">
 
-        <div class="flex justify-center mb-6">
-            <i data-lucide="gift" class="w-16 h-16 text-green-600"></i>
-        </div>
 
-        <h1 class="text-3xl font-bold text-stone-900 mb-3">
-            ¡Gracias! Tu guía ya está lista 📘✨
-        </h1>
 
-        <p class="text-lg text-stone-600 mb-6 leading-relaxed">
-            ¡Tu correo fue enviado con éxito!    
-            Aquí tienes tu descarga directa:
-        </p>
 
-        <!-- ⭐ BOTÓN CON TU LINK REAL DE GOOGLE DRIVE ⭐ -->
-        <a href="https://drive.google.com/file/d/1kbH7-4NTOAAH2hloky_GE_aj53fir5fv/view?usp=drive_link"
-           target="_blank"
-           class="inline-block bg-green-600 text-white px-7 py-3 rounded-xl font-semibold hover:bg-green-700 transition shadow-lg">
-            📥 Descargar Guía Gratis
-        </a>
 
-        <p class="text-sm text-stone-500 mt-5">
-            Si la descarga no inicia, intenta abrir el enlace en una pestaña nueva.
-        </p>
+<body class="bg-stone-50 text-stone-900 min-h-screen flex items-center"
+      style="font-family:'Inter',sans-serif;">
 
-       <a href="./index.html"
-   class="inline-block px-7 py-3 rounded-xl font-semibold text-green-700 border border-green-700 
-          hover:bg-green-100 transition-all shadow-sm text-center">
-  ← Volver al Inicio
-</a>
+  <main class="max-w-4xl mx-auto px-6 py-6 md:py-12 animate-fadeIn">
 
+    <div class="w-10 h-px bg-stone-400 mb-4"></div>
+
+    <p class="text-[11px] uppercase tracking-[0.25em] text-stone-500 mb-3">
+      Descarga disponible
+    </p>
+
+    <h1 class="text-3xl md:text-6xl font-normal text-stone-700 leading-[1.05] tracking-tight mb-4">
+      Gracias. Tu guía ya está lista.
+    </h1>
+
+    <p class="text-base md:text-xl text-stone-600 leading-relaxed max-w-2xl">
+      Hemos recibido correctamente tu solicitud.
+      Puedes acceder a la guía mediante el enlace de descarga que aparece a continuación.
+    </p>
+
+    <!-- Descarga -->
+
+    <div class="mt-6">
+
+      <a href="https://drive.google.com/file/d/1kbH7-4NTOAAH2hloky_GE_aj53fir5fv/view?usp=drive_link"
+         target="_blank"
+         class="inline-flex items-center border-2 border-black px-6 py-3 text-stone-800 hover:bg-stone-100 transition-all duration-300">
+
+        Descargar guía →
+
+      </a>
 
     </div>
 
-    <!-- Animación -->
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-            animation: fadeIn 0.6s ease-out;
-        }
-    </style>
+    <p class="text-sm text-stone-500 mt-3">
+      Si la descarga no se abre correctamente, intenta abrir el enlace en una nueva pestaña.
+    </p>
+
+    <!-- Volver -->
+
+    <div class="mt-5">
+
+      <a href="./index.html"
+         class="inline-flex items-center text-stone-700 hover:text-stone-900 transition-colors">
+
+        ← Volver al inicio
+
+      </a>
+
+    </div>
+
+    <!-- Firma de marca -->
+
+    <div class="mt-6 pt-4 border-t border-stone-200">
+
+      <img
+        src="./assets/img/favicon-v45.png"
+        alt="Código Millonario"
+        class="h-8 md:h-10 w-auto opacity-90"
+      >
+
+      <p class="mt-2 text-xs text-stone-500">
+        Educación financiera, negocios y construcción de patrimonio.
+      </p>
+
+    </div>
+
+  </main>
+
+  <style>
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .animate-fadeIn{
+      animation:fadeIn .7s ease-out;
+    }
+
+  </style>
+
+</body>
+
+
+
+
+
 
     <script>
         lucide.createIcons();
