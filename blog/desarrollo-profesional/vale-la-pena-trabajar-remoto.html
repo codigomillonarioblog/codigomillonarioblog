@@ -1,0 +1,2905 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Vale la pena trabajar remoto en 2026? Ventajas, desventajas y lo que debes saber</title>
+    <meta name="description" content="Descubre si trabajar remoto realmente vale la pena en 2026. Analizamos ventajas, desventajas, oportunidades laborales y los desafíos más comunes del trabajo desde casa.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/favicon-v45.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="../../assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Newsletter
+    </button>
+
+    <!-- INPUT -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* INPUT */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
+}
+
+</style>
+
+<script>
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
+
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
+
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="../../blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="../../blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="../../blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="../../blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="../../blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="../../blog/negocios/index.html">Modelos de Negocio</a>
+<a href="../../tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="../../mentalidad/index.html">Mentalidad</a></li>
+      <li><a href="../../blog/negocios/index.html">Negocios</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../nuestro-equipo.html">Staff</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+<div id="mobileMenu">
+
+  <button id="closeMobileMenu">&times;</button>
+
+  <div class="mobile-menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Código Millonario">
+  </div>
+
+  <div class="mobile-menu-links">
+
+    <a href="../../index.html">Inicio</a>
+
+    <a href="../../educacion-financiera.html">
+      Educación Financiera
+    </a>
+
+    <a href="../../mentalidad/index.html">
+      Mentalidad
+    </a>
+
+    <a href="../../blog/negocios/index.html">
+      Negocios
+    </a>
+
+    <a href="../../herramientas.html">
+      Herramientas
+    </a>
+
+    <a href="../../opiniones.html">
+      Opiniones
+    </a>
+
+    <a href="../../nuestro-equipo.html">
+      Staff
+    </a>
+
+    <a href="../../contacto.html">
+      Contacto
+    </a>
+
+  </div>
+</div>
+
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #111111; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+.mobile-menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.mobile-menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+#closeMobileMenu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.mobile-menu-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+}
+
+.mobile-menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+@media(min-width: 768px) {
+  .navbar-menu li:nth-child(4) {
+    position: relative;
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+
+  .navbar-menu li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: -9px; /* mover la línea hacia el centro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: rgba(223, 222, 222, 0.85);
+  }
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('../../assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+const closeMobileMenu =
+document.getElementById('closeMobileMenu');
+
+closeMobileMenu.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- ESPACIO FINAL -->
+<div style="height: 300px;"></div>
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- HERO -->
+<section class="uvo-hero">
+
+  <div class="uvo-container">
+
+    <!-- CATEGORY -->
+    <div class="uvo-category">
+      TRABAJO REMOTO
+    </div>
+
+    <!-- TITLE -->
+    <h1 class="uvo-title">
+¿Es buena idea Trabajar remoto en 2026? Análisis completo de sus Ventajas y Desventajas
+    </h1>
+
+    <!-- DESCRIPTION -->
+    <p class="uvo-description">
+      Trabajar desde casa ofrece flexibilidad, ahorro de tiempo y acceso a oportunidades globales.<br><br>
+      Pero también presenta desafíos que muchas personas pasan por alto. Conoce los pros y contras del trabajo remoto en 2026.
+    </p>
+
+    <!-- META -->
+    <div class="uvo-meta">
+
+      <!-- AUTHOR -->
+      <div class="uvo-author">
+
+        <img src="../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego"
+             class="uvo-avatar">
+
+        <div class="uvo-author-info">
+
+          <p class="uvo-label">
+            AUTOR
+          </p>
+
+          <p class="uvo-author-name">
+            Equipo Editorial • <a href="../../nuestro-equipo.html" class="uvo-author-link">Francisco Urrego</a>
+          </p>
+
+          <p class="uvo-date">
+            Escrito el 13 Jun 2026 / 14:21 h / 4 min lectura
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- SOCIALS -->
+      <div class="uvo-socials">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- X -->
+        <a href="https://x.com/CMillonarioblog"
+           target="_blank"
+           aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 1200 1227"
+               fill="currentColor">
+            <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163Z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1FVSBquigd/"
+           target="_blank"
+           aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
+           target="_blank"
+           aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+
+        <!-- Pinterest -->
+        <a href="https://pin.it/3tqNXYoAA"
+           target="_blank"
+           aria-label="Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- IMAGE -->
+<div class="uvo-image-wrapper">
+
+  <img 
+    src="../../assets/png/trabajo-remoto-desde-casa.webp"
+    alt=""
+    class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] sm:top-4 object-contain z-10"
+  >
+
+  <!-- TEXTO DEBAJO -->
+  <div class="max-w-[50rem] mx-auto w-80 sm:w-[40rem] md:w-[50rem] mt-10 text-left">
+
+    <span 
+      class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+      style="font-family: 'Open Sans', sans-serif;"
+    >
+      Un Análisis Editorial
+    </span>
+
+    <div class="w-16 h-px bg-amber-800"></div>
+
+  </div>
+
+</div>
+
+</section>
+
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#fff;
+}
+
+/* HERO */
+.uvo-hero{
+  padding:72px 0 88px;
+}
+
+/* CONTAINER */
+.uvo-container{
+  max-width:920px;
+  margin:auto;
+  padding:0 32px;
+}
+
+/* IMAGE WRAPPER */
+.uvo-image-wrapper{
+  width:100%;
+  overflow:hidden;
+}
+
+.uvo-image-wrapper img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+/* CATEGORY */
+.uvo-category{
+  display:inline-block;
+  margin-bottom:30px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#8b7355;
+}
+
+/* TITLE */
+.uvo-title{
+  max-width:860px;
+
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5vw,5rem);
+  font-weight:600;
+  line-height:1.04;
+  letter-spacing:-0.032em;
+  color:#111827;
+
+  text-wrap:balance;
+}
+
+/* DESCRIPTION */
+.uvo-description{
+  max-width:760px;
+  margin-top:34px;
+
+  font-family:'Inter',sans-serif;
+  font-size:1.08rem;
+  line-height:1.95;
+  color:#4b5563;
+}
+
+/* META */
+.uvo-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-top:52px;
+  padding-top:24px;
+  border-top:1px solid #e5e7eb;
+}
+
+/* AUTHOR */
+.uvo-author{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* AVATAR */
+.uvo-avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* LABEL */
+.uvo-label{
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+
+  color:#111827;
+  margin-bottom:2px;
+}
+
+/* AUTHOR NAME */
+.uvo-author-name{
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:600;
+  color:#111827;
+}
+
+/* LINK AUTHOR */
+.uvo-author-link{
+  color:#111827;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:.2s ease;
+}
+
+.uvo-author-link:hover{
+  border-bottom:1px solid #111827;
+}
+
+/* DATE */
+.uvo-date{
+  margin-top:4px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.02em;
+
+  color:#4b5563;
+}
+
+/* SOCIALS */
+.uvo-socials{
+  display:flex;
+  gap:8px;
+}
+
+.uvo-socials a{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid #e5e7eb;
+  background:#fff;
+
+  color:#6b7280;
+  text-decoration:none;
+
+  transition:all .2s ease;
+}
+
+.uvo-socials a:hover{
+  transform:translateY(-2px);
+  background:#111827;
+  border-color:#111827;
+  color:#fff;
+}
+
+.uvo-socials i,
+.uvo-socials svg{
+  width:15px;
+  height:15px;
+  font-size:15px;
+  fill:currentColor;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .uvo-hero{
+    padding:42px 0 60px;
+  }
+
+  .uvo-container{
+    padding:0 20px;
+  }
+
+  .uvo-title{
+    font-size:2.18rem;
+    line-height:1.12;
+    letter-spacing:-0.012em;
+  }
+
+  .uvo-description{
+    margin-top:24px;
+    font-size:1rem;
+    line-height:1.82;
+  }
+
+  .uvo-meta{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    margin-top:38px;
+  }
+
+  .uvo-socials{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    max-width:100%;
+  }
+
+  .uvo-image-wrapper > div{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px;
+    padding-right:20px;
+    box-sizing:border-box;
+  }
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<!-- CONTENEDOR -->
+<main>
+<article class="max-w-5xl mx-auto px-6 md:px-8">
+  
+
+<!-- INTRODUCCIÓN -->
+<div class="text-stone-700 leading-relaxed mb-1 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+    E
+  </span>
+  l trabajo remoto es una de las opciones más atractivas en el mercado laboral, sin embargo hay que tener en cuenta varios aspectos que no siempre se dicen al momento en el que alguien decide tomar ese camino a ojos cerrados.
+</p>
+
+<p>
+La popularidad de este modelo laboral está en crecimiento porque ofrece mayor flexibilidad, acceso a oportunidades internacionales y la posibilidad de desempeñar funciones desde distintos lugares.
+</p>
+
+<p>
+  Como resultado, cada vez más trabajadores y empresas consideran el trabajo remoto como una alternativa viable a los esquemas tradicionales. Esta tendencia también se observa a nivel mundial. 
+</p>
+
+<p>  
+  <a href="https://www.euskalit.net/observatorio/es/teletrabajo-en-el-mundo-ultimos-datos/" target="_blank" class="text-blue-600 hover:underline">
+    Diversos estudios internacionales
+  </a>
+  muestran que el teletrabajo se ha consolidado como parte habitual de la vida laboral moderna, con millones de profesionales realizando una parte significativa de su jornada desde casa.
+</p>
+
+<br>
+<img 
+  src="../../assets/png/crecimiento-del-trabajo-remoto-en-el-mundo.webp" 
+  alt="Crecimiento del trabajo remoto a nivel mundial"
+  class="w-full md:w-4/5 mx-auto shadow-lg my-10 block"
+  loading="lazy">
+
+
+<p>
+  Como resultado, cada vez más trabajadores y empresas consideran el trabajo remoto como una alternativa viable a los esquemas tradicionales.
+</p>
+
+<p>
+Siendo así, sus beneficios no son universales. Aunque puede mejorar la calidad de vida y ampliar las opciones profesionales, también plantea desafíos relacionados con la productividad, la comunicación y la organización personal.
+</p>
+
+<p>
+Por ello, es importante analizar tanto sus ventajas como sus desventajas antes de decidir si realmente vale la pena en 2026.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- TABLA DE CONTENIDOS -->
+<style>
+
+/* =========================
+   TOC CUADRADO MODERNO
+========================= */
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:140px;
+}
+
+/* SOLO esto para anclas */
+[id]{
+  scroll-margin-top:140px;
+}
+
+.cf-accordion{
+  margin-top:60px;
+  font-family:'Inter',sans-serif;
+}
+
+/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
+.cf-accordion-inner{
+  max-width:80rem;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+
+/* CUADRO */
+.cf-accordion-item{
+  width:260px;
+  min-height:70px;
+
+  margin:0;
+
+  border:1px solid red;
+
+  border-radius:6px;
+
+  background:#fff;
+
+  overflow:hidden;
+
+  transition:width .35s ease;
+}
+
+/* EXPANSIÓN */
+.cf-accordion-item.is-open{
+  width:680px;
+}
+
+/* HEADER */
+.cf-accordion-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 16px;
+
+  cursor:pointer;
+
+  font-size:17px;
+  font-weight:600;
+
+  color:#111827;
+  background:#fff;
+
+  border-bottom:none;
+}
+
+/* ICONO */
+.cf-menu-icon{
+  width:30px;
+  height:30px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  border:1px solid red;
+  border-radius:6px;
+
+  gap:4px;
+  box-sizing:border-box;
+}
+
+.cf-menu-icon span{
+  height:2px;
+  width:16px;
+  background:red;
+  border-radius:2px;
+}
+
+/* CONTENT */
+.cf-accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+}
+
+/* LISTA */
+.toc-container{
+  padding:8px 14px 14px 14px;
+}
+
+/* LISTA */
+.toc-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+/* ITEMS ULTRA COMPACTOS */
+.toc-list li{
+  padding:6px 0;
+  margin:0;
+  border:none;
+}
+
+/* LINKS */
+.toc-list a{
+  text-decoration:none;
+  color:#374151;
+
+  font-size:14px;
+  line-height:1.35;
+
+  display:block;
+
+  transition:all .2s ease;
+}
+
+/* HOVER AZUL */
+.toc-list a:hover{
+  color:blue;
+  transform:translateX(4px);
+}
+
+/* MOBILE */
+@media (max-width:480px){
+
+  .cf-accordion-item{
+    width:88%;
+  }
+
+  .cf-accordion-item.is-open{
+    width:100%;
+  }
+
+}
+
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+
+  <div class="cf-accordion-inner">
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+
+        <!-- HEADER -->
+        <div class="cf-accordion-header">
+
+          Tabla de contenidos
+
+          <div class="cf-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="cf-accordion-content">
+
+          <div class="toc-container">
+
+            <ul class="toc-list">
+    <li><a href="#titulo1">1. ¿Cómo consiguen empleo las personas que trabajan de forma remota?</a></li>
+    <li><a href="#titulo2">2. ¿Qué es el trabajo remoto y por qué cada vez más personas lo buscan?</a></li>
+    <li><a href="#titulo3">3. 10 Plataformas para Encontrar Trabajo Remoto en 2026</a></li>
+    <li><a href="#titulo4">4. ¿Cuáles son las desventajas del trabajo remoto?</a></li>
+    <li><a href="#titulo5">5. Ventajas de trabajar remoto en 2026</a></li>
+    <li><a href="#titulo6">6. ¿Qué trabajos remotos tienen más demanda en 2026?</a></li>
+    <li><a href="#titulo7">7. ¿El trabajo remoto paga más? Comparativa de costos, tiempo e ingresos</a></li>
+    <li><a href="#titulo8">8. ¿Vale la pena trabajar remoto en 2026?</a></li>
+    <li><a href="#titulo9">9. ¿Es el trabajo remoto la mejor opción para ti?</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<script>
+
+/* =========================
+   ACORDEÓN (igual)
+========================= */
+
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+  header.addEventListener('click',()=>{
+
+    const item = header.closest('.cf-accordion-item');
+    const content = item.querySelector('.cf-accordion-content');
+
+    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+      if(other!==item){
+        other.querySelector('.cf-accordion-content').style.maxHeight=null;
+      }
+    });
+
+    item.classList.toggle('is-open');
+
+    if(content.style.maxHeight){
+      content.style.maxHeight=null;
+    }else{
+      content.style.maxHeight=content.scrollHeight+'px';
+    }
+
+  });
+});
+
+
+/* =========================
+   SCROLL HÍBRIDO (FIX MÓVIL + PC)
+========================= */
+
+const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+  link.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    const id = this.getAttribute('href').substring(1);
+    const target = document.getElementById(id);
+
+    if(!target) return;
+
+    const offset = 140;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    history.pushState(null, null, '#' + id);
+
+    if(isMobile){
+      /* 🔥 MÓVIL: usa scroll nativo (más estable) */
+      window.scrollTo({
+        top: top,
+        behavior: 'smooth'
+      });
+    } else {
+      /* 💻 PC: animación más controlada */
+      const start = window.pageYOffset;
+      const distance = top - start;
+      const duration = 650;
+
+      let startTime = null;
+
+      function animate(time){
+        if(!startTime) startTime = time;
+
+        const progress = Math.min((time - startTime) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+
+        window.scrollTo(0, start + distance * ease);
+
+        if(progress < 1){
+          requestAnimationFrame(animate);
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+  });
+});
+
+</script>
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo1" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+¿Cómo consiguen empleo las personas que trabajan de forma remota?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Sí, es posible trabajar de forma remota, aunque la manera de conseguirlo puede variar según la profesión y la experiencia de cada persona.
+</p>
+
+<p>
+Algunas personas son contratadas directamente por empresas que permiten desempeñar las funciones a distancia, mientras que otras trabajan de forma independiente ofreciendo sus servicios a distintos clientes.
+</p>
+
+<p>
+En ambos casos, el objetivo es el mismo: realizar las tareas <strong>sin necesidad de acudir físicamente a una oficina</strong>.
+</p>
+
+<p>
+Para acceder a una oportunidad de trabajo remoto, normalmente es necesario contar con ciertas habilidades, experiencia en un área específica y <strong>conocimientos básicos de herramientas digitales</strong> para comunicarse y colaborar en línea.
+</p>
+
+<p>
+Muchas personas encuentran este tipo de empleo a través de portales de trabajo, redes profesionales o recomendaciones, aunque también existen quienes construyen su propia cartera de clientes y trabajan por cuenta propia.
+</p>
+
+<p>
+Por esta razón, el trabajo remoto no está limitado únicamente a freelancers o trabajadores independientes. 
+</p>
+
+<p>
+Actualmente, miles de empresas contratan <strong>empleados remotos a tiempo completo o parcial</strong> para desempeñar funciones en áreas como atención al cliente, programación, diseño, marketing, redacción, ventas, soporte técnico y muchas otras.
+</p>
+
+<p>
+Lo importante es demostrar que se pueden cumplir los objetivos y responsabilidades <strong>sin importar la ubicación física desde la que se trabaje</strong>.
+</p>
+
+</div>
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-5 mt-40 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<div class="bg-stone-100 border-l-4 border-stone-500 px-5 py-4 my-8">
+  <p class="text-stone-700 text-lg md:text-xl font-medium m-0">
+    Entre los empleos remotos más demandados por las empresas actualmente se encuentran:
+  </p>
+</div>
+
+<ul class="list-disc pl-6 space-y-2">
+<li><strong>Atención al cliente:</strong> resolver consultas, gestionar reclamos y brindar soporte a usuarios.</li>
+
+<li><strong>Asistente virtual:</strong> organizar agendas, responder correos y realizar tareas administrativas.</li>
+
+<li><strong>Redactor de contenidos:</strong> crear artículos, guías, publicaciones y textos para sitios web.</li>
+
+<li><strong>Diseñador gráfico:</strong> desarrollar piezas visuales para marcas, campañas y redes sociales.</li>
+
+<li><strong>Community Manager:</strong> administrar perfiles en redes sociales e interactuar con la audiencia.</li>
+
+<li><strong>Especialista en marketing digital:</strong> gestionar campañas publicitarias y estrategias de crecimiento online.</li>
+
+<li><strong>Programador o desarrollador web:</strong> crear, mantener y optimizar aplicaciones y sitios web.</li>
+
+<li><strong>Soporte técnico:</strong> ayudar a usuarios y empresas a solucionar problemas tecnológicos.</li>
+
+<li><strong>Analista de datos:</strong> interpretar información para apoyar la toma de decisiones empresariales.</li>
+
+<li><strong>Traductor:</strong> adaptar documentos, contenidos y comunicaciones entre diferentes idiomas.</li>
+
+<li><strong>Ejecutivo de ventas:</strong> captar clientes, realizar seguimiento de oportunidades y cerrar negocios.</li>
+
+<li><strong>Profesor o tutor en línea:</strong> impartir clases, asesorías o capacitaciones a través de internet.</li>
+</ul>
+
+<p>
+Aunque estas son algunas de las opciones más comunes, la cantidad de profesiones que pueden desempeñarse de forma remota sigue creciendo a medida que las empresas adoptan herramientas digitales y modelos de trabajo más flexibles.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Qué es el trabajo remoto y por qué cada vez más personas lo buscan?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El trabajo remoto es una modalidad laboral que permite eliminar cargas extras y facilitar actividades profesionales fuera de una oficina tradicional mediante el uso de internet y herramientas digitales. 
+</p>
+
+<p>
+Durante la evolución tecnológica, miles de empresas han descubierto que muchas funciones pueden ejecutarse desde cualquier lugar sin afectar los resultados.
+</p>
+
+<p>
+Durante los últimos años estas implementaciones han dejado de ser exclusivas de sectores tecnológicos. Hoy es posible encontrar vacantes remotas en áreas como atención al cliente, marketing, diseño, ventas, administración, educación e incluso servicios financieros.
+</p>
+
+<p>
+Las previsiones apuntan a que esta tendencia seguirá expandiéndose durante los próximos años. 
+</p>
+
+<p>
+De acuerdo con el 
+  <a href="https://www.weforum.org/stories/2024/01/remote-global-digital-jobs-whitepaper/" target="_blank" class="text-blue-600 hover:underline">
+Foro Económico Mundial,
+  </a>
+ para 2030 existirán alrededor de 92 millones de empleos digitales que podrán realizarse de forma remota desde cualquier lugar del mundo, lo que refleja el creciente papel que esta modalidad tendrá en el mercado laboral global.
+</p>
+
+</div>
+
+
+
+
+
+<h3 class="text-xl md:text-2xl font-semibold text-stone-700 mb-10 mt-40">
+  ¿Te gustaría aprovechar una de estas oportunidades?
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Mi intención es decirte desde el principio cuál es la realidad y, por eso, quiero explicarte lo siguiente: es importante aclarar que conseguir un trabajo remoto <strong>no siempre es un proceso sencillo ni inmediato</strong>.
+</p>
+
+<p>
+Aunque existen numerosas oportunidades disponibles, muchas empresas buscan candidatos que puedan demostrar <strong>experiencia previa, habilidades específicas o resultados comprobables</strong> en su área de trabajo.
+</p>
+
+<p>
+Y en muchos casos, las empresas suelen priorizar candidatos con experiencia previa o habilidades demostrables.
+</p>
+
+<p>
+Con frecuencia, quienes obtienen estas oportunidades son personas que ya llevan tiempo dentro de la organización y reciben ese beneficio gracias a la trayectoria y confianza que han construido.
+</p>
+
+<p>
+En algunos casos, también pueden solicitar un <strong>portafolio, referencias profesionales o ejemplos de proyectos realizados anteriormente</strong>.
+</p>
+
+</div>
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Por esta razón, quienes desean acceder a este tipo de empleo suelen necesitar tiempo para desarrollar competencias, adquirir experiencia y construir una trayectoria que genere confianza en posibles empleadores o clientes.
+</p>
+
+<p>
+El trabajo remoto representa una oportunidad real para muchas personas, pero generalmente requiere <strong>preparación, constancia y la capacidad de demostrar resultados</strong> de manera profesional.
+</p>
+
+<p>
+Así que no, no ocurre de la noche a la mañana. Aunque esta modalidad esté en auge y parezca que todo el mundo está entrando en ella, la realidad es que muchas de las personas que hoy trabajan de este modo llevan años desarrollando su actividad y perfeccionando sus habilidades.
+</p>
+
+<p>
+Sin embargo, el panorama para quien desea comenzar no debería ser desalentador. No todos parten desde las mismas circunstancias, y empezar hoy puede marcar una gran diferencia dentro de dos años si se aprovecha ese tiempo para <strong>prepararse y adquirir experiencia</strong>.
+</p>
+
+</div>
+
+
+
+
+
+
+<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight text-center">
+10 Plataformas para Encontrar Trabajo Remoto en 2026
+</h2>
+
+<img 
+  src="../../assets/png/oportunidades-de-empleo-remoto.webp" 
+  alt="Crecimiento del trabajo remoto a nivel mundial"
+  class="w-full md:w-4/5 mx-auto shadow-lg my-10 block"
+  loading="lazy">
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Si estás interesado en encontrar una oportunidad de trabajo remoto, existen diversas plataformas especializadas que conectan a empresas con profesionales de todo el mundo. 
+</p>
+
+<p>
+Algunas son completamente gratuitas para los candidatos, mientras que otras ofrecen planes de pago opcionales con funciones adicionales.
+</p>
+
+<ul class="list-disc pl-6 space-y-4">
+
+<li>
+<strong><a href="https://www.linkedin.com/jobs/" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>:</strong> una de las redes profesionales más utilizadas del mundo. Permite buscar empleos remotos, contactar reclutadores y construir una red de contactos. <strong>Gratuita</strong>, aunque cuenta con funciones premium opcionales.
+</li>
+
+<li>
+<strong><a href="https://www.indeed.com/" target="_blank" class="text-blue-600 hover:underline">Indeed</a>:</strong> portal de empleo con miles de ofertas remotas en diferentes sectores y países. <strong>Gratuita</strong> para quienes buscan empleo.
+</li>
+
+<li>
+<strong><a href="https://www.flexjobs.com/" target="_blank" class="text-blue-600 hover:underline">FlexJobs</a>:</strong> plataforma especializada en empleos remotos y flexibles. Verifica las ofertas para reducir estafas y publicaciones de baja calidad. <strong>De pago</strong>.
+</li>
+
+<li>
+<strong><a href="https://remote.co/remote-jobs/" target="_blank" class="text-blue-600 hover:underline">Remote.co</a>:</strong> sitio enfocado exclusivamente en oportunidades de trabajo remoto para profesionales de distintas áreas. <strong>Gratuita</strong> para candidatos.
+</li>
+
+<li>
+<strong><a href="https://weworkremotely.com/" target="_blank" class="text-blue-600 hover:underline">We Work Remotely</a>:</strong> una de las bolsas de empleo remoto más populares a nivel internacional, especialmente en tecnología, marketing y atención al cliente. <strong>Gratuita</strong> para postulantes.
+</li>
+
+<li>
+<strong><a href="https://www.upwork.com/" target="_blank" class="text-blue-600 hover:underline">Upwork</a>:</strong> plataforma orientada principalmente a freelancers que buscan proyectos y clientes en todo el mundo. <strong>Gratuita</strong> para registrarse, aunque cobra comisiones sobre los trabajos realizados.
+</li>
+
+<li>
+<strong><a href="https://www.fiverr.com/" target="_blank" class="text-blue-600 hover:underline">Fiverr</a>:</strong> permite ofrecer servicios profesionales en áreas como diseño, redacción, programación, marketing y edición de video. <strong>Gratuita</strong> para crear un perfil, con comisiones sobre las ventas.
+</li>
+
+<li>
+<strong><a href="https://remotive.com/" target="_blank" class="text-blue-600 hover:underline">Remotive</a>:</strong> portal especializado en empleos remotos internacionales con oportunidades en múltiples sectores. <strong>Gratuita</strong> para los candidatos.
+</li>
+
+<li>
+<strong><a href="https://www.workingnomads.com/jobs" target="_blank" class="text-blue-600 hover:underline">Working Nomads</a>:</strong> recopila ofertas remotas de diferentes empresas y las organiza por categorías profesionales. <strong>Gratuita</strong>.
+</li>
+
+<li>
+<strong><a href="https://www.freelancer.com/" target="_blank" class="text-blue-600 hover:underline">Freelancer</a>:</strong> plataforma global para trabajadores independientes que desean participar en proyectos de diversas áreas. <strong>Gratuita</strong> para registrarse, con opciones de pago y comisiones según el uso.
+</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+<strong>Nota:</strong> Aunque muchas de estas plataformas se encuentran en inglés, esto no suele representar un impedimento para la mayoría de las oportunidades. 
+</p>
+
+<p>
+En gran parte de los casos, las empresas están más interesadas en las habilidades, la experiencia y la capacidad de entregar resultados que en el idioma nativo del candidato. 
+</p>
+
+<p>
+Sin embargo, contar con conocimientos básicos de inglés puede ampliar significativamente el número de ofertas disponibles y facilitar la comunicación con empleadores internacionales.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Cuáles son las desventajas del trabajo remoto?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+Aunque el trabajo remoto ofrece múltiples beneficios, también presenta retos que deben ser considerados antes de tomar una decisión profesional.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Dificultad para separar la vida personal y laboral
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Uno de los problemas más frecuentes ocurre cuando el espacio de trabajo y el hogar se convierten en el mismo lugar. Muchas personas terminan respondiendo correos fuera de horario, atendiendo tareas durante sus momentos de descanso o extendiendo su jornada laboral sin darse cuenta.
+</p>
+
+<p>
+Con el tiempo, esta situación puede generar agotamiento físico y mental, afectando la calidad de vida y reduciendo la satisfacción laboral.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Menor interacción social
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Trabajar desde casa reduce considerablemente el contacto presencial con compañeros de trabajo. Aunque las videollamadas y plataformas de mensajería facilitan la comunicación, no siempre reemplazan la interacción humana cotidiana.
+</p>
+
+<p>
+Para algunas personas esto no representa un problema, pero otras pueden experimentar sensación de aislamiento o desconexión con el equipo.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Mayor necesidad de disciplina
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+La autonomía es una ventaja importante del trabajo remoto, pero también implica una mayor responsabilidad personal. Sin supervisión directa, el trabajador debe administrar su tiempo, cumplir objetivos y mantener la productividad por iniciativa propia.
+</p>
+
+<p>
+Las distracciones domésticas pueden convertirse en un obstáculo cuando no existe una rutina de trabajo bien definida.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Dependencia de la tecnología
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El trabajo remoto depende completamente de la conexión a internet, dispositivos funcionales y herramientas digitales. Un problema técnico puede interrumpir reuniones, retrasar entregas o afectar la comunicación con clientes y empleadores.
+</p>
+
+<p>
+Por esta razón, contar con una infraestructura tecnológica adecuada resulta indispensable.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+Ventajas de trabajar remoto en 2026
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+A pesar de los desafíos, millones de profesionales continúan prefiriendo esta modalidad debido a los beneficios que ofrece tanto en el ámbito laboral como personal.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Ahorro de tiempo y dinero
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Eliminar los desplazamientos diarios permite reducir gastos en transporte, combustible, alimentación fuera del hogar y otros costos asociados al trabajo presencial.
+</p>
+
+<p>
+Además del ahorro económico, muchas personas recuperan varias horas cada semana que anteriormente dedicaban a desplazarse hacia una oficina.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Acceso a oportunidades laborales globales
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Una de las mayores ventajas del trabajo remoto es la posibilidad de trabajar para empresas ubicadas en otras ciudades o países sin necesidad de mudarse.
+</p>
+
+<p>
+Esto amplía considerablemente las oportunidades profesionales y permite competir en mercados laborales mucho más grandes que el entorno local.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Mayor flexibilidad laboral
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Muchas empresas remotas valoran más los resultados que el cumplimiento estricto de horarios. Esto permite a los trabajadores organizar mejor su tiempo y adaptar su jornada a sus necesidades personales.
+</p>
+
+<p>
+La flexibilidad puede mejorar el equilibrio entre la vida profesional y personal cuando se administra de manera adecuada.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Posibilidad de generar ingresos desde cualquier lugar
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Mientras exista una conexión estable a internet, numerosas actividades profesionales pueden desarrollarse desde prácticamente cualquier ubicación.
+</p>
+
+<p>
+Esta característica ha permitido que muchas personas trabajen mientras viajan, viven en ciudades más económicas o buscan una mejor calidad de vida.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Qué trabajos remotos tienen más demanda en 2026?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El mercado laboral remoto continúa evolucionando y cada año aparecen nuevas oportunidades para trabajar desde casa. Lo que antes parecía reservado para programadores o profesionales de la tecnología, hoy se ha extendido a sectores mucho más amplios.
+</p>
+
+<p>
+Actualmente, organizaciones de todos los tamaños contratan personal a distancia para funciones administrativas, comerciales, educativas, creativas y de atención al cliente. Gracias a las herramientas digitales, muchas tareas pueden realizarse desde cualquier lugar con una conexión a internet.
+</p>
+
+<p>
+Aunque las habilidades tecnológicas siguen siendo muy valoradas, la experiencia, la capacidad de comunicación, la organización y la autonomía también se han convertido en factores clave para acceder a empleos remotos.
+</p>
+
+<p>
+Entre los trabajos remotos más solicitados durante 2026 se encuentran:
+</p>
+
+<ul class="list-disc pl-6 space-y-2">
+<li>Asistente virtual.</li>
+<li>Representante de atención al cliente.</li>
+<li>Agente de ventas remotas.</li>
+<li>Auxiliar administrativo.</li>
+<li>Recepcionista virtual.</li>
+<li>Community Manager.</li>
+<li>Especialista en marketing digital.</li>
+<li>Redactor de contenidos.</li>
+<li>Copywriter.</li>
+<li>Diseñador gráfico.</li>
+<li>Editor de video.</li>
+<li>Gestor de comercio electrónico.</li>
+<li>Profesor o tutor online.</li>
+<li>Traductor.</li>
+<li>Reclutador de personal.</li>
+<li>Especialista en recursos humanos.</li>
+<li>Contador o auxiliar contable.</li>
+<li>Analista de datos.</li>
+<li>Desarrollador de software.</li>
+<li>Especialista SEO.</li>
+</ul>
+
+<p>
+La demanda puede variar según el sector y la ubicación de la empresa, pero estas ocupaciones se encuentran entre las más frecuentes en las plataformas de empleo remoto y ofrecen oportunidades tanto para profesionales con experiencia como para personas que buscan iniciar una nueva carrera laboral desde casa.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+25 Profesiones tradicionales que también permiten trabajar desde casa
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<ul class="list-disc pl-6 space-y-2">
+<li>Contador o auxiliar contable.</li>
+<li>Abogado y asistente jurídico.</li>
+<li>Psicólogo con consultas virtuales.</li>
+<li>Profesor particular online.</li>
+<li>Asesor académico.</li>
+<li>Agente inmobiliario digital.</li>
+<li>Corredor de seguros.</li>
+<li>Nutricionista.</li>
+<li>Entrenador personal mediante videollamadas.</li>
+<li>Asistente médico administrativo.</li>
+<li>Secretaria virtual.</li>
+<li>Recepcionista virtual.</li>
+<li>Coordinador de proyectos.</li>
+<li>Supervisor de equipos remotos.</li>
+<li>Traductor.</li>
+<li>Corrector de textos.</li>
+<li>Consultor financiero.</li>
+<li>Asesor de viajes.</li>
+<li>Comprador o gestor de proveedores.</li>
+<li>Especialista en recursos humanos.</li>
+<li>Reclutador de personal.</li>
+<li>Agente de cobranza.</li>
+<li>Encuestador telefónico.</li>
+<li>Operador de servicio al cliente.</li>
+<li>Vendedor telefónico o comercial.</li>
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo7" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿El trabajo remoto paga más? Comparativa de costos, tiempo e ingresos
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Una de las preguntas más frecuentes es si trabajar de forma remota implica ganar menos dinero que en un empleo presencial. 
+</p>
+
+<p>
+Sin embargo, comparar únicamente el salario puede dar una visión incompleta de la realidad.
+</p>
+
+<p>
+Para entender mejor la diferencia, imaginemos dos personas con funciones similares y un salario mensual de $1.500 dólares. 
+</p>
+
+<p>
+La única diferencia es que una trabaja desde casa y la otra debe desplazarse diariamente a una oficina.
+</p>
+
+<br>
+<div style="overflow-x:auto; margin:30px 0;">
+<table style="width:100%; border-collapse:collapse; font-size:18px;">
+<thead>
+<tr style="background:#f5f5f4;">
+<th style="padding:14px; border:1px solid #d6d3d1; text-align:left;">Factor</th>
+<th style="padding:14px; border:1px solid #d6d3d1; text-align:center;">Trabajo Remoto</th>
+<th style="padding:14px; border:1px solid #d6d3d1; text-align:center;">Trabajo Presencial</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td style="padding:14px; border:1px solid #d6d3d1;">Salario mensual</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">$1.500</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">$1.500</td>
+</tr>
+
+<tr>
+<td style="padding:14px; border:1px solid #d6d3d1;">Gastos de transporte</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">$0</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">-$120</td>
+</tr>
+
+<tr>
+<td style="padding:14px; border:1px solid #d6d3d1;">Combustible o pasajes adicionales</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">$0</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">-$60</td>
+</tr>
+
+<tr>
+<td style="padding:14px; border:1px solid #d6d3d1;">Almuerzos fuera de casa</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">$0</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">-$150</td>
+</tr>
+
+<tr>
+<td style="padding:14px; border:1px solid #d6d3d1;">Ropa de oficina</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">Mínimo</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">Gasto recurrente</td>
+</tr>
+
+<tr>
+<td style="padding:14px; border:1px solid #d6d3d1;">Tiempo diario de desplazamiento</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">0 minutos</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">90 minutos</td>
+</tr>
+
+<tr>
+<td style="padding:14px; border:1px solid #d6d3d1;">Tiempo perdido al mes</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">0 horas</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">33 horas</td>
+</tr>
+
+<tr>
+<td style="padding:14px; border:1px solid #d6d3d1;">Estrés por tráfico o transporte</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">Bajo</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">Moderado a alto</td>
+</tr>
+
+<tr style="background:#fafaf9; font-weight:600;">
+<td style="padding:14px; border:1px solid #d6d3d1;">Ingreso disponible estimado</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">$1.500</td>
+<td style="padding:14px; border:1px solid #d6d3d1; text-align:center;">$1.170</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<br>
+
+<p>
+En este ejemplo, ambas personas reciben exactamente el mismo salario. Sin embargo, quien trabaja desde casa conserva una mayor parte de sus ingresos y además recupera más de 30 horas al mes que de otro modo dedicaría a desplazamientos.
+</p>
+
+<p>
+Esto no significa que el trabajo remoto sea siempre superior. Algunas personas prefieren la interacción social de una oficina, la separación física entre trabajo y vida personal o los beneficios adicionales que ofrecen ciertos empleadores presenciales.
+</p>
+
+<p>
+No obstante, cuando se analizan conjuntamente el tiempo, los gastos asociados y la flexibilidad, muchas personas descubren que un empleo remoto puede resultar más rentable incluso cuando el salario es exactamente el mismo que el de un puesto presencial.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo8" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Vale la pena trabajar remoto en 2026?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Para muchas personas, la respuesta es sí. El trabajo remoto ofrece ventajas significativas relacionadas con la flexibilidad, el ahorro de tiempo y el acceso a oportunidades laborales globales.
+</p>
+
+<p>
+Sin embargo, no todas las personas se adaptan de la misma manera. Algunas prefieren la estructura de una oficina tradicional y el contacto presencial con compañeros de trabajo.
+</p>
+
+<p>
+La clave está en evaluar las necesidades individuales, el tipo de trabajo desempeñado y la capacidad para mantener la disciplina y la productividad sin supervisión constante.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo9" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Es el trabajo remoto la mejor opción para ti?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El trabajo remoto se ha consolidado como una de las modalidades laborales más importantes de la actualidad. Su crecimiento responde a cambios tecnológicos, nuevas dinámicas empresariales y una mayor demanda de flexibilidad por parte de los trabajadores.
+</p>
+
+<p>
+Aunque presenta desafíos relacionados con la organización personal, la comunicación y la dependencia tecnológica, también ofrece beneficios que pueden mejorar significativamente la calidad de vida y ampliar las oportunidades profesionales.
+</p>
+
+<p>
+Más que una tendencia pasajera, el trabajo remoto se ha convertido en una alternativa real para millones de personas. Antes de decidir si vale la pena, conviene analizar las ventajas y desventajas desde una perspectiva personal y profesional para determinar si esta modalidad encaja con los objetivos y necesidades de cada trabajador.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<section class="mt-40 mb-24">
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+
+      <img
+        src="../../assets/img/fundador-codigo-millonario.webp"
+        alt="Autor del artículo"
+        class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover">
+
+      <div>
+
+        <p class="text-[10px] md:text-xs uppercase tracking-[0.20em] md:tracking-[0.25em] text-stone-500">
+          Opinión del autor
+        </p>
+
+        <p class="text-xs md:text-sm text-stone-700 font-medium">
+          Francisco Urrego
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BLOQUE -->
+<h2 id="titulo10" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 leading-tight tracking-tight">
+¿Estás dispuesto a trabajar de forma remota y aún no te decides?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Después de investigar este tema y analizar las ventajas y desventajas del <strong>trabajo remoto</strong>, llegué a una conclusión bastante simple: para muchas personas puede representar una gran oportunidad, pero no necesariamente por las razones que suelen mencionarse.
+</p>
+
+<p>
+La mayoría piensa en trabajar desde casa por la comodidad, el ahorro en transporte o la flexibilidad de horarios. Y aunque esos beneficios son reales, considero que el verdadero valor está en la posibilidad de acceder a <strong>oportunidades laborales</strong> que antes estaban limitadas por la ubicación geográfica.
+</p>
+
+<p>
+Ahora bien, si hoy te dieran a elegir entre un empleo remoto y uno presencial, probablemente escogerías la opción que mejor se adapte a tu situación personal. Sin embargo, la realidad es que estas oportunidades no suelen aparecer de la noche a la mañana. En muchos casos son el resultado de años de experiencia, <strong>aprendizaje continuo</strong> y desarrollo profesional en un área específica.
+</p>
+
+<p>
+Por eso no veo el trabajo remoto como una oportunidad que simplemente llega. Lo veo como una consecuencia natural de las habilidades que una persona ha construido con el tiempo. Cuanto más valor aportes en tu profesión, más posibilidades tendrás de acceder a empleos flexibles, mejor remunerados y con mayor libertad para decidir dónde trabajar.
+</p>
+
+<p>
+En mi opinión, el objetivo no debería ser perseguir el trabajo remoto por sí mismo, sino desarrollar habilidades que te permitan elegir cómo quieres trabajar. Cuando eso ocurre, el trabajo remoto deja de ser un sueño lejano y se convierte en una <strong>opción real</strong>.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-xl md:text-2xl font-semibold text-stone-700 mb-10 mt-20">
+No todas las oportunidades remotas son empleos tradicionales
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+También creo que existe una idea equivocada sobre el <strong>trabajo remoto</strong>. Muchas personas imaginan que la única forma de conseguirlo es siendo contratadas por una empresa internacional o encontrando una vacante específica para trabajar desde casa.
+</p>
+
+<p>
+Sin embargo, una gran parte de las oportunidades remotas nacen de forma independiente. Diseñadores, redactores, programadores, profesores, consultores, contadores, traductores e incluso personas con habilidades administrativas suelen comenzar ofreciendo sus servicios directamente a clientes, pequeños negocios o emprendedores sin depender de una <strong>contratación tradicional</strong>.
+</p>
+
+<p>
+De hecho, en muchos casos el trabajo remoto no llega como una oferta laboral, sino como una consecuencia de la experiencia y las habilidades que una persona ya posee. Alguien que sabe resolver un problema puede encontrar clientes en internet, trabajar por proyectos o construir una <strong>fuente de ingresos propia</strong> sin necesidad de formar parte de una empresa de manera permanente.
+</p>
+
+<p>
+Por eso considero que el trabajo remoto no debería verse únicamente como una búsqueda de empleo. También puede entenderse como una forma diferente de ejercer una profesión, donde el <strong>valor que aportas</strong> es más importante que el lugar desde donde trabajas.
+</p>
+
+</div>
+
+
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+<p class="text-3xl font-semibold text-stone-900 mb-5 mt-20">Artículos relacionados:</p>
+
+<p class="interlink-heading text-left text-sm mb-4"
+   style="font-family: 'Open Sans', sans-serif;">
+  ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+</p>
+
+
+  </article>
+</main>
+
+
+
+
+
+
+
+
+
+<!-- ================= NUEVA TIPOGRAFIA ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../desarrollo-profesional/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style="font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+    <div id="interlinkGrid"></div>
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= TITULO ================= */
+.news-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+  letter-spacing: -0.2px;
+}
+
+/* METADATA */
+.news-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+/* TEXTO SECUNDARIO */
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.news-text {
+  flex: 1;
+}
+
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* 👇 TITULO MÁS GRANDE EN MÓVIL */
+  .news-text h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+function truncate(text, maxLength = 65){
+  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s: Math.random()}))
+              .sort((a,b)=>a.s-b.s)
+              .map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="${a.title}">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <div class="news-meta">${a.meta}</div>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../desarrollo-profesional/index.html")
+.then(r => r.text())
+.then(html => {
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+
+  const articles = doc.querySelectorAll(".article");
+
+  allArticles = shuffle(Array.from(articles).map(article => {
+
+    const link = article.querySelector("a.article-link");
+    const title = article.querySelector("h2.article-title");
+    const img = article.querySelector("img");
+    const meta = article.querySelector(".badge-row span");
+
+    return {
+      title: title ? title.textContent.trim() : "Sin título",
+      url: link ? link.getAttribute("href") : "#",
+      image: img ? img.getAttribute("src") : "./assets/png/default.png",
+      meta: meta ? meta.textContent.trim() : ""
+    };
+
+  }).filter(a => a.title.length > 5));
+
+  renderAll(allArticles);
+
+})
+.catch(err => console.error("Interlink error:", err));
+</script>
+
+
+
+
+
+
+
+   
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-28"></section>
+
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
