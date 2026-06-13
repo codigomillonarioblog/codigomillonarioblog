@@ -1944,7 +1944,22 @@ Pensar Mejor
 
       <div class="w-full h-px bg-slate-300"></div>
 
-      <!-- Noticia 1 -->
+            <!-- Noticia 1 -->
+      <a href="../blog/psicologia-del-dinero/bloqueos-mentales-dinero.html" class="news-item">
+
+        <div class="news-thumb">
+          <img src="../assets/png/pensamientos-erroneos-dinero.webp" alt="">
+        </div>
+
+        <div class="news-text">
+          <h3>5 patrones mentales que pueden limitar tu crecimiento financiero</h3>
+          <p>Descubre cómo las creencias que tienes sobre el dinero influyen en tus decisiones financieras 
+            y qué puedes hacer para desarrollar una relación más saludable con tus finanzas.</p>
+        </div>
+
+      </a>
+
+      <!-- Noticia 2 -->
       <a href="../blog/mentalidad-de-exito/7-habitos-financieros-warren-buffett.html" class="news-item">
 
         <div class="news-thumb">
@@ -1955,21 +1970,6 @@ Pensar Mejor
           <h3>Cómo la mentalidad de Warren Buffett puede mejorar tus finanzas</h3>
           <p>Aprende los principios que han guiado las decisiones financieras de Warren Buffett 
             durante décadas y descubre cómo aplicarlos a tu propia vida.</p>
-        </div>
-
-      </a>
-
-      <!-- Noticia 2 -->
-      <a href="../blog/psicologia-del-dinero/bloqueos-mentales-dinero.html" class="news-item">
-
-        <div class="news-thumb">
-          <img src="../assets/png/pensamientos-erroneos-dinero.webp" alt="">
-        </div>
-
-        <div class="news-text">
-          <h3>Cómo las creencias que tienes sobre el dinero influyen en tus decisiones financieras</h3>
-          <p>Descubre cómo las creencias que tienes sobre el dinero influyen en tus decisiones financieras 
-            y qué puedes hacer para desarrollar una relación más saludable con tus finanzas.</p>
         </div>
 
       </a>
@@ -2280,10 +2280,10 @@ Próximamente en Código Millonario
   flex: 1;
 }
 
-/* ================= TITULO (MÁS GRANDE) ================= */
+/* ================= TITULO ================= */
 .news-item .news-text h3{
   font-family: "Inter", sans-serif;
-  font-size: 26px; /* 🔥 antes 23px */
+  font-size: 26px;
   font-weight: 800;
   line-height: 1.25;
   margin: 0 0 10px 0;
@@ -2292,11 +2292,14 @@ Próximamente en Código Millonario
   max-width: 100%;
 }
 
-/* ================= PÁRRAFO (MÁS GRANDE) ================= */
+/* ================= DESCRIPCIÓN MEJORADA ================= */
 .news-text p{
-  font-size: 16px; /* 🔥 antes 14px */
-  color: #555;
-  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3f3f46;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
   margin: 0;
 }
 
@@ -2326,6 +2329,11 @@ Próximamente en Código Millonario
   .news-thumb{
     width: 100%;
     height: 240px;
+  }
+
+  .news-text p{
+    font-size: 17px;
+    line-height: 1.65;
   }
 
 }
