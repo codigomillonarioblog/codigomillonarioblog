@@ -2716,6 +2716,7 @@ prevBtn.addEventListener('click', () => {
 
 
 
+
 <div class="cm-brand-separator">
   <span class="cm-brand-text">
 
@@ -2738,7 +2739,7 @@ prevBtn.addEventListener('click', () => {
 
 .cm-brand-separator{
   width:100%;
-  padding:70px 20px 20px; /* 🔥 menos padding abajo para acercar la línea */
+  padding:80px 20px 30px;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -2777,18 +2778,34 @@ prevBtn.addEventListener('click', () => {
   color:#666;
 }
 
-/* ================= LÍNEA GRUESA CENTRADA (MÁS PEGADA) ================= */
+/* ================= LÍNEA ELEGANTE (EDITORIAL) ================= */
 
 .cm-brand-separator::after{
   content:"";
   position:absolute;
   left:50%;
   transform:translateX(-50%);
-  bottom:8px; /* 🔥 antes estaba en 0, ahora más cerca del texto */
+  bottom:12px;
 
-  width:min(420px, 70%);
-  height:5px;
+  width:140px;
+  height:1px;
   background:#111;
+  opacity:0.35;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:900px){
+
+  .cm-brand-separator{
+    padding:70px 20px 20px;
+  }
+
+  .cm-brand-separator::after{
+    width:100px;
+    bottom:10px;
+    opacity:0.25;
+  }
 }
 
 </style>
@@ -2796,50 +2813,189 @@ prevBtn.addEventListener('click', () => {
 
 
 
-
 <!-- ESPACIO ARRIBA -->
- <div style="height: 110px;"></div>
+ <div style="height: 20px;"></div>
 
 
 
 
+
+
+
+
+<section class="guias-principales">
+
+  <div class="encabezado-guias">
+
+    <div class="linea-editorial"></div>
+
+    <h2>
+      Guías esenciales para construir riqueza
+    </h2>
+
+    <p>
+      Empieza por los fundamentos. Estas guías reúnen los conceptos más importantes sobre finanzas personales, inversión, generación de ingresos y crecimiento patrimonial.
+    </p>
+
+  </div>
+
+  <div class="grid-guias">
+
+    <!-- TARJETA 1 -->
+    <article class="tarjeta-guia">
+
+      <img
+        src="./assets/png/NOMBREDEIMAGEN.webp"
+        alt="Finanzas personales">
+
+      <div class="contenido-guia">
+
+        <span class="categoria-guia">
+          GUÍA PRINCIPAL
+        </span>
+
+        <h3>
+          Finanzas Personales para Principiantes
+        </h3>
+
+        <p>
+          Aprende a organizar tu dinero, controlar gastos, crear presupuestos y construir una base financiera sólida.
+        </p>
+
+        <a href="./finanzas-personales.html">
+         Próximamente →
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- TARJETA 2 -->
+    <article class="tarjeta-guia">
+
+      <img
+        src="./assets/png/inversion-principiantes.webp"
+        alt="Inversión para principiantes">
+
+      <div class="contenido-guia">
+
+        <span class="categoria-guia">
+          GUÍA PRINCIPAL
+        </span>
+
+        <h3>
+          Inversión para Principiantes
+        </h3>
+
+        <p>
+          Descubre cómo funcionan los ETF, acciones, fondos indexados y las estrategias de largo plazo.
+        </p>
+
+        <a href="./inversion-principiantes.html">
+          Próximamente →
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- TARJETA 3 -->
+    <article class="tarjeta-guia">
+
+      <img
+        src="./assets/png/ingresos-online.webp"
+        alt="Ingresos online">
+
+      <div class="contenido-guia">
+
+        <span class="categoria-guia">
+          GUÍA PRINCIPAL
+        </span>
+
+        <h3>
+          Cómo Generar Ingresos Online
+        </h3>
+
+        <p>
+          Aprende diferentes formas de crear fuentes de ingresos digitales y construir activos en internet.
+        </p>
+
+        <a href="./ingresos-online.html">
+          Próximamente →
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- TARJETA 4 -->
+    <article class="tarjeta-guia">
+
+      <img
+        src="./assets/png/mentalidad-financiera.webp"
+        alt="Mentalidad financiera">
+
+      <div class="contenido-guia">
+
+        <span class="categoria-guia">
+          GUÍA PRINCIPAL
+        </span>
+
+        <h3>
+          Mentalidad y Crecimiento Financiero
+        </h3>
+
+        <p>
+          Hábitos, disciplina, productividad y principios utilizados por personas que construyen patrimonio.
+        </p>
+
+        <a href="./mentalidad-financiera.html">
+          Próximamente →
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
 
 <style>
 
-/* ================= CONTENEDOR ================= */
+.guias-principales{
 
-.contenedor-finanzas {
-
-  display:flex;
-  align-items:flex-start;
-  gap:48px;
-
-  margin:0 auto;
-
-  max-width:950px;
+  max-width:1200px;
+  margin:140px auto;
+  padding:0 24px;
 
   font-family:
     "Inter",
     sans-serif;
-
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-
-  text-rendering:optimizeLegibility;
 }
 
-/* ================= COLUMNA TEXTO ================= */
+/* ENCABEZADO */
 
-.texto-contenido{
-  max-width:700px;
+.encabezado-guias{
+
+  max-width:800px;
+  margin-bottom:70px;
 }
 
-/* ================= TÍTULO ================= */
+.linea-editorial{
 
-.subtitulo-editorial {
+  width:70px;
+  height:4px;
+
+  background:#111;
+
+  margin-bottom:28px;
+}
+
+.encabezado-guias h2{
 
   font-size:
-    clamp(2rem,4vw,3.8rem);
+    clamp(2.4rem,5vw,4.5rem);
 
   line-height:1;
 
@@ -2849,194 +3005,151 @@ prevBtn.addEventListener('click', () => {
 
   color:#111;
 
-  font-family:
-    "Inter",
-    sans-serif;
+  margin-bottom:24px;
 }
 
-/* ================= TEXTO ================= */
+.encabezado-guias p{
 
-.texto-derecha {
-
-  margin-top:24px;
-
-  max-width:640px;
-
-  font-size:1.05rem;
+  font-size:1.15rem;
 
   line-height:1.8;
 
-  font-weight:400;
-
-  letter-spacing:-0.01em;
-
   color:#555;
 
-  font-family:
-    "Inter",
-    sans-serif;
+  max-width:700px;
 }
 
-/* ================= BOTÓN ================= */
+/* GRID */
 
-.cm-read-btn{
+.grid-guias{
 
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  display:grid;
 
-  margin-top:34px;
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
 
-  padding:16px 28px;
+  gap:34px;
+}
 
-  border:1px solid #dcdcdc;
-  border-radius:999px;
+/* TARJETAS */
+
+.tarjeta-guia{
+
+  border:1px solid #e7e7e7;
 
   background:#fff;
 
-  font-family:
-    "Inter",
-    sans-serif;
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
 
-  font-size:14px;
+  overflow:hidden;
+}
 
-  font-weight:600;
+.tarjeta-guia:hover{
 
-  letter-spacing:-0.01em;
+  transform:translateY(-4px);
+
+  border-color:#cfcfcf;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.06);
+}
+
+.tarjeta-guia img{
+
+  width:100%;
+
+  height:260px;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+.contenido-guia{
+
+  padding:28px;
+}
+
+.categoria-guia{
+
+  display:inline-block;
+
+  margin-bottom:16px;
+
+  font-size:.75rem;
+
+  font-weight:700;
+
+  letter-spacing:.08em;
+
+  color:#666;
+}
+
+.contenido-guia h3{
+
+  font-size:1.8rem;
+
+  line-height:1.15;
+
+  letter-spacing:-1px;
 
   color:#111;
 
+  margin-bottom:18px;
+}
+
+.contenido-guia p{
+
+  color:#555;
+
+  line-height:1.8;
+
+  margin-bottom:24px;
+}
+
+.contenido-guia a{
+
   text-decoration:none;
 
-  transition:
-    background .18s ease,
-    border-color .18s ease,
-    transform .18s ease,
-    color .18s ease;
+  color:#111;
+
+  font-weight:700;
 }
 
-/* hover */
+.contenido-guia a:hover{
 
-.cm-read-btn:hover{
-
-  background:#111;
-
-  border-color:#111;
-
-  color:#fff;
-
-  transform:translateY(-1px);
+  text-decoration:underline;
 }
 
-/* ================= IMAGEN ================= */
-
-.imagen-lado {
-
-  max-width:260px;
-
-  margin-top:10px;
-
-  flex-shrink:0;
-}
-
-.imagen-lado img{
-
-  width:100%;
-  height:auto;
-
-  display:block;
-
-  border-radius:0;
-}
-
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media (max-width:900px){
 
-  .contenedor-finanzas{
+  .grid-guias{
 
-    flex-direction:column;
-
-    gap:30px;
-
-    padding:0 20px;
+    grid-template-columns:1fr;
   }
 
-  .texto-contenido{
-    max-width:100%;
+  .guias-principales{
 
-    /* 🔥 convierte en columna interna */
-    display:flex;
-    flex-direction:column;
+    margin:90px auto;
   }
 
-  /* 🔥 orden EXACTO en móvil */
-  .subtitulo-editorial{
-    order:1;
+  .contenido-guia h3{
+
+    font-size:1.5rem;
   }
 
-  .imagen-lado{
-    order:2;
+  .tarjeta-guia img{
 
-    width:100%;
-    max-width:100%;
-  }
-
-  .texto-derecha{
-    order:3;
-  }
-
-  .cm-read-btn{
-    order:4;
-  }
-
-  .imagen-lado img{
-    width:100%;
-    max-width:100%;
-  }
-
-  .subtitulo-editorial{
-    letter-spacing:-1.5px;
+    height:220px;
   }
 }
 
 </style>
-
-<div class="contenedor-finanzas">
-
-  <div class="texto-contenido">
-
-    <h2 class="subtitulo-editorial">
-      ¿Por dónde empezar a mejorar tus finanzas?
-    </h2>
-
-    <p class="texto-derecha">
-
-      Construir una mejor relación con el dinero no depende de hacerlo todo perfecto desde el primer día.
-
-      A veces solo necesitas información clara, estrategias prácticas y una guía que te ayude a avanzar con mayor dirección financiera.
-
-    </p>
-
-    <a href="./educacion-financiera.html" class="cm-read-btn">
-      Leer artículos
-    </a>
-
-  </div>
-
-  <div class="imagen-lado">
-
-    <img
-      src="./assets/png/organizacion-economica.webp"
-      alt="Imagen financiera"
-    >
-
-  </div>
-
-</div>
-
-
-
 
 
 
@@ -3044,9 +3157,7 @@ prevBtn.addEventListener('click', () => {
 
 
 <!-- ESPACIO ARRIBA -->
- <div style="height: 100px;"></div>
-
-
+ <div style="height: 20px;"></div>
 
 
 
@@ -3201,7 +3312,6 @@ prevBtn.addEventListener('click', () => {
 }
 
 </style>
-
 
 
 
