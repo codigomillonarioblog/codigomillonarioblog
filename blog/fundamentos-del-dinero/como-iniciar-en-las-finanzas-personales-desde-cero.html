@@ -1,0 +1,2622 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Administrar tu Dinero Desde Cero: Guía de Finanzas Personales para Principiantes | Código Millonario</title>
+    <meta name="description" content="Empezar a ganar más dinero es, muchas veces, la consecuencia de aprender a administrarlo correctamente. Descubre cómo dar el primer paso con las finanzas personales.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/favicon-v45.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="../../assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Newsletter
+    </button>
+
+    <!-- INPUT -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* INPUT */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
+}
+
+</style>
+
+<script>
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
+
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
+
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="../../blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="../../blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="../../blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="../../blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="../../blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="../../blog/negocios/index.html">Modelos de Negocio</a>
+<a href="../../tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="../../mentalidad/index.html">Mentalidad</a></li>
+      <li><a href="../../blog/negocios/index.html">Negocios</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../nuestro-equipo.html">Staff</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+<div id="mobileMenu">
+
+  <button id="closeMobileMenu">&times;</button>
+
+  <div class="mobile-menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Código Millonario">
+  </div>
+
+  <div class="mobile-menu-links">
+
+    <a href="../../index.html">Inicio</a>
+
+    <a href="../../educacion-financiera.html">
+      Educación Financiera
+    </a>
+
+    <a href="../../mentalidad/index.html">
+      Mentalidad
+    </a>
+
+    <a href="../../blog/negocios/index.html">
+      Negocios
+    </a>
+
+    <a href="../../herramientas.html">
+      Herramientas
+    </a>
+
+    <a href="../../opiniones.html">
+      Opiniones
+    </a>
+
+    <a href="../../nuestro-equipo.html">
+      Staff
+    </a>
+
+    <a href="../../contacto.html">
+      Contacto
+    </a>
+
+  </div>
+</div>
+
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #111111; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+.mobile-menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.mobile-menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+#closeMobileMenu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.mobile-menu-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+}
+
+.mobile-menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+@media(min-width: 768px) {
+  .navbar-menu li:nth-child(4) {
+    position: relative;
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+
+  .navbar-menu li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: -9px; /* mover la línea hacia el centro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: rgba(223, 222, 222, 0.85);
+  }
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('../../assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+const closeMobileMenu =
+document.getElementById('closeMobileMenu');
+
+closeMobileMenu.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- ESPACIO FINAL -->
+<div style="height: 300px;"></div>
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- HERO -->
+<section class="uvo-hero">
+
+  <div class="uvo-container">
+
+    <!-- CATEGORY -->
+    <div class="uvo-category">
+      Administrar tu Dinero
+    </div>
+
+    <!-- TITLE -->
+    <h1 class="uvo-title">
+Cómo Iniciar en las Finanzas Personales Desde Cero: Guía Completa para Construir un Futuro Financiero
+    </h1>
+
+    <!-- DESCRIPTION -->
+    <p class="uvo-description">
+      Aprende cómo iniciar en las finanzas personales desde cero con una guía práctica para organizar tu dinero.<br><br>
+      Esta no es una guía escrita solo desde la teoría. Nace de errores, aprendizajes y experiencias reales que me enseñaron a tomar el control de mi dinero.
+
+    </p>
+
+    <!-- META -->
+    <div class="uvo-meta">
+
+      <!-- AUTHOR -->
+      <div class="uvo-author">
+
+        <img src="../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego"
+             class="uvo-avatar">
+
+        <div class="uvo-author-info">
+
+          <p class="uvo-label">
+            AUTOR
+          </p>
+
+          <p class="uvo-author-name">
+            Equipo Editorial • <a href="../../nuestro-equipo.html" class="uvo-author-link">Francisco Urrego</a>
+          </p>
+
+          <p class="uvo-date">
+            Escrito el 13 Jul 2026 / 14:37 h / 5 min lectura
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- SOCIALS -->
+      <div class="uvo-socials">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- X -->
+        <a href="https://x.com/CMillonarioblog"
+           target="_blank"
+           aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 1200 1227"
+               fill="currentColor">
+            <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163Z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1FVSBquigd/"
+           target="_blank"
+           aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
+           target="_blank"
+           aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+
+        <!-- Pinterest -->
+        <a href="https://pin.it/3tqNXYoAA"
+           target="_blank"
+           aria-label="Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- IMAGE -->
+<div class="uvo-image-wrapper">
+
+  <img 
+    src="../../assets/png/como-iniciar-en-las-finanzas-personales-desde-cero.webp"
+    alt=""
+    class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] sm:top-4 object-contain z-10">
+
+  <!-- TEXTO DEBAJO -->
+  <div class="max-w-[50rem] mx-auto w-80 sm:w-[40rem] md:w-[50rem] mt-10 text-left">
+
+    <span 
+      class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+      style="font-family: 'Open Sans', sans-serif;"
+    >
+      Un Análisis Editorial
+    </span>
+
+    <div class="w-16 h-px bg-amber-800"></div>
+
+  </div>
+
+</div>
+
+</section>
+
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#fff;
+}
+
+/* HERO */
+.uvo-hero{
+  padding:72px 0 88px;
+}
+
+/* CONTAINER */
+.uvo-container{
+  max-width:920px;
+  margin:auto;
+  padding:0 32px;
+}
+
+/* IMAGE WRAPPER */
+.uvo-image-wrapper{
+  width:100%;
+  overflow:hidden;
+}
+
+.uvo-image-wrapper img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+/* CATEGORY */
+.uvo-category{
+  display:inline-block;
+  margin-bottom:30px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#8b7355;
+}
+
+/* TITLE */
+.uvo-title{
+  max-width:860px;
+
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5vw,5rem);
+  font-weight:600;
+  line-height:1.04;
+  letter-spacing:-0.032em;
+  color:#111827;
+
+  text-wrap:balance;
+}
+
+/* DESCRIPTION */
+.uvo-description{
+  max-width:760px;
+  margin-top:34px;
+
+  font-family:'Inter',sans-serif;
+  font-size:1.08rem;
+  line-height:1.95;
+  color:#4b5563;
+}
+
+/* META */
+.uvo-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-top:52px;
+  padding-top:24px;
+  border-top:1px solid #e5e7eb;
+}
+
+/* AUTHOR */
+.uvo-author{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* AVATAR */
+.uvo-avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* LABEL */
+.uvo-label{
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+
+  color:#111827;
+  margin-bottom:2px;
+}
+
+/* AUTHOR NAME */
+.uvo-author-name{
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:600;
+  color:#111827;
+}
+
+/* LINK AUTHOR */
+.uvo-author-link{
+  color:#111827;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:.2s ease;
+}
+
+.uvo-author-link:hover{
+  border-bottom:1px solid #111827;
+}
+
+/* DATE */
+.uvo-date{
+  margin-top:4px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.02em;
+
+  color:#4b5563;
+}
+
+/* SOCIALS */
+.uvo-socials{
+  display:flex;
+  gap:8px;
+}
+
+.uvo-socials a{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid #e5e7eb;
+  background:#fff;
+
+  color:#6b7280;
+  text-decoration:none;
+
+  transition:all .2s ease;
+}
+
+.uvo-socials a:hover{
+  transform:translateY(-2px);
+  background:#111827;
+  border-color:#111827;
+  color:#fff;
+}
+
+.uvo-socials i,
+.uvo-socials svg{
+  width:15px;
+  height:15px;
+  font-size:15px;
+  fill:currentColor;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .uvo-hero{
+    padding:42px 0 60px;
+  }
+
+  .uvo-container{
+    padding:0 20px;
+  }
+
+  .uvo-title{
+    font-size:2.18rem;
+    line-height:1.12;
+    letter-spacing:-0.012em;
+  }
+
+  .uvo-description{
+    margin-top:24px;
+    font-size:1rem;
+    line-height:1.82;
+  }
+
+  .uvo-meta{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    margin-top:38px;
+  }
+
+  .uvo-socials{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    max-width:100%;
+  }
+
+  .uvo-image-wrapper > div{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px;
+    padding-right:20px;
+    box-sizing:border-box;
+  }
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<!-- CONTENEDOR -->
+<main>
+<article class="max-w-5xl mx-auto px-6 md:px-8">
+  
+<!-- INTRODUCCIÓN -->
+<div class="text-stone-700 leading-relaxed mb-1 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+<span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+D
+</span>
+esde pequeños convivimos con el dinero. Lo utilizamos para comprar dulces, juguetes o cualquier otra cosa que deseamos, casi siempre con el apoyo económico de nuestros padres. En esa etapa pocas veces pensamos de dónde proviene ese dinero o por qué es importante administrarlo correctamente.
+</p>
+
+<p>
+Con el paso de los años, esa relación cambia por completo. El dinero deja de ser una herramienta para satisfacer pequeños gustos y se convierte en la base para pagar vivienda, alimentación, transporte, impuestos y todas las responsabilidades que acompañan la vida adulta.
+</p>
+
+<p>
+Es en ese momento cuando descubrimos que cada decisión financiera tiene consecuencias. Ya no basta con gastar; ahora debemos administrar cada ingreso para que alcance hasta fin de mes, afrontar imprevistos y avanzar hacia objetivos como ahorrar, invertir o construir un patrimonio.
+</p>
+
+<p>
+Sin embargo, muchas personas nunca aprenden a manejar su dinero de forma consciente y terminan atrapadas en un ciclo difícil de romper: <strong>ingresos + gastos descontrolados + deudas = problemas financieros.</strong> En la mayoría de los casos, el problema no es únicamente cuánto dinero se gana, sino cómo se administra.
+</p>
+
+</div>
+
+
+
+
+<!-- FRASE EDITORIAL -->
+<section class="my-20">
+
+  <div class="max-w-3xl mx-auto bg-stone-50 border-l-4 border-amber-600 px-8 py-8 rounded-none">
+
+    <span class="inline-block text-xs uppercase tracking-[0.25em] text-amber-700 font-semibold mb-5">
+    Código Millonario
+    </span>
+
+    <blockquote class="text-center">
+
+      <p class="text-3xl md:text-4xl leading-tight text-stone-800 italic" style="font-family:'Cormorant Garamond', serif;">
+        “Cuando eras niño, el dinero compraba deseos.
+      </p>
+
+      <p class="mt-3 text-3xl md:text-4xl leading-tight text-amber-700 italic font-semibold" style="font-family:'Cormorant Garamond', serif;">
+        Cuando creciste, empezó a comprar responsabilidades.”
+      </p>
+
+    </blockquote>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- BLOQUE -->
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Existe una idea que suele pasar desapercibida: <strong>ganar más dinero puede ser la consecuencia de aprender a administrarlo mejor.</strong> No todas las personas que obtienen altos ingresos construyen riqueza, pero quienes desarrollan buenos hábitos financieros tienen mayores posibilidades de crear un patrimonio sólido y sostenible con el paso del tiempo.
+</p>
+
+<p>
+En esta guía de finanzas personales descubrirás los principios fundamentales para administrar mejor tu dinero, evitar errores comunes y desarrollar hábitos financieros que te ayuden a tomar decisiones más inteligentes, sin importar cuánto ganes actualmente.
+</p>
+
+<p>
+El objetivo no es enseñarte fórmulas complicadas ni conceptos difíciles de entender. Aquí encontrarás una explicación clara, práctica y fácil de aplicar para que puedas dar tus primeros pasos en las finanzas personales con mayor seguridad y confianza.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Qué son las Finanzas Personales y por qué son importantes?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Cuando escuchamos el término <strong>finanzas personales</strong>, muchas personas imaginan hojas de cálculo, presupuestos complicados o conceptos difíciles de entender. 
+</p>
+
+<p>
+Sin embargo, las finanzas personales son mucho más simples: representan la forma en que administras tu dinero para cubrir tus necesidades, alcanzar tus objetivos y tomar decisiones que afectan tu futuro.
+</p>
+
+<p>
+En otras palabras, las finanzas personales son el conjunto de decisiones que tomas cada día con tu dinero. 
+</p>
+
+<p>
+Desde pagar el arriendo, ahorrar para una emergencia, comprar un vehículo o invertir pensando en el futuro, todo forma parte de una misma estrategia financiera. No importa si ganas mucho o poco; lo verdaderamente importante es cómo administras los recursos que tienes hoy.
+</p>
+
+<p>
+Aquí es donde nace una idea que define la filosofía de Código Millonario: <strong>administrar el dinero no consiste únicamente en gastar menos o ahorrar más, sino en darle un propósito.</strong> 
+</p>
+
+<p>
+Algunas personas administran su dinero para vivir con tranquilidad, otras para crear un negocio, comprar una vivienda, viajar o alcanzar la libertad financiera. El dinero es la herramienta; tus objetivos son los que le dan dirección.
+</p>
+
+</div>
+
+
+
+
+<!-- PRINCIPIO FINANCIERO -->
+<section class="my-10">
+
+  <div class="max-w-2xl mx-auto border-l-4 border-amber-600 bg-stone-50 px-8 py-8 rounded-none">
+
+    <span class="inline-block text-xs uppercase tracking-[0.30em] text-amber-700 font-bold mb-6">
+    Código Millonario
+    </span>
+
+    <blockquote class="text-center">
+
+      <p class="text-3xl md:text-4xl leading-tight text-stone-800 italic"
+         style="font-family:'Cormorant Garamond', serif;">
+        El dinero no necesita un propósito.
+      </p>
+
+      <div class="w-20 h-px bg-stone-300 mx-auto my-6"></div>
+
+      <p class="text-3xl md:text-4xl leading-tight text-amber-700 font-semibold italic"
+         style="font-family:'Cormorant Garamond', serif;">
+        Quien necesita un propósito<br>
+        es la persona que lo administra.
+      </p>
+
+    </blockquote>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-3xl md:text-4xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+¿Por qué tener un propósito cambia la forma en que administras tu dinero?
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Muchas personas creen que administran mal su dinero porque ganan poco o porque no son buenas con los números. 
+</p>
+
+<p>
+Sin embargo, el verdadero problema suele ser otro: <strong>su dinero no tiene un propósito definido.</strong> Cuando una persona decide comprar una vivienda, crear una empresa, invertir para su futuro o alcanzar la libertad financiera, cada peso comienza a tener una función y las decisiones cambian por completo.
+</p>
+
+<p>
+Es el propósito el que obliga a administrar el dinero. Una meta clara impulsa el ahorro, ayuda a controlar los gastos y permite tomar decisiones financieras con mayor inteligencia. 
+</p>
+
+<p>
+En cambio, cuando el dinero no tiene un destino definido, es mucho más fácil gastarlo por impulso y perder de vista aquello que realmente puede mejorar tu futuro. <strong>El dinero sin un propósito suele desaparecer; el dinero con un propósito comienza a construir patrimonio.</strong>
+</p>
+
+</div>
+
+
+
+<!-- FRASE DESTACADA -->
+<div class="my-12 border-l-4 border-amber-600 bg-amber-50 px-8 py-7 rounded-r-xl shadow-sm">
+
+<p class="text-2xl md:text-3xl leading-relaxed text-stone-800 font-normal italic" style="font-family: 'Cormorant Garamond', serif;">
+"Si el dinero no tiene un propósito, tarde o temprano terminará gastándose en cosas que nunca fueron importantes."
+</p>
+
+<p class="mt-5 text-lg md:text-xl text-stone-700 leading-relaxed" style="font-family: 'Open Sans', sans-serif;">
+La verdadera administración del dinero nace cuando existe una necesidad, una meta o una responsabilidad que cumplir. Es ese propósito el que convierte cada ingreso en una decisión consciente y cada ahorro en un paso hacia un futuro financiero más sólido.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Sin embargo, también existe la otra cara de la moneda. Hay personas que enfrentan deudas, dificultades económicas o una constante preocupación por el dinero y, aun así, nunca deciden aprender sobre finanzas personales. 
+</p>
+
+<p>
+La necesidad, por sí sola, no garantiza un cambio; lo que realmente marca la diferencia es la decisión de actuar. 
+</p>
+
+<p>
+Muchas veces la información está al alcance de todos, pero sin iniciativa, disciplina y la voluntad de cambiar viejos hábitos, el problema financiero suele repetirse una y otra vez.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- DEFINICIÓN -->
+<div class="max-w-4xl mx-auto my-16 bg-stone-50 border border-stone-200 rounded-none px-8 py-8">
+
+    <span class="inline-block text-xs uppercase tracking-[0.25em] text-amber-700 font-semibold mb-5">
+    Código Millonario
+    </span>
+
+    <h3 class="text-3xl md:text-4xl text-stone-800 mb-8 leading-tight"
+        style="font-family:'Cormorant Garamond', serif;">
+        ¿Qué son las finanzas personales?
+    </h3>
+
+    <div class="space-y-5 text-lg md:text-xl leading-8 text-stone-700"
+         style="font-family:'Open Sans', sans-serif;">
+
+        <p>
+            Las <strong>finanzas personales</strong> son el conjunto de decisiones que una persona toma para administrar su dinero a lo largo del tiempo.
+        </p>
+
+        <p>
+            Incluyen la forma en que obtiene ingresos, controla sus gastos, ahorra, invierte y planifica sus objetivos financieros con el propósito de construir estabilidad y patrimonio.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<section class="mt-40 mb-16 text-center">
+
+  <h2 id="titulo3"
+      class="text-4xl md:text-5xl font-normal text-stone-700 leading-tight tracking-tight"
+      style="font-family:'Cormorant Garamond', serif;">
+    ¿Por qué es difícil empezar en las finanzas personales?
+  </h2>
+
+  <div class="w-20 h-px bg-stone-300 mx-auto mt-6 mb-10"></div>
+
+  <img
+    src="../../assets/png/planificacion-financiera-y-administracion-del-dinero.webp"
+    alt="Persona administrando su dinero con un propósito financiero para alcanzar sus metas y construir un patrimonio."
+    class="w-72 md:w-96 mx-auto object-contain">
+
+</section>
+
+
+
+<!-- BLOQUE -->
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Aunque muchas personas creen que aprender sobre dinero comienza al recibir el primer salario, la realidad es que la relación con las <strong>finanzas personales</strong> suele empezar mucho antes.
+</p>
+
+<p>
+Durante la infancia, el <strong>entorno familiar</strong> influye de forma importante en la manera en que un niño entiende el valor del dinero, el ahorro, el consumo y las responsabilidades económicas.
+</p>
+
+<p>
+Diversos estudios en psicología y educación financiera muestran que las experiencias vividas en el hogar pueden influir en los <strong>hábitos financieros</strong> que una persona desarrolla durante la vida adulta.
+</p>
+
+<p>
+Un niño no solo aprende a hablar, caminar o relacionarse con los demás. También observa cómo sus padres o cuidadores enfrentan las deudas, administran el dinero, toman decisiones de compra o reaccionan ante las dificultades económicas.
+</p>
+
+<p>
+Con el paso del tiempo, muchas de esas conductas pueden convertirse en referencias que influyen, de forma positiva o negativa, en su propia manera de <strong>administrar el dinero</strong>.
+</p>
+
+</div>
+
+<!-- CONDUCTAS -->
+<div class="my-14 border border-stone-200 rounded-none">
+
+<div class="grid md:grid-cols-2">
+
+<div class="border-b md:border-b-0 md:border-r border-stone-200 p-8">
+
+<h3 class="text-2xl md:text-3xl text-green-700 mb-6" style="font-family:'Cormorant Garamond', serif;">
+Conductas que fortalecen una buena relación con el dinero
+</h3>
+
+<ul class="space-y-4 text-lg text-stone-700" style="font-family:'Open Sans', sans-serif;">
+
+<li>• Ver a los padres ahorrar para alcanzar objetivos.</li>
+
+<li>• Planificar las compras antes de gastar.</li>
+
+<li>• Evitar deudas innecesarias.</li>
+
+<li>• Hablar del dinero con naturalidad y responsabilidad.</li>
+
+<li>• Enseñar que el esfuerzo suele preceder a la recompensa.</li>
+
+</ul>
+
+</div>
+
+<div class="p-8">
+
+<h3 class="text-2xl md:text-3xl text-red-700 mb-6" style="font-family:'Cormorant Garamond', serif;">
+Conductas que pueden afectar la educación financiera
+</h3>
+
+<ul class="space-y-4 text-lg text-stone-700" style="font-family:'Open Sans', sans-serif;">
+
+<li>• Comprar por impulso de forma constante.</li>
+
+<li>• Vivir endeudado sin una planificación.</li>
+
+<li>• Discutir por problemas económicos sin buscar soluciones.</li>
+
+<li>• Gastar todo el dinero apenas se recibe.</li>
+
+<li>• Crecer creyendo que ahorrar no tiene utilidad.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- CIERRE -->
+<div class="text-stone-700 leading-relaxed mt-10 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Esto no significa que el futuro financiero de una persona quede determinado por su infancia. Aunque las experiencias vividas pueden influir en la forma de entender el dinero, <strong>ningún hábito financiero es una sentencia definitiva.</strong>
+</p>
+
+<p>
+La verdadera transformación comienza cuando una persona decide cuestionar las creencias con las que creció, comprender cómo afectan sus decisiones económicas y construir una forma de administrar el dinero que esté alineada con sus propios objetivos, no con las expectativas o costumbres de quienes la rodean.
+</p>
+
+<p>
+Aprender sobre <strong>finanzas personales</strong> es, en gran medida, un ejercicio de responsabilidad. Significa reconocer que siempre es posible adquirir nuevos conocimientos, desarrollar mejores hábitos y tomar decisiones más conscientes. 
+</p>
+
+<p>
+Para ello, es recomendable apoyarse en información confiable y, cuando la complejidad de una situación financiera lo requiera, buscar la orientación de profesionales cualificados que puedan ofrecer asesoramiento adecuado.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- REFLEXIÓN EDITORIAL -->
+<section class="my-20">
+
+  <div class="max-w-3xl mx-auto border border-stone-200 bg-stone-50 rounded-none px-8 py-10 text-center">
+
+    <span class="inline-block text-xs uppercase tracking-[0.30em] text-amber-700 font-semibold mb-6">
+    Código Millonario
+    </span>
+
+    <blockquote>
+
+      <p class="text-3xl md:text-4xl leading-tight text-stone-800 italic"
+         style="font-family:'Cormorant Garamond', serif;">
+        No es que las finanzas personales sean difíciles.
+      </p>
+
+      <div class="w-16 h-px bg-amber-600 mx-auto my-6"></div>
+
+      <p class="text-3xl md:text-4xl leading-tight text-amber-700 font-semibold italic"
+         style="font-family:'Cormorant Garamond', serif;">
+        Lo difícil suele ser dar el primer paso para aprenderlas.
+      </p>
+
+    </blockquote>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+Cómo Empezar en las Finanzas Personales Desde Cero
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+El primer paso para iniciar en las <strong>finanzas personales</strong> no consiste en hacer cuentas, descargar una aplicación o anotar todos tus gastos. Antes de administrar el dinero, necesitas definir hacia dónde quieres que ese dinero te lleve. Toda <strong>decisión financiera</strong> tiene sentido únicamente cuando existe un objetivo que la justifique.
+</p>
+
+<p>
+Para construir una <strong>meta financiera</strong> útil, comienza por responder tres preguntas sencillas: ¿qué quiero conseguir?, ¿cuánto dinero necesito para lograrlo? y ¿en cuánto tiempo espero alcanzarlo? Estas respuestas transforman un simple deseo en un objetivo que puede planificarse y medirse con el paso de los meses.
+</p>
+
+<p>
+Por ejemplo, decir <strong>"quiero ahorrar dinero"</strong> es una intención demasiado amplia. En cambio, plantear "quiero reunir diez millones de pesos para la cuota inicial de una vivienda durante los próximos tres años" convierte esa idea en una meta concreta. A partir de ese momento, cada ingreso, cada gasto y cada decisión financiera pueden evaluarse según una sola pregunta: <strong>¿me acerca o me aleja de mi objetivo?</strong>
+</p>
+
+<p>
+Cuando una meta está bien estructurada, administrar el dinero deja de ser un ejercicio de restricciones y comienza a convertirse en un proceso de planificación. Esa es la base sobre la que se construyen todas las demás <strong>herramientas de las finanzas personales</strong>.
+</p>
+
+</div>
+
+
+
+
+
+<!-- MÁXIMA EDITORIAL -->
+<section class="my-10">
+
+  <div class="max-w-3xl mx-auto border-l-4 border-amber-600 bg-stone-50 px-8 py-8 rounded-none">
+
+    <span class="inline-block text-xs uppercase tracking-[0.30em] text-amber-700 font-semibold mb-5">
+      Código Millonario
+    </span>
+
+    <blockquote class="text-center">
+
+      <p class="text-3xl md:text-4xl leading-tight italic text-stone-800"
+         style="font-family:'Cormorant Garamond', serif;">
+        “La calidad de tus decisiones financieras
+      </p>
+
+      <p class="mt-3 text-3xl md:text-4xl leading-tight italic font-semibold text-amber-700"
+         style="font-family:'Cormorant Garamond', serif;">
+        depende de la claridad de tus objetivos.”
+      </p>
+
+    </blockquote>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+Cómo crear una meta financiera clara y alcanzable
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-10 space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Toda planificación financiera comienza mucho antes de ahorrar o invertir. Comienza cuando una persona decide qué quiere construir con su dinero. 
+</p>
+
+<p>
+Sin una meta clara, cualquier intento por administrar los ingresos termina convirtiéndose en un esfuerzo sin dirección y difícil de mantener con el paso del tiempo.
+</p>
+
+<p>
+Una buena <strong>meta financiera</strong> no nace de una obligación, sino de una necesidad o un propósito que realmente tenga sentido para quien la persigue. 
+</p>
+
+<p>
+Puede tratarse de comprar una vivienda, pagar una deuda, crear un negocio, estudiar una carrera, formar un fondo de emergencia o simplemente alcanzar una mayor tranquilidad económica. Lo importante es que el objetivo sea tuyo y no una expectativa impuesta por otras personas.
+</p>
+
+<p>
+Para construir una meta financiera útil no necesitas conocimientos avanzados en economía. Basta con responder cuatro preguntas que servirán como base para todas las decisiones que tomarás a partir de ese momento.
+</p>
+
+</div>
+
+<!-- PROCESO -->
+<div class="my-16 border border-stone-200 bg-stone-50 rounded-none">
+
+<div class="border-b border-stone-200 p-8">
+
+<span class="text-xs uppercase tracking-[0.30em] text-amber-700 font-semibold">
+Planificación Financiera
+</span>
+
+<h3 class="text-3xl md:text-4xl mt-3 text-stone-800" style="font-family:'Cormorant Garamond', serif;">
+Toda meta financiera comienza respondiendo estas cuatro preguntas
+</h3>
+
+</div>
+
+<div class="divide-y divide-stone-200">
+
+<div class="p-8">
+
+<h3 class="text-2xl text-stone-800 mb-3" style="font-family:'Cormorant Garamond', serif;">
+01. ¿Qué quiero conseguir?
+</h3>
+
+<p class="text-lg md:text-xl leading-relaxed text-stone-700" style="font-family:'Open Sans', sans-serif;">
+Describe con claridad aquello que deseas alcanzar. Evita objetivos demasiado generales como "quiero ahorrar dinero". En su lugar, define exactamente qué quieres construir con ese dinero.
+</p>
+
+</div>
+
+<div class="p-8">
+
+<h3 class="text-2xl text-stone-800 mb-3" style="font-family:'Cormorant Garamond', serif;">
+02. ¿Cuánto dinero necesito?
+</h3>
+
+<p class="text-lg md:text-xl leading-relaxed text-stone-700" style="font-family:'Open Sans', sans-serif;">
+Investiga el costo aproximado de tu objetivo. Tener una cifra concreta convierte una idea en un proyecto que puede planificarse y medirse con mayor precisión.
+</p>
+
+</div>
+
+<div class="p-8">
+
+<h3 class="text-2xl text-stone-800 mb-3" style="font-family:'Cormorant Garamond', serif;">
+03. ¿En cuánto tiempo quiero lograrlo?
+</h3>
+
+<p class="text-lg md:text-xl leading-relaxed text-stone-700" style="font-family:'Open Sans', sans-serif;">
+Establece un plazo realista. Definir una fecha te permitirá calcular cuánto necesitas destinar periódicamente y evaluar si el plan avanza según lo previsto.
+</p>
+
+</div>
+
+<div class="p-8">
+
+<h3 class="text-2xl text-stone-800 mb-3" style="font-family:'Cormorant Garamond', serif;">
+04. ¿Qué decisiones debo tomar desde hoy?
+</h3>
+
+<p class="text-lg md:text-xl leading-relaxed text-stone-700" style="font-family:'Open Sans', sans-serif;">
+Una meta financiera comienza a hacerse realidad cuando influye en tus decisiones diarias. A partir de este punto será mucho más fácil identificar qué gastos apoyan tu objetivo y cuáles simplemente retrasan el camino hacia él.
+</p>
+
+</div>
+
+<div class="p-8">
+
+<h3 class="text-2xl text-stone-800 mb-3" style="font-family:'Cormorant Garamond', serif;">
+05. ¿Qué situaciones podrían cambiar mi plan?
+</h3>
+
+<p class="text-lg md:text-xl leading-relaxed text-stone-700" style="font-family:'Open Sans', sans-serif;">
+Ningún plan financiero está libre de imprevistos. Una pérdida de empleo, un aumento en el costo de vida, una emergencia médica o incluso un cambio en tus prioridades pueden modificar el camino hacia tu objetivo. 
+<br><br>
+Anticipar estos posibles escenarios no significa ser pesimista; significa construir un plan más flexible, preparado para adaptarse cuando la realidad cambie sin perder de vista la meta principal.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CIERRE -->
+<div class="text-stone-700 leading-relaxed mt-12 space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Cuando respondes estas cuatro preguntas, el dinero deja de ser un recurso que simplemente entra y sale de tu bolsillo para convertirse en una herramienta con una dirección definida. 
+</p>
+
+<p>
+Ese cambio de perspectiva marca el verdadero inicio de las <strong>finanzas personales</strong>. 
+</p>
+
+<p>
+A partir de aquí, herramientas como el presupuesto, el ahorro o la inversión dejan de ser reglas aisladas y empiezan a formar parte de un plan diseñado para alcanzar un objetivo concreto.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PRINCIPIO EDITORIAL -->
+<section class="my-20">
+
+  <div class="max-w-3xl mx-auto border-l-4 border-amber-600 bg-stone-50 px-8 py-10 rounded-none">
+
+    <span class="inline-block text-xs uppercase tracking-[0.30em] text-amber-700 font-semibold mb-6">
+      Código Millonario
+    </span>
+
+    <blockquote class="text-center">
+
+      <p class="text-3xl md:text-4xl leading-tight italic text-stone-800"
+         style="font-family:'Cormorant Garamond', serif;">
+        “Una buena meta financiera
+      </p>
+
+      <p class="mt-4 text-3xl md:text-4xl leading-tight italic font-semibold text-amber-700"
+         style="font-family:'Cormorant Garamond', serif;">
+        no es la que nunca cambia.
+      </p>
+
+      <p class="mt-4 text-3xl md:text-4xl leading-tight italic text-stone-800"
+         style="font-family:'Cormorant Garamond', serif;">
+        Es la que puede adaptarse
+      </p>
+
+      <p class="mt-4 text-3xl md:text-4xl leading-tight italic font-semibold text-amber-700"
+         style="font-family:'Cormorant Garamond', serif;">
+        sin perder su propósito.”
+      </p>
+
+    </blockquote>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+Hábitos financieros para administrar Mejor tu Dinero
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Crear una meta financiera es solamente el inicio del proceso. El desafío aparece cuando esa meta debe convivir con las decisiones diarias que tomamos con nuestro dinero. 
+</p>
+
+<p>
+Una planificación puede estar bien diseñada, pero necesita acciones constantes que la mantengan alineada con el objetivo que se quiere alcanzar.
+</p>
+
+<p>
+La administración financiera no consiste en controlar cada peso por miedo a gastarlo, sino en desarrollar la capacidad de decidir qué lugar ocupa cada parte de tu dinero dentro del plan que construiste. 
+</p>
+
+<p>
+Cada gasto, ahorro o inversión representa una elección sobre el futuro que estás intentando crear.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Mantén tu Dinero Alineado con tu Propósito
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Una compra no es únicamente una salida de dinero; también es una decisión sobre tus prioridades. Esto no significa eliminar todos los gastos que generan satisfacción, sino aprender a reconocer cuándo una decisión financiera acerca o aleja de la meta que has establecido.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Protege el Camino Hacia tu Objetivo
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Toda meta financiera necesita cierta protección frente a los imprevistos. La vida puede cambiar en cualquier momento y un buen plan debe considerar que pueden aparecer situaciones que afecten temporalmente tus ingresos o aumenten tus gastos.
+</p>
+
+<p>
+Prepararte para esos escenarios no significa esperar lo peor, sino evitar que un problema inesperado destruya años de esfuerzo y planificación.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Aumenta tu Capacidad Financiera con Conocimiento
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Las finanzas personales evolucionan cuando una persona entiende mejor las herramientas que tiene a su disposición. Aprender sobre ahorro, inversión, deuda y planificación permite tomar decisiones más conscientes y evitar depender únicamente de consejos externos.
+</p>
+
+<p>
+El conocimiento financiero no garantiza resultados automáticos, pero sí mejora la calidad de las decisiones que tomas con los recursos que tienes actualmente.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Por qué aprender finanzas personales puede cambiar tu futuro?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Muchas personas creen que aprender sobre dinero solo tiene sentido cuando se empieza desde joven, como si <strong>las decisiones del pasado definieran completamente el futuro financiero</strong> de una persona.
+</p>
+
+<p>
+Sin embargo, <strong>el verdadero valor del conocimiento financiero aparece en el momento en que decides aplicarlo.</strong>
+</p>
+
+<p>
+Aprender <strong>finanzas personales desde temprano</strong> puede ofrecer una ventaja importante: permite desarrollar hábitos, cometer errores con menor impacto y aprovechar más tiempo para construir <strong>objetivos financieros a largo plazo.</strong>
+</p>
+
+<p>
+Pero llegar después no significa estar fuera del camino; significa tener la oportunidad de <strong>tomar mejores decisiones a partir de la experiencia adquirida.</strong>
+</p>
+
+<p>
+El cambio financiero no ocurre simplemente por conocer conceptos como <strong>ahorro, inversión o presupuesto.</strong> Ocurre cuando una persona comprende su situación actual, define <strong>qué quiere construir</strong> y empieza a utilizar las herramientas necesarias para acercarse a esa meta.
+</p>
+
+<p>
+Las finanzas personales no requieren fórmulas complicadas ni conocimientos avanzados en economía. Requieren algo mucho más importante: <strong>la disposición de aprender, cuestionar antiguos hábitos y tomar responsabilidad sobre las decisiones que afectan tu futuro.</strong>
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Por qué la estabilidad financiera no se construye de un día para otro?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Toda meta financiera comparte un mismo elemento: <strong>el tiempo.</strong> Ningún patrimonio sólido, fondo de emergencia o inversión importante se construye de la noche a la mañana. Alcanzar una estabilidad financiera implica comprender que los resultados son la consecuencia de decisiones que se mantienen durante meses e incluso años.
+</p>
+
+<p>
+Por esa razón, un buen plan financiero debe ser <strong>realista, sostenible y adaptable.</strong> No sirve de nada crear una estrategia imposible de mantener durante unas pocas semanas. Lo verdaderamente importante es construir un sistema que puedas seguir incluso cuando aparezcan imprevistos, cambios en tus ingresos o nuevas responsabilidades.
+</p>
+
+<p>
+Las finanzas personales no premian la velocidad, sino la constancia. Cada ahorro, cada decisión responsable y cada pequeño avance se acumulan con el tiempo hasta convertirse en una base financiera mucho más sólida de la que parecía posible al principio.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo7" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Cómo empezar a mejorar tus finanzas personales?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+A lo largo de esta guía hemos visto que las <strong>finanzas personales</strong> no empiezan cuando una persona gana más dinero, sino cuando comprende que cada decisión financiera tiene un impacto sobre el futuro que desea construir. 
+</p>
+
+<p>
+Ese cambio de perspectiva suele marcar una diferencia mucho mayor que cualquier herramienta o estrategia aislada.
+</p>
+
+<p>
+No importa si hoy comienzas desde cero, si cometiste errores en el pasado o si nunca antes prestaste atención a la administración de tu dinero. 
+</p>
+
+<p>
+Lo verdaderamente importante es que ahora cuentas con una dirección más clara y con los principios necesarios para empezar a construir un plan financiero adaptado a tus propios objetivos.
+</p>
+
+<p>
+Recuerda que ninguna meta importante se alcanza en un solo día. Un patrimonio, una empresa, una vivienda o la tranquilidad financiera son el resultado de muchas decisiones responsables tomadas a lo largo del tiempo. <strong>
+</p>
+
+<p>  
+  El futuro económico que deseas comienza con la decisión de darle un propósito a cada peso que administras desde hoy.</strong>
+</p>
+
+</div>
+
+
+
+
+
+
+
+<section class="mt-40 mb-24">
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+
+      <img
+        src="../../assets/img/fundador-codigo-millonario.webp"
+        alt="Autor del artículo"
+        class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover">
+
+      <div>
+
+        <p class="text-[10px] md:text-xs uppercase tracking-[0.20em] md:tracking-[0.25em] text-stone-500">
+          Opinión del autor
+        </p>
+
+        <p class="text-xs md:text-sm text-stone-700 font-medium">
+          Francisco Urrego
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+Después de estudiar las finanzas personales y analizar cómo influyen en la vida cotidiana, llegué a una conclusión que, aunque parece sencilla, ha cambiado por completo mi forma de entender el dinero.
+</p>
+
+<p>
+Las <strong>finanzas personales</strong> no son únicamente un conjunto de técnicas para ahorrar, invertir o controlar los gastos. 
+</p>
+
+<p>
+Son el proceso mediante el cual una persona utiliza los recursos que tiene a su disposición para construir el futuro que realmente desea. Cada ingreso, cada gasto y cada decisión financiera forman parte de una planificación que busca alcanzar un resultado concreto.
+</p>
+
+<p>
+Por esa razón, considero que <strong>toda buena administración del dinero comienza con una meta claramente definida.</strong> Cuando existe un propósito, las herramientas financieras dejan de ser conceptos aislados y empiezan a trabajar en una misma dirección. 
+</p>
+
+<p>
+El ahorro, el presupuesto, la inversión o un fondo de emergencia adquieren sentido porque responden a un objetivo previamente establecido.
+</p>
+
+<p>
+Esa es la filosofía que guía este artículo y también una de las bases de Código Millonario: <strong>el dinero no construye un futuro por sí solo; son las decisiones, la planificación y la constancia las que convierten ese dinero en una herramienta capaz de acercarte a la vida que deseas.</strong>
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+<p class="text-3xl font-semibold text-stone-900 mb-5 mt-20">Artículos relacionados:</p>
+
+<p class="interlink-heading text-left text-sm mb-4"
+   style="font-family: 'Open Sans', sans-serif;">
+  ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+</p>
+
+
+  </article>
+</main>
+
+
+
+
+
+
+
+
+
+<!-- ================= NUEVA TIPOGRAFIA ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../fundamentos-del-dinero/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style="font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+    <div id="interlinkGrid"></div>
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= TITULO ================= */
+.news-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+  letter-spacing: -0.2px;
+}
+
+/* METADATA */
+.news-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+/* TEXTO SECUNDARIO */
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.news-text {
+  flex: 1;
+}
+
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* 👇 TITULO MÁS GRANDE EN MÓVIL */
+  .news-text h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+function truncate(text, maxLength = 65){
+  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s: Math.random()}))
+              .sort((a,b)=>a.s-b.s)
+              .map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="${a.title}">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <div class="news-meta">${a.meta}</div>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../fundamentos-del-dinero/index.html")
+.then(r => r.text())
+.then(html => {
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+
+  const articles = doc.querySelectorAll(".article");
+
+  allArticles = shuffle(Array.from(articles).map(article => {
+
+    const link = article.querySelector("a.article-link");
+    const title = article.querySelector("h2.article-title");
+    const img = article.querySelector("img");
+    const meta = article.querySelector(".badge-row span");
+
+    return {
+      title: title ? title.textContent.trim() : "Sin título",
+      url: link ? link.getAttribute("href") : "#",
+      image: img ? img.getAttribute("src") : "./assets/png/default.png",
+      meta: meta ? meta.textContent.trim() : ""
+    };
+
+  }).filter(a => a.title.length > 5));
+
+  renderAll(allArticles);
+
+})
+.catch(err => console.error("Interlink error:", err));
+</script>
+
+
+
+
+
+
+
+   
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-28"></section>
+
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
