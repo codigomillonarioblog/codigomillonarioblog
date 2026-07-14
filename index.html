@@ -3164,153 +3164,256 @@ prevBtn.addEventListener('click', () => {
 
 
 
- <section class="cm-trust-bar">
 
-  <div class="cm-trust-grid">
 
-    <div class="cm-trust-item">
+<!-- ===================== TRUST SECTION ===================== -->
 
-      <h3>+120</h3>
+<section class="cm-trust-section">
 
-      <p>
-        Artículos sobre dinero, ahorro e inversión.
-      </p>
+    <div class="cm-trust-container">
+
+        <div class="cm-trust-grid">
+
+            <!-- CARD -->
+
+            <div class="cm-card">
+
+                <span class="cm-label">
+                    Biblioteca
+                </span>
+
+                <h3>+120</h3>
+
+                <p>
+                    Artículos sobre dinero, ahorro, inversión y educación financiera.
+                </p>
+
+            </div>
+
+            <!-- CARD -->
+
+            <div class="cm-card">
+
+                <span class="cm-label">
+                    Filosofía
+                </span>
+
+                <h3>100%</h3>
+
+                <p>
+                    Contenido práctico, transparente y explicado sin falsas promesas.
+                </p>
+
+            </div>
+
+            <!-- CARD -->
+
+            <div class="cm-card">
+
+                <span class="cm-label">
+                    Enfoque
+                </span>
+
+                <h3>Real</h3>
+
+                <p>
+                    Finanzas personales aplicadas a situaciones que cualquier persona puede vivir.
+                </p>
+
+            </div>
+
+            <!-- CARD -->
+
+            <div class="cm-card">
+
+                <span class="cm-label">
+                    Actualizado
+                </span>
+
+                <h3>2026</h3>
+
+                <p>
+                    Estrategias modernas adaptadas al entorno financiero actual.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="cm-trust-item">
-
-      <h3>100%</h3>
-
-      <p>
-        Contenido práctico explicado sin humo.
-      </p>
-
-    </div>
-
-
-    <div class="cm-trust-item">
-
-      <h3>Real</h3>
-
-      <p>
-        Finanzas personales aplicadas a la vida diaria.
-      </p>
-
-    </div>
-
-
-    <div class="cm-trust-item">
-
-      <h3>2026</h3>
-
-      <p>
-        Estrategias modernas para el mundo actual.
-      </p>
-
-    </div>
-
-  </div>
 
 </section>
 
 <style>
 
-/* ================= TRUST BAR ================= */
+/*=============================
+        SECCIÓN
+=============================*/
 
-.cm-trust-bar{
-  width:100%;
-  padding:48px 20px;
-  border-top:1px solid #e9e9e9;
-  border-bottom:1px solid #e9e9e9;
-  font-family:"Inter", sans-serif;
-  background: #fff;
+.cm-trust-section{
+
+    padding:90px 20px;
+
+    background:#fff;
+
+    font-family:'Inter',sans-serif;
+
 }
 
-/* ================= GRID ================= */
+/*=============================
+        CONTENEDOR
+=============================*/
+
+.cm-trust-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/*=============================
+            GRID
+=============================*/
 
 .cm-trust-grid{
-  width:min(1200px,100%);
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:30px;
-}
 
-/* ================= ITEM ================= */
+    display:grid;
 
-.cm-trust-item{
-  padding: 18px 16px;
-  border-left: 1px solid #f0f0f0;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
+    grid-template-columns:repeat(4,1fr);
 
-/* elimina borde en el primero */
-.cm-trust-item:first-child{
-  border-left: none;
-}
-
-/* hover sutil, nada futurista */
-.cm-trust-item:hover{
-  transform: translateY(-2px);
-}
-
-/* ================= NUMERO ================= */
-
-.cm-trust-item h3{
-  font-size:2.8rem;
-  line-height:1;
-  letter-spacing:-2px;
-  font-weight:900;
-  color:#111;
-  margin:0;
-}
-
-/* ================= TEXTO ================= */
-
-.cm-trust-item p{
-  margin-top:12px;
-  max-width:240px;
-  font-size:15.5px;
-  line-height:1.65;
-  color:#555;
-}
-
-/* ================= MICRO DETALLE (subrayado visual) ================= */
-
-.cm-trust-item h3::after{
-  content:"";
-  display:block;
-  width:40px;
-  height:3px;
-  background:#111;
-  margin-top:10px;
-  opacity:0.15;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-  .cm-trust-grid{
-    grid-template-columns:1fr;
     gap:26px;
-  }
 
-  .cm-trust-item{
-    border-left:none;
-    border-bottom:1px solid #f0f0f0;
-    padding-bottom:20px;
-  }
+}
 
-  .cm-trust-item:last-child{
-    border-bottom:none;
-  }
+/*=============================
+            CARD
+=============================*/
 
-  .cm-trust-item h3{
-    font-size:2.3rem;
-  }
+.cm-card{
+
+    background:#fff;
+
+    border:1px solid #e7e5e4;
+
+    border-radius:22px;
+
+    padding:34px;
+
+    transition:.30s ease;
+
+}
+
+.cm-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#0f766e;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.07);
+
+}
+
+/*=============================
+          ETIQUETA
+=============================*/
+
+.cm-label{
+
+    display:inline-block;
+
+    padding:5px 12px;
+
+    border-radius:999px;
+
+    background:#f5f5f4;
+
+    color:#57534e;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    margin-bottom:28px;
+
+}
+
+/*=============================
+          NÚMERO
+=============================*/
+
+.cm-card h3{
+
+    margin:0;
+
+    font-size:3.2rem;
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+    font-weight:700;
+
+    color:#1c1917;
+
+}
+
+/*=============================
+         DESCRIPCIÓN
+=============================*/
+
+.cm-card p{
+
+    margin-top:22px;
+
+    color:#57534e;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+/*=============================
+            MOBILE
+=============================*/
+
+@media (max-width:1024px){
+
+    .cm-trust-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    .cm-trust-section{
+
+        padding:70px 20px;
+
+    }
+
+    .cm-trust-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .cm-card{
+
+        padding:30px;
+
+    }
+
+    .cm-card h3{
+
+        font-size:2.7rem;
+
+    }
+
 }
 
 </style>
