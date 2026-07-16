@@ -116,7 +116,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
       <div class="footer-bottom">
         <p>
           © 2026 Código Millonario — Todos los derechos reservados.<br>
-          Plataforma de análisis sobre finanzas personales y crecimiento económico.
+          Medio digital especializado en educación financiera, construcción de patrimonio y psicología del dinero.
         </p>
       </div>
 
