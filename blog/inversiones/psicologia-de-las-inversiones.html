@@ -1,0 +1,3064 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Invertir Desde Cero: La Psicología que Debes Entender Antes de Invertir Dinero | Código Millonario</title>
+    <meta name="description" content="Invertir no empieza con elegir dónde poner tu dinero, sino con entender cómo tomas decisiones. Conoce la psicología detrás de las inversiones y los errores que afectan a muchos principiantes.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/favicon-v45.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="../../assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Newsletter
+    </button>
+
+    <!-- INPUT -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* INPUT */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
+}
+
+</style>
+
+<script>
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
+
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
+
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="../../blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="../../blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="../../blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="../../blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="../../blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="../../blog/negocios/index.html">Modelos de Negocio</a>
+<a href="../../tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="../../mentalidad/index.html">Mentalidad</a></li>
+      <li><a href="../../blog/negocios/index.html">Negocios</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../nuestro-equipo.html">Staff</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+<div id="mobileMenu">
+
+  <button id="closeMobileMenu">&times;</button>
+
+  <div class="mobile-menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Código Millonario">
+  </div>
+
+  <div class="mobile-menu-links">
+
+    <a href="../../index.html">Inicio</a>
+
+    <a href="../../educacion-financiera.html">
+      Educación Financiera
+    </a>
+
+    <a href="../../mentalidad/index.html">
+      Mentalidad
+    </a>
+
+    <a href="../../blog/negocios/index.html">
+      Negocios
+    </a>
+
+    <a href="../../herramientas.html">
+      Herramientas
+    </a>
+
+    <a href="../../opiniones.html">
+      Opiniones
+    </a>
+
+    <a href="../../nuestro-equipo.html">
+      Staff
+    </a>
+
+    <a href="../../contacto.html">
+      Contacto
+    </a>
+
+  </div>
+</div>
+
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #111111; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+.mobile-menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.mobile-menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+#closeMobileMenu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.mobile-menu-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+}
+
+.mobile-menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+@media(min-width: 768px) {
+  .navbar-menu li:nth-child(4) {
+    position: relative;
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+
+  .navbar-menu li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: -9px; /* mover la línea hacia el centro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: rgba(223, 222, 222, 0.85);
+  }
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('../../assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+const closeMobileMenu =
+document.getElementById('closeMobileMenu');
+
+closeMobileMenu.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- ESPACIO FINAL -->
+<div style="height: 300px;"></div>
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- HERO -->
+<section class="uvo-hero">
+
+  <div class="uvo-container">
+
+    <!-- CATEGORY -->
+    <div class="uvo-category">
+    Mente Inversionista
+    </div>
+
+    <!-- TITLE -->
+    <h1 class="uvo-title">
+    Cómo Invertir Desde Cero: La Psicología Detrás de las Decisiones Financieras
+    </h1>
+
+    <!-- DESCRIPTION -->
+    <p class="uvo-description">
+     Esta guía no busca decirte dónde invertir.
+     <br><br>
+     Su objetivo es ayudarte a comprender cómo piensa un inversor, qué factores influyen en sus decisiones y 
+     por qué la forma de analizar una inversión es tan importante como la inversión misma.
+     <br><br>
+     Explicaré estos conceptos desde el punto de vista de alguien que ya tiene experiencia y 
+     una visión ya estructurada; no se usarán términos difíciles de entender.
+    </p>
+
+    <!-- META -->
+    <div class="uvo-meta">
+
+      <!-- AUTHOR -->
+      <div class="uvo-author">
+
+        <img src="../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego"
+             class="uvo-avatar">
+
+        <div class="uvo-author-info">
+
+          <p class="uvo-label">
+            AUTOR
+          </p>
+
+          <p class="uvo-author-name">
+            Equipo Editorial • <a href="../../nuestro-equipo.html" class="uvo-author-link">Francisco Urrego</a>
+          </p>
+
+          <p class="uvo-date">
+            Escrito el 19 Jul 2026 / 11:43 h / 5 min lectura
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- SOCIALS -->
+      <div class="uvo-socials">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- X -->
+        <a href="https://x.com/CMillonarioblog"
+           target="_blank"
+           aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 1200 1227"
+               fill="currentColor">
+            <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163Z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1FVSBquigd/"
+           target="_blank"
+           aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
+           target="_blank"
+           aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+
+        <!-- Pinterest -->
+        <a href="https://pin.it/3tqNXYoAA"
+           target="_blank"
+           aria-label="Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- IMAGE -->
+<div class="uvo-image-wrapper">
+
+  <img 
+    src="../../assets/png/psicologia-de-las-inversiones.webp"
+    alt=""
+    class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] sm:top-4 object-contain z-10">
+
+  <!-- TEXTO DEBAJO -->
+  <div class="max-w-[50rem] mx-auto w-80 sm:w-[40rem] md:w-[50rem] mt-10 text-left">
+
+    <span 
+      class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+      style="font-family: 'Open Sans', sans-serif;">
+      Un Análisis Editorial
+    </span>
+
+    <div class="w-16 h-px bg-amber-800"></div>
+
+  </div>
+
+</div>
+
+</section>
+
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#fff;
+}
+
+/* HERO */
+.uvo-hero{
+  padding:72px 0 88px;
+}
+
+/* CONTAINER */
+.uvo-container{
+  max-width:920px;
+  margin:auto;
+  padding:0 32px;
+}
+
+/* IMAGE WRAPPER */
+.uvo-image-wrapper{
+  width:100%;
+  overflow:hidden;
+}
+
+.uvo-image-wrapper img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+/* CATEGORY */
+.uvo-category{
+  display:inline-block;
+  margin-bottom:30px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#8b7355;
+}
+
+/* TITLE */
+.uvo-title{
+  max-width:860px;
+
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5vw,5rem);
+  font-weight:600;
+  line-height:1.04;
+  letter-spacing:-0.032em;
+  color:#111827;
+
+  text-wrap:balance;
+}
+
+/* DESCRIPTION */
+.uvo-description{
+  max-width:760px;
+  margin-top:34px;
+
+  font-family:'Inter',sans-serif;
+  font-size:1.08rem;
+  line-height:1.95;
+  color:#4b5563;
+}
+
+/* META */
+.uvo-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-top:52px;
+  padding-top:24px;
+  border-top:1px solid #e5e7eb;
+}
+
+/* AUTHOR */
+.uvo-author{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* AVATAR */
+.uvo-avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* LABEL */
+.uvo-label{
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+
+  color:#111827;
+  margin-bottom:2px;
+}
+
+/* AUTHOR NAME */
+.uvo-author-name{
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:600;
+  color:#111827;
+}
+
+/* LINK AUTHOR */
+.uvo-author-link{
+  color:#111827;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:.2s ease;
+}
+
+.uvo-author-link:hover{
+  border-bottom:1px solid #111827;
+}
+
+/* DATE */
+.uvo-date{
+  margin-top:4px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.02em;
+
+  color:#4b5563;
+}
+
+/* SOCIALS */
+.uvo-socials{
+  display:flex;
+  gap:8px;
+}
+
+.uvo-socials a{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid #e5e7eb;
+  background:#fff;
+
+  color:#6b7280;
+  text-decoration:none;
+
+  transition:all .2s ease;
+}
+
+.uvo-socials a:hover{
+  transform:translateY(-2px);
+  background:#111827;
+  border-color:#111827;
+  color:#fff;
+}
+
+.uvo-socials i,
+.uvo-socials svg{
+  width:15px;
+  height:15px;
+  font-size:15px;
+  fill:currentColor;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .uvo-hero{
+    padding:42px 0 60px;
+  }
+
+  .uvo-container{
+    padding:0 20px;
+  }
+
+  .uvo-title{
+    font-size:2.18rem;
+    line-height:1.12;
+    letter-spacing:-0.012em;
+  }
+
+  .uvo-description{
+    margin-top:24px;
+    font-size:1rem;
+    line-height:1.82;
+  }
+
+  .uvo-meta{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    margin-top:38px;
+  }
+
+  .uvo-socials{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    max-width:100%;
+  }
+
+  .uvo-image-wrapper > div{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px;
+    padding-right:20px;
+    box-sizing:border-box;
+  }
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<!-- CONTENEDOR -->
+<main>
+<article class="max-w-5xl mx-auto px-6 md:px-8">
+  
+<!-- INTRODUCCIÓN -->
+<div class="text-stone-700 leading-relaxed mb-1 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+    E
+  </span>
+  n la actualidad, invertir, más que un beneficio, se ha convertido para la mayoría en una moda que todos parecen seguir, sin medir, calcular o interpretar los patrones detrás de una inversión con posibilidades reales de éxito.
+</p>
+
+<p>
+  Dichos patrones no solo dependen de un estudio matemático profundo, el cual la mayoría omite por su complejidad. 
+</p>
+
+<p>  
+  También tienen que ver con la astucia, la intuición, las valoraciones y las posibilidades; claro está, dependiendo del propósito que tengas establecido o si simplemente buscas entrar, obtener ganancias y salir en el menor tiempo posible.
+</p>
+
+<p>
+  A continuación, exploraremos la mente detrás de alguien con la capacidad de invertir y lo que rara vez se analiza sobre las decisiones que aumentan las probabilidades de construir una inversión sólida.
+</p>
+
+</div>
+
+
+
+
+<!-- NOTA EDITORIAL -->
+<section class="my-16">
+
+  <div class="max-w-3xl border-l-2 border-amber-500 pl-6">
+
+    <span class="uppercase tracking-[0.25em] text-[11px] font-semibold text-stone-500" style="font-family:'Open Sans',sans-serif;">
+      NOTA EDITORIAL
+    </span>
+
+    <h2 class="text-2xl md:text-3xl font-normal text-stone-700 mt-3 mb-6 leading-tight tracking-tight">
+      <strong>Antes de continuar, hay algo importante que debes tener en cuenta.</strong>
+    </h2>
+
+    <div class="space-y-4 text-stone-600 leading-relaxed text-base" style="font-family:'Open Sans',sans-serif;">
+
+      <p>
+        Este contenido reúne experiencias, observaciones y principios desarrollados a partir del análisis realizado por <strong>Código Millonario</strong>. Su objetivo es ayudarte a comprender ideas que muchas veces pasan desapercibidas cuando una persona comienza a invertir.
+      </p>
+
+      <p>
+        Invertir no es una habilidad que pueda aprenderse únicamente leyendo un artículo o siguiendo una fórmula. Es un proceso que combina aprendizaje, experiencia, análisis y la capacidad de tomar decisiones en distintos escenarios.
+      </p>
+
+      <p>
+        Por esa razón, esta guía no pretende ofrecer una solución definitiva, sino servir como un punto de partida para construir una forma de pensar más sólida antes de tomar decisiones relacionadas con tu dinero.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<div class="max-w-3xl mx-auto text-center mt-40 mb-20">
+
+    <div class="w-20 h-px bg-amber-600 mx-auto mb-6"></div>
+
+    <h3 class="text-2xl md:text-3xl text-stone-700 leading-relaxed tracking-wide"
+        style="font-family:'Cormorant Garamond', serif; font-weight:500;">
+
+        La Psicología Detrás de las
+        <span class="text-amber-700">Decisiones Financieras</span>
+
+    </h3>
+
+</div>
+
+
+<!-- BLOQUE -->
+<h2 id="formas-de-tomar-una-decision-de-inversion" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 leading-tight tracking-tight">
+¿De qué formas puede una persona tomar una decisión de inversión?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Como se mencionó anteriormente, toda decisión de inversión suele estar influenciada por una combinación de experiencias, conocimientos, emociones, expectativas y creencias personales. 
+</p>
+
+<p>
+Aunque cada persona es diferente, es posible observar ciertos patrones de pensamiento que influyen en la manera en que se evalúan las oportunidades, los riesgos y las posibles consecuencias de una decisión financiera.
+</p>
+
+<p>
+La siguiente clasificación no pretende afirmar que todas las personas invierten exactamente de la misma forma. 
+</p>
+
+<p>
+Su objetivo es ofrecer un marco de reflexión para comprender cómo pueden surgir distintas formas de tomar una decisión de inversión y ayudarte a identificar cuál se acerca más a tu manera de pensar cuando inviertes.
+</p>
+
+</div>
+
+
+
+
+<!-- PRINCIPIOS -->
+<div class="max-w-4xl mx-auto my-28">
+
+    <h3 class="text-2xl md:text-3xl text-stone-700 mb-8 leading-tight"
+        style="font-family:'Cormorant Garamond',serif;">
+
+        Principios que cambian la forma de entender una inversión
+
+    </h3>
+
+    <div class="border-t-2 border-amber-600 pt-8">
+
+        <div class="text-center">
+
+            <span class="block text-sm uppercase tracking-[0.35em] text-amber-700 mb-3"
+                  style="font-family:'Open Sans',sans-serif;">
+                PRINCIPIO 01
+            </span>
+
+            <p class="text-2xl md:text-3xl text-stone-700 leading-relaxed"
+               style="font-family:'Cormorant Garamond',serif;">
+
+                Muchos quieren invertir para ganar más dinero, pero terminan creando un autoempleo en lugar de construir algo que pueda crecer sin depender completamente de ellos.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<div class="text-stone-700 leading-relaxed mb-4 mt-40 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-8">
+1. Inversión impulsiva
+</h3>
+
+<p class="text-sm md:text-base text-amber-700 uppercase tracking-[0.18em] mt-2 mb-5 font-semibold">
+La más común
+</p>
+
+<p>
+Es la que nace de la emoción, la presión social o el deseo de obtener resultados en poco tiempo. La persona casi no analiza y actúa porque siente que debe hacerlo cuanto antes.
+</p>
+
+<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-8">
+2. Inversión de oportunidad
+</h3>
+
+<p class="text-sm md:text-base text-amber-700 uppercase tracking-[0.18em] mt-2 mb-5 font-semibold">
+Basada en la observación
+</p>
+
+<p>
+Aquí ya existe una mayor capacidad de observación. La persona identifica una oportunidad que considera favorable y decide aprovecharla, aunque todavía no siempre cuenta con un plan completamente definido.
+</p>
+
+<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-8">
+3. Inversión planificada
+</h3>
+
+<p class="text-sm md:text-base text-amber-700 uppercase tracking-[0.18em] mt-2 mb-5 font-semibold">
+El análisis guía la decisión
+</p>
+
+<p>
+La decisión se toma después de analizar objetivos, riesgos, recursos, tiempo y posibilidades. Ya existe una estrategia que busca reducir errores y aumentar las probabilidades de obtener buenos resultados.
+</p>
+
+<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-8">
+4. Inversión estructurada
+</h3>
+
+<p class="text-sm md:text-base text-amber-700 uppercase tracking-[0.18em] mt-2 mb-5 font-semibold">
+Cada decisión tiene un propósito
+</p>
+
+<p>
+Representa un nivel más alto de desarrollado. La inversión hace parte de un sistema donde cada decisión tiene un propósito, existe aprendizaje continuo y se mantiene una visión orientada al largo plazo.
+</p>
+
+</div>
+
+
+
+
+<!-- PRINCIPIO -->
+<div class="max-w-4xl mx-auto my-20">
+
+    <div class="relative border border-stone-200 px-10 py-12">
+
+        <span class="absolute -top-5 left-10 bg-white px-4 text-sm uppercase tracking-[0.30em] text-amber-700">
+            PRINCIPIO 02
+        </span>
+
+        <p class="text-2xl md:text-3xl leading-relaxed text-stone-700 text-center"
+           style="font-family:'Cormorant Garamond',serif;">
+
+            La mayoría busca oportunidades para ganar; pocos se preparan para saber perder cuando una decisión no sale como esperaban.
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+<h3 class="text-xl md:text-2xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+Lo que realmente determina el éxito de una inversión
+</h3>
+
+<!-- BLOQUE -->
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Después de analizar estas formas de tomar una decisión de inversión, es importante entender que <strong>ninguna es buena o mala por sí misma</strong>.
+</p>
+
+<p>
+Lo que realmente marca la diferencia es <strong>el nivel de análisis y la experiencia</strong> con el que se toma la decisión. Incluso una inversión que termina en pérdidas puede convertirse en <strong>una de las mayores fuentes de aprendizaje</strong>.
+</p>
+
+<p>
+Tampoco significa que invertir dependa únicamente de la suerte. Toda inversión implica incertidumbre, pero <strong>una decisión basada en información, planificación y una correcta gestión del riesgo</strong> suele aumentar las probabilidades de obtener mejores resultados. Aun así, <strong>ninguna estrategia puede eliminar por completo la posibilidad de perder</strong>.
+</p>
+
+<p>
+Además, no todas las inversiones consisten únicamente en aportar dinero. En muchos casos también se invierte <strong>tiempo, conocimientos, experiencia, habilidades</strong> o una combinación de todos estos recursos.
+</p>
+
+<p>
+Al final, <strong>invertir significa destinar algo de valor hoy con la expectativa de obtener un beneficio en el futuro</strong>.
+</p>
+
+</div>
+
+
+
+
+<div class="max-w-4xl mx-auto my-20">
+
+    <div class="border-l-4 border-amber-600 pl-8">
+
+        <p class="text-2xl md:text-3xl leading-relaxed text-stone-700 italic"
+           style="font-family:'Cormorant Garamond', serif;">
+
+            “No son las ganancias ni las pérdidas las que definen una inversión, sino los procesos que construyen tu carácter.”
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Cómo identificar una mala decisión de inversión antes de perder dinero
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Para finales del año 2017 recuerdo que una persona cercana a mí decidió iniciar una inversión después de conocer un negocio que, según le habían contado, estaba funcionando muy bien en otra ciudad.
+</p>
+
+<p>
+La idea consistía en comprar galletas al por mayor, llevarlas hasta su pueblo y revenderlas. Sin embargo, después de analizar la propuesta, surgió una posibilidad que parecía ofrecer un mayor potencial de crecimiento.
+</p>
+
+<p>
+En lugar de viajar constantemente para comprar las galletas, decidió replicar el proceso de fabricación e instalar una pequeña empresa en su municipio. De esa forma podría producir localmente, reducir los costos de transporte y distribuir el producto directamente a las tiendas de la región.
+</p>
+
+
+
+<div class="max-w-xl mx-auto my-20">
+    <img
+        src="../../assets/png/ejemplo-de-una-mala-decision-de-inversion.webp"
+        alt="Psicología de las decisiones de inversión"
+        class="w-full object-cover">
+</div>
+
+
+<p>
+A simple vista, el proyecto parecía tener sentido. En la zona no existía un negocio dedicado a fabricar ese tipo de galletas, por lo que también existía la posibilidad de vender al por mayor a otros comerciantes además de abastecer las tiendas del pueblo.
+</p>
+
+<p>
+Como ocurre con muchas inversiones, llevar la idea a la realidad requería una cantidad importante de recursos. Era necesario adquirir un horno, utensilios, materia prima, insumos, un vehículo para el reparto y contar con el tiempo y la disposición necesarios para poner en marcha la producción.
+</p>
+
+<p>
+La persona interesada no disponía del capital suficiente para cubrir todos esos gastos, por lo que decidió solicitar un préstamo al banco con el propósito de financiar el proyecto.
+</p>
+
+<p>
+El crédito fue aprobado y poco después compró todo lo necesario para comenzar. Con el equipo instalado, inició las primeras pruebas con la intención de sacar el producto al mercado lo antes posible.
+</p>
+
+
+
+<div class="max-w-xl mx-auto my-20">
+    <img
+        src="../../assets/png/analisis-de-una-decision-de-inversion.webp"
+        alt="Psicología de las decisiones de inversión"
+        class="w-full object-cover">
+</div>
+
+
+<p>
+Sin embargo, los resultados no fueron los esperados. Las primeras tandas de galletas no mantenían la misma calidad, por lo que comenzaron a realizar distintos ajustes en la preparación. 
+</p>
+
+<p>
+Cambiaban cantidades de ingredientes, modificaban los tiempos de horneado y probaban diferentes combinaciones, pero el resultado seguía siendo inconsistente.
+</p>
+
+<p>
+Mientras intentaban resolver el problema, los días continuaban pasando. Los gastos seguían acumulándose, el préstamo debía empezar a pagarse y las ventas nunca llegaron a comenzar.
+</p>
+
+<p>
+Después de varias semanas de intentos, el proyecto terminó cerrando sin haber logrado poner el producto en el mercado.
+</p>
+
+</div>
+
+
+
+<p class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+A simple vista, podría parecer que el negocio fracasó porque las galletas nunca lograron la calidad esperada. Sin embargo, ¿ese fue realmente el problema o el error comenzó mucho antes?
+</p>
+
+
+<div class="max-w-4xl mx-auto my-20">
+
+    <div class="border-l-4 border-amber-600 pl-8">
+
+        <p class="text-2xl md:text-3xl leading-relaxed text-stone-700 italic"
+           style="font-family:'Cormorant Garamond', serif;">
+         Es más fácil detectar un error que encontrar la solución perfecta.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="donde-comenzo-realmente-el-error" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+¿Qué debes analizar antes de invertir? Lecciones que deja una inversión fallida
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+A simple vista podría parecer que el proyecto fracasó porque nunca lograron fabricar las galletas con la calidad esperada. Sin embargo, ese fue únicamente el resultado final.
+</p>
+
+<p>
+La pregunta realmente importante no es por qué quebró el negocio, sino en qué momento comenzaron a aparecer las decisiones que aumentaron la probabilidad de que esa inversión terminara fracasando.
+</p>
+
+<p>
+Analicemos paso a paso la historia para identificar algunos de los patrones que pasaron desapercibidos antes de que aparecieran las pérdidas.
+</p>
+
+</div>
+
+
+
+
+<!-- PRINCIPIO -->
+<div class="max-w-4xl mx-auto my-20">
+
+    <div class="relative border border-stone-200 px-10 py-12">
+
+        <span class="absolute -top-5 left-10 bg-white px-4 text-sm uppercase tracking-[0.30em] text-amber-700">
+            PRINCIPIO 03
+        </span>
+
+        <p class="text-2xl md:text-3xl leading-relaxed text-stone-700 text-center"
+           style="font-family:'Cormorant Garamond',serif;">
+
+            Invertir sin un propósito definido suele ser más peligroso que invertir con poco dinero.
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+¿Por qué una buena idea puede convertirse en una mala inversión?
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Una idea representa el primer paso de cualquier inversión. Sin embargo, como pudimos observar en la historia anterior, muchas personas toman decisiones convencidas de que una buena idea es suficiente para obtener buenos resultados, sin detenerse a analizar los riesgos, las limitaciones o los recursos que realmente serán necesarios para llevarla a cabo.
+</p>
+
+<p>
+En realidad, una buena idea no genera beneficios por sí sola. Su resultado dependerá, en gran medida, de la forma en que sea ejecutada, de las decisiones que se tomen durante el proceso y de la capacidad para adaptarse a los problemas que puedan surgir en el camino.
+</p>
+
+</div>
+
+
+
+<!-- BLOQUE -->
+<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+Antes de invertir dinero, invierte en conocimiento
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Uno de los errores más comunes consiste en creer que el capital es suficiente para iniciar una inversión, cuando en realidad el conocimiento especializado también forma parte de los recursos necesarios para ejecutarla. 
+</p>
+
+<p>
+En la historia anterior, nadie se detuvo a preguntarse si contaban con los conocimientos necesarios sobre repostería, los procesos de elaboración o la receta que permitiera fabricar un producto con la calidad esperada.
+</p>
+
+<p>
+No es necesario iniciar un negocio sabiéndolo todo. Sin embargo, cuando una persona decide aprender durante la ejecución del proyecto, también debe contemplar que ese proceso de aprendizaje puede requerir más tiempo, más recursos y una mayor capacidad para sostener la inversión mientras se adquiere la experiencia necesaria.
+</p>
+
+<p>
+En muchos casos, invertir también significa invertir en conocimiento. Trabajar junto a personas con experiencia, recibir formación especializada o comprender cómo funciona un proceso antes de destinar grandes cantidades de dinero puede reducir considerablemente la probabilidad de cometer errores que podrían haberse evitado.
+</p>
+
+</div>
+
+
+
+<!-- BLOQUE -->
+<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+Qué debes validar antes de invertir dinero
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+En la historia anterior, la inversión comenzó sin comprobar si realmente eran capaces de fabricar un producto con la calidad necesaria para venderlo. El proceso de elaboración se convirtió en un problema cuando ya se había realizado el préstamo, comprado los equipos y destinado recursos que difícilmente podían recuperarse de inmediato.
+</p>
+
+<p>
+Validar un proceso significa comprobar, antes de realizar una inversión importante, que el producto o servicio puede ejecutarse de manera consistente y con los recursos disponibles. En muchos casos, pequeñas pruebas o proyectos piloto permiten descubrir errores que resultan mucho menos costosos de corregir antes de comprometer una mayor cantidad de dinero.
+</p>
+
+<p>
+Del mismo modo, también es necesario validar el mercado. Conocer si existe demanda, cuántos clientes podrían estar interesados, cuánto estarían dispuestos a pagar y si el volumen de ventas esperado puede sostener la inversión son preguntas que pueden reducir significativamente la incertidumbre antes de comenzar.
+</p>
+
+</div>
+
+
+
+<!-- PRINCIPIO -->
+<div class="max-w-4xl mx-auto my-20">
+
+    <div class="relative border border-stone-200 px-10 py-12">
+
+        <span class="absolute -top-5 left-10 bg-white px-4 text-sm uppercase tracking-[0.30em] text-amber-700">
+            PRINCIPIO 04
+        </span>
+
+        <p class="text-2xl md:text-3xl leading-relaxed text-stone-700 text-center"
+           style="font-family:'Cormorant Garamond',serif;">
+
+            Querer resultados inmediatos lleva a tomar decisiones que terminan alejando los resultados de largo plazo.
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+Una inversión también necesita tiempo para crecer
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Uno de los errores más frecuentes consiste en subestimar el tiempo que una inversión puede tardar en producir resultados. Muchas personas abandonan una fuente de ingresos estable convencidas de que su nuevo proyecto comenzará a generar ganancias en cuestión de días o semanas, cuando en realidad algunos modelos de negocio pueden requerir meses e incluso años para consolidarse.
+</p>
+
+<p>
+Esa diferencia entre las expectativas y la realidad suele convertirse en un problema cuando la inversión depende de préstamos o de un capital muy limitado. Mientras el negocio aún no genera ingresos suficientes, los gastos continúan, las obligaciones financieras no se detienen y, en muchos casos, es necesario seguir aportando recursos para mantener el proyecto en funcionamiento.
+</p>
+
+<p>
+Por esa razón, antes de invertir conviene preguntarse si el capital disponible será suficiente para sostener el negocio durante el tiempo necesario hasta que pueda operar por sí mismo. No siempre basta con tener el dinero para empezar; también es importante contar con la capacidad de mantener la inversión mientras alcanza estabilidad.
+</p>
+
+<p>
+En algunos casos, proyectos con potencial terminan abandonándose no porque la idea fuera mala, sino porque se agotaron los recursos antes de que el negocio tuviera la oportunidad de desarrollarse. Diferenciar entre un proyecto que necesita más tiempo y uno que realmente dejó de ser viable puede marcar una diferencia importante al momento de tomar decisiones.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+Toda inversión comienza antes de invertir dinero
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Cuando pensamos en una inversión, normalmente imaginamos el momento en que se compra un equipo, se firma un préstamo o se realiza el primer pago. Sin embargo, en muchos proyectos la inversión comienza mucho antes de que salga el primer peso del bolsillo.
+</p>
+
+<p>
+El tiempo dedicado a investigar el mercado, adquirir conocimientos especializados, analizar riesgos, planificar el proceso de producción o comprender cómo funciona un negocio también representa una inversión. Aunque ese esfuerzo no siempre tenga un valor económico inmediato, puede influir directamente en la calidad de las decisiones que se tomarán más adelante.
+</p>
+
+<p>
+En la historia anterior, gran parte de esa inversión previa prácticamente no existió. La mayor parte de los recursos se destinaron a ejecutar la idea, cuando todavía quedaban muchas preguntas importantes por responder. En ocasiones, dedicar más tiempo a prepararse puede resultar mucho menos costoso que corregir los errores una vez el negocio ya está en marcha.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<div class="text-stone-700 leading-relaxed space-y-5 mb-8 mt-20 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Probablemente existan muchos otros errores que también podrían encontrarse en la historia anterior. Sin embargo, más que entregar todas las respuestas, el verdadero valor de este ejercicio consiste en aprender a observar aquello que normalmente pasa desapercibido antes de invertir.
+</p>
+
+<p>
+Si al terminar esta historia lograste identificar algunos patrones por tu cuenta, entonces el análisis ya cumplió parte de su propósito. Después de todo, las mejores decisiones no siempre nacen de recibir una respuesta, sino de aprender a formular mejores preguntas.
+</p>
+
+</div>
+
+
+
+
+<!-- PRINCIPIO -->
+<div class="max-w-4xl mx-auto my-20">
+
+    <div class="relative border border-stone-200 px-10 py-12">
+
+        <span class="absolute -top-5 left-10 bg-white px-4 text-sm uppercase tracking-[0.30em] text-amber-700">
+            PRINCIPIO 05
+        </span>
+
+        <p class="text-2xl md:text-3xl leading-relaxed text-stone-700 text-center"
+           style="font-family:'Cormorant Garamond',serif;">
+
+            Una buena oportunidad no siempre es una buena inversión para todas las personas.
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="12" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+¿Qué patrones aumentan la probabilidad de que una inversión salga mal?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Aunque cada inversión presenta circunstancias diferentes, existen patrones que suelen repetirse cuando una decisión termina aumentando las probabilidades de fracasar. Comprenderlos no garantiza el éxito, pero puede ayudarte a evaluar una oportunidad con una perspectiva más amplia antes de comprometer tu tiempo, dinero o conocimientos.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+La importancia del análisis de mercado antes de invertir
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+El entorno es uno de los primeros aspectos que conviene analizar antes de invertir. Muchas ideas parecen excelentes cuando las vemos funcionar en otro lugar, pero eso no significa que vayan a producir el mismo resultado si se llevan a una ciudad, un barrio o un mercado diferente.
+</p>
+
+<p>
+Cada entorno tiene sus propias características. Cambian los clientes, la competencia, los costos, la facilidad para conseguir proveedores e incluso la forma en que las personas compran. Todos esos factores pueden modificar por completo el desarrollo de una inversión.
+</p>
+
+<p>
+Por esa razón, antes de destinar dinero a cualquier proyecto, vale la pena preguntarse si las condiciones del lugar realmente favorecen esa idea o si simplemente estamos asumiendo que funcionará porque dio resultados en otro sitio.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+El error de no calcular todos los costos antes de invertir
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Al comenzar una inversión es común pensar únicamente en el dinero necesario para iniciar. Sin embargo, el alcance de una inversión suele ir mucho más allá del capital inicial. Cada decisión puede traer nuevas necesidades que aparecen a medida que el proyecto avanza.
+</p>
+
+<p>
+Un negocio puede requerir contratar personal, comprar más equipos, alquilar un espacio más grande, invertir en publicidad, transportar mercancía o responder a gastos que nunca se contemplaron al principio. Cada una de esas etapas representa una nueva inversión que también debe formar parte de la planificación.
+</p>
+
+<p>
+Conocer el alcance de una inversión consiste en entender hasta dónde pueden llegar sus necesidades antes de que comience a generar resultados suficientes para sostenerse por sí misma. Cuanto más clara sea esa visión, menores serán las probabilidades de quedarse sin recursos en la mitad del proceso.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+¿Qué tan fácil puede ser reemplazado tu negocio?
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Antes de invertir también conviene preguntarse qué tan fácil sería para otra persona ofrecer exactamente lo mismo. Existen modelos de negocio que pueden copiarse en cuestión de días y otros que requieren años de experiencia, infraestructura o conocimientos especializados para llegar a un nivel similar.
+</p>
+
+<p>
+Cuando un negocio puede replicarse con facilidad, la competencia suele aparecer con mayor rapidez. En esos casos, el precio deja de ser el único factor importante y comienzan a cobrar más valor aspectos como la calidad, el servicio, la ubicación, la confianza que transmite la marca o la capacidad para diferenciarse.
+</p>
+
+<p>
+No significa que un negocio fácil de copiar sea una mala inversión. La diferencia está en comprender qué ventajas pueden mantenerse con el paso del tiempo y cuáles desaparecerán en el momento en que aparezcan nuevos competidores.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+Conocer a la competencia también forma parte de invertir
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Toda inversión entra a competir por clientes, tiempo, atención o dinero. Antes de comenzar conviene conocer quiénes ya ofrecen productos o servicios similares y entender por qué las personas los eligen.
+</p>
+
+<p>
+Analizar la competencia permite descubrir aspectos que muchas veces pasan desapercibidos. Los precios, la calidad, la experiencia del cliente, la ubicación, la trayectoria o la reputación pueden representar ventajas difíciles de igualar cuando un negocio apenas comienza.
+</p>
+
+<p>
+Al mismo tiempo, una competencia fuerte también puede convertirse en una fuente de información. Observar sus errores, identificar necesidades que aún no están siendo atendidas y comprender cómo funciona el mercado puede ayudar a tomar decisiones con una perspectiva mucho más amplia antes de invertir.
+</p>
+
+</div>
+
+
+
+
+<!-- PRINCIPIO -->
+<div class="max-w-4xl mx-auto my-20">
+
+    <div class="relative border border-stone-200 px-10 py-12">
+
+        <span class="absolute -top-5 left-10 bg-white px-4 text-sm uppercase tracking-[0.30em] text-amber-700">
+            PRINCIPIO 06
+        </span>
+
+        <p class="text-2xl md:text-3xl leading-relaxed text-stone-700 text-center"
+           style="font-family:'Cormorant Garamond',serif;">
+
+            Las mejores inversiones comienzan mucho antes de mover el dinero.
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+No entender cómo funciona un negocio aumenta el riesgo
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Toda inversión depende de un proceso para convertirse en un producto o servicio que llegue al cliente. Antes de invertir conviene comprender cómo funciona ese proceso y qué recursos serán necesarios para ejecutarlo de manera constante.
+</p>
+
+<p>
+Algunos modelos de negocio requieren conocimientos técnicos, maquinaria especializada, controles de calidad, permisos, proveedores confiables o personal con experiencia. Cada uno de esos elementos puede influir en los costos, el tiempo de producción y la capacidad para mantener un resultado consistente.
+</p>
+
+<p>
+Cuando el proceso de elaboración no se conoce con suficiente profundidad, los errores suelen aparecer durante la ejecución. En ese momento, corregirlos puede resultar mucho más costoso que haber dedicado tiempo a comprender cada etapa antes de realizar la inversión.
+</p>
+
+<p>
+Mientras mayor sea el conocimiento sobre el proceso, mayor será la capacidad para anticipar dificultades, planificar soluciones y tomar decisiones con una visión más completa del proyecto.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+Los acuerdos también forman parte de una buena inversión
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Cuando una inversión involucra a más de una persona, el dinero deja de ser el único aspecto importante. La comunicación, los acuerdos y la confianza comienzan a formar parte del proyecto y pueden influir en su desarrollo tanto como el capital invertido.
+</p>
+
+<p>
+Antes de asociarse conviene dejar claras las responsabilidades, la participación de cada integrante, la forma en que se tomarán las decisiones y la manera de actuar cuando aparezcan diferencias. Muchas inversiones comienzan con entusiasmo, pero pocas personas dedican tiempo a conversar sobre los posibles conflictos antes de que ocurran.
+</p>
+
+<p>
+La confianza también necesita límites. Tener una buena relación con un socio no reemplaza la importancia de establecer acuerdos claros desde el principio. Cuando las reglas quedan definidas, cada persona conoce sus responsabilidades y disminuyen las posibilidades de que un problema personal termine afectando la inversión.
+</p>
+
+<p>
+Elegir un socio implica confiar parte del proyecto a otra persona. Por esa razón, además de analizar la inversión, también conviene analizar con quién se piensa construirla.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-40 leading-tight tracking-tight max-w-3xl">
+No todas las inversiones exitosas comenzaron con un plan perfecto
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Si después de leer todo esto sientes que invertir parece más difícil de lo que imaginabas, es importante hacer una aclaración. El propósito de este análisis no es desanimarte, sino ayudarte a comprender que detrás de una inversión existen muchos factores que suelen pasar desapercibidos.
+</p>
+
+<p>
+También es cierto que muchas personas comienzan un negocio sin una planificación detallada y, aun así, logran construir proyectos exitosos. Eso ocurre con más frecuencia de la que parece. Sin embargo, la diferencia suele estar en que, a medida que aparecen los problemas, encuentran la forma de adaptarse, aprender y mantener el proyecto en marcha hasta hacerlo funcionar.
+</p>
+
+<p>
+Del mismo modo, estudiar una inversión tampoco garantiza que todo saldrá como se espera. Siempre existirán situaciones imposibles de prever. Lo que sí puede hacer el análisis es ayudarte a identificar riesgos con anticipación, reducir errores evitables y tomar decisiones con una visión mucho más amplia antes de comprometer tu tiempo, dinero o conocimientos.
+</p>
+
+<p>
+Al final, invertir nunca será una ciencia exacta. Cada proyecto tiene circunstancias diferentes y cada persona recorre un camino distinto. Lo importante es comprender que, cuanto mejor conozcas aquello en lo que piensas invertir, mayores serán las herramientas con las que podrás enfrentar las dificultades que aparezcan durante el proceso.
+</p>
+
+</div>
+
+
+
+
+<!-- PRINCIPIO -->
+<div class="max-w-4xl mx-auto my-20">
+
+    <div class="relative border border-stone-200 px-10 py-12">
+
+        <span class="absolute -top-5 left-10 bg-white px-4 text-sm uppercase tracking-[0.30em] text-amber-700">
+            PRINCIPIO 07
+        </span>
+
+        <p class="text-2xl md:text-3xl leading-relaxed text-stone-700 text-center"
+           style="font-family:'Cormorant Garamond',serif;">
+
+            La experiencia rara vez se adquiere ganando siempre; muchas veces nace después de comprender los errores cometidos.
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="situaciones-que-cambian-una-oportunidad" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Por qué una inversión funciona para unos y para otros no?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Las oportunidades no existen de la misma manera para todas las personas. Una inversión que funcionó en determinado momento o para alguien en particular puede ofrecer resultados completamente diferentes cuando cambian las circunstancias. 
+</p>
+
+<p>
+Antes de tomar una decisión basada en una experiencia ajena, conviene analizar si estos factores también están presentes en tu caso.
+</p>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-16">
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">01</div>
+        <p class="text-stone-700 leading-relaxed">
+            Las condiciones económicas eran diferentes.
+        </p>
+    </div>
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">02</div>
+        <p class="text-stone-700 leading-relaxed">
+            Contaba con una experiencia previa que pocas personas conocían.
+        </p>
+    </div>
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">03</div>
+        <p class="text-stone-700 leading-relaxed">
+            Disponía de contactos que facilitaron el desarrollo del proyecto.
+        </p>
+    </div>
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">04</div>
+        <p class="text-stone-700 leading-relaxed">
+            Tenía otra fuente de ingresos mientras el negocio crecía.
+        </p>
+    </div>
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">05</div>
+        <p class="text-stone-700 leading-relaxed">
+            Empezó en un momento donde existía menos competencia.
+        </p>
+    </div>
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">06</div>
+        <p class="text-stone-700 leading-relaxed">
+            Podía dedicar más tiempo al proyecto que el promedio.
+        </p>
+    </div>
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">07</div>
+        <p class="text-stone-700 leading-relaxed">
+            Vivía en un lugar donde esa oportunidad tenía mayor demanda.
+        </p>
+    </div>
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">08</div>
+        <p class="text-stone-700 leading-relaxed">
+            Contaba con apoyo económico o familiar durante los primeros meses.
+        </p>
+    </div>
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">09</div>
+        <p class="text-stone-700 leading-relaxed">
+            Su tolerancia al riesgo era diferente a la tuya.
+        </p>
+    </div>
+
+    <div class="text-center border border-stone-200 p-8">
+        <div class="text-4xl text-amber-600 mb-4" style="font-family:'Cormorant Garamond',serif;">10</div>
+        <p class="text-stone-700 leading-relaxed">
+            Tomó la misma decisión, pero bajo circunstancias completamente distintas.
+        </p>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- REFLEXIÓN FINAL -->
+<div class="max-w-4xl mx-auto my-24 border border-stone-200 p-10">
+
+    <span class="text-xs uppercase tracking-[0.28em] text-amber-700 font-semibold"
+          style="font-family:'Inter',sans-serif;">
+    Código Millonario
+    </span>
+
+    <p class="mt-6 text-3xl md:text-4xl text-stone-700 leading-relaxed"
+       style="font-family:'Cormorant Garamond',serif; font-weight:500;">
+
+        Antes de analizar una inversión, vale la pena analizar la forma en que decidimos invertir.
+
+    </p>
+
+</div>
+
+
+
+
+
+
+<!-- CONCLUSIÓN -->
+<h2 id="conclusion" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-24 leading-tight tracking-tight">
+Qué debes analizar antes de invertir tu dinero
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family:'Open Sans', sans-serif;">
+
+<p>
+Después de todo lo analizado, resulta evidente que una inversión no comienza cuando se compra un activo, se solicita un préstamo o se abre un negocio. Comienza mucho antes, en la forma en que una persona interpreta una oportunidad, evalúa los riesgos y decide actuar.
+</p>
+
+<p>
+El capital puede recuperarse. El tiempo, en algunos casos, también. Sin embargo, una decisión mal tomada puede dejar consecuencias que acompañen durante años a quien nunca se detuvo a analizar lo que estaba haciendo.
+</p>
+
+<p>
+Ningún estudio elimina por completo la posibilidad de perder, del mismo modo que ninguna improvisación garantiza el fracaso. Aun así, comprender aquello que aumenta o disminuye las probabilidades de éxito permite tomar decisiones con mayor claridad y asumir riesgos de una forma mucho más consciente.
+</p>
+
+<p>
+Antes de preguntarte en qué invertir, quizá la pregunta más importante sea otra:
+</p>
+
+<p class="text-2xl md:text-3xl text-stone-800 italic leading-relaxed" style="font-family:'Cormorant Garamond', serif;">
+¿Estoy construyendo la forma de pensar necesaria para sostener esa inversión cuando las cosas no salgan como espero?
+</p>
+
+<p>
+Porque, al final, las inversiones cambian, los mercados cambian y las oportunidades aparecen y desaparecen. Lo único que permanecerá contigo durante toda tu vida será la forma en que tomas decisiones.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="max-w-3xl mx-auto mt-28 mb-12 text-center">
+
+    <div class="w-16 h-px bg-amber-600 mx-auto mb-6"></div>
+
+    <p class="text-lg md:text-xl leading-relaxed text-stone-600"
+       style="font-family:'Open Sans',sans-serif;">
+
+        Comprender una oportunidad de inversión es solo una parte del proceso. El siguiente desafío consiste en entender cómo el miedo, la ambición, la incertidumbre y el exceso de confianza pueden modificar la forma en que tomas decisiones cuando tu dinero ya está comprometido.
+
+    </p>
+
+    <div class="mt-8 text-4xl text-amber-600 leading-none">
+        ↓
+    </div>
+
+</div>
+
+
+
+
+<!-- SIGUE LEYENDO -->
+ <div class="articulo-wrapper mt-20">
+
+  <!-- TEXTO SUPERIOR -->
+  <div class="texto-interes">
+    También te puede interesar:
+  </div>
+
+  <!-- ================= TARJETA ================= -->
+  <a href="https://codigomillonario.blog/URL.html" class="articulo-box">
+
+    <img 
+      src="../../assets/png/IMAGEN.webp" 
+      class="articulo-img"
+      alt="Próximamente disponible">
+
+    <div class="articulo-main">
+      <div class="articulo-contenido">
+
+        <div class="articulo-titulo">
+          <h2>
+          ¿Qué ocurre cuando tu dinero ya está en juego y las emociones comienzan a influir en tus decisiones?
+          </h2>
+        </div>
+
+        <div class="articulo-descripcion">
+        La Psicología del Inversionista: cómo el miedo y la ambición afectan las decisiones financieras
+        </div>
+
+      </div>
+    </div>
+
+    <div class="articulo-boton">
+      <div class="articulo-boton-texto">
+        SIGUE LEYENDO:
+      </div>
+      <span>Ir</span>
+    </div>
+
+  </a>
+
+</div>
+
+
+
+
+
+
+
+
+  <style>
+
+  /* ================= CONTENEDOR PADRE ================= */
+.articulo-wrapper{
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+  /* ================= TEXTO SUPERIOR (MODERNO) ================= */
+  .texto-interes{
+    position: absolute;
+    top: -28px;
+    left: 0;
+
+    font-family: 'Inter', sans-serif; /* 👈 moderno */
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  /* ================= TARJETA ================= */
+  .articulo-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    width: 100%;
+    max-width: 720px;
+    margin: 0;
+
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 0;
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: #000;
+
+    min-height: 140px;
+    transition: opacity 0.2s ease;
+  }
+
+  /* ================= HOVER SOLO DESKTOP ================= */
+  @media (min-width: 769px) {
+    .articulo-box:hover {
+      opacity: 0.85;
+    }
+  }
+
+  /* ================= MAIN ================= */
+  .articulo-main {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    padding: 10px 15px 50px 15px;
+  }
+
+  /* ================= IMAGEN ================= */
+  .articulo-img {
+    width: 200px;
+    height: 110px;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* ================= CONTENIDO ================= */
+  .articulo-contenido {
+    flex: 1;
+    padding-left: 210px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ================= TITULO ================= */
+  .articulo-titulo h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+    color: #000;
+  }
+
+  /* ================= DESCRIPCIÓN ================= */
+  .articulo-descripcion {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  /* ================= BOTÓN ================= */
+  .articulo-boton {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    border-top: 1px solid #ddd;
+    background: #fff;
+
+    padding: 8px 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .articulo-boton-texto{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #444;
+  }
+
+  .articulo-boton span {
+    background: #fff;
+    color: #000;
+
+    border: 1px solid #ddd;
+    padding: 4px 10px;
+
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  /* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .articulo-box:hover {
+    opacity: 1 !important;
+  }
+
+  .articulo-descripcion {
+  display: none;
+}
+
+  .texto-interes{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 10px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  .articulo-box {
+    max-width: 100%;
+    border: none;
+    border-bottom: 1px solid #ececec;
+    padding: 10px 0 0 0;   /* 👈 IMPORTANTE: quitamos padding inferior */
+  }
+
+  .articulo-main {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .articulo-img {
+    width: 100%;
+    height: 120px;
+    position: relative;
+  }
+
+  .articulo-contenido {
+    padding-left: 0;
+  }
+
+  .articulo-titulo h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    letter-spacing: -0.6px;
+  }
+
+  .articulo-descripcion {
+    font-size: 13px;
+    color: #666;
+  }
+
+  .articulo-boton {
+    position: relative;
+    margin-top: 6px;       /* 👈 más natural */
+    padding-top: 8px;      /* 👈 línea mejor alineada */
+    border-top: 1px solid #ececec;
+    background: transparent;
+  }
+}
+  </style>
+
+
+
+
+
+
+
+
+<section class="mt-40 mb-24">
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+
+      <img
+        src="../../assets/img/fundador-codigo-millonario.webp"
+        alt="Autor del artículo"
+        class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover">
+
+      <div>
+
+        <p class="text-[10px] md:text-xs uppercase tracking-[0.20em] md:tracking-[0.25em] text-stone-500">
+          Opinión del autor
+        </p>
+
+        <p class="text-xs md:text-sm text-stone-700 font-medium">
+          Francisco Urrego
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+Mi intención nunca fue decirte en qué invertir. Ese tipo de decisiones cambian con el tiempo, los mercados y las circunstancias de cada persona. Lo que permanece es la forma en que pensamos cuando el dinero está en juego.
+</p>
+
+<p>
+Después de escribir este artículo llegué a una conclusión: invertir no comienza cuando una persona mueve su dinero, sino mucho antes, cuando aprende a cuestionar sus propias decisiones, acepta que no lo sabe todo y comprende que construir patrimonio también implica aprender a equivocarse sin destruir ni abandonar todo lo que ya ha construido.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+<p class="text-3xl font-semibold text-stone-900 mb-5 mt-20">Artículos relacionados:</p>
+
+<p class="interlink-heading text-left text-sm mb-4"
+   style="font-family: 'Open Sans', sans-serif;">
+  ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+</p>
+
+
+  </article>
+</main>
+
+
+
+
+
+
+
+
+
+<!-- ================= NUEVA TIPOGRAFIA ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../inversiones/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style="font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+    <div id="interlinkGrid"></div>
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= TITULO ================= */
+.news-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+  letter-spacing: -0.2px;
+}
+
+/* METADATA */
+.news-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+/* TEXTO SECUNDARIO */
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.news-text {
+  flex: 1;
+}
+
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* 👇 TITULO MÁS GRANDE EN MÓVIL */
+  .news-text h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+function truncate(text, maxLength = 65){
+  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s: Math.random()}))
+              .sort((a,b)=>a.s-b.s)
+              .map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="${a.title}">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <div class="news-meta">${a.meta}</div>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../inversiones/index.html")
+.then(r => r.text())
+.then(html => {
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+
+  const articles = doc.querySelectorAll(".article");
+
+  allArticles = shuffle(Array.from(articles).map(article => {
+
+    const link = article.querySelector("a.article-link");
+    const title = article.querySelector("h2.article-title");
+    const img = article.querySelector("img");
+    const meta = article.querySelector(".badge-row span");
+
+    return {
+      title: title ? title.textContent.trim() : "Sin título",
+      url: link ? link.getAttribute("href") : "#",
+      image: img ? img.getAttribute("src") : "./assets/png/default.png",
+      meta: meta ? meta.textContent.trim() : ""
+    };
+
+  }).filter(a => a.title.length > 5));
+
+  renderAll(allArticles);
+
+})
+.catch(err => console.error("Interlink error:", err));
+</script>
+
+
+
+
+
+
+
+   
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-28"></section>
+
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
