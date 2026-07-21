@@ -1,0 +1,3297 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construir Riqueza Lleva Años: Lo que Casi Nadie Te Dice sobre el Éxito y el Dinero | Código Millonario</title>
+    <meta name="description" content="Nadie puede decirte cuánto tiempo tardará tu proyecto en dar resultados. Descubre por qué esa incertidumbre hace que muchas personas abandonen antes de construir riqueza y alcanzar el éxito.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/favicon-v45.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="../../assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Newsletter
+    </button>
+
+    <!-- INPUT -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* INPUT */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
+}
+
+</style>
+
+<script>
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
+
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
+
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="../../blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="../../blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="../../blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="../../blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="../../blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="../../blog/negocios/index.html">Modelos de Negocio</a>
+<a href="../../tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="../../mentalidad/index.html">Mentalidad</a></li>
+      <li><a href="../../blog/negocios/index.html">Negocios</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../nuestro-equipo.html">Staff</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+<div id="mobileMenu">
+
+  <button id="closeMobileMenu">&times;</button>
+
+  <div class="mobile-menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Código Millonario">
+  </div>
+
+  <div class="mobile-menu-links">
+
+    <a href="../../index.html">Inicio</a>
+
+    <a href="../../educacion-financiera.html">
+      Educación Financiera
+    </a>
+
+    <a href="../../mentalidad/index.html">
+      Mentalidad
+    </a>
+
+    <a href="../../blog/negocios/index.html">
+      Negocios
+    </a>
+
+    <a href="../../herramientas.html">
+      Herramientas
+    </a>
+
+    <a href="../../opiniones.html">
+      Opiniones
+    </a>
+
+    <a href="../../nuestro-equipo.html">
+      Staff
+    </a>
+
+    <a href="../../contacto.html">
+      Contacto
+    </a>
+
+  </div>
+</div>
+
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #111111; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+.mobile-menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.mobile-menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+#closeMobileMenu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.mobile-menu-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+}
+
+.mobile-menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+@media(min-width: 768px) {
+  .navbar-menu li:nth-child(4) {
+    position: relative;
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+
+  .navbar-menu li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: -9px; /* mover la línea hacia el centro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: rgba(223, 222, 222, 0.85);
+  }
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('../../assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+const closeMobileMenu =
+document.getElementById('closeMobileMenu');
+
+closeMobileMenu.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- ESPACIO FINAL -->
+<div style="height: 300px;"></div>
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- HERO -->
+<section class="uvo-hero">
+
+  <div class="uvo-container">
+
+    <!-- CATEGORY -->
+    <div class="uvo-category">
+      Éxito Financiero
+    </div>
+
+    <!-- TITLE -->
+    <h1 class="uvo-title">
+    La Barrera Invisible que Impide a Muchas Personas Construir Riqueza
+    </h1>
+
+    <!-- DESCRIPTION -->
+    <p class="uvo-description">
+     Todos quieren alcanzar el éxito, pero pocos están preparados para enfrentar el tiempo que realmente puede tomar conseguirlo.
+     <br><br>
+     Descubre cuál es el principal obstáculo que enfrentan quienes buscan construir riqueza y por qué muchas personas cambian de rumbo antes de alcanzar el éxito.
+     </p>
+
+    <!-- META -->
+    <div class="uvo-meta">
+
+      <!-- AUTHOR -->
+      <div class="uvo-author">
+
+        <img src="../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego"
+             class="uvo-avatar">
+
+        <div class="uvo-author-info">
+
+          <p class="uvo-label">
+            AUTOR
+          </p>
+
+          <p class="uvo-author-name">
+            Equipo Editorial • <a href="../../nuestro-equipo.html" class="uvo-author-link">Francisco Urrego</a>
+          </p>
+
+          <p class="uvo-date">
+            Escrito el 00 Mar 2026 / 00:00 h / 3 min lectura
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- SOCIALS -->
+      <div class="uvo-socials">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- X -->
+        <a href="https://x.com/CMillonarioblog"
+           target="_blank"
+           aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 1200 1227"
+               fill="currentColor">
+            <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163Z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1FVSBquigd/"
+           target="_blank"
+           aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
+           target="_blank"
+           aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+
+        <!-- Pinterest -->
+        <a href="https://pin.it/3tqNXYoAA"
+           target="_blank"
+           aria-label="Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- IMAGE -->
+<div class="uvo-image-wrapper">
+
+  <img 
+    src="../../assets/png/construir-riqueza-lleva-anos.webp"
+    alt="Persona reflexionando sobre el tiempo necesario para construir riqueza y alcanzar el éxito financiero."
+    class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] sm:top-4 object-contain z-10"
+  >
+
+  <!-- TEXTO DEBAJO -->
+  <div class="max-w-[50rem] mx-auto w-80 sm:w-[40rem] md:w-[50rem] mt-10 text-left">
+
+    <span 
+      class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+      style="font-family: 'Open Sans', sans-serif;">
+      Un Análisis Editorial
+    </span>
+
+    <div class="w-16 h-px bg-amber-800"></div>
+
+  </div>
+
+</div>
+
+</section>
+
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#fff;
+}
+
+/* HERO */
+.uvo-hero{
+  padding:72px 0 88px;
+}
+
+/* CONTAINER */
+.uvo-container{
+  max-width:920px;
+  margin:auto;
+  padding:0 32px;
+}
+
+/* IMAGE WRAPPER */
+.uvo-image-wrapper{
+  width:100%;
+  overflow:hidden;
+}
+
+.uvo-image-wrapper img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+/* CATEGORY */
+.uvo-category{
+  display:inline-block;
+  margin-bottom:30px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#8b7355;
+}
+
+/* TITLE */
+.uvo-title{
+  max-width:860px;
+
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5vw,5rem);
+  font-weight:600;
+  line-height:1.04;
+  letter-spacing:-0.032em;
+  color:#111827;
+
+  text-wrap:balance;
+}
+
+/* DESCRIPTION */
+.uvo-description{
+  max-width:760px;
+  margin-top:34px;
+
+  font-family:'Inter',sans-serif;
+  font-size:1.08rem;
+  line-height:1.95;
+  color:#4b5563;
+}
+
+/* META */
+.uvo-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-top:52px;
+  padding-top:24px;
+  border-top:1px solid #e5e7eb;
+}
+
+/* AUTHOR */
+.uvo-author{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* AVATAR */
+.uvo-avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* LABEL */
+.uvo-label{
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+
+  color:#111827;
+  margin-bottom:2px;
+}
+
+/* AUTHOR NAME */
+.uvo-author-name{
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:600;
+  color:#111827;
+}
+
+/* LINK AUTHOR */
+.uvo-author-link{
+  color:#111827;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:.2s ease;
+}
+
+.uvo-author-link:hover{
+  border-bottom:1px solid #111827;
+}
+
+/* DATE */
+.uvo-date{
+  margin-top:4px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.02em;
+
+  color:#4b5563;
+}
+
+/* SOCIALS */
+.uvo-socials{
+  display:flex;
+  gap:8px;
+}
+
+.uvo-socials a{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid #e5e7eb;
+  background:#fff;
+
+  color:#6b7280;
+  text-decoration:none;
+
+  transition:all .2s ease;
+}
+
+.uvo-socials a:hover{
+  transform:translateY(-2px);
+  background:#111827;
+  border-color:#111827;
+  color:#fff;
+}
+
+.uvo-socials i,
+.uvo-socials svg{
+  width:15px;
+  height:15px;
+  font-size:15px;
+  fill:currentColor;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .uvo-hero{
+    padding:42px 0 60px;
+  }
+
+  .uvo-container{
+    padding:0 20px;
+  }
+
+  .uvo-title{
+    font-size:2.18rem;
+    line-height:1.12;
+    letter-spacing:-0.012em;
+  }
+
+  .uvo-description{
+    margin-top:24px;
+    font-size:1rem;
+    line-height:1.82;
+  }
+
+  .uvo-meta{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    margin-top:38px;
+  }
+
+  .uvo-socials{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    max-width:100%;
+  }
+
+  .uvo-image-wrapper > div{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px;
+    padding-right:20px;
+    box-sizing:border-box;
+  }
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<!-- CONTENEDOR -->
+<main>
+<article class="max-w-5xl mx-auto px-6 md:px-8">
+
+
+
+<div class="cm-editorial-warning">
+    <div class="cm-warning-label">UNA ACLARACIÓN</div>
+
+    <p class="cm-warning-title">
+        Este no es un artículo de motivación
+    </p>
+
+    <p class="cm-warning-text">
+        Aquí no encontrarás promesas de éxito ni frases diseñadas para convencerte
+        de que nunca debes rendirte.   
+    </p>
+    
+    <p>
+      Este análisis busca examinar, desde una
+        perspectiva más realista, qué ocurre cuando construir algo exige mucho
+        más tiempo del que imaginabas.
+    </p>
+</div>
+
+<style>
+.cm-editorial-warning {
+    max-width: 760px;
+    margin: 0 auto 70px;
+    padding: 28px 32px;
+    background: #faf7f4;
+    border-left: 3px solid #9b3d35;
+    box-sizing: border-box;
+}
+
+.cm-warning-label {
+    margin-bottom: 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #9b3d35;
+}
+
+.cm-warning-title {
+    margin: 0 0 12px;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #7f302b;
+}
+
+.cm-warning-text {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #5f5b54;
+}
+
+@media (max-width: 600px) {
+    .cm-editorial-warning {
+        margin: 0 15px 50px;
+        padding: 25px 22px;
+    }
+
+    .cm-warning-title {
+        font-size: 20px;
+    }
+
+    .cm-warning-text {
+        font-size: 13.5px;
+        line-height: 1.75;
+    }
+}
+</style>
+
+
+
+
+<!-- INTRODUCCIÓN -->
+<div class="text-stone-700 leading-relaxed mb-1 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+I
+  </span>
+magina que alguien pudiera decirte la verdad antes de comenzar tu negocio, una inversión, un canal de YouTube, un proyecto de ventas, una carrera profesional o una página web.
+</p>
+
+<p>
+Imagina que, antes de dar el primer paso, alguien te dijera que probablemente tendrás que trabajar durante años antes de ver los resultados que esperas. Que durante mucho tiempo tendrás más preguntas que respuestas y que, en algunos momentos, incluso comenzarás a preguntarte si realmente vale la pena continuar.
+</p>
+
+<p>
+<strong>¿Seguirías adelante?</strong>
+</p>
+
+<p>
+Muchas personas comienzan proyectos con entusiasmo y suelen abandonarlos cuando los resultados tardan más de lo que imaginaban. 
+</p>
+
+<p>
+Muchas ideas no son necesariamente malas ni quienes las emprenden carecen de capacidades; esa sensación aparece porque llega un momento en el que la incertidumbre pesa más que cualquier otro motivo que los llevó a emprender ese camino.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-center text-2xl md:text-3xl font-medium text-stone-700  mb-10 mt-20 leading-tight tracking-tight">
+  Entonces aparecen las preguntas que ponen todo en duda
+</h3>
+
+<div class="cm-reflection-questions">
+    <span class="cm-reflection-label">LAS PREGUNTAS QUE NADIE VE</span>
+
+    <div class="cm-reflection-question">
+        <span>01</span>
+        <p>¿Va a funcionar?</p>
+    </div>
+
+    <div class="cm-reflection-question">
+        <span>02</span>
+        <p>¿Cuánto tiempo tendré que esperar?</p>
+    </div>
+
+    <div class="cm-reflection-question">
+        <span>03</span>
+        <p>¿Cómo voy a sostenerme mientras construyo algo que todavía no genera dinero?</p>
+    </div>
+
+    <div class="cm-reflection-question">
+        <span>04</span>
+        <p>¿Realmente vale la pena seguir?</p>
+    </div>
+</div>
+
+<style>
+.cm-reflection-questions {
+    max-width: 720px;
+    margin: 55px auto;
+    padding: 38px 40px;
+    background: #f7f4ee;
+    border-top: 1px solid rgba(176, 138, 74, 0.45);
+    border-bottom: 1px solid rgba(30, 30, 30, 0.10);
+    box-sizing: border-box;
+}
+
+.cm-reflection-label {
+    display: block;
+    margin-bottom: 28px;
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #9a7942;
+}
+
+.cm-reflection-question {
+    display: flex;
+    align-items: baseline;
+    gap: 22px;
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(30, 30, 30, 0.08);
+}
+
+.cm-reflection-question:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cm-reflection-question span {
+    min-width: 22px;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #a08b6a;
+}
+
+.cm-reflection-question p {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    line-height: 1.45;
+    font-style: italic;
+    color: #292723;
+}
+
+@media (max-width: 600px) {
+    .cm-reflection-questions {
+        margin: 40px 15px;
+        padding: 30px 25px;
+    }
+
+    .cm-reflection-question {
+        gap: 15px;
+    }
+
+    .cm-reflection-question p {
+        font-size: 18px;
+    }
+}
+</style>
+
+
+
+
+<div class="text-stone-700 leading-relaxed space-y-5 mt-20 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Es en ese punto donde muchas personas cambian de camino, abandonan una idea o comienzan algo completamente distinto. Algunas veces toman la decisión correcta. Otras, simplemente se marchan antes de darle al proceso el tiempo suficiente para demostrar lo que podía llegar a ser.
+</p>
+
+<p>
+En este artículo analizaremos una de las barreras menos mencionadas al momento de construir riqueza: el tiempo que se necesita para que el esfuerzo comience a convertirse en resultados y la incertidumbre que debemos soportar mientras esperamos.
+</p>
+
+<p>
+Porque construir algo valioso no solo exige saber qué hacer. También exige comprender cuánto tiempo estás dispuesto a permanecer en el camino, cuándo debes ajustar tu estrategia y cuándo ha llegado el momento de cambiar de dirección.
+</p>
+
+<p>
+Si alguna vez has comenzado un proyecto y has pensado en abandonarlo porque los resultados no llegaron tan rápido como esperabas, este análisis es para ti.
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="cm-quote-card">
+    <div class="cm-quote-line"></div>
+
+    <p>
+  Nadie sabe cuándo llegará el resultado. 
+      </p>
+
+      <p>
+  Y casi nadie está preparado para esperar el tiempo necesario para descubrirlo.
+    </p>
+</div>
+
+<style>
+.cm-quote-card {
+    position: relative;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px 32px;
+    background: #f4f0e9;
+    border: 1px solid rgba(30, 30, 30, 0.07);
+    box-sizing: border-box;
+}
+
+.cm-quote-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #b08a4a;
+}
+
+.cm-quote-card p {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    line-height: 1.55;
+    font-style: italic;
+    text-align: center;
+    color: #292723;
+}
+
+@media (max-width: 600px) {
+    .cm-quote-card {
+        margin: 30px 15px;
+        padding: 25px 22px;
+    }
+
+    .cm-quote-card p {
+        font-size: 18px;
+    }
+}
+</style>
+
+
+
+
+
+
+
+<div class="cm-important-note">
+
+    <div class="cm-note-header">
+        <span class="cm-note-symbol">i</span>
+        <h3>Nota importante</h3>
+    </div>
+
+    <div class="cm-note-content">
+
+        <p>
+            Este artículo presenta un análisis basado en principios relacionados con la psicología del dinero, el comportamiento humano y la construcción de proyectos a largo plazo. Las ideas expuestas buscan ofrecer una perspectiva para reflexionar sobre algunos de los factores que pueden influir en la decisión de una persona de continuar, modificar o abandonar un proyecto o una meta.
+        </p>
+
+        <p>
+            Sin embargo, el abandono de un objetivo puede estar relacionado con muchas otras circunstancias personales, económicas, sociales o psicológicas que no necesariamente se abordan en este análisis. Por esta razón, el contenido no debe interpretarse como una verdad absoluta ni como una explicación aplicable a todos los casos.
+        </p>
+
+        <p>
+            Cada situación es diferente y debe analizarse de manera individual. Cuando sea necesario, es recomendable buscar la orientación de un profesional cualificado que pueda evaluar las circunstancias particulares de cada persona.
+        </p>
+
+        <p>
+            El propósito de este artículo es ofrecer una perspectiva para la reflexión y el análisis, no establecer una única explicación sobre las razones por las que las personas toman determinadas decisiones.
+        </p>
+
+    </div>
+</div>
+
+<style>
+.cm-important-note {
+    max-width: 820px;
+    margin: 120px auto 60px !important;
+    padding: 38px 42px;
+    background: #f7f4ee;
+    border: 1px solid rgba(30, 30, 30, 0.09);
+    border-left: 3px solid #b08a4a;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .cm-important-note {
+        margin: 80px 15px 40px !important;
+    }
+}
+
+.cm-note-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.cm-note-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #b08a4a;
+    border-radius: 50%;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: #9a7942;
+}
+
+.cm-note-header h3 {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: #292723;
+}
+
+.cm-note-content p {
+    margin: 0 0 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #5f5b54;
+}
+
+.cm-note-content p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+
+    .cm-important-note {
+        margin: 40px 15px;
+        padding: 30px 25px;
+    }
+
+    .cm-note-header {
+        margin-bottom: 22px;
+    }
+
+    .cm-note-header h3 {
+        font-size: 21px;
+    }
+
+    .cm-note-content p {
+        font-size: 13.5px;
+        line-height: 1.8;
+    }
+}
+</style>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Por qué muchas personas abandonan sus negocios antes de ganar dinero?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+He oído a muchas personas hablar de un negocio que comenzaron y terminaron abandonando. Cuando explican las razones, suelen mencionar causas conocidas: falta de tiempo, ausencia de resultados, dificultades económicas o pérdida de interés. 
+</p>
+
+<p>
+En algunos casos, esas razones son completamente válidas. En otros, pueden convertirse en una forma de justificar una decisión sin analizar con profundidad qué fue lo que realmente ocurrió.
+</p>
+
+<p>
+Abandonar es una palabra que utilizamos con frecuencia, pero pocas veces nos detenemos a analizar lo que hay detrás de esa decisión. ¿Por qué abandonan las personas? Probablemente muchas respuestas vengan rápidamente a nuestra mente. 
+</p>
+
+<p>
+Pero si conocemos las razones que pueden llevarnos a abandonar, ¿por qué resulta tan difícil reconocerlas y tenerlas en cuenta cuando somos nosotros quienes estamos atravesando ese momento?
+</p>
+
+<p>
+Desde la perspectiva de la psicología humana, las personas pueden desarrollar diferentes mecanismos para interpretar y justificar sus propias decisiones, especialmente cuando las consecuencias no son las esperadas. 
+</p>
+
+<p>
+Esto puede llevarnos a atribuir lo ocurrido principalmente a factores externos y a restar importancia a las decisiones que estuvieron bajo nuestro control.
+</p>
+
+<p>
+Esto no significa que todo lo que ocurre en nuestra vida sea consecuencia exclusiva de nuestras decisiones. Existen circunstancias que escapan completamente a nuestro control. 
+</p>
+
+<p>
+Sin embargo, también es necesario reconocer que muchas de las situaciones en las que nos encontramos son el resultado acumulado de decisiones tomadas a lo largo del tiempo. Comprender esa diferencia es fundamental para analizar por qué una persona continúa, cambia de dirección o finalmente decide abandonar.
+</p>
+
+</div>
+
+
+
+
+
+<div class="cm-personal-quote">
+    <span class="cm-personal-quote-mark">“</span>
+
+    <p>
+Entré al mundo del emprendimiento con conocimientos sobre cómo emprender, 
+pero sin la estructura necesaria para construir algo sostenible.
+
+    </p>
+</div>
+
+<style>
+.cm-personal-quote {
+    max-width: 760px;
+    margin: 80px auto;
+    padding: 50px 55px;
+    text-align: center;
+    background: #f7f4ee;
+    border-top: 1px solid rgba(176, 138, 74, 0.45);
+    border-bottom: 1px solid rgba(176, 138, 74, 0.45);
+    box-sizing: border-box;
+}
+
+.cm-personal-quote-mark {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 58px;
+    line-height: 0.7;
+    color: #b08a4a;
+}
+
+.cm-personal-quote p {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    line-height: 1.55;
+    font-style: italic;
+    color: #292723;
+}
+
+@media (max-width: 600px) {
+    .cm-personal-quote {
+        margin: 60px 15px;
+        padding: 40px 25px;
+    }
+
+    .cm-personal-quote p {
+        font-size: 21px;
+        line-height: 1.55;
+    }
+
+    .cm-personal-quote-mark {
+        font-size: 48px;
+    }
+}
+</style>
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Por qué cambiar constantemente de negocio impide construir riqueza?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p> 
+Hasta este punto hemos analizado algunas de las razones que pueden llevar a una persona a abandonar un proyecto. Pero existe una forma de comprender mejor este proceso: observarlo desde dentro. 
+</p>
+
+<p>
+Por eso quiero que analicemos juntos mis comienzos. Todo comenzó un día cuando estaba en una empresa considerada una de las mejores de mi país, y quería construir una casa propia, independizarme y lo que un adulto normal podría proyectarse como objetivos.
+</p>
+
+<p>
+Sin embargo, todo tomó un giro inesperado cuando intenté hacer las cuentas, hasta entonces no conocía el mundo del emprendimiento y las posibilidades que tenemos cada uno de obtener mayores ingresos de forma alterna o como fuente principal.
+</p>
+
+<p>
+Después de realizar las cuentas para llevar a cabo mi sueño de independizarme como adulto, me di cuenta de una realidad a la que muy pocos acceden. Mi sueldo no era suficiente para cumplir con esos objetivos, al menos no a corto ni mediano plazo, sin contar que para el empleo que aspiré no esperaba quedarme ahí durante más de 5 años.
+</p>
+
+<p>
+Comencé a buscar la forma, por el momento no de ganar más, sino de comprender el dinero más a fondo, para entonces me consideraba bueno en las finanzas personales, ahorro y capacidad de administrar cualquier recurso, pero no sabía nada de inversiones.
+</p>
+
+<p>
+Comencé a estudiar lo más que pude, y no fue cuando me sentí motivado que inicié el camino emprendedor, fue cuando me sentía seguro.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Cuál es el verdadero precio de construir riqueza?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Mis primeros emprendimientos fueron un fracaso total, inicié el mundo del emprendimiento con conocimientos de emprender, pero no con la estructura para emprender.
+</p>
+
+<p>
+Por lo que me costó dinero, me costó tiempo y me costó tener que investigar más, leer muchos más libros, iniciar otros emprendimientos que no iniciaba por necesidad, sino por intentar lograr el éxito en alguno de ellos.
+</p>
+
+<p>
+De todos esos intentos fallidos, hubo algunos que sí dieron resultados, incluso abandoné ese trabajo en el que no duraría más de 5 años por motivos personales para dedicarme a ellos, y durante meses viví de eso, sin embargo, no había creado un sistema detrás.
+Por lo que ese sueño de vivir y tener la posibilidad de incrementar mis ingresos exponencialmente se detuvo.
+</p>
+
+<p>
+Después de fracasar una vez más, me vi obligado a buscar otros empleos mientras seguía intentando perderme en la lectura, mientras intentaba descubrir la verdad, incluso llegué a creer por momentos que quizás no sería trabajo duro, sino algo relacionado con la santería o cosas místicas.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Por qué es tan difícil hacerse rico?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Todo comenzó cuando un día, después de que no veía resultado, después de que todo parecía en vano, vi una luz, algo de lo que nadie habla con profundidad o acierto, de lo que nadie enfoca en explicar realmente, porque todos sabemos racionalmente que un proyecto puede tomar años.
+</p>
+
+<p>
+Pero no le damos la importancia necesaria como para tomarla como uno de los motivos por los que podríamos abandonar cualquier objetivo.
+</p>
+
+<p>
+Fue ahí donde todas mis dudas, donde todo lo que había aprendido, leído o investigado cobraba sentido, conocimientos adquiridos que no tenían relevancia quizás por no comprenderlos en su momento del todo bien, de pronto ya tenía claridad.
+</p>
+
+</div>
+
+
+
+
+<!-- TRANSICIÓN A LAS 7 RAZONES -->
+<div class="relative mt-32 mb-20 py-10 px-6 md:px-12 
+            bg-stone-100/70 border-l-4 border-amber-600 rounded-r-2xl">
+
+    <span class="block text-xs md:text-sm uppercase tracking-[0.3em] 
+                 text-amber-700 font-semibold mb-5">
+      UNA COMPRENSIÓN MÁS PROFUNDA 
+    </span>
+
+    <h2 id="7-razones-negocios-rentables"
+        class="text-2xl md:text-4xl font-normal text-stone-800 
+               leading-tight tracking-tight max-w-5xl">
+  Estas son <span class="text-amber-700">siete preguntas </span> 
+   que me habría gustado hacerme antes de comenzar aquellos proyectos.
+    </h2>
+
+</div>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+7 razones por las que las personas abandonan sus emprendimientos
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Cuando miro hacia atrás y analizo las circunstancias que me llevaron a abandonar algunos de mis primeros emprendimientos, descubro que muchas veces no lo hice porque las ideas fueran necesariamente malas. 
+</p>
+
+<p>
+En varios casos, la falta de resultados o las pérdidas terminaron pesando más que la posibilidad de seguir aprendiendo y desarrollando aquello que había comenzado.
+</p>
+
+<p>
+Con el tiempo comprendí que detrás de esas decisiones existían preguntas que nunca me hice cuando estaba comenzando. 
+</p>
+
+<p>
+Preguntas que hoy, al mirar mi propia experiencia con mayor distancia, me permiten entender mejor por qué tomé determinadas decisiones y qué estaba ocurriendo realmente en mi forma de pensar.
+</p>
+
+<p>
+Estas son cinco preguntas que me habría gustado hacerme antes de comenzar aquellos proyectos.
+</p>
+
+</div>
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        01
+    </span>
+
+    <span class="pt-1">
+        ¿Cuándo abandonar un negocio que no está dando resultados?
+    </span>
+
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Al analizar mi pasado, comprendí que muchas de mis decisiones estuvieron condicionadas por la falta de resultados. Cuando un proyecto no generaba lo que esperaba o comenzaba a producir pérdidas, interpretaba esas señales como una razón suficiente para abandonarlo.
+</p>
+
+<p>
+Hoy entiendo que la ausencia de resultados no siempre significa que una idea sea mala. También puede significar que todavía no se ha encontrado la estrategia adecuada, que falta experiencia o que el proyecto necesita más tiempo para desarrollarse.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        02
+    </span>
+
+    <span class="pt-1">
+¿Por qué cambiar de negocio constantemente puede impedir que sea rentable?
+    </span>
+
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Otra de las razones que hoy puedo reconocer es que muchas veces no había decidido realmente qué camino quería seguir. Comenzaba un proyecto, encontraba dificultades y, en lugar de permanecer el tiempo suficiente para aprender, corregir y evaluar su verdadero potencial, terminaba mirando hacia otra dirección.
+</p>
+
+<p>
+Esto no significa que debamos aferrarnos ciegamente a una idea que claramente no funciona. Significa que, antes de abandonar, debemos preguntarnos si realmente hemos dedicado el tiempo suficiente para comprender aquello que estamos intentando construir.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        03
+    </span>
+
+    <span class="pt-1">
+        ¿Qué necesitas saber antes de emprender un negocio?
+    </span>
+
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Conocer sobre finanzas personales, saber administrar el dinero o comprender algunos principios relacionados con la construcción de riqueza no significa necesariamente estar preparado para emprender en un área específica.
+</p>
+
+<p>
+Una persona puede saber administrar sus recursos y, al mismo tiempo, desconocer cómo funciona el mercado en el que pretende competir. Puede entender cómo ahorrar y aun así no saber vender. Puede tener conocimientos financieros y carecer de experiencia en aquello que desea convertir en una fuente de ingresos.
+</p>
+
+<p>
+Comprendí que antes de entrar en un campo determinado no basta con saber que quieres ganar dinero en él. También necesitas adquirir los conocimientos necesarios para entender aquello a lo que estás dispuesto a dedicar una parte importante de tu tiempo.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        04
+    </span>
+
+    <span class="pt-1">
+        ¿Por qué emprender con expectativas demasiado altas puede llevar al fracaso?
+    </span>
+
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Otra causa que influyó en el fracaso de algunos de mis primeros proyectos fue comenzar con expectativas demasiado altas. Al iniciar algo nuevo, es fácil imaginar todo lo que podría llegar a convertirse, pero mucho más difícil dimensionar todo lo que tendremos que aprender antes de llegar hasta allí.
+</p>
+
+<p>
+En aquellos momentos, la visión que tenía del resultado final era mucho más grande que mi comprensión del proceso necesario para alcanzarlo. Cuando aparecieron las primeras dificultades y los resultados no llegaron como esperaba, la realidad terminó chocando con las expectativas que había construido en mi mente.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        05
+    </span>
+
+    <span class="pt-1">
+        ¿Cuánto tiempo estaba realmente dispuesto a esperar para que un negocio fuera rentable?
+    </span>
+
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Esta es probablemente la pregunta más importante que puedo hacerme al analizar mis primeros intentos. Muchas personas comienzan un emprendimiento pensando que algún día quieren vivir de él, pero pocas se preguntan cuánto tiempo están realmente dispuestas a dedicarle antes de que pueda sostenerlas.
+</p>
+
+<p>
+Si estamos construyendo algo que esperamos que genere ingresos durante muchos años, ¿por qué asumimos que debería producir resultados inmediatamente?
+</p>
+
+<p>
+Esto no significa que debamos mantener un proyecto indefinidamente aunque las señales indiquen que no tiene futuro. Significa que el tiempo necesario para construir algo debe formar parte de la decisión desde el principio. Si no sabemos cuánto estamos dispuestos a esperar, cualquier período sin resultados puede parecer demasiado largo.
+</p>
+
+<p>
+Cuando miro hacia atrás, entiendo que muchas de mis decisiones no estuvieron determinadas únicamente por la calidad de los proyectos que inicié. También estuvieron condicionadas por mis expectativas, mis conocimientos, mi forma de interpretar los resultados y, sobre todo, por el tiempo que estaba dispuesto a esperar antes de decidir que algo no funcionaba.
+</p>
+
+<p>
+Hoy entiendo que comenzar un proyecto no consiste únicamente en decidir qué quieres construir. También significa decidir cuánto tiempo estás dispuesto a dedicarle para descubrir hasta dónde puede llegar.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        06
+    </span>
+
+    <span class="pt-1">
+        ¿Cómo afecta la necesidad de dinero a las decisiones de un emprendedor?
+    </span>
+
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Con el tiempo también comprendí algo que durante mis primeros intentos no era capaz de reconocer con claridad: la necesidad puede hacer que queramos acelerar procesos que, por su propia naturaleza, necesitan tiempo.
+</p>
+
+<p>
+Cuando una persona necesita generar ingresos, es difícil pensar en construir algo durante años. La necesidad exige respuestas inmediatas. Queremos aprender rápido, comenzar rápido, generar dinero rápido y ver resultados cuanto antes. El problema es que muchas veces la realidad no funciona al mismo ritmo que nuestras necesidades.
+</p>
+
+<p>
+Esa presión puede llevarnos a tomar decisiones apresuradas. Comenzamos un proyecto esperando que resuelva nuestra situación económica en poco tiempo y, cuando los resultados no aparecen, sentimos que estamos perdiendo un tiempo que necesitamos para sobrevivir. Entonces buscamos otra alternativa, volvemos a empezar y el ciclo se repite.
+</p>
+
+<p>
+Hoy entiendo que una de las dificultades más grandes que enfrenté no era únicamente encontrar un proyecto con potencial, sino encontrar una forma de construirlo sin depender de que generara resultados inmediatos para poder continuar. Cuando existe una necesidad urgente de dinero, la paciencia se vuelve mucho más difícil de sostener.
+</p>
+
+<p>
+Esto también me permitió comprender por qué algunas personas abandonan proyectos que podrían haber tenido potencial. No necesariamente porque fueran malas ideas o porque carecieran de capacidad, sino porque su realidad económica no les permitía esperar el tiempo necesario para descubrirlo.
+</p>
+
+<p>
+Por eso, hoy considero que construir algo a largo plazo requiere algo más que una buena idea y disposición para trabajar. También necesita una estructura que permita sobrevivir mientras los resultados todavía no llegan. De lo contrario, la necesidad puede obligarnos a correr, y cuando intentamos correr en un proceso que requiere tiempo, terminamos cambiando constantemente de dirección.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        07
+    </span>
+
+    <span class="pt-1">
+        ¿Era realmente sostenible el modelo de negocio que estaba construyendo?
+    </span>
+
+</h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Existe una razón que hoy considero fundamental y que en mis primeros proyectos no analizaba con suficiente profundidad: la sostenibilidad.
+</p>
+
+<p>
+Uno de mis primeros intentos consistió en crear contenido en video. Durante aproximadamente año y medio trabajé en ello hasta que decidí abandonarlo de forma abrupta. En ese momento llegué a una conclusión que cambió mi forma de analizar los proyectos: incluso si algún día conseguía monetizar el contenido, no estaba seguro de que los ingresos compensaran el esfuerzo y el tiempo que exigía mantenerlo.
+</p>
+
+<p>
+También comencé a observar otro problema. El proyecto dependía completamente de plataformas que yo no controlaba. El público, la distribución del contenido y, en gran medida, la posibilidad de generar ingresos dependían de sistemas externos que podían cambiar sus reglas, limitar el alcance, bloquear contenido o incluso eliminar una cuenta que hubiera requerido meses o años de trabajo para construir.
+</p>
+
+<p>
+Eso me llevó a preguntarme si realmente quería construir algo cuya continuidad dependiera de factores que estaban fuera de mi control. No se trataba de que crear contenido fuera necesariamente una mala idea. El problema era que, para mí, el modelo no resultaba sostenible a largo plazo.
+</p>
+
+<p>
+Además, mantener una audiencia exige una producción constante. Crear contenido continuamente para mantener la atención del público puede convertirse en una actividad que consume gran parte del tiempo disponible, dejando poco espacio para desarrollar otros proyectos, trabajar o simplemente llevar una vida equilibrada.
+</p>
+
+<p>
+Fue entonces cuando comprendí que no solo debía preguntarme si un proyecto podía generar dinero. También debía preguntarme si podía sostenerlo durante años sin que terminara consumiendo todos mis recursos, mi tiempo o mi capacidad para construir algo más.
+</p>
+
+<p>
+El problema era que tampoco contaba con el capital necesario para iniciar otros tipos de emprendimientos. Algunos proyectos requieren una inversión inicial considerable, mientras que otros necesitan gastos recurrentes para mantenerse en funcionamiento. Mi situación económica limitaba las opciones disponibles y hacía que encontrar un modelo sostenible fuera todavía más importante.
+</p>
+
+<p>
+Con el tiempo entendí que abandonar un proyecto no siempre significa haber fracasado. En ocasiones, significa reconocer que el modelo elegido no encaja con los recursos, el tiempo o las condiciones que tienes disponibles. La verdadera dificultad está en distinguir entre abandonar porque no estás dispuesto a esperar y abandonar porque, después de analizarlo, comprendes que aquello que estás construyendo no puede sostenerse en las condiciones actuales.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Cuándo abandonar un negocio y cuándo vale la pena seguir intentándolo?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Y al final, no todo fueron pérdidas. También tomé ese período de mi vida como un aprendizaje que terminó marcándome de forma positiva. Nunca lo vi simplemente como tiempo perdido, pero al analizarlo hoy puedo entender que, en cierta medida, estaba buscando un modelo de negocio que realmente encajara con mi realidad, mis recursos y la vida que quería construir.
+</p>
+
+<p>
+Tiempo después, comencé a buscarlo de una manera mucho más racional. Ya no se trataba únicamente de encontrar algo que pudiera generar dinero, sino de entender si podía sostenerlo, cuánto tiempo podía dedicarle, qué recursos necesitaba y si realmente tenía sentido para las circunstancias en las que me encontraba. También comencé a preguntarme si aquello que estaba construyendo podría mantenerse en el futuro sin entrar en conflicto con mi vida personal, mi familia, otras fuentes de ingresos o incluso con nuevos fracasos.
+</p>
+
+<p>
+Hay aprendizajes que cuestan tiempo, esfuerzo y, en ocasiones, dinero. Pero una vez que realmente los comprendes, difícilmente vuelves a mirar las cosas de la misma manera. Esa fue una de las enseñanzas que me dejó aquella etapa: antes de preguntarme cuánto podría ganar con un proyecto, primero debía preguntarme si realmente podía construirlo y sostenerlo.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="cm-powerful-quote">
+
+    <span class="cm-powerful-label">
+    Código Millonario
+    </span>
+
+    <p>
+Cualquiera puede emprender, pero muy pocos comprenden que emprender es una profesión sin sueldo fijo.
+    </p>
+
+</div>
+
+<style>
+.cm-powerful-quote {
+    max-width: 780px;
+    margin: 70px auto;
+    padding: 42px 45px;
+    text-align: center;
+    background: #f7f4ee;
+    border: 1px solid rgba(30, 30, 30, 0.08);
+    box-sizing: border-box;
+}
+
+.cm-powerful-label {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 7px 14px;
+    border: 1px solid rgba(176, 138, 74, 0.55);
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #9a7942;
+}
+
+.cm-powerful-quote p {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    line-height: 1.5;
+    font-style: italic;
+    color: #292723;
+}
+
+@media (max-width: 600px) {
+    .cm-powerful-quote {
+        margin: 55px 15px;
+        padding: 35px 25px;
+    }
+
+    .cm-powerful-label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .cm-powerful-quote p {
+        font-size: 22px;
+        line-height: 1.55;
+    }
+}
+</style>
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+¿Cómo saber si estás perdiendo el tiempo o construyendo algo que necesita más tiempo?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Esto es mucho más real de lo que las personas suelen contar. Puede aparecer en diferentes momentos del camino, especialmente cuando llevas suficiente tiempo trabajando en algo y los resultados todavía no justifican el esfuerzo que has realizado.
+</p>
+
+<p>
+Entonces llega ese momento que se siente como un balde de agua fría. Comienzas a mirar hacia atrás y a preguntarte cuánto tiempo ha pasado, qué has conseguido y qué habría ocurrido si hubieras tomado otro camino.
+</p>
+
+<p>
+Es ahí cuando aparecen preguntas que pueden ser difíciles de responder: ¿Estoy construyendo algo o simplemente estoy perdiendo años de mi vida? ¿Y si dentro de cinco años sigo exactamente en el mismo lugar? ¿Cuánto tiempo más puedo permitirme esperar? ¿Qué estoy dejando de hacer mientras persigo algo que todavía no sé si funcionará?
+</p>
+
+<p>
+El problema es que estas preguntas no siempre aparecen cuando un proyecto está fracasando. A veces aparecen precisamente cuando estás atravesando una etapa en la que todavía no existen suficientes resultados para saber qué está ocurriendo.
+</p>
+
+<p>
+Y cuando no puedes ver con claridad hacia dónde te está llevando el camino, es fácil comenzar a comparar tu presente con la vida que imaginabas tener. Ves a otras personas avanzar, formar una familia, comprar una casa, conseguir estabilidad o alcanzar objetivos que tú todavía estás intentando construir, y empiezas a preguntarte si elegiste el camino equivocado.
+</p>
+
+<p>
+En ese momento, abandonar puede parecer una forma de recuperar el tiempo perdido. Cambiar de proyecto puede sentirse como empezar de nuevo antes de que sea demasiado tarde. Y algunas veces, efectivamente, cambiar de dirección será la decisión correcta. Pero otras veces, la decisión nace simplemente del miedo a continuar sin garantías.
+</p>
+
+<p>
+Esta es una de las partes más difíciles de construir algo a largo plazo: nadie puede asegurarte que el tiempo que estás invirtiendo terminará convirtiéndose en el resultado que esperas. La única certeza es que, mientras decides si continuar, el tiempo seguirá avanzando.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Por qué es tan difícil mantener un negocio durante años?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Mantener un proyecto durante años no depende únicamente de la disciplina o de la capacidad de una persona para soportar la incertidumbre. También existe una realidad que pocas veces tenemos en cuenta cuando comenzamos algo: mientras intentamos construir un proyecto, nuestra propia vida continúa cambiando.
+</p>
+
+<p>
+Las prioridades pueden cambiar, aparecen nuevas responsabilidades, la situación económica puede ser diferente, las relaciones personales evolucionan y aquello que parecía importante hace algunos años puede dejar de tener el mismo significado. En ocasiones, no abandonamos porque hayamos dejado de creer en lo que construíamos, sino porque las circunstancias que nos rodeaban ya no son las mismas.
+</p>
+
+<p>
+También puede ocurrir que, con el paso del tiempo, descubramos que el camino que elegimos no era el que realmente queríamos recorrer. A veces es necesario cambiar de dirección, buscar otra alternativa o aceptar que aquello por lo que trabajamos durante tanto tiempo no terminó convirtiéndose en lo que imaginábamos.
+</p>
+
+<p>
+Y existe una parte todavía más difícil de aceptar: algunas veces tendremos que reconocer que una decisión no funcionó. No todos los proyectos llegan a convertirse en aquello que esperamos, y aceptar esa realidad también forma parte del proceso. La dificultad está en distinguir entre una desilusión temporal, que puede superarse con tiempo y adaptación, y una realidad que nos obliga a tomar otro camino.
+</p>
+
+<p>
+Por eso, mantener un proyecto durante años no significa permanecer inmóvil ni continuar haciendo exactamente lo mismo. Significa tener la capacidad de reconocer cuándo debemos ajustar nuestra estrategia, cuándo nuestras prioridades han cambiado y cuándo es necesario tomar una decisión diferente.
+</p>
+
+<p>
+Quizás una de las razones por las que resulta tan difícil construir algo a largo plazo es que no solo estamos intentando sostener un proyecto. También estamos intentando sostenerlo mientras nosotros mismos cambiamos.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Cómo tomar decisiones cuando no sabes cuándo llegarán los resultados?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    La incertidumbre es una de las partes más difíciles de cualquier decisión que implique construir algo a largo plazo. Cuando comenzamos un negocio, desarrollamos una carrera profesional o intentamos construir un patrimonio, no existe una fecha exacta en la que podamos esperar que nuestros esfuerzos comiencen a dar resultados.
+</p>
+
+<p>
+    Un emprendimiento puede necesitar años antes de alcanzar estabilidad. Un sitio web puede tardar meses o incluso años en desarrollar una audiencia. Una marca personal necesita tiempo para construir confianza y una carrera profesional puede requerir años de aprendizaje antes de alcanzar el nivel de ingresos que esperamos.
+</p>
+
+<p>
+    Durante ese periodo puede ocurrir algo difícil de interpretar: estar avanzando sin tener la sensación de estar progresando.
+</p>
+
+<p>
+    Una persona puede estar adquiriendo conocimientos, desarrollando habilidades, mejorando su estrategia y tomando decisiones razonables, pero al mismo tiempo encontrarse con resultados que todavía no reflejan todo el esfuerzo realizado.
+</p>
+
+<p>
+    Es precisamente ahí donde la incertidumbre comienza a influir en nuestras decisiones. Cuando no sabemos cuánto falta para obtener resultados, es fácil comenzar a cuestionar el camino elegido. Aparecen pensamientos como <em>"quizás esto no funciona"</em>, <em>"tal vez debería hacer otra cosa"</em> o <em>"estoy perdiendo el tiempo"</em>.
+</p>
+
+<p>
+    El problema es que la ausencia de resultados inmediatos no siempre demuestra que una decisión haya sido equivocada. A veces simplemente significa que todavía no ha transcurrido el tiempo suficiente para evaluar correctamente sus consecuencias.
+</p>
+
+<p>
+    Sin embargo, tampoco podemos asumir que todo proyecto necesita únicamente más tiempo. La incertidumbre también puede ocultar errores que debemos corregir. Por eso, una de las habilidades más importantes al construir algo a largo plazo consiste en aprender a diferenciar entre una estrategia que necesita tiempo para madurar y una estrategia que necesita cambiar.
+</p>
+
+<p>
+    Esa diferencia es difícil de identificar cuando estamos emocionalmente involucrados en lo que construimos. Y cuanto mayor es la necesidad de obtener resultados, más difícil resulta esperar lo suficiente para descubrir si realmente estamos avanzando en la dirección correcta.
+</p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Cómo saber si un negocio necesita más tiempo o una nueva estrategia?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    Uno de los mayores errores que cometí al comenzar mis primeros proyectos fue esperar que los resultados fueran la única señal que me indicara si estaba avanzando. Cuando el dinero no llegaba, interpretaba que algo estaba mal. Cuando el crecimiento era lento, pensaba que debía cambiar de dirección. Y cuando el esfuerzo parecía no producir resultados visibles, comenzaba a cuestionar si realmente valía la pena continuar.
+</p>
+
+<p>
+    Con el tiempo comprendí que construir algo a largo plazo requiere aprender a mirar el progreso de una manera diferente. No se trata de ignorar los resultados ni de permanecer indefinidamente en un proyecto que no funciona. Se trata de aprender a distinguir entre una estrategia que necesita tiempo para desarrollarse y una estrategia que realmente no está funcionando.
+</p>
+
+<p>
+    Esa diferencia puede cambiar por completo la manera en la que tomamos decisiones.
+</p>
+
+<!-- H3 -->
+
+<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-4" style="font-family: 'Playfair Display', serif;">
+    1. No confundas la falta de resultados con la falta de progreso
+</h3>
+
+<p>
+    No todos los avances pueden medirse inmediatamente en dinero. En muchos proyectos, los primeros resultados aparecen mucho antes de que sean visibles desde el exterior.
+</p>
+
+<p>
+    Cada habilidad que desarrollas, cada error que aprendes a evitar, cada conocimiento que adquieres y cada problema que consigues resolver puede estar construyendo una base que todavía no produce ingresos, pero que aumenta tu capacidad para obtenerlos en el futuro.
+</p>
+
+<p>
+    La pregunta no debería ser únicamente cuánto dinero ha generado el proyecto, sino también qué estás aprendiendo, qué estás mejorando y qué estás construyendo que antes no existía.
+</p>
+
+<!-- H3 -->
+
+<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-6" style="font-family: 'Playfair Display', serif;">
+    2. No evalúes una construcción de años con la lógica de unas pocas semanas
+</h3>
+
+<p>
+    Una de las formas más rápidas de frustrarse es exigirle a un proyecto de largo plazo resultados propios de un proyecto de corto plazo.
+</p>
+
+<p>
+    Antes de comenzar, es necesario preguntarse cuánto tiempo podría necesitar razonablemente aquello que queremos construir. No existe una duración universal para todos los proyectos, pero sí existe una diferencia entre esperar un resultado que necesita tiempo y esperar sin tener ninguna estrategia para saber si estás avanzando.
+</p>
+
+<p>
+    Si desde el principio estableces qué quieres conseguir, qué señales indicarían que estás progresando y en qué momentos revisarás tu estrategia, podrás tomar decisiones con mayor claridad en lugar de reaccionar impulsivamente ante cada periodo de incertidumbre.
+</p>
+
+<!-- H3 -->
+
+<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-6" style="font-family: 'Playfair Display', serif;">
+    3. Aprende a evaluar el camino mientras lo recorres
+</h3>
+
+<p>
+    Esperar no significa permanecer inmóvil.
+</p>
+
+<p>
+    Un proyecto de largo plazo necesita ser evaluado constantemente. Es necesario observar qué está funcionando, qué no está funcionando y qué debería cambiar. La paciencia no consiste en hacer lo mismo durante años esperando un resultado diferente.
+</p>
+
+<p>
+    La paciencia consiste en darle al proceso el tiempo suficiente para aprender, corregir y comprobar si la estrategia puede funcionar.
+</p>
+
+<!-- H3 -->
+
+<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-6" style="font-family: 'Playfair Display', serif;">
+    4. Define cuánto tiempo puedes sostenerlo
+</h3>
+
+<p>
+    Esta es una pregunta que pocas personas se hacen antes de comenzar: ¿cuánto tiempo puedo mantener este proyecto si todavía no genera ingresos?
+</p>
+
+<p>
+    La respuesta depende de la situación de cada persona. Algunos pueden sostener un proyecto durante meses; otros, durante años. Pero conocer ese límite es fundamental, porque la necesidad económica puede obligarte a abandonar antes de descubrir si realmente existía potencial.
+</p>
+
+<p>
+    Por eso, construir algo a largo plazo también implica construir las condiciones que permitan sostenerlo. Tener otras fuentes de ingresos, reducir gastos, desarrollar habilidades que puedan generar dinero o encontrar una estructura que no dependa inmediatamente del éxito del proyecto puede marcar una diferencia enorme.
+</p>
+
+<!-- H3 -->
+
+<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-6" style="font-family: 'Playfair Display', serif;">
+    5. No te aferres a un proyecto. Comprométete con un proceso
+</h3>
+
+<p>
+    Existe una diferencia entre perseverar y aferrarse.
+</p>
+
+<p>
+    Perseverar significa estar dispuesto a continuar mientras existan razones para hacerlo, aprendiendo, corrigiendo y adaptando la estrategia. Aferrarse significa continuar haciendo exactamente lo mismo incluso cuando la evidencia demuestra que el camino necesita cambiar.
+</p>
+
+<p>
+    Por eso, el objetivo no debería ser mantener un proyecto a cualquier precio. El verdadero objetivo es construir algo con suficiente flexibilidad para evolucionar contigo y con las circunstancias que te rodean.
+</p>
+
+<p>
+    A veces tendrás que cambiar la estrategia. En otras ocasiones tendrás que cambiar el modelo. Y algunas veces tendrás que aceptar que es momento de abandonar. La clave está en que la decisión no sea tomada únicamente por la desesperación de no haber obtenido resultados todavía.
+</p>
+
+</div>
+
+<!-- CIERRE DESTACADO -->
+
+<div class="cm-quote-card">
+    <div class="cm-quote-line"></div>
+
+```
+<p>
+    No necesitas saber exactamente cuándo llegará el resultado.
+</p>
+
+<p>
+    Necesitas saber qué estás construyendo, cuánto tiempo puedes sostenerlo y qué señales te indicarán si debes continuar, corregir o cambiar de dirección.
+</p>
+```
+
+</div>
+
+<style>
+.cm-quote-card {
+    position: relative;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 30px 32px;
+    background: #f4f0e9;
+    border: 1px solid rgba(30, 30, 30, 0.07);
+    box-sizing: border-box;
+}
+
+.cm-quote-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #b08a4a;
+}
+
+.cm-quote-card p {
+    margin: 0 0 12px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    line-height: 1.55;
+    font-style: italic;
+    text-align: center;
+    color: #292723;
+}
+
+.cm-quote-card p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .cm-quote-card {
+        margin: 40px 15px;
+        padding: 25px 22px;
+    }
+
+    .cm-quote-card p {
+        font-size: 18px;
+    }
+}
+</style>
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+ ¿Tiene sentido seguir con un negocio que todavía no da resultados?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    Permanecer durante años en un proyecto no garantiza que algún día alcanzará el resultado que esperas. Existen ideas que necesitan cambiar, estrategias que dejan de funcionar y situaciones en las que la mejor decisión consiste en replantear por completo el rumbo o incluso aceptar que ha llegado el momento de comenzar algo diferente.
+</p>
+
+<p>
+    Pero existe una diferencia importante entre abandonar después de analizar lo que está ocurriendo y abandonar simplemente porque los resultados están tardando más de lo que imaginabas.
+</p>
+
+<p>
+    Cuando abandonamos demasiado pronto, es posible que nunca lleguemos a descubrir si aquello que construíamos tenía realmente potencial. Quizás la idea necesitaba más tiempo. Quizás necesitaba una estrategia diferente. Quizás todavía no habíamos adquirido los conocimientos necesarios para hacerla funcionar.
+</p>
+
+<p>
+    El problema es que desde el momento en que abandonamos ya no podemos saber qué habría ocurrido si hubiéramos continuado. Esa es una de las partes más difíciles de construir algo a largo plazo: muchas veces debemos tomar decisiones sin tener la certeza de si estamos frente a un proyecto que necesita más tiempo o frente a uno que realmente no funciona.
+</p>
+
+<p>
+    Por eso, la constancia no consiste en repetir exactamente lo mismo durante años esperando que algún día ocurra algo diferente. Consiste en permanecer el tiempo suficiente para aprender, observar lo que sucede, corregir los errores y adaptar la estrategia cuando sea necesario.
+</p>
+
+<p>
+    Quizás el verdadero desafío no sea decidir entre continuar o abandonar. Sea aprender a reconocer cuándo estamos abandonando porque el proyecto realmente dejó de tener sentido y cuándo estamos abandonando únicamente porque todavía no hemos obtenido los resultados que esperábamos.
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="cm-deep-question">
+
+    <span class="cm-deep-question-label">
+       Código Millonario
+    </span>
+
+    <div class="cm-deep-question-line"></div>
+
+    <p>
+        ¿Estoy abandonando porque realmente debo hacerlo o porque todavía no he aprendido a esperar?
+    </p>
+
+</div>
+
+<style>
+.cm-deep-question {
+    max-width: 760px;
+    margin: 80px auto;
+    padding: 45px 50px;
+    background: #292723;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cm-deep-question-label {
+    display: block;
+    margin-bottom: 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: #b08a4a;
+}
+
+.cm-deep-question-line {
+    width: 45px;
+    height: 1px;
+    margin: 0 auto 28px;
+    background: #b08a4a;
+}
+
+.cm-deep-question p {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    line-height: 1.55;
+    font-style: italic;
+    color: #f4f0e9;
+}
+
+@media (max-width: 600px) {
+    .cm-deep-question {
+        margin: 60px 15px;
+        padding: 38px 25px;
+    }
+
+    .cm-deep-question p {
+        font-size: 22px;
+        line-height: 1.55;
+    }
+}
+</style>
+
+
+
+
+
+
+
+<!-- CONCLUSIÓN -->
+<h2 id="conclusion" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Cuándo seguir, cuándo cambiar de estrategia y cuándo abandonar un proyecto?
+</h2>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+    Después de analizar mi propia historia y las decisiones que tomé durante mis primeros proyectos, comprendí que muchas veces no abandonamos únicamente porque algo no funcione. También abandonamos porque no estamos preparados para convivir con la incertidumbre que aparece mientras esperamos descubrir si realmente funcionará.
+</p>
+
+<p>
+    Construir riqueza, desarrollar un negocio o consolidar cualquier proyecto a largo plazo implica aceptar que durante una parte del camino probablemente no tendremos respuestas claras. No sabremos exactamente cuándo llegará el resultado, cuánto tendremos que esperar ni si aquello que estamos construyendo terminará convirtiéndose en lo que imaginamos.
+</p>
+
+<p>
+    Pero también aprendí que permanecer no significa aferrarse ciegamente. Un proyecto puede necesitar cambios, una estrategia puede dejar de funcionar y la vida puede llevarnos hacia otras prioridades. A veces debemos corregir el rumbo y, en determinadas circunstancias, incluso aceptar que ha llegado el momento de abandonar.
+</p>
+
+<p>
+    La verdadera dificultad está en aprender a distinguir una decisión tomada con claridad de una decisión tomada por desesperación. No es lo mismo abandonar porque hemos comprendido que el camino ya no tiene sentido que hacerlo simplemente porque todavía no hemos obtenido los resultados que esperábamos.
+</p>
+
+<p>
+    Hoy entiendo que el tiempo no garantiza que un proyecto vaya a funcionar. Lo que sí permite es acumular conocimiento, experiencia y capacidad para tomar mejores decisiones. Y, en muchos casos, abandonar demasiado pronto significa renunciar antes de haber tenido la oportunidad de adquirir todo aquello que el proceso podía enseñarnos.
+</p>
+
+<p>
+    Quizás por eso, antes de comenzar algo nuevo, la pregunta más importante no sea únicamente cuánto dinero puede generar o qué tan grande puede llegar a ser. También deberíamos preguntarnos cuánto tiempo estamos dispuestos a dedicarle, cómo vamos a sostenerlo mientras los resultados no llegan y qué señales nos indicarán cuándo continuar, cuándo corregir y cuándo cambiar de dirección.
+</p>
+
+<p>
+    Porque nadie sabe cuándo llegará el resultado. Y quizás esa sea una de las partes más difíciles de construir cualquier cosa que realmente importe: aprender a avanzar sin tener la certeza de que el tiempo que estamos invirtiendo terminará recompensándonos.
+</p>
+
+<p>
+    Pero también existe una certeza que podemos controlar: la decisión de no abandonar únicamente porque todavía no hemos visto el resultado que esperábamos.
+</p>
+
+</div>
+
+
+
+
+
+<div class="cm-editorial-statement">
+
+    <div class="cm-statement-accent"></div>
+
+    <p>
+        No sabes si funcionará. Pero tampoco deberías abandonar únicamente porque todavía no ha funcionado.
+    </p>
+
+</div>
+
+<style>
+.cm-editorial-statement {
+    max-width: 760px;
+    margin: 80px auto;
+    padding: 35px 45px;
+    background: #f7f4ee;
+    border: 1px solid rgba(30, 30, 30, 0.08);
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.cm-statement-accent {
+    width: 3px;
+    flex-shrink: 0;
+    background: #b08a4a;
+}
+
+.cm-editorial-statement p {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    line-height: 1.6;
+    color: #292723;
+}
+
+@media (max-width: 600px) {
+    .cm-editorial-statement {
+        margin: 60px 15px;
+        padding: 30px 25px;
+        gap: 22px;
+    }
+
+    .cm-editorial-statement p {
+        font-size: 21px;
+        line-height: 1.55;
+    }
+}
+</style>
+
+
+
+
+
+
+<section class="mt-40 mb-24">
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+
+      <img
+        src="../../assets/img/fundador-codigo-millonario.webp"
+        alt="Autor del artículo"
+        class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover">
+
+      <div>
+
+        <p class="text-[10px] md:text-xs uppercase tracking-[0.20em] md:tracking-[0.25em] text-stone-500">
+          Opinión del autor
+        </p>
+
+        <p class="text-xs md:text-sm text-stone-700 font-medium">
+          Francisco Urrego
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+Este análisis nace de una reflexión personal sobre los proyectos que inicié, las decisiones que tomé y las razones por las que algunos de ellos terminaron antes de alcanzar el resultado que esperaba. Con el tiempo comprendí que abandonar no siempre significa que una idea sea mala, pero también que permanecer durante años en un proyecto no garantiza que finalmente funcione.
+</p>
+
+<p>
+Mi intención al compartir esta experiencia no es decirle a nadie cuándo debe continuar o cuándo debe abandonar. Cada situación tiene circunstancias diferentes. El objetivo es plantear una pregunta que considero importante antes de tomar cualquiera de esas decisiones: <strong>¿estoy abandonando porque realmente debo hacerlo o porque todavía no he aprendido a esperar?</strong>
+</p>
+
+<p>
+Esta reflexión forma parte de la visión de <strong>Código Millonario</strong>: analizar el dinero, las decisiones y la construcción de riqueza desde una perspectiva más amplia, considerando no solo los resultados, sino también el tiempo, la incertidumbre y las decisiones que ocurren detrás de ellos.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+<p class="text-3xl font-semibold text-stone-900 mb-5 mt-20">Artículos relacionados:</p>
+
+<p class="interlink-heading text-left text-sm mb-4"
+   style="font-family: 'Open Sans', sans-serif;">
+  ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+</p>
+
+
+  </article>
+</main>
+
+
+
+
+
+
+
+
+
+<!-- ================= NUEVA TIPOGRAFIA ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../NOMBRE DE CARPETA/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style="font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+    <div id="interlinkGrid"></div>
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= TITULO ================= */
+.news-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+  letter-spacing: -0.2px;
+}
+
+/* METADATA */
+.news-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+/* TEXTO SECUNDARIO */
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.news-text {
+  flex: 1;
+}
+
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* 👇 TITULO MÁS GRANDE EN MÓVIL */
+  .news-text h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+function truncate(text, maxLength = 65){
+  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s: Math.random()}))
+              .sort((a,b)=>a.s-b.s)
+              .map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="${a.title}">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <div class="news-meta">${a.meta}</div>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../NOMBRE DE CARPETA/index.html")
+.then(r => r.text())
+.then(html => {
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+
+  const articles = doc.querySelectorAll(".article");
+
+  allArticles = shuffle(Array.from(articles).map(article => {
+
+    const link = article.querySelector("a.article-link");
+    const title = article.querySelector("h2.article-title");
+    const img = article.querySelector("img");
+    const meta = article.querySelector(".badge-row span");
+
+    return {
+      title: title ? title.textContent.trim() : "Sin título",
+      url: link ? link.getAttribute("href") : "#",
+      image: img ? img.getAttribute("src") : "./assets/png/default.png",
+      meta: meta ? meta.textContent.trim() : ""
+    };
+
+  }).filter(a => a.title.length > 5));
+
+  renderAll(allArticles);
+
+})
+.catch(err => console.error("Interlink error:", err));
+</script>
+
+
+
+
+
+
+
+   
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-28"></section>
+
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
