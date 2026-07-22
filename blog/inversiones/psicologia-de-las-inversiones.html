@@ -1442,6 +1442,8 @@ body{
 
 
 
+
+
 <!-- NOTA EDITORIAL -->
 <section class="my-16">
 
@@ -1480,6 +1482,294 @@ body{
 
 
 
+<!-- TABLA DE CONTENIDOS -->
+<style>
+
+/* =========================
+   TOC CUADRADO MODERNO
+========================= */
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:140px;
+}
+
+/* SOLO esto para anclas */
+[id]{
+  scroll-margin-top:140px;
+}
+
+.cf-accordion{
+  margin-top:60px;
+  font-family:'Inter',sans-serif;
+}
+
+/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
+.cf-accordion-inner{
+  max-width:80rem;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+
+/* CUADRO */
+.cf-accordion-item{
+  width:260px;
+  min-height:70px;
+
+  margin:0;
+
+  border:1px solid red;
+
+  border-radius:6px;
+
+  background:#fff;
+
+  overflow:hidden;
+
+  transition:width .35s ease;
+}
+
+/* EXPANSIÓN */
+.cf-accordion-item.is-open{
+  width:680px;
+}
+
+/* HEADER */
+.cf-accordion-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 16px;
+
+  cursor:pointer;
+
+  font-size:17px;
+  font-weight:600;
+
+  color:#111827;
+  background:#fff;
+
+  border-bottom:none;
+}
+
+/* ICONO */
+.cf-menu-icon{
+  width:30px;
+  height:30px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  border:1px solid red;
+  border-radius:6px;
+
+  gap:4px;
+  box-sizing:border-box;
+}
+
+.cf-menu-icon span{
+  height:2px;
+  width:16px;
+  background:red;
+  border-radius:2px;
+}
+
+/* CONTENT */
+.cf-accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+}
+
+/* LISTA */
+.toc-container{
+  padding:8px 14px 14px 14px;
+}
+
+/* LISTA */
+.toc-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+/* ITEMS ULTRA COMPACTOS */
+.toc-list li{
+  padding:6px 0;
+  margin:0;
+  border:none;
+}
+
+/* LINKS */
+.toc-list a{
+  text-decoration:none;
+  color:#374151;
+
+  font-size:14px;
+  line-height:1.35;
+
+  display:block;
+
+  transition:all .2s ease;
+}
+
+/* HOVER AZUL */
+.toc-list a:hover{
+  color:blue;
+  transform:translateX(4px);
+}
+
+/* MOBILE */
+@media (max-width:480px){
+
+  .cf-accordion-item{
+    width:88%;
+  }
+
+  .cf-accordion-item.is-open{
+    width:100%;
+  }
+
+}
+
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+
+  <div class="cf-accordion-inner">
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+
+        <!-- HEADER -->
+        <div class="cf-accordion-header">
+
+          Tabla de contenidos
+
+          <div class="cf-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="cf-accordion-content">
+
+          <div class="toc-container">
+
+            <ul class="toc-list">
+    <li><a href="#titulo1">1. ¿De qué formas puede una persona tomar una decisión de inversión?</a></li>
+    <li><a href="#titulo2">2. Cómo identificar una mala decisión de inversión antes de perder dinero</a></li>
+    <li><a href="#titulo3">3. ¿Qué debes analizar antes de invertir? Lecciones que deja una inversión fallida</a></li>
+    <li><a href="#titulo4">4. ¿Qué patrones aumentan la probabilidad de que una inversión salga mal?</a></li>
+    <li><a href="#titulo5">5. ¿Por qué una inversión funciona para unos y para otros no?</a></li>
+    <li><a href="#titulo6">6. Qué debes analizar antes de invertir tu dinero</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<script>
+
+/* =========================
+   ACORDEÓN (igual)
+========================= */
+
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+  header.addEventListener('click',()=>{
+
+    const item = header.closest('.cf-accordion-item');
+    const content = item.querySelector('.cf-accordion-content');
+
+    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+      if(other!==item){
+        other.querySelector('.cf-accordion-content').style.maxHeight=null;
+      }
+    });
+
+    item.classList.toggle('is-open');
+
+    if(content.style.maxHeight){
+      content.style.maxHeight=null;
+    }else{
+      content.style.maxHeight=content.scrollHeight+'px';
+    }
+
+  });
+});
+
+
+/* =========================
+   SCROLL HÍBRIDO (FIX MÓVIL + PC)
+========================= */
+
+const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+  link.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    const id = this.getAttribute('href').substring(1);
+    const target = document.getElementById(id);
+
+    if(!target) return;
+
+    const offset = 140;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    history.pushState(null, null, '#' + id);
+
+    if(isMobile){
+      /* 🔥 MÓVIL: usa scroll nativo (más estable) */
+      window.scrollTo({
+        top: top,
+        behavior: 'smooth'
+      });
+    } else {
+      /* 💻 PC: animación más controlada */
+      const start = window.pageYOffset;
+      const distance = top - start;
+      const duration = 650;
+
+      let startTime = null;
+
+      function animate(time){
+        if(!startTime) startTime = time;
+
+        const progress = Math.min((time - startTime) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+
+        window.scrollTo(0, start + distance * ease);
+
+        if(progress < 1){
+          requestAnimationFrame(animate);
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+  });
+});
+
+</script>
+
+
 
 
 
@@ -1500,7 +1790,7 @@ body{
 
 
 <!-- BLOQUE -->
-<h2 id="formas-de-tomar-una-decision-de-inversion" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 leading-tight tracking-tight">
+<h2 id="titulo1" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 leading-tight tracking-tight">
 ¿De qué formas puede una persona tomar una decisión de inversión?
 </h2>
 
@@ -1789,7 +2079,7 @@ A simple vista, podría parecer que el negocio fracasó porque las galletas nunc
 
 
 <!-- BLOQUE -->
-<h2 id="donde-comenzo-realmente-el-error" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
 ¿Qué debes analizar antes de invertir? Lecciones que deja una inversión fallida
 </h2>
 
@@ -1855,7 +2145,7 @@ En realidad, una buena idea no genera beneficios por sí sola. Su resultado depe
 
 
 <!-- BLOQUE -->
-<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
 Antes de invertir dinero, invierte en conocimiento
 </h3>
 
@@ -1882,7 +2172,7 @@ En muchos casos, invertir también significa invertir en conocimiento. Trabajar 
 
 
 <!-- BLOQUE -->
-<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
 Qué debes validar antes de invertir dinero
 </h3>
 
@@ -1930,7 +2220,7 @@ Del mismo modo, también es necesario validar el mercado. Conocer si existe dema
 
 
 <!-- BLOQUE -->
-<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
 Una inversión también necesita tiempo para crecer
 </h3>
 
@@ -1958,7 +2248,7 @@ En algunos casos, proyectos con potencial terminan abandonándose no porque la i
 
 
 <!-- BLOQUE -->
-<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
 Toda inversión comienza antes de invertir dinero
 </h3>
 
@@ -2021,7 +2311,7 @@ Si al terminar esta historia lograste identificar algunos patrones por tu cuenta
 
 
 <!-- BLOQUE -->
-<h2 id="12" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+<h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
 ¿Qué patrones aumentan la probabilidad de que una inversión salga mal?
 </h2>
 
@@ -2062,7 +2352,7 @@ Por esa razón, antes de destinar dinero a cualquier proyecto, vale la pena preg
 
 
 <!-- BLOQUE -->
-<h3 h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-8 mt-20 leading-tight tracking-tight max-w-3xl">
 El error de no calcular todos los costos antes de invertir
 </h3>
 
@@ -2269,7 +2559,7 @@ Al final, invertir nunca será una ciencia exacta. Cada proyecto tiene circunsta
 
 
 <!-- BLOQUE -->
-<h2 id="situaciones-que-cambian-una-oportunidad" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Por qué una inversión funciona para unos y para otros no?
 </h2>
 
@@ -2387,7 +2677,7 @@ Antes de tomar una decisión basada en una experiencia ajena, conviene analizar 
 
 
 <!-- CONCLUSIÓN -->
-<h2 id="conclusion" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-24 leading-tight tracking-tight">
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-24 leading-tight tracking-tight">
 Qué debes analizar antes de invertir tu dinero
 </h2>
 
