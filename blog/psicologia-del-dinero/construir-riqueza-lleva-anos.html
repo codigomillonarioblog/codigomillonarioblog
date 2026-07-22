@@ -1079,7 +1079,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           </p>
 
           <p class="uvo-date">
-            Escrito el 00 Mar 2026 / 00:00 h / 3 min lectura
+            Escrito el 22 Jul 2026 / 09:12 h / 6 min lectura
           </p>
 
         </div>
@@ -1520,6 +1520,307 @@ Muchas ideas no son necesariamente malas ni quienes las emprenden carecen de cap
 
 
 
+
+
+<!-- TABLA DE CONTENIDOS -->
+<style>
+
+/* =========================
+   TOC CUADRADO MODERNO
+========================= */
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:140px;
+}
+
+/* SOLO esto para anclas */
+[id]{
+  scroll-margin-top:140px;
+}
+
+.cf-accordion{
+  margin-top:60px;
+  font-family:'Inter',sans-serif;
+}
+
+/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
+.cf-accordion-inner{
+  max-width:80rem;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+
+/* CUADRO */
+.cf-accordion-item{
+  width:260px;
+  min-height:70px;
+
+  margin:0;
+
+  border:1px solid red;
+
+  border-radius:6px;
+
+  background:#fff;
+
+  overflow:hidden;
+
+  transition:width .35s ease;
+}
+
+/* EXPANSIÓN */
+.cf-accordion-item.is-open{
+  width:680px;
+}
+
+/* HEADER */
+.cf-accordion-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 16px;
+
+  cursor:pointer;
+
+  font-size:17px;
+  font-weight:600;
+
+  color:#111827;
+  background:#fff;
+
+  border-bottom:none;
+}
+
+/* ICONO */
+.cf-menu-icon{
+  width:30px;
+  height:30px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  border:1px solid red;
+  border-radius:6px;
+
+  gap:4px;
+  box-sizing:border-box;
+}
+
+.cf-menu-icon span{
+  height:2px;
+  width:16px;
+  background:red;
+  border-radius:2px;
+}
+
+/* CONTENT */
+.cf-accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+}
+
+/* LISTA */
+.toc-container{
+  padding:8px 14px 14px 14px;
+}
+
+/* LISTA */
+.toc-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+/* ITEMS ULTRA COMPACTOS */
+.toc-list li{
+  padding:6px 0;
+  margin:0;
+  border:none;
+}
+
+/* LINKS */
+.toc-list a{
+  text-decoration:none;
+  color:#374151;
+
+  font-size:14px;
+  line-height:1.35;
+
+  display:block;
+
+  transition:all .2s ease;
+}
+
+/* HOVER AZUL */
+.toc-list a:hover{
+  color:blue;
+  transform:translateX(4px);
+}
+
+/* MOBILE */
+@media (max-width:480px){
+
+  .cf-accordion-item{
+    width:88%;
+  }
+
+  .cf-accordion-item.is-open{
+    width:100%;
+  }
+
+}
+
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+
+  <div class="cf-accordion-inner">
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+
+        <!-- HEADER -->
+        <div class="cf-accordion-header">
+
+          Tabla de contenidos
+
+          <div class="cf-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="cf-accordion-content">
+
+          <div class="toc-container">
+
+            <ul class="toc-list">
+    <li><a href="#titulo1">1. ¿Por qué muchas personas abandonan sus negocios antes de ganar dinero?</a></li>
+    <li><a href="#titulo2">2. ¿Por qué cambiar constantemente de negocio impide construir riqueza?</a></li>
+    <li><a href="#titulo3">3. ¿Cuál es el verdadero precio de construir riqueza?</a></li>
+    <li><a href="#titulo4">4. ¿Por qué es tan difícil hacerse rico?</a></li>
+    <li><a href="#titulo5">5. Siete preguntas que me habría gustado hacerme antes de comenzar aquellos proyectos</a></li>
+    <li><a href="#titulo6">6. ¿Cuándo abandonar un negocio y cuándo vale la pena seguir intentándolo?</a></li>
+    <li><a href="#titulo7">7. ¿Cómo saber si estás perdiendo el tiempo o construyendo algo que necesita más tiempo?</a></li>
+    <li><a href="#titulo8">8. ¿Por qué es tan difícil mantener un negocio durante años?</a></li>
+    <li><a href="#titulo9">9. ¿Cómo tomar decisiones cuando no sabes cuándo llegarán los resultados?</a></li>
+    <li><a href="#titulo10">10. ¿Cómo saber si un negocio necesita más tiempo o una nueva estrategia?</a></li>
+    <li><a href="#titulo11">11. ¿Tiene sentido seguir con un negocio que todavía no da resultados?</a></li>
+    <li><a href="#titulo12">12. ¿Cuándo seguir, cuándo cambiar de estrategia y cuándo abandonar un proyecto?</a></li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<script>
+
+/* =========================
+   ACORDEÓN (igual)
+========================= */
+
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+  header.addEventListener('click',()=>{
+
+    const item = header.closest('.cf-accordion-item');
+    const content = item.querySelector('.cf-accordion-content');
+
+    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+      if(other!==item){
+        other.querySelector('.cf-accordion-content').style.maxHeight=null;
+      }
+    });
+
+    item.classList.toggle('is-open');
+
+    if(content.style.maxHeight){
+      content.style.maxHeight=null;
+    }else{
+      content.style.maxHeight=content.scrollHeight+'px';
+    }
+
+  });
+});
+
+
+/* =========================
+   SCROLL HÍBRIDO (FIX MÓVIL + PC)
+========================= */
+
+const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+  link.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    const id = this.getAttribute('href').substring(1);
+    const target = document.getElementById(id);
+
+    if(!target) return;
+
+    const offset = 140;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    history.pushState(null, null, '#' + id);
+
+    if(isMobile){
+      /* 🔥 MÓVIL: usa scroll nativo (más estable) */
+      window.scrollTo({
+        top: top,
+        behavior: 'smooth'
+      });
+    } else {
+      /* 💻 PC: animación más controlada */
+      const start = window.pageYOffset;
+      const distance = top - start;
+      const duration = 650;
+
+      let startTime = null;
+
+      function animate(time){
+        if(!startTime) startTime = time;
+
+        const progress = Math.min((time - startTime) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+
+        window.scrollTo(0, start + distance * ease);
+
+        if(progress < 1){
+          requestAnimationFrame(animate);
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+  });
+});
+
+</script>
+
+
+
+
+
+
 <!-- BLOQUE -->
 <h3 class="text-center text-2xl md:text-3xl font-medium text-stone-700  mb-10 mt-20 leading-tight tracking-tight">
   Entonces aparecen las preguntas que ponen todo en duda
@@ -1818,7 +2119,7 @@ Si alguna vez has comenzado un proyecto y has pensado en abandonarlo porque los 
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo1" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Por qué muchas personas abandonan sus negocios antes de ganar dinero?
 </h2>
 
@@ -1924,7 +2225,7 @@ pero sin la estructura necesaria para construir algo sostenible.
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Por qué cambiar constantemente de negocio impide construir riqueza?
 </h2>
 
@@ -1961,7 +2262,7 @@ Comencé a estudiar lo más que pude, y no fue cuando me sentí motivado que ini
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Cuál es el verdadero precio de construir riqueza?
 </h2>
 
@@ -1990,7 +2291,7 @@ Después de fracasar una vez más, me vi obligado a buscar otros empleos mientra
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Por qué es tan difícil hacerse rico?
 </h2>
 
@@ -2022,7 +2323,7 @@ Fue ahí donde todas mis dudas, donde todo lo que había aprendido, leído o inv
       UNA COMPRENSIÓN MÁS PROFUNDA 
     </span>
 
-    <h2 id="7-razones-negocios-rentables"
+    <h2 id="titulo5"
         class="text-2xl md:text-4xl font-normal text-stone-800 
                leading-tight tracking-tight max-w-5xl">
   Estas son <span class="text-amber-700">siete preguntas </span> 
@@ -2031,14 +2332,8 @@ Fue ahí donde todas mis dudas, donde todo lo que había aprendido, leído o inv
 
 </div>
 
-
-
-
-
-
-
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 7 razones por las que las personas abandonan sus emprendimientos
 </h2>
 
@@ -2061,10 +2356,11 @@ Preguntas que hoy, al mirar mi propia experiencia con mayor distancia, me permit
 </p>
 
 <p>
-Estas son cinco preguntas que me habría gustado hacerme antes de comenzar aquellos proyectos.
+Estas son siete preguntas que me habría gustado hacerme antes de comenzar aquellos proyectos.
 </p>
 
 </div>
+
 
 
 
@@ -2294,7 +2590,11 @@ Existe una razón que hoy considero fundamental y que en mis primeros proyectos 
 </p>
 
 <p>
-Uno de mis primeros intentos consistió en crear contenido en video. Durante aproximadamente año y medio trabajé en ello hasta que decidí abandonarlo de forma abrupta. En ese momento llegué a una conclusión que cambió mi forma de analizar los proyectos: incluso si algún día conseguía monetizar el contenido, no estaba seguro de que los ingresos compensaran el esfuerzo y el tiempo que exigía mantenerlo.
+Uno de mis primeros intentos consistió en crear contenido en video. Durante aproximadamente año y medio trabajé en ello hasta que decidí abandonarlo de forma abrupta. 
+</p>
+
+<p>
+En ese momento llegué a una conclusión que cambió mi forma de analizar los proyectos: incluso si algún día conseguía monetizar el contenido, no estaba seguro de que los ingresos compensaran el esfuerzo y el tiempo que exigía mantenerlo.
 </p>
 
 <p>
@@ -2314,11 +2614,19 @@ Fue entonces cuando comprendí que no solo debía preguntarme si un proyecto pod
 </p>
 
 <p>
-El problema era que tampoco contaba con el capital necesario para iniciar otros tipos de emprendimientos. Algunos proyectos requieren una inversión inicial considerable, mientras que otros necesitan gastos recurrentes para mantenerse en funcionamiento. Mi situación económica limitaba las opciones disponibles y hacía que encontrar un modelo sostenible fuera todavía más importante.
+El problema era que tampoco contaba con el capital necesario para iniciar otros tipos de emprendimientos. Algunos proyectos requieren una inversión inicial considerable, mientras que otros necesitan gastos recurrentes para mantenerse en funcionamiento. 
 </p>
 
 <p>
-Con el tiempo entendí que abandonar un proyecto no siempre significa haber fracasado. En ocasiones, significa reconocer que el modelo elegido no encaja con los recursos, el tiempo o las condiciones que tienes disponibles. La verdadera dificultad está en distinguir entre abandonar porque no estás dispuesto a esperar y abandonar porque, después de analizarlo, comprendes que aquello que estás construyendo no puede sostenerse en las condiciones actuales.
+Mi situación económica limitaba las opciones disponibles y hacía que encontrar un modelo sostenible fuera todavía más importante.
+</p>
+
+<p>
+Con el tiempo entendí que abandonar un proyecto no siempre significa haber fracasado. En ocasiones, significa reconocer que el modelo elegido no encaja con los recursos, el tiempo o las condiciones que tienes disponibles. 
+</p>
+
+<p>
+La verdadera dificultad está en distinguir entre abandonar porque no estás dispuesto a esperar y abandonar porque, después de analizarlo, comprendes que aquello que estás construyendo no puede sostenerse en las condiciones actuales.
 </p>
 
 </div>
@@ -2329,22 +2637,34 @@ Con el tiempo entendí que abandonar un proyecto no siempre significa haber frac
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Cuándo abandonar un negocio y cuándo vale la pena seguir intentándolo?
 </h2>
 
 <div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-Y al final, no todo fueron pérdidas. También tomé ese período de mi vida como un aprendizaje que terminó marcándome de forma positiva. Nunca lo vi simplemente como tiempo perdido, pero al analizarlo hoy puedo entender que, en cierta medida, estaba buscando un modelo de negocio que realmente encajara con mi realidad, mis recursos y la vida que quería construir.
+Y al final, no todo fueron pérdidas. También tomé ese período de mi vida como un aprendizaje que terminó marcándome de forma positiva. 
 </p>
 
 <p>
-Tiempo después, comencé a buscarlo de una manera mucho más racional. Ya no se trataba únicamente de encontrar algo que pudiera generar dinero, sino de entender si podía sostenerlo, cuánto tiempo podía dedicarle, qué recursos necesitaba y si realmente tenía sentido para las circunstancias en las que me encontraba. También comencé a preguntarme si aquello que estaba construyendo podría mantenerse en el futuro sin entrar en conflicto con mi vida personal, mi familia, otras fuentes de ingresos o incluso con nuevos fracasos.
+Nunca lo vi simplemente como tiempo perdido, pero al analizarlo hoy puedo entender que, en cierta medida, estaba buscando un modelo de negocio que realmente encajara con mi realidad, mis recursos y la vida que quería construir.
 </p>
 
 <p>
-Hay aprendizajes que cuestan tiempo, esfuerzo y, en ocasiones, dinero. Pero una vez que realmente los comprendes, difícilmente vuelves a mirar las cosas de la misma manera. Esa fue una de las enseñanzas que me dejó aquella etapa: antes de preguntarme cuánto podría ganar con un proyecto, primero debía preguntarme si realmente podía construirlo y sostenerlo.
+Tiempo después, comencé a buscarlo de una manera mucho más racional. Ya no se trataba únicamente de encontrar algo que pudiera generar dinero, sino de entender si podía sostenerlo, cuánto tiempo podía dedicarle, qué recursos necesitaba y si realmente tenía sentido para las circunstancias en las que me encontraba. 
+</p>
+
+<p>
+También comencé a preguntarme si aquello que estaba construyendo podría mantenerse en el futuro sin entrar en conflicto con mi vida personal, mi familia, otras fuentes de ingresos o incluso con nuevos fracasos.
+</p>
+
+<p>
+Hay aprendizajes que cuestan tiempo, esfuerzo y, en ocasiones, dinero. Pero una vez que realmente los comprendes, difícilmente vuelves a mirar las cosas de la misma manera. 
+</p>
+
+<p>
+Esa fue una de las enseñanzas que me dejó aquella etapa: antes de preguntarme cuánto podría ganar con un proyecto, primero debía preguntarme si realmente podía construirlo y sostenerlo.
 </p>
 
 </div>
@@ -2424,7 +2744,7 @@ Cualquiera puede emprender, pero muy pocos comprenden que emprender es una profe
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+<h2 id="titulo7" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
 ¿Cómo saber si estás perdiendo el tiempo o construyendo algo que necesita más tiempo?
 </h2>
 
@@ -2468,10 +2788,68 @@ Esta es una de las partes más difíciles de construir algo a largo plazo: nadie
 
 
 
-<!-- BLOQUE -->
-<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
-¿Por qué es tan difícil mantener un negocio durante años?
-</h2>
+<!-- BLOQUE EDITORIAL -->
+<section class="mt-40 mb-20">
+
+    <!-- ENCABEZADO EDITORIAL -->
+    <div class="mb-12">
+
+        <!-- IDENTIFICADOR -->
+        <div class="flex items-center gap-4 mb-6">
+            <span class="text-sm font-medium tracking-[0.25em] text-amber-600">
+                03
+            </span>
+
+            <span class="h-px w-12 bg-amber-600"></span>
+
+            <span class="text-xs uppercase tracking-[0.22em] text-stone-500">
+                Permanecer
+            </span>
+        </div>
+
+        <!-- TÍTULO -->
+        <h2 id="titulo8" class="max-w-4xl text-4xl md:text-5xl lg:text-6xl font-normal text-stone-700 leading-[1.08] tracking-tight">
+            ¿Por qué es tan difícil mantener un negocio durante años?
+        </h2>
+
+    </div>
+
+
+    <!-- IMAGEN EDITORIAL -->
+    <figure class="relative">
+
+        <div class="relative overflow-hidden bg-stone-200">
+
+            <img 
+                src="../../assets/png/por-que-es-dificil-mantener-un-negocio-durante-anos.webp"
+                alt="Propietario de un negocio trabajando solo al final de la jornada"
+                class="w-full h-[320px] md:h-[500px] object-cover"
+                loading="lazy"
+            >
+
+            <!-- DEGRADADO SUTIL -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+
+            <!-- ETIQUETA EDITORIAL -->
+            <div class="absolute bottom-6 left-6 md:bottom-8 md:left-8">
+                <span class="inline-block border-l-2 border-amber-500 pl-3 text-xs md:text-sm uppercase tracking-[0.22em] text-white font-medium">
+                    La realidad de construir a largo plazo
+                </span>
+            </div>
+
+        </div>
+
+        <!-- PIE DE IMAGEN -->
+        <figcaption class="flex items-center gap-3 mt-4 text-sm text-stone-500">
+            <span class="w-8 h-px bg-amber-600"></span>
+            <span>
+                Mantener un negocio exige mucho más que saber cómo comenzar.
+            </span>
+        </figcaption>
+
+    </figure>
+
+</section>
 
 <div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
@@ -2505,7 +2883,7 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo9" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Cómo tomar decisiones cuando no sabes cuándo llegarán los resultados?
 </h2>
 
@@ -2549,30 +2927,70 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
 
 
 
+<!-- REFLEXIÓN CLAVE -->
+<div class="my-16 md:my-20 px-5 md:px-8 py-6 md:py-8 border-l-2 border-amber-600 bg-stone-50">
+
+    <p class="max-w-3xl text-lg md:text-xl text-stone-600 leading-relaxed">
+        No todo proyecto que tarda en funcionar está fracasando.
+        <span class="font-medium text-stone-700">
+            Pero no todo proyecto que lleva años merece seguir existiendo.
+        </span>
+    </p>
+
+</div>
+
+
+
+
+
 <!-- BLOQUE -->
-<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo10" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
 ¿Cómo saber si un negocio necesita más tiempo o una nueva estrategia?
 </h2>
 
 <div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-    Uno de los mayores errores que cometí al comenzar mis primeros proyectos fue esperar que los resultados fueran la única señal que me indicara si estaba avanzando. Cuando el dinero no llegaba, interpretaba que algo estaba mal. Cuando el crecimiento era lento, pensaba que debía cambiar de dirección. Y cuando el esfuerzo parecía no producir resultados visibles, comenzaba a cuestionar si realmente valía la pena continuar.
+    Uno de los mayores errores que cometí al comenzar mis primeros proyectos fue esperar que los resultados fueran la única señal que me indicara si estaba avanzando. 
 </p>
 
 <p>
-    Con el tiempo comprendí que construir algo a largo plazo requiere aprender a mirar el progreso de una manera diferente. No se trata de ignorar los resultados ni de permanecer indefinidamente en un proyecto que no funciona. Se trata de aprender a distinguir entre una estrategia que necesita tiempo para desarrollarse y una estrategia que realmente no está funcionando.
+    Cuando el dinero no llegaba, interpretaba que algo estaba mal. Cuando el crecimiento era lento, pensaba que debía cambiar de dirección. Y cuando el esfuerzo parecía no producir resultados visibles, comenzaba a cuestionar si realmente valía la pena continuar.
+</p>
+
+<p>
+    Con el tiempo comprendí que construir algo a largo plazo requiere aprender a mirar el progreso de una manera diferente. No se trata de ignorar los resultados ni de permanecer indefinidamente en un proyecto que no funciona. 
+</p>
+
+<p>    
+    Se trata de aprender a distinguir entre una estrategia que necesita tiempo para desarrollarse y una estrategia que realmente no está funcionando.
 </p>
 
 <p>
     Esa diferencia puede cambiar por completo la manera en la que tomamos decisiones.
 </p>
 
-<!-- H3 -->
+</div>
 
-<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-4" style="font-family: 'Playfair Display', serif;">
-    1. No confundas la falta de resultados con la falta de progreso
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        01
+    </span>
+
+    <span class="pt-1">
+        No confundas la falta de resultados con la falta de progreso
+    </span>
+
 </h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     No todos los avances pueden medirse inmediatamente en dinero. En muchos proyectos, los primeros resultados aparecen mucho antes de que sean visibles desde el exterior.
@@ -2586,11 +3004,29 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
     La pregunta no debería ser únicamente cuánto dinero ha generado el proyecto, sino también qué estás aprendiendo, qué estás mejorando y qué estás construyendo que antes no existía.
 </p>
 
-<!-- H3 -->
+</div>
 
-<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-6" style="font-family: 'Playfair Display', serif;">
-    2. No evalúes una construcción de años con la lógica de unas pocas semanas
+
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        02
+    </span>
+
+    <span class="pt-1">
+        No evalúes una construcción de años con la lógica de unas pocas semanas
+    </span>
+
 </h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Una de las formas más rápidas de frustrarse es exigirle a un proyecto de largo plazo resultados propios de un proyecto de corto plazo.
@@ -2604,11 +3040,27 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
     Si desde el principio estableces qué quieres conseguir, qué señales indicarían que estás progresando y en qué momentos revisarás tu estrategia, podrás tomar decisiones con mayor claridad en lugar de reaccionar impulsivamente ante cada periodo de incertidumbre.
 </p>
 
-<!-- H3 -->
+</div>
 
-<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-6" style="font-family: 'Playfair Display', serif;">
-    3. Aprende a evaluar el camino mientras lo recorres
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        03
+    </span>
+
+    <span class="pt-1">
+           Aprende a evaluar el camino mientras lo recorres
+    </span>
+
 </h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Esperar no significa permanecer inmóvil.
@@ -2622,11 +3074,28 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
     La paciencia consiste en darle al proceso el tiempo suficiente para aprender, corregir y comprobar si la estrategia puede funcionar.
 </p>
 
-<!-- H3 -->
+</div>
 
-<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-6" style="font-family: 'Playfair Display', serif;">
-    4. Define cuánto tiempo puedes sostenerlo
+
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        04
+    </span>
+
+    <span class="pt-1">
+       Define cuánto tiempo puedes sostenerlo
+    </span>
+
 </h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Esta es una pregunta que pocas personas se hacen antes de comenzar: ¿cuánto tiempo puedo mantener este proyecto si todavía no genera ingresos?
@@ -2640,11 +3109,27 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
     Por eso, construir algo a largo plazo también implica construir las condiciones que permitan sostenerlo. Tener otras fuentes de ingresos, reducir gastos, desarrollar habilidades que puedan generar dinero o encontrar una estructura que no dependa inmediatamente del éxito del proyecto puede marcar una diferencia enorme.
 </p>
 
-<!-- H3 -->
+</div>
 
-<h3 class="text-2xl md:text-3xl font-semibold text-stone-700 pt-6" style="font-family: 'Playfair Display', serif;">
-    5. No te aferres a un proyecto. Comprométete con un proceso
+
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="flex items-start gap-3 md:gap-4 text-2xl md:text-3xl font-medium text-stone-700 mt-24 mb-8 leading-tight tracking-tight">
+
+    <span class="flex-shrink-0 text-5xl md:text-6xl font-extrabold text-amber-600 leading-none tracking-tight">
+        05
+    </span>
+
+    <span class="pt-1">
+          No te aferres a un proyecto. Comprométete con un proceso
+    </span>
+
 </h3>
+
+<div class="text-stone-700 leading-relaxed space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
     Existe una diferencia entre perseverar y aferrarse.
@@ -2664,12 +3149,14 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
 
 </div>
 
-<!-- CIERRE DESTACADO -->
 
+
+
+
+<!-- CIERRE DESTACADO -->
 <div class="cm-quote-card">
     <div class="cm-quote-line"></div>
 
-```
 <p>
     No necesitas saber exactamente cuándo llegará el resultado.
 </p>
@@ -2677,7 +3164,6 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
 <p>
     Necesitas saber qué estás construyendo, cuánto tiempo puedes sostenerlo y qué señales te indicarán si debes continuar, corregir o cambiar de dirección.
 </p>
-```
 
 </div>
 
@@ -2734,7 +3220,7 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
 
 
 <!-- BLOQUE -->
-<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo11" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
  ¿Tiene sentido seguir con un negocio que todavía no da resultados?
 </h2>
 
@@ -2841,7 +3327,7 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
 
 
 <!-- CONCLUSIÓN -->
-<h2 id="conclusion" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo12" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Cuándo seguir, cuándo cambiar de estrategia y cuándo abandonar un proyecto?
 </h2>
 
@@ -2973,11 +3459,19 @@ Quizás una de las razones por las que resulta tan difícil construir algo a lar
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
  
 <p>
-Este análisis nace de una reflexión personal sobre los proyectos que inicié, las decisiones que tomé y las razones por las que algunos de ellos terminaron antes de alcanzar el resultado que esperaba. Con el tiempo comprendí que abandonar no siempre significa que una idea sea mala, pero también que permanecer durante años en un proyecto no garantiza que finalmente funcione.
+Este análisis nace de una reflexión personal sobre los proyectos que inicié, las decisiones que tomé y las razones por las que algunos de ellos terminaron antes de alcanzar el resultado que esperaba. 
 </p>
 
 <p>
-Mi intención al compartir esta experiencia no es decirle a nadie cuándo debe continuar o cuándo debe abandonar. Cada situación tiene circunstancias diferentes. El objetivo es plantear una pregunta que considero importante antes de tomar cualquiera de esas decisiones: <strong>¿estoy abandonando porque realmente debo hacerlo o porque todavía no he aprendido a esperar?</strong>
+Con el tiempo comprendí que abandonar no siempre significa que una idea sea mala, pero también que permanecer durante años en un proyecto no garantiza que finalmente funcione.
+</p>
+
+<p>
+Mi intención al compartir esta experiencia no es decirle a nadie cuándo debe continuar o cuándo debe abandonar. Cada situación tiene circunstancias diferentes. 
+</p>
+
+<p>
+El objetivo es plantear una pregunta que considero importante antes de tomar cualquiera de esas decisiones: <strong>¿estoy abandonando porque realmente debo hacerlo o porque todavía no he aprendido a esperar?</strong>
 </p>
 
 <p>
@@ -3031,7 +3525,7 @@ Esta reflexión forma parte de la visión de <strong>Código Millonario</strong>
     <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
     <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
     <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
-    <a id="viewAllBtn" href="../NOMBRE DE CARPETA/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
+    <a id="viewAllBtn" href="../psicologia-del-dinero/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
       Ver todos
     </a>
   </div>
@@ -3237,7 +3731,7 @@ searchInput.addEventListener("input", ()=>{
   renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
 });
 
-fetch("../NOMBRE DE CARPETA/index.html")
+fetch("../psicologia-del-dinero/index.html")
 .then(r => r.text())
 .then(html => {
 
