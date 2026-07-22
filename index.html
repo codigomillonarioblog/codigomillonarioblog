@@ -3852,6 +3852,281 @@ document.getElementById("newsletterForm").addEventListener("submit", function ()
 
 
 
+
+
+
+<!-- BLOQUE: FILOSOFÍA DEL APRENDIZAJE -->
+
+<section class="cm-home-philosophy">
+
+    <div class="cm-home-philosophy__inner">
+
+        <!-- CABECERA -->
+        <div class="cm-home-philosophy__header">
+            <span class="cm-home-philosophy__label">
+                Nuestra perspectiva
+            </span>
+
+            <span class="cm-home-philosophy__rule"></span>
+        </div>
+
+
+        <!-- TITULO -->
+        <div class="cm-home-philosophy__heading">
+
+            <span class="cm-home-philosophy__number">
+                01
+            </span>
+
+            <h2>
+                El aprendizaje financiero
+                <em>es un proceso</em>
+            </h2>
+
+        </div>
+
+
+        <!-- TEXTO -->
+        <div class="cm-home-philosophy__text">
+
+            <p>
+                En <strong>Código Millonario</strong> entendemos la educación financiera como un proceso continuo.
+                Ningún artículo, por completo que sea, puede sustituir años de aprendizaje, investigación y experiencia.
+            </p>
+
+            <p>
+                Por esta razón, recomendamos complementar la información publicada en este medio con otras fuentes confiables y
+                continuar profundizando en aquellos temas que sean relevantes para cada situación.
+            </p>
+
+            <p>
+                Obtener un resultado específico tampoco depende de una única variable. Las decisiones relacionadas con el dinero,
+                los negocios, el patrimonio y el desarrollo profesional están condicionadas por múltiples factores.
+            </p>
+
+        </div>
+
+
+        <!-- CIERRE -->
+        <div class="cm-home-philosophy__closing">
+
+            <span></span>
+
+            <p>
+                Una estrategia que funciona para una persona no necesariamente
+                producirá los mismos resultados en otra.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* =====================================================
+   CÓDIGO MILLONARIO
+   HOME — FILOSOFÍA DEL APRENDIZAJE
+   TODO EL ESTILO ESTÁ COMPLETAMENTE AISLADO
+===================================================== */
+
+.cm-home-philosophy {
+    width: 100%;
+    margin: 120px 0 100px;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.cm-home-philosophy__inner {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* =====================================================
+   CABECERA
+===================================================== */
+
+.cm-home-philosophy__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 45px;
+}
+
+.cm-home-philosophy__label {
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #8c867d;
+    white-space: nowrap;
+}
+
+.cm-home-philosophy__rule {
+    width: 45px;
+    height: 1px;
+    background: rgba(70, 65, 58, 0.20);
+}
+
+
+/* =====================================================
+   TITULO
+===================================================== */
+
+.cm-home-philosophy__heading {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.cm-home-philosophy__number {
+    display: block;
+    margin-bottom: 12px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #a88a5a;
+}
+
+.cm-home-philosophy__heading h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.045em;
+    color: #3f3b36;
+}
+
+.cm-home-philosophy__heading h2 em {
+    display: block;
+
+    margin-top: 8px;
+
+    font-style: italic;
+    font-weight: 400;
+    color: #878077;
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.cm-home-philosophy__text {
+    max-width: 720px;
+    margin: 0 auto;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: #625e57;
+}
+
+.cm-home-philosophy__text p {
+    margin: 0 0 22px;
+}
+
+.cm-home-philosophy__text p:last-child {
+    margin-bottom: 0;
+}
+
+.cm-home-philosophy__text strong {
+    color: #403c36;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CIERRE EDITORIAL
+===================================================== */
+
+.cm-home-philosophy__closing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    max-width: 650px;
+    margin: 50px auto 0;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(70, 65, 58, 0.12);
+}
+
+.cm-home-philosophy__closing span {
+    width: 28px;
+    height: 1px;
+    flex-shrink: 0;
+
+    background: #a88a5a;
+}
+
+.cm-home-philosophy__closing p {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    line-height: 1.6;
+    font-style: italic;
+    color: #777168;
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .cm-home-philosophy {
+        margin: 85px 0 70px;
+        padding: 0 20px;
+    }
+
+    .cm-home-philosophy__header {
+        margin-bottom: 35px;
+    }
+
+    .cm-home-philosophy__heading {
+        margin-bottom: 35px;
+    }
+
+    .cm-home-philosophy__heading h2 {
+        font-size: 2.65rem;
+        line-height: 1.02;
+    }
+
+    .cm-home-philosophy__text {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .cm-home-philosophy__closing {
+        margin-top: 40px;
+        padding-top: 22px;
+    }
+
+    .cm-home-philosophy__closing p {
+        font-size: 15px;
+    }
+
+}
+
+</style>
+
+
+
+
 <!-- ESPACIO ARRIBA -->
  <div style="height: 100px;"></div>
 
