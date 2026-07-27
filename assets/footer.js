@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="footer-col">
         <h4>Información Legal</h4>
         <ul>
+          <li><a href="/informacion-legal#nuestra-filosofia">Nuestra filosofía</a></li>
           <li><a href="/informacion-legal#sobre-el-blog">Sobre el Blog</a></li>
           <li><a href="/informacion-legal#politica-privacidad">Política de Privacidad</a></li>
           <li><a href="/informacion-legal#terminos-condiciones">Términos y Condiciones</a></li>
