@@ -1,0 +1,2825 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Cómo proteger tu dinero y tu patrimonio si quieres hacerte rico? | Código Millonario</title>
+<meta name="description" content="La parte más importante de construir tu vida financiera es proteger lo que vas adquiriendo mientras avanzas hacia una vida con mayores probabilidades de conseguir riqueza.">
+
+<!-- Favicon -->
+<link rel="icon" href="../../assets/img/codigo-millonario-medio-digital.png" type="image/png">
+
+<!-- canonical -->
+<link rel="canonical" href="https://codigomillonario.blog/blog/psicologia-del-dinero/proteger-dinero-construir-riqueza.html">
+
+<!-- tailwin -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Redes sociales iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Fondo */
+body, html {
+    background-color: #ffffff !important;
+}
+</style>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="../../assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 14rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 16rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 18rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 10rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 12rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 13rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Newsletter
+    </button>
+
+    <!-- INPUT -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* INPUT */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
+}
+
+</style>
+
+<script>
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
+
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
+
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
+</script>
+
+
+
+
+
+<!-- MENU SECCIONES PC Y TELEFONOS -->
+<div class="search-container">
+  <button class="search-btn" id="openMenuBtn">
+    <span class="icon">
+      <span class="lines"></span>
+      <span class="glass"></span>
+    </span>
+  </button>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- MENÚ LATERAL -->
+<div id="sideMenu">
+
+  <!-- BOTÓN CERRAR -->
+  <button id="closeMenuBtn">&times;</button>
+
+  <!-- LOGO SUPERIOR -->
+  <div class="menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Logo">
+  </div>
+
+  <div class="menu-content">
+
+<a href="../../blog/biografia-de-millonarios/index.html">Millonarios: De Cero al Éxito</a>
+<a href="../../blog/psicologia-del-dinero/index.html">La Psicología del Dinero</a>
+<a href="../../blog/ahorro/index.html">Empieza a Ahorrar Inteligente</a>
+<a href="../../blog/inversiones/index.html">Inversiones Inteligentes</a>
+<a href="../../blog/hechos-lujos-curiosidades/index.html">Secretos del Lujo</a>
+<a href="../../blog/negocios/index.html">Modelos de Negocio</a>
+<a href="../../tienda.html">Productos</a>
+
+  </div>
+
+  <!-- 🔥 FORMULARIO INTEGRADO ABAJO -->
+  <div class="menu-suscriptor">
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+      
+      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+      <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+      <input type="hidden" name="tipo" value="suscriptor">
+      <input type="hidden" name="from_name" value="Suscriptores Web">
+
+      <button type="button" class="btn-rojo" id="btnToggle">
+        Recibe estrategias gratis
+      </button>
+
+      <div class="input-box" id="inputBox">
+        <input 
+          type="email" 
+          name="email" 
+          required
+          placeholder="Tu correo"
+          class="input-email">
+          
+        <button type="submit" class="btn-enviar">→</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<style>
+
+/* LOGO EN EL MENÚ */
+.menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* ===== BOTÓN ===== */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    top: 20px;
+  }
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 2.2px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 #fff,
+    0 10px 0 #fff;
+}
+
+.glass {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2.2px;
+  background: #fff;
+  bottom: -3px;
+  right: -5px;
+  transform: rotate(30deg);
+}
+
+/* ===== OVERLAY ===== */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#menuOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MENÚ ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  transition: 0.4s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  #sideMenu {
+    max-width: 460px;
+  }
+}
+
+#sideMenu.show {
+  right: 0;
+}
+
+/* BOTÓN CERRAR */
+#closeMenuBtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#closeMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* CONTENIDO */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+/* LINKS */
+.menu-content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.menu-content a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.menu-content a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 🔥 CONTENEDOR ABAJO */
+.menu-suscriptor {
+  margin-top: 10px; /* 👈 SOLO ESTE CAMBIO */
+  padding: 20px;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-box {
+  margin-top: 10px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box.activo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.input-email {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-enviar {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* SOLO MÓVIL */
+@media (min-width: 769px) {
+  .menu-suscriptor {
+    display: none;
+  }
+}
+
+</style>
+
+<script>
+const openBtn = document.getElementById('openMenuBtn');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeMenuBtn');
+
+openBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+/* SCRIPT FORM */
+const btn = document.getElementById("btnToggle");
+const inputBox = document.getElementById("inputBox");
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  btn.style.display = "none";
+  inputBox.classList.add("activo");
+});
+
+inputBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBox.classList.remove("activo");
+  btn.style.display = "block";
+});
+</script>
+
+
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="../../index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="../../mentalidad/index.html">Mentalidad</a></li>
+      <li><a href="../../blog/negocios/index.html">Negocios</a></li>
+      <li><a href="../../herramientas.html">Herramientas</a></li>
+      <li><a href="../../opiniones.html">Opiniones</a></li>
+      <li><a href="../../nuestro-equipo.html">Staff</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+<div id="mobileMenu">
+
+  <button id="closeMobileMenu">&times;</button>
+
+  <div class="mobile-menu-logo">
+    <img src="../../assets/img/codigo-millonario-logo.png" alt="Código Millonario">
+  </div>
+
+  <div class="mobile-menu-links">
+
+    <a href="../../index.html">Inicio</a>
+
+    <a href="../../educacion-financiera.html">
+      Educación Financiera
+    </a>
+
+    <a href="../../mentalidad/index.html">
+      Mentalidad
+    </a>
+
+    <a href="../../blog/negocios/index.html">
+      Negocios
+    </a>
+
+    <a href="../../herramientas.html">
+      Herramientas
+    </a>
+
+    <a href="../../opiniones.html">
+      Opiniones
+    </a>
+
+    <a href="../../nuestro-equipo.html">
+      Staff
+    </a>
+
+    <a href="../../contacto.html">
+      Contacto
+    </a>
+
+  </div>
+</div>
+
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #111111; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+.mobile-menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.mobile-menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+#closeMobileMenu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.mobile-menu-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+}
+
+.mobile-menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+@media(min-width: 768px) {
+  .navbar-menu li:nth-child(4) {
+    position: relative;
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+
+  .navbar-menu li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: -9px; /* mover la línea hacia el centro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: rgba(223, 222, 222, 0.85);
+  }
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('../../assets/img/codigo-millonario-logo.png') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+const closeMobileMenu =
+document.getElementById('closeMobileMenu');
+
+closeMobileMenu.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- ESPACIO FINAL -->
+<div style="height: 300px;"></div>
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- HERO -->
+<section class="uvo-hero">
+
+  <div class="uvo-container">
+
+    <!-- CATEGORY -->
+    <div class="uvo-category">
+      Riesgos Patrimoniales
+    </div>
+
+    <!-- TITLE -->
+    <h1 class="uvo-title">
+    ¿Qué debes Proteger antes de Comenzar a construir Riqueza?
+    </h1>
+
+    <!-- DESCRIPTION -->
+<p class="uvo-description">
+Todos hablan de hacer dinero y, aunque es importante, omiten que todo lo que se adquiere está desprotegido y puede perderse rápidamente.
+<br><br>
+¿Cómo aprender a proteger lo que consigues mientras construyes riqueza si quieres llegar lejos?
+Vamos a analizar los comportamientos, las decisiones y los patrones que pueden llevar a una persona a proteger su dinero mientras construye patrimonio.
+</p>
+
+
+    <!-- META -->
+    <div class="uvo-meta">
+
+      <!-- AUTHOR -->
+      <div class="uvo-author">
+
+        <img src="../../assets/img/fundador-codigo-millonario.webp"
+             alt="Francisco Urrego"
+             class="uvo-avatar">
+
+        <div class="uvo-author-info">
+
+          <p class="uvo-label">
+            AUTOR
+          </p>
+
+          <p class="uvo-author-name">
+            Equipo Editorial • <a href="../../nuestro-equipo.html" class="uvo-author-link">Francisco Urrego</a>
+          </p>
+
+          <p class="uvo-date">
+            Escrito el 29 Jul 2026 / 15:43 h / 6 min lectura
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- SOCIALS -->
+      <div class="uvo-socials">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- X -->
+        <a href="https://x.com/CMillonarioblog"
+           target="_blank"
+           aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 1200 1227"
+               fill="currentColor">
+            <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163Z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1FVSBquigd/"
+           target="_blank"
+           aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
+           target="_blank"
+           aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+
+        <!-- Pinterest -->
+        <a href="https://pin.it/3tqNXYoAA"
+           target="_blank"
+           aria-label="Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- IMAGE -->
+<div class="uvo-image-wrapper">
+
+  <img 
+    src="../../assets/png/como-proteger-tu-dinero-si-quieres-hacerte-rico.webp"
+    alt=""
+    class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] sm:top-4 object-contain z-10"
+  >
+
+  <!-- TEXTO DEBAJO -->
+  <div class="max-w-[50rem] mx-auto w-80 sm:w-[40rem] md:w-[50rem] mt-10 text-left">
+
+    <span 
+      class="block text-[11px] uppercase tracking-widest text-stone-500 mb-2"
+      style="font-family: 'Open Sans', sans-serif;"
+    >
+      Un Análisis Editorial
+    </span>
+
+    <div class="w-16 h-px bg-amber-800"></div>
+
+  </div>
+
+</div>
+
+</section>
+
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#fff;
+}
+
+/* HERO */
+.uvo-hero{
+  padding:72px 0 88px;
+}
+
+/* CONTAINER */
+.uvo-container{
+  max-width:920px;
+  margin:auto;
+  padding:0 32px;
+}
+
+/* IMAGE WRAPPER */
+.uvo-image-wrapper{
+  width:100%;
+  overflow:hidden;
+}
+
+.uvo-image-wrapper img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+/* CATEGORY */
+.uvo-category{
+  display:inline-block;
+  margin-bottom:30px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#8b7355;
+}
+
+/* TITLE */
+.uvo-title{
+  max-width:860px;
+
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5vw,5rem);
+  font-weight:600;
+  line-height:1.04;
+  letter-spacing:-0.032em;
+  color:#111827;
+
+  text-wrap:balance;
+}
+
+/* DESCRIPTION */
+.uvo-description{
+  max-width:760px;
+  margin-top:34px;
+
+  font-family:'Inter',sans-serif;
+  font-size:1.08rem;
+  line-height:1.95;
+  color:#4b5563;
+}
+
+/* META */
+.uvo-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-top:52px;
+  padding-top:24px;
+  border-top:1px solid #e5e7eb;
+}
+
+/* AUTHOR */
+.uvo-author{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* AVATAR */
+.uvo-avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* LABEL */
+.uvo-label{
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+
+  color:#111827;
+  margin-bottom:2px;
+}
+
+/* AUTHOR NAME */
+.uvo-author-name{
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:600;
+  color:#111827;
+}
+
+/* LINK AUTHOR */
+.uvo-author-link{
+  color:#111827;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:.2s ease;
+}
+
+.uvo-author-link:hover{
+  border-bottom:1px solid #111827;
+}
+
+/* DATE */
+.uvo-date{
+  margin-top:4px;
+
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.02em;
+
+  color:#4b5563;
+}
+
+/* SOCIALS */
+.uvo-socials{
+  display:flex;
+  gap:8px;
+}
+
+.uvo-socials a{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid #e5e7eb;
+  background:#fff;
+
+  color:#6b7280;
+  text-decoration:none;
+
+  transition:all .2s ease;
+}
+
+.uvo-socials a:hover{
+  transform:translateY(-2px);
+  background:#111827;
+  border-color:#111827;
+  color:#fff;
+}
+
+.uvo-socials i,
+.uvo-socials svg{
+  width:15px;
+  height:15px;
+  font-size:15px;
+  fill:currentColor;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .uvo-hero{
+    padding:42px 0 60px;
+  }
+
+  .uvo-container{
+    padding:0 20px;
+  }
+
+  .uvo-title{
+    font-size:2.18rem;
+    line-height:1.12;
+    letter-spacing:-0.012em;
+  }
+
+  .uvo-description{
+    margin-top:24px;
+    font-size:1rem;
+    line-height:1.82;
+  }
+
+  .uvo-meta{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    margin-top:38px;
+  }
+
+  .uvo-socials{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    max-width:100%;
+  }
+
+  .uvo-image-wrapper > div{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px;
+    padding-right:20px;
+    box-sizing:border-box;
+  }
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<!-- CONTENEDOR -->
+<main>
+<article class="max-w-5xl mx-auto px-6 md:px-8">
+  
+<!-- INTRODUCCIÓN -->
+<div class="text-stone-700 leading-relaxed mb-1 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+  <span style="float:left; font-size:50px; line-height:0.8; padding-right:8px; font-family: Georgia, serif; font-weight:600;">
+  P
+  </span>
+robablemente muchos hemos tenido el sueño de que, una vez nos hagamos ricos, compraremos yates, mansiones con piscina, viajaremos a todas partes del mundo y hasta encontraremos a la pareja perfecta mientras tengamos cantidades importantes de dinero.
+</p>
+
+<p>
+Sin embargo, la realidad puede estar muy alejada de esa fantasía. Y es precisamente ahí donde queremos profundizar: en lo que realmente ocurre cuando la riqueza, el éxito financiero o los logros que consideramos importantes dejan de ser un sueño y comienzan a formar parte de nuestra vida.
+</p>
+
+<p>
+Porque aquello que imaginamos cuando pensamos en ser ricos no siempre coincide con lo que realmente implica construir y conservar una vida con mayores posibilidades económicas. 
+</p>
+
+
+<!-- LA RIQUEZA TAMBIÉN SE DEFIENDE -->
+<div class="cm-wealth-editorial">
+
+  <div class="cm-wealth-editorial-top">
+    <span>01</span>
+    <span>LA RIQUEZA TAMBIÉN SE DEFIENDE</span>
+  </div>
+
+  <div class="cm-wealth-editorial-content">
+    <p>
+      Los ricos protegen su patrimonio;
+    </p>
+
+    <p class="cm-wealth-editorial-emphasis">
+      los pobres ni siquiera saben que deben protegerlo.
+    </p>
+  </div>
+
+</div>
+
+<style>
+.cm-wealth-editorial {
+  max-width: 850px;
+  margin: 90px auto;
+  padding: 0 0 45px;
+  border-bottom: 1px solid #cfcac1;
+}
+
+.cm-wealth-editorial-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 35px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #9a805c;
+}
+
+.cm-wealth-editorial-top span:first-child {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #292722;
+}
+
+.cm-wealth-editorial-content p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(32px, 4.5vw, 52px);
+  line-height: 1.08;
+  font-weight: 500;
+  color: #35322d;
+}
+
+.cm-wealth-editorial-emphasis {
+  margin-top: 8px !important;
+  color: #9a805c !important;
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .cm-wealth-editorial {
+    margin: 60px 20px;
+    padding-bottom: 35px;
+  }
+
+  .cm-wealth-editorial-content p {
+    font-size: 34px;
+  }
+}
+</style>
+
+
+<p>
+A medida que nuestro patrimonio crece, también aparecen nuevos riesgos: una mala decisión financiera, un problema legal o incluso un acontecimiento inesperado pueden poner en peligro años de esfuerzo. 
+</p>
+
+<p>
+Y, si no aprendemos a analizar esa realidad con precaución, podríamos terminar perdiendo aquello que tanto tiempo nos costó construir.
+</p>
+
+<p>
+<strong>Y con riqueza o sin ella</strong>
+</p>
+
+<p>
+¿Qué nos queda si en algún momento perdemos nuestros ahorros, nuestras inversiones, nuestra casa, nuestro vehículo o incluso a una persona en la que confiábamos y que terminó traicionándonos, por no saber cómo proteger aquello que hemos construido? En un mundo de depredadores, los bienes, el dinero y los negocios pueden ser arrebatados por múltiples factores.
+</p>
+
+</div>
+
+
+
+<!-- EL ENEMIGO INTERIOR -->
+<div class="cm-editorial-label">
+
+  <span>EL ENEMIGO INTERIOR</span>
+
+  <p>
+    Autosabotaje
+  </p>
+
+</div>
+
+<style>
+.cm-editorial-label {
+  max-width: 780px;
+  margin: 80px auto;
+  padding: 26px 0;
+  border-top: 1px solid #292722;
+  border-bottom: 1px solid #cfcac1;
+}
+
+.cm-editorial-label span {
+  display: block;
+  margin-bottom: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  color: #9a805c;
+}
+
+.cm-editorial-label p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: #35322d;
+}
+</style>
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+Cómo evitar perder el dinero que tanto te costó ganar
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-10 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Desde la perspectiva de Código Millonario, el autosabotaje es un comportamiento que merece especial atención cuando hablamos de construir y conservar un patrimonio. Por eso, lo tomaremos como nuestro primer punto de partida para abordar este tema.
+</p>
+
+<p>
+Pocas cosas pueden resultar tan perjudiciales para la construcción y protección de un patrimonio como tomar decisiones financieras impulsadas por la necesidad de aparentar, alimentar el ego o demostrar una situación económica que todavía no se posee.
+</p>
+
+
+<!-- PRINCIPIO DE APARIENCIA -->
+<div class="cm-editorial-quote">
+
+  <span>Anónimo</span>
+
+  <p>
+    «Si no puedes hacerte rico, por lo menos intenta parecer rico.»
+  </p>
+
+</div>
+
+<style>
+.cm-editorial-quote {
+  max-width: 780px;
+  margin: 80px auto;
+  padding: 34px 0 34px 32px;
+  border-left: 3px solid #292722;
+}
+
+.cm-editorial-quote span {
+  display: block;
+  margin-bottom: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #9a805c;
+}
+
+.cm-editorial-quote p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: #35322d;
+}
+</style>
+
+
+<p>
+Gastar más de lo que se puede sostener para impresionar a una posible pareja, encajar en determinados círculos sociales, mantener ciertas amistades o cerrar negocios puede convertirse, con el tiempo, en una de las formas más silenciosas de destruir aquello que tanto esfuerzo costó construir.
+</p>
+
+<p>
+El autosabotaje financiero puede manifestarse en aquellos comportamientos que ponen en riesgo nuestro patrimonio con el propósito de proyectar una vida que impresione a los demás. 
+</p>
+
+<p>
+En ocasiones, podemos terminar tomando decisiones económicas que no responden a nuestras verdaderas posibilidades o a nuestros propios gustos, sino al deseo de agradar a los demás, encajar o recibir reconocimiento al intentar proyectar una posición social que no corresponde con nuestra realidad, comprometiendo recursos que podrían estar destinados a construir una mayor estabilidad y seguridad para el futuro.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- EL ENEMIGO INTERIOR -->
+<div class="cm-editorial-label">
+
+  <span>EL ENEMIGO EXTERIOR</span>
+
+  <p>
+   Vulnerabilidad
+  </p>
+
+</div>
+
+
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Cómo proteger tu dinero y bienes de riesgos legales y financieros
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+Poco se habla de los riesgos que pueden surgir a partir de errores, omisiones o interpretaciones equivocadas de la información financiera por parte de entidades, organismos o incluso del propio Estado. 
+</p>
+
+<p>
+Una declaración de renta mal elaborada, un documento presentado de forma incorrecta o una discrepancia que no se detecta a tiempo pueden convertirse en situaciones que requieren explicaciones, trámites y, en algunos casos, procesos que pueden prolongarse durante años.
+</p>
+
+<p>
+Por esta razón, algunas personas con patrimonios importantes procuran mantener un perfil financiero discreto y evitar una exposición innecesaria. 
+</p>
+
+<p>
+No es necesario ocultar todo lo que poseen, sino comprender que llamar demasiado la atención puede generar preguntas, investigaciones o situaciones que, aunque finalmente puedan resolverse, implican tiempo, dinero y desgaste. 
+</p>
+
+<p>
+Incluso cuando una persona tiene la posibilidad de defenderse y demostrar que ha actuado correctamente, atravesar un proceso de este tipo puede representar un costo considerable.
+</p>
+
+
+<!-- DISCRECIÓN FINANCIERA -->
+<div class="cm-editorial-label">
+
+  <span>DISCRECIÓN FINANCIERA</span>
+
+  <p>
+    En el juego financiero, mantener un perfil bajo también puede ser una forma de proteger lo que has construido.
+  </p>
+
+</div>
+
+<style>
+.cm-editorial-label {
+  max-width: 780px;
+  margin: 80px auto;
+  padding: 28px 0;
+  border-top: 1px solid #292722;
+  border-bottom: 1px solid #cfcac1;
+}
+
+.cm-editorial-label span {
+  display: block;
+  margin-bottom: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  color: #9a805c;
+}
+
+.cm-editorial-label p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: #35322d;
+}
+</style>
+
+<p>
+También existen situaciones en las que las diferencias de poder, influencia o recursos pueden colocar a una persona en una posición de desventaja. 
+</p>
+
+<p>
+Un conflicto con alguien que cuenta con mayores medios económicos, conexiones o capacidad de influencia puede resultar más difícil de afrontar, incluso cuando se tiene la razón. 
+</p>
+
+<p>
+Esto no significa que estas situaciones ocurran siempre ni que quienes tienen poder actúen de forma indebida, pero sí demuestra que, en determinadas circunstancias, la capacidad de defender nuestros intereses no depende únicamente de tener la razón, sino también de contar con los recursos necesarios para hacerlo.
+</p>
+
+
+
+<!-- PRINCIPIO DE DISCRECIÓN -->
+<div class="cm-editorial-quote">
+
+  <span>PRINCIPIO DE DISCRECIÓN</span>
+
+  <p>
+    «A veces, el oro que brilla hay que cubrirlo con una sábana.»
+  </p>
+
+</div>
+
+
+
+<p>
+Durante mucho tiempo, la riqueza se ha presentado ante la sociedad como algo que debe mostrarse: un símbolo de éxito, estatus o recompensa.
+</p>
+
+<p>
+Sin embargo, como hemos visto, una exposición excesiva puede representar una desventaja o incluso aumentar la vulnerabilidad de una persona y su patrimonio.
+</p>
+
+<p>
+La visibilidad también puede atraer conflictos, acusaciones o procesos que, independientemente de su fundamento, pueden exigir tiempo, recursos y capacidad para ser afrontados. 
+</p>
+
+<p>
+Mantener un perfil bajo no significa agachar la cabeza, renunciar a nuestros derechos o actuar desde el miedo. Significa comprender que algunos riesgos pueden ser potencialmente reales y que no siempre es necesario exponerse para demostrar fortaleza.
+</p>
+
+<p>
+Una persona puede tener carácter, defenderse y hacer valer sus derechos cuando sea necesario, y al mismo tiempo elegir cuidadosamente qué muestra, cuánto comparte y ante quién lo hace. 
+</p>
+
+<p>
+Son factores que quizá no siempre podamos controlar, pero que quienes desean proteger lo que han construido deberían tener en cuenta desde ahora.
+</p>
+
+
+</div>
+
+
+
+
+
+
+<!-- EL ENEMIGO INTERIOR -->
+<div class="cm-editorial-label">
+
+  <span>PAREJAS Y PERSONAS</span>
+
+  <p>
+   Confianza
+  </p>
+
+</div>
+
+
+
+<!-- BLOQUE -->
+<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-10 leading-tight tracking-tight">
+Por qué tu dinero y patrimonio pueden estar en riesgo cuando confías en las personas
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+Normalmente solemos asumir que no es una buena idea desconfiar de los demás, pero cuando aparecen intereses enfrentados, acuerdos que dejan de ser satisfactorios o las personas cambian la forma en que se relacionan con nosotros, pueden surgir situaciones en las que nuestros intereses económicos también se vean comprometidos.
+</p>
+
+<p>
+En determinadas circunstancias, algunas personas pueden intentar beneficiarse de quienes consideran que tienen recursos o posibilidades económicas, especialmente cuando una relación comienza a deteriorarse.
+</p>
+
+<p>
+Cabe destacar que esto no ocurre en todos los casos ni significa que todas las personas que construyen un patrimonio tengan que enfrentarse constantemente a este tipo de situaciones.
+</p>
+
+<p>
+Con el tiempo, muchas personas aprenden a reconocer determinadas señales y a establecer límites antes de que un conflicto pueda escalar.
+</p>
+
+<p>
+Sin embargo, para quienes están comenzando a construir su patrimonio, comprender que la confianza y la prudencia deben avanzar juntas puede ser un aspecto importante a tener en cuenta.
+</p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-28 leading-tight tracking-tight">
+Qué pasa con el dinero y los bienes cuando una pareja se separa
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Este es uno de los riesgos que más atención merece cuando hablamos de construir y proteger un patrimonio. Antes, durante y después de una separación pueden surgir situaciones legales y económicas capaces de afectar los bienes y recursos de ambas partes. 
+</p>
+
+<p>
+Una relación que termina en conflicto puede dar lugar a disputas sobre propiedades, dinero, negocios u otros activos, especialmente cuando no se han establecido con claridad, desde el principio y dentro del marco legal correspondiente, los derechos y responsabilidades de cada persona.
+</p>
+
+<p>
+También pueden existir situaciones relacionadas con obligaciones financieras adquiridas durante la relación. Por ejemplo, una persona puede asumir un préstamo a su nombre mientras su pareja contribuye con los pagos durante un determinado periodo. 
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-28 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Si la relación termina, las circunstancias pueden cambiar y la responsabilidad formal frente a la entidad financiera podría continuar recayendo sobre quien figura como titular de la obligación, independientemente de quién haya realizado los pagos anteriormente.
+</p>
+
+<p>
+Por eso, cuando existe un patrimonio que proteger, las decisiones relacionadas con una pareja no deberían basarse únicamente en la confianza o en las circunstancias del momento. 
+</p>
+
+<p>
+Comprender las implicaciones legales y económicas de una relación, y buscar asesoramiento profesional cuando sea necesario, puede ayudar a evitar que una situación personal termine convirtiéndose también en un problema patrimonial.
+</p>
+
+<p>
+Y separar el afecto y las emociones del momento de la realidad que podría llegar a vivirse, porque aquello que hoy parece una decisión tomada desde la felicidad puede terminar convirtiéndose, con el tiempo, en una pérdida o en una reducción considerable del patrimonio.
+</p>
+
+</div>
+
+
+
+<!-- PRINCIPIO DE DISCRECIÓN -->
+<div class="cm-editorial-quote">
+
+  <span>PRINCIPIO DE PÉRDIDA</span>
+
+  <p>
+ «Quien no tiene nada que perder puede arriesgarse cuando tiene algo que ganar.»
+  </p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Riesgos financieros al confiar en familiares, socios y colaboradores
+</h3>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+No todas las situaciones de riesgo patrimonial ocurren dentro de una relación de pareja. También pueden surgir cuando damos a otras personas acceso a nuestros bienes, información financiera o decisiones importantes. 
+</p>
+
+<p>
+Socios, colaboradores, familiares o personas en quienes depositamos nuestra confianza pueden llegar a ocupar posiciones desde las que una mala decisión, un conflicto o incluso una traición podrían tener consecuencias económicas. 
+</p>
+
+<p>
+Del mismo modo, ceder determinados derechos o asumir compromisos sin comprender completamente sus implicaciones puede generar problemas difíciles de revertir. 
+</p>
+
+<p>
+Por eso, cuando existe un patrimonio que proteger, la confianza puede ser importante, pero nunca debería sustituir la prudencia ni el conocimiento de aquello que estamos permitiendo o compartiendo.
+</p>
+
+<p>
+El riesgo no se percibe igual cuando las consecuencias no recaen sobre quien no tiene un patrimonio que proteger.
+</p>
+
+</div>
+
+
+
+
+<!-- DISCRECIÓN FINANCIERA -->
+<div class="cm-editorial-label">
+
+  <span>Código Millonario</span>
+
+  <p>
+Construir patrimonio te da posibilidades. Protegerlo te permite conservarlas.
+  </p>
+
+</div>
+
+
+
+
+<!-- BLOQUE -->
+<h3 class="text-2xl md:text-3xl font-medium text-stone-700 mb-10 mt-20 leading-tight tracking-tight">Riesgos financieros de perder el empleo o depender de un solo ingreso</h3>
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Tampoco deberíamos pasar por alto la dependencia económica de determinadas personas o relaciones laborales y comerciales. 
+</p>
+
+<p>
+Un empleo del que dependemos para pagar nuestras obligaciones puede terminar de forma inesperada, incluso cuando creemos que nuestra posición dentro de una empresa es estable. 
+</p>
+
+<p>
+Si, además, existen deudas o gastos importantes, una pérdida repentina de ingresos podría obligarnos a recurrir a bienes o ahorros que nos tomó años construir. Algo similar puede ocurrir en un negocio cuando dependemos demasiado de un solo proveedor, cliente o colaborador y, por alguna circunstancia, esa relación se interrumpe. 
+</p>
+
+<p>
+No siempre podemos evitar que estas situaciones ocurran, pero sí podemos reconocer nuestra dependencia y prepararnos para que una sola decisión ajena no termine comprometiendo todo aquello que hemos construido.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- APERTURA EDITORIAL -->
+<section style="max-width: 900px; margin: 140px auto 100px;">
+
+  <!-- ETIQUETA EDITORIAL -->
+  <div style="
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    color: #9a805c;
+  ">
+    <span>PROTECCIÓN PATRIMONIAL</span>
+    <span style="flex:1; height:1px; background:#cfcac1;"></span>
+  </div>
+
+
+  <!-- TITULAR -->
+  <h2 id="titulo2" style="
+    margin: 0;
+    max-width: 820px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    color: #35322d;
+  ">
+    Formas en las que podrías perder tu patrimonio
+  </h2>
+
+
+  <!-- BAJADA EDITORIAL -->
+  <p style="
+    max-width: 680px;
+    margin: 28px 0 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #6f6a61;
+  ">
+    Construir riqueza puede tomar años, pero determinadas decisiones, circunstancias o personas pueden poner en riesgo aquello que tanto tiempo costó conseguir.
+  </p>
+
+<!-- IMAGEN -->
+<figure style="
+  margin: 0 auto;
+  width: 100%;
+  max-width: 760px;
+">
+
+  <img 
+    src="../../assets/png/proteccion-del-patrimonio-y-la-riqueza.webp"
+    alt="Protección del patrimonio y la riqueza frente a riesgos financieros"
+    style="
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+    "
+  >
+
+  <figcaption style="
+    margin-top: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #8a857c;
+  ">
+    Proteger lo construido también forma parte del proceso de construir riqueza.
+  </figcaption>
+
+</figure>
+
+</section>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+Existen, además, muchos otros riesgos que pueden aparecer en cualquier momento: accidentes, enfermedades, situaciones familiares inesperadas, crisis económicas, desastres, pérdidas repentinas o acontecimientos capaces de cambiar nuestra situación de un día para otro.
+</p>
+
+<p>
+No existe una lista definitiva ni una fórmula que permita anticipar todo lo que puede suceder, pero sí está en nuestras manos analizar los riesgos que rodean nuestras decisiones y comprender las posibles consecuencias de aquello que estamos construyendo. 
+</p>
+
+<p>
+Formar un patrimonio puede tomar años de esfuerzo, mientras que perder una parte importante de él puede ocurrir en cuestión de horas, días o meses.
+</p>
+
+<p>
+Ese es un riesgo del que muchas personas no se previenen cuando comienzan a construir riqueza. Por eso, también es necesario observar nuestro entorno, evaluar los riesgos asociados a nuestros proyectos y pensar en las implicaciones que determinadas decisiones podrían tener sobre nuestra vida. 
+</p>
+
+<p>
+No se trata de buscar una vida sin riesgos ni de permanecer en la comodidad, sino de avanzar con los ojos abiertos, entendiendo que construir patrimonio también significa prepararse para aquello que podría ponerlo en peligro.
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- PRINCIPIO DE DISCRECIÓN -->
+<div class="cm-editorial-quote">
+
+  <span>PRINCIPIO DE PROTECCIÓN</span>
+
+  <p>
+«antes de disfrutar aquello que hemos construido, es necesario pensar en cómo protegerlo»
+  </p>
+
+</div>
+
+
+
+
+<!-- BLOQUE: PROTECCIÓN PATRIMONIAL -->
+<h2 id="proteccion-patrimonial" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+7 pasos para proteger tu dinero, patrimonio y bienes frente a riesgos
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Después de comprender un poco el análisis de los peligros que pueden existir para quienes desean construir un patrimonio, podemos entender que no se trata únicamente de tener dinero, acumular bienes o viajar a donde se nos antoje. 
+</p>
+
+<p>
+Es probable que también nos quede claro que, antes de disfrutar aquello que hemos construido, es necesario pensar en cómo protegerlo para poder disfrutarlo con mayor tranquilidad.
+</p>
+
+<p>
+Por eso, a continuación vamos a extraer de este análisis algunos aspectos que deberíamos tener en cuenta para proteger aquello que tanto esfuerzo podría costarnos conseguir.
+</p>
+
+</div>
+
+
+
+
+<div class="cm-protection-step">
+
+  <span class="cm-protection-step-number">01</span>
+
+  <h3>
+    Busca asesoramiento cuando el riesgo sea importante
+  </h3>
+
+</div>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Cuando una decisión pueda comprometer seriamente nuestro patrimonio, consultar con un abogado, contador u otro profesional especializado puede ser una de las decisiones más prudentes. 
+</p>
+
+<p>
+Una situación particular puede tener implicaciones legales, fiscales o financieras que no siempre somos capaces de identificar por nuestra cuenta.
+</p>
+
+<p>
+Y, de hecho, para muchas personas con patrimonios importantes, recurrir a profesionales especializados puede ser una de las primeras decisiones cuando consideran que necesitan proteger lo que han construido.
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="cm-protection-step">
+
+  <span class="cm-protection-step-number">02</span>
+
+  <h3>
+      Comprende lo que estás firmando y lo que estás cediendo
+  </h3>
+
+</div>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Antes de firmar un contrato, ceder derechos, asumir una deuda o permitir que otra persona intervenga en decisiones relacionadas con nuestros bienes, es importante comprender exactamente qué estamos aceptando y cuáles podrían ser sus consecuencias. 
+</p>
+
+<p>
+La confianza no debería reemplazar la comprensión de aquello que estamos autorizando.
+</p>
+
+<p>
+Recordemos que una relación puede parecer muy sólida mientras todo marcha bien, pero cuando aparecen los conflictos y las inconformidades, las emociones pueden desaparecer y comenzar la carrera por quedarse con aquello que antes parecía ser de ambos.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<div class="cm-protection-step">
+
+  <span class="cm-protection-step-number">03</span>
+
+  <h3>
+      Protege tus documentos e información financiera
+  </h3>
+
+</div>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Los documentos relacionados con cuentas, propiedades, contratos, negocios y otros activos contienen información que puede ser sensible. 
+</p>
+
+<p>
+Mantenerlos organizados y evitar que queden expuestos innecesariamente puede reducir ciertos riesgos y facilitar la defensa de nuestros intereses cuando sea necesario.
+</p>
+
+<p>
+Cuando la palabra deja de tener valor, solo queda aquello que podemos demostrar. Por eso, conservar documentos claros y mantener en orden la información que respalda nuestros procesos puede convertirse en una de las mejores formas de proteger nuestro patrimonio.
+</p>
+
+</div>
+
+
+
+
+<div class="cm-protection-step">
+
+  <span class="cm-protection-step-number">04</span>
+
+  <h3>
+      Controla quién tiene acceso a tus bienes e información
+  </h3>
+
+</div>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+No todas las personas necesitan conocer nuestra situación económica ni tener acceso a nuestros documentos, cuentas o decisiones patrimoniales. 
+</p>
+
+<p>
+Antes de compartir información o permitir que alguien intervenga en nuestros asuntos, conviene comprender qué nivel de acceso estamos concediendo y qué podría ocurrir si esa relación cambia en el futuro.
+</p>
+
+<p>
+Incluso dentro de una relación sentimental, la confianza no significa necesariamente compartirlo todo. Dependiendo de las circunstancias, puede ser prudente mantener cierto nivel de privacidad sobre nuestras cuentas bancarias, movimientos financieros y trámites personales. 
+</p>
+
+<p>
+Y cuando una relación comienza a involucrar bienes, negocios o responsabilidades económicas compartidas, dejar claras las condiciones desde el principio puede evitar conflictos en el futuro. 
+</p>
+
+<p>
+Establecer por escrito, mediante los mecanismos legales correspondientes, qué pertenece a cada persona y qué obligaciones asume cada una puede ser una forma de proteger a ambas partes si algún día las circunstancias cambian.
+</p>
+
+</div>
+
+
+
+
+
+<div class="cm-protection-step">
+
+  <span class="cm-protection-step-number">05</span>
+
+  <h3>
+      Aprende a reconocer señales de riesgo
+  </h3>
+
+</div>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+También es importante prestar atención a determinados patrones de comportamiento. Cambios repentinos en la forma en que una persona se relaciona con nosotros, presiones para tomar decisiones apresuradas, interés excesivo por nuestros recursos o intentos de obtener acceso a información que no necesita pueden ser señales que merecen una mayor atención. 
+</p>
+
+<p>
+Reconocerlas a tiempo no significa acusar a nadie, sino permitirnos actuar con mayor prudencia antes de que una situación pueda complicarse.
+</p>
+
+</div>
+
+
+
+
+
+<div class="cm-protection-step">
+
+  <span class="cm-protection-step-number">06</span>
+
+  <h3>
+      Mantén discreción sobre tu situación económica
+  </h3>
+
+</div>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+No todo lo que construimos necesita ser mostrado. Mantener cierta discreción sobre nuestros ingresos, bienes, inversiones o proyectos puede ayudarnos a reducir una exposición innecesaria. 
+</p>
+
+<p>
+La prudencia también consiste en comprender que, en determinadas circunstancias, proteger nuestra privacidad financiera puede ser tan importante como proteger físicamente aquello que poseemos.
+</p>
+
+<p>
+Llamar la atención puede parecer algo inofensivo, pero en ocasiones esa información puede llegar a personas que no tienen buenas intenciones. 
+</p>
+
+<p>
+Por eso, cuando se trata de nuestra situación económica y de aquello que hemos construido, quizá sea mejor vivir con cierta tranquilidad que descubrir demasiado tarde que compartimos más de nuestra vida privada de lo que realmente queríamos.
+</p>
+
+</div>
+
+
+
+
+<div class="cm-protection-step">
+
+  <span class="cm-protection-step-number">07</span>
+
+  <h3>
+      Prepárate para aquello que no puedes controlar
+  </h3>
+
+</div>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Existen acontecimientos que simplemente no dependen de nosotros. Una enfermedad, un accidente, una crisis económica, la pérdida de un empleo o cualquier otra situación inesperada puede alterar nuestra capacidad para mantener el patrimonio que hemos construido. 
+</p>
+
+<p>
+Por eso, una parte de la protección patrimonial consiste en prepararnos para escenarios que quizá nunca ocurran, pero que podrían tener consecuencias importantes si llegan a presentarse.
+</p>
+
+<p>
+Al final, proteger un patrimonio no significa vivir pensando en todo lo que podría salir mal. Significa entender que aquello que nos tomó años construir merece también una estrategia para conservarlo. 
+</p>
+
+<p>
+La preparación no elimina todos los riesgos, pero puede ayudarnos a tomar mejores decisiones cuando las circunstancias cambian.
+</p>
+
+</div>
+
+
+
+
+
+<!-- CSS H3 -->
+<style>
+.cm-protection-step {
+  max-width: 820px;
+  margin: 90px auto 28px;
+  padding-top: 18px;
+  border-top: 1px solid #cfcac1;
+}
+
+.cm-protection-step-number {
+  display: block;
+  margin-bottom: 12px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #9a805c;
+}
+
+.cm-protection-step h3 {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #35322d;
+}
+</style>
+
+
+
+
+<!-- CONCLUSIÓN -->
+<h2 id="conclusion" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+¿Por qué es importante conservar la riqueza?
+</h2>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Este análisis nos brinda una perspectiva más amplia sobre todo lo que puede implicar tener grandes sumas de dinero, construir un patrimonio o alcanzar una posición de riqueza. 
+</p>
+
+<p>
+Aunque el tema puede ser complejo y podría abordarse desde muchas perspectivas, en Código Millonario hemos intentado llevarlo a un lenguaje más cercano y práctico, con el propósito de que podamos comprender mejor los riesgos que también acompañan aquello que tanto esfuerzo puede costarnos conseguir.
+</p>
+
+<p>
+Porque construir patrimonio no consiste únicamente en ganar dinero, acumular bienes o alcanzar una determinada posición económica. 
+</p>
+
+<p>
+También implica preguntarnos cuánto de lo conseguido podemos conservar y durante cuánto tiempo somos capaces de protegerlo frente a nuestras propias decisiones, el exceso, la necesidad de aparentar, las circunstancias que escapan de nuestro control o las personas que pueden actuar en contra de nuestros intereses.
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-28 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+
+<p>
+Crear un patrimonio sólido puede tomar muchos años. Perder una parte importante de él, en cambio, puede suceder en mucho menos tiempo. 
+</p>
+
+<p>
+Una mala decisión, una relación que termina, una confianza mal depositada, un problema legal, una crisis inesperada o simplemente una situación que nunca vimos venir pueden cambiar nuestra realidad económica.
+</p>
+
+<p>
+Por eso, quizá una de las partes más difíciles de construir riqueza no sea llegar a tener algo, sino aprender a conservarlo cuando finalmente lo tenemos.
+</p>
+
+<p>
+La riqueza no debería medirse únicamente por aquello que somos capaces de conseguir, sino también por nuestra capacidad para protegerlo, administrarlo y mantenerlo a lo largo del tiempo. 
+</p>
+
+<p>
+Y es precisamente ahí donde comienza una parte de la riqueza de la que pocas veces se habla: la que no se ve, la que no necesita demostrarse y la que permanece cuando las circunstancias cambian.
+</p>
+
+</div>
+
+
+
+
+
+<!-- NOTA EDITORIAL FINAL -->
+<div style="max-width:820px; margin:100px auto 80px; padding:35px 0; border-top:1px solid #292722; border-bottom:1px solid #cfcac1;">
+
+  <span style="display:block; margin-bottom:20px; font-family:'Open Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.24em; color:#9a805c;">
+    UNA ÚLTIMA CONSIDERACIÓN
+  </span>
+
+  <p style="margin:0 0 18px; font-family:'Open Sans',sans-serif; font-size:16px; line-height:1.75; color:#35322d;">
+    Aunque este análisis parte de una mirada realista sobre los riesgos que pueden rodear la construcción y protección de un patrimonio, existen muchos otros que no se mencionan aquí.
+  </p>
+
+  <p style="margin:0 0 18px; font-family:'Open Sans',sans-serif; font-size:16px; line-height:1.75; color:#35322d;">
+    No obstante, ninguna reflexión general puede sustituir el conocimiento de un profesional frente a una situación particular.
+  </p>
+
+  <p style="margin:0 0 18px; font-family:'Open Sans',sans-serif; font-size:16px; line-height:1.75; color:#35322d;">
+    Este contenido debe entenderse como un análisis y no como una verdad absoluta. Cada persona vive circunstancias diferentes y las condiciones que rodean nuestras decisiones pueden cambiar con el tiempo.
+  </p>
+
+  <p style="margin:0; font-family:'Cormorant Garamond',serif; font-size:clamp(25px,3vw,34px); line-height:1.25; color:#292722;">
+    Cuando algo pueda comprometer seriamente tu patrimonio, busca asesoramiento profesional de forma inmediata.
+  </p>
+
+</div>
+
+
+
+
+
+<section class="mt-40 mb-24">
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+
+      <img
+        src="../../assets/img/fundador-codigo-millonario.webp"
+        alt="Autor del artículo"
+        class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover">
+
+      <div>
+
+        <p class="text-[10px] md:text-xs uppercase tracking-[0.20em] md:tracking-[0.25em] text-stone-500">
+          Opinión del autor
+        </p>
+
+        <p class="text-xs md:text-sm text-stone-700 font-medium">
+          Francisco Urrego
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BLOQUE -->
+<div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+ 
+<p>
+Creo que una de las cosas que menos se habla cuando se piensa en construir riqueza es lo difícil que puede resultar conservarla. Muchas personas se concentran tanto en conseguir dinero que olvidan preguntarse qué podría ocurrir después, cuando finalmente llegan a tener algo que proteger.
+</p>
+
+<p>
+No creo que debamos vivir desconfiando de todo el mundo ni imaginando constantemente lo peor. Pero tampoco considero prudente construir durante años sin detenernos a pensar qué decisiones, personas o circunstancias podrían poner en riesgo aquello que tanto esfuerzo nos costó conseguir.
+</p>
+
+<p>
+Para mí, construir patrimonio también significa aprender a reconocer esos riesgos. No para vivir con miedo, sino para entender que la riqueza no termina cuando conseguimos dinero o bienes. En cierto sentido, ahí comienza otra responsabilidad: decidir cuánto tiempo podemos conservar lo que hemos construido y qué estamos dispuestos a hacer para protegerlo.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+  <!-- Logos compartir -->
+<div class="share-here"></div>
+
+<script src="https://codigomillonario.blog/assets/share.js"></script>
+
+
+<p class="text-3xl font-semibold text-stone-900 mb-5 mt-20">Artículos relacionados:</p>
+
+<p class="interlink-heading text-left text-sm mb-4"
+   style="font-family: 'Open Sans', sans-serif;">
+  ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
+</p>
+
+
+  </article>
+</main>
+
+
+
+
+
+
+
+
+
+<!-- ================= NUEVA TIPOGRAFIA ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- ================= INTERLINK FUNCIONAL ================= -->
+<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
+    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
+    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
+    <a id="viewAllBtn" href="../psicologia-del-dinero/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
+      Ver todos
+    </a>
+  </div>
+
+  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style="font-family: 'Montserrat', sans-serif;">
+    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  </div>
+</div>
+
+<!-- ================= NUEVO DISEÑO VISUAL ================= -->
+<section class="main-layout">
+  <aside class="sidebar">
+    <div id="interlinkGrid"></div>
+  </aside>
+</section>
+
+<!-- ================= ESTILOS ================= -->
+<style>
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 700px;
+}
+
+.news-item {
+  display: flex;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+}
+
+.news-thumb {
+  width: 220px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= TITULO ================= */
+.news-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+  letter-spacing: -0.2px;
+}
+
+/* METADATA */
+.news-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+/* TEXTO SECUNDARIO */
+.news-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.news-text {
+  flex: 1;
+}
+
+.interlink-container {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.select-pages, .goto-page {
+  border: 1px solid #c0c0c0;
+  height: 42px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.interlink-button {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* 👇 TITULO MÁS GRANDE EN MÓVIL */
+  .news-text h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const select = document.getElementById("articleSelect");
+const searchInput = document.getElementById("searchInput");
+const goBtn = document.getElementById("goBtn");
+const totalArticles = document.getElementById("totalArticles");
+const interlinkGrid = document.getElementById("interlinkGrid");
+
+const perPage = 6;
+let allArticles = [];
+
+function truncate(text, maxLength = 65){
+  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+}
+
+function shuffle(array){
+  return array.map(v => ({v, s: Math.random()}))
+              .sort((a,b)=>a.s-b.s)
+              .map(o=>o.v);
+}
+
+function renderSelect(list){
+  select.innerHTML = "";
+
+  if(list.length === 0){
+    const opt = document.createElement("option");
+    opt.textContent = "No se encontraron artículos";
+    opt.disabled = true;
+    select.appendChild(opt);
+    return;
+  }
+
+  list.slice(0, perPage).forEach(a=>{
+    const opt = document.createElement("option");
+    opt.value = a.url;
+    opt.textContent = truncate(a.title);
+    select.appendChild(opt);
+  });
+}
+
+function renderCards(list){
+  interlinkGrid.innerHTML = "";
+
+  list.slice(0, perPage).forEach(a=>{
+    interlinkGrid.innerHTML += `
+      <a href="${a.url}" class="news-item">
+        <div class="news-thumb">
+          <img src="${a.image}" alt="${a.title}">
+        </div>
+        <div class="news-text">
+          <h3>${a.title}</h3>
+          <div class="news-meta">${a.meta}</div>
+        </div>
+      </a>
+    `;
+  });
+}
+
+function renderAll(list){
+  totalArticles.textContent = list.length;
+  renderSelect(list);
+  renderCards(list);
+}
+
+goBtn.addEventListener("click", ()=>{
+  if(select.value) window.location.href = select.value;
+});
+
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+});
+
+fetch("../psicologia-del-dinero/index.html")
+.then(r => r.text())
+.then(html => {
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+
+  const articles = doc.querySelectorAll(".article");
+
+  allArticles = shuffle(Array.from(articles).map(article => {
+
+    const link = article.querySelector("a.article-link");
+    const title = article.querySelector("h2.article-title");
+    const img = article.querySelector("img");
+    const meta = article.querySelector(".badge-row span");
+
+    return {
+      title: title ? title.textContent.trim() : "Sin título",
+      url: link ? link.getAttribute("href") : "#",
+      image: img ? img.getAttribute("src") : "./assets/png/default.png",
+      meta: meta ? meta.textContent.trim() : ""
+    };
+
+  }).filter(a => a.title.length > 5));
+
+  renderAll(allArticles);
+
+})
+.catch(err => console.error("Interlink error:", err));
+</script>
+
+
+
+
+
+
+
+   
+  <!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-28"></section>
+
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
