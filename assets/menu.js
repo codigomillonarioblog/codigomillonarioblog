@@ -625,34 +625,40 @@
        INPUT
     ===================================================== */
 
-    .cm-secciones-input {
+.cm-secciones-input {
 
-      margin-top: 10px;
+  margin-top: 10px;
 
-      display: flex;
+  display: flex;
 
-      opacity: 0;
+  opacity: 0;
 
-      transform: translateY(-8px);
+  height: 0;
 
-      pointer-events: none;
+  overflow: hidden;
 
-      transition:
-        opacity .25s ease,
-        transform .25s ease;
+  transform: translateY(-8px);
 
-    }
+  pointer-events: none;
 
+  transition:
+    opacity .25s ease,
+    transform .25s ease,
+    height .25s ease;
 
-    .cm-secciones-input.cm-active {
+}
 
-      opacity: 1;
+.cm-secciones-input.cm-active {
 
-      transform: translateY(0);
+  opacity: 1;
 
-      pointer-events: auto;
+  height: 40px;
 
-    }
+  transform: translateY(0);
+
+  pointer-events: auto;
+
+}
 
 
     .cm-secciones-email {
