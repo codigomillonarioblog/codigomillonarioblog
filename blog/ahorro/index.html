@@ -1846,80 +1846,194 @@ closeMobileMenu.addEventListener('click', () => {
 
 
 
-
 <div class="cm-brand-separator">
-  <span class="cm-brand-text">
 
-<span class="cm-brand-box">
-  Tendencias
-</span>
+  <div class="cm-brand-content">
 
-<br>
+    <div class="cm-brand-label">
+      TENDENCIAS
+    </div>
 
-<span class="cm-brand-sub">
-  Análisis, ahorro e inversión
-</span>
+    <h2 class="cm-brand-title">
+      Lo que está moviendo el dinero
+    </h2>
 
-  </span>
+    <p class="cm-brand-sub">
+      Análisis, ahorro e inversión
+    </p>
+
+  </div>
+
 </div>
+
 
 <style>
 
-/* ================= CONTENEDOR ================= */
+/* =========================================================
+   BLOQUE EDITORIAL — TENDENCIAS
+========================================================= */
 
-.cm-brand-separator{
-  width:100%;
-  padding:70px 20px 20px; /* 🔥 menos padding abajo para acercar la línea */
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  background:#fff;
+.cm-brand-separator {
+
+  width: 100%;
+
+  padding:
+    80px
+    20px
+    55px;
+
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
 }
 
-/* ================= TEXTO BASE ================= */
 
-.cm-brand-text{
-  font-family:"Inter", sans-serif;
-  font-size:13px;
-  letter-spacing:2.5px;
-  text-transform:uppercase;
-  color:#666;
-  text-align:center;
-  line-height:1.6;
+/* =========================================================
+   CONTENIDO
+========================================================= */
+
+.cm-brand-content {
+
+  width: 100%;
+  max-width: 900px;
+
+  text-align: center;
+
 }
 
-/* ================= BLOQUE NEGRO (MARCA PRINCIPAL) ================= */
 
-.cm-brand-box{
-  display:inline-block;
-  background:#111;
-  color:#fff;
-  padding:8px 14px;
-  font-weight:700;
-  letter-spacing:2px;
+/* =========================================================
+   IDENTIFICADOR
+========================================================= */
+
+.cm-brand-label {
+
+  margin-bottom: 14px;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+
+  color: #999;
+
 }
 
-/* ================= SUBTEXTO ================= */
 
-.cm-brand-sub{
-  display:inline-block;
-  margin-top:10px;
-  color:#666;
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.cm-brand-title {
+
+  margin: 0;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+
+  color: #111;
+
 }
 
-/* ================= LÍNEA GRUESA CENTRADA (MÁS PEGADA) ================= */
 
-.cm-brand-separator::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  bottom:8px; /* 🔥 antes estaba en 0, ahora más cerca del texto */
+/* =========================================================
+   SUBTÍTULO
+========================================================= */
 
-  width:min(420px, 70%);
-  height:5px;
-  background:#111;
+.cm-brand-sub {
+
+  margin:
+    12px
+    0
+    0;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #777;
+
+}
+
+
+/* =========================================================
+   LÍNEA EDITORIAL
+========================================================= */
+
+.cm-brand-separator::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 20px;
+
+  transform:
+    translateX(-50%);
+
+  width:
+    min(90px, 20%);
+
+  height: 2px;
+
+  background: #111;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .cm-brand-separator {
+
+    padding:
+      60px
+      18px
+      50px;
+
+  }
+
+  .cm-brand-title {
+
+    font-size: 25px;
+
+  }
+
+  .cm-brand-sub {
+
+    font-size: 13px;
+
+  }
+
 }
 
 </style>
