@@ -591,6 +591,10 @@
 
     .cm-secciones-btn-suscriptor {
 
+    .cm-secciones-btn-suscriptor.cm-hidden {
+    visibility: hidden;
+    }
+
       width: 100%;
 
       padding: 11px 14px;
@@ -865,8 +869,7 @@
 
       event.stopPropagation();
 
-      toggleSuscriptor.style.display =
-        "none";
+      toggleSuscriptor.classList.add("cm-hidden");
 
       inputBox.classList.add(
         "cm-active"
@@ -891,7 +894,7 @@ document.addEventListener(
 
     inputBox.classList.remove("cm-active");
 
-    toggleSuscriptor.style.display = "block";
+    toggleSuscriptor.classList.remove("cm-hidden");
 
   }
 );
