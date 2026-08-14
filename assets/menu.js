@@ -173,7 +173,7 @@
               type="submit"
               class="cm-secciones-send">
 
-              →
+              Enviar
 
             </button>
 
@@ -879,5 +879,16 @@
 
     }
   );
+
+document.addEventListener(
+  "click",
+  function () {
+
+    inputBox.classList.remove("cm-active");
+
+    toggleSuscriptor.style.display = "block";
+
+  }
+);
 
 })();
