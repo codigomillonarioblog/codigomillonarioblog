@@ -849,57 +849,35 @@
     }
   );
 
-/* =========================================================
-   NEWSLETTER
-========================================================= */
 
-toggleSuscriptor.addEventListener(
-  "click",
-  function (event) {
+  /* =========================================================
+     NEWSLETTER
+  ========================================================= */
 
-    event.stopPropagation();
+  toggleSuscriptor.addEventListener(
+    "click",
+    function (event) {
 
-    toggleSuscriptor.style.display =
-      "none";
-
-    inputBox.classList.add(
-      "cm-active"
-    );
-
-  }
-);
-
-
-inputBox.addEventListener(
-  "click",
-  function (event) {
-
-    event.stopPropagation();
-
-  }
-);
-
-
-/* =========================================================
-   CERRAR NEWSLETTER AL HACER CLICK AFUERA
-========================================================= */
-
-document.addEventListener(
-  "click",
-  function (event) {
-
-    if (
-      inputBox.classList.contains("cm-active") &&
-      !inputBox.contains(event.target) &&
-      event.target !== toggleSuscriptor
-    ) {
-
-      inputBox.classList.remove("cm-active");
+      event.stopPropagation();
 
       toggleSuscriptor.style.display =
-        "block";
+        "none";
+
+      inputBox.classList.add(
+        "cm-active"
+      );
 
     }
+  );
 
-  }
-);
+
+  inputBox.addEventListener(
+    "click",
+    function (event) {
+
+      event.stopPropagation();
+
+    }
+  );
+
+})();
