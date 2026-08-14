@@ -633,7 +633,7 @@
 
   opacity: 0;
 
-  height: 0;
+  height: 40px;
 
   overflow: hidden;
 
@@ -643,8 +643,7 @@
 
   transition:
     opacity .25s ease,
-    transform .25s ease,
-    height .25s ease;
+    transform .25s ease;
 
 }
 
@@ -688,27 +687,27 @@
     }
 
 
-    .cm-secciones-send {
+.cm-secciones-send {
 
-      width: 45px;
+  width: 45px;
 
-      border: none;
+  border: none;
 
-      background: #e60000;
+  background: #e60000;
 
-      color: #fff;
+  color: #fff;
 
-      font-size: 18px;
+  font-size: 13px;
 
-      cursor: pointer;
+  cursor: pointer;
 
-      border-radius:
-        0
-        8px
-        8px
-        0;
+  border-radius:
+    0
+    8px
+    8px
+    0;
 
-    }
+}
 
 
     /* =====================================================
