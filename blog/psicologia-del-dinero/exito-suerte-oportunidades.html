@@ -745,7 +745,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           </p>
 
           <p class="uvo-date">
-            Escrito el 00 Mar 2026 / 00:00 h / 3 min lectura
+            Escrito el 14 Ago 2026 / 09:15 h / 5 min lectura
           </p>
 
         </div>
@@ -812,7 +812,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
   <img 
     src="../../assets/png/exito-suerte-oportunidades.webp"
-    alt=""
+    alt="Persona analizando si el éxito depende de la suerte o de reconocer las oportunidades cuando aparecen."
     class="w-80 mx-auto mt-5 relative top-6 sm:w-[40rem] md:w-[50rem] sm:top-4 object-contain z-10"
   >
 
@@ -1103,8 +1103,300 @@ Analicemos la mentalidad que hay detrás de una persona que logra aprovechar las
 
 
 
+<!-- TABLA DE CONTENIDOS -->
+<style>
 
-<div class="text-stone-700 leading-relaxed mb-4 mt-40 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+/* =========================
+   TOC CUADRADO MODERNO
+========================= */
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:140px;
+}
+
+/* SOLO esto para anclas */
+[id]{
+  scroll-margin-top:140px;
+}
+
+.cf-accordion{
+  margin-top:60px;
+  font-family:'Inter',sans-serif;
+}
+
+/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
+.cf-accordion-inner{
+  max-width:80rem;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+
+/* CUADRO */
+.cf-accordion-item{
+  width:260px;
+  min-height:70px;
+
+  margin:0;
+
+  border:1px solid red;
+
+  border-radius:6px;
+
+  background:#fff;
+
+  overflow:hidden;
+
+  transition:width .35s ease;
+}
+
+/* EXPANSIÓN */
+.cf-accordion-item.is-open{
+  width:680px;
+}
+
+/* HEADER */
+.cf-accordion-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 16px;
+
+  cursor:pointer;
+
+  font-size:17px;
+  font-weight:600;
+
+  color:#111827;
+  background:#fff;
+
+  border-bottom:none;
+}
+
+/* ICONO */
+.cf-menu-icon{
+  width:30px;
+  height:30px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  border:1px solid red;
+  border-radius:6px;
+
+  gap:4px;
+  box-sizing:border-box;
+}
+
+.cf-menu-icon span{
+  height:2px;
+  width:16px;
+  background:red;
+  border-radius:2px;
+}
+
+/* CONTENT */
+.cf-accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+}
+
+/* LISTA */
+.toc-container{
+  padding:8px 14px 14px 14px;
+}
+
+/* LISTA */
+.toc-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+/* ITEMS ULTRA COMPACTOS */
+.toc-list li{
+  padding:6px 0;
+  margin:0;
+  border:none;
+}
+
+/* LINKS */
+.toc-list a{
+  text-decoration:none;
+  color:#374151;
+
+  font-size:14px;
+  line-height:1.35;
+
+  display:block;
+
+  transition:all .2s ease;
+}
+
+/* HOVER AZUL */
+.toc-list a:hover{
+  color:blue;
+  transform:translateX(4px);
+}
+
+/* MOBILE */
+@media (max-width:480px){
+
+  .cf-accordion-item{
+    width:88%;
+  }
+
+  .cf-accordion-item.is-open{
+    width:100%;
+  }
+
+}
+
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+
+  <div class="cf-accordion-inner">
+
+    <div class="cf-accordion">
+
+      <div class="cf-accordion-item">
+
+        <!-- HEADER -->
+        <div class="cf-accordion-header">
+
+          Tabla de contenidos
+
+          <div class="cf-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="cf-accordion-content">
+
+          <div class="toc-container">
+
+            <ul class="toc-list">
+    <li><a href="#titulo1">1. Qué necesitas para tener éxito con el dinero</a></li>
+    <li><a href="#titulo2">2. ¿Por qué algunas personas consiguen éxito y hacen crecer su dinero?</a></li>
+    <li><a href="#titulo3">3. Cómo encontrar ideas de negocio que pueden generar dinero</a></li>
+    <li><a href="#titulo4">4. De que forma se puede tener éxito en los negocios y ganar dinero</a></li>
+    <li><a href="#titulo5">5. Cómo prepararse para tener éxito en los negocios</a></li>
+    <li><a href="#titulo6">6. Problemas cotidianos que pueden convertirse en negocios</a></li>
+    <li><a href="#titulo7">7. Oportunidades de negocio para ganar dinero</a></li>
+    <li><a href="#titulo8">8. Cómo reconocer oportunidades para mejorar tus finanzas y crear riqueza</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<script>
+
+/* =========================
+   ACORDEÓN (igual)
+========================= */
+
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+  header.addEventListener('click',()=>{
+
+    const item = header.closest('.cf-accordion-item');
+    const content = item.querySelector('.cf-accordion-content');
+
+    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+      if(other!==item){
+        other.querySelector('.cf-accordion-content').style.maxHeight=null;
+      }
+    });
+
+    item.classList.toggle('is-open');
+
+    if(content.style.maxHeight){
+      content.style.maxHeight=null;
+    }else{
+      content.style.maxHeight=content.scrollHeight+'px';
+    }
+
+  });
+});
+
+
+/* =========================
+   SCROLL HÍBRIDO (FIX MÓVIL + PC)
+========================= */
+
+const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+  link.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    const id = this.getAttribute('href').substring(1);
+    const target = document.getElementById(id);
+
+    if(!target) return;
+
+    const offset = 140;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    history.pushState(null, null, '#' + id);
+
+    if(isMobile){
+      /* 🔥 MÓVIL: usa scroll nativo (más estable) */
+      window.scrollTo({
+        top: top,
+        behavior: 'smooth'
+      });
+    } else {
+      /* 💻 PC: animación más controlada */
+      const start = window.pageYOffset;
+      const distance = top - start;
+      const duration = 650;
+
+      let startTime = null;
+
+      function animate(time){
+        if(!startTime) startTime = time;
+
+        const progress = Math.min((time - startTime) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+
+        window.scrollTo(0, start + distance * ease);
+
+        if(progress < 1){
+          requestAnimationFrame(animate);
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+  });
+});
+
+</script>
+
+  
+
+
+
+<div class="text-stone-700 leading-relaxed mb-4 mt-20 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Esta información no es entretenimiento, motivación ni mucho menos un listado de fórmulas mágicas para comenzar hoy mismo. Es, más bien, una forma de cuestionar aquello que nos ha funcionado y aquello que no, analizar nuestras propias decisiones y considerar nuevas perspectivas. 
@@ -1124,7 +1416,7 @@ Independientemente de cuál sea tu decisión, este análisis busca profundizar e
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo1" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 Qué necesitas para tener éxito con el dinero
 </h2>
 
@@ -1212,7 +1504,7 @@ Puede parecer absurdo, pero esta idea nos lleva a un punto de partida mucho más
 
 <!-- BLOQUE -->
 <h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
-¿Por qué algunas personas saben hacer dinero?
+¿Por qué algunas personas consiguen éxito y hacen crecer su dinero?
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
@@ -1656,7 +1948,7 @@ Otros simplemente no verán nada: una persona común, quizás dueño o jefe de a
 
 <!-- BLOQUE -->
 <h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
-Cómo encontrar ideas de negocio a partir de problemas cotidianos
+Cómo encontrar ideas de negocio que pueden generar dinero
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
@@ -1953,7 +2245,7 @@ Se preguntaron por qué ocurría, qué estaba limitando el proceso, qué podía 
 
 <!-- BLOQUE -->
 <h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
-Cómo alcanzar el éxito en los negocios
+De que forma se puede tener éxito en los negocios y ganar dinero
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 mt-10 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
@@ -1993,9 +2285,68 @@ Tal vez esa sea una de las primeras capacidades que necesitamos desarrollar ante
 
 
 
+<!-- FRASE EDITORIAL -->
+<div class="cm-opportunity-insight">
+
+  <span class="cm-opportunity-insight-label">VISIÓN · OPORTUNIDADES</span>
+
+  <div class="cm-opportunity-insight-line"></div>
+
+  <p>
+    Las oportunidades rara vez aparecen completas; primero se presentan como algo que pocos saben interpretar.
+  </p>
+
+</div>
+
+<style>
+.cm-opportunity-insight {
+  max-width: 820px;
+  margin: 85px auto;
+}
+
+.cm-opportunity-insight-label {
+  display: block;
+  margin-bottom: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #8e795a;
+}
+
+.cm-opportunity-insight-line {
+  width: 100%;
+  height: 1px;
+  background: #292722;
+  margin-bottom: 25px;
+}
+
+.cm-opportunity-insight p {
+  max-width: 700px;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: #35322d;
+}
+
+@media (max-width: 640px) {
+  .cm-opportunity-insight {
+    margin: 65px 20px;
+  }
+
+  .cm-opportunity-insight p {
+    font-size: 29px;
+  }
+}
+</style>
+
+
+
 
 <!-- BLOQUE -->
-<h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
 Cómo prepararse para tener éxito en los negocios
 </h2>
 
@@ -2023,8 +2374,12 @@ También puedes comenzar observando los negocios que ya existen a tu alrededor. 
 
 
 
+<!-- BLOQUE -->
+<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+Problemas cotidianos que pueden convertirse en negocios
+</h2>
 
-<div class="text-stone-700 leading-relaxed mb-4 mt-40 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
+<div class="text-stone-700 leading-relaxed mb-4 mt-10 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 Otra forma de desarrollar esta percepción consiste en prestar atención a las molestias y limitaciones que aparecen en la vida cotidiana. Algo que resulta incómodo, demasiado lento, costoso o complicado puede ser simplemente una molestia, pero también puede revelar una necesidad que todavía no ha sido resuelta de la mejor manera.
@@ -2049,9 +2404,98 @@ La preparación, entonces, no consiste en esperar que aparezca una oportunidad p
 
 
 
+<!-- DECLARACIÓN EDITORIAL -->
+<div class="cm-opportunity-declaration">
+
+  <div class="cm-opportunity-declaration-number">
+    04
+  </div>
+
+  <div class="cm-opportunity-declaration-content">
+
+    <span>DECLARACIÓN</span>
+
+    <p>
+      Una oportunidad se vuelve valiosa cuando dejas de preguntarte qué puedes obtener y comienzas a preguntarte qué puedes construir con ella.
+    </p>
+
+  </div>
+
+</div>
+
+<style>
+.cm-opportunity-declaration {
+  display: flex;
+  max-width: 850px;
+  margin: 90px auto;
+  padding: 34px 0;
+  border-top: 1px solid #d8d3ca;
+  border-bottom: 1px solid #d8d3ca;
+}
+
+.cm-opportunity-declaration-number {
+  width: 90px;
+  flex-shrink: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  line-height: 1;
+  color: #b09a76;
+}
+
+.cm-opportunity-declaration-content {
+  padding-left: 30px;
+  border-left: 1px solid #292722;
+}
+
+.cm-opportunity-declaration-content span {
+  display: block;
+  margin-bottom: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #817b72;
+}
+
+.cm-opportunity-declaration-content p {
+  max-width: 690px;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(27px, 3.3vw, 39px);
+  font-weight: 500;
+  line-height: 1.28;
+  color: #35322d;
+}
+
+@media (max-width: 640px) {
+
+  .cm-opportunity-declaration {
+    margin: 65px 20px;
+  }
+
+  .cm-opportunity-declaration-number {
+    width: 52px;
+    font-size: 34px;
+  }
+
+  .cm-opportunity-declaration-content {
+    padding-left: 20px;
+  }
+
+  .cm-opportunity-declaration-content p {
+    font-size: 28px;
+  }
+
+}
+</style>
+
+
+
+
+
 <!-- DESENLACE -->
-<h2 id="desenlace" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
-  Desenlace
+<h2 id="titulo7" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">
+Oportunidades de negocio para ganar dinero
 </h2>
 
 <div class="text-stone-700 leading-relaxed mb-4 space-y-5 text-lg md:text-xl" style="font-family: 'Open Sans', sans-serif;">
@@ -2082,7 +2526,7 @@ La preparación, entonces, no consiste en esperar que aparezca una oportunidad p
 
 
 <!-- CONCLUSIÓN -->
-<h2 id="conclusion" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo8" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 Cómo reconocer oportunidades para mejorar tus finanzas y crear riqueza
 </h2>
 
@@ -2159,11 +2603,19 @@ Comprender cómo surgen, cómo se reconocen y por qué algunas personas consigue
 </p>
 
 <p>
-Sin embargo, desarrollar una mirada más analítica sobre lo que ocurre a nuestro alrededor puede representar un punto de partida importante. Muchas veces no necesitamos que aparezca algo completamente nuevo frente a nosotros, sino comenzar a observar con mayor atención aquello que ya existe, cuestionar cómo funciona y comprender qué posibilidades pueden encontrarse detrás de lo cotidiano.
+Sin embargo, desarrollar una mirada más analítica sobre lo que ocurre a nuestro alrededor puede representar un punto de partida importante. 
 </p>
 
 <p>
-Mi intención con este análisis no es decirte qué oportunidad debes tomar ni establecer una fórmula que garantice resultados. Es mostrar una forma diferente de observar para que puedas cuestionar lo que ves, contrastarlo con tus propios conocimientos y, con el tiempo, desarrollar una intuición que te permita reconocer posibles inversiones, negocios e invenciones, en lugar de esperar a que una oportunidad llegue cuando quizá ya está frente a nuestros ojos.
+Muchas veces no necesitamos que aparezca algo completamente nuevo frente a nosotros, sino comenzar a observar con mayor atención aquello que ya existe, cuestionar cómo funciona y comprender qué posibilidades pueden encontrarse detrás de lo cotidiano.
+</p>
+
+<p>
+Mi intención con este análisis no es decirte qué oportunidad debes tomar ni establecer una fórmula que garantice resultados. 
+</p>
+
+<p>
+Es mostrar una forma diferente de observar para que puedas cuestionar lo que ves, contrastarlo con tus propios conocimientos y, con el tiempo, desarrollar una intuición que te permita reconocer posibles inversiones, negocios e invenciones, en lugar de esperar a que una oportunidad llegue cuando quizá ya está frente a nuestros ojos.
 </p>
 
 </div>
@@ -2214,7 +2666,7 @@ Mi intención con este análisis no es decirte qué oportunidad debes tomar ni e
     <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
     <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
     <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
-    <a id="viewAllBtn" href="../NOMBREDECARPETA/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
+    <a id="viewAllBtn" href="../psicologia-del-dinero/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
       Ver todos
     </a>
   </div>
@@ -2420,7 +2872,7 @@ searchInput.addEventListener("input", ()=>{
   renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
 });
 
-fetch("../NOMBREDECARPETA/index.html")
+fetch("../psicologia-del-dinero/index.html")
 .then(r => r.text())
 .then(html => {
 
