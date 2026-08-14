@@ -80,31 +80,69 @@
       </div>
 
 
+     <!-- ENCABEZADO EDITORIAL -->
+
+     <div class="cm-secciones-heading">
+
+     <span class="cm-secciones-heading-line"></span>
+
+     <span class="cm-secciones-heading-text">
+      EXPLORA NUESTRAS ÁREAS
+     </span>
+
+      </div>
+
+
       <!-- ENLACES -->
       <nav class="cm-secciones-links">
 
-        <a href="/blog/biografia-de-millonarios/index.html">
-          Millonarios: De Cero al Éxito
-        </a>
-
-        <a href="/blog/psicologia-del-dinero/index.html">
-          La Psicología del Dinero
-        </a>
 
         <a href="/blog/ahorro/index.html">
-          Empieza a Ahorrar Inteligente
+          Construir Capital
         </a>
 
         <a href="/blog/inversiones/index.html">
-          Inversiones Inteligentes
-        </a>
-
-        <a href="/blog/hechos-lujos-curiosidades/index.html">
-          Secretos del Lujo
+          Hacer Crecer el Dinero
         </a>
 
         <a href="/blog/negocios/index.html">
-          Modelos de Negocio
+          Crear Riqueza
+        </a>
+
+        <a href="/blog/psicologia-del-dinero/index.html">
+          La Mente y el Dinero
+        </a>
+
+        <a href="/blog/servicios-financieros/index.html">
+          El Sistema Financiero
+        </a>
+
+        <a href="/blog/biografia-de-millonarios/index.html">
+          Historias de Riqueza
+        </a>
+
+        <a href="/blog/hechos-lujos-curiosidades/index.html">
+          Dinero, Poder y Lujo
+        </a>
+
+        <a href="/blog/finanzas-personales/index.html">
+         El Arte del Dinero
+        </a>
+
+        <a href="/blog/deudas/index.html">
+         El Peso de las Deudas
+        </a>
+
+        <a href="/blog/desarrollo-profesional/index.html">
+         Construir una Carrera
+        </a>
+
+        <a href="/blog/fundamentos-del-dinero/index.html">
+         Los Principios del Dinero
+        </a>
+
+        <a href="/blog/mentalidad-de-exito/index.html">
+         La Mentalidad para Avanzar
         </a>
 
         <a href="/tienda.html">
@@ -136,6 +174,64 @@
   const style = document.createElement("style");
 
   style.textContent = `
+
+/* =====================================================
+   ENCABEZADO EDITORIAL
+===================================================== */
+
+.cm-secciones-heading {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 78px;
+
+  padding:
+    0
+    40px
+    14px
+    40px;
+
+  flex-shrink: 0;
+
+}
+
+
+.cm-secciones-heading-line {
+
+  width: 22px;
+
+  height: 1px;
+
+  background: #e60000;
+
+  flex-shrink: 0;
+
+}
+
+
+.cm-secciones-heading-text {
+
+  color: rgba(255,255,255,.55);
+
+  font-family:
+    "Open Sans",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: .18em;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+}
 
     /* =====================================================
        BOTÓN
@@ -440,7 +536,7 @@
 
       flex-direction: column;
 
-      margin-top: 80px;
+      margin-top: 0px;
 
       flex-shrink: 0;
 
