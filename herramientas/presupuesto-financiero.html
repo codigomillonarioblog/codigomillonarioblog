@@ -685,84 +685,295 @@ closeMobileMenu.addEventListener('click', () => {
 
 
 
+<style>
+/* =========================
+   TITULO SECCION NUEVO
+========================= */
 
-  <!-- HERO PRINCIPAL -->
+.titulo-seccion{
+
+    max-width: 1400px;
+
+    margin: 70px auto 35px auto;
+
+    padding: 0 90px;
+}
+
+/* TEXTO */
+
+.titulo-seccion span{
+
+    font-family:'Inter',sans-serif;
+
+    font-size:1.55rem;
+
+    font-weight:900;
+
+    color:#111111;
+
+    letter-spacing:-1px;
+
+    line-height:1;
+
+    display:inline-block;
+
+    text-transform:uppercase;
+}
+
+/* LINEA */
+
+.linea-seccion{
+
+    width:100%;
+
+    height:4px;
+
+    background:#111111;
+
+    margin-top:10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .titulo-seccion{
+
+        padding:0 30px;
+
+        margin:55px auto 28px auto;
+    }
+
+    .titulo-seccion span{
+
+        font-size:1.35rem;
+
+        letter-spacing:-0.8px;
+    }
+
+    .linea-seccion{
+
+        height:3px;
+
+        margin-top:8px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .titulo-seccion{
+
+        padding:0 18px;
+    }
+
+    .titulo-seccion span{
+
+        font-size:1.2rem;
+    }
+
+}
+</style>
+
+
+
+
+
+
+
    <!-- ESPACIO FINAL -->
-<section class="py-12"></section>
+<div style="height: 300px;"></div>
+
+<!-- ========================================= -->
+<!-- GOOGLE FONTS -->
+<!-- ========================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
+<!-- =========================
+     HERO TITULO
+========================= -->
 
-<!-- popup Descargar Guia -->
-<script src="https://codigomillonario.blog/assets/popup.js"></script>
+<section class="hero-blog">
 
+  <div class="hero-blog-content">
 
+    <!-- ETIQUETA -->
+    <span class="hero-tag">
+      GESTIÓN FINANCIERA
+    </span>
 
-
-<style>
-.marquee-line {
-  height: 1px;            /* línea delgada */
-  background-color: #ccc;  /* gris claro */
-  width: 100%;            /* ocupa todo el contenedor */
-  margin: 0.25rem 0;      /* pequeño espacio arriba y abajo */
-}
-</style>
-
-
-<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
-  <span class="block">
-    Planificador de presupuesto
-  </span>
-</div>
-
-<!-- Título -->
-<div class="blog-main-title relative">
+    <!-- TITULO -->
     <h1>
-Organiza tus gastos, controla tu dinero y toma <br> mejores decisiones financieras todos los meses 
+      Organiza tus gastos, controla tu dinero y toma mejores decisiones financieras todos los meses
     </h1>
-    <span class="block mt-1 w-full h-px bg-slate-300"></span>
 
-  <p style="font-family: Arial, sans-serif; font-size: 18px; font-weight: 400;">
-Toma el control total de tus finanzas organizando tus gastos de forma simple y efectiva. Aprende a monitorear tu dinero,<br> 
-identificar oportunidades de ahorro y tomar decisiones financieras más 
-inteligentes cada mes para mejorar tu estabilidad y alcanzar tus metas económicas con mayor claridad y confianza.
-  </p>
-</div>
+    <!-- SUBTITULO -->
+    <p>
+      Toma el control total de tus finanzas organizando tus gastos de forma simple y efectiva. Aprende a monitorear tu dinero, identificar oportunidades de ahorro y tomar decisiones financieras más inteligentes cada mes para mejorar tu estabilidad y alcanzar tus metas económicas con mayor claridad y confianza.
+    </p>
+
+  </div>
+
+</section>
+
 
 <style>
-.blog-main-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: left;
-  color: #111;
 
-  /* 🔥 Separación diferente por lado */
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 20px;   /* poquito espacio a la izquierda */
-  margin-right: 120px; /* mucho más espacio a la derecha */
+/* =========================
+   HERO BLOG
+========================= */
+
+.hero-blog{
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-bottom: 45px;
+
+    padding-left: 90px;
+
+    padding-right: 90px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .blog-main-title {
-    font-size: 2.2rem;
-    margin-right: 40px;
-  }
+
+/* CONTENIDO */
+
+.hero-blog-content{
+
+    max-width: 980px;
 }
 
-@media (max-width: 640px) {
-  .blog-main-title {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+
+/* =========================
+   ETIQUETA
+========================= */
+
+.hero-tag{
+
+    display: inline-block;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8b7355;
+
+    margin-bottom: 18px;
 }
+
+
+/* =========================
+   TITULO
+========================= */
+
+.hero-blog h1{
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 4.2rem;
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    color: #111111;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================
+   SUBTITULO
+========================= */
+
+.hero-blog p{
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: #555555;
+
+    max-width: 760px;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1024px){
+
+    .hero-blog{
+
+        padding-left: 40px;
+
+        padding-right: 40px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 3.2rem;
+    }
+
+}
+
+
+/* =========================
+   TELEFONOS
+========================= */
+
+@media (max-width: 640px){
+
+    .hero-blog{
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        margin-top: 35px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 2.2rem;
+
+        line-height: 1.05;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-blog p{
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+}
+
 </style>
 
- 
+
+
 
 
   
@@ -887,13 +1098,16 @@ inteligentes cada mes para mejorar tu estabilidad y alcanzar tus metas económic
 <section class="py-12"></section>
 
 
-<div class="mt-20 left-block flex flex-col justify-center items-start mb-1 max-w-4xl px-4 md:px-0"
-     style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #777; margin-left: 20px;">
-  <span class="block">
-     Presupuesto personal para administrar Mejor tu Dinero
-  </span>
-</div>
 
+
+<!-- TITULO -->
+<div class="titulo-seccion">
+
+  <span>
+    Preguntas frecuentes
+  </span>
+
+</div>
 
 
 
