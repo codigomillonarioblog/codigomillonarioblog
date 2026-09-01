@@ -68,6 +68,7 @@ body, html {
 
 
 
+
 <!-- IMAGEN PRINCIPAL MENU -->
 <nav class="navbar">
 <!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
@@ -80,31 +81,31 @@ body, html {
 <style>
 /* TAMAÑO NORMAL */
 .logo-img {
-  width: 14rem; /* equivalente a w-56 */
+  width: 11rem; /* equivalente a w-56 */
   height: auto;
   transition: width 0.3s ease;
 }
 
 /* responsive */
 @media (min-width: 640px) {
-  .logo-img { width: 16rem; } /* sm:w-64 */
+  .logo-img { width: 13rem; } /* sm:w-64 */
 }
 
 @media (min-width: 768px) {
-  .logo-img { width: 18rem; } /* md:w-72 */
+  .logo-img { width: 15rem; } /* md:w-72 */
 }
 
 /* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
 .logo-small {
-  width: 10rem !important;
+  width: 8rem !important;
 }
 
 @media (min-width: 640px) {
-  .logo-small { width: 12rem !important; }
+  .logo-small { width: 10rem !important; }
 }
 
 @media (min-width: 768px) {
-  .logo-small { width: 13rem !important; }
+  .logo-small { width: 11rem !important; }
 }
 
 /* mover a la izquierda solo en PC */
@@ -126,7 +127,6 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
-
 
 
 
@@ -1564,13 +1564,6 @@ document.querySelectorAll('.toc-list a').forEach(link=>{
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
-<p class="text-3xl font-semibold text-stone-900 mb-5 mt-20">Artículos relacionados:</p>
-
-<p class="interlink-heading text-left text-sm mb-4"
-   style="font-family: 'Open Sans', sans-serif;">
-  ¿Quieres leer artículos similares? Selecciona uno y haz clic en "Ir"
-</p>
-
 </article>
 </main>
 
@@ -1578,194 +1571,214 @@ document.querySelectorAll('.toc-list a').forEach(link=>{
 
 
 
-<!-- ================= NUEVA TIPOGRAFIA ================= -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<!-- ================= INTERLINK ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
 
-<!-- ================= INTERLINK FUNCIONAL ================= -->
-<div class="interlink-container mx-auto my-12 max-w-3xl p-6 bg-white shadow-lg rounded-xl">
+<div class="interlink-container mx-auto my-16 max-w-3xl">
 
-  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-    <select id="articleSelect" class="select-pages flex-1 min-w-0"></select>
-    <input id="searchInput" type="text" class="goto-page flex-1 min-w-0" placeholder="Buscar artículo..." />
-    <button id="goBtn" class="page-box mt-2 md:mt-0 md:ml-2 interlink-button" style="font-family: 'Montserrat', sans-serif;">Ir</button>
-    <a id="viewAllBtn" href="../deudas/index.html" class="page-box mt-2 md:mt-0 md:ml-2 text-center inline-block no-underline interlink-button" style="font-family: 'Montserrat', sans-serif;">
+  <div class="interlink-heading">
+    <span class="interlink-kicker">TE PUEDE INTERESAR</span>
+    <div class="interlink-line"></div>
+  </div>
+
+  <div class="interlink-tools">
+    <select id="articleSelect" class="select-pages"></select>
+
+    <div class="search-wrapper">
+      <input id="searchInput" type="text" class="goto-page" placeholder="Buscar artículo...">
+    </div>
+
+    <button id="goBtn" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
+      Ir
+    </button>
+
+    <a id="viewAllBtn" href="../deudas/index.html" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
       Ver todos
     </a>
   </div>
 
-  <div class="flex justify-end items-center mt-4 text-stone-500 text-xs" style="font-family: 'Montserrat', sans-serif;">
-    Total <span id="totalArticles" class="mx-1">0</span> artículos
+  <div class="interlink-total" style="font-family:'Montserrat',sans-serif;">
+    <span id="totalArticles">0</span> artículos
   </div>
 </div>
 
-<!-- ================= NUEVO DISEÑO VISUAL ================= -->
 <section class="main-layout">
   <aside class="sidebar">
     <div id="interlinkGrid"></div>
   </aside>
 </section>
 
-<!-- ================= ESTILOS ================= -->
 <style>
-.main-layout {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+.interlink-container{width:100%;padding:0;background:transparent;border:0;box-shadow:none;border-radius:0}
+
+.interlink-heading{display:flex;align-items:center;gap:18px;margin-bottom:24px}
+.interlink-kicker{flex-shrink:0;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.8px;color:#222;white-space:nowrap}
+.interlink-line{width:100%;height:1px;background:#1a1a1a}
+
+.interlink-tools{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+
+.select-pages,.goto-page{
+  height:36px;
+  border:0;
+  border-bottom:1px solid #cfcfcf;
+  border-radius:0;
+  padding:5px 8px;
+  background:transparent;
+  outline:0;
+  font-family:'Montserrat',sans-serif;
+  font-size:12px;
+  color:#444;
+  transition:border-color .2s ease
 }
 
-.sidebar {
-  width: 100%;
-  max-width: 700px;
+.select-pages,.goto-page{flex:1;min-width:0}
+.select-pages:focus,.goto-page:focus{border-bottom-color:#222}
+
+.interlink-button{
+  height:36px;
+  padding:0 13px;
+  border:1px solid #d0d0d0;
+  border-radius:0;
+  background:transparent;
+  color:#333;
+  cursor:pointer;
+  font-size:11px;
+  white-space:nowrap;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .2s ease,color .2s ease,border-color .2s ease
 }
 
-.news-item {
-  display: flex;
-  gap: 18px;
-  text-decoration: none;
-  color: inherit;
-  padding: 16px 0;
-  border-bottom: 1px solid #e5e5e5;
-  align-items: center;
-  transition: opacity 0.2s ease;
+.interlink-button:hover{background:#111;color:#fff;border-color:#111}
+
+.interlink-total{text-align:right;font-size:10px;color:#999;margin-bottom:0}
+
+.main-layout{width:100%;display:flex;justify-content:center;padding:0 20px}
+.sidebar{width:100%;max-width:700px}
+
+.news-item{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  width:100%;
+  padding:22px 0;
+  border-top:1px solid #e6e6e6;
+  text-decoration:none;
+  color:inherit;
+  transition:opacity .2s ease
 }
 
-.news-item:hover {
-  opacity: 0.8;
+.news-item:last-child{border-bottom:1px solid #e6e6e6}
+.news-item:hover{opacity:.72}
+
+.news-thumb{width:175px;height:105px;flex-shrink:0;overflow:hidden}
+
+.news-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .4s ease
 }
 
-.news-thumb {
-  width: 220px;
-  height: 120px;
-  flex-shrink: 0;
+.news-item:hover .news-thumb img{transform:scale(1.03)}
+
+.news-text{flex:1;min-width:0}
+
+.news-text h3{
+  font-family:'Inter',sans-serif;
+  font-size:clamp(20px,2.3vw,27px);
+  font-weight:700;
+  line-height:1.22;
+  letter-spacing:-.4px;
+  color:#181818;
+  margin:0 0 8px
 }
 
-.news-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.news-meta{
+  font-family:'Montserrat',sans-serif;
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  color:#999
 }
 
-/* ================= TITULO ================= */
-.news-text h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(18px, 2.2vw, 28px);
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 4px;
-  color: #1a1a1a;
-  letter-spacing: -0.2px;
-}
+@media(max-width:768px){
+  .interlink-container{margin-top:42px;margin-bottom:28px}
+  .interlink-heading{gap:12px;margin-bottom:20px}
+  .interlink-kicker{font-size:9px;letter-spacing:1.4px}
 
-/* METADATA */
-.news-meta {
-  font-size: 12px;
-  color: #888;
-  margin-bottom: 6px;
-}
-
-/* TEXTO SECUNDARIO */
-.news-text p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.4;
-}
-
-.news-text {
-  flex: 1;
-}
-
-.interlink-container {
-  border-radius: 16px;
-  padding: 24px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  border: 1px solid #e5e7eb;
-}
-
-.select-pages, .goto-page {
-  border: 1px solid #c0c0c0;
-  height: 42px;
-  border-radius: 8px;
-  padding: 6px 10px;
-  font-size: 14px;
-}
-
-.interlink-button {
-  background: #fff;
-  border: 1px solid #c0c0c0;
-  padding: 6px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-  .news-item {
-    flex-direction: column;
-    align-items: flex-start;
+  .interlink-tools{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px
   }
 
-  .news-thumb {
-    width: 100%;
-    height: 180px;
+  .select-pages,.goto-page{width:100%}
+  .interlink-button{width:100%}
+  .interlink-total{margin-top:7px}
+
+  .news-item{
+    flex-direction:column;
+    align-items:stretch;
+    gap:13px;
+    padding:20px 0
   }
 
-  /* 👇 TITULO MÁS GRANDE EN MÓVIL */
-  .news-text h3 {
-    font-size: 24px;
-    line-height: 1.2;
-  }
+  .news-thumb{width:100%;height:190px}
+  .news-text h3{font-size:23px;line-height:1.2;margin-bottom:7px}
+}
+
+@media(max-width:420px){
+  .news-thumb{height:175px}
+  .news-text h3{font-size:21px}
 }
 </style>
 
-<!-- ================= SCRIPT ================= -->
 <script>
-const select = document.getElementById("articleSelect");
-const searchInput = document.getElementById("searchInput");
-const goBtn = document.getElementById("goBtn");
-const totalArticles = document.getElementById("totalArticles");
-const interlinkGrid = document.getElementById("interlinkGrid");
+const select=document.getElementById("articleSelect");
+const searchInput=document.getElementById("searchInput");
+const goBtn=document.getElementById("goBtn");
+const totalArticles=document.getElementById("totalArticles");
+const interlinkGrid=document.getElementById("interlinkGrid");
+const perPage=6;
+let allArticles=[];
 
-const perPage = 6;
-let allArticles = [];
-
-function truncate(text, maxLength = 65){
-  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+function truncate(text,maxLength=65){
+  return text.length>maxLength?text.slice(0,maxLength)+"...":text;
 }
 
 function shuffle(array){
-  return array.map(v => ({v, s: Math.random()}))
-              .sort((a,b)=>a.s-b.s)
-              .map(o=>o.v);
+  return array.map(v=>({v,s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
 }
 
 function renderSelect(list){
-  select.innerHTML = "";
+  select.innerHTML="";
 
-  if(list.length === 0){
-    const opt = document.createElement("option");
-    opt.textContent = "No se encontraron artículos";
-    opt.disabled = true;
+  if(!list.length){
+    const opt=document.createElement("option");
+    opt.textContent="No se encontraron artículos";
+    opt.disabled=true;
     select.appendChild(opt);
     return;
   }
 
-  list.slice(0, perPage).forEach(a=>{
-    const opt = document.createElement("option");
-    opt.value = a.url;
-    opt.textContent = truncate(a.title);
+  list.slice(0,perPage).forEach(a=>{
+    const opt=document.createElement("option");
+    opt.value=a.url;
+    opt.textContent=truncate(a.title);
     select.appendChild(opt);
   });
 }
 
 function renderCards(list){
-  interlinkGrid.innerHTML = "";
+  interlinkGrid.innerHTML="";
 
-  list.slice(0, perPage).forEach(a=>{
-    interlinkGrid.innerHTML += `
+  list.slice(0,perPage).forEach(a=>{
+    interlinkGrid.innerHTML+=`
       <a href="${a.url}" class="news-item">
         <div class="news-thumb">
           <img src="${a.image}" alt="${a.title}">
@@ -1780,50 +1793,48 @@ function renderCards(list){
 }
 
 function renderAll(list){
-  totalArticles.textContent = list.length;
+  totalArticles.textContent=list.length;
   renderSelect(list);
   renderCards(list);
 }
 
-goBtn.addEventListener("click", ()=>{
-  if(select.value) window.location.href = select.value;
+goBtn.addEventListener("click",()=>{
+  if(select.value) window.location.href=select.value;
 });
 
-searchInput.addEventListener("input", ()=>{
-  const q = searchInput.value.toLowerCase();
-  renderAll(allArticles.filter(a => a.title.toLowerCase().includes(q)));
+searchInput.addEventListener("input",()=>{
+  const q=searchInput.value.toLowerCase();
+  renderAll(allArticles.filter(a=>a.title.toLowerCase().includes(q)));
 });
 
 fetch("../deudas/index.html")
-.then(r => r.text())
-.then(html => {
+.then(r=>r.text())
+.then(html=>{
+  const parser=new DOMParser();
+  const doc=parser.parseFromString(html,"text/html");
+  const articles=doc.querySelectorAll(".article");
 
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(html, "text/html");
+  allArticles=shuffle(
+    Array.from(articles).map(article=>{
+      const link=article.querySelector("a.article-link");
+      const title=article.querySelector("h2.article-title");
+      const img=article.querySelector("img");
+      const meta=article.querySelector(".badge-row span");
 
-  const articles = doc.querySelectorAll(".article");
-
-  allArticles = shuffle(Array.from(articles).map(article => {
-
-    const link = article.querySelector("a.article-link");
-    const title = article.querySelector("h2.article-title");
-    const img = article.querySelector("img");
-    const meta = article.querySelector(".badge-row span");
-
-    return {
-      title: title ? title.textContent.trim() : "Sin título",
-      url: link ? link.getAttribute("href") : "#",
-      image: img ? img.getAttribute("src") : "./assets/png/default.png",
-      meta: meta ? meta.textContent.trim() : ""
-    };
-
-  }).filter(a => a.title.length > 5));
+      return{
+        title:title?title.textContent.trim():"Sin título",
+        url:link?link.getAttribute("href"):"#",
+        image:img?img.getAttribute("src"):"./assets/png/default.png",
+        meta:meta?meta.textContent.trim():""
+      };
+    }).filter(a=>a.title.length>5)
+  );
 
   renderAll(allArticles);
-
 })
-.catch(err => console.error("Interlink error:", err));
+.catch(err=>console.error("Interlink error:",err));
 </script>
+
 
 
    
