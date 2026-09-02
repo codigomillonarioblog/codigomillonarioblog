@@ -963,14 +963,18 @@ fetch('posts.json')
 
     
 
-<!-- =========================
-     ENFOQUE BLOG
+
+
+
+ <!-- =========================
+     ENFOQUE EDITORIAL + REDES
 ========================= -->
 
 <div class="enfoque-blog">
 
   <div class="enfoque-contenido">
 
+    <!-- ENFOQUE -->
     <span class="etiqueta-enfoque">
       ENFOQUE
       <span class="etiqueta-medio">MEDIO</span>
@@ -979,6 +983,77 @@ fetch('posts.json')
     <p>
       Análisis del dinero, las decisiones financieras y la construcción de patrimonio.
     </p>
+
+
+    <!-- REDES -->
+    <div class="cm-social-editorial">
+
+      <span class="cm-social-label">
+        SIGUE A CÓDIGO MILLONARIO
+      </span>
+
+      <div class="uvo-socials">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- X -->
+        <a href="https://x.com/CMillonarioblog"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="X">
+
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 1200 1227"
+               fill="currentColor"
+               aria-hidden="true">
+
+            <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163Z"/>
+
+          </svg>
+
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1FVSBquigd/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+
+        <!-- Pinterest -->
+        <a href="https://pin.it/3tqNXYoAA"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -1079,6 +1154,105 @@ fetch('posts.json')
 
 
 /* =========================
+   ÁREA SOCIAL EDITORIAL
+========================= */
+
+.cm-social-editorial {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 22px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #e8e8e8;
+
+    max-width: 650px;
+}
+
+
+/* =========================
+   TEXTO REDES
+========================= */
+
+.cm-social-label {
+    flex-shrink: 0;
+
+    color: #888888;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   CONTENEDOR REDES
+========================= */
+
+.cm-social-editorial .uvo-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* =========================
+   ENLACES
+========================= */
+
+.cm-social-editorial .uvo-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+
+    color: #777777;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================
+   ICONOS
+========================= */
+
+.cm-social-editorial .uvo-socials i {
+    font-size: 13px;
+}
+
+
+.cm-social-editorial .uvo-socials svg {
+    width: 12px;
+    height: 12px;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.cm-social-editorial .uvo-socials a:hover {
+    color: #111111;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
    TABLET
 ========================= */
 
@@ -1135,9 +1309,45 @@ fetch('posts.json')
         line-height: 1.6;
     }
 
+
+    /* REDES EN MÓVIL */
+
+    .cm-social-editorial {
+        gap: 12px;
+
+        margin-top: 19px;
+
+        padding-top: 13px;
+    }
+
+
+    .cm-social-label {
+        font-size: 7px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .cm-social-editorial .uvo-socials {
+        gap: 10px;
+    }
+
+
+    .cm-social-editorial .uvo-socials i {
+        font-size: 12px;
+    }
+
+
+    .cm-social-editorial .uvo-socials svg {
+        width: 11px;
+        height: 11px;
+    }
+
 }
 
 </style>
+
+
 
 
 
