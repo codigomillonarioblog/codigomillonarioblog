@@ -37,355 +37,6 @@
   gtag('config', 'G-0826LEMPPY');
 </script>
 
-<style>
-
-/* ===================== GRID DE TARJETAS CENTRADO ===================== */
-
-#articlesGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1400px;
-    margin: 0 auto;
-    align-items: stretch;
-    transition: all 0.5s ease;
-}
-
-@media (max-width: 640px) {
-    #articlesGrid {
-        grid-template-columns: 1fr;
-        justify-content: center;
-        max-width: 100%;
-        padding: 0 12px;
-    }
-}
-
-/* ===================== TARJETAS ===================== */
-
-.article {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    transition: opacity 0.4s ease;
-}
-
-.article-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    max-width: none;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 12px 0;
-    box-shadow: none;
-    font-family: 'Inter', sans-serif;
-    cursor: pointer;
-}
-
-.articles-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    width: 100%;
-}
-
-@media (max-width: 900px) {
-    .articles-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-.article-link {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ===================== BLOQUE SUPERIOR ===================== */
-
-.text-content {
-    min-height: 90px;
-    border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-/* ===================== BADGES ===================== */
-
-.badge {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #777;
-    margin: 0;
-    padding-bottom: 6px;
-    margin-bottom: 10px;
-    border-bottom: none;
-    font-family: 'Inter', sans-serif;
-}
-
-.text-content p,
-.badge:not(.editorial) {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    color: #666;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.badge.editorial {
-    color: #000000;
-    margin-top: 10px;
-    display: inline-flex;
-    width: fit-content;
-    padding: 1px 6px;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    border: 1px solid #000000;
-    border-radius: 6px;
-    letter-spacing: .5px;
-    text-transform: uppercase;
-}
-
-.badge:last-of-type {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* ===================== TÍTULO ===================== */
-
-.article-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.9rem;
-    font-weight: 800;
-    color: #111111;
-    margin: 0 0 4px 0;
-    line-height: 1.12;
-    letter-spacing: -1.2px;
-    text-align: left;
-    transition: opacity .25s ease;
-}
-
-@media (min-width: 769px) {
-    .article-link:hover .article-title {
-        opacity: .6;
-    }
-}
-
-/* ===================== IMAGEN ===================== */
-
-.article-card img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 0;
-    transition: filter 0.25s ease;
-}
-
-.article-card:hover img {
-    filter: brightness(1.10);
-}
-
-/* ===================== PAGINACIÓN ===================== */
-
-.pager-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    background: #1a1a1a;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-    padding: 12px;
-    border: 1px solid rgba(255,255,255,0.12);
-    color: #ffffff;
-}
-
-/* 🔥 TEXTO TOTAL RESULTADOS Y PÁGINA */
-.pager-container,
-.pager-container *,
-.pager-container .text-sm,
-.pager-container span,
-.pager-container p,
-.pager-container div {
-    color: #ffffff;
-}
-
-.page-box,
-.compact-btn {
-    min-width: 38px;
-    height: 38px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.18);
-    background: #242424;
-    color: #ffffff;
-    cursor: pointer;
-    user-select: none;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.compact-btn {
-    min-width: 40px;
-    height: 40px;
-}
-
-.page-box:hover,
-.compact-btn:hover {
-    background: #2e2e2e;
-    box-shadow: 0 1px 3px rgba(255,255,255,0.06);
-    transform: translateY(-1px);
-}
-
-.page-box.active,
-.active-page {
-    background: #ffffff;
-    color: #000000 !important;
-    border-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
-}
-
-.compact-btn[disabled] {
-    opacity: 0.45;
-    cursor: default;
-    pointer-events: none;
-}
-
-/* ===================== INPUTS PAGINACIÓN ===================== */
-
-.select-pages {
-    border: 1px solid rgba(255,255,255,0.18);
-    background: #111111;
-    color: #ffffff;
-    height: 40px;
-    border-radius: 6px;
-    padding: 6px 10px;
-}
-
-input[type="number"].goto-page {
-    border: 1px solid rgba(255,255,255,0.18);
-    height: 40px;
-    border-radius: 6px;
-    padding: 6px 10px;
-    width: 80px;
-    background: #111111;
-    color: #ffffff;
-}
-
-/* ===================== MOBILE PAGINATION ===================== */
-
-@media (max-width: 768px) {
-
-    .pager-container {
-        width: 100%;
-        padding: 12px;
-        overflow: hidden;
-    }
-
-    .pager-container .flex.flex-col.md\:flex-row {
-        width: 100%;
-        gap: 14px;
-    }
-
-    .pager-container .text-sm {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-        text-align: center;
-        font-size: 13px;
-        line-height: 1.4;
-        order: 0;
-        color: #ffffff;
-    }
-
-    #pageNumbers {
-        gap: 8px !important;
-        flex-wrap: nowrap;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        order: 1;
-    }
-
-    .page-box,
-    .compact-btn {
-        min-width: 38px;
-        width: 38px;
-        height: 38px;
-        font-size: 14px;
-        border-radius: 12px;
-        padding: 0;
-    }
-
-    .select-pages {
-        width: 100%;
-        max-width: 130px;
-        height: 38px;
-        font-size: 13px;
-    }
-
-    .goto-page {
-        width: 64px !important;
-        height: 38px !important;
-        font-size: 13px;
-    }
-
-    #gotoBtn {
-        width: auto;
-        padding: 0 12px;
-    }
-
-    .pager-container .justify-center.items-center.gap-2.px-2 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    #firstBtn,
-    #prevBtn,
-    #nextBtn,
-    #lastBtn {
-        order: 2;
-    }
-
-    .article-title{
-        font-size:1.55rem;
-        line-height:1.15;
-    }
-
-}
-
-/* ===================== OCULTOS ===================== */
-
-.meta,
-.arrow-btn,
-.card-icon {
-    display: none !important;
-}
-
-/* ===================== FONDO ===================== */
-
-body,
-html {
-    background-color: #ffffff !important;
-}
-
-</style>
-
 </head>
 <body class="bg-stone-50 text-stone-900">
 
@@ -475,149 +126,6 @@ window.addEventListener('scroll', () => {
 
 
 
-
-
-
-<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
-<div class="btn-container pc-only">
-
-  <!-- FORMULARIO -->
-  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
-    
-    <!-- 🔐 CONFIG WEB3FORMS -->
-    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
-    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
-    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
-
-    <!-- 🧠 IDENTIFICADOR -->
-    <input type="hidden" name="tipo" value="suscriptor">
-    <input type="hidden" name="from_name" value="Suscriptores Web">
-
-    <!-- BOTÓN -->
-    <button type="button" class="btn-rojo" id="btnTogglePC">
-      Newsletter
-    </button>
-
-    <!-- INPUT -->
-    <div class="input-box" id="inputBoxPC">
-      <input 
-        type="email" 
-        name="email" 
-        required
-        placeholder="Tu correo"
-        class="input-email">
-
-      <button type="submit" class="btn-enviar">Enviar</button>
-    </div>
-
-  </form>
-
-</div>
-
-<style>
-
-/* 🚫 OCULTAR EN MÓVIL */
-@media (max-width: 768px) {
-  .pc-only {
-    display: none !important;
-  }
-}
-
-/* 📌 CONTENEDOR PC */
-.pc-only {
-  position: fixed;
-  right: 80px;
-  top: 20px;
-  z-index: 9999;
-}
-
-/* FORM */
-.form-suscriptor {
-  position: relative;
-}
-
-/* BOTÓN */
-.btn-rojo {
-  background-color: #e60000;
-  color: #fff;
-  border: none;
-  padding: 8px 28px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.btn-rojo:hover {
-  background-color: #cc0000;
-}
-
-/* INPUT */
-.input-box {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  display: flex;
-  align-items: center;
-
-  opacity: 0;
-  pointer-events: none;
-}
-
-.input-box.activo {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.input-email {
-  padding: 8px 10px;
-  border: none;
-  outline: none;
-  border-radius: 10px 0 0 10px;
-  font-size: 14px;
-  width: 150px;
-}
-
-/* BOTÓN ENVIAR */
-.btn-enviar {
-  background-color: #e60000;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.btn-enviar:hover {
-  background-color: #cc0000;
-}
-
-</style>
-
-<script>
-const btnPC = document.getElementById("btnTogglePC");
-const inputBoxPC = document.getElementById("inputBoxPC");
-
-btnPC.addEventListener("click", (e) => {
-  e.stopPropagation();
-
-  btnPC.style.display = "none";
-  inputBoxPC.classList.add("activo");
-});
-
-inputBoxPC.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
-
-document.addEventListener("click", () => {
-  inputBoxPC.classList.remove("activo");
-  btnPC.style.display = "inline-block";
-});
-</script>
 
 
 
@@ -1130,18 +638,19 @@ closeMobileMenu.addEventListener('click', () => {
 
     font-family: 'Inter', sans-serif;
 
-    font-size: 4.2rem;
+    font-size: 3rem;
 
-    line-height: 0.98;
+    line-height: 1.05;
 
     font-weight: 800;
 
     color: #111111;
 
-    letter-spacing: -3px;
+    letter-spacing: -1.8px;
 
     margin-bottom: 24px;
 }
+
 
 /* SUBTITULO */
 
@@ -1850,447 +1359,647 @@ closeMobileMenu.addEventListener('click', () => {
 
 
 
-<div class="cm-brand-separator">
 
-  <div class="cm-brand-content">
 
-    <div class="cm-brand-label">
-      TENDENCIAS
+
+
+
+<!-- =========================================================
+     SECCIÓN — ANÁLISIS
+========================================================= -->
+
+<section class="mb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="cm-analysis-editorial-line">
+      <span class="cm-analysis-editorial-label">Análisis</span>
     </div>
 
-    <h2 class="cm-brand-title">
-      Lo que está moviendo el dinero
-    </h2>
+    <section class="cm-analysis-layout">
+      <aside class="cm-analysis-sidebar">
 
-    <p class="cm-brand-sub">
-      Análisis, ahorro e inversión
-    </p>
+        <!-- PAGINACIÓN -->
+        <div class="cm-analysis-toolbar">
+
+          <div class="cm-analysis-info">
+            <span><strong id="cmAnalysisTotal">0</strong> análisis</span>
+            <span class="cm-analysis-separator">·</span>
+            <span>Página <strong id="cmAnalysisCurrent">1</strong>/<strong id="cmAnalysisPages">1</strong></span>
+          </div>
+
+          <div class="cm-analysis-controls">
+            <button type="button" id="cmAnalysisFirst" class="cm-analysis-btn" aria-label="Primera página">«</button>
+            <button type="button" id="cmAnalysisPrev" class="cm-analysis-btn" aria-label="Página anterior">‹</button>
+
+            <div id="cmAnalysisNumbers" class="cm-analysis-page-numbers" aria-label="Páginas"></div>
+
+            <button type="button" id="cmAnalysisNext" class="cm-analysis-btn" aria-label="Página siguiente">›</button>
+            <button type="button" id="cmAnalysisLast" class="cm-analysis-btn" aria-label="Última página">»</button>
+          </div>
+
+          <div class="cm-analysis-options">
+
+            <select id="cmAnalysisPerPage" class="cm-analysis-select" aria-label="Cantidad de análisis por página">
+              <option value="4" selected>4 / página</option>
+              <option value="6">6 / página</option>
+              <option value="12">12 / página</option>
+              <option value="20">20 / página</option>
+            </select>
+
+            <div class="cm-analysis-goto">
+              <input
+                id="cmAnalysisGotoInput"
+                class="cm-analysis-goto-input"
+                type="number"
+                min="1"
+                inputmode="numeric"
+                placeholder="Ir"
+                aria-label="Número de página"
+              >
+              <button type="button" id="cmAnalysisGoto" class="cm-analysis-goto-btn">Ir</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- =================================================
+             ARTÍCULOS
+             
+             PARA AGREGAR UNO NUEVO:
+             COPIA UN BLOQUE .cm-analysis-item Y CAMBIA:
+             1. href
+             2. imagen
+             3. alt
+             4. categoría
+             5. título
+             6. descripción
+        ================================================== -->
+
+        <div id="cmAnalysisArticles">
+
+
+<!-- ANÁLISIS 1 -->
+<a href="./thomas-alva-edison-biografia.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/png/thomas-alva-edison-inventor.webp" alt="Thomas Alva Edison inventor y estrategia de riqueza" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>La clave de la riqueza de Edison: convertir ideas en sistemas de negocio</h3>
+    <p>Un análisis sobre cómo Thomas Alva Edison convirtió sus ideas e inventos en sistemas capaces de generar valor y construir riqueza.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
+
+<!-- ANÁLISIS 2 -->
+<a href="./fundador-de-kfc-construyo-su-fortuna.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/miniaturas/kfc-origen-empresarial-financiero.webp" alt="Harland Sanders fundador de KFC historia de riqueza" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>Así nació la fortuna del fundador de KFC Harland David Sanders</h3>
+    <p>Un análisis sobre el recorrido empresarial de Harland Sanders y las decisiones que marcaron la construcción de su fortuna.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
+
+<!-- ANÁLISIS 3 -->
+<a href="./oprah-winfrey-multimillonaria.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/png/riqueza-oprah-winfrey.webp" alt="Oprah Winfrey imperio mediático historia de éxito" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>La estrategia que llevó a Oprah de empleada a dueña de su propio imperio</h3>
+    <p>Un análisis sobre las decisiones profesionales y empresariales que ayudaron a Oprah Winfrey a construir un poderoso imperio mediático.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
+
+<!-- ANÁLISIS 4 -->
+<a href="./jeff-bezos-ceo-amazon.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/png/jeff-bezos-estrategia-amazon.webp" alt="Jeff Bezos Amazon imperio estrategia empresarial" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>La estrategia fría que convirtió a Amazon en un imperio global</h3>
+    <p>Un análisis sobre la visión empresarial de Jeff Bezos y las decisiones que contribuyeron a transformar Amazon en una compañía global.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
+
+<!-- ANÁLISIS 5 -->
+<a href="./como-carlos-slim-se-hizo-rico.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/png/carlos-slim-millonario-mexicano.webp" alt="Carlos Slim historia de riqueza y estrategia silenciosa" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>Qué hizo diferente Carlos Slim para construir una fortuna multimillonaria</h3>
+    <p>Un análisis sobre la estrategia empresarial, las inversiones y las decisiones que marcaron el crecimiento de la fortuna de Carlos Slim.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
+
+<!-- ANÁLISIS 6 -->
+<a href="./jack-ma-de-profesor-a-millonario-alibaba.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/png/jack-ma-de-profesor-a-multimillonario.webp" alt="Jack Ma de profesor a fundador de Alibaba historia de éxito" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>Cuando nadie lo contrataba, Jack Ma decidió crear su propio sistema</h3>
+    <p>Un análisis sobre el recorrido de Jack Ma y la construcción de Alibaba como modelo empresarial basado en el comercio digital.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
+
+<!-- ANÁLISIS 7 -->
+<a href="./jk-rowling-harry-potter-fortuna.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/png/jk-rowling-historia-fortuna.webp" alt="J.K. Rowling Harry Potter historia de fortuna y éxito" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>El proceso que transformó la obra de Harry Potter en una fortuna</h3>
+    <p>Un análisis sobre cómo una obra literaria terminó convirtiéndose en una de las franquicias más valiosas del entretenimiento.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
+
+
+
+
+
+<!-- ANÁLISIS 8 -->
+<a href="PONERURLDELANALISIS" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/miniaturas/mineros-fiebre-del-oro-documental.webp" alt="Mineros y fiebre del oro" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>La carrera por hacerse rico que cambió el mundo</h3>
+    <p>Un análisis sobre la fiebre del oro, la ambición económica y las oportunidades que surgieron durante una carrera por la riqueza sin precedentes.</p>
+    <span class="cm-analysis-link">MUY PRONTO</span>
+  </div>
+</a>
+
+<!-- ANÁLISIS 9 -->
+<a href="#" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/miniaturas/como-coca-cola-se-convirtio-en-un-imperio.webp" alt="Coca-Cola y su expansión empresarial" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>Cómo una bebida se convirtió en un imperio mundial</h3>
+    <p>Un análisis sobre la estrategia empresarial que permitió a una bebida convertirse en una de las marcas más reconocidas y valiosas del mundo.</p>
+    <span class="cm-analysis-link">MUY PRONTO</span>
+  </div>
+</a>
+
+<!-- ANÁLISIS 10 -->
+<a href="#" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../../assets/miniaturas/petroleo-origen-industria-fortuna.webp" alt="Petróleo, industria y grandes fortunas" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">ANÁLISIS EDITORIAL</span>
+    <h3>El negocio que cambió el mundo y creó grandes fortunas</h3>
+    <p>Un análisis sobre el poder económico del petróleo, su impacto en la industria y la creación de grandes fortunas alrededor de este recurso.</p>
+    <span class="cm-analysis-link">MUY PRONTO</span>
+  </div>
+</a>
+
+
+
+
+          <!-- =================================================
+               COPIAR ESTE BLOQUE PARA CADA NUEVO ANÁLISIS
+          ================================================== -->
+
+        </div>
+
+      </aside>
+    </section>
 
   </div>
-
-</div>
-
+</section>
 
 <style>
 
+/* =========================================
+   AJUSTE PAGINACIÓN — TELÉFONOS
+========================================= */
+
+@media (max-width:640px){
+  .cm-analysis-toolbar{width:100%;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden}
+  .cm-analysis-controls{width:100%;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden}
+  .cm-analysis-page-numbers{min-width:0;max-width:100%;overflow:hidden;white-space:nowrap}
+  .cm-analysis-btn,.cm-analysis-page-number{flex-shrink:0}
+  .cm-analysis-options{max-width:100%;min-width:0;box-sizing:border-box}
+}
+
+.cm-analysis-editorial-line{width:min(1100px,88%);margin:40px auto 0;padding-top:45px;position:relative}
+.cm-analysis-editorial-label{position:absolute;top:0;left:0;font-family:"Inter",sans-serif;font-size:32px;font-weight:900;text-transform:uppercase;color:#111;letter-spacing:-.5px}
+.cm-analysis-editorial-line::after{content:"";display:block;width:100%;height:5px;background:#111}
+.cm-analysis-layout{width:min(1100px,88%);margin:0 auto;display:flex;box-sizing:border-box}
+.cm-analysis-sidebar{width:100%}
+
+
 /* =========================================================
-   BLOQUE EDITORIAL — TENDENCIAS
+   BARRA DE PAGINACIÓN
 ========================================================= */
 
-.cm-brand-separator {
+.cm-analysis-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0;margin-bottom:4px;border-bottom:1px solid #e5e5e5;font-family:"Inter",sans-serif}
+.cm-analysis-info{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#777;font-size:10px;line-height:1}
+.cm-analysis-info strong{color:#111;font-weight:700}
+.cm-analysis-separator{color:#c8c8c8}
 
-  width: 100%;
 
-  padding:
-    80px
-    20px
-    55px;
+/* =========================================================
+   BOTONES
+========================================================= */
 
-  background: #fff;
+.cm-analysis-controls{display:flex;align-items:center;justify-content:center;gap:4px}
+.cm-analysis-btn,.cm-analysis-goto-btn{width:28px;height:28px;padding:0;border:1px solid #dedede;background:#fff;color:#333;font-family:"Inter",sans-serif;font-size:13px;line-height:28px;text-align:center;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.cm-analysis-btn:hover,.cm-analysis-goto-btn:hover{background:#111;border-color:#111;color:#fff}
+.cm-analysis-btn:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
 
-  display: flex;
-  justify-content: center;
 
-  position: relative;
+/* =========================================================
+   NÚMEROS
+========================================================= */
 
+.cm-analysis-page-numbers{display:flex;align-items:center;gap:4px}
+.cm-analysis-page-number{width:28px;height:28px;padding:0;border:1px solid transparent;background:transparent;color:#777;font-family:"Inter",sans-serif;font-size:9px;font-weight:600;line-height:28px;text-align:center;cursor:pointer}
+.cm-analysis-page-number:hover{color:#111;border-color:#ddd}
+.cm-analysis-page-number.active{background:#111;border-color:#111;color:#fff}
+
+
+/* =========================================================
+   OPCIONES
+========================================================= */
+
+.cm-analysis-options{display:flex;align-items:center;gap:7px}
+.cm-analysis-select,.cm-analysis-goto-input{height:28px;box-sizing:border-box;border:1px solid #dedede;background:#fff;color:#555;font-family:"Inter",sans-serif;font-size:9px;outline:none}
+.cm-analysis-select{padding:0 7px;cursor:pointer}
+.cm-analysis-goto{display:flex;align-items:center;gap:4px}
+.cm-analysis-goto-input{width:48px;padding:0 7px}
+.cm-analysis-goto-input::placeholder{color:#aaa}
+.cm-analysis-goto-input:focus,.cm-analysis-select:focus{border-color:#111}
+.cm-analysis-goto-btn{font-size:8px;font-weight:600}
+
+
+/* =========================================================
+   ARTÍCULOS
+========================================================= */
+
+.cm-analysis-item{display:flex;gap:28px;width:100%;box-sizing:border-box;padding:26px 0;border-bottom:1px solid #e5e5e5;text-decoration:none;color:inherit;align-items:flex-start;transition:opacity .2s ease}
+.cm-analysis-item:hover{opacity:.85}
+.cm-analysis-thumb{width:210px;aspect-ratio:16/10;flex-shrink:0;overflow:hidden;background:#f1f1f1}
+.cm-analysis-thumb img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s ease}
+.cm-analysis-item:hover .cm-analysis-thumb img{transform:scale(1.025)}
+.cm-analysis-text{flex:1;min-width:0}
+.cm-analysis-category{display:block;margin:1px 0 9px;font-family:"Inter",sans-serif;font-size:8px;line-height:1;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#a17c4d}
+.cm-analysis-item .cm-analysis-text h3{margin:0 0 9px;max-width:760px;font-family:"Inter",sans-serif;font-size:22px;font-weight:750;line-height:1.3;letter-spacing:-.45px;color:#111}
+.cm-analysis-text p{margin:0 0 13px;max-width:760px;font-family:"Inter",sans-serif;font-size:13px;font-weight:400;line-height:1.65;letter-spacing:-.01em;color:#555}
+.cm-analysis-link{display:inline-block;font-family:"Inter",sans-serif;font-size:7.5px;line-height:1;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#111;opacity:.65;transition:opacity .2s ease}
+.cm-analysis-item:hover .cm-analysis-link{opacity:1}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:1024px){
+  .cm-analysis-editorial-line,.cm-analysis-layout{width:min(900px,90%)}
+  .cm-analysis-toolbar{flex-wrap:wrap}
+  .cm-analysis-info{order:1}
+  .cm-analysis-controls{order:2}
+  .cm-analysis-options{order:3;margin-left:auto}
+  .cm-analysis-item{gap:24px}
+  .cm-analysis-thumb{width:190px}
 }
 
 
 /* =========================================================
-   CONTENIDO
+   MOBILE
 ========================================================= */
 
-.cm-brand-content {
-
-  width: 100%;
-  max-width: 900px;
-
-  text-align: center;
-
+@media (max-width:600px){
+  .cm-analysis-editorial-line{width:calc(100% - 40px);margin:30px auto 0;padding-top:38px}
+  .cm-analysis-editorial-label{font-size:24px;letter-spacing:-.4px}
+  .cm-analysis-editorial-line::after{height:4px}
+  .cm-analysis-layout{width:calc(100% - 40px)}
+  .cm-analysis-toolbar{display:grid;grid-template-columns:1fr auto;gap:13px 10px;padding:15px 0}
+  .cm-analysis-info{font-size:9px}
+  .cm-analysis-controls{justify-content:flex-end}
+  .cm-analysis-page-numbers{display:none!important}
+  .cm-analysis-options{grid-column:1/-1;justify-content:space-between;width:100%;margin-left:0}
+  .cm-analysis-btn,.cm-analysis-goto-btn,.cm-analysis-page-number{width:27px;height:27px;line-height:27px}
+  .cm-analysis-select,.cm-analysis-goto-input{height:27px}
+  .cm-analysis-item{flex-direction:column;gap:15px;padding:22px 0}
+  .cm-analysis-thumb{width:100%;aspect-ratio:16/10}
+  .cm-analysis-category{margin-bottom:8px;font-size:7px;letter-spacing:1.5px}
+  .cm-analysis-item .cm-analysis-text h3{font-size:19px;line-height:1.3;letter-spacing:-.3px;margin-bottom:8px}
+  .cm-analysis-text p{font-size:12px;line-height:1.65;margin-bottom:12px}
+  .cm-analysis-link{font-size:7px}
 }
 
 
 /* =========================================================
-   IDENTIFICADOR
+   PANTALLAS MUY PEQUEÑAS
 ========================================================= */
 
-.cm-brand-label {
-
-  margin-bottom: 14px;
-
-  font-family:
-    "Inter",
-    sans-serif;
-
-  font-size: 11px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.28em;
-
-  text-transform: uppercase;
-
-  color: #999;
-
-}
-
-
-/* =========================================================
-   TÍTULO
-========================================================= */
-
-.cm-brand-title {
-
-  margin: 0;
-
-  font-family:
-    "Inter",
-    sans-serif;
-
-  font-size: 30px;
-
-  line-height: 1.2;
-
-  font-weight: 500;
-
-  letter-spacing: -0.03em;
-
-  color: #111;
-
-}
-
-
-/* =========================================================
-   SUBTÍTULO
-========================================================= */
-
-.cm-brand-sub {
-
-  margin:
-    12px
-    0
-    0;
-
-  font-family:
-    "Inter",
-    sans-serif;
-
-  font-size: 14px;
-
-  line-height: 1.6;
-
-  color: #777;
-
-}
-
-
-/* =========================================================
-   LÍNEA EDITORIAL
-========================================================= */
-
-.cm-brand-separator::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-
-  bottom: 20px;
-
-  transform:
-    translateX(-50%);
-
-  width:
-    min(90px, 20%);
-
-  height: 2px;
-
-  background: #111;
-
-}
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 767px) {
-
-  .cm-brand-separator {
-
-    padding:
-      60px
-      18px
-      50px;
-
-  }
-
-  .cm-brand-title {
-
-    font-size: 25px;
-
-  }
-
-  .cm-brand-sub {
-
-    font-size: 13px;
-
-  }
-
+@media (max-width:380px){
+  .cm-analysis-separator{display:none}
 }
 
 </style>
 
 
+<!-- =========================================================
+     JAVASCRIPT — MOTOR DE PAGINACIÓN
+========================================================= -->
+
+<script>
+(function(){
+
+  function initAnalysisPagination(){
+
+    const container=document.getElementById("cmAnalysisArticles");
+    if(!container)return;
+
+    const totalElement=document.getElementById("cmAnalysisTotal");
+    const currentElement=document.getElementById("cmAnalysisCurrent");
+    const pagesElement=document.getElementById("cmAnalysisPages");
+
+    const firstButton=document.getElementById("cmAnalysisFirst");
+    const prevButton=document.getElementById("cmAnalysisPrev");
+    const nextButton=document.getElementById("cmAnalysisNext");
+    const lastButton=document.getElementById("cmAnalysisLast");
+
+    const numbersContainer=document.getElementById("cmAnalysisNumbers");
+    const perPageSelect=document.getElementById("cmAnalysisPerPage");
+
+    const gotoInput=document.getElementById("cmAnalysisGotoInput");
+    const gotoButton=document.getElementById("cmAnalysisGoto");
 
 
-            <!-- ARTÍCULOS DE AHORRO -->
-                <section class="mb-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    /* =====================================================
+       ARTÍCULOS
+    ===================================================== */
+
+    const articles=Array.from(container.querySelectorAll(".cm-analysis-item"));
+
+    let currentPage=1;
+    let perPage=parseInt(perPageSelect.value,10)||6;
 
 
-      <!-- PAGINACIÓN ARRIBA -->
-      <div class="max-w-5xl mx-auto mb-6">
-        <div class="pager-container">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div class="flex items-center gap-4 px-2">
-              <div class="text-sm text-stone-700">
-                Total <span id="totalResults" class="font-semibold">0</span> resultados
-              </div>
-              <div class="hidden sm:inline-block text-sm text-stone-700">
-                Pag. <span id="currentPageText" class="font-semibold">0</span>/<span id="totalPagesText" class="font-semibold">0</span>
-              </div>
-            </div>
-            <div class="flex justify-center items-center gap-2 px-2">
-              <button id="firstBtn" class="compact-btn">«</button>
-              <button id="prevBtn" class="compact-btn">‹</button>
-              <div id="pageNumbers" class="flex items-center gap-2"></div>
-              <button id="nextBtn" class="compact-btn">›</button>
-              <button id="lastBtn" class="compact-btn">»</button>
-            </div>
-            <div class="flex justify-end items-center gap-3 px-2">
-              <select id="perPageSelect" class="select-pages">
-                <option value="6" selected>6 / página</option>
-                <option value="9">9 / página</option>
-                <option value="12">12 / página</option>
-                <option value="20">20 / página</option>
-              </select>
-              <input id="gotoInput" class="goto-page" type="number" min="1" placeholder="Ir a" />
-              <button id="gotoBtn" class="page-box">Ir</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    /* =====================================================
+       TOTAL DE PÁGINAS
+    ===================================================== */
+
+    function getTotalPages(){
+      if(articles.length===0)return 1;
+      return Math.max(1,Math.ceil(articles.length/perPage));
+    }
+
+
+    /* =====================================================
+       DIBUJAR PAGINACIÓN
+    ===================================================== */
+
+    function render(){
+
+      const totalPages=getTotalPages();
+
+      /* EVITAR PÁGINAS INVÁLIDAS */
+
+      if(currentPage>totalPages)currentPage=totalPages;
+      if(currentPage<1)currentPage=1;
+
+
+      /* ===================================================
+         ARTÍCULOS VISIBLES
+      =================================================== */
+
+      const start=(currentPage-1)*perPage;
+      const end=start+perPage;
+
+      articles.forEach((article,index)=>{
+        if(index>=start&&index<end){
+          article.style.display="";
+        }else{
+          article.style.display="none";
+        }
+      });
+
+
+      /* ===================================================
+         INFORMACIÓN
+      =================================================== */
+
+      totalElement.textContent=articles.length;
+      currentElement.textContent=currentPage;
+      pagesElement.textContent=totalPages;
+
+
+      /* ===================================================
+         BOTONES
+      =================================================== */
+
+      const atFirst=currentPage===1;
+      const atLast=currentPage===totalPages;
+
+      firstButton.disabled=atFirst;
+      prevButton.disabled=atFirst;
+      nextButton.disabled=atLast;
+      lastButton.disabled=atLast;
+
+
+      /* ===================================================
+         NÚMEROS DE PÁGINA
+      =================================================== */
+
+      numbersContainer.innerHTML="";
+
+      const maxVisible=window.innerWidth<=640?3:5;
+
+      let startPage=Math.max(1,currentPage-2);
+      let endPage=Math.min(totalPages,startPage+maxVisible-1);
+
+      startPage=Math.max(1,endPage-maxVisible+1);
+
+
+      for(let page=startPage;page<=endPage;page++){
+
+        const button=document.createElement("button");
+
+        button.type="button";
+
+        button.className="cm-analysis-page-number"+(page===currentPage?" active":"");
+
+        button.textContent=page;
+
+        button.setAttribute("aria-label","Ir a la página "+page);
+
+        if(page===currentPage){
+          button.setAttribute("aria-current","page");
+        }
+
+        button.addEventListener("click",function(){
+          currentPage=page;
+          render();
+          scrollToToolbar();
+        });
+
+        numbersContainer.appendChild(button);
+      }
+    }
+
+
+    /* =====================================================
+       CAMBIAR DE PÁGINA
+    ===================================================== */
+
+    function goToPage(page){
+
+      const totalPages=getTotalPages();
+
+      page=parseInt(page,10);
+
+      if(Number.isNaN(page))return;
+
+      currentPage=Math.max(1,Math.min(page,totalPages));
+
+      render();
+      scrollToToolbar();
+    }
+
+
+    /* =====================================================
+       PRIMERA PÁGINA
+    ===================================================== */
+
+    firstButton.addEventListener("click",function(){
+      goToPage(1);
+    });
+
+
+    /* =====================================================
+       ANTERIOR
+    ===================================================== */
+
+    prevButton.addEventListener("click",function(){
+      goToPage(currentPage-1);
+    });
+
+
+    /* =====================================================
+       SIGUIENTE
+    ===================================================== */
+
+    nextButton.addEventListener("click",function(){
+      goToPage(currentPage+1);
+    });
+
+
+    /* =====================================================
+       ÚLTIMA PÁGINA
+    ===================================================== */
+
+    lastButton.addEventListener("click",function(){
+      goToPage(getTotalPages());
+    });
+
+
+    /* =====================================================
+       CAMBIAR ARTÍCULOS POR PÁGINA
+    ===================================================== */
+
+    perPageSelect.addEventListener("change",function(){
+
+      const selected=parseInt(this.value,10);
+
+      if(!Number.isNaN(selected)&&selected>0){
+        perPage=selected;
+      }else{
+        perPage=6;
+      }
+
+      currentPage=1;
+      render();
+    });
+
+
+    /* =====================================================
+       BOTÓN IR
+    ===================================================== */
+
+    gotoButton.addEventListener("click",function(){
+
+      goToPage(gotoInput.value);
+
+      gotoInput.value="";
+    });
+
+
+    /* =====================================================
+       ENTER
+    ===================================================== */
+
+    gotoInput.addEventListener("keydown",function(event){
+
+      if(event.key==="Enter"){
+        event.preventDefault();
+        gotoButton.click();
+      }
+
+    });
+
+
+    /* =====================================================
+       INICIALIZAR
+    ===================================================== */
+
+    render();
+  }
+
+
+  /* =======================================================
+     INICIAR CUANDO EL DOM ESTÉ LISTO
+  ======================================================= */
+
+  if(document.readyState==="loading"){
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      initAnalysisPagination
+    );
+
+  }else{
+
+    initAnalysisPagination();
+
+  }
+
+})();
+</script>
 
 
 
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articlesGrid">
-        <!-- Ejemplo de artículos -->
 
 
-
-        
-<!-- ARTÍCULO -->
-<div class="article">
-  <article>
-    <a href="./thomas-alva-edison-biografia.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/thomas-alva-edison-inventor.webp" alt="Thomas Alva Edison inventor y estrategia de riqueza">
-        </div>
-
-        <div class="badge editorial">Análisis Editorial</div>
-
-        <h2 class="article-title">
-          La clave de la riqueza de Edison: convertir ideas en sistemas de negocio
-        </h2>
-
-        <div class="badge badge-row">
-          <span>
-            Mejorado el 14 Jun 2026 | 10:35 h • 5 min lectura
-          </span>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<!-- ARTÍCULO -->
-<div class="article">
-  <article>
-    <a href="./fundador-de-kfc-construyo-su-fortuna.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/miniaturas/kfc-origen-empresarial-financiero.webp" alt="Harland Sanders fundador de KFC historia de riqueza">
-        </div>
-
-        <div class="badge editorial">Análisis Editorial</div>
-
-        <h2 class="article-title">
-          Así nació la fortuna del fundador de KFC Harland David Sanders
-        </h2>
-
-        <div class="badge badge-row">
-          <span>
-            Mejorado el 08 Jul 2026 | 14:21 h • 6 min lectura
-          </span>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<!-- ARTÍCULO -->
-<div class="article">
-  <article>
-    <a href="./oprah-winfrey-multimillonaria.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/riqueza-oprah-winfrey.webp" alt="Oprah Winfrey imperio mediático historia de éxito">
-        </div>
-
-        <div class="badge editorial">Análisis Editorial</div>
-
-        <h2 class="article-title">
-          La estrategia que llevó a Oprah de empleada a dueña de su propio imperio
-        </h2>
-
-        <div class="badge badge-row">
-          <span>
-            Mejorado el 10 Jun 2026 | 21:15 h • 6 min lectura
-          </span>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<!-- ARTÍCULO -->
-<div class="article">
-  <article>
-    <a href="./jeff-bezos-ceo-amazon.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/jeff-bezos-estrategia-amazon.webp" alt="Jeff Bezos Amazon imperio estrategia empresarial">
-        </div>
-
-        <div class="badge editorial">Análisis Editorial</div>
-
-        <h2 class="article-title">
-          La estrategia fría que convirtió a Amazon en un imperio global
-        </h2>
-
-        <div class="badge badge-row">
-          <span>
-          Mejorado el 12 Jul 2026 | 15:12 h • 6 min lectura
-          </span>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<!-- ARTÍCULO -->
-<div class="article">
-  <article>
-    <a href="./como-carlos-slim-se-hizo-rico.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/carlos-slim-millonario-mexicano.webp" alt="Carlos Slim historia de riqueza y estrategia silenciosa">
-        </div>
-
-        <div class="badge editorial">Análisis Editorial</div>
-
-        <h2 class="article-title">
-         Qué hizo diferente Carlos Slim para construir una fortuna multimillonaria
-        </h2>
-
-        <div class="badge badge-row">
-          <span>
-            Mejorado el 25 Jun 2026 | 18:26 h • 6 min lectura
-          </span>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<!-- ARTÍCULO -->
-<div class="article">
-  <article>
-    <a href="./jack-ma-de-profesor-a-millonario-alibaba.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/jack-ma-de-profesor-a-multimillonario.webp" alt="Jack Ma de profesor a fundador de Alibaba historia de éxito">
-        </div>
-
-        <div class="badge editorial">Análisis Editorial</div>
-
-        <h2 class="article-title">
-          Cuando nadie lo contrataba, Jack Ma decidió crear su propio sistema
-        </h2>
-
-        <div class="badge badge-row">
-          <span>
-            Escrito el 15 Ene 2026 | 15:09 h • 5 min lectura
-          </span>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
-
-<!-- ARTÍCULO -->
-<div class="article">
-  <article>
-    <a href="./jk-rowling-harry-potter-fortuna.html" class="article-link">
-      <div class="article-card">
-
-        <div style="position: relative;">
-          <img src="../../assets/png/jk-rowling-historia-fortuna.webp" alt="J.K. Rowling Harry Potter historia de fortuna y éxito">
-        </div>
-
-        <div class="badge editorial">Análisis Editorial</div>
-
-        <h2 class="article-title">
-          El proceso que transformó la obra de Harry Potter en una fortuna
-        </h2>
-
-        <div class="badge badge-row">
-          <span>
-            Escrito el 08 Ene 2026 | 19:22 h • 5 min lectura
-          </span>
-        </div>
-
-      </div>
-    </a>
-  </article>
-</div>
+ <!-- ESPACIO ARRIBA -->
+ <div style="height: 100px;"></div>
 
 
 
 
-              <!-- Mas artículos -->
-     </div>
-   </div>
- </section>
-
-
- 
 
         
 <!-- TITULO -->
