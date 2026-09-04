@@ -2009,7 +2009,22 @@ img{
 
   <div class="slider-documentales" id="sliderDocumentales">
 
-    <!-- DOCUMENTAL 1 -->
+    <!-- ANÁLISIS -->
+    <article class="card-documental">
+      <a href="./blog/biografia-de-millonarios/thomas-alva-edison-biografia.html" class="enlace-documental">
+        <div class="miniatura-documental">
+          <img src="./assets/png/thomas-alva-edison-inventor.webp" alt="Próximo documental">
+        </div>
+
+        <div class="contenido-documental">
+          <h3>Cómo Thomas Edison convirtió la invención en un imperio empresarial</h3>
+          <p>La estrategia empresarial detrás de sus proyectos, patentes y negocios.</p>
+          <span class="link-documental">LEER ANÁLISIS</span>
+        </div>
+      </a>
+    </article>
+
+    <!-- ANÁLISIS -->
     <article class="card-documental">
       <a href="PONERURLDELANALISIS" class="enlace-documental">
         <div class="miniatura-documental">
@@ -2025,9 +2040,9 @@ img{
     </article>
 
 
-    <!-- DOCUMENTAL 2 -->
+    <!-- ANÁLISIS -->
     <article class="card-documental">
-      <a href="PONERURLDELANALISIS" target="_blank" rel="noopener" class="enlace-documental">
+      <a href="./blog/biografia-de-millonarios/fundador-de-kfc-construyo-su-fortuna.html" target="_blank" rel="noopener" class="enlace-documental">
         <div class="miniatura-documental">
           <img src="./assets/miniaturas/kfc-origen-empresarial-financiero.webp" alt="La Historia Real de KFC documental">
         </div>
@@ -2035,13 +2050,13 @@ img{
         <div class="contenido-documental">
           <h3>Cómo una receta se convirtió en un imperio empresarial</h3>
           <p>La estrategia empresarial detrás de un imperio alimenticio.</p>
-          <span class="link-documental">MUY PRONTO</span>
+          <span class="link-documental">LEER ANÁLISIS</span>
         </div>
       </a>
     </article>
 
 
-    <!-- DOCUMENTAL 3 -->
+    <!-- ANÁLISIS -->
     <article class="card-documental">
       <a href="#" class="enlace-documental">
         <div class="miniatura-documental">
@@ -2057,7 +2072,7 @@ img{
     </article>
 
 
-    <!-- DOCUMENTAL 4 -->
+    <!-- ANÁLISIS -->
     <article class="card-documental">
       <a href="#" class="enlace-documental">
         <div class="miniatura-documental">
@@ -2149,16 +2164,18 @@ img{
 }
 
 .slider-documentales {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
     gap: 26px;
     max-width: 1180px;
     margin: 0 auto;
-    overflow: visible;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .card-documental {
-    min-width: 0;
+    min-width: calc((100% - 78px) / 4);
+    max-width: calc((100% - 78px) / 4);
+    flex-shrink: 0;
     position: relative;
 }
 
@@ -2403,15 +2420,26 @@ function moveToCard(index) {
 
     if (!card) return;
 
-    if (window.innerWidth <= 600) {
+    const sliderWidth = slider.offsetWidth;
+    const cardWidth = card.offsetWidth;
+    const gap = parseFloat(getComputedStyle(slider).gap) || 0;
 
-        const sliderWidth = slider.offsetWidth;
-        const cardWidth = card.offsetWidth;
+    if (window.innerWidth <= 600) {
 
         const scrollPosition =
             card.offsetLeft -
             (sliderWidth / 2) +
             (cardWidth / 2);
+
+        slider.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+        });
+
+    } else {
+
+        const scrollPosition =
+            index * (cardWidth + gap);
 
         slider.scrollTo({
             left: scrollPosition,
@@ -2425,11 +2453,10 @@ function moveToCard(index) {
 
 nextBtn.addEventListener('click', () => {
 
-    if (
-        window.innerWidth <= 600 &&
-        currentIndex < cards.length - 1
-    ) {
+    if (currentIndex < cards.length - 1) {
+
         currentIndex++;
+
         moveToCard(currentIndex);
     }
 });
@@ -2439,16 +2466,16 @@ nextBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', () => {
 
-    if (
-        window.innerWidth <= 600 &&
-        currentIndex > 0
-    ) {
+    if (currentIndex > 0) {
+
         currentIndex--;
+
         moveToCard(currentIndex);
     }
 });
 
 </script>
+
 
 
 
