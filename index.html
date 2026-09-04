@@ -955,13 +955,13 @@ fetch('posts.json')
 
 
 
-·
 
 
 <!-- ESPACIO ARRIBA -->
- <div style="height: 150px;"></div>
+ <div style="height: 250px;"></div>
 
     
+
 
 
 
@@ -989,7 +989,7 @@ fetch('posts.json')
     <div class="cm-social-editorial">
 
       <span class="cm-social-label">
-      También estamos en redes:
+      También estamos en redes
       </span>
 
       <div class="uvo-socials">
@@ -1062,140 +1062,81 @@ fetch('posts.json')
 
 <style>
 
-/* =========================
+/* =========================================
    ENFOQUE BLOG
-========================= */
+========================================= */
 
 .enfoque-blog {
     width: calc(100% - 100px);
     max-width: 1450px;
-
-    margin: 0 auto 60px auto;
+    margin: 0 auto 60px;
 }
-
-
-/* =========================
-   CONTENIDO
-========================= */
 
 .enfoque-contenido {
-    padding: 0 4px 15px 4px;
+    padding: 0 4px 15px;
 }
 
-
-/* =========================
-   ETIQUETA
-========================= */
+/* ETIQUETAS */
 
 .enfoque-blog .etiqueta-enfoque {
     display: block;
-
-    margin: 0 0 8px 0;
-
+    margin: 0 0 8px;
     color: #111111;
-
     font-size: 9px;
     line-height: 1;
-
     font-weight: 800;
-
     letter-spacing: 2.2px;
-
     text-transform: uppercase;
 }
-
-
-/* =========================
-   ETIQUETA MEDIO
-========================= */
 
 .enfoque-blog .etiqueta-medio {
     display: inline-block;
-
     margin-left: 5px;
-
-    padding: 4px 6px 3px 6px;
-
+    padding: 4px 6px 3px;
     background: #111111;
-
     color: #ffffff;
-
     font-size: 8px;
-
     line-height: 1;
-
     font-weight: 700;
-
     letter-spacing: 1.4px;
-
     vertical-align: 1px;
-
     text-transform: uppercase;
 }
 
-
-/* =========================
-   DESCRIPCIÓN
-========================= */
+/* DESCRIPCIÓN */
 
 .enfoque-blog p {
     margin: 0;
-
     max-width: 650px;
-
     color: #555555;
-
     font-size: 12px;
-
     line-height: 1.6;
-
     font-weight: 400;
 }
 
-
-/* =========================
+/* =========================================
    ÁREA SOCIAL EDITORIAL
-========================= */
+========================================= */
 
 .cm-social-editorial {
     display: flex;
     align-items: center;
     gap: 16px;
-
     margin-top: 22px;
-
     padding-top: 14px;
-
     border-top: 1px solid #e8e8e8;
-
     max-width: 650px;
 }
 
-
-/* =========================
-   TEXTO REDES
-========================= */
-
 .cm-social-label {
     flex-shrink: 0;
-
     color: #888888;
-
     font-size: 8px;
-
     font-weight: 700;
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
-
     white-space: nowrap;
 }
-
-
-/* =========================
-   CONTENEDOR REDES
-========================= */
 
 .cm-social-editorial .uvo-socials {
     display: flex;
@@ -1203,58 +1144,36 @@ fetch('posts.json')
     gap: 12px;
 }
 
-
-/* =========================
-   ENLACES
-========================= */
-
 .cm-social-editorial .uvo-socials a {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 16px;
     height: 16px;
-
     color: #777777;
-
     text-decoration: none;
-
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
-
-
-/* =========================
-   ICONOS
-========================= */
 
 .cm-social-editorial .uvo-socials i {
     font-size: 13px;
 }
-
 
 .cm-social-editorial .uvo-socials svg {
     width: 12px;
     height: 12px;
 }
 
-
-/* =========================
-   HOVER
-========================= */
+/* HOVER */
 
 .cm-social-editorial .uvo-socials a:hover {
     color: #111111;
-
     transform: translateY(-1px);
 }
 
-
-/* =========================
+/* =========================================
    TABLET
-========================= */
+========================================= */
 
 @media (max-width: 900px) {
 
@@ -1263,86 +1182,68 @@ fetch('posts.json')
     }
 
     .enfoque-contenido {
-        padding: 0 3px 14px 3px;
+        padding: 0 3px 14px;
     }
-
 }
 
-
-/* =========================
+/* =========================================
    MÓVIL
-========================= */
+========================================= */
 
 @media (max-width: 480px) {
 
     .enfoque-blog {
         width: calc(100% - 36px);
-
         margin-bottom: 50px;
     }
 
     .enfoque-contenido {
-        padding: 0 2px 13px 2px;
+        padding: 0 2px 13px;
     }
 
     .enfoque-blog .etiqueta-enfoque {
         font-size: 8.5px;
-
         letter-spacing: 2px;
-
         margin-bottom: 7px;
     }
 
     .enfoque-blog .etiqueta-medio {
         margin-left: 4px;
-
-        padding: 3px 5px 2px 5px;
-
+        padding: 3px 5px 2px;
         font-size: 7.5px;
-
         letter-spacing: 1.2px;
     }
 
     .enfoque-blog p {
         font-size: 11.5px;
-
         line-height: 1.6;
     }
 
-
-    /* REDES EN MÓVIL */
+    /* REDES */
 
     .cm-social-editorial {
         gap: 12px;
-
         margin-top: 19px;
-
         padding-top: 13px;
     }
 
-
     .cm-social-label {
         font-size: 7px;
-
         letter-spacing: 1.2px;
     }
-
 
     .cm-social-editorial .uvo-socials {
         gap: 10px;
     }
 
-
     .cm-social-editorial .uvo-socials i {
         font-size: 12px;
     }
-
 
     .cm-social-editorial .uvo-socials svg {
         width: 11px;
         height: 11px;
     }
-
 }
 
 </style>
@@ -1352,8 +1253,7 @@ fetch('posts.json')
 
 
 
- <!-- ESPACIO ARRIBA -->
- <div style="height: 100px;"></div>
+
 
 
 
@@ -2074,6 +1974,7 @@ img{
 
 
 
+
 <!-- =========================
      SECCIÓN DOCUMENTALES
 ========================= -->
@@ -2082,818 +1983,419 @@ img{
 
   <div class="contenedor-documentales">
 
-    <!-- =========================
-         ENCABEZADO
-    ========================= -->
-
-    <div class="encabezado-documentales">
-
-      <span class="etiqueta-documentales">
-        ANÁLISIS
-      </span>
-
-      <h2>
-        Psicología Financiera y Económica
-      </h2>
-
-      <p class="descripcion-documentales">
-        Explora cómo las personas piensan, gastan e invierten, y cómo las emociones influyen en sus decisiones financieras.
-      </p>
-
-    </div>
-
-
-    <!-- =========================
-         SLIDER
-    ========================= -->
-
-    <div class="slider-wrapper">
-
-      <!-- BOTÓN IZQUIERDO -->
-
-      <button
-        class="btn-slider prev"
-        id="prevBtn"
-        aria-label="Documental anterior"
-      >
-        &#10094;
-      </button>
-
-
-      <!-- SLIDER -->
-
-      <div
-        class="slider-documentales"
-        id="sliderDocumentales"
-      >
-
-
-        <!-- =========================
-             DOCUMENTAL 1
-        ========================= -->
-
-        <article class="card-documental">
-
-          <a
-            href="https://youtu.be/kzjEUWnd--U?si=ooGDK5-o_OlGDhcI"
-            class="enlace-documental"
-          >
-
-            <div class="miniatura-documental">
-
-              <img
-                src="./assets/miniaturas/mineros-fiebre-del-oro-documental.webp"
-                alt="Próximo documental"
-              >
-
-            </div>
-
-
-            <div class="contenido-documental">
-
-              <h3>
-                El Evento Financiero que Desató la Fiebre del Oro
-              </h3>
-
-              <p>
-                Un Evento que Desató una Fiebre de Dinero y Riesgo entre Miles de Personas
-              </p>
-
-              <span class="link-documental">
-                VER ANÁLISIS →
-              </span>
-
-            </div>
-
-          </a>
-
-        </article>
-
-
-        <!-- =========================
-             DOCUMENTAL 2
-        ========================= -->
-
-        <article class="card-documental">
-
-          <a
-            href="https://www.youtube.com/watch?v=M5w2Bs4840Q"
-            target="_blank"
-            rel="noopener"
-            class="enlace-documental"
-          >
-
-            <div class="miniatura-documental">
-
-              <img
-                src="./assets/miniaturas/kfc-documental.webp"
-                alt="La Historia Real de KFC documental"
-              >
-
-            </div>
-
-
-            <div class="contenido-documental">
-
-              <h3>
-                Origen Empresarial y Financiero de KFC
-              </h3>
-
-              <p>
-                Análisis del ascenso financiero del Coronel Sanders y KFC.
-              </p>
-
-              <span class="link-documental">
-                VER ANÁLISIS →
-              </span>
-
-            </div>
-
-          </a>
-
-        </article>
-
-
-        <!-- =========================
-             DOCUMENTAL 3
-        ========================= -->
-
-        <article class="card-documental">
-
-          <a
-            href="#"
-            class="enlace-documental"
-          >
-
-            <div class="miniatura-documental">
-
-              <img
-                src="./assets/miniaturas/como-coca-cola-se-convirtio-en-un-imperio.webp"
-                alt="Próximo documental"
-              >
-
-            </div>
-
-
-            <div class="contenido-documental">
-
-              <h3>
-                Próximamente
-              </h3>
-
-              <p>
-                Nuevos documentales sobre negocios, marcas y mentalidad emprendedora llegarán muy pronto.
-              </p>
-
-              <span class="link-documental">
-                MUY PRONTO
-              </span>
-
-            </div>
-
-          </a>
-
-        </article>
-
-
-        <!-- =========================
-             DOCUMENTAL 4
-        ========================= -->
-
-        <article class="card-documental">
-
-          <a
-            href="#"
-            class="enlace-documental"
-          >
-
-            <div class="miniatura-documental">
-
-              <img
-                src="./assets/miniaturas/NOMBRE.webp"
-                alt="Próximo documental"
-              >
-
-            </div>
-
-
-            <div class="contenido-documental">
-
-              <h3>
-                Próximamente
-              </h3>
-
-              <p>
-                Nuevos documentales sobre negocios, marcas y mentalidad emprendedora llegarán muy pronto.
-              </p>
-
-              <span class="link-documental">
-                MUY PRONTO
-              </span>
-
-            </div>
-
-          </a>
-
-        </article>
-
-
-      </div>
-
-
-      <!-- BOTÓN DERECHO -->
-
-      <button
-        class="btn-slider next"
-        id="nextBtn"
-        aria-label="Siguiente documental"
-      >
-        &#10095;
-      </button>
-
-    </div>
+<!-- ENCABEZADO -->
+<div class="encabezado-documentales">
+  <span class="etiqueta-documentales">ANÁLISIS</span>
+
+  <h2>
+  Empresas, Dinero y Economía
+  </h2>
+
+  <p class="descripcion-documentales">
+    Analizamos historias, empresas y fenómenos económicos para descubrir cómo se mueve el dinero, 
+    cómo se construyen los negocios y qué podemos aprender de ellos.
+  </p>
+</div>
+
+<!-- =========================
+     SLIDER
+========================= -->
+
+<div class="slider-wrapper">
+
+  <button class="btn-slider prev" id="prevBtn" aria-label="Documental anterior">
+    &#10094;
+  </button>
+
+  <div class="slider-documentales" id="sliderDocumentales">
+
+    <!-- DOCUMENTAL 1 -->
+    <article class="card-documental">
+      <a href="PONERURLDELANALISIS" class="enlace-documental">
+        <div class="miniatura-documental">
+          <img src="./assets/miniaturas/mineros-fiebre-del-oro-documental.webp" alt="Próximo documental">
+        </div>
+
+        <div class="contenido-documental">
+          <h3>La carrera por hacerse rico que cambió el mundo</h3>
+          <p>Riqueza, ambición y oportunidades en una carrera sin precedentes.</p>
+          <span class="link-documental">MUY PRONTO</span>
+        </div>
+      </a>
+    </article>
+
+
+    <!-- DOCUMENTAL 2 -->
+    <article class="card-documental">
+      <a href="PONERURLDELANALISIS" target="_blank" rel="noopener" class="enlace-documental">
+        <div class="miniatura-documental">
+          <img src="./assets/miniaturas/kfc-origen-empresarial-financiero.webp" alt="La Historia Real de KFC documental">
+        </div>
+
+        <div class="contenido-documental">
+          <h3>Cómo una receta se convirtió en un imperio empresarial</h3>
+          <p>La estrategia empresarial detrás de un imperio alimenticio.</p>
+          <span class="link-documental">MUY PRONTO</span>
+        </div>
+      </a>
+    </article>
+
+
+    <!-- DOCUMENTAL 3 -->
+    <article class="card-documental">
+      <a href="#" class="enlace-documental">
+        <div class="miniatura-documental">
+          <img src="./assets/miniaturas/como-coca-cola-se-convirtio-en-un-imperio.webp" alt="Próximo documental">
+        </div>
+
+        <div class="contenido-documental">
+          <h3>Cómo una bebida se convirtió en un imperio mundial</h3>
+          <p>La fórmula empresarial detrás de una marca global.</p>
+          <span class="link-documental">MUY PRONTO</span>
+        </div>
+      </a>
+    </article>
+
+
+    <!-- DOCUMENTAL 4 -->
+    <article class="card-documental">
+      <a href="#" class="enlace-documental">
+        <div class="miniatura-documental">
+          <img src="./assets/miniaturas/petroleo-origen-industria-fortuna.webp" alt="Próximo documental">
+        </div>
+
+        <div class="contenido-documental">
+          <h3>El negocio que cambió el mundo y creó grandes fortunas</h3>
+          <p>El poder económico detrás del recurso más estratégico del mundo.</p>
+          <span class="link-documental">MUY PRONTO</span>
+        </div>
+      </a>
+    </article>
+
+  </div>
+
+  <button class="btn-slider next" id="nextBtn" aria-label="Siguiente documental">
+    &#10095;
+  </button>
+
+</div>
 
   </div>
 
 </section>
 
-
 <style>
 
-/* =====================================================
-   SECCIÓN DOCUMENTALES
-===================================================== */
+/* =========================================
+   DOCUMENTALES
+========================================= */
 
 .documentales {
-
     padding: 65px 30px;
-
     background: #111111;
-
     overflow: hidden;
-
     font-family: "Inter", sans-serif;
 }
 
-
 .contenedor-documentales {
-
     width: 100%;
-
     max-width: 1300px;
-
     margin: 0 auto;
 }
 
-
-/* =====================================================
-   ENCABEZADO
-===================================================== */
+/* ENCABEZADO */
 
 .encabezado-documentales {
-
     max-width: 720px;
-
     margin-bottom: 38px;
 }
 
-
-/* =====================================================
-   ETIQUETA
-===================================================== */
-
 .etiqueta-documentales {
-
     display: inline-block;
-
     margin-bottom: 11px;
-
     color: #c49b63;
-
     font-size: 8px;
-
     line-height: 1;
-
     font-weight: 700;
-
     letter-spacing: 2.2px;
-
     text-transform: uppercase;
 }
 
-
-/* =====================================================
-   TÍTULO
-===================================================== */
-
 .documentales h2 {
-
-    margin: 0 0 12px 0;
-
+    margin: 0 0 12px;
     color: #ffffff;
-
     font-size: clamp(1.8rem, 3vw, 2.8rem);
-
     line-height: 1.08;
-
     letter-spacing: -1.1px;
-
     font-weight: 700;
 }
 
-
-/* =====================================================
-   DESCRIPCIÓN
-===================================================== */
-
 .descripcion-documentales {
-
     max-width: 650px;
-
     margin: 0;
-
     color: #929292;
-
     font-size: 12px;
-
     line-height: 1.7;
-
     font-weight: 400;
 }
 
-
-/* =====================================================
-   SLIDER
-===================================================== */
+/* =========================================
+   SLIDER Y TARJETAS
+========================================= */
 
 .slider-wrapper {
-
     position: relative;
-
     width: 100%;
 }
 
-
 .slider-documentales {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 26px;
-
     max-width: 1180px;
-
     margin: 0 auto;
-
     overflow: visible;
 }
 
-
-/* =====================================================
-   DOCUMENTALES
-===================================================== */
-
 .card-documental {
-
     min-width: 0;
-
     position: relative;
 }
 
-
-/* =====================================================
-   ENLACE
-===================================================== */
-
 .enlace-documental {
-
     display: block;
-
     position: relative;
-
     color: inherit;
-
     text-decoration: none;
 }
 
-
-/* =====================================================
-   MINIATURA
-===================================================== */
+/* MINIATURA */
 
 .miniatura-documental {
-
     width: 100%;
-
     aspect-ratio: 16 / 10;
-
     overflow: hidden;
-
     background: #1a1a1a;
-
     margin-bottom: 14px;
 }
 
-
 .miniatura-documental img {
-
     width: 100%;
-
     height: 100%;
-
     display: block;
-
     object-fit: cover;
-
-    transition:
-        transform .45s ease,
-        opacity .3s ease;
+    transition: transform .45s ease, opacity .3s ease;
 }
 
-
-.enlace-documental:hover
-.miniatura-documental img {
-
+.enlace-documental:hover .miniatura-documental img {
     transform: scale(1.025);
-
     opacity: .88;
 }
 
-
-/* =====================================================
-   CONTENIDO
-===================================================== */
+/* CONTENIDO */
 
 .contenido-documental {
-
     position: relative;
-
     padding-bottom: 14px;
 }
 
-
-/* =====================================================
-   LÍNEA HOVER
-===================================================== */
-
 .contenido-documental::after {
-
     content: "";
-
     position: absolute;
-
     left: 0;
-
     bottom: 0;
-
     width: 0;
-
     height: 1px;
-
     background: #ffffff;
-
-    transition:
-        width .35s ease;
+    transition: width .35s ease;
 }
 
-
-.enlace-documental:hover
-.contenido-documental::after {
-
+.enlace-documental:hover .contenido-documental::after {
     width: 100%;
 }
 
-
-/* =====================================================
-   TÍTULO
-===================================================== */
-
 .contenido-documental h3 {
-
-    margin: 0 0 8px 0;
-
+    margin: 0 0 8px;
     color: #ffffff;
-
     font-size: 15px;
-
     line-height: 1.28;
-
     letter-spacing: -.2px;
-
     font-weight: 650;
-
-    transition:
-        opacity .25s ease;
+    transition: opacity .25s ease;
 }
 
-
-.enlace-documental:hover
-.contenido-documental h3 {
-
+.enlace-documental:hover .contenido-documental h3 {
     opacity: .72;
 }
 
-
-/* =====================================================
-   DESCRIPCIÓN
-===================================================== */
-
 .contenido-documental p {
-
-    margin: 0 0 11px 0;
-
+    margin: 0 0 11px;
     color: #929292;
-
     font-size: 10.5px;
-
     line-height: 1.6;
-
     font-weight: 400;
 }
 
-
-/* =====================================================
-   LINK
-===================================================== */
-
 .link-documental {
-
     display: inline-block;
-
     color: #c49b63;
-
     font-size: 7.5px;
-
     line-height: 1;
-
     font-weight: 700;
-
     letter-spacing: 1.3px;
-
     text-transform: uppercase;
-
     opacity: .8;
-
-    transition:
-        opacity .25s ease;
+    transition: opacity .25s ease;
 }
 
-
-.enlace-documental:hover
-.link-documental {
-
+.enlace-documental:hover .link-documental {
     opacity: 1;
 }
 
-
-/* =====================================================
+/* =========================================
    BOTONES
-===================================================== */
+========================================= */
 
 .btn-slider {
-
     position: absolute;
-
     top: 42%;
-
     transform: translateY(-50%);
-
     width: 32px;
-
     height: 32px;
-
     border: 1px solid rgba(255,255,255,.13);
-
     border-radius: 50%;
-
     background: rgba(17,17,17,.9);
-
     color: #bbbbbb;
-
     font-size: 13px;
-
     line-height: 1;
-
     cursor: pointer;
-
     z-index: 10;
-
-    transition:
-        background .25s ease,
-        color .25s ease,
-        border-color .25s ease;
+    transition: background .25s ease, color .25s ease, border-color .25s ease;
 }
 
-
 .btn-slider:hover {
-
     background: #ffffff;
-
     color: #111111;
-
     border-color: #ffffff;
 }
 
+.prev { left: -8px; }
+.next { right: -8px; }
 
-.prev {
-
-    left: -8px;
-}
-
-
-.next {
-
-    right: -8px;
-}
-
-
-/* =====================================================
+/* =========================================
    TABLET
-===================================================== */
+========================================= */
 
 @media (max-width: 1100px) {
 
     .documentales {
-
         padding: 55px 25px;
     }
 
-
     .slider-documentales {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         max-width: 760px;
-
         gap: 38px 28px;
     }
 
-
     .btn-slider {
-
         display: none;
     }
-
 }
 
-
-/* =====================================================
+/* =========================================
    MÓVIL
-===================================================== */
+========================================= */
 
 @media (max-width: 600px) {
 
     .documentales {
-
         padding: 50px 20px;
     }
 
-
     .encabezado-documentales {
-
         margin-bottom: 32px;
     }
 
-
     .etiqueta-documentales {
-
         font-size: 7.5px;
-
         letter-spacing: 2px;
     }
 
-
     .documentales h2 {
-
         font-size: 1.9rem;
-
         letter-spacing: -.8px;
     }
 
-
     .descripcion-documentales {
-
         font-size: 12px;
-
         line-height: 1.65;
     }
 
-
-    /* SLIDER */
-
     .slider-documentales {
-
         display: flex;
-
         gap: 20px;
-
         overflow-x: auto;
-
         overflow-y: hidden;
-
         scroll-behavior: smooth;
-
         scroll-snap-type: x mandatory;
-
         scrollbar-width: none;
-
         max-width: none;
-
         margin: 0;
-
-        padding: 0 3px 3px 3px;
-
+        padding: 0 3px 3px;
         -webkit-overflow-scrolling: touch;
     }
 
-
     .slider-documentales::-webkit-scrollbar {
-
         display: none;
     }
 
-
-    /* PIEZA */
-
     .card-documental {
-
         min-width: 82vw;
-
         max-width: 82vw;
-
         flex-shrink: 0;
-
         scroll-snap-align: center;
     }
 
-
     .miniatura-documental {
-
         aspect-ratio: 16 / 10;
-
         margin-bottom: 14px;
     }
 
-
     .contenido-documental h3 {
-
         font-size: 17px;
     }
 
-
     .contenido-documental p {
-
         font-size: 11.5px;
     }
 
-
     .link-documental {
-
         font-size: 7.5px;
     }
 
-
     .btn-slider {
-
         display: none;
     }
-
 }
 
 </style>
 
-
 <script>
 
-/* =====================================================
+/* =========================================
    SLIDER DOCUMENTALES
-===================================================== */
+========================================= */
 
-const slider = document.getElementById(
-    'sliderDocumentales'
-);
-
-const nextBtn = document.getElementById(
-    'nextBtn'
-);
-
-const prevBtn = document.getElementById(
-    'prevBtn'
-);
-
-const cards = document.querySelectorAll(
-    '.card-documental'
-);
+const slider = document.getElementById('sliderDocumentales');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+const cards = document.querySelectorAll('.card-documental');
 
 let currentIndex = 0;
 
 
-/* =====================================================
-   MOVER AL DOCUMENTAL
-===================================================== */
+/* MOVER AL DOCUMENTAL */
 
 function moveToCard(index) {
 
@@ -2901,78 +2403,50 @@ function moveToCard(index) {
 
     if (!card) return;
 
-
     if (window.innerWidth <= 600) {
 
-        const sliderWidth =
-            slider.offsetWidth;
-
-        const cardWidth =
-            card.offsetWidth;
+        const sliderWidth = slider.offsetWidth;
+        const cardWidth = card.offsetWidth;
 
         const scrollPosition =
             card.offsetLeft -
             (sliderWidth / 2) +
             (cardWidth / 2);
 
-
         slider.scrollTo({
-
             left: scrollPosition,
-
             behavior: 'smooth'
-
         });
-
     }
-
 }
 
 
-/* =====================================================
-   SIGUIENTE
-===================================================== */
+/* SIGUIENTE */
 
-nextBtn.addEventListener(
-    'click',
-    () => {
+nextBtn.addEventListener('click', () => {
 
-        if (
-            window.innerWidth <= 600 &&
-            currentIndex < cards.length - 1
-        ) {
-
-            currentIndex++;
-
-            moveToCard(currentIndex);
-
-        }
-
+    if (
+        window.innerWidth <= 600 &&
+        currentIndex < cards.length - 1
+    ) {
+        currentIndex++;
+        moveToCard(currentIndex);
     }
-);
+});
 
 
-/* =====================================================
-   ANTERIOR
-===================================================== */
+/* ANTERIOR */
 
-prevBtn.addEventListener(
-    'click',
-    () => {
+prevBtn.addEventListener('click', () => {
 
-        if (
-            window.innerWidth <= 600 &&
-            currentIndex > 0
-        ) {
-
-            currentIndex--;
-
-            moveToCard(currentIndex);
-
-        }
-
+    if (
+        window.innerWidth <= 600 &&
+        currentIndex > 0
+    ) {
+        currentIndex--;
+        moveToCard(currentIndex);
     }
-);
+});
 
 </script>
 
@@ -2981,12 +2455,9 @@ prevBtn.addEventListener(
 
 
 
-
-
-
-
 <!-- ESPACIO ARRIBA -->
  <div style="height: 140px;"></div>
+
 
 
 
@@ -4719,177 +4190,104 @@ document
 
 <style>
 
-/*=============================
-        SECCIÓN
-=============================*/
+/* =========================================
+   SECCIÓN
+========================================= */
 
 .cm-trust-section{
-
     padding:90px 20px;
-
     background:#fff;
-
     font-family:'Inter',sans-serif;
-
 }
-
-/*=============================
-        CONTENEDOR
-=============================*/
 
 .cm-trust-container{
-
     max-width:1200px;
-
     margin:auto;
-
 }
 
-/*=============================
-            GRID
-=============================*/
+/* GRID */
 
 .cm-trust-grid{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:26px;
-
 }
 
-/*=============================
-            CARD
-=============================*/
+/* CARD */
 
 .cm-card{
-
     background:#fff;
-
     border:1px solid #e7e5e4;
-
     border-radius:22px;
-
     padding:34px;
-
     transition:.30s ease;
-
 }
 
 .cm-card:hover{
-
     transform:translateY(-8px);
-
     border-color:#0f766e;
-
     box-shadow:0 18px 40px rgba(0,0,0,.07);
-
 }
 
-/*=============================
-          ETIQUETA
-=============================*/
+/* CONTENIDO */
 
 .cm-label{
-
     display:inline-block;
-
     padding:5px 12px;
-
     border-radius:999px;
-
     background:#f5f5f4;
-
     color:#57534e;
-
     font-size:13px;
-
     font-weight:500;
-
     margin-bottom:28px;
-
 }
-
-/*=============================
-          NÚMERO
-=============================*/
 
 .cm-card h3{
-
     margin:0;
-
     font-size:3.2rem;
-
     line-height:1;
-
     letter-spacing:-3px;
-
     font-weight:700;
-
     color:#1c1917;
-
 }
-
-/*=============================
-         DESCRIPCIÓN
-=============================*/
 
 .cm-card p{
-
     margin-top:22px;
-
     color:#57534e;
-
     font-size:1rem;
-
     line-height:1.8;
-
 }
 
-/*=============================
-            MOBILE
-=============================*/
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media (max-width:1024px){
-
     .cm-trust-grid{
-
         grid-template-columns:repeat(2,1fr);
-
     }
-
 }
 
 @media (max-width:700px){
-
     .cm-trust-section{
-
         padding:70px 20px;
-
     }
 
     .cm-trust-grid{
-
         grid-template-columns:1fr;
-
     }
 
     .cm-card{
-
         padding:30px;
-
     }
 
     .cm-card h3{
-
         font-size:2.7rem;
-
     }
-
 }
 
 </style>
+
 
 
 
