@@ -2157,6 +2157,7 @@ Más que una historia inspiradora, el recorrido de Oprah es un caso práctico de
 </style>
 
 <script>
+
 const select=document.getElementById("articleSelect");
 const searchInput=document.getElementById("searchInput");
 const goBtn=document.getElementById("goBtn");
@@ -2165,13 +2166,30 @@ const interlinkGrid=document.getElementById("interlinkGrid");
 const perPage=6;
 let allArticles=[];
 
+/* =========================================================
+   ACORTAR TÍTULOS
+========================================================= */
+
 function truncate(text,maxLength=65){
-  return text.length>maxLength?text.slice(0,maxLength)+"...":text;
+  return text.length>maxLength
+    ?text.slice(0,maxLength)+"..."
+    :text;
 }
 
+/* =========================================================
+   MEZCLAR ARTÍCULOS
+========================================================= */
+
 function shuffle(array){
-  return array.map(v=>({v,s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
+  return array
+    .map(v=>({v,s:Math.random()}))
+    .sort((a,b)=>a.s-b.s)
+    .map(o=>o.v);
 }
+
+/* =========================================================
+   MOSTRAR SELECTOR
+========================================================= */
 
 function renderSelect(list){
   select.innerHTML="";
@@ -2192,6 +2210,10 @@ function renderSelect(list){
   });
 }
 
+/* =========================================================
+   MOSTRAR TARJETAS
+========================================================= */
+
 function renderCards(list){
   interlinkGrid.innerHTML="";
 
@@ -2199,7 +2221,7 @@ function renderCards(list){
     interlinkGrid.innerHTML+=`
       <a href="${a.url}" class="news-item">
         <div class="news-thumb">
-          <img src="${a.image}" alt="${a.title}">
+          <img src="${a.image}" alt="${a.title}" loading="lazy">
         </div>
         <div class="news-text">
           <h3>${a.title}</h3>
@@ -2210,47 +2232,134 @@ function renderCards(list){
   });
 }
 
+/* =========================================================
+   MOSTRAR TODO
+========================================================= */
+
 function renderAll(list){
   totalArticles.textContent=list.length;
   renderSelect(list);
   renderCards(list);
 }
 
+/* =========================================================
+   BOTÓN IR
+========================================================= */
+
 goBtn.addEventListener("click",()=>{
-  if(select.value) window.location.href=select.value;
+  if(select.value){
+    window.location.href=select.value;
+  }
 });
+
+/* =========================================================
+   BUSCADOR
+========================================================= */
 
 searchInput.addEventListener("input",()=>{
   const q=searchInput.value.toLowerCase();
-  renderAll(allArticles.filter(a=>a.title.toLowerCase().includes(q)));
+
+  renderAll(
+    allArticles.filter(
+      a=>a.title.toLowerCase().includes(q)
+    )
+  );
 });
 
-fetch("../biografia-de-millonarios/index.html")
+/* =========================================================
+   RASTREAR PÁGINA PRINCIPAL
+========================================================= */
+
+const sourceUrl=new URL(
+  "../biografia-de-millonarios/index.html",
+  window.location.href
+).href;
+
+fetch(sourceUrl)
 .then(r=>r.text())
 .then(html=>{
+
+  /* =======================================================
+     LEER HTML DE LA PÁGINA
+  ======================================================= */
+
   const parser=new DOMParser();
-  const doc=parser.parseFromString(html,"text/html");
-  const articles=doc.querySelectorAll(".article");
 
-  allArticles=shuffle(
-    Array.from(articles).map(article=>{
-      const link=article.querySelector("a.article-link");
-      const title=article.querySelector("h2.article-title");
-      const img=article.querySelector("img");
-      const meta=article.querySelector(".badge-row span");
-
-      return{
-        title:title?title.textContent.trim():"Sin título",
-        url:link?link.getAttribute("href"):"#",
-        image:img?img.getAttribute("src"):"./assets/png/default.png",
-        meta:meta?meta.textContent.trim():""
-      };
-    }).filter(a=>a.title.length>5)
+  const doc=parser.parseFromString(
+    html,
+    "text/html"
   );
 
+  /* =======================================================
+     BUSCAR NUEVO COMPAGINADO
+  ======================================================= */
+
+  const articles=doc.querySelectorAll(
+    ".cm-analysis-item"
+  );
+
+  /* =======================================================
+     EXTRAER INFORMACIÓN
+  ======================================================= */
+
+  allArticles=shuffle(
+    Array.from(articles)
+    .map(article=>{
+
+      const title=article.querySelector(
+        ".cm-analysis-text h3"
+      );
+
+      const img=article.querySelector(
+        ".cm-analysis-thumb img"
+      );
+
+      const category=article.querySelector(
+        ".cm-analysis-category"
+      );
+
+      const link=article.getAttribute("href");
+
+      const image=img
+        ?img.getAttribute("src")
+        :"";
+
+      return{
+        title:title
+          ?title.textContent.trim()
+          :"Sin título",
+
+        url:link
+          ?new URL(link,sourceUrl).href
+          :"#",
+
+        image:image
+          ?new URL(image,sourceUrl).href
+          :"./assets/png/default.png",
+
+        meta:category
+          ?category.textContent.trim()
+          :"ANÁLISIS EDITORIAL"
+      };
+
+    })
+    .filter(a=>a.title.length>5)
+  );
+
+  /* =======================================================
+     MOSTRAR ARTÍCULOS
+  ======================================================= */
+
   renderAll(allArticles);
+
 })
-.catch(err=>console.error("Interlink error:",err));
+.catch(err=>
+  console.error(
+    "Interlink error:",
+    err
+  )
+);
+
 </script>
 
 
