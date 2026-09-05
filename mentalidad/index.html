@@ -780,18 +780,19 @@ Análisis sobre psicología financiera, comportamiento económico, sesgos cognit
 
     font-family: 'Inter', sans-serif;
 
-    font-size: 4.2rem;
+    font-size: 3rem;
 
-    line-height: 0.98;
+    line-height: 1.05;
 
     font-weight: 800;
 
     color: #111111;
 
-    letter-spacing: -3px;
+    letter-spacing: -1.8px;
 
     margin-bottom: 24px;
 }
+
 
 /* SUBTITULO */
 
@@ -1504,509 +1505,548 @@ Análisis de la Mentalidad Financiera
 
 
 
-<div class="cm-brand-separator">
-  <span class="cm-brand-text">
-
-<span class="cm-brand-box">
-  Tendencias
-</span>
-
-<br>
-
-<span class="cm-brand-sub">
-  Análisis, ahorro e inversión
-</span>
-
-  </span>
-</div>
-
-<style>
-
-/* ================= CONTENEDOR ================= */
-
-.cm-brand-separator{
-  width:100%;
-  padding:70px 20px 20px; /* 🔥 menos padding abajo para acercar la línea */
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  background:#fff;
-}
-
-/* ================= TEXTO BASE ================= */
-
-.cm-brand-text{
-  font-family:"Inter", sans-serif;
-  font-size:13px;
-  letter-spacing:2.5px;
-  text-transform:uppercase;
-  color:#666;
-  text-align:center;
-  line-height:1.6;
-}
-
-/* ================= BLOQUE NEGRO (MARCA PRINCIPAL) ================= */
-
-.cm-brand-box{
-  display:inline-block;
-  background:#111;
-  color:#fff;
-  padding:8px 14px;
-  font-weight:700;
-  letter-spacing:2px;
-}
-
-/* ================= SUBTEXTO ================= */
-
-.cm-brand-sub{
-  display:inline-block;
-  margin-top:10px;
-  color:#666;
-}
-
-/* ================= LÍNEA GRUESA CENTRADA (MÁS PEGADA) ================= */
-
-.cm-brand-separator::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  bottom:8px; /* 🔥 antes estaba en 0, ahora más cerca del texto */
-
-  width:min(420px, 70%);
-  height:5px;
-  background:#111;
-}
-
-</style>
 
 
 
 
+<!-- =========================================================
+     SECCIÓN — ANÁLISIS
+========================================================= -->
+
+<section class="mb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="cm-analysis-editorial-line">
+      <span class="cm-analysis-editorial-label">Pensar Mejor</span>
+    </div>
+
+    <section class="cm-analysis-layout">
+      <aside class="cm-analysis-sidebar">
+
+        <!-- PAGINACIÓN -->
+        <div class="cm-analysis-toolbar">
+
+          <div class="cm-analysis-info">
+            <span><strong id="cmAnalysisTotal">0</strong> análisis</span>
+            <span class="cm-analysis-separator">·</span>
+            <span>Página <strong id="cmAnalysisCurrent">1</strong>/<strong id="cmAnalysisPages">1</strong></span>
+          </div>
+
+          <div class="cm-analysis-controls">
+            <button type="button" id="cmAnalysisFirst" class="cm-analysis-btn" aria-label="Primera página">«</button>
+            <button type="button" id="cmAnalysisPrev" class="cm-analysis-btn" aria-label="Página anterior">‹</button>
+
+            <div id="cmAnalysisNumbers" class="cm-analysis-page-numbers" aria-label="Páginas"></div>
+
+            <button type="button" id="cmAnalysisNext" class="cm-analysis-btn" aria-label="Página siguiente">›</button>
+            <button type="button" id="cmAnalysisLast" class="cm-analysis-btn" aria-label="Última página">»</button>
+          </div>
+
+          <div class="cm-analysis-options">
+
+            <select id="cmAnalysisPerPage" class="cm-analysis-select" aria-label="Cantidad de análisis por página">
+              <option value="4" selected>4 / página</option>
+              <option value="6">6 / página</option>
+              <option value="12">12 / página</option>
+              <option value="20">20 / página</option>
+            </select>
+
+            <div class="cm-analysis-goto">
+              <input
+                id="cmAnalysisGotoInput"
+                class="cm-analysis-goto-input"
+                type="number"
+                min="1"
+                inputmode="numeric"
+                placeholder="Ir"
+                aria-label="Número de página"
+              >
+              <button type="button" id="cmAnalysisGoto" class="cm-analysis-goto-btn">Ir</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- =================================================
+             ARTÍCULOS
+             
+             PARA AGREGAR UNO NUEVO:
+             COPIA UN BLOQUE .cm-analysis-item Y CAMBIA:
+             1. href
+             2. imagen
+             3. alt
+             4. categoría
+             5. título
+             6. descripción
+        ================================================== -->
+
+        <div id="cmAnalysisArticles">
 
 
-
-
-
-
-
-
-
-
-
-
-
-<div class="cm-container">
-
-  <!-- ================= HEADER ================= -->
-  <div class="cm-editorial-line">
-    <span class="cm-editorial-label">
-Pensar Mejor
-    </span>
+<!-- ANÁLISIS 11 -->
+<a href="../blog/psicologia-del-dinero/bloqueos-mentales-dinero.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../assets/png/pensamientos-erroneos-dinero.webp" alt="Patrones mentales que pueden limitar el crecimiento financiero" loading="lazy">
   </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">PSICOLOGÍA DEL DINERO</span>
+    <h3>5 patrones mentales que pueden limitar tu crecimiento financiero</h3>
+    <p>Descubre cómo las creencias que tienes sobre el dinero influyen en tus decisiones financieras y qué puedes hacer para desarrollar una relación más saludable con tus finanzas.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
 
-  <!-- ================= LISTA DE ARTÍCULOS ================= -->
-  <section class="main-layout mt-1">
+<!-- ANÁLISIS 12 -->
+<a href="../blog/mentalidad-de-exito/7-habitos-financieros-warren-buffett.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../assets/png/habitos-financieros-warren-buffett.webp" alt="Hábitos financieros y mentalidad de Warren Buffett" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">MENTALIDAD FINANCIERA</span>
+    <h3>Cómo la mentalidad de Warren Buffett puede mejorar tus finanzas</h3>
+    <p>Aprende los principios que han guiado las decisiones financieras de Warren Buffett durante décadas y descubre cómo aplicarlos a tu propia vida.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
 
-    <aside class="sidebar">
+<!-- ANÁLISIS 13 -->
+<a href="../blog/psicologia-del-dinero/mentalidad-de-riqueza-no-es-pensar-en-positivo.html" class="cm-analysis-item">
+  <div class="cm-analysis-thumb">
+    <img src="../assets/png/diferencia-mentalidad-riqueza-positivo.webp" alt="Mentalidad de riqueza y pensamiento positivo" loading="lazy">
+  </div>
+  <div class="cm-analysis-text">
+    <span class="cm-analysis-category">PSICOLOGÍA DEL DINERO</span>
+    <h3>Por qué no ganas dinero aunque tengas una mentalidad positiva</h3>
+    <p>Conoce por qué una actitud positiva por sí sola no garantiza mejores resultados financieros.</p>
+    <span class="cm-analysis-link">LEER ANÁLISIS</span>
+  </div>
+</a>
 
-      <div class="w-full h-px bg-slate-300"></div>
 
-            <!-- Noticia 1 -->
-      <a href="../blog/psicologia-del-dinero/bloqueos-mentales-dinero.html" class="news-item">
 
-        <div class="news-thumb">
-          <img src="../assets/png/pensamientos-erroneos-dinero.webp" alt="">
+          <!-- =================================================
+               COPIAR ESTE BLOQUE PARA CADA NUEVO ANÁLISIS
+          ================================================== -->
+
         </div>
 
-        <div class="news-text">
-          <h3>5 patrones mentales que pueden limitar tu crecimiento financiero</h3>
-          <p>Descubre cómo las creencias que tienes sobre el dinero influyen en tus decisiones financieras 
-            y qué puedes hacer para desarrollar una relación más saludable con tus finanzas.</p>
-        </div>
+      </aside>
+    </section>
 
-      </a>
-
-      <!-- Noticia 2 -->
-      <a href="../blog/mentalidad-de-exito/7-habitos-financieros-warren-buffett.html" class="news-item">
-
-        <div class="news-thumb">
-          <img src="../assets/png/habitos-financieros-warren-buffett.webp" alt="">
-        </div>
-
-        <div class="news-text">
-          <h3>Cómo la mentalidad de Warren Buffett puede mejorar tus finanzas</h3>
-          <p>Aprende los principios que han guiado las decisiones financieras de Warren Buffett 
-            durante décadas y descubre cómo aplicarlos a tu propia vida.</p>
-        </div>
-
-      </a>
-
-      <!-- Noticia 3 -->
-      <a href="../blog/psicologia-del-dinero/mentalidad-de-riqueza-no-es-pensar-en-positivo.html" class="news-item">
-
-        <div class="news-thumb">
-          <img src="../assets/png/diferencia-mentalidad-riqueza-positivo.webp" alt="">
-        </div>
-
-        <div class="news-text">
-          <h3>Por qué no ganas dinero aunque tengas una mentalidad positiva</h3>
-          <p>
-            Conoce por qué una actitud positiva por sí sola no garantiza mejores resultados financieros.
-          </p>
-        </div>
-
-      </a>
-
-      <!-- Noticia 4 -->
-      <a href="#" class="news-item">
-
-        <div class="news-thumb">
-          <img src="./assets/png/cuanto-dinero-ahorrado-segun-edad.webp" alt="">
-        </div>
-
-        <div class="news-text">
-          <h3>Próximamente </h3>
-          <p></p>
-        </div>
-
-      </a>
-
-    </aside>
-
-  </section>
-
-
-
-
-<!-- ESPACIO ARRIBA -->
- <div style="height: 100px;"></div>
-
-
-
-
-
-<div class="cm-editorial-line">
-
-  <span class="cm-editorial-label">
-Próximamente en Código Millonario
-  </span>
-
-</div>
-
-
-
-
-
-
-<section class="main-layout">
-
-  <!-- Sidebar izquierda -->
-  <aside class="sidebar">
-
-
-  <div class="w-full h-px bg-slate-300"></div>
-
-    <!-- Noticia 3 -->
-    <a href="./blog/biografia-de-millonarios/index.html" class="news-item">
-      <div class="news-thumb">
-        <img src="./assets/png/como-se-hicieron-millonarios.webp" alt="">
-      </div>
-      <div class="news-text">
-        <h3>Próximamente </h3>
-        <p>
-
-        </p>
-      </div>
-    </a>
-
-    <!-- Noticia 1 -->
-    <a href="./blog/ahorro/index.html" class="news-item">
-      <!-- Imagen a la izquierda -->
-      <div class="news-thumb">
-        <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="">
-      </div>
-      <!-- Texto a la derecha -->
-      <div class="news-text">
-        <h3>Próximamente </h3>
-        <p>
-
-        </p>
-      </div>
-    </a>
-
-    <!-- Noticia 2 -->
-    <a href="./blog/desarrollo-profesional/index.html" class="news-item">
-      <div class="news-thumb">
-        <img src="./assets/png/oportunidades-financieras-reales.webp" alt="">
-      </div>
-      <div class="news-text">
-        <h3>Próximamente </h3>
-        <p>
-
-        </p>
-      </div>
-    </a>
-
-    <!-- Noticia 3 -->
-    <a href="./blog/inversiones/index.html" class="news-item">
-      <div class="news-thumb">
-        <img src="./assets/png/inversion-inteligente-segura.webp" alt="">
-      </div>
-      <div class="news-text">
-        <h3>Próximamente </h3>
-        <p>
-
-        </p>
-      </div>
-    </a>
-
-  </aside>
-
+  </div>
 </section>
-
-
-
-
-
-
-<!-- ESPACIO ARRIBA -->
- <div style="height: 100px;"></div>
-
-
-
-
-
-<div class="cm-editorial-line">
-
-  <span class="cm-editorial-label">
-Próximamente en Código Millonario
-  </span>
-
-</div>
-
-
-
-
-
-
-
-<section class="main-layout">
-
-  <!-- Sidebar izquierda -->
-  <aside class="sidebar">
-
- <div class="w-full h-px bg-slate-300"></div>
-
-    <!-- Noticia 3 -->
-    <a href="./blog/psicologia-del-dinero/mentalidad-rico-vs-pobre.html" class="news-item">
-      <div class="news-thumb">
-        <img src="./assets/png/diferencias-mentalidad-rico-pobre.webp" alt="">
-      </div>
-      <div class="news-text">
-        <h3>Próximamente </h3>
-        <p>
-
-        </p>
-      </div>
-    </a>
-
-        <!-- Noticia 3 -->
-    <a href="./blog/negocios/negocios-millonarios-ocultos.html" class="news-item">
-      <div class="news-thumb">
-        <img src="./assets/png/negocios-que-hacen-ricos-a-millonarios.jpg" alt="">
-      </div>
-      <div class="news-text">
-        <h3>Próximamente </h3>
-        <p>
-
-        </p>
-      </div>
-    </a>
-
-
-            <!-- Noticia 3 -->
-    <a href="./blog/ahorro/ahorrar-para-una-moto-meta.html" class="news-item">
-      <div class="news-thumb">
-        <img src="./assets/png/plan-de-ahorro-para-comprar-una-moto.webp" alt="">
-      </div>
-      <div class="news-text">
-        <h3>Próximamente </h3>
-        <p>
-
-        </p>
-      </div>
-    </a>
-
-
-                <!-- Noticia 3 -->
-    <a href="./blog/ahorro/ahorrar-sin-renunciar.html" class="news-item">
-      <div class="news-thumb">
-        <img src="./assets/png/controlar-gastos-sin-sacrificios.webp" alt="">
-      </div>
-      <div class="news-text">
-        <h3>Próximamente </h3>
-        <p>
-
-        </p>
-      </div>
-    </a>
-
-  </aside>
-
-</section>
-
-</div>
-
 
 <style>
-.cm-container{
-  width: min(1280px, 88%);
-  margin: 0 auto;
+
+/* =========================================
+   AJUSTE PAGINACIÓN — TELÉFONOS
+========================================= */
+
+@media (max-width:640px){
+  .cm-analysis-toolbar{width:100%;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden}
+  .cm-analysis-controls{width:100%;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden}
+  .cm-analysis-page-numbers{min-width:0;max-width:100%;overflow:hidden;white-space:nowrap}
+  .cm-analysis-btn,.cm-analysis-page-number{flex-shrink:0}
+  .cm-analysis-options{max-width:100%;min-width:0;box-sizing:border-box}
 }
 
-/* ================= TÍTULO EDITORIAL ================= */
-.cm-editorial-line{
-  position:relative;
-  width: 100%;
-  margin:40px 0 0px;
-  padding-top:45px;
+.cm-analysis-editorial-line{width:min(1100px,88%);margin:40px auto 0;padding-top:45px;position:relative}
+.cm-analysis-editorial-label{position:absolute;top:0;left:0;font-family:"Inter",sans-serif;font-size:32px;font-weight:900;text-transform:uppercase;color:#111;letter-spacing:-.5px}
+.cm-analysis-editorial-line::after{content:"";display:block;width:100%;height:5px;background:#111}
+.cm-analysis-layout{width:min(1100px,88%);margin:0 auto;display:flex;box-sizing:border-box}
+.cm-analysis-sidebar{width:100%}
+
+
+/* =========================================================
+   BARRA DE PAGINACIÓN
+========================================================= */
+
+.cm-analysis-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0;margin-bottom:4px;border-bottom:1px solid #e5e5e5;font-family:"Inter",sans-serif}
+.cm-analysis-info{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#777;font-size:10px;line-height:1}
+.cm-analysis-info strong{color:#111;font-weight:700}
+.cm-analysis-separator{color:#c8c8c8}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.cm-analysis-controls{display:flex;align-items:center;justify-content:center;gap:4px}
+.cm-analysis-btn,.cm-analysis-goto-btn{width:28px;height:28px;padding:0;border:1px solid #dedede;background:#fff;color:#333;font-family:"Inter",sans-serif;font-size:13px;line-height:28px;text-align:center;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.cm-analysis-btn:hover,.cm-analysis-goto-btn:hover{background:#111;border-color:#111;color:#fff}
+.cm-analysis-btn:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
+
+
+/* =========================================================
+   NÚMEROS
+========================================================= */
+
+.cm-analysis-page-numbers{display:flex;align-items:center;gap:4px}
+.cm-analysis-page-number{width:28px;height:28px;padding:0;border:1px solid transparent;background:transparent;color:#777;font-family:"Inter",sans-serif;font-size:9px;font-weight:600;line-height:28px;text-align:center;cursor:pointer}
+.cm-analysis-page-number:hover{color:#111;border-color:#ddd}
+.cm-analysis-page-number.active{background:#111;border-color:#111;color:#fff}
+
+
+/* =========================================================
+   OPCIONES
+========================================================= */
+
+.cm-analysis-options{display:flex;align-items:center;gap:7px}
+.cm-analysis-select,.cm-analysis-goto-input{height:28px;box-sizing:border-box;border:1px solid #dedede;background:#fff;color:#555;font-family:"Inter",sans-serif;font-size:9px;outline:none}
+.cm-analysis-select{padding:0 7px;cursor:pointer}
+.cm-analysis-goto{display:flex;align-items:center;gap:4px}
+.cm-analysis-goto-input{width:48px;padding:0 7px}
+.cm-analysis-goto-input::placeholder{color:#aaa}
+.cm-analysis-goto-input:focus,.cm-analysis-select:focus{border-color:#111}
+.cm-analysis-goto-btn{font-size:8px;font-weight:600}
+
+
+/* =========================================================
+   ARTÍCULOS
+========================================================= */
+
+.cm-analysis-item{display:flex;gap:28px;width:100%;box-sizing:border-box;padding:26px 0;border-bottom:1px solid #e5e5e5;text-decoration:none;color:inherit;align-items:flex-start;transition:opacity .2s ease}
+.cm-analysis-item:hover{opacity:.85}
+.cm-analysis-thumb{width:210px;aspect-ratio:16/10;flex-shrink:0;overflow:hidden;background:#f1f1f1}
+.cm-analysis-thumb img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s ease}
+.cm-analysis-item:hover .cm-analysis-thumb img{transform:scale(1.025)}
+.cm-analysis-text{flex:1;min-width:0}
+.cm-analysis-category{display:block;margin:1px 0 9px;font-family:"Inter",sans-serif;font-size:8px;line-height:1;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#a17c4d}
+.cm-analysis-item .cm-analysis-text h3{margin:0 0 9px;max-width:760px;font-family:"Inter",sans-serif;font-size:22px;font-weight:750;line-height:1.3;letter-spacing:-.45px;color:#111}
+.cm-analysis-text p{margin:0 0 13px;max-width:760px;font-family:"Inter",sans-serif;font-size:13px;font-weight:400;line-height:1.65;letter-spacing:-.01em;color:#555}
+.cm-analysis-link{display:inline-block;font-family:"Inter",sans-serif;font-size:7.5px;line-height:1;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#111;opacity:.65;transition:opacity .2s ease}
+.cm-analysis-item:hover .cm-analysis-link{opacity:1}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:1024px){
+  .cm-analysis-editorial-line,.cm-analysis-layout{width:min(900px,90%)}
+  .cm-analysis-toolbar{flex-wrap:wrap}
+  .cm-analysis-info{order:1}
+  .cm-analysis-controls{order:2}
+  .cm-analysis-options{order:3;margin-left:auto}
+  .cm-analysis-item{gap:24px}
+  .cm-analysis-thumb{width:190px}
 }
 
-.cm-editorial-label{
-  position:absolute;
-  top:0;
-  left:0;
-  font-family:"Inter", sans-serif;
-  font-size:32px;
-  font-weight:900;
-  text-transform:uppercase;
-  color:#111;
-  letter-spacing:-0.5px;
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:600px){
+  .cm-analysis-editorial-line{width:calc(100% - 40px);margin:30px auto 0;padding-top:38px}
+  .cm-analysis-editorial-label{font-size:24px;letter-spacing:-.4px}
+  .cm-analysis-editorial-line::after{height:4px}
+  .cm-analysis-layout{width:calc(100% - 40px)}
+  .cm-analysis-toolbar{display:grid;grid-template-columns:1fr auto;gap:13px 10px;padding:15px 0}
+  .cm-analysis-info{font-size:9px}
+  .cm-analysis-controls{justify-content:flex-end}
+  .cm-analysis-page-numbers{display:none!important}
+  .cm-analysis-options{grid-column:1/-1;justify-content:space-between;width:100%;margin-left:0}
+  .cm-analysis-btn,.cm-analysis-goto-btn,.cm-analysis-page-number{width:27px;height:27px;line-height:27px}
+  .cm-analysis-select,.cm-analysis-goto-input{height:27px}
+  .cm-analysis-item{flex-direction:column;gap:15px;padding:22px 0}
+  .cm-analysis-thumb{width:100%;aspect-ratio:16/10}
+  .cm-analysis-category{margin-bottom:8px;font-size:7px;letter-spacing:1.5px}
+  .cm-analysis-item .cm-analysis-text h3{font-size:19px;line-height:1.3;letter-spacing:-.3px;margin-bottom:8px}
+  .cm-analysis-text p{font-size:12px;line-height:1.65;margin-bottom:12px}
+  .cm-analysis-link{font-size:7px}
 }
 
-.cm-editorial-line::after{
-  content:"";
-  display:block;
-  width:100%;
-  height:5px;
-  background:#111;
+
+/* =========================================================
+   PANTALLAS MUY PEQUEÑAS
+========================================================= */
+
+@media (max-width:380px){
+  .cm-analysis-separator{display:none}
 }
 
-/* ================= LAYOUT ================= */
-.main-layout{
-  width: 100%;
-  display: flex;
-  gap: 40px;
-  padding: 0px 0 40px;
-  box-sizing: border-box;
-}
-
-.sidebar{
-  width: 100%;
-  max-width: 100%;
-}
-
-/* ================= ❌ ELIMINAR LÍNEA GRIS ================= */
-.sidebar .w-full.h-px.bg-slate-300{
-  display: none !important;
-}
-
-/* ================= NEWS ITEM ================= */
-.news-item{
-  display: flex;
-  gap: 22px;
-  text-decoration: none;
-  color: inherit;
-  padding: 20px 0;
-  border-bottom: 1px solid #e5e5e5;
-  align-items: flex-start;
-  transition: opacity 0.2s ease;
-}
-
-.news-item:hover{
-  opacity: 0.85;
-}
-
-/* ================= IMAGEN ================= */
-.news-thumb{
-  width: 200px;
-  height: 170px;
-  flex-shrink: 0;
-  overflow: hidden;
-}
-
-.news-thumb img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* ================= TEXTO ================= */
-.news-text{
-  flex: 1;
-}
-
-/* ================= TITULO ================= */
-.news-item .news-text h3{
-  font-family: "Inter", sans-serif;
-  font-size: 26px;
-  font-weight: 800;
-  line-height: 1.25;
-  margin: 0 0 10px 0;
-  color: #111;
-  letter-spacing: -0.4px;
-  max-width: 100%;
-}
-
-/* ================= DESCRIPCIÓN MEJORADA ================= */
-.news-text p{
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #3f3f46;
-  line-height: 1.7;
-  letter-spacing: -0.01em;
-  margin: 0;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px){
-
-  .main-layout{
-    flex-direction: column;
-  }
-
-  .news-item{
-    flex-direction: row;
-  }
-
-  .news-thumb{
-    width: 170px;
-    height: 150px;
-  }
-}
-
-@media (max-width: 600px){
-
-  .news-item{
-    flex-direction: column;
-  }
-
-  .news-thumb{
-    width: 100%;
-    height: 240px;
-  }
-
-  .news-text p{
-    font-size: 17px;
-    line-height: 1.65;
-  }
-
-}
 </style>
+
+
+<!-- =========================================================
+     JAVASCRIPT — MOTOR DE PAGINACIÓN
+========================================================= -->
+
+<script>
+(function(){
+
+  function initAnalysisPagination(){
+
+    const container=document.getElementById("cmAnalysisArticles");
+    if(!container)return;
+
+    const totalElement=document.getElementById("cmAnalysisTotal");
+    const currentElement=document.getElementById("cmAnalysisCurrent");
+    const pagesElement=document.getElementById("cmAnalysisPages");
+
+    const firstButton=document.getElementById("cmAnalysisFirst");
+    const prevButton=document.getElementById("cmAnalysisPrev");
+    const nextButton=document.getElementById("cmAnalysisNext");
+    const lastButton=document.getElementById("cmAnalysisLast");
+
+    const numbersContainer=document.getElementById("cmAnalysisNumbers");
+    const perPageSelect=document.getElementById("cmAnalysisPerPage");
+
+    const gotoInput=document.getElementById("cmAnalysisGotoInput");
+    const gotoButton=document.getElementById("cmAnalysisGoto");
+
+
+    /* =====================================================
+       ARTÍCULOS
+    ===================================================== */
+
+    const articles=Array.from(container.querySelectorAll(".cm-analysis-item"));
+
+    let currentPage=1;
+    let perPage=parseInt(perPageSelect.value,10)||6;
+
+
+    /* =====================================================
+       TOTAL DE PÁGINAS
+    ===================================================== */
+
+    function getTotalPages(){
+      if(articles.length===0)return 1;
+      return Math.max(1,Math.ceil(articles.length/perPage));
+    }
+
+
+    /* =====================================================
+       DIBUJAR PAGINACIÓN
+    ===================================================== */
+
+    function render(){
+
+      const totalPages=getTotalPages();
+
+      /* EVITAR PÁGINAS INVÁLIDAS */
+
+      if(currentPage>totalPages)currentPage=totalPages;
+      if(currentPage<1)currentPage=1;
+
+
+      /* ===================================================
+         ARTÍCULOS VISIBLES
+      =================================================== */
+
+      const start=(currentPage-1)*perPage;
+      const end=start+perPage;
+
+      articles.forEach((article,index)=>{
+        if(index>=start&&index<end){
+          article.style.display="";
+        }else{
+          article.style.display="none";
+        }
+      });
+
+
+      /* ===================================================
+         INFORMACIÓN
+      =================================================== */
+
+      totalElement.textContent=articles.length;
+      currentElement.textContent=currentPage;
+      pagesElement.textContent=totalPages;
+
+
+      /* ===================================================
+         BOTONES
+      =================================================== */
+
+      const atFirst=currentPage===1;
+      const atLast=currentPage===totalPages;
+
+      firstButton.disabled=atFirst;
+      prevButton.disabled=atFirst;
+      nextButton.disabled=atLast;
+      lastButton.disabled=atLast;
+
+
+      /* ===================================================
+         NÚMEROS DE PÁGINA
+      =================================================== */
+
+      numbersContainer.innerHTML="";
+
+      const maxVisible=window.innerWidth<=640?3:5;
+
+      let startPage=Math.max(1,currentPage-2);
+      let endPage=Math.min(totalPages,startPage+maxVisible-1);
+
+      startPage=Math.max(1,endPage-maxVisible+1);
+
+
+      for(let page=startPage;page<=endPage;page++){
+
+        const button=document.createElement("button");
+
+        button.type="button";
+
+        button.className="cm-analysis-page-number"+(page===currentPage?" active":"");
+
+        button.textContent=page;
+
+        button.setAttribute("aria-label","Ir a la página "+page);
+
+        if(page===currentPage){
+          button.setAttribute("aria-current","page");
+        }
+
+        button.addEventListener("click",function(){
+          currentPage=page;
+          render();
+          scrollToToolbar();
+        });
+
+        numbersContainer.appendChild(button);
+      }
+    }
+
+
+    /* =====================================================
+       CAMBIAR DE PÁGINA
+    ===================================================== */
+
+    function goToPage(page){
+
+      const totalPages=getTotalPages();
+
+      page=parseInt(page,10);
+
+      if(Number.isNaN(page))return;
+
+      currentPage=Math.max(1,Math.min(page,totalPages));
+
+      render();
+      scrollToToolbar();
+    }
+
+
+    /* =====================================================
+       PRIMERA PÁGINA
+    ===================================================== */
+
+    firstButton.addEventListener("click",function(){
+      goToPage(1);
+    });
+
+
+    /* =====================================================
+       ANTERIOR
+    ===================================================== */
+
+    prevButton.addEventListener("click",function(){
+      goToPage(currentPage-1);
+    });
+
+
+    /* =====================================================
+       SIGUIENTE
+    ===================================================== */
+
+    nextButton.addEventListener("click",function(){
+      goToPage(currentPage+1);
+    });
+
+
+    /* =====================================================
+       ÚLTIMA PÁGINA
+    ===================================================== */
+
+    lastButton.addEventListener("click",function(){
+      goToPage(getTotalPages());
+    });
+
+
+    /* =====================================================
+       CAMBIAR ARTÍCULOS POR PÁGINA
+    ===================================================== */
+
+    perPageSelect.addEventListener("change",function(){
+
+      const selected=parseInt(this.value,10);
+
+      if(!Number.isNaN(selected)&&selected>0){
+        perPage=selected;
+      }else{
+        perPage=6;
+      }
+
+      currentPage=1;
+      render();
+    });
+
+
+    /* =====================================================
+       BOTÓN IR
+    ===================================================== */
+
+    gotoButton.addEventListener("click",function(){
+
+      goToPage(gotoInput.value);
+
+      gotoInput.value="";
+    });
+
+
+    /* =====================================================
+       ENTER
+    ===================================================== */
+
+    gotoInput.addEventListener("keydown",function(event){
+
+      if(event.key==="Enter"){
+        event.preventDefault();
+        gotoButton.click();
+      }
+
+    });
+
+
+    /* =====================================================
+       INICIALIZAR
+    ===================================================== */
+
+    render();
+  }
+
+
+  /* =======================================================
+     INICIAR CUANDO EL DOM ESTÉ LISTO
+  ======================================================= */
+
+  if(document.readyState==="loading"){
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      initAnalysisPagination
+    );
+
+  }else{
+
+    initAnalysisPagination();
+
+  }
+
+})();
+</script>
+
+
+
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+ <div style="height: 100px;"></div>
+
 
 
 
