@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h4>Contacto</h4>
         <ul>
           <li><a href="/contacto.html">Soporte</a></li>
-          <li>codigomillonarioblog@gmail.com</li>
+          <li class="footer-email">codigomillonarioblog@gmail.com</li>
         </ul>
       </div>
 
@@ -253,6 +253,15 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 .footer-newsletter button:hover {
   background: #fff;
   color: #000;
+}
+
+/* =========================
+   GMAIL DEL FOOTER
+========================= */
+
+.footer-email {
+  font-size: 13px;
+  color: #57534e;
 }
 
 /* =========================
