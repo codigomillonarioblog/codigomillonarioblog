@@ -130,10 +130,154 @@ window.addEventListener('scroll', () => {
 
 
 
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Newsletter
+    </button>
+
+    <!-- INPUT -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* INPUT */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
+}
+
+</style>
+
+<script>
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
+
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
+
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
+</script>
+
+
 
 
 <!-- MENU ORITIGNAL SECCIONES -->
 <script src="../../assets/menu.js"></script>
+
+
 
 
 
@@ -1337,8 +1481,11 @@ closeMobileMenu.addEventListener('click', () => {
 }
 </style>
 
+
+
 <!-- ESPACIO ARRIBA -->
 <div class="top-space"></div>
+
 
 <style>
 .top-space{
