@@ -260,8 +260,8 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 ========================= */
 
 .footer-email {
-  font-size: 20px;
-  color: #fffaf4;
+  font-size: 10px;
+  color: #f5f0e9;
 }
 
 /* =========================
