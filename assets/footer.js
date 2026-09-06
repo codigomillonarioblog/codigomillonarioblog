@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h4>Contacto</h4>
         <ul>
           <li><a href="/contacto.html">Soporte</a></li>
-          <li>codigomillonarioblog.@gamil.com</li>
+          <li>codigomillonarioblog@gmail.com</li>
         </ul>
       </div>
 
