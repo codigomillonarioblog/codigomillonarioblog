@@ -1106,6 +1106,265 @@ Detrás de sus resultados hay decisiones, hábitos y métodos que han utilizado 
 
 
 
+
+
+
+
+
+<!-- TABLA DE CONTENIDOS -->
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:140px}
+[id]{scroll-margin-top:140px}
+.cf-accordion{margin-top:60px;font-family:'Inter',sans-serif}
+.cf-accordion-inner{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+.cf-accordion-item{width:260px;min-height:70px;margin:0;border:1px solid #000;border-radius:6px;background:#fff;overflow:hidden;transition:width .35s ease}
+.cf-accordion-item.is-open{width:680px}
+.cf-accordion-header{display:flex;justify-content:space-between;align-items:center;padding:18px 16px;cursor:pointer;font-size:17px;font-weight:600;color:#111827;background:#fff;border-bottom:none}
+.cf-menu-icon{width:30px;height:30px;display:flex;flex-direction:column;justify-content:center;align-items:center;border:1px solid #000;border-radius:6px;gap:4px;box-sizing:border-box}
+.cf-menu-icon span{height:2px;width:16px;background:#000;border-radius:2px}
+.cf-accordion-content{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.toc-container{padding:8px 14px 14px 14px}
+.toc-list{list-style:none;margin:0;padding:0}
+.toc-list li{padding:6px 0;margin:0;border:none}
+.toc-list a{text-decoration:none;color:#374151;font-size:14px;line-height:1.35;display:block;transition:all .2s ease}
+.toc-list a:hover{color:#000;transform:translateX(4px)}
+@media (max-width:480px){
+.cf-accordion-item{width:88%}
+.cf-accordion-item.is-open{width:100%}
+}
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+<div class="cf-accordion-inner">
+<div class="cf-accordion">
+<div class="cf-accordion-item">
+
+<!-- HEADER -->
+<div class="cf-accordion-header">
+Tabla de contenidos
+<div class="cf-menu-icon">
+<span></span><span></span><span></span>
+</div>
+</div>
+
+<!-- CONTENT -->
+<div class="cf-accordion-content">
+<div class="toc-container">
+<ul class="toc-list">
+
+<li><a href="#titulo1">1. ¿Por qué los millonarios parecen seguir patrones similares para construir riqueza?</a></li>
+<li><a href="#titulo2">2. ¿Qué podemos aprender de los consejos financieros de los millonarios?</a></li>
+<li><a href="#titulo3">3. ¿Por qué los millonarios crean sistemas para hacer crecer sus negocios?</a></li>
+<li><a href="#titulo4">4. ¿Por qué los millonarios se apasionan tanto por la innovación y los nuevos negocios?</a></li>
+<li><a href="#titulo5">5. ¿Cómo viven algunos millonarios pese a tener grandes fortunas?</a></li>
+<li><a href="#titulo6">6. ¿En qué invierten primero los millonarios: conocimiento o dinero?</a></li>
+<li><a href="#titulo7">7. ¿Qué quieres crear, hacer o llegar a ser? La decisión que define a un millonario</a></li>
+<li><a href="#titulo8">8. ¿Por qué los millonarios protegen su reputación como si fuera un activo?</a></li>
+<li><a href="#titulo9">9. ¿Por qué los millonarios valoran más las opciones que el dinero?</a></li>
+<li><a href="#titulo10">10. ¿Por qué los millonarios no esperan a que el barco se hunda?</a></li>
+<li><a href="#titulo11">11. ¿Cuáles son los mejores consejos financieros de los millonarios?</a></li>
+<li><a href="#titulo12">12. ¿Qué podemos aprender de los millonarios sobre el dinero?</a></li>
+
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+header.addEventListener('click',()=>{
+const item=header.closest('.cf-accordion-item');
+const content=item.querySelector('.cf-accordion-content');
+document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+if(other!==item){
+other.querySelector('.cf-accordion-content').style.maxHeight=null;
+}
+});
+item.classList.toggle('is-open');
+if(content.style.maxHeight){
+content.style.maxHeight=null;
+}else{
+content.style.maxHeight=content.scrollHeight+'px';
+}
+});
+});
+
+const isMobile=/iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+link.addEventListener('click',function(e){
+e.preventDefault();
+const id=this.getAttribute('href').substring(1);
+const target=document.getElementById(id);
+if(!target)return;
+const offset=140;
+const top=target.getBoundingClientRect().top+window.pageYOffset-offset;
+history.pushState(null,null,'#'+id);
+
+if(isMobile){
+window.scrollTo({
+top:top,
+behavior:'smooth'
+});
+}else{
+const start=window.pageYOffset;
+const distance=top-start;
+const duration=650;
+let startTime=null;
+
+function animate(time){
+if(!startTime)startTime=time;
+const progress=Math.min((time-startTime)/duration,1);
+const ease=1-Math.pow(1-progress,3);
+window.scrollTo(0,start+distance*ease);
+if(progress<1){
+requestAnimationFrame(animate);
+}
+}
+requestAnimationFrame(animate);
+}
+});
+});
+</script>
+
+
+
+
+
+
+
+<!-- =========================================
+     NOTA EDITORIAL — CÓDIGO MILLONARIO
+========================================= -->
+
+<style>
+
+.cm-editorial-note{
+  max-width:850px;
+  margin:70px auto;
+  padding:32px 38px;
+  border-left:3px solid #b08a3c;
+  background:#f8f7f4;
+  box-sizing:border-box;
+  font-family:'Open Sans',sans-serif;
+}
+
+.cm-editorial-note__header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.cm-editorial-note__line{
+  width:28px;
+  height:1px;
+  background:#b08a3c;
+}
+
+.cm-editorial-note__label{
+  margin:0;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#8a6a2c;
+}
+
+.cm-editorial-note__content{
+  color:#555;
+  font-size:15px;
+  line-height:1.75;
+}
+
+.cm-editorial-note__content p{
+  margin:0 0 16px;
+}
+
+.cm-editorial-note__content p:last-child{
+  margin-bottom:0;
+}
+
+.cm-editorial-note__content strong{
+  color:#222;
+  font-weight:700;
+}
+
+@media(max-width:640px){
+
+  .cm-editorial-note{
+    margin:50px 0;
+    padding:25px 22px;
+    border-left-width:3px;
+  }
+
+  .cm-editorial-note__header{
+    gap:10px;
+    margin-bottom:16px;
+  }
+
+  .cm-editorial-note__line{
+    width:20px;
+  }
+
+  .cm-editorial-note__label{
+    font-size:9px;
+  }
+
+  .cm-editorial-note__content{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+}
+
+</style>
+
+
+<!-- NOTA EDITORIAL -->
+
+<aside class="cm-editorial-note">
+
+  <div class="cm-editorial-note__header">
+
+    <span class="cm-editorial-note__line"></span>
+
+    <p class="cm-editorial-note__label">
+      Nota editorial
+    </p>
+
+  </div>
+
+  <div class="cm-editorial-note__content">
+
+    <p>
+      Este artículo presenta un <strong>análisis editorial de Código Millonario</strong> sobre algunos patrones, decisiones y comportamientos que pueden observarse en las historias de personas millonarias y multimillonarias.
+    </p>
+
+    <p>
+      Su contenido no debe interpretarse como una fórmula exacta para alcanzar la riqueza ni como un método para convertirse en millonario rápidamente. <strong>Las circunstancias, oportunidades, recursos, conocimientos y riesgos pueden variar considerablemente entre una persona y otra.</strong>
+    </p>
+
+    <p>
+      Las ideas presentadas tienen un propósito informativo y de reflexión. Cualquier decisión relacionada con inversiones, negocios, patrimonio o asuntos jurídicos debe analizarse de acuerdo con las circunstancias individuales y, cuando sea necesario, con la orientación de un profesional cualificado.
+    </p>
+
+  </div>
+
+</aside>
+
+
+
+
+
+
+
+
 <!-- =========================================
      BLOQUE EDITORIAL — ESTILO PORTADA
 ========================================= -->
@@ -1113,7 +1372,7 @@ Detrás de sus resultados hay decisiones, hábitos y métodos que han utilizado 
 <style>
 .cm-editorial-cover {
   position: relative;
-  margin-top: 140px;
+  margin-top: 80px;
   margin-bottom: 80px;
   padding: 55px 0 60px 0;
 }
@@ -1196,7 +1455,7 @@ Detrás de sus resultados hay decisiones, hábitos y métodos que han utilizado 
     PRINCIPIOS FINANCIEROS
   </div>
 
-  <h2 id="titulo2">
+  <h2>
     ¿Qué consejos financieros podemos extraer de la experiencia de los millonarios?
   </h2>
 
@@ -1255,7 +1514,7 @@ Más que copiar sus vidas, se trata de entender qué podemos observar detrás de
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo1" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Por qué los millonarios parecen seguir patrones similares para construir riqueza?
 </h2>
 
@@ -1484,7 +1743,7 @@ A partir de aquí, analizaremos ocho de los consejos financieros más interesant
      TÍTULO DEL CONSEJO
 ========================================= -->
 
-<h2 id="titulo2" class="cm-consejo-titulo">
+<h2 id="titulo3" class="cm-consejo-titulo">
 ¿Por qué los millonarios crean sistemas para hacer crecer sus negocios?
 </h2>
 
@@ -1876,7 +2135,7 @@ La enseñanza no está en la receta de helado. Está en la forma de pensar. <str
      TÍTULO DEL CONSEJO
 ========================================= -->
 
-<h2 id="titulo2" class="cm-consejo-titulo">
+<h2 id="titulo4" class="cm-consejo-titulo">
 ¿Por qué los millonarios se apasionan tanto por la innovación y los nuevos negocios?
 </h2>
 
@@ -2054,7 +2313,7 @@ Tener más dinero no significa necesitar más cosas
      TÍTULO DEL CONSEJO
 ========================================= -->
 
-<h2 id="titulo2" class="cm-consejo-titulo">
+<h2 id="titulo5" class="cm-consejo-titulo">
 ¿Cómo viven algunos millonarios pese a tener grandes fortunas?
 </h2>
 
@@ -2161,7 +2420,7 @@ Si algún día construyes una gran riqueza, ¿qué tipo de vida querrías vivir?
      TÍTULO DEL CONSEJO
 ========================================= -->
 
-<h2 id="titulo2" class="cm-consejo-titulo">
+<h2 id="titulo6" class="cm-consejo-titulo">
 ¿En qué invierten primero los millonarios: conocimiento o dinero?
 </h2>
 
@@ -2290,7 +2549,7 @@ Si algún día construyes una gran riqueza, ¿qué tipo de vida querrías vivir?
      TÍTULO DEL CONSEJO
 ========================================= -->
 
-<h2 id="titulo2" class="cm-consejo-titulo">
+<h2 id="titulo7" class="cm-consejo-titulo">
 ¿Qué quieres crear, hacer o llegar a ser? La decisión que define a un millonario
 </h2>
 
@@ -2404,7 +2663,7 @@ Se necesitan 20 años para construir una reputación y cinco minutos para arruin
      TÍTULO DEL CONSEJO
 ========================================= -->
 
-<h2 id="titulo2" class="cm-consejo-titulo">
+<h2 id="titulo8" class="cm-consejo-titulo">
 ¿Por qué los millonarios protegen su reputación como si fuera un activo?
 </h2>
 
@@ -2505,7 +2764,7 @@ Si alguien te ofrece una oportunidad increíble, pero no estás seguro de poder 
      TÍTULO DEL CONSEJO
 ========================================= -->
 
-<h2 id="titulo2" class="cm-consejo-titulo">
+<h2 id="titulo9" class="cm-consejo-titulo">
 ¿Por qué los millonarios valoran más las opciones que el dinero?
 </h2>
 
@@ -2605,7 +2864,7 @@ Una onza de prevención vale una libra de cura.
      TÍTULO DEL CONSEJO
 ========================================= -->
 
-<h2 id="titulo2" class="cm-consejo-titulo">
+<h2 id="titulo10" class="cm-consejo-titulo">
 ¿Por qué los millonarios no esperan a que el barco se hunda?
 </h2>
 
@@ -2687,7 +2946,7 @@ Al final, <strong>los millonarios pueden enseñarnos</strong> que no es necesari
     PRINCIPIOS FINANCIEROS
   </div>
 
-  <h2 id="titulo2">
+  <h2 id="titulo11">
 ¿Cuáles son los mejores consejos financieros de los millonarios?
   </h2>
 
@@ -2739,7 +2998,7 @@ Y tal vez esa sea la parte más interesante de estudiar a los millonarios: no de
 
 
 <!-- BLOQUE -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo12" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 ¿Qué podemos aprender de los millonarios sobre el dinero?
 </h2>
 
