@@ -1,183 +1,162 @@
-/* =========================================================
-   CÓDIGO MILLONARIO — COLUMNA EDITORIAL
-   Componente reutilizable
-========================================================= */
+ /* =========================================================
+    CÓDIGO MILLONARIO — COLUMNA EDITORIAL
+    Componente reutilizable
+ ========================================================= */
 
-document.addEventListener('DOMContentLoaded', function () {
+ document.addEventListener('DOMContentLoaded', function () {
 
-  /* =======================================================
-     CONFIGURACIÓN
-     Cambia aquí el contenido cuando quieras
-  ======================================================= */
+   /* =======================================================
+      CONFIGURACIÓN
+      Cambia aquí el contenido cuando quieras
+   ======================================================= */
 
-  const SIDEBAR_CONFIG = {
+   const SIDEBAR_CONFIG = {
 
-    guideTitle:
-      'Aprende a organizar mejor tu dinero',
+     guideTitle:
+       'Aprende a organizar mejor tu dinero',
 
-    guideText:
-      'Descubre estrategias sencillas para organizar tus ingresos, controlar tus gastos y avanzar hacia tus objetivos financieros.',
+     guideText:
+       'Descubre estrategias sencillas para organizar tus ingresos, controlar tus gastos y avanzar hacia tus objetivos financieros.',
 
-    guideLink:
-      '#',
+     guideLink:
+       '#',
 
-    guideLinkText:
-      'Descargar guía',
+     guideLinkText:
+       'Descargar guía',
 
-    perspectiveLabel:
-      'Perspectiva',
+     perspectiveLabel:
+       'Perspectiva',
 
-    quote:
-      'El dinero no cambia tu vida por sí solo; las decisiones que tomas con él sí.',
+     quote:
+       'El dinero no cambia tu vida por sí solo; las decisiones que tomas con él sí.',
 
-    quoteAuthor:
-      'Medio Financiero'
+     quoteAuthor:
+       'Medio Financiero'
 
-  };
+   };
 
 
-  /* =======================================================
-     BUSCAR EL ARTÍCULO
-  ======================================================= */
+   /* =======================================================
+      BUSCAR LA COLUMNA YA EXISTENTE
+   ======================================================= */
 
-  const article =
-    document.querySelector('main article');
+   const sidebar =
+     document.getElementById('article-guide');
 
-  if (!article) {
-    return;
-  }
+   if (!sidebar) {
+     return;
+   }
 
 
-  /* =======================================================
-     CREAR COLUMNA IZQUIERDA
-  ======================================================= */
+   /* =======================================================
+      CONTENIDO DE LA COLUMNA
+   ======================================================= */
 
-  const sidebar =
-    document.createElement('aside');
+   sidebar.innerHTML = `
 
-  sidebar.className =
-    'hidden lg:block lg:sticky lg:top-40';
+     <div class="pt-2">
 
+       <!-- ETIQUETA -->
 
-  /* =======================================================
-     CONTENIDO
-  ======================================================= */
+       <p class="inline-block text-stone-500 text-[9px] font-semibold tracking-[0.2em] px-0 py-0 mb-6 uppercase">
 
-  sidebar.innerHTML = `
+         <span class="inline-block w-1.5 h-1.5 bg-stone-950 rounded-full mr-2 align-middle"></span>
 
-    <div class="pt-2">
+         Guía gratuita
 
-      <!-- ETIQUETA -->
+       </p>
 
-      <p class="inline-block text-stone-500 text-[9px] font-semibold tracking-[0.2em] px-0 py-0 mb-6 uppercase">
 
-        <span class="inline-block w-1.5 h-1.5 bg-stone-950 rounded-full mr-2 align-middle"></span>
+       <!-- TÍTULO -->
 
-        Guía gratuita
+       <h2 class="text-[20px] font-semibold text-stone-950 leading-[1.18] tracking-[-0.025em] mb-4">
 
-      </p>
+         ${SIDEBAR_CONFIG.guideTitle}
 
+       </h2>
 
-      <!-- TÍTULO -->
 
-      <h2 class="text-[20px] font-semibold text-stone-950 leading-[1.18] tracking-[-0.025em] mb-4">
+       <!-- TEXTO -->
 
-        ${SIDEBAR_CONFIG.guideTitle}
+       <p
+         class="text-stone-600 leading-[1.65] mb-5 text-[13px]"
+         style="font-family: 'Open Sans', sans-serif;"
+       >
 
-      </h2>
+         ${SIDEBAR_CONFIG.guideText}
 
+       </p>
 
-      <!-- TEXTO -->
 
-      <p
-        class="text-stone-600 leading-[1.65] mb-5 text-[13px]"
-        style="font-family: 'Open Sans', sans-serif;"
-      >
+       <!-- ENLACE -->
 
-        ${SIDEBAR_CONFIG.guideText}
+       <a
+         href="${SIDEBAR_CONFIG.guideLink}"
+         class="group inline-flex items-center gap-2 text-[12px] font-semibold text-stone-950"
+       >
 
-      </p>
+         <span class="border-b border-stone-950 pb-1 group-hover:border-stone-400 transition-colors duration-200">
 
+           ${SIDEBAR_CONFIG.guideLinkText}
 
-      <!-- ENLACE -->
+         </span>
 
-      <a
-        href="${SIDEBAR_CONFIG.guideLink}"
-        class="group inline-flex items-center gap-2 text-[12px] font-semibold text-stone-950"
-      >
+         <span
+           aria-hidden="true"
+           class="text-stone-400 transition-transform duration-200 group-hover:translate-x-1"
+         >
+           →
+         </span>
 
-        <span class="border-b border-stone-950 pb-1 group-hover:border-stone-400 transition-colors duration-200">
+       </a>
 
-          ${SIDEBAR_CONFIG.guideLinkText}
 
-        </span>
+       <!-- ===============================================
+            FRASE EDITORIAL
+       ================================================ -->
 
-        <span
-          aria-hidden="true"
-          class="text-stone-400 transition-transform duration-200 group-hover:translate-x-1"
-        >
-          →
-        </span>
+       <div class="mt-12 pt-5 border-t border-stone-200">
 
-      </a>
 
+         <!-- MICROETIQUETA -->
 
-      <!-- ===============================================
-           FRASE EDITORIAL
-      ================================================ -->
+         <p class="m-0 mb-4 text-[8px] font-semibold tracking-[0.2em] uppercase text-stone-400">
 
-      <div class="mt-12 pt-5 border-t border-stone-200">
+           ${SIDEBAR_CONFIG.perspectiveLabel}
 
+         </p>
 
-        <!-- MICROETIQUETA -->
 
-        <p class="m-0 mb-4 text-[8px] font-semibold tracking-[0.2em] uppercase text-stone-400">
+         <!-- FRASE -->
 
-          ${SIDEBAR_CONFIG.perspectiveLabel}
+         <blockquote class="m-0">
 
-        </p>
+           <p
+             class="text-[15px] leading-[1.5] tracking-[-0.015em] text-stone-800"
+             style="font-family: 'Open Sans', sans-serif;"
+           >
 
+             ${SIDEBAR_CONFIG.quote}
 
-        <!-- FRASE -->
+           </p>
 
-        <blockquote class="m-0">
 
-          <p
-            class="text-[15px] leading-[1.5] tracking-[-0.015em] text-stone-800"
-            style="font-family: 'Open Sans', sans-serif;"
-          >
+           <!-- AUTOR -->
 
-            ${SIDEBAR_CONFIG.quote}
+           <footer class="mt-5 flex items-center gap-2 text-[9px] font-semibold tracking-[0.16em] uppercase text-stone-400">
 
-          </p>
+             <span class="w-4 h-px bg-stone-300"></span>
 
+             ${SIDEBAR_CONFIG.quoteAuthor}
 
-          <!-- AUTOR -->
+           </footer>
 
-          <footer class="mt-5 flex items-center gap-2 text-[9px] font-semibold tracking-[0.16em] uppercase text-stone-400">
+         </blockquote>
 
-            <span class="w-4 h-px bg-stone-300"></span>
+       </div>
 
-            ${SIDEBAR_CONFIG.quoteAuthor}
+     </div>
 
-          </footer>
+   `;
 
-        </blockquote>
-
-      </div>
-
-    </div>
-
-  `;
-
-
-  /* =======================================================
-     INSERTAR ANTES DEL ARTÍCULO
-  ======================================================= */
-
-  article.parentNode.insertBefore(
-    sidebar,
-    article
-  );
-
-});
+ });
