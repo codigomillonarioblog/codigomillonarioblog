@@ -3009,7 +3009,7 @@ Entender esa diferencia permite observar las grandes fortunas con mayor contexto
       Ir
     </button>
 
-    <a id="viewAllBtn" href="../NOMBREDELASECCION/index.html" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
+    <a id="viewAllBtn" href="../negocios/index.html" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
       Ver todos
     </a>
   </div>
@@ -3224,7 +3224,7 @@ searchInput.addEventListener("input",()=>{
   renderAll(allArticles.filter(a=>a.title.toLowerCase().includes(q)));
 });
 
-fetch("../NOMBREDELASECCION/index.html")
+fetch("../negocios/index.html")
 .then(r=>r.text())
 .then(html=>{
   const parser=new DOMParser();
