@@ -1080,14 +1080,27 @@ body{
 
 
 <!-- =========================================
-     CONTENIDO CENTRAL DEL ARTÍCULO
+     CONTENEDOR PRINCIPAL
 ========================================= -->
 
-<div class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,768px)_220px] gap-8 lg:gap-10 items-start">
+<main class="w-full">
 
-  <div id="articleSidebarSlot"></div>
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
 
-  <article class="w-full text-left">
+    <div class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,768px)_220px] gap-8 lg:gap-10 items-start">
+
+      <!-- COLUMNA IZQUIERDA -->
+      <aside
+        id="article-guide"
+        class="hidden lg:block lg:sticky lg:top-40">
+      </aside>
+
+
+      <!-- CONTENIDO CENTRAL -->
+      <article class="w-full text-left">
+
+        <!-- AQUÍ COMIENZA EL CONTENIDO REAL DEL ARTÍCULO -->
+
 
 
 
@@ -2810,17 +2823,29 @@ Entender esa diferencia permite observar las grandes fortunas con mayor contexto
 
 
 
-    <!-- ARTÍCULO -->
+        <!-- CONTENIDO DEL ARTÍCULO -->
 
-  </article>
-
-  <div id="newsletterSlot"></div>
-
-</div>
+      </article>
 
 
-<script src="/assets/site-components.js"></script>
-<script src="/assets/article-sidebar.js"></script>
+      <!-- COLUMNA DERECHA -->
+      <aside id="article-newsletter">
+      </aside>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+
+  <!-- COMPONENTES DEL SITIO -->
+  <script src="/assets/article-sidebar.js"></script>
+
+  <!-- COLUMNA EDITORIAL DEL ARTÍCULO -->
+  <script src="/assets/global.js"></script>
+
 
 
 
