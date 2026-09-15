@@ -1080,29 +1080,14 @@ body{
 
 
 <!-- =========================================
-     CONTENEDOR PRINCIPAL
+     CONTENIDO CENTRAL DEL ARTÍCULO
 ========================================= -->
 
-<main class="w-full">
+<div class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,768px)_220px] gap-8 lg:gap-10 items-start">
 
-  <div class="max-w-7xl mx-auto px-6 md:px-8">
+  <div id="articleSidebarSlot"></div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,768px)_220px] gap-8 lg:gap-10 items-start">
-
-      <!-- =========================================
-           COLUMNA IZQUIERDA
-           GENERADA POR JAVASCRIPT
-      ========================================== -->
-
-      <div id="articleSidebar"></div>
-
-
-      <!-- =========================================
-           CONTENIDO CENTRAL DEL ARTÍCULO
-      ========================================== -->
-
-      <article class="w-full text-left">
-
+  <article class="w-full text-left">
 
 
 
@@ -2825,32 +2810,14 @@ Entender esa diferencia permite observar las grandes fortunas con mayor contexto
 
 
 
+    <!-- ARTÍCULO -->
 
+  </article>
 
+  <div id="newsletterSlot"></div>
 
+</div>
 
-      </article>
-
-
-      <!-- =========================================
-           COLUMNA DERECHA
-           GENERADA POR JAVASCRIPT
-      ========================================== -->
-
-      <div id="newsletterContainer"></div>
-
-    </div>
-
-  </div>
-
-</main>
-
-<!-- =========================================
-     COMPONENTES DEL SITIO
-========================================= -->
-
-<script src="/assets/site-components.js"></script>
-<script src="/assets/article-sidebar.js"></script>
 
 
 
