@@ -1074,6 +1074,7 @@ body{
 
 
 
+
 <!-- =========================================
      CONTENEDOR PRINCIPAL
 ========================================= -->
@@ -1084,78 +1085,18 @@ body{
 
     <div class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,768px)_220px] gap-8 lg:gap-10 items-start">
 
-
-      <!-- =========================================
-           COLUMNA IZQUIERDA
-           GUÍA GRATUITA
-      ========================================== -->
-
-      <aside class="hidden lg:block lg:sticky lg:top-40">
-
-        <div class="pt-2">
-
-          <!-- ETIQUETA -->
-          <p class="inline-block bg-black text-white text-[10px] font-semibold tracking-[0.14em] px-2.5 py-1.5 mb-5 uppercase">
-            Guía gratuita
-          </p>
-
-          <!-- TÍTULO -->
-          <h2 class="text-[22px] md:text-[24px] font-semibold text-stone-950 leading-[1.15] tracking-[-0.02em] mb-4">
-            Aprende a organizar mejor tu dinero
-          </h2>
-
-          <!-- TEXTO -->
-          <p class="text-stone-700 leading-relaxed mb-4 space-y-5 text-sm md:text-[15px]" style="font-family: 'Open Sans', sans-serif;">
-            Descubre estrategias sencillas para organizar tus ingresos,
-            controlar tus gastos y avanzar hacia tus objetivos financieros.
-          </p>
-
-
-          <!-- ENLACE -->
-          <a
-            href="#"
-            class="inline-flex items-center gap-2 text-[14px] font-semibold text-stone-950 border-b border-stone-950 pb-1 hover:text-stone-500 hover:border-stone-400 transition-colors duration-200">
-            Descargar guía
-            <span aria-hidden="true">→</span>
-          </a>
-
-
-          <!-- =========================================
-               FRASE EDITORIAL
-          ========================================== -->
-
-          <div class="mt-8">
-
-            <!-- LÍNEA SUPERIOR -->
-            <div class="w-8 h-px bg-stone-900 mb-5"></div>
-
-            <!-- FRASE -->
-            <blockquote class="m-0">
-
-              <!-- FRASE -->
-              <p class="text-[18px] leading-[1.35] tracking-[-0.015em] text-stone-900" style="font-family: 'Open Sans', sans-serif;">
-                El dinero no cambia tu vida por sí solo; las decisiones que tomas con él sí.
-              </p>
-
-              <!-- AUTOR -->
-              <footer class="mt-5 text-[11px] font-semibold tracking-[0.14em] uppercase text-stone-400">
-                Medio Financiero
-              </footer>
-
-            </blockquote>
-
-          </div>
-
-        </div>
-
+      <!-- COLUMNA IZQUIERDA -->
+      <aside
+        id="article-guide"
+        class="hidden lg:block lg:sticky lg:top-40">
       </aside>
 
 
-      <!-- =========================================
-           CONTENIDO CENTRAL DEL ARTÍCULO
-      ========================================== -->
-
+      <!-- CONTENIDO CENTRAL -->
       <article class="w-full text-left">
+
+        <!-- AQUÍ COMIENZA EL CONTENIDO REAL DEL ARTÍCULO -->
+        
 
 
 <!-- INTRODUCCIÓN -->
@@ -3322,80 +3263,13 @@ document.querySelectorAll('.cm-toc-list a').forEach(link=>{
 
 
 
+      <!-- CONTENIDO DEL ARTÍCULO -->
 
       </article>
 
-      <!-- =========================================
-           COLUMNA DERECHA
-           MANTENTE AL DÍA
-      ========================================== -->
 
-      <aside class="block">
-
-        <div class="pt-2">
-
-          <!-- TÍTULO -->
-          <h2 class="text-[22px] md:text-[24px] text-stone-950 leading-[1.15] tracking-[-0.02em] mb-4">
-            Mantente al día con con las últimas novedades de Código Millonario
-          </h2>
-
-          <!-- TEXTO -->
-         <p class="text-stone-700 leading-relaxed mb-4 space-y-5 text-sm md:text-[15px]" style="font-family: 'Open Sans', sans-serif;">
-           Recibe consejos, ideas y recursos sobre dinero, ahorro,
-           inversión y negocios directamente en tu correo.
-         </p>
-
-          <!-- =========================================
-               CAMPO DE CORREO
-          ========================================== -->
-
-          <form class="relative w-full">
-
-            <input
-              type="email"
-              placeholder="Ingresa tu correo"
-              aria-label="Correo electrónico"
-              class="w-full h-11 border border-stone-300 rounded-full pl-4 pr-12 text-[13px] text-stone-800 placeholder-stone-400 bg-white focus:outline-none focus:border-stone-500 transition-colors duration-200">
-
-            <!-- BOTÓN CIRCULAR -->
-            <button
-              type="submit"
-              aria-label="Suscribirme"
-              class="absolute right-1 top-1 w-9 h-9 rounded-full bg-black text-white flex items-center justify-center hover:bg-stone-800 transition-colors duration-200">
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true">
-
-                <path d="M5 12h14"></path>
-                <path d="m13 6 6 6-6 6"></path>
-
-              </svg>
-
-            </button>
-
-          </form>
-
-
-          <!-- =========================================
-               TEXTO INFERIOR
-          ========================================== -->
-
-          <p class="text-[11px] text-stone-400 leading-[1.5] mt-4">
-            Al introducir tu dirección de correo electrónico, aceptas
-            recibir comunicaciones de Código Millonario.
-          </p>
-
-        </div>
-
+      <!-- COLUMNA DERECHA -->
+      <aside id="article-newsletter">
       </aside>
 
     </div>
@@ -3403,6 +3277,14 @@ document.querySelectorAll('.cm-toc-list a').forEach(link=>{
   </div>
 
 </main>
+
+
+
+  <!-- COMPONENTES DEL SITIO -->
+  <script src="/assets/article-sidebar.js"></script>
+
+  <!-- COLUMNA EDITORIAL DEL ARTÍCULO -->
+  <script src="/assets/global.js"></script>
 
 
 
