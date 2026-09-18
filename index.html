@@ -3237,46 +3237,170 @@ prevBtn.addEventListener('click', () => {
 
 
 <!-- =====================================================
-     FILOSOFÍA + NEWSLETTER
+     IDENTIDAD + CONFIANZA + NEWSLETTER
      CÓDIGO MILLONARIO
 ===================================================== -->
 
-<section class="cm-editorial-final">
+<section class="cm-identidad">
 
-  <!-- FILOSOFÍA -->
+  <!-- =========================
+       ENCABEZADO
+  ========================= -->
 
-  <div class="cm-philosophy">
+  <div class="cm-identidad-header">
 
-    <span class="cm-philosophy-label">
-      FILOSOFÍA CÓDIGO MILLONARIO
+    <span class="cm-identidad-category">
+      LA MIRADA DE CÓDIGO MILLONARIO
     </span>
 
-    <h2 class="cm-philosophy-quote">
-      Ganar más dinero es la consecuencia de aprender a administrarlo mejor.
+    <h2>
+      Una forma diferente de hablar sobre dinero
     </h2>
 
-    <p class="cm-philosophy-description">
-      Código Millonario no solo habla de dinero; analiza las decisiones,
-      principios y estrategias detrás de quienes construyen riqueza.
+    <p>
+      Código Millonario analiza el dinero, los negocios y la construcción
+      de patrimonio desde una perspectiva práctica, informativa y de largo plazo.
     </p>
 
   </div>
 
 
-  <!-- SEPARADOR -->
+  <!-- =========================
+       BLOQUE PRINCIPAL
+  ========================= -->
 
-  <div class="cm-editorial-divider">
-    <span></span>
+  <div class="cm-identidad-feature">
+
+    <div class="cm-identidad-content">
+
+      <span class="cm-identidad-label">
+        MEDIO FINANCIERO
+      </span>
+
+      <h3>
+        Información para entender mejor las decisiones que rodean al dinero.
+      </h3>
+
+      <p>
+        Código Millonario es un medio digital especializado en educación
+        financiera, construcción de patrimonio y desarrollo de negocios.
+      </p>
+
+      <p>
+        Publicamos contenidos sobre dinero, ahorro, negocios, patrimonio
+        y las decisiones que intervienen en la construcción de riqueza
+        a largo plazo.
+      </p>
+
+      <p>
+        El objetivo no es ofrecer fórmulas rápidas, sino reunir información
+        útil que permita comprender mejor cada tema, contrastar ideas y
+        tomar decisiones con mayor contexto.
+      </p>
+
+    </div>
+
+
+    <div class="cm-identidad-image">
+
+      <img
+        src="./assets/png/detectar-oportunidades-de-mercado.webp"
+        alt="Código Millonario, medio digital especializado en educación financiera, patrimonio y negocios."
+      >
+
+    </div>
+
   </div>
 
 
-  <!-- NEWSLETTER -->
+  <!-- =========================
+       DATOS DEL MEDIO
+  ========================= -->
 
-  <div class="cm-newsletter">
+  <div class="cm-identidad-grid">
 
-    <div class="cm-news-header">
+    <article class="cm-identidad-item">
 
-      <span class="cm-news-label">
+      <span class="cm-identidad-item-category">
+        BIBLIOTECA
+      </span>
+
+      <h3>
+        +120
+      </h3>
+
+      <p>
+        Artículos sobre dinero, ahorro, inversión y educación financiera.
+      </p>
+
+    </article>
+
+
+    <article class="cm-identidad-item">
+
+      <span class="cm-identidad-item-category">
+        FILOSOFÍA
+      </span>
+
+      <h3>
+        Sin falsas promesas
+      </h3>
+
+      <p>
+        Contenido explicado desde una perspectiva práctica,
+        transparente y de largo plazo.
+      </p>
+
+    </article>
+
+
+    <article class="cm-identidad-item">
+
+      <span class="cm-identidad-item-category">
+        ENFOQUE
+      </span>
+
+      <h3>
+        Dinero real
+      </h3>
+
+      <p>
+        Temas financieros relacionados con situaciones,
+        decisiones y problemas que las personas pueden enfrentar.
+      </p>
+
+    </article>
+
+
+    <article class="cm-identidad-item">
+
+      <span class="cm-identidad-item-category">
+        ACTUALIZACIÓN
+      </span>
+
+      <h3>
+        2026
+      </h3>
+
+      <p>
+        Información y análisis adaptados al entorno económico
+        y financiero actual.
+      </p>
+
+    </article>
+
+  </div>
+
+
+  <!-- =========================
+       NEWSLETTER
+  ========================= -->
+
+  <div class="cm-identidad-newsletter">
+
+    <div class="cm-identidad-news-header">
+
+      <span class="cm-identidad-news-label">
         NEWSLETTER FINANCIERA
       </span>
 
@@ -3293,7 +3417,7 @@ prevBtn.addEventListener('click', () => {
 
 
     <form
-      class="cm-news-form"
+      class="cm-identidad-news-form"
       action="https://api.web3forms.com/submit"
       method="POST"
       id="newsletterForm"
@@ -3329,7 +3453,7 @@ prevBtn.addEventListener('click', () => {
         value="https://codigomillonario.blog/gracias.html"
       >
 
-      <div class="cm-news-input">
+      <div class="cm-identidad-news-input">
 
         <input
           type="email"
@@ -3350,13 +3474,13 @@ prevBtn.addEventListener('click', () => {
 
     <p
       id="successMessage"
-      class="cm-news-success"
+      class="cm-identidad-news-success"
       style="display:none;"
     >
       Usuario registrado para recibir contenido ✔
     </p>
 
-    <span class="cm-news-note">
+    <span class="cm-identidad-news-note">
       Contenido financiero. Sin ruido innecesario.
     </span>
 
@@ -3367,88 +3491,190 @@ prevBtn.addEventListener('click', () => {
 
 <style>
 
-/* ===== CIERRE EDITORIAL ===== */
+/* =========================================
+   IDENTIDAD DEL MEDIO
+========================================= */
 
-.cm-editorial-final{
+.cm-identidad{
   width:100%;
   max-width:1080px;
-  margin:0 auto;
-  padding:85px 40px 80px;
+  margin:90px auto 100px;
+  padding:0 40px;
   font-family:'Inter',sans-serif;
   color:#111;
 }
 
-/* ===== FILOSOFÍA ===== */
 
-.cm-philosophy{
-  max-width:760px;
-  margin:0 auto;
-  text-align:center;
-}
+/* =========================================
+   ENCABEZADO
+========================================= */
 
-.cm-philosophy-label{
-  display:inline-block;
-  margin-bottom:18px;
-  padding:4px 7px;
-  background:#111;
-  color:#fff;
-  font-size:8px;
-  line-height:1;
-  font-weight:700;
-  letter-spacing:1.7px;
-  text-transform:uppercase;
-}
-
-.cm-philosophy-quote{
-  max-width:740px;
-  margin:0 auto;
-  font-size:clamp(2rem,3.5vw,3rem);
-  line-height:1.1;
-  letter-spacing:-1.8px;
-  font-weight:800;
-  color:#1c1917;
-  text-rendering:optimizeLegibility;
-  -webkit-font-smoothing:antialiased;
-}
-
-.cm-philosophy-description{
-  max-width:610px;
-  margin:19px auto 0;
-  color:#57534e;
-  font-size:12px;
-  line-height:1.7;
-}
-
-/* ===== SEPARADOR ===== */
-
-.cm-editorial-divider{
-  display:flex;
-  justify-content:center;
-  margin:42px auto 38px;
-}
-
-.cm-editorial-divider span{
-  display:block;
-  width:45px;
-  height:1px;
-  background:#111;
-  opacity:.2;
-}
-
-/* ===== NEWSLETTER ===== */
-
-.cm-newsletter{
+.cm-identidad-header{
   max-width:700px;
-  margin:0 auto;
+  margin-bottom:32px;
+}
+
+.cm-identidad-category{
+  display:block;
+  margin-bottom:10px;
+  padding-bottom:8px;
+  border-bottom:1px solid #ececec;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  color:#777;
+}
+
+.cm-identidad-header h2{
+  margin:0 0 12px;
+  font-size:clamp(2rem,3vw,2.8rem);
+  line-height:1.05;
+  letter-spacing:-1.3px;
+  font-weight:800;
+  color:#111;
+}
+
+.cm-identidad-header p{
+  max-width:620px;
+  margin:0;
+  font-size:13px;
+  line-height:1.6;
+  color:#666;
+}
+
+
+/* =========================================
+   BLOQUE PRINCIPAL
+========================================= */
+
+.cm-identidad-feature{
+  display:grid;
+  grid-template-columns:1fr 1.35fr;
+  gap:28px;
+  align-items:stretch;
+  padding-bottom:24px;
+  border-bottom:1px solid #ececec;
+}
+
+.cm-identidad-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-right:10px;
+}
+
+.cm-identidad-label{
+  display:block;
+  margin-bottom:9px;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.9px;
+  text-transform:uppercase;
+  color:#777;
+}
+
+.cm-identidad-content h3{
+  margin:0 0 12px;
+  font-size:24px;
+  line-height:1.13;
+  letter-spacing:-.7px;
+  font-weight:800;
+  color:#111;
+}
+
+.cm-identidad-content p{
+  margin:0 0 13px;
+  font-size:12.5px;
+  line-height:1.65;
+  color:#666;
+}
+
+.cm-identidad-content p:last-child{
+  margin-bottom:0;
+}
+
+.cm-identidad-image{
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+}
+
+.cm-identidad-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+
+.cm-identidad-image:hover img{
+  transform:scale(1.025);
+}
+
+
+/* =========================================
+   DATOS DEL MEDIO
+========================================= */
+
+.cm-identidad-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-top:20px;
+}
+
+.cm-identidad-item{
+  min-width:0;
+  padding:0 0 18px;
+  border-bottom:1px solid #ececec;
+}
+
+.cm-identidad-item-category{
+  display:block;
+  margin-bottom:8px;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#888;
+}
+
+.cm-identidad-item h3{
+  margin:0 0 8px;
+  font-size:21px;
+  line-height:1.12;
+  letter-spacing:-.6px;
+  font-weight:800;
+  color:#111;
+}
+
+.cm-identidad-item p{
+  margin:0;
+  font-size:11.5px;
+  line-height:1.55;
+  color:#666;
+}
+
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+
+.cm-identidad-newsletter{
+  max-width:700px;
+  margin:52px auto 0;
+  padding-top:32px;
+  border-top:1px solid #ececec;
   text-align:center;
 }
 
-.cm-news-header{
+.cm-identidad-news-header{
   max-width:600px;
   margin:0 auto;
 }
 
-.cm-news-label{
+.cm-identidad-news-label{
   display:block;
   margin-bottom:9px;
   color:#9a7b1f;
@@ -3459,7 +3685,7 @@ prevBtn.addEventListener('click', () => {
   text-transform:uppercase;
 }
 
-.cm-news-header h3{
+.cm-identidad-news-header h3{
   margin:0;
   color:#111;
   font-size:20px;
@@ -3468,7 +3694,7 @@ prevBtn.addEventListener('click', () => {
   font-weight:700;
 }
 
-.cm-news-header p{
+.cm-identidad-news-header p{
   max-width:540px;
   margin:9px auto 0;
   color:#666;
@@ -3476,13 +3702,11 @@ prevBtn.addEventListener('click', () => {
   line-height:1.65;
 }
 
-/* ===== FORMULARIO ===== */
-
-.cm-news-form{
+.cm-identidad-news-form{
   margin-top:21px;
 }
 
-.cm-news-input{
+.cm-identidad-news-input{
   display:flex;
   align-items:stretch;
   width:100%;
@@ -3491,7 +3715,7 @@ prevBtn.addEventListener('click', () => {
   border-bottom:1px solid #222;
 }
 
-.cm-news-input input{
+.cm-identidad-news-input input{
   flex:1;
   min-width:0;
   padding:11px 4px;
@@ -3503,12 +3727,12 @@ prevBtn.addEventListener('click', () => {
   font-size:11px;
 }
 
-.cm-news-input input::placeholder{
+.cm-identidad-news-input input::placeholder{
   color:#999;
   opacity:1;
 }
 
-.cm-news-input button{
+.cm-identidad-news-input button{
   flex-shrink:0;
   padding:0 4px 0 18px;
   border:0;
@@ -3523,19 +3747,19 @@ prevBtn.addEventListener('click', () => {
   transition:opacity .2s ease,transform .2s ease;
 }
 
-.cm-news-input button:hover{
+.cm-identidad-news-input button:hover{
   opacity:.55;
   transform:translateX(2px);
 }
 
-.cm-news-success{
+.cm-identidad-news-success{
   margin:13px 0 0;
   color:#111;
   font-size:10px;
   font-weight:600;
 }
 
-.cm-news-note{
+.cm-identidad-news-note{
   display:block;
   margin-top:12px;
   color:#a0a0a0;
@@ -3544,92 +3768,104 @@ prevBtn.addEventListener('click', () => {
   text-transform:uppercase;
 }
 
-/* ===== TABLET ===== */
 
-@media(max-width:768px){
+/* =========================================
+   TABLET
+========================================= */
 
-  .cm-editorial-final{
-    padding:70px 30px 65px;
+@media(max-width:900px){
+
+  .cm-identidad{
+    padding:0 30px;
   }
 
-  .cm-philosophy-quote{
-    font-size:2.25rem;
-    letter-spacing:-1.5px;
+  .cm-identidad-feature{
+    grid-template-columns:1fr 1fr;
   }
 
-  .cm-philosophy-description{
-    font-size:11.5px;
+  .cm-identidad-grid{
+    grid-template-columns:1fr 1fr;
+    gap:24px 20px;
   }
 
-  .cm-editorial-divider{
-    margin:35px auto 32px;
-  }
-
-  .cm-news-header h3{
-    font-size:19px;
-  }
 }
 
-/* ===== MÓVIL ===== */
+
+/* =========================================
+   MÓVIL
+========================================= */
 
 @media(max-width:600px){
 
-  .cm-editorial-final{
-    padding:60px 20px 55px;
+  .cm-identidad{
+    margin:70px auto 75px;
+    padding:0 20px;
   }
 
-  .cm-philosophy-label{
-    margin-bottom:16px;
-    font-size:7.5px;
-    letter-spacing:1.5px;
+  .cm-identidad-header{
+    margin-bottom:25px;
   }
 
-  .cm-philosophy-quote{
-    font-size:1.95rem;
-    line-height:1.12;
-    letter-spacing:-1.2px;
+  .cm-identidad-header h2{
+    font-size:2rem;
   }
 
-  .cm-philosophy-description{
-    margin-top:17px;
-    font-size:11px;
-    line-height:1.7;
+  .cm-identidad-header p{
+    font-size:12px;
   }
 
-  .cm-editorial-divider{
-    margin:30px auto 28px;
+  .cm-identidad-feature{
+    grid-template-columns:1fr;
+    gap:20px;
   }
 
-  .cm-news-label{
-    font-size:7.5px;
-    letter-spacing:1.7px;
+  .cm-identidad-content{
+    padding-right:0;
   }
 
-  .cm-news-header h3{
+  .cm-identidad-content h3{
+    font-size:21px;
+  }
+
+  .cm-identidad-image{
+    order:-1;
+  }
+
+  .cm-identidad-grid{
+    grid-template-columns:1fr;
+    gap:26px;
+    margin-top:26px;
+  }
+
+  .cm-identidad-newsletter{
+    margin-top:38px;
+    padding-top:28px;
+  }
+
+  .cm-identidad-news-header h3{
     font-size:18px;
     line-height:1.25;
   }
 
-  .cm-news-header p{
+  .cm-identidad-news-header p{
     font-size:11px;
-    line-height:1.65;
   }
 
-  .cm-news-input{
+  .cm-identidad-news-input{
     max-width:100%;
   }
 
-  .cm-news-input input{
+  .cm-identidad-news-input input{
     padding:11px 2px;
     font-size:11px;
   }
 
-  .cm-news-input button{
+  .cm-identidad-news-input button{
     padding-left:14px;
     font-size:8px;
   }
-}
 
+}
 </style>
 
 
@@ -3648,201 +3884,6 @@ document
   });
 
 </script>
-
-
-
-
-
-
-
-<!-- ESPACIO ARRIBA -->
- <div style="height: 20px;"></div>
-
-
-
-
-
-
-<!-- ===================== TRUST SECTION ===================== -->
-
-<section class="cm-trust-section">
-
-    <div class="cm-trust-container">
-
-        <div class="cm-trust-grid">
-
-            <!-- CARD -->
-
-            <div class="cm-card">
-
-                <span class="cm-label">
-                    Biblioteca
-                </span>
-
-                <h3>+120</h3>
-
-                <p>
-                    Artículos sobre dinero, ahorro, inversión y educación financiera.
-                </p>
-
-            </div>
-
-            <!-- CARD -->
-
-            <div class="cm-card">
-
-                <span class="cm-label">
-                    Filosofía
-                </span>
-
-                <h3>100%</h3>
-
-                <p>
-                    Contenido práctico, transparente y explicado sin falsas promesas.
-                </p>
-
-            </div>
-
-            <!-- CARD -->
-
-            <div class="cm-card">
-
-                <span class="cm-label">
-                    Enfoque
-                </span>
-
-                <h3>Real</h3>
-
-                <p>
-                    Finanzas personales aplicadas a situaciones que cualquier persona puede vivir.
-                </p>
-
-            </div>
-
-            <!-- CARD -->
-
-            <div class="cm-card">
-
-                <span class="cm-label">
-                    Actualizado
-                </span>
-
-                <h3>2026</h3>
-
-                <p>
-                    Estrategias modernas adaptadas al entorno financiero actual.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<style>
-
-/* =========================================
-   SECCIÓN
-========================================= */
-
-.cm-trust-section{
-    padding:90px 20px;
-    background:#fff;
-    font-family:'Inter',sans-serif;
-}
-
-.cm-trust-container{
-    max-width:1200px;
-    margin:auto;
-}
-
-/* GRID */
-
-.cm-trust-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:26px;
-}
-
-/* CARD */
-
-.cm-card{
-    background:#fff;
-    border:1px solid #e7e5e4;
-    border-radius:22px;
-    padding:34px;
-    transition:.30s ease;
-}
-
-.cm-card:hover{
-    transform:translateY(-8px);
-    border-color:#0f766e;
-    box-shadow:0 18px 40px rgba(0,0,0,.07);
-}
-
-/* CONTENIDO */
-
-.cm-label{
-    display:inline-block;
-    padding:5px 12px;
-    border-radius:999px;
-    background:#f5f5f4;
-    color:#57534e;
-    font-size:13px;
-    font-weight:500;
-    margin-bottom:28px;
-}
-
-.cm-card h3{
-    margin:0;
-    font-size:3.2rem;
-    line-height:1;
-    letter-spacing:-3px;
-    font-weight:700;
-    color:#1c1917;
-}
-
-.cm-card p{
-    margin-top:22px;
-    color:#57534e;
-    font-size:1rem;
-    line-height:1.8;
-}
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width:1024px){
-    .cm-trust-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media (max-width:700px){
-    .cm-trust-section{
-        padding:70px 20px;
-    }
-
-    .cm-trust-grid{
-        grid-template-columns:1fr;
-    }
-
-    .cm-card{
-        padding:30px;
-    }
-
-    .cm-card h3{
-        font-size:2.7rem;
-    }
-}
-
-</style>
-
-
-
 
 
 
@@ -4719,106 +4760,173 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 
 
 
-<!-- SECCIÓN EDITORIAL -->
-<section class="max-w-3xl mx-auto px-4 py-12 font-[Inter] text-slate-900">
 
-  <div class="border-t border-slate-200 pt-8">
+<!-- =====================================================
+     ÁREAS DE ANÁLISIS
+     CÓDIGO MILLONARIO
+===================================================== -->
 
-    <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-6">
-      Las áreas que analizamos en Código Millonario
+<section class="cm-areas">
+
+  <!-- =========================
+       ENCABEZADO
+  ========================= -->
+
+  <div class="cm-areas-header">
+
+    <span class="cm-areas-category">
+      ÁREAS DE ANÁLISIS
+    </span>
+
+    <h2>
+      Los temas que analizamos en <br>Código Millonario
     </h2>
 
+    <p>
+      Dinero, educación financiera, patrimonio y negocios forman parte
+      de una misma conversación: entender mejor cómo se toman las
+      decisiones que afectan nuestra vida financiera.
+    </p>
+
+  </div>
+
+
+  <!-- =========================
+       ÁREAS
+  ========================= -->
+
+  <div class="cm-areas-grid">
+
     <!-- ITEM 1 -->
-    <div class="flex gap-4 py-5 border-b border-slate-100">
 
-      <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-900 text-white text-sm font-bold">
-        01
-      </div>
+    <article class="cm-area">
 
-      <div>
+      <span class="cm-area-label">
+        EDUCACIÓN FINANCIERA
+      </span>
 
-        <h3 class="font-semibold text-lg">
-          Educación financiera
-        </h3>
-
-        <p class="text-sm text-slate-500 mt-1">
-          Ahorro · Administración del dinero · Finanzas personales
-        </p>
-
-        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-          Explicamos conceptos de educación financiera para ayudarte a comprender mejor el dinero, organizar tus finanzas personales y desarrollar hábitos financieros sostenibles.
-        </p>
-
-      </div>
-
-    </div>
-
-    <!-- ITEM 2 -->
-    <div class="flex gap-4 py-5 border-b border-slate-100">
-
-      <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-900 text-white text-sm font-bold">
-        02
-      </div>
-
-      <div>
-
-        <h3 class="font-semibold text-lg">
-          Mentalidad y decisiones financieras
-        </h3>
-
-        <p class="text-sm text-slate-500 mt-1">
-          Psicología del dinero · Hábitos · Comportamiento financiero
-        </p>
-
-        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-          Analizamos cómo la forma de pensar, los hábitos y las decisiones financieras influyen en la estabilidad económica, la construcción de riqueza y el crecimiento a largo plazo.
-        </p>
-
-      </div>
-
-    </div>
-
-    <!-- ITEM 3 -->
-    <div class="flex gap-4 py-5 border-b border-slate-100">
-
-      <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-900 text-white text-sm font-bold">
-        03
-      </div>
-
-      <div>
-
-        <h3 class="font-semibold text-lg">
-          Construcción de patrimonio
-        </h3>
-
-        <p class="text-sm text-slate-500 mt-1">
-          Activos · Patrimonio · Crecimiento financiero
-        </p>
-
-        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-          Exploramos principios relacionados con la construcción de patrimonio, la generación de valor, la inversión y las estrategias que contribuyen al crecimiento financiero con una visión de largo plazo.
-        </p>
-
-      </div>
-
-    </div>
-
-    <!-- CTA -->
-    <div class="pt-10 mt-6 border-t border-slate-200">
-
-      <h3 class="text-lg font-semibold mb-2">
-        ¿Tienes una historia financiera que compartir?
+      <h3>
+        Entender el dinero antes de intentar hacerlo crecer
       </h3>
 
-      <p class="text-sm text-slate-600 leading-relaxed mb-4">
-        En Código Millonario publicamos historias, experiencias y reflexiones relacionadas con las finanzas personales, el emprendimiento, el trabajo, la inversión y la construcción de patrimonio. 
-        <br>
-        Si tu experiencia puede aportar valor a otros lectores, estaremos encantados de conocerla.
+      <p>
+        Analizamos conceptos de educación financiera, ahorro, administración
+        del dinero y finanzas personales para comprender cómo organizar los
+        recursos, controlar los gastos y construir una base financiera sólida.
       </p>
 
-      <a href="./opiniones.html#FORMULARIO-HISTORIA"
-         class="inline-block font-medium text-amber-600 hover:text-amber-700 transition">
+      <p>
+        El objetivo es explicar el funcionamiento del dinero desde situaciones
+        cotidianas, evitando presentar las finanzas personales como un conjunto
+        de fórmulas universales.
+      </p>
+
+    </article>
+
+
+    <!-- ITEM 2 -->
+
+    <article class="cm-area">
+
+      <span class="cm-area-label">
+        MENTALIDAD Y DECISIONES
+      </span>
+
+      <h3>
+        La relación entre dinero, comportamiento y decisiones
+      </h3>
+
+      <p>
+        La manera en que una persona piensa sobre el dinero puede influir
+        en sus hábitos, prioridades y decisiones financieras. Por eso también
+        analizamos la psicología del dinero y los comportamientos que aparecen
+        alrededor de la riqueza.
+      </p>
+
+      <p>
+        Exploramos temas como disciplina, percepción del riesgo, hábitos,
+        decisiones financieras y la perspectiva necesaria para pensar
+        en horizontes de largo plazo.
+      </p>
+
+    </article>
+
+
+    <!-- ITEM 3 -->
+
+    <article class="cm-area">
+
+      <span class="cm-area-label">
+        PATRIMONIO Y NEGOCIOS
+      </span>
+
+      <h3>
+        Cómo se construye valor más allá de los ingresos
+      </h3>
+
+      <p>
+        También estudiamos la construcción de patrimonio, los negocios,
+        el emprendimiento, la generación de ingresos y las distintas formas
+        en que una persona puede crear y conservar valor a lo largo del tiempo.
+      </p>
+
+      <p>
+        Analizamos activos, modelos de negocio, estrategias empresariales
+        y diferentes caminos hacia la construcción de riqueza, siempre
+        teniendo en cuenta que cada situación financiera es diferente.
+      </p>
+
+    </article>
+
+  </div>
+
+
+  <!-- =========================
+       CIERRE EDITORIAL
+  ========================= -->
+
+  <div class="cm-areas-closing">
+
+    <span></span>
+
+    <p>
+      Ningún tema financiero existe de manera aislada. El dinero,
+      las decisiones, los negocios y el patrimonio forman parte
+      de una misma realidad.
+    </p>
+
+  </div>
+
+
+  <!-- =========================
+       PARTICIPA
+  ========================= -->
+
+  <div class="cm-areas-participa">
+
+    <div class="cm-areas-participa-content">
+
+      <span class="cm-areas-participa-label">
+        PARTICIPA EN EL MEDIO
+      </span>
+
+      <h3>
+        ¿Tienes una historia financiera que pueda aportar?
+      </h3>
+
+      <p>
+        En Código Millonario también damos espacio a experiencias,
+        historias y reflexiones relacionadas con las finanzas personales,
+        el trabajo, los negocios, el emprendimiento, la inversión y la
+        construcción de patrimonio.
+      </p>
+
+      <a
+        href="./opiniones.html#FORMULARIO-HISTORIA"
+        class="cm-areas-participa-link"
+      >
         Compartir mi historia
+        <span>→</span>
       </a>
 
     </div>
@@ -4828,13 +4936,283 @@ Si ahorrar te suena a sacrificio, algo estás haciendo mal. Existe una forma de 
 </section>
 
 
+<style>
+
+/* =========================================
+   ÁREAS DE ANÁLISIS
+========================================= */
+
+.cm-areas{
+  width:100%;
+  max-width:1080px;
+  margin:90px auto 100px;
+  padding:0 40px;
+  font-family:'Inter',sans-serif;
+  color:#111;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.cm-areas-header{
+  max-width:720px;
+  margin-bottom:32px;
+}
+
+.cm-areas-category{
+  display:block;
+  margin-bottom:10px;
+  padding-bottom:8px;
+  border-bottom:1px solid #ececec;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  color:#777;
+}
+
+.cm-areas-header h2{
+  margin:0 0 12px;
+  font-size:clamp(2rem,3vw,2.8rem);
+  line-height:1.05;
+  letter-spacing:-1.3px;
+  font-weight:800;
+  color:#111;
+}
+
+.cm-areas-header p{
+  max-width:650px;
+  margin:0;
+  font-size:13px;
+  line-height:1.65;
+  color:#666;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.cm-areas-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.cm-area{
+  min-width:0;
+  padding:0 0 22px;
+  border-bottom:1px solid #ececec;
+}
+
+.cm-area-label{
+  display:block;
+  margin-bottom:9px;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#888;
+}
+
+.cm-area h3{
+  margin:0 0 12px;
+  font-size:19px;
+  line-height:1.16;
+  letter-spacing:-.5px;
+  font-weight:800;
+  color:#111;
+}
+
+.cm-area p{
+  margin:0 0 12px;
+  font-size:11.5px;
+  line-height:1.65;
+  color:#666;
+}
+
+.cm-area p:last-child{
+  margin-bottom:0;
+}
+
+
+/* =========================================
+   CIERRE
+========================================= */
+
+.cm-areas-closing{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  max-width:700px;
+  margin:30px auto 0;
+  padding-top:18px;
+  border-top:1px solid #ececec;
+}
+
+.cm-areas-closing span{
+  width:28px;
+  height:1px;
+  flex-shrink:0;
+  background:#c49b63;
+}
+
+.cm-areas-closing p{
+  margin:0;
+  font-size:11px;
+  line-height:1.6;
+  font-style:italic;
+  color:#777;
+}
+
+
+/* =========================================
+   PARTICIPA
+========================================= */
+
+.cm-areas-participa{
+  max-width:700px;
+  margin:52px auto 0;
+  padding-top:32px;
+  border-top:1px solid #ececec;
+  text-align:center;
+}
+
+.cm-areas-participa-content{
+  max-width:620px;
+  margin:0 auto;
+}
+
+.cm-areas-participa-label{
+  display:block;
+  margin-bottom:9px;
+  color:#9a7b1f;
+  font-size:8px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.cm-areas-participa h3{
+  margin:0 0 10px;
+  font-size:20px;
+  line-height:1.2;
+  letter-spacing:-.4px;
+  font-weight:700;
+  color:#111;
+}
+
+.cm-areas-participa p{
+  max-width:560px;
+  margin:0 auto;
+  font-size:11.5px;
+  line-height:1.65;
+  color:#666;
+}
+
+.cm-areas-participa-link{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-top:18px;
+  color:#111;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:opacity .2s ease;
+}
+
+.cm-areas-participa-link:hover{
+  opacity:.55;
+}
+
+.cm-areas-participa-link span{
+  font-size:13px;
+  line-height:1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:900px){
+
+  .cm-areas{
+    padding:0 30px;
+  }
+
+  .cm-areas-grid{
+    grid-template-columns:1fr 1fr;
+    gap:28px 20px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media(max-width:600px){
+
+  .cm-areas{
+    margin:70px auto 75px;
+    padding:0 20px;
+  }
+
+  .cm-areas-header{
+    margin-bottom:25px;
+  }
+
+  .cm-areas-header h2{
+    font-size:2rem;
+  }
+
+  .cm-areas-header p{
+    font-size:12px;
+  }
+
+  .cm-areas-grid{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .cm-area h3{
+    font-size:20px;
+  }
+
+  .cm-areas-closing{
+    margin-top:28px;
+  }
+
+  .cm-areas-participa{
+    margin-top:40px;
+    padding-top:28px;
+  }
+
+  .cm-areas-participa h3{
+    font-size:18px;
+  }
+
+}
+</style>
+
+
+
 
 
 
 
 
 <!-- ESPACIO ARRIBA -->
- <div style="height: 140px;"></div>
+ <div style="height: 100px;"></div>
 
 
 
