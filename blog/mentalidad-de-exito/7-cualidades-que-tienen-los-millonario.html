@@ -1080,8 +1080,6 @@ body{
 
 
 
-
-
 <!-- CONTENEDOR -->
 <main>
 <article class="max-w-5xl mx-auto px-6 md:px-8">
@@ -1109,6 +1107,132 @@ Nadie nace con estas siete cualidades completamente desarrolladas. Algunas apare
 </p>
 
 </div>
+
+
+
+
+
+
+<!-- TABLA DE CONTENIDOS VIEJA COLOR NEGRO-->
+
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:140px}
+[id]{scroll-margin-top:140px}
+.cf-accordion{margin-top:60px;font-family:'Inter',sans-serif}
+.cf-accordion-inner{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+.cf-accordion-item{width:260px;min-height:70px;margin:0;border:1px solid #000;border-radius:6px;background:#fff;overflow:hidden;transition:width .35s ease}
+.cf-accordion-item.is-open{width:680px}
+.cf-accordion-header{display:flex;justify-content:space-between;align-items:center;padding:18px 16px;cursor:pointer;font-size:17px;font-weight:600;color:#111827;background:#fff;border-bottom:none}
+.cf-menu-icon{width:30px;height:30px;display:flex;flex-direction:column;justify-content:center;align-items:center;border:1px solid #000;border-radius:6px;gap:4px;box-sizing:border-box}
+.cf-menu-icon span{height:2px;width:16px;background:#000;border-radius:2px}
+.cf-accordion-content{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.toc-container{padding:8px 14px 14px 14px}
+.toc-list{list-style:none;margin:0;padding:0}
+.toc-list li{padding:6px 0;margin:0;border:none}
+.toc-list a{text-decoration:none;color:#374151;font-size:14px;line-height:1.35;display:block;transition:all .2s ease}
+.toc-list a:hover{color:#000;transform:translateX(4px)}
+@media (max-width:480px){
+.cf-accordion-item{width:88%}
+.cf-accordion-item.is-open{width:100%}
+}
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+<div class="cf-accordion-inner">
+<div class="cf-accordion">
+<div class="cf-accordion-item">
+
+<!-- HEADER -->
+<div class="cf-accordion-header">
+Tabla de contenidos
+<div class="cf-menu-icon">
+<span></span><span></span><span></span>
+</div>
+</div>
+
+<!-- CONTENT -->
+<div class="cf-accordion-content">
+<div class="toc-container">
+<ul class="toc-list">
+
+    <li><a href="#titulo1">1. ¿Qué aprendieron los millonarios antes de tener sus millones?</a></li>
+    <li><a href="#titulo2">2. Por qué el millonario no ve la pérdida como un fracaso personal</a></li>
+    <li><a href="#titulo3">3. Menos listas, más palancas: cómo gestiona el tiempo un millonario</a></li>
+    <li><a href="#titulo4">4. la regla del dinero por qué los millonarios ignoran la opinión externa</a></li>
+    <li><a href="#titulo5">5. por qué los millonarios piensan contra corriente antes de poner dinero</a></li>
+    <li><a href="#titulo6">6. Cómo los millonarios usan el silencio para resolver problemas difíciles</a></li>
+    <li><a href="#titulo7">7. Los millonarios saben cuándo celebrar y cuándo simplemente continuar</a></li>
+    <li><a href="#titulo8">8. El dinero de los millonarios no siempre hace ruido</a></li>
+    <li><a href="#titulo9">9. Por qué los millonarios no necesitan correr para avanzar</a></li>
+
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+header.addEventListener('click',()=>{
+const item=header.closest('.cf-accordion-item');
+const content=item.querySelector('.cf-accordion-content');
+document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+if(other!==item){
+other.querySelector('.cf-accordion-content').style.maxHeight=null;
+}
+});
+item.classList.toggle('is-open');
+if(content.style.maxHeight){
+content.style.maxHeight=null;
+}else{
+content.style.maxHeight=content.scrollHeight+'px';
+}
+});
+});
+
+const isMobile=/iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+link.addEventListener('click',function(e){
+e.preventDefault();
+const id=this.getAttribute('href').substring(1);
+const target=document.getElementById(id);
+if(!target)return;
+const offset=140;
+const top=target.getBoundingClientRect().top+window.pageYOffset-offset;
+history.pushState(null,null,'#'+id);
+
+if(isMobile){
+window.scrollTo({
+top:top,
+behavior:'smooth'
+});
+}else{
+const start=window.pageYOffset;
+const distance=top-start;
+const duration=650;
+let startTime=null;
+
+function animate(time){
+if(!startTime)startTime=time;
+const progress=Math.min((time-startTime)/duration,1);
+const ease=1-Math.pow(1-progress,3);
+window.scrollTo(0,start+distance*ease);
+if(progress<1){
+requestAnimationFrame(animate);
+}
+}
+requestAnimationFrame(animate);
+}
+});
+});
+</script>
+
+
 
 
 
@@ -1182,7 +1306,7 @@ Nadie nace con estas siete cualidades completamente desarrolladas. Algunas apare
 
 <!-- APERTURA EDITORIAL -->
 
-<section class="cm-book-heading" id="titulo2">
+<section class="cm-book-heading" id="titulo1">
 
   <span class="cm-book-heading-mark"></span>
 
@@ -1310,7 +1434,7 @@ Estas siete cualidades no explican por sí solas cómo se construye una fortuna.
     Las 7 cualidades que tienen los millonarios
   </p>
 
-  <h2 id="cualidad-1">
+  <h2 id="titulo2">
     Cualidad 1
     <span>
     Por qué el millonario no ve la pérdida como un fracaso personal
@@ -1362,11 +1486,9 @@ En lugar de enojarse o creer que no sirven para esto, revisan qué parte del pla
 
 
 
-
-
 <div class="cm-cualidad cm-cualidad--siguiente">
 
-  <h2 id="cualidad-2">
+  <h2 id="titulo3">
     Cualidad 2
     <span>
      Menos listas, más palancas: cómo gestiona el tiempo un millonario
@@ -1376,7 +1498,6 @@ En lugar de enojarse o creer que no sirven para esto, revisan qué parte del pla
   <div class="cm-cualidad-linea"></div>
 
 </div>
-
 
 <p class="text-[16px] md:text-[17px] font-medium text-stone-700 leading-relaxed tracking-tight mt-10 mb-8">
 Invertir el tiempo solo en lo que mueve la aguja de verdad
@@ -1425,7 +1546,7 @@ Menos ruido diario deja espacio para que el esfuerzo de verdad empuje el número
 
 <div class="cm-cualidad cm-cualidad--siguiente">
 
-  <h2 id="cualidad-2">
+  <h2 id="titulo4">
     Cualidad 3
     <span>
     la regla del dinero por qué los millonarios ignoran la opinión externa
@@ -1482,7 +1603,7 @@ Menos presión por impresionar a la gente reduce los gastos fijos que amarran el
 
 <div class="cm-cualidad cm-cualidad--siguiente">
 
-  <h2 id="cualidad-2">
+  <h2 id="titulo5">
     Cualidad 4
     <span>
      por qué los millonarios piensan contra corriente antes de poner dinero
@@ -1539,7 +1660,7 @@ Menos prisa por sumarse al grupo evita pagar caro el costo de llegar tarde cuand
 
 <div class="cm-cualidad cm-cualidad--siguiente">
 
-  <h2 id="cualidad-2">
+  <h2 id="titulo6">
     Cualidad 5
     <span>
  Cómo los millonarios usan el silencio para resolver problemas difíciles
@@ -1598,7 +1719,7 @@ Menos saturación de estímulos ajenos deja espacio para que aparezca una mejor 
 
 <div class="cm-cualidad cm-cualidad--siguiente">
 
-  <h2 id="cualidad-2">
+  <h2 id="titulo7">
     Cualidad 6
     <span>
      Los millonarios saben cuándo celebrar y cuándo simplemente continuar
@@ -1656,7 +1777,7 @@ Menos montaña rusa emocional evita tomar decisiones apresuradas de expansión o
 
 <div class="cm-cualidad cm-cualidad--siguiente">
 
-  <h2 id="cualidad-2">
+  <h2 id="titulo8">
     Cualidad 7
     <span>
     El dinero de los millonarios no siempre hace ruido
@@ -1714,7 +1835,7 @@ Menos necesidad de adrenalina financiera protege el patrimonio de los tropiezos 
 
 
 <!-- BLOQUE -->
-<h2 id="titulo1" class="text-3xl md:text-5xl font-medium md:font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
+<h2 id="titulo9" class="text-3xl md:text-5xl font-medium md:font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">
 Por qué los millonarios no necesitan correr para avanzar
 </h2>
 
