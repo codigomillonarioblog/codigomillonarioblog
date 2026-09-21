@@ -1236,6 +1236,10 @@ menu.addEventListener("click",function(event){event.stopPropagation()});
 
 
 
+
+
+
+
 <!-- ========================================= -->
 <!-- GOOGLE FONTS -->
 <!-- ========================================= -->
@@ -1279,30 +1283,45 @@ menu.addEventListener("click",function(event){event.stopPropagation()});
           Quien entiende el dinero deja de perseguirlo a cualquier precio.
         </a>
 
-        <a href="#">
-          El objetivo no es solo ganar más, sino construir algo que permanezca.
-        </a>
-
-        <a href="#">
-          No todo ingreso crea riqueza, ni toda riqueza produce libertad.
-        </a>
-
       </div>
-
-      <br>
 
       <span class="editorial-label">
         Contenido
       </span>
 
-       <br>
-       <br>
+      <!-- CARD LATERAL -->
+
+      <article class="side-article">
+
+        <a href="./blog/negocios/errores-negocios-nuevos-como-evitar-fracaso.html">
+
+          <img
+            src="./assets/png/errores-negocios-nuevos-emprendimiento.webp"
+            alt=""
+          >
+
+          <div class="side-content">
+
+            <span>
+              Errores Financieros
+            </span>
+
+            <h3>
+             Errores que hacen fracasar nuevos negocios y cómo evitarlos
+            </h3>
+
+          </div>
+
+        </a>
+
+      </article>
+
 
       <!-- CARD LATERAL -->
 
       <article class="side-article">
 
-        <a href="./blog/negocios/22-ideas-de-negocios-millonarios-reales-en-2027.html.html">
+        <a href="./blog/negocios/22-ideas-de-negocios-millonarios-reales-en-2027.html">
 
           <img
             src="./assets/png/ideas-de-negocios-millonarios-2027.webp"
@@ -1551,7 +1570,7 @@ menu.addEventListener("click",function(event){event.stopPropagation()});
 <!-- CSS -->
 <!-- ========================================= -->
 
- <style>
+<style>
 
 /* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box}
@@ -1559,21 +1578,22 @@ body{background:#fff;color:#111;font-family:'Inter',sans-serif}
 a{text-decoration:none;color:inherit}
 img{width:100%;display:block}
 
+
 /* ===== WRAPPER ===== */
 .forbes-home{width:100%;padding:40px 40px 80px}
 
 .forbes-grid{
-  width:100%;
   max-width:1080px;
   margin:0 auto;
   display:grid;
-  grid-template-columns:minmax(0,210px) minmax(0,540px) minmax(0,290px);
+  grid-template-columns:210px 540px 230px;
   gap:20px;
   align-items:start;
 }
 
+
 /* ===== LEFT ===== */
-.editorial-column{padding-top:10px;min-width:0}
+.editorial-column{padding-top:10px}
 
 .editorial-label{
   font-size:11px;
@@ -1599,21 +1619,17 @@ img{width:100%;display:block}
   padding:14px 0;
   border-bottom:1px solid #ececec;
   transition:opacity .25s ease;
-  overflow-wrap:break-word;
 }
 
 .editorial-points a:last-child{border-bottom:none}
 .editorial-points a:hover{opacity:.6}
 
+
 /* ===== CENTER ===== */
-.hero-main{
-  width:100%;
-  max-width:540px;
-  min-width:0;
-}
+.hero-main{width:540px;max-width:540px}
 
 .hero-image{
-  width:100%;
+  width:540px;
   max-width:540px;
   overflow:hidden;
 }
@@ -1628,7 +1644,6 @@ img{width:100%;display:block}
   margin-top:24px;
   display:flex;
   flex-direction:column;
-  min-width:0;
 }
 
 .hero-category{
@@ -1651,7 +1666,6 @@ img{width:100%;display:block}
   padding-bottom:15px;
   border-bottom:1px solid #ececec;
   margin-bottom:15px;
-  overflow-wrap:break-word;
 }
 
 .hero-content p{
@@ -1662,6 +1676,7 @@ img{width:100%;display:block}
   margin-top:0;
 }
 
+
 /* ===== CENTER BOTTOM CARDS ===== */
 .hero-bottom-cards{
   display:flex;
@@ -1671,16 +1686,12 @@ img{width:100%;display:block}
   padding-top:18px;
 }
 
-.hero-bottom-cards .side-article{
-  flex:1 1 0;
-  min-width:0;
-}
+.hero-bottom-cards .side-article{flex:1}
+
 
 /* ===== RIGHT SIDEBAR ===== */
 .sidebar-news{
-  width:100%;
-  max-width:290px;
-  min-width:0;
+  width:230px;
   border-left:1px solid #e5e7eb;
   padding-left:18px;
 }
@@ -1688,7 +1699,6 @@ img{width:100%;display:block}
 .side-article{
   padding:18px 0;
   border-bottom:1px solid #ececec;
-  min-width:0;
 }
 
 .side-article img{
@@ -1697,8 +1707,6 @@ img{width:100%;display:block}
   object-fit:cover;
   margin-bottom:11px;
 }
-
-.side-content{min-width:0}
 
 .side-content span{
   font-size:9px;
@@ -1714,13 +1722,19 @@ img{width:100%;display:block}
   line-height:1.18;
   font-weight:800;
   transition:opacity .25s ease;
-  overflow-wrap:break-word;
 }
 
 .side-article:hover h3{opacity:.6}
 
+
 /* ===== PC: LO MÁS LEÍDO ===== */
 @media(min-width:1201px){
+
+  .sidebar-news{
+    width:290px;
+    min-width:290px;
+    margin-right:-60px;
+  }
 
   .sidebar-news .side-article{padding:20px 0}
 
@@ -1732,18 +1746,42 @@ img{width:100%;display:block}
     margin-bottom:12px;
   }
 
-  .sidebar-news .side-content{
-    width:272px;
-    max-width:272px;
-  }
-
+  .sidebar-news .side-content{width:272px}
   .sidebar-news .side-content span{font-size:10px}
 
   .sidebar-news .side-content h3{
     font-size:17px;
     line-height:1.2;
   }
+
+
+  /* ===== UNA SOLA LINEA PARA LOS 4 ARTICULOS ===== */
+
+  .forbes-grid{
+    position:relative;
+  }
+
+  .editorial-column .side-article,
+  .hero-bottom-cards .side-article{
+    border-bottom:none;
+  }
+
+  .hero-bottom-cards{
+    border-top:1px solid #ececec;
+  }
+
+  .forbes-grid::after{
+    content:"";
+    position:absolute;
+    left:0;
+    width:770px;
+    bottom:0;
+    height:1px;
+    background:#ececec;
+  }
+
 }
+
 
 /* ===== TABLET ===== */
 @media(max-width:1200px){
@@ -1776,6 +1814,7 @@ img{width:100%;display:block}
   .hero-bottom-cards{flex-direction:column}
 }
 
+
 /* ===== MOBILE ===== */
 @media(max-width:768px){
 
@@ -1786,8 +1825,6 @@ img{width:100%;display:block}
 }
 
 </style>
-
-
 
 
 
