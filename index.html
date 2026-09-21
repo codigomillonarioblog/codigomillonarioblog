@@ -1550,7 +1550,8 @@ menu.addEventListener("click",function(event){event.stopPropagation()});
 <!-- ========================================= -->
 <!-- CSS -->
 <!-- ========================================= -->
-<style>
+
+ <style>
 
 /* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box}
@@ -1560,18 +1561,20 @@ img{width:100%;display:block}
 
 /* ===== WRAPPER ===== */
 .forbes-home{width:100%;padding:40px 40px 80px}
+
 .forbes-grid{
   width:100%;
   max-width:1080px;
   margin:0 auto;
   display:grid;
-  grid-template-columns:minmax(0,210px) minmax(0,540px) minmax(0,230px);
+  grid-template-columns:minmax(0,210px) minmax(0,540px) minmax(0,290px);
   gap:20px;
-  align-items:start
+  align-items:start;
 }
 
 /* ===== LEFT ===== */
 .editorial-column{padding-top:10px;min-width:0}
+
 .editorial-label{
   font-size:11px;
   font-weight:700;
@@ -1579,9 +1582,15 @@ img{width:100%;display:block}
   letter-spacing:1px;
   border-bottom:2px solid #111;
   padding-bottom:8px;
-  display:inline-block
+  display:inline-block;
 }
-.editorial-points{margin-top:28px;display:flex;flex-direction:column}
+
+.editorial-points{
+  margin-top:28px;
+  display:flex;
+  flex-direction:column;
+}
+
 .editorial-points a{
   font-size:16px;
   line-height:1.4;
@@ -1590,20 +1599,38 @@ img{width:100%;display:block}
   padding:14px 0;
   border-bottom:1px solid #ececec;
   transition:opacity .25s ease;
-  overflow-wrap:break-word
+  overflow-wrap:break-word;
 }
+
 .editorial-points a:last-child{border-bottom:none}
 .editorial-points a:hover{opacity:.6}
 
 /* ===== CENTER ===== */
-.hero-main{width:100%;max-width:540px;min-width:0}
-.hero-image{width:100%;max-width:540px;overflow:hidden}
+.hero-main{
+  width:100%;
+  max-width:540px;
+  min-width:0;
+}
+
+.hero-image{
+  width:100%;
+  max-width:540px;
+  overflow:hidden;
+}
+
 .hero-image img{
   width:100%;
   aspect-ratio:16/9;
-  object-fit:cover
+  object-fit:cover;
 }
-.hero-content{margin-top:24px;display:flex;flex-direction:column;min-width:0}
+
+.hero-content{
+  margin-top:24px;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+
 .hero-category{
   font-size:11px;
   font-weight:700;
@@ -1612,8 +1639,9 @@ img{width:100%;display:block}
   color:#666;
   padding-bottom:8px;
   border-bottom:1px solid #ececec;
-  margin-bottom:11px
+  margin-bottom:11px;
 }
+
 .hero-main h1{
   font-size:clamp(1.65rem,2.4vw,2.45rem);
   line-height:1.07;
@@ -1623,14 +1651,15 @@ img{width:100%;display:block}
   padding-bottom:15px;
   border-bottom:1px solid #ececec;
   margin-bottom:15px;
-  overflow-wrap:break-word
+  overflow-wrap:break-word;
 }
+
 .hero-content p{
   font-size:16px;
   line-height:1.42;
   font-weight:500;
   color:#111;
-  margin-top:0
+  margin-top:0;
 }
 
 /* ===== CENTER BOTTOM CARDS ===== */
@@ -1639,80 +1668,117 @@ img{width:100%;display:block}
   gap:18px;
   margin-top:24px;
   border-top:1px solid #ececec;
-  padding-top:18px
+  padding-top:18px;
 }
-.hero-bottom-cards .side-article{flex:1 1 0;min-width:0}
+
+.hero-bottom-cards .side-article{
+  flex:1 1 0;
+  min-width:0;
+}
 
 /* ===== RIGHT SIDEBAR ===== */
 .sidebar-news{
   width:100%;
-  max-width:230px;
+  max-width:290px;
   min-width:0;
   border-left:1px solid #e5e7eb;
-  padding-left:18px
+  padding-left:18px;
 }
-.side-article{padding:18px 0;border-bottom:1px solid #ececec;min-width:0}
+
+.side-article{
+  padding:18px 0;
+  border-bottom:1px solid #ececec;
+  min-width:0;
+}
+
 .side-article img{
   width:100%;
   aspect-ratio:16/9;
   object-fit:cover;
-  margin-bottom:11px
+  margin-bottom:11px;
 }
+
 .side-content{min-width:0}
+
 .side-content span{
   font-size:9px;
   text-transform:uppercase;
   font-weight:700;
   color:#777;
-  letter-spacing:.7px
+  letter-spacing:.7px;
 }
+
 .side-content h3{
   margin-top:6px;
   font-size:16px;
   line-height:1.18;
   font-weight:800;
   transition:opacity .25s ease;
-  overflow-wrap:break-word
+  overflow-wrap:break-word;
 }
+
 .side-article:hover h3{opacity:.6}
 
 /* ===== PC: LO MÁS LEÍDO ===== */
 @media(min-width:1201px){
-  .sidebar-news{width:290px;max-width:290px}
+
   .sidebar-news .side-article{padding:20px 0}
+
   .sidebar-news .side-article img{
     width:272px;
     max-width:272px;
     aspect-ratio:16/9;
     object-fit:cover;
-    margin-bottom:12px
+    margin-bottom:12px;
   }
-  .sidebar-news .side-content{width:272px;max-width:272px}
+
+  .sidebar-news .side-content{
+    width:272px;
+    max-width:272px;
+  }
+
   .sidebar-news .side-content span{font-size:10px}
-  .sidebar-news .side-content h3{font-size:17px;line-height:1.2}
+
+  .sidebar-news .side-content h3{
+    font-size:17px;
+    line-height:1.2;
+  }
 }
 
 /* ===== TABLET ===== */
 @media(max-width:1200px){
+
   .forbes-grid{
     grid-template-columns:1fr;
     gap:60px;
-    max-width:800px
+    max-width:800px;
   }
+
   .editorial-column{display:none}
-  .hero-main{width:100%;max-width:100%}
-  .hero-image{width:100%;max-width:100%}
+
+  .hero-main{
+    width:100%;
+    max-width:100%;
+  }
+
+  .hero-image{
+    width:100%;
+    max-width:100%;
+  }
+
   .sidebar-news{
     width:100%;
     max-width:800px;
     border-left:none;
-    padding-left:0
+    padding-left:0;
   }
+
   .hero-bottom-cards{flex-direction:column}
 }
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
+
   .forbes-home{padding:20px 20px 60px}
   .hero-main h1{font-size:1.9rem}
   .hero-content p{font-size:17px}
@@ -1720,6 +1786,7 @@ img{width:100%;display:block}
 }
 
 </style>
+
 
 
 
