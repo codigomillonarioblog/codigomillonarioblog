@@ -175,62 +175,30 @@
 
   style.textContent = `
 
-/* =====================================================
+  /* =====================================================
    ENCABEZADO EDITORIAL
 ===================================================== */
 
 .cm-secciones-heading {
-
   display: flex;
-
   align-items: center;
-
-  gap: 12px;
-
   margin-top: 78px;
-
-  padding:
-    0
-    40px
-    14px
-    40px;
-
+  padding: 0 40px 14px 40px;
   flex-shrink: 0;
-
 }
-
 
 .cm-secciones-heading-line {
-
-  width: 22px;
-
-  height: 1px;
-
-  background: #e60000;
-
-  flex-shrink: 0;
-
+  display: none;
 }
 
-
 .cm-secciones-heading-text {
-
-  color: rgba(255,255,255,.55);
-
-  font-family:
-    "Open Sans",
-    sans-serif;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  letter-spacing: .18em;
-
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
   line-height: 1;
-
   white-space: nowrap;
-
 }
 
     /* =====================================================
