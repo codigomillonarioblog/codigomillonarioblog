@@ -749,7 +749,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           </p>
 
           <p class="uvo-date">
-            Mejorado el 25 Sep 2026 / 13:21 h / 5 min lectura
+            Mejorado el 25 Sep 2026 / 11:13 h / 5 min lectura
           </p>
 
         </div>
@@ -1235,7 +1235,136 @@ o busques ideas rentables ni sigas modas pasajeras para empezar desde cero. Cuan
 Si tuviera que empezar hoy, evitaría fórmulas fáciles o gratuitas que solo llevan a competir por migajas, y me centraría en lo que realmente funciona.
 </p>
 
+<p>
+Desglosaremos en un análisis de 7 pasos la información que casi nadie tiene en cuenta al iniciar, buscar o emprender un negocio con potencial de rentabilidad.
+</p>
+
 </div>
+
+
+
+
+
+
+<!-- TABLA DE CONTENIDOS VIEJA COLOR NEGRO-->
+
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:140px}
+[id]{scroll-margin-top:140px}
+.cf-accordion{margin-top:60px;font-family:'Inter',sans-serif}
+.cf-accordion-inner{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+.cf-accordion-item{width:260px;min-height:70px;margin:0;border:1px solid #000;border-radius:6px;background:#fff;overflow:hidden;transition:width .35s ease}
+.cf-accordion-item.is-open{width:680px}
+.cf-accordion-header{display:flex;justify-content:space-between;align-items:center;padding:18px 16px;cursor:pointer;font-size:17px;font-weight:600;color:#111827;background:#fff;border-bottom:none}
+.cf-menu-icon{width:30px;height:30px;display:flex;flex-direction:column;justify-content:center;align-items:center;border:1px solid #000;border-radius:6px;gap:4px;box-sizing:border-box}
+.cf-menu-icon span{height:2px;width:16px;background:#000;border-radius:2px}
+.cf-accordion-content{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.toc-container{padding:8px 14px 14px 14px}
+.toc-list{list-style:none;margin:0;padding:0}
+.toc-list li{padding:6px 0;margin:0;border:none}
+.toc-list a{text-decoration:none;color:#374151;font-size:14px;line-height:1.35;display:block;transition:all .2s ease}
+.toc-list a:hover{color:#000;transform:translateX(4px)}
+@media (max-width:480px){
+.cf-accordion-item{width:88%}
+.cf-accordion-item.is-open{width:100%}
+}
+</style>
+
+<!-- INTRO / CONTENEDOR EDITORIAL -->
+<main class="py-8">
+<div class="cf-accordion-inner">
+<div class="cf-accordion">
+<div class="cf-accordion-item">
+
+<!-- HEADER -->
+<div class="cf-accordion-header">
+Tabla de contenidos
+<div class="cf-menu-icon">
+<span></span><span></span><span></span>
+</div>
+</div>
+
+<!-- CONTENT -->
+<div class="cf-accordion-content">
+<div class="toc-container">
+<ul class="toc-list">
+
+    <li><a href="#titulo1">1. Empezaría sin obsesionarme con la idea</a></li>
+    <li><a href="#titulo2">2. Resolvería un problema pequeño (Pero Real)</a></li>
+    <li><a href="#titulo3">3. Empezaría ya mismo con lo que tengo (no con lo que me falta)</a></li>
+    <li><a href="#titulo4">4. Pensaría en meses o años, no en días</a></li>
+    <li><a href="#titulo5">5. Priorizaría aprender sobre mí, no solo sobre dinero</a></li>
+    <li><a href="#titulo6">6. Haría algo simple… y lo repetiría</a></li>
+    <li><a href="#titulo7">7. Aceptaría que el camino es personal, porque sí lo es</a></li>
+
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.cf-accordion-header').forEach(header=>{
+header.addEventListener('click',()=>{
+const item=header.closest('.cf-accordion-item');
+const content=item.querySelector('.cf-accordion-content');
+document.querySelectorAll('.cf-accordion-item').forEach(other=>{
+if(other!==item){
+other.querySelector('.cf-accordion-content').style.maxHeight=null;
+}
+});
+item.classList.toggle('is-open');
+if(content.style.maxHeight){
+content.style.maxHeight=null;
+}else{
+content.style.maxHeight=content.scrollHeight+'px';
+}
+});
+});
+
+const isMobile=/iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
+document.querySelectorAll('.toc-list a').forEach(link=>{
+link.addEventListener('click',function(e){
+e.preventDefault();
+const id=this.getAttribute('href').substring(1);
+const target=document.getElementById(id);
+if(!target)return;
+const offset=140;
+const top=target.getBoundingClientRect().top+window.pageYOffset-offset;
+history.pushState(null,null,'#'+id);
+
+if(isMobile){
+window.scrollTo({
+top:top,
+behavior:'smooth'
+});
+}else{
+const start=window.pageYOffset;
+const distance=top-start;
+const duration=650;
+let startTime=null;
+
+function animate(time){
+if(!startTime)startTime=time;
+const progress=Math.min((time-startTime)/duration,1);
+const ease=1-Math.pow(1-progress,3);
+window.scrollTo(0,start+distance*ease);
+if(progress<1){
+requestAnimationFrame(animate);
+}
+}
+requestAnimationFrame(animate);
+}
+});
+});
+</script>
+
+
+
 
 
 
@@ -1255,20 +1384,23 @@ Si tuviera que empezar hoy, evitaría fórmulas fáciles o gratuitas que solo ll
     </span>
 
     <p>
-      Este artículo está escrito en primera persona para explorar de cerca
-      la mentalidad empresarial, pero no pretende presentar una fórmula
-      mágica ni una verdad absoluta. 
-      Se trata de un análisis sobre cómo
-      piensan y operan quienes construyen grandes patrimonios.
+Este artículo está escrito en primera persona para presentar, de manera natural y cercana, 
+cómo podría plantearse el inicio de un negocio desde cero bajo una perspectiva orientada a 
+la construcción de riqueza a largo plazo y la mentalidad millonaria.
     </p>
 
     <p>
-      Cada persona y cada situación son diferentes. Antes de tomar decisiones
-      de inversión o comprometer capital, es recomendable consultar con un
-      asesor financiero calificado. 
-      Toda actividad comercial y de inversión
-      implica riesgos que deben ser evaluados de acuerdo con las circunstancias
-      de cada persona.
+Las ideas expuestas forman parte del análisis editorial de <em>Código Millonario</em> y buscan 
+interpretar determinados principios, comportamientos y decisiones relacionados con la creación de 
+negocios y la construcción de patrimonio. El contenido no plantea una fórmula única ni pretende que un 
+mismo camino produzca los mismos resultados en todas las personas.
+    </p>
+
+    <p>
+Las decisiones empresariales y financieras dependen de las circunstancias, los recursos y el nivel de riesgo 
+que cada persona esté dispuesta a asumir. Por ello, las reflexiones de este artículo deben entenderse como contenido 
+informativo y editorial, no como asesoramiento financiero o una garantía de resultados. <em>Toda actividad comercial implica 
+riesgos y puede ocasionar pérdidas de capital.</em>
     </p>
 
   </div>
@@ -1556,7 +1688,7 @@ Si empiezas buscando rentabilidad en lugar de valor, lo más probable es que no 
 
 <!-- BLOQUE -->
 <h3 style="font-family:'Manrope', sans-serif;"
-    class="text-[22px] md:text-[24px] font-semibold text-stone-950 leading-[1.15] tracking-[-0.02em] mb-4 mt-20">
+    class="text-[22px] md:text-[24px] font-semibold text-stone-950 leading-[1.15] tracking-[-0.02em] mb-4 mt-28">
 Cómo empiezas define cómo terminas
 </h3>
 
@@ -1575,7 +1707,11 @@ Por esa razón, empezaría de una forma más simple, incluso aburrida para la ma
 </p>
 
 <p>
-Eso sí, no será un camino rápido, ni mucho menos fácil. De hecho, tiene algo particular: lo que cuesta tiempo, sacrificio y energía es lo que solemos sostener durante el tiempo suficiente para ver resultados. Sin embargo, hay una aclaración importante: <em>nada está garantizado</em>, al igual que ocurre con muchas otras opciones en el mercado.
+Eso sí, no será un camino rápido, ni mucho menos fácil. De hecho, tiene algo particular: lo que cuesta tiempo, sacrificio y energía es lo que solemos sostener durante el tiempo suficiente para ver resultados. 
+</p>
+
+<p>
+Sin embargo, hay una aclaración importante: <em>nada está garantizado</em>, al igual que ocurre con muchas otras opciones en el mercado.
 </p>
 
 </div>
@@ -1584,140 +1720,72 @@ Eso sí, no será un camino rápido, ni mucho menos fácil. De hecho, tiene algo
 
 
 
-<!-- PARRAFO -->
-<h2 id="titulo2" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">Paso 1: Empezaría sin obsesionarme con la idea</h2>
+
+
+
+
+
+<style>
+.cm-step-heading{
+  display:flex;
+  align-items:flex-start;
+  gap:22px;
+  margin-top:120px;
+  margin-bottom:45px;
+}
+
+.cm-step-number{
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.08em;
+  color:#999;
+  line-height:1;
+  padding-top:7px;
+}
+
+.cm-step-label{
+  display:block;
+  margin-bottom:8px;
+  font-family:'Inter',sans-serif;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  color:#999;
+}
+
+.cm-step-heading h2{
+  margin:0;
+  max-width:780px;
+  font-family:'Inter',sans-serif;
+  font-size:30px;
+  line-height:1.15;
+  font-weight:700;
+  letter-spacing:-.8px;
+  color:#171717;
+}
+</style>
+
+<div class="cm-step-heading"  id="titulo1">
+  <span class="cm-step-number">01</span>
+  <div>
+    <span class="cm-step-label">PASO</span>
+    <h2>Empezaría sin obsesionarme con la idea</h2>
+  </div>
+</div>
+
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
-Si hoy empezara desde cero, con lógica y control sobre mis emociones, entendería este principio:
-<strong>
-las ideas no construyen negocios; las decisiones sostenidas, sí.
-</strong>
-Comprender esto desde el inicio me habría ahorrado mucho tiempo.
+El mejor modelo de negocio siempre es aquel del que nadie habla, nadie ve y nadie está corriendo a perseguir. Si hoy empezara desde cero, entendería que las ideas no construyen empresas; lo hace la ejecución silenciosa en un terreno donde no hay reflectores ni multitudes.
 </p>
 
 <p>
-Si ya tengo una idea y considero que es buena, el siguiente paso no es idealizarla, sino aterrizarla. No creer que va a salvar el mundo ni que es algo extraordinario. Es solo una idea. Es mi idea. Y eso es todo.
+La mayoría de los proyectos que hoy dominan el mercado no nacieron siendo innovadores ni extraordinarios, sino operando en la absoluta discreción, con más de un centenar de competidores invisibles pisándoles los talones y un noventa y nueve por ciento de rivales que, sobre el papel, parecían mejores.
 </p>
 
 <p>
-La mayoría de los negocios exitosos no fueron innovadores ni únicos, ni parecían gran cosa al inicio. Eran simples.  
-Y se ejecutaron bien.
-</p>
-
-
-
-  <p class="italic text-stone-600">
-    <strong>
-La mayoría de esos negocios:</strong>
-<br>— no eran innovadores  
-<br>— no eran únicos  
-<br>— no parecían gran cosa al inicio  
-</p>
-
-<p>
-Eran simples.  
-Y se ejecutaron bien.  
-
-Si quieres ver con qué se apoyaban para lograrlo y cómo tú también puedes hacerlo,
-aquí tienes algunas 
-
-<a href="https://codigomillonario.blog/herramientas" target="_blank" class="text-blue-600 hover:underline">
-herramientas clave</a> 
-que aumentan seriamente tus posibilidades de éxito.
-</p>
-
-<p>
-Nadie habla de que había más de 100 competidores detrás. Nadie habla de que el 99 % eran mejores que ellos. Nadie habla de la lucha diaria. Ojo con este dato, porque puede cambiar la forma en la que muchos perciben la realidad de un negocio.
-</p>
-<blockquote class="italic text-stone-600">
-  <p class="text-sm text-stone-500 mt-8" style="font-family: 'Poppins', sans-serif;">
-    En mi caso, la simplicidad de mis inicios en un negocio sería la mejor parte del proceso.
-  </p>
-</blockquote>
-
-</div>
-
-
-
-
-
-
-<!-- PARRAFO -->
-<h2 id="titulo3" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">Paso 2: Resolvería un problema pequeño (Pero Real)</h2>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
-
-<p>
-  Lo que nadie dice es esto: en mi lugar, no intentaría cambiar el mundo.
-  Esa idea está en todas partes: “haz esto y salva la vida de miles”.
-  Sentirse capaz de hacer algo grande no está mal, pero inflar esa idea puede matar tus ganas de seguir cuando empiezas y te das cuenta de que no es así.
-</p>
-
-<p>
-  Eso casi siempre es una trampa mental.
-  Así actuaría yo: con confianza, pero sin alterarme por los resultados.
-  Trabajaría sin expectativas irreales sobre lo que va a pasar.
-</p>
-
-<p>
-  Porque casi siempre ocurre lo mismo: esperas mucho y obtienes menos de lo previsto.
-  Y eso está bien.
-  Esto funciona para quien empieza, y quien ya lleva tiempo lo sabe.
-</p>
-
-<p>
-  Está bien emocionarse en algún momento, pero no se trata de estar feliz 24/7.
-  Se trata de actuar con seriedad y constancia.
-  De seguir ahí incluso cuando el dulce pierde sabor y ya no puedes botarlo.
-</p>
-
-<p>
-  Por eso buscaría algo mucho más simple y honesto.
-</p>
-
-</div>
-
-
-
-
-
-<!-- PARRAFO -->
-<h3 class="text-2xl md:text-3xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">¿Qué buscaría yo? Esto buscaría realmente</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
-
-<p>
-  <strong>
-    Un problema que moleste a alguien.
-  </strong><br>
-  Algo por lo que alguien <strong>ya esté pagando</strong>, aunque esté mal resuelto.<br>
-  Algo que yo pueda entender <strong">sin fingir ser experto</strong>.
-</p>
-
-<p>
-  Los negocios reales suelen nacer de frases cotidianas como:
-</p>
-
-<p class="italic text-stone-600">
-  “Esto siempre falla.”<br>
-  “Nadie hace esto bien.”<br>
-  “Pagaría porque alguien se encargue.”
-</p>
-
-<p>
-  Ahí hay oro.<br>
-  No en las tendencias.<br>
-  No en lo que está de moda este mes.
-</p>
-
-<p>
-  Admito que encontrar una idea así puede tomar tiempo, y de eso se trata.
-  No todo lo que funciona llega rápido ni cuando uno lo está buscando.
-</p>
-
-<p>
-  Muchas veces las mejores ideas aparecen cuando alguien se queja,
-  o cuando detectas una falla en un sistema que todos aceptan como “normal”.
-  No esperes quejas: aprende a ver los errores donde otros ya se acostumbraron.
+No hay romanticismo en el inicio: hay una lucha diaria y anónima donde la simplicidad de hacer lo correcto todos los días supera por mucho a cualquier concepto brillante del que todo el mundo hable.
 </p>
 
 </div>
@@ -1728,8 +1796,231 @@ Nadie habla de que había más de 100 competidores detrás. Nadie habla de que e
 
 
 
-<!-- PARRAFO -->
-<h2 id="titulo4" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">Paso 3: Empezaría con lo que ya tengo (no con lo que me falta)</h2>
+
+
+
+<!-- =====================================================
+     BLOQUE EDITORIAL — SEÑALES DEL NEGOCIO
+===================================================== -->
+
+<div class="cm-business-signals">
+
+  <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-sm md:text-base"
+       style="font-family:'Open Sans', sans-serif;">
+
+    <p>
+      La verdadera ventaja competitiva se esconde donde nadie está mirando.
+      Si tuviera que empezar de nuevo, buscaría estas señales inconfundibles
+      de un negocio con alto potencial de éxito:
+    </p>
+
+  </div>
+
+
+  <div class="cm-business-list">
+
+    <p>
+      <span class="cm-dot"></span>
+      <strong>Discreción absoluta:</strong>
+      Opera sin reflectores, en un terreno del que nadie habla.
+    </p>
+
+    <p>
+      <span class="cm-dot"></span>
+      <strong>Rechazo general:</strong>
+      Es una idea de la que todos huyen porque nadie quiere hacer el trabajo sucio.
+    </p>
+
+    <p>
+      <span class="cm-dot"></span>
+      <strong>Falsa complejidad:</strong>
+      Todos asumen que es demasiado difícil, lo que ahuyenta a la competencia masiva.
+    </p>
+
+    <p>
+      <span class="cm-dot"></span>
+      <strong>Un costo invisible:</strong>
+      Exige un esfuerzo real que no se paga con dinero, sino con disciplina,
+      incomodidad y paciencia.
+    </p>
+
+  </div>
+
+
+  <div class="text-stone-700 leading-relaxed text-sm md:text-base"
+       style="font-family:'Open Sans', sans-serif;">
+
+    <p class="cm-business-closing">
+      Si un proyecto reúne estas condiciones, estás ante el tipo de negocio
+      <em>poco sexy pero altamente próspero</em> que las grandes fortunas saben
+      construir en silencio.
+    </p>
+
+  </div>
+
+</div>
+
+
+<style>
+
+.cm-business-signals{
+  max-width:760px;
+  margin:80px auto 90px;
+  padding:0 20px;
+}
+
+
+/* =====================================================
+   LISTA
+===================================================== */
+
+.cm-business-list{
+  margin:32px 0 38px;
+  padding:2px 0 2px 28px;
+}
+
+.cm-business-list p{
+  position:relative;
+  margin:0 0 20px;
+  padding:0;
+  font-family:'Open Sans',sans-serif;
+  font-size:14px;
+  line-height:1.7;
+  color:#57534e;
+}
+
+.cm-business-list p:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   PUNTOS
+===================================================== */
+
+.cm-dot{
+  position:absolute;
+  left:-28px;
+  top:.72em;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#171717;
+}
+
+
+/* =====================================================
+   STRONG
+===================================================== */
+
+.cm-business-list strong{
+  font-weight:700;
+  color:#292524;
+}
+
+
+/* =====================================================
+   CIERRE
+===================================================== */
+
+.cm-business-closing{
+  margin:0;
+  padding-top:26px;
+  border-top:1px solid #e2e0de;
+}
+
+.cm-business-closing em{
+  color:#292524;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .cm-business-signals{
+    margin:65px auto 70px;
+    padding:0 20px;
+  }
+
+  .cm-business-list{
+    margin:28px 0 34px;
+    padding-left:23px;
+  }
+
+  .cm-business-list p{
+    margin-bottom:19px;
+    font-size:13px;
+    line-height:1.7;
+  }
+
+  .cm-dot{
+    left:-23px;
+    width:6px;
+    height:6px;
+  }
+
+}
+
+</style>
+
+
+
+
+
+<div class="cm-step-heading" id="titulo2">
+  <span class="cm-step-number">02</span>
+  <div>
+    <span class="cm-step-label">PASO</span>
+    <h2>Resolvería un problema pequeño (Pero Real)</h2>
+  </div>
+</div>
+
+<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;"> 
+ 
+<p>
+  <strong>La peor trampa cuando empiezas es el ego:</strong> creer que tienes que cambiar el mundo o salvarle la vida a miles. Esa película te la venden en todas partes, pero lo único que hace es inflarte las expectativas para luego matarte las ganas cuando te chocas con la realidad.
+</p>
+
+<p>
+  Yo no buscaría eso. Si hoy tuviera que empezar de nuevo, lo haría <em>con los pies en la tierra</em>, sin alterarme por los resultados y sin esperar aplausos. Tampoco se trata de estar feliz todo el tiempo; esto va de seguir ahí de forma constante, incluso cuando el negocio ya no es divertido y se vuelve pesado.
+</p>
+
+<p>
+  Por eso descartaría las modas y buscaría algo mucho más simple y real. <strong>Esto es lo que buscaría de verdad:</strong>
+</p>
+
+<p>
+  • <strong>Un problema</strong> que le moleste de verdad a alguien.<br>
+  • <strong>Algo por lo que la gente ya esté pagando</strong>, aunque la solución actual sea un desastre.<br>
+  • <strong>Algo que yo pueda entender</strong> sin necesidad de fingir que soy un experto.
+</p>
+
+<p>
+  Los negocios de verdad no nacen de grandes discursos, sino de frases tan cotidianas como <em>“esto siempre falla”</em>, <em>“nadie hace esto bien”</em> o <em>“pagaría porque alguien se encargue de esto”</em>. Ahí es donde está el oro. Encontrar algo así toma tiempo, y hay que aprender a ver las fallas en los sistemas que los demás ya aceptaron como normales y se acostumbraron a ignorar.
+</p>
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="cm-step-heading" id="titulo3">
+  <span class="cm-step-number">03</span>
+  <div>
+    <span class="cm-step-label">PASO</span>
+    <h2>Empezaría ya mismo con lo que tengo (no con lo que me falta)</h2>
+  </div>
+</div>
+
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
@@ -1759,7 +2050,7 @@ Lo que sí llegó fue la claridad de entender que tenía que empezar ya.
 Basta de estudiar.
 Basta de leer sin ejecutar.
 Basta de creer que acumular información me iba a salvar.
-Mi “momento perfecto” nunca llegó.
+Mi <em>“momento perfecto”</em> nunca llegó.
 Nada se alineó.
 Hasta que decidí moverme y ponerme a trabajar de verdad.
 </p>
@@ -1783,42 +2074,65 @@ Lo imperfecto, lo real, es más confiable que ir por un camino lleno de flores a
 
 
 
-<!-- PARRAFO -->
-<h3 class="text-2xl md:text-3xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">Lo que nadie te dice</h3>
-<div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
+<div class="cm-business-signals">
 
-<p>
-<strong>
-Si espero:
-</strong>
-</p>
+  <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-sm md:text-base" 
+       style="font-family:'Open Sans', sans-serif;"> 
 
-<p class="italic text-stone-600">
-más dinero<br>
-más conocimiento<br>
-más seguridad
-</p>
+    <p>
+      Lo que nadie te dice es que si te la pasas esperando tener más dinero,
+      más conocimiento o más seguridad antes de dar el primer paso,
+      <strong>simplemente no vas a arrancar nunca.</strong>
+    </p>
 
-<p>
-No empiezo nunca.
-</p>
+    <p>
+      Si hoy me tocara empezar desde cero, no esperaría a estar listo.
+      <strong>Partiría exactamente de esto:</strong>
+    </p>
 
-<p>
-<strong>
-Si hoy me tocara empezar, partiría de:
-</strong>
-</p>
+  </div>
 
-<p>
-lo que sé<br>
-lo que puedo aprender rápido (el conocimiento viene después)<br>
-lo que puedo hacer, aunque sea mal al principio
-</p>
 
-<p>
-La claridad no llega antes de caminar.<br>
-Llega cuando ya estás caminando.
-</p>
+  <div class="cm-business-list">
+
+    <p>
+      <span class="cm-dot"></span>
+      <strong>Con lo que ya tengo y sé:</strong>
+      sin excusas.
+    </p>
+
+    <p>
+      <span class="cm-dot"></span>
+      <strong>Aprendiendo sobre la marcha:</strong>
+      el conocimiento real llega haciéndolo, no antes.
+    </p>
+
+    <p>
+      <span class="cm-dot"></span>
+      <strong>Aceptando el inicio imperfecto:</strong>
+      dispuesto a hacerlo mal al principio.
+    </p>
+
+  </div>
+
+
+  <div class="text-stone-700 leading-relaxed text-sm md:text-base" 
+       style="font-family:'Open Sans', sans-serif;"> 
+
+    <p class="cm-business-closing">
+      <em>La claridad no aparece antes de empezar a caminar;</em>
+      aparece justamente cuando ya estás en movimiento.
+    </p>
+
+    <p class="cm-business-closing" style="margin-top:26px;">
+      <strong>Nota importante:</strong>
+      Que estés dispuesto a dar el primer paso con lo que tienes no significa
+      actuar a lo loco. Esto no es una fórmula rígida ni una invitación a
+      ignorar los peligros; tu capital corre un riesgo real y financiero muy
+      alto. Mide siempre hasta dónde puedes arriesgar antes de saltar.
+    </p>
+
+  </div>
 
 </div>
 
@@ -1828,13 +2142,25 @@ Llega cuando ya estás caminando.
 
 
 
-<!-- PARRAFO -->
-<h2 id="titulo5" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">Paso 4: Pensaría en meses, no en días</h2>
+
+
+<div class="cm-step-heading" id="titulo4">
+  <span class="cm-step-number">04</span>
+  <div>
+    <span class="cm-step-label">PASO</span>
+    <h2>Pensaría en meses o años, no en días</h2>
+  </div>
+</div>
+
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
 <strong>
-Esta es una lógica cierta y muy profunda.</strong> Los pasos anteriores hacen parte de la ruta; este paso es el vehículo que te llevará por esos caminos. Nada mata más negocios, oportunidades e ideas que la prisa. La propaganda y el contenido de consumo rápido siempre vendieron la idea de que todo debe ser rápido, explosivo, ruidoso.
+Esta es una lógica cierta y muy profunda.</strong> Los pasos anteriores hacen parte de la ruta; este paso es el vehículo que te llevará por esos caminos. Nada mata más negocios, oportunidades e ideas que la prisa. 
+</p>
+
+<p>
+La propaganda y el contenido de consumo rápido siempre vendieron la idea de que todo debe ser rápido, explosivo, ruidoso.
 Las expectativas mal puestas sobre un proyecto llevan al fracaso total. 
 </p>
 
@@ -1849,12 +2175,14 @@ debes mentalizarte a años.</strong>
 
 
 
+<!-- BLOQUE -->
+<h3 style="font-family:'Manrope', sans-serif;"
+    class="text-[22px] md:text-[24px] font-semibold text-stone-950 leading-[1.15] tracking-[-0.02em] mb-4 mt-28">
+No ganar rápido no es fracasar
+</h3>
 
-
-<!-- PARRAFO -->
-<h3 class="text-2xl md:text-3xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">No ganar rápido no es fracasar</h3>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
-
+  
 <p>
 Si hoy empiezo desde cero, asumo algo desde el primer día:
 no voy a ganar rápido,
@@ -1876,15 +2204,17 @@ La fase donde se construye lo que casi nadie está dispuesto a sostener.
 
 <p>
 Pensar en días te vuelve ansioso. No ver avances te hace desistir.
-Pensar en meses te vuelve constante. Sabes que, pase lo que pase, tu único marcador son los resultados, no las emociones.
-Cuando el foco está en sobrevivir el proceso, no en impresionar, las decisiones cambian.
-Se deja de buscar atajos y se empieza a construir algo rentable.
+Pensar en meses te vuelve constante. Sabes que, pase lo que pase, tu único marcador no son los resultados, ni tampoco las emociones.
+Cuando el foco está en sobrevivir durante el proceso, no en impresionar, las decisiones cambian.
+Se deja de buscar atajos y se empieza a construir algo realmente rentable.
 </p>
 
 <p>
-Un negocio no se construye para mostrar resultados rápidos y alardear después.
-Se construye para resistir cuando no hay resultados.
-Y el que entiende eso temprano, juega con ventaja.
+Un negocio no se construye para mostrar resultados rápidos y alardear ante los demás después.
+
+Se construye para construir una vida, un propósito. Resistir en todo momento es ir un tiempo por delante, aunque parezca que vas atrás.
+
+Y quien entiende eso temprano, juega con ventaja.
 </p>
 
 </div>
@@ -1894,26 +2224,46 @@ Y el que entiende eso temprano, juega con ventaja.
 
 
 
-<!-- PARRAFO -->
-<h2 id="titulo6" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">Paso 5: Priorizaría aprender sobre mí, no solo sobre dinero</h2>
+
+<div class="cm-step-heading" id="titulo5">
+  <span class="cm-step-number">05</span>
+  <div>
+    <span class="cm-step-label">PASO</span>
+    <h2>Priorizaría aprender sobre mí, no solo sobre dinero</h2>
+  </div>
+</div>
+
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
-<p>
-Antes de pensar en escalar, ganar más o “romperla”, entendería algo que casi nadie quiere aceptar al iniciar:
-un negocio no solo pone a prueba tu idea, pone a prueba a la persona que la ejecuta; el tiempo te pondrá a prueba.
-</p>
-
-<p>
-Un negocio te muestra cosas incómodas todo el tiempo, incluso cuando todo parece ir bien. Esto me pasó muchas veces: ese momento donde todo fluye a la perfección y pasa que ahora debes rehacer todo desde el principio e iniciar de nuevo, aunque no se inicie desde cero.
-El proyecto intentará romper tu disciplina cuando nadie te vigila,
-tu constancia cuando no hay resultados,
-tu paciencia cuando el progreso es lento y todo es caos,
-y tu ego cuando las cosas no salen como esperabas.
-</p>
-
-<p>
-Ahí es donde todos dicen adiós, y entiendo que es difícil. Sabes, es fácil rendirse, solo que, en mi lugar, el remordimiento de abandonar me ha pesado más que aceptar el fracaso.
-Muchos cambian de idea, de proyecto o de camino cada vez que algo les incomoda, cuando se encuentran acorralados.
+<p> 
+Antes de pensar en escalar, ganar más o “romperla”, entendería algo que casi nadie quiere aceptar al iniciar: 
+un negocio no solo pone a prueba tu idea, pone a prueba a la persona que la ejecuta; el tiempo te pondrá a prueba. Así como lo escuchas. 
+</p> 
+ 
+<p> 
+<strong>¿Por qué pasa esto?</strong> 
+Un negocio es una extensión de ti, de tus principios, de quién eres y de cómo haces las cosas; tu identidad, en pocas palabras. 
+</p> 
+ 
+<p> 
+Un negocio te muestra cosas incómodas todo el tiempo, incluso cuando todo parece ir bien. Esto me pasó muchas veces: ese momento donde todo fluye a la perfección  
+y pasa que ahora debes rehacer todo desde el principio e iniciar de nuevo, aunque no se inicie desde cero. 
+</p> 
+ 
+<p> 
+El proyecto intentará romper tu disciplina cuando nadie te vigila, 
+tu constancia cuando no hay resultados, 
+tu paciencia cuando el progreso es lento y todo es caos, 
+y tu ego cuando las cosas no salen como esperabas. 
+</p> 
+ 
+<p> 
+Ahí es donde todos dicen adiós, y entiendo que es difícil. Sabes, es fácil rendirse, solo que, en mi lugar, el remordimiento de abandonar me ha pesado más que aceptar el fracaso. 
+Muchos cambian de idea, de proyecto o de camino cada vez que algo les incomoda, cuando se encuentran acorralados. 
+</p> 
+ 
+<p> 
+Pero, cuando el negocio, proyecto o camino deje de ser una idea y se convierta en una extensión de ti, abandonar es perder el alma. 
 </p>
 
 </div>
@@ -1922,9 +2272,12 @@ Muchos cambian de idea, de proyecto o de camino cada vez que algo les incomoda, 
 
 
 
+<!-- BLOQUE -->
+<h3 style="font-family:'Manrope', sans-serif;"
+    class="text-[22px] md:text-[24px] font-semibold text-stone-950 leading-[1.15] tracking-[-0.02em] mb-4 mt-28">
+Emprender no es para todos (y eso está bien)
+</h3>
 
-<!-- PARRAFO -->
-<h3 class="text-2xl md:text-3xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">Emprender no es para todos (y eso está bien)</h3>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
@@ -1937,9 +2290,11 @@ Por eso, si hoy empiezo, no me preparo solo para ganar dinero.
 Me preparo para soportar el proceso. Enfocarse en el dinero no da motivación, no te va a sostener cuando llegue el primer huracán y derribe lo que has construido, aunque sea el propósito principal; no se omitirá el proceso de destrucción. Y créeme cuando te diga que ese huracán no vendrá solo una vez o dos.
 </p>
 
+<p>
 <strong>
 Me preparo mentalmente para el camino, no para el resultado.
 </strong>
+</p>
 
 <p>
 Porque el dinero llega después.
@@ -1954,8 +2309,14 @@ Y el que aprende a convivir con eso, tiene más probabilidades de llegar hasta e
 
 
 
-<!-- PARRAFO -->
-<h2 id="titulo7" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">Paso 6: Haría algo simple… y lo repetiría</h2>
+<div class="cm-step-heading" id="titulo6">
+  <span class="cm-step-number">06</span>
+  <div>
+    <span class="cm-step-label">PASO</span>
+    <h2>Haría algo simple… y lo repetiría</h2>
+  </div>
+</div>
+
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
@@ -1990,14 +2351,6 @@ El que mejora, construye y se sostiene.
 Y el que construye algo que funciona, recién ahí puede pensar en crecer y ser rentable.
 </p>
 
-<p class="mt-4">
-Si estás en esa etapa de repetir, ajustar y aprender,
-estas 
-<a href="https://codigomillonario.blog/herramientas" target="_blank" class="text-blue-600 hover:underline">
-herramientas</a>
-pueden ahorrarte tiempo y errores innecesarios.
-</p>
-
 </div>
 
 
@@ -2005,8 +2358,14 @@ pueden ahorrarte tiempo y errores innecesarios.
 
 
 
-<!-- PARRAFO -->
-<h2 id="titulo8" class="text-4xl md:text-5xl font-normal text-stone-700 mb-10 mt-40 leading-tight tracking-tight">Paso 7: Aceptaría que el camino es personal</h2>
+
+<div class="cm-step-heading" id="titulo7">
+  <span class="cm-step-number">06</span>
+  <div>
+    <span class="cm-step-label">PASO</span>
+    <h2>Aceptaría que el camino es personal, porque sí lo es</h2>
+  </div>
+</div>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
@@ -2019,10 +2378,12 @@ Déjame decirte que así no funciona de forma individual.
 
 
 
+<!-- BLOQUE -->
+<h3 style="font-family:'Manrope', sans-serif;"
+    class="text-[22px] md:text-[24px] font-semibold text-stone-950 leading-[1.15] tracking-[-0.02em] mb-4 mt-28">
+Cada proceso responde a una vida distinta
+</h3>
 
-
-<!-- PARRAFO -->
-<h3 class="text-2xl md:text-3xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">Cada proceso responde a una vida distinta</h3>
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
@@ -2046,8 +2407,14 @@ Pretender copiar un camino ajeno sin cuestionarlo solo genera frustración.
 
 
 
-<!-- PARRAFO -->
-<h3 class="text-2xl md:text-3xl font-normal text-stone-700 mb-10 mt-20 leading-tight tracking-tight">No llegar rápido no significa llegar tarde</h3>
+
+
+<!-- BLOQUE -->
+<h3 style="font-family:'Manrope', sans-serif;"
+    class="text-[22px] md:text-[24px] font-semibold text-stone-950 leading-[1.15] tracking-[-0.02em] mb-4 mt-20">
+No llegar rápido no significa llegar tarde
+</h3>
+
 <div class="text-stone-700 leading-relaxed mb-4 space-y-4 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
 
 <p>
@@ -2068,22 +2435,96 @@ Y cuando dejas de competir con otros, puedes concentrarte en construir algo que 
 La realidad del asunto: el progreso real no se ve igual para todos, aunque copiar parezca hacer las cosas similares. En la historia humana nunca salió algo bueno de copiar.
 </p>
 
-<blockquote class="border-l-4 border-stone-300 pl-4 italic text-stone-600">
-<p>
-Si hoy tuviera que empezar un negocio, lo haría así: simple, lento, consciente.
-
-No para hacerme rico rápido, sino para construir algo que no me rompa por dentro.
-
-Recuerda: <strong>
-un negocio no vale nada
-si te cuesta la paz mental.
-</strong>
-</p>
-</blockquote>
-
 </div>
 
 
+
+
+
+
+<blockquote class="cm-editorial-quote">
+
+  <p>
+    Si hoy tuviera que empezar un negocio, lo haría así:
+    <em>simple, lento, consciente.</em>
+  </p>
+
+  <p>
+    No para hacerme rico rápido, sino para construir algo
+    que no me rompa por dentro.
+  </p>
+
+  <p class="cm-editorial-quote-final">
+    Recuerda:
+    <strong>un negocio no vale nada si te cuesta la paz mental.</strong>
+  </p>
+
+</blockquote>
+
+
+<style>
+
+.cm-editorial-quote{
+  max-width:680px;
+  margin:90px auto;
+  padding:28px 0 28px 24px;
+  border-left:1px solid #171717;
+  font-family:'Open Sans',sans-serif;
+  color:#57534e;
+}
+
+.cm-editorial-quote p{
+  margin:0 0 16px;
+  font-size:14px;
+  line-height:1.75;
+  font-style:normal;
+}
+
+.cm-editorial-quote p:last-child{
+  margin-bottom:0;
+}
+
+.cm-editorial-quote em{
+  font-style:italic;
+  color:#292524;
+}
+
+.cm-editorial-quote-final{
+  margin-top:24px !important;
+  padding-top:18px;
+  border-top:1px solid #e7e5e4;
+}
+
+.cm-editorial-quote strong{
+  font-weight:700;
+  color:#171717;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .cm-editorial-quote{
+    margin:70px 0;
+    padding:22px 0 22px 18px;
+  }
+
+  .cm-editorial-quote p{
+    font-size:13px;
+    line-height:1.75;
+  }
+
+  .cm-editorial-quote-final{
+    margin-top:20px !important;
+    padding-top:16px;
+  }
+
+}
+
+</style>
 
 
 
