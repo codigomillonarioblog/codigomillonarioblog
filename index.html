@@ -83,6 +83,7 @@ body, html {
 
 
 
+
 <!-- =====================================================
      MENÚ PRINCIPAL · CÓDIGO MILLONARIO
 ===================================================== -->
@@ -599,7 +600,7 @@ body, html {
 
 @media (max-width: 850px) {
 
-  /* SEPARACIÓN DE LA ZONA SUPERIOR DEL NAVEGADOR */
+  /* RESPETAR LA ZONA SEGURA DEL DISPOSITIVO */
 
   .cm-header {
 
@@ -685,7 +686,8 @@ body, html {
 
 
 /* =====================================================
-   SCRIPT · OCULTAR AL BAJAR / MOSTRAR AL SUBIR
+   SCRIPT · SCROLL ESTABILIZADO
+   OCULTAR AL BAJAR / MOSTRAR AL SUBIR
 ===================================================== */
 
 </style>
@@ -699,23 +701,40 @@ body, html {
 
   if (!header) return;
 
+
   let lastScrollY = window.scrollY;
 
   let ticking = false;
+
+  let accumulatedMovement = 0;
+
+
+  /*
+     Cantidad mínima de desplazamiento antes
+     de cambiar el estado del menú.
+  */
+
+  const scrollThreshold = 12;
 
 
   function updateHeader() {
 
     const currentScrollY = window.scrollY;
 
+    const difference = currentScrollY - lastScrollY;
 
-    /* Mantener visible cerca del inicio */
+
+    /* ==========================================
+       PARTE SUPERIOR DE LA PÁGINA
+    ========================================== */
 
     if (currentScrollY <= 10) {
 
       header.classList.remove('cm-header-hidden');
 
       lastScrollY = currentScrollY;
+
+      accumulatedMovement = 0;
 
       ticking = false;
 
@@ -724,20 +743,35 @@ body, html {
     }
 
 
-    /* BAJANDO */
+    /* ==========================================
+       ACUMULAR MOVIMIENTO
+    ========================================== */
 
-    if (currentScrollY > lastScrollY) {
+    accumulatedMovement += difference;
+
+
+    /* ==========================================
+       BAJANDO
+    ========================================== */
+
+    if (accumulatedMovement >= scrollThreshold) {
 
       header.classList.add('cm-header-hidden');
+
+      accumulatedMovement = 0;
 
     }
 
 
-    /* SUBIENDO */
+    /* ==========================================
+       SUBIENDO
+    ========================================== */
 
-    else if (currentScrollY < lastScrollY) {
+    else if (accumulatedMovement <= -scrollThreshold) {
 
       header.classList.remove('cm-header-hidden');
+
+      accumulatedMovement = 0;
 
     }
 
@@ -748,6 +782,10 @@ body, html {
 
   }
 
+
+  /* ==========================================
+     ESCUCHAR SCROLL
+  ========================================== */
 
   window.addEventListener('scroll', function () {
 
@@ -765,7 +803,6 @@ body, html {
 })();
 
 </script>
-
 
 
 
