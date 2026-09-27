@@ -83,6 +83,8 @@ body, html {
 
 
 
+
+
 <!-- =====================================================
      MENÚ PRINCIPAL · CÓDIGO MILLONARIO
 ===================================================== -->
@@ -209,12 +211,33 @@ body, html {
 
   border-bottom: 1px solid #1f1f1f;
 
-  position: relative;
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
 
   z-index: 1000;
 
+  transition: transform .28s ease;
+
 }
 
+
+/* OCULTAR HEADER AL BAJAR */
+
+.cm-header.cm-header-hidden {
+
+  transform: translateY(-100%);
+
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
 
 .cm-header-inner {
 
@@ -638,7 +661,104 @@ body, html {
 
 }
 
+
+/* =====================================================
+   RESPETAR REDUCCIÓN DE MOVIMIENTO
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cm-header {
+
+    transition: none;
+
+  }
+
+}
+
+
+/* =====================================================
+   SCRIPT · OCULTAR AL BAJAR / MOSTRAR AL SUBIR
+===================================================== */
+
 </style>
+
+
+<script>
+
+(function () {
+
+  const header = document.querySelector('.cm-header');
+
+  if (!header) return;
+
+  let lastScrollY = window.scrollY;
+
+  let ticking = false;
+
+
+  function updateHeader() {
+
+    const currentScrollY = window.scrollY;
+
+
+    /* Mantener visible cerca del inicio */
+
+    if (currentScrollY <= 10) {
+
+      header.classList.remove('cm-header-hidden');
+
+      lastScrollY = currentScrollY;
+
+      ticking = false;
+
+      return;
+
+    }
+
+
+    /* BAJANDO */
+
+    if (currentScrollY > lastScrollY) {
+
+      header.classList.add('cm-header-hidden');
+
+    }
+
+
+    /* SUBIENDO */
+
+    else if (currentScrollY < lastScrollY) {
+
+      header.classList.remove('cm-header-hidden');
+
+    }
+
+
+    lastScrollY = currentScrollY;
+
+    ticking = false;
+
+  }
+
+
+  window.addEventListener('scroll', function () {
+
+    if (!ticking) {
+
+      window.requestAnimationFrame(updateHeader);
+
+      ticking = true;
+
+    }
+
+  }, { passive: true });
+
+
+})();
+
+</script>
+
 
 
 
