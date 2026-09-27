@@ -79,621 +79,1226 @@ body, html {
 
 
 
-<!-- IMAGEN PRINCIPAL MENU -->
-<nav class="navbar">
-<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
-<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
-  <img src="./assets/img/codigo-millonario-logo.png" 
-       alt="Inspiración Código Millonario"
-       class="logo-img object-contain">
-</div>
-
-<style>
-/* TAMAÑO NORMAL */
-.logo-img {
-  width: 11rem; /* equivalente a w-56 */
-  height: auto;
-  transition: width 0.3s ease;
-}
-
-/* responsive */
-@media (min-width: 640px) {
-  .logo-img { width: 13rem; } /* sm:w-64 */
-}
-
-@media (min-width: 768px) {
-  .logo-img { width: 15rem; } /* md:w-72 */
-}
-
-/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
-.logo-small {
-  width: 8rem !important;
-}
-
-@media (min-width: 640px) {
-  .logo-small { width: 10rem !important; }
-}
-
-@media (min-width: 768px) {
-  .logo-small { width: 11rem !important; }
-}
-
-/* mover a la izquierda solo en PC */
-@media (min-width: 768px) {
-  .logo-img {
-    transform: translateX(-40px); /* 👈 mueve a la izquierda */
-  }
-}
-</style>
-
-<script>
-const logo = document.querySelector('.logo-img');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    logo.classList.add('logo-small');
-  } else {
-    logo.classList.remove('logo-small');
-  }
-});
-</script>
 
 
 
 
 
-<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
-<div class="btn-container pc-only">
 
-  <!-- FORMULARIO -->
-  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
-    
-    <!-- 🔐 CONFIG WEB3FORMS -->
-    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
-    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
-    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
 
-    <!-- 🧠 IDENTIFICADOR -->
-    <input type="hidden" name="tipo" value="suscriptor">
-    <input type="hidden" name="from_name" value="Suscriptores Web">
+<!-- =====================================================
+     MENÚ PRINCIPAL · CÓDIGO MILLONARIO
+===================================================== -->
 
-    <!-- BOTÓN -->
-    <button type="button" class="btn-rojo" id="btnTogglePC">
-      Newsletter
-    </button>
+<header class="cm-header">
 
-    <!-- INPUT -->
-    <div class="input-box" id="inputBoxPC">
-      <input 
-        type="email" 
-        name="email" 
-        required
-        placeholder="Tu correo"
-        class="input-email">
+  <div class="cm-header-inner">
 
-      <button type="submit" class="btn-enviar">Enviar</button>
+    <!-- LOGO -->
+
+    <a href="/" class="cm-logo">
+
+      <span class="cm-logo-main">CÓDIGO</span>
+
+      <span class="cm-logo-name">M I L L O N A R I O</span>
+
+    </a>
+
+
+    <!-- NAVEGACIÓN -->
+
+    <nav class="cm-nav">
+
+      <div class="cm-nav-dropdown">
+
+        <button class="cm-nav-link cm-dropdown-btn">
+          FINANZAS
+        </button>
+
+        <div class="cm-dropdown-menu">
+
+          <a href="/educacion-financiera.html">Dinero</a>
+          <a href="/ahorro.html">Ahorro</a>
+          <a href="/psicologia-del-dinero.html">Psicología del Dinero</a>
+          <a href="/inversiones.html">Inversiones</a>
+          <a href="/Herramientas.html">Herramientas</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="cm-nav-divider"></div>
+
+
+      <div class="cm-nav-dropdown">
+
+        <button class="cm-nav-link cm-dropdown-btn">
+          NEGOCIOS
+        </button>
+
+        <div class="cm-dropdown-menu">
+
+          <a href="/negocios.html">Negocios</a>
+          <a href="/modelos-de-negocio.html">Modelos de Negocio</a>
+          <a href="/emprendimientos.html">Emprendimientos</a>
+          <a href="/productos.html">Productos</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="cm-nav-divider"></div>
+
+
+      <div class="cm-nav-dropdown">
+
+        <button class="cm-nav-link cm-dropdown-btn">
+          MUNDO MILLONARIO
+        </button>
+
+        <div class="cm-dropdown-menu">
+
+          <a href="/mundo-millonario.html">Mundo Millonario</a>
+          <a href="/millonarios.html">Millonarios</a>
+          <a href="/grandes-fortunas.html">Grandes Fortunas</a>
+
+          <a href="/biografias-de-millonarios.html">
+            Biografías de Millonarios
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+
+    <!-- DERECHA -->
+
+    <div class="cm-header-right">
+
+      <button
+        class="cm-search"
+        aria-label="Buscar"
+        type="button">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+      </button>
+
+
+      <button
+        class="cm-menu-mobile"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        type="button">
+
+        <i class="fa-solid fa-bars"></i>
+
+      </button>
+
     </div>
 
-  </form>
+  </div>
 
-</div>
+
+  <!-- =====================================================
+       MENÚ MOBILE
+  ===================================================== -->
+
+  <div class="cm-mobile-menu">
+
+    <div class="cm-mobile-section">
+
+      <button class="cm-mobile-title" type="button">
+
+        <span>FINANZAS</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+      </button>
+
+
+      <div class="cm-mobile-links">
+
+        <a href="/educacion-financiera.html">Dinero</a>
+        <a href="/ahorro.html">Ahorro</a>
+        <a href="/psicologia-del-dinero.html">
+          Psicología del Dinero
+        </a>
+        <a href="/inversiones.html">Inversiones</a>
+        <a href="/Herramientas.html">Herramientas</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="cm-mobile-section">
+
+      <button class="cm-mobile-title" type="button">
+
+        <span>NEGOCIOS</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+      </button>
+
+
+      <div class="cm-mobile-links">
+
+        <a href="/negocios.html">Negocios</a>
+        <a href="/modelos-de-negocio.html">
+          Modelos de Negocio
+        </a>
+        <a href="/emprendimientos.html">
+          Emprendimientos
+        </a>
+        <a href="/productos.html">Productos</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="cm-mobile-section">
+
+      <button class="cm-mobile-title" type="button">
+
+        <span>MUNDO MILLONARIO</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+      </button>
+
+
+      <div class="cm-mobile-links">
+
+        <a href="/mundo-millonario.html">
+          Mundo Millonario
+        </a>
+
+        <a href="/millonarios.html">
+          Millonarios
+        </a>
+
+        <a href="/grandes-fortunas.html">
+          Grandes Fortunas
+        </a>
+
+        <a href="/biografias-de-millonarios.html">
+          Biografías de Millonarios
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
 
 <style>
 
-/* 🚫 OCULTAR EN MÓVIL */
-@media (max-width: 768px) {
-  .pc-only {
-    display: none !important;
-  }
-}
+/* =====================================================
+   CÓDIGO MILLONARIO · HEADER
+===================================================== */
 
-/* 📌 CONTENEDOR PC */
-.pc-only {
+.cm-header {
+
+  width: 100%;
+
+  background: #000000;
+
+  border-bottom: 1px solid #1f1f1f;
+
   position: fixed;
-  right: 80px;
-  top: 20px;
-  z-index: 9999;
-}
 
-/* FORM */
-.form-suscriptor {
-  position: relative;
-}
-
-/* BOTÓN */
-.btn-rojo {
-  background-color: #e60000;
-  color: #fff;
-  border: none;
-  padding: 8px 28px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.btn-rojo:hover {
-  background-color: #cc0000;
-}
-
-/* INPUT */
-.input-box {
-  position: absolute;
   top: 0;
+
+  left: 0;
+
   right: 0;
 
+  z-index: 1000;
+
+  transition: transform .28s ease;
+
+}
+
+
+/* OCULTAR HEADER AL BAJAR */
+
+.cm-header.cm-header-hidden {
+
+  transform: translateY(-100%);
+
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.cm-header-inner {
+
+  max-width: 1440px;
+
+  height: 64px;
+
+  margin: 0 auto;
+
+  padding: 0 32px;
+
   display: flex;
+
   align-items: center;
 
-  opacity: 0;
-  pointer-events: none;
+  justify-content: space-between;
+
 }
 
-.input-box.activo {
-  opacity: 1;
-  pointer-events: auto;
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.cm-logo {
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  font-family: 'Manrope', sans-serif;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  width: 178px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
 }
 
-.input-email {
-  padding: 8px 10px;
-  border: none;
-  outline: none;
-  border-radius: 10px 0 0 10px;
-  font-size: 14px;
-  width: 150px;
+
+.cm-logo-main {
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.045em;
+
 }
 
-/* BOTÓN ENVIAR */
-.btn-enviar {
-  background-color: #e60000;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
+
+.cm-logo-name {
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.24em;
+
+  margin-top: 4px;
+
+  margin-left: 1px;
+
 }
 
-.btn-enviar:hover {
-  background-color: #cc0000;
-}
 
-</style>
-
-<script>
-const btnPC = document.getElementById("btnTogglePC");
-const inputBoxPC = document.getElementById("inputBoxPC");
-
-btnPC.addEventListener("click", (e) => {
-  e.stopPropagation();
-
-  btnPC.style.display = "none";
-  inputBoxPC.classList.add("activo");
-});
-
-inputBoxPC.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
-
-document.addEventListener("click", () => {
-  inputBoxPC.classList.remove("activo");
-  btnPC.style.display = "inline-block";
-});
-</script>
-
-
-
-
-
-
-
-<!-- MENU ORITIGNAL SECCIONES -->
-<script src="./assets/menu.js"></script>
-
-
-
-
-
-
-
-<!-- MENU ORITIGNAL PC Y TELEFONOS -->
-<div class="navbar-line"></div>
-  <div class="navbar-container">
-    <!-- Logo -->
-    <a href="./index.html" class="navbar-logo">Código Millonario</a>
-
-    <!-- Menú escritorio -->
-    <ul class="navbar-menu">
-      <li><a href="./index.html">Inicio</a></li>
-      <li><a href="./educacion-financiera.html">Educación Financiera</a></li>
-      <li><a href="./mentalidad/index.html">Mentalidad</a></li>
-      <li><a href="./blog/negocios/index.html">Negocios</a></li>
-      <li><a href="./herramientas.html">Herramientas</a></li>
-      <li><a href="./opiniones.html">Opiniones</a></li>
-      <li><a href="./nuestro-equipo.html">Staff</a></li>
-      <li><a href="./contacto.html">Contacto</a></li>
-    </ul>
-
-    <div class="navbar-space"></div>
-
-    <!-- Botón hamburguesa -->
-    <button class="navbar-toggler" id="menu-toggle">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-
-  <!-- Overlay oscuro -->
-  <div id="mobileOverlay"></div>
-
-<div id="mobileMenu">
-
-  <button id="closeMobileMenu">&times;</button>
-
-  <div class="mobile-menu-logo">
-    <img src="./assets/img/codigo-millonario-logo.png" alt="Código Millonario">
-  </div>
-
-  <div class="mobile-menu-links">
-
-    <a href="./index.html">Inicio</a>
-
-    <a href="./educacion-financiera.html">
-      Educación Financiera
-    </a>
-
-    <a href="./mentalidad/index.html">
-      Mentalidad
-    </a>
-
-    <a href="./blog/negocios/index.html">
-      Negocios
-    </a>
-
-    <a href="./herramientas.html">
-      Herramientas
-    </a>
-
-    <a href="./opiniones.html">
-      Opiniones
-    </a>
-
-    <a href="./nuestro-equipo.html">
-      Staff
-    </a>
-
-    <a href="./contacto.html">
-      Contacto
-    </a>
-
-  </div>
-</div>
-
-</nav>
-
-<style>
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-background: #0f0f0f; 
-  z-index: 9999;
+.cm-logo-description {
 
   font-family: 'Open Sans', sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.19em;
+
+  margin-top: 5px;
+
+  opacity: .82;
+
+  margin-left: 1px;
+
 }
 
-.navbar-container {
+
+/* =====================================================
+   NAVEGACIÓN
+===================================================== */
+
+.cm-nav {
+
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  height: 49px;
+
+  justify-content: center;
+
+  gap: 24px;
+
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
 }
 
-.navbar-spacer {
-  height: 60px;
+
+.cm-nav-link {
+
+  border: 0;
+
   background: transparent;
-}
 
-@media(max-width: 767px) {
-  .navbar-container { height: 60px; }
-  .navbar-spacer { height: 60px; }
-}
-
-.navbar-line { 
-  height: 1px; 
-  width: 100%; 
-  background: rgba(255,255,255,0.2); 
-}
-
-.navbar-logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff; /* blanco */
   text-decoration: none;
-}
 
-.navbar-menu {
-  list-style: none;
-  display: flex;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-}
+  color: #ffffff;
 
-.navbar-menu li a {
-  text-decoration: none;
-  color: #fff; /* blanco */
-  font-size: 16px;
-}
+  font-family: 'Open Sans', sans-serif;
 
-.navbar-menu li a:hover {
-  color: #ccc; /* efecto premium */
-}
-
-.navbar-toggler {
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: none;
-  z-index: 1101;
-}
-
-.navbar-toggler-icon {
-  width: 25px;
-  height: 2px;
-  background: #fff; /* blanco */
-  display: block;
-  position: relative;
-  transition: 0.3s;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 2px;
-  background: #fff; /* blanco */
-  left: 0;
-  transition: 0.3s;
-}
-
-.navbar-toggler-icon::before { top: -7px; }
-.navbar-toggler-icon::after { top: 7px; }
-
-.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
-.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
-.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
-
-/* ===== Overlay ===== */
-#mobileOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  z-index: 1000;
-}
-
-#mobileOverlay.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* ===== Menú móvil ===== */
-#mobileMenu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  max-width: 320px;
-  height: 100%;
-  background: #111111; /* negro */
-  z-index: 1001;
-  overflow-y: auto;
-  transition: 0.3s ease;
-  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
-}
-
-#mobileMenu.show {
-  left: 0;
-}
-
-.mobile-menu-logo {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-}
-
-.mobile-menu-logo img {
-  width: 110px;
-  height: auto;
-}
-
-#closeMobileMenu {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  line-height: 1;
-}
-
-.mobile-menu-links {
-  display: flex;
-  flex-direction: column;
-  margin-top: 80px;
-}
-
-.mobile-menu-links a {
-  color: #fff;
-  text-decoration: none;
-  padding: 22px 20px 18px 40px;
   font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 22px 0;
+
+  white-space: nowrap;
+
+  transition: color .2s ease;
+
+}
+
+
+.cm-nav-link:hover {
+
+  color: #ccc;
+
+}
+
+
+/* =====================================================
+   SEPARADORES
+===================================================== */
+
+.cm-nav-divider {
+
+  width: 1px;
+
+  height: 16px;
+
+  background: #ffffff;
+
+  flex-shrink: 0;
+
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.cm-nav-dropdown {
+
   position: relative;
+
 }
 
-.mobile-menu-links a::after {
-  content: "";
+
+.cm-dropdown-btn span {
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  color: #ffffff;
+
+}
+
+
+.cm-dropdown-menu {
+
   position: absolute;
-  left: 40px;
-  right: 40px;
-  bottom: 0;
-  height: 1px;
-  background: rgba(255,255,255,0.15);
+
+  top: calc(100% - 4px);
+
+  left: -18px;
+
+  width: 230px;
+
+  background: #000000;
+
+  border: 1px solid #292929;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+
+  padding: 10px 0;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(7px);
+
+  transition:
+    opacity .18s ease,
+    transform .18s ease,
+    visibility .18s ease;
+
 }
 
-.mobile-menu-links a:hover {
-  background: rgba(255,255,255,0.05);
+
+.cm-nav-dropdown:hover .cm-dropdown-menu {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+
 }
 
-@media(min-width: 768px) {
-  .navbar-menu li:nth-child(4) {
-    position: relative;
-    padding-right: 16px;
-    margin-right: 16px;
+
+.cm-dropdown-menu a {
+
+  display: block;
+
+  padding: 12px 18px;
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  font-family: 'Open Sans', sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  transition:
+    background .18s ease,
+    color .18s ease;
+
+}
+
+
+.cm-dropdown-menu a:hover {
+
+  background: #1a1a1a;
+
+  color: #ccc;
+
+}
+
+
+/* =====================================================
+   DERECHA
+===================================================== */
+
+.cm-header-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-left: auto;
+
+}
+
+
+.cm-search {
+
+  border: 0;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  padding: 8px;
+
+}
+
+
+.cm-search:hover {
+
+  color: #ccc;
+
+}
+
+
+/* =====================================================
+   MENÚ MOBILE · BOTÓN
+===================================================== */
+
+.cm-menu-mobile {
+
+  display: none;
+
+  border: 0;
+
+  background: transparent;
+
+  font-size: 20px;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  padding: 8px;
+
+  line-height: 1;
+
+}
+
+
+/* =====================================================
+   MENÚ MOBILE · CONTENEDOR
+===================================================== */
+
+.cm-mobile-menu {
+
+  display: none;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1050px) {
+
+  .cm-nav {
+
+    gap: 20px;
+
   }
 
-  .navbar-menu li:nth-child(4)::after {
-    content: "";
-    position: absolute;
-    right: -9px; /* mover la línea hacia el centro */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 24px;
-    background: rgba(223, 222, 222, 0.85);
-  }
-}
 
-@media(max-width: 767px) {
-  .navbar-menu { display: none; }
-  .navbar-toggler { display: block; }
-}
+  .cm-nav-link {
 
-@media(min-width: 768px) {
-  #mobileMenu,
-  #mobileOverlay { display: none !important; }
-}
+    font-size: 15px;
 
-body {
-  margin: 0;
-  padding-top: 61px;
-}
-
-@media(max-width: 767px) {
-  body { padding-top: 51px; }
-}
-
-/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
-@media(max-width: 767px) {
-
-  /* Contenedor del botón */
-  .navbar-toggler {
-    width: 75px;
-    height: 36px;
-    padding: 0 6px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-
-    box-shadow: 
-      0 2px 10px rgba(255, 255, 255, 0.08),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   }
 
-  /* 🔥 Ocultamos las 3 rayitas */
-  .navbar-toggler-icon {
+}
+
+
+@media (max-width: 850px) {
+
+  .cm-header {
+
+    top: env(safe-area-inset-top);
+
+  }
+
+
+  .cm-header-inner {
+
+    height: 60px;
+
+    padding: 0 20px;
+
+  }
+
+
+  .cm-logo {
+
+    width: 145px;
+
+  }
+
+
+  .cm-logo-main {
+
+    font-size: 19px;
+
+  }
+
+
+  .cm-logo-name {
+
+    font-size: 8.5px;
+
+    letter-spacing: 0.20em;
+
+    margin-top: 3px;
+
+  }
+
+
+  .cm-logo-description {
+
+    font-size: 6px;
+
+    letter-spacing: 0.16em;
+
+    margin-top: 4px;
+
+  }
+
+
+  .cm-nav {
+
     display: none;
+
   }
 
-  /* ===== LOGO (lado izquierdo) ===== */
-  .navbar-toggler::before {
-    content: "";
-    width: 24px;
-    height: 24px;
 
-    border-radius: 50%;
-    background: #000 url('./assets/img/dinero.webp') center/cover no-repeat;
+  .cm-menu-mobile {
 
     display: block;
+
   }
 
-  /* ===== FLECHA (lado derecho) ===== */
-  .navbar-toggler::after {
-    content: "";
-    width: 7px;
-    height: 7px;
 
-    border-right: 2px solid #dcdcdc;
-    border-bottom: 2px solid #dcdcdc;
+  /* ===================================================
+     PANEL MOBILE
+  =================================================== */
 
-    transform: rotate(45deg);
-    transition: 0.3s;
+  .cm-mobile-menu {
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    right: 0;
+
+    background: #000000;
+
+    border-top: 1px solid #1f1f1f;
+
+    border-bottom: 1px solid #292929;
+
+    padding: 6px 20px 10px;
+
+    display: block;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(-8px);
+
+    transition:
+      opacity .20s ease,
+      transform .20s ease,
+      visibility .20s ease;
+
+    max-height: calc(100vh - 60px);
+
+    overflow-y: auto;
+
   }
 
-  /* ===== ANIMACIÓN AL ABRIR ===== */
-  .navbar-toggler.active::after {
-    transform: rotate(-135deg);
+
+  /* MENÚ ABIERTO */
+
+  .cm-header.cm-mobile-open .cm-mobile-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+
   }
+
+
+  /* ===================================================
+     SECCIONES
+  =================================================== */
+
+  .cm-mobile-section {
+
+    border-bottom: 1px solid #252525;
+
+  }
+
+
+  .cm-mobile-section:last-child {
+
+    border-bottom: 0;
+
+  }
+
+
+  .cm-mobile-title {
+
+    width: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    padding: 14px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: .03em;
+
+    cursor: pointer;
+
+    text-align: left;
+
+  }
+
+
+  .cm-mobile-title i {
+
+    font-size: 11px;
+
+    transition: transform .20s ease;
+
+  }
+
+
+  /* ===================================================
+     ENLACES
+  =================================================== */
+
+  .cm-mobile-links {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .22s ease;
+
+  }
+
+
+  .cm-mobile-links a {
+
+    display: block;
+
+    color: #d8d8d8;
+
+    text-decoration: none;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    padding: 10px 8px 10px 12px;
+
+    border-top: 1px solid #151515;
+
+  }
+
+
+  .cm-mobile-links a:active {
+
+    background: #151515;
+
+  }
+
+
+  /* SECCIÓN ABIERTA */
+
+  .cm-mobile-section.cm-open .cm-mobile-links {
+
+    max-height: 300px;
+
+  }
+
+
+  .cm-mobile-section.cm-open .cm-mobile-title i {
+
+    transform: rotate(180deg);
+
+  }
+
 }
-/* 🔥 Cuando el menú está abierto, el botón se va detrás */
-@media(max-width: 767px) {
-  .navbar-toggler.active {
-    z-index: 999; /* menor que el menú (1001) */
+
+
+/* =====================================================
+   RESPETAR REDUCCIÓN DE MOVIMIENTO
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cm-header,
+  .cm-mobile-menu,
+  .cm-mobile-links,
+  .cm-mobile-title i {
+
+    transition: none;
+
   }
+
 }
+
 </style>
 
+
 <script>
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileOverlay = document.getElementById('mobileOverlay');
 
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  mobileMenu.classList.toggle('show');
-  mobileOverlay.classList.toggle('show');
-});
+(function () {
 
-mobileOverlay.addEventListener('click', () => {
-  menuToggle.classList.remove('active');
-  mobileMenu.classList.remove('show');
-  mobileOverlay.classList.remove('show');
-});
+  const header = document.querySelector('.cm-header');
 
-document.querySelectorAll('#mobileMenu a').forEach(link => {
-  link.addEventListener('click', () => {
-    menuToggle.classList.remove('active');
-    mobileMenu.classList.remove('show');
-    mobileOverlay.classList.remove('show');
+  if (!header) return;
+
+
+  /* ===================================================
+     FUNCIONES MENÚ MOBILE
+  =================================================== */
+
+  const mobileButton =
+    header.querySelector('.cm-menu-mobile');
+
+  const mobileMenu =
+    header.querySelector('.cm-mobile-menu');
+
+  const mobileIcon =
+    mobileButton
+      ? mobileButton.querySelector('i')
+      : null;
+
+  const mobileSections =
+    header.querySelectorAll('.cm-mobile-section');
+
+
+  if (!mobileButton || !mobileMenu) return;
+
+
+  /* ===================================================
+     CERRAR MENÚ MOBILE
+  =================================================== */
+
+  function closeMobileMenu() {
+
+    header.classList.remove('cm-mobile-open');
+
+
+    mobileButton.setAttribute(
+      'aria-expanded',
+      'false'
+    );
+
+
+    mobileButton.setAttribute(
+      'aria-label',
+      'Abrir menú'
+    );
+
+
+    if (mobileIcon) {
+
+      mobileIcon.classList.remove('fa-xmark');
+
+      mobileIcon.classList.add('fa-bars');
+
+    }
+
+
+    mobileSections.forEach(function (section) {
+
+      section.classList.remove('cm-open');
+
+    });
+
+  }
+
+
+  /* ===================================================
+     ABRIR / CERRAR MENÚ
+  =================================================== */
+
+  mobileButton.addEventListener('click', function () {
+
+    const isOpen =
+      header.classList.contains('cm-mobile-open');
+
+
+    if (isOpen) {
+
+      closeMobileMenu();
+
+      return;
+
+    }
+
+
+    header.classList.add('cm-mobile-open');
+
+
+    mobileButton.setAttribute(
+      'aria-expanded',
+      'true'
+    );
+
+
+    mobileButton.setAttribute(
+      'aria-label',
+      'Cerrar menú'
+    );
+
+
+    if (mobileIcon) {
+
+      mobileIcon.classList.remove('fa-bars');
+
+      mobileIcon.classList.add('fa-xmark');
+
+    }
+
   });
-});
-const closeMobileMenu =
-document.getElementById('closeMobileMenu');
 
-closeMobileMenu.addEventListener('click', () => {
-  menuToggle.classList.remove('active');
-  mobileMenu.classList.remove('show');
-  mobileOverlay.classList.remove('show');
-});
+
+  /* ===================================================
+     SUBMENÚS MOBILE
+  =================================================== */
+
+  mobileSections.forEach(function (section) {
+
+    const title =
+      section.querySelector('.cm-mobile-title');
+
+
+    if (!title) return;
+
+
+    title.addEventListener('click', function () {
+
+      const isOpen =
+        section.classList.contains('cm-open');
+
+
+      mobileSections.forEach(function (otherSection) {
+
+        if (otherSection !== section) {
+
+          otherSection.classList.remove('cm-open');
+
+        }
+
+      });
+
+
+      section.classList.toggle(
+        'cm-open',
+        !isOpen
+      );
+
+    });
+
+  });
+
+
+  /* ===================================================
+     CERRAR AL TOCAR UN ENLACE
+  =================================================== */
+
+  const mobileLinks =
+    header.querySelectorAll('.cm-mobile-links a');
+
+
+  mobileLinks.forEach(function (link) {
+
+    link.addEventListener('click', function () {
+
+      closeMobileMenu();
+
+    });
+
+  });
+
+
+  /* ===================================================
+     ESC · CERRAR MENÚ
+  =================================================== */
+
+  document.addEventListener('keydown', function (event) {
+
+    if (event.key === 'Escape') {
+
+      closeMobileMenu();
+
+    }
+
+  });
+
+
+  /* ===================================================
+     HEADER · SCROLL
+  =================================================== */
+
+  let headerVisible = true;
+
+  let lastStableScrollY = window.scrollY;
+
+  const scrollThreshold = 18;
+
+  let ticking = false;
+
+
+  function updateHeader() {
+
+    const currentScrollY = window.scrollY;
+
+    const distance =
+      currentScrollY - lastStableScrollY;
+
+
+    /* ==========================================
+       CERRAR HAMBURGUESA AL HACER SCROLL
+    ========================================== */
+
+    if (header.classList.contains('cm-mobile-open')) {
+
+      closeMobileMenu();
+
+    }
+
+
+    /* ==========================================
+       PARTE SUPERIOR
+    ========================================== */
+
+    if (currentScrollY <= 10) {
+
+      if (!headerVisible) {
+
+        header.classList.remove(
+          'cm-header-hidden'
+        );
+
+        headerVisible = true;
+
+      }
+
+
+      lastStableScrollY = currentScrollY;
+
+      ticking = false;
+
+      return;
+
+    }
+
+
+    /* ==========================================
+       BAJANDO
+    ========================================== */
+
+    if (distance >= scrollThreshold) {
+
+      if (headerVisible) {
+
+        header.classList.add(
+          'cm-header-hidden'
+        );
+
+        headerVisible = false;
+
+      }
+
+
+      lastStableScrollY = currentScrollY;
+
+    }
+
+
+    /* ==========================================
+       SUBIENDO
+    ========================================== */
+
+    else if (distance <= -scrollThreshold) {
+
+      if (!headerVisible) {
+
+        header.classList.remove(
+          'cm-header-hidden'
+        );
+
+        headerVisible = true;
+
+      }
+
+
+      lastStableScrollY = currentScrollY;
+
+    }
+
+
+    ticking = false;
+
+  }
+
+
+  window.addEventListener(
+    'scroll',
+    function () {
+
+      if (!ticking) {
+
+        window.requestAnimationFrame(
+          updateHeader
+        );
+
+        ticking = true;
+
+      }
+
+    },
+    { passive: true }
+  );
+
+
+})();
+
 </script>
+
+
 
 
 
@@ -733,21 +1338,6 @@ emailInput.addEventListener('input', () => {
 
 
 
-
-
-<!-- SCRIPT PARA DESCARGAR GUIA GRATIS DEL MENU -->
-<script>
-  // FUNCIONES PARA ABRIR Y CERRAR POPUP
-  function openPopup() {
-    const overlay = document.getElementById("popupOverlay");
-    overlay.style.display = "flex";
-  }
-
-  function closePopup() {
-    const overlay = document.getElementById("popupOverlay");
-    overlay.style.display = "none";
-  }
-</script>
 
 
 
@@ -903,10 +1493,6 @@ fetch('posts.json')
 
 
 
-<!-- popup Descargar Guia -->
-<script src="https://codigomillonario.blog/assets/popup.js"></script>
-
-
 
 
 <div class="marquee-line"></div>
@@ -961,278 +1547,6 @@ fetch('posts.json')
  <div style="height: 300px;"></div>
 
     
-
-
-
-<!-- =========================================
-     CABECERA EDITORIAL — CÓDIGO MILLONARIO
-========================================= -->
-
-<section class="cm-top-editorial">
-
-  <div class="cm-top-inner">
-
-    <!-- =========================
-         IDENTIDAD DEL MEDIO
-    ========================== -->
-
-    <div class="cm-top-identity">
-
-      <div class="cm-top-kicker">
-
-<h3 class="etiqueta-enfoque">
-  ENFOQUE
-  <span class="etiqueta-medio">MEDIO</span>
-</h3>
-
-      </div>
-
-      <p class="cm-top-description">
-        Análisis del dinero, las decisiones financieras y la construcción de patrimonio.
-      </p>
-
-    </div>
-
-
-    <!-- =========================
-         ACCIONES EDITORIALES
-    ========================== -->
-
-    <div class="cm-top-actions">
-
-      <!-- HERRAMIENTAS -->
-
-      <div class="cm-tools">
-
-        <button
-          type="button"
-          class="cm-tools-toggle"
-          data-cm-tools-toggle
-          aria-expanded="false"
-          aria-controls="cm-tools-menu"
-        >
-
-          <span>
-            Herramientas financieras
-          </span>
-
-          <span class="cm-tools-icon">
-            +
-          </span>
-
-        </button>
-
-
-        <!-- MENÚ DESPLEGABLE -->
-
-        <div
-          class="cm-tools-menu"
-          id="cm-tools-menu"
-        >
-
-          <a href="./herramientas/oraculo-financiero.html">
-            Oráculo Financiero
-          </a>
-
-          <a href="./herramientas/examen-financiero.html">
-            Examen Financiero
-          </a>
-
-          <a href="./herramientas/interes-compuesto.html">
-            Calculadora de Interés Compuesto
-          </a>
-
-          <a href="./herramientas/presupuesto-financiero.html">
-            Planificador de Presupuesto
-          </a>
-
-          <a href="./herramientas/simulador-de-invercion.html">
-            Simulador de Inversión
-          </a>
-
-          <a href="./herramientas/libertad-financiera.html">
-            Calculadora de Libertad Financiera
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- REDES -->
-
-      <div class="cm-top-social">
-
-        <span class="cm-top-social-label">
-          Redes
-        </span>
-
-        <div class="cm-top-socials">
-
-          <!-- Instagram -->
-
-          <a
-            href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-
-
-          <!-- X -->
-
-          <a
-            href="https://x.com/CMillonarioblog"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X"
-          >
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 1227"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-
-              <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163Z"/>
-
-            </svg>
-
-          </a>
-
-
-          <!-- YouTube -->
-
-          <a
-            href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-          >
-            <i class="fab fa-youtube"></i>
-          </a>
-
-
-          <!-- Facebook -->
-
-          <a
-            href="https://www.facebook.com/share/1FVSBquigd/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
-            <i class="fab fa-facebook-f"></i>
-          </a>
-
-
-          <!-- TikTok -->
-
-          <a
-            href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TikTok"
-          >
-            <i class="fab fa-tiktok"></i>
-          </a>
-
-
-          <!-- Pinterest -->
-
-          <a
-            href="https://pin.it/3tqNXYoAA"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Pinterest"
-          >
-            <i class="fab fa-pinterest-p"></i>
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================
-       SEPARADOR EDITORIAL
-  ========================== -->
-
-  <div class="cm-top-divider"></div>
-
-</section>
-
-<style>
-.etiqueta-enfoque{display:inline-flex;align-items:center;gap:6px;margin:0;padding:0;border:0;background:none;color:#111;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:9px;line-height:1;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
-.etiqueta-medio{display:inline-flex;align-items:center;padding:3px 5px 2px;background:#111;color:#fff;font-size:7px;line-height:1;font-weight:700;letter-spacing:1.1px;text-transform:uppercase}
-.cm-top-editorial{width:calc(100% - 100px);max-width:1080px;margin:0 auto 38px;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.cm-top-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
-.cm-top-identity{min-width:0}
-.cm-top-kicker{display:flex;align-items:center;gap:7px;margin-bottom:7px}
-.cm-top-label{color:#111;font-size:9px;line-height:1;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-.cm-top-badge{display:inline-flex;align-items:center;padding:3px 5px 2px;background:#111;color:#fff;font-size:7px;line-height:1;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
-.cm-top-description{max-width:600px;margin:0;color:#555;font-size:12px;line-height:1.55;font-weight:400}
-.cm-top-actions{display:flex;align-items:center;justify-content:flex-end;gap:25px;flex-shrink:0}
-.cm-tools{position:relative}
-.cm-tools-toggle{display:flex;align-items:center;gap:7px;padding:0;border:0;background:none;color:#222;font-family:inherit;font-size:10px;line-height:1.2;font-weight:600;letter-spacing:.1px;white-space:nowrap;cursor:pointer}
-.cm-tools-icon{display:inline-block;color:#777;font-size:13px;line-height:10px;font-weight:400;transition:transform .18s ease,color .18s ease}
-.cm-tools.open .cm-tools-icon{transform:rotate(45deg);color:#111}
-.cm-tools-menu{position:absolute;top:23px;right:0;z-index:1000;width:235px;padding:5px 0;background:#fff;border:1px solid #e8e8e8;box-shadow:0 8px 22px rgba(0,0,0,.06);opacity:0;visibility:hidden;transform:translateY(-3px);transition:opacity .16s ease,visibility .16s ease,transform .16s ease}
-.cm-tools.open .cm-tools-menu{opacity:1;visibility:visible;transform:translateY(0)}
-.cm-tools-menu a{display:block;padding:8px 12px;color:#333;font-size:10px;line-height:1.35;font-weight:400;text-decoration:none;border-bottom:1px solid #f3f3f3;transition:background .15s ease,color .15s ease}
-.cm-tools-menu a:last-child{border-bottom:0}
-.cm-tools-menu a:hover{background:#fafafa;color:#111}
-.cm-top-social{display:flex;align-items:center;gap:9px}
-.cm-top-social-label{color:#999;font-size:8px;line-height:1;font-weight:600;letter-spacing:1.1px;text-transform:uppercase}
-.cm-top-socials{display:flex;align-items:center;gap:10px}
-.cm-top-socials a{display:flex;align-items:center;justify-content:center;width:14px;height:14px;color:#777;text-decoration:none;transition:color .16s ease,transform .16s ease}
-.cm-top-socials a:hover{color:#111;transform:translateY(-1px)}
-.cm-top-socials i{font-size:11px}
-.cm-top-socials svg{width:10px;height:10px}
-.cm-top-divider{width:100%;height:1px;margin-top:20px;background:#e7e7e7}
-@media(max-width:900px){
-.cm-top-editorial{width:calc(100% - 60px)}
-.cm-top-inner{display:block}
-.cm-top-actions{justify-content:flex-start;margin-top:17px}
-}
-@media(max-width:600px){
-.cm-top-editorial{width:calc(100% - 36px);margin-bottom:32px}
-.cm-top-description{max-width:100%;font-size:11.5px;line-height:1.55}
-.cm-top-actions{gap:18px;margin-top:15px}
-.cm-top-social-label{display:none}
-.cm-top-socials{gap:10px}
-.cm-tools-menu{left:0;right:auto;width:225px}
-.cm-top-divider{margin-top:17px}
-}
-</style>
-
-<script>
-(function(){
-const root=document.querySelector(".cm-tools"),toggle=document.querySelector("[data-cm-tools-toggle]"),menu=document.getElementById("cm-tools-menu");
-if(!root||!toggle||!menu)return;
-toggle.addEventListener("click",function(event){
-event.stopPropagation();
-const isOpen=root.classList.toggle("open");
-toggle.setAttribute("aria-expanded",isOpen?"true":"false");
-});
-document.addEventListener("click",function(event){
-if(!root.contains(event.target)){
-root.classList.remove("open");
-toggle.setAttribute("aria-expanded","false");
-}
-});
-menu.addEventListener("click",function(event){event.stopPropagation()});
-})();
-</script>
-
-
-
 
 
 
