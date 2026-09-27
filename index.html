@@ -83,8 +83,6 @@ body, html {
 
 
 
-
-
 <!-- =====================================================
      MENÚ PRINCIPAL · CÓDIGO MILLONARIO
 ===================================================== -->
@@ -601,6 +599,15 @@ body, html {
 
 @media (max-width: 850px) {
 
+  /* SEPARACIÓN DE LA ZONA SUPERIOR DEL NAVEGADOR */
+
+  .cm-header {
+
+    top: env(safe-area-inset-top);
+
+  }
+
+
   .cm-header-inner {
 
     height: 68px;
@@ -758,8 +765,6 @@ body, html {
 })();
 
 </script>
-
-
 
 
 
