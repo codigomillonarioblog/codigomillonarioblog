@@ -83,7 +83,6 @@ body, html {
 
 
 
-
 <!-- =====================================================
      MENÚ PRINCIPAL · CÓDIGO MILLONARIO
 ===================================================== -->
@@ -600,8 +599,6 @@ body, html {
 
 @media (max-width: 850px) {
 
-  /* RESPETAR LA ZONA SEGURA DEL DISPOSITIVO */
-
   .cm-header {
 
     top: env(safe-area-inset-top);
@@ -684,12 +681,6 @@ body, html {
 
 }
 
-
-/* =====================================================
-   SCRIPT · SCROLL ESTABILIZADO
-   OCULTAR AL BAJAR / MOSTRAR AL SUBIR
-===================================================== */
-
 </style>
 
 
@@ -702,39 +693,60 @@ body, html {
   if (!header) return;
 
 
-  let lastScrollY = window.scrollY;
+  /*
+     ESTADO ACTUAL
 
-  let ticking = false;
+     true  = menú visible
+     false = menú oculto
+  */
 
-  let accumulatedMovement = 0;
+  let headerVisible = true;
 
 
   /*
-     Cantidad mínima de desplazamiento antes
-     de cambiar el estado del menú.
+     Última posición estable del scroll.
+     No reaccionamos a cada pequeño movimiento.
   */
 
-  const scrollThreshold = 12;
+  let lastStableScrollY = window.scrollY;
+
+
+  /*
+     Distancia mínima necesaria para cambiar
+     de estado.
+
+     Esto evita que los movimientos lentos
+     hagan que el menú cambie constantemente.
+  */
+
+  const scrollThreshold = 18;
+
+
+  let ticking = false;
 
 
   function updateHeader() {
 
     const currentScrollY = window.scrollY;
 
-    const difference = currentScrollY - lastScrollY;
+    const distance = currentScrollY - lastStableScrollY;
 
 
     /* ==========================================
-       PARTE SUPERIOR DE LA PÁGINA
+       PARTE SUPERIOR
     ========================================== */
 
     if (currentScrollY <= 10) {
 
-      header.classList.remove('cm-header-hidden');
+      if (!headerVisible) {
 
-      lastScrollY = currentScrollY;
+        header.classList.remove('cm-header-hidden');
 
-      accumulatedMovement = 0;
+        headerVisible = true;
+
+      }
+
+      lastStableScrollY = currentScrollY;
 
       ticking = false;
 
@@ -744,21 +756,30 @@ body, html {
 
 
     /* ==========================================
-       ACUMULAR MOVIMIENTO
-    ========================================== */
-
-    accumulatedMovement += difference;
-
-
-    /* ==========================================
        BAJANDO
     ========================================== */
 
-    if (accumulatedMovement >= scrollThreshold) {
+    if (distance >= scrollThreshold) {
 
-      header.classList.add('cm-header-hidden');
+      /*
+         Solo ocultar si actualmente
+         está visible.
+      */
 
-      accumulatedMovement = 0;
+      if (headerVisible) {
+
+        header.classList.add('cm-header-hidden');
+
+        headerVisible = false;
+
+      }
+
+
+      /*
+         Crear un nuevo punto de referencia.
+      */
+
+      lastStableScrollY = currentScrollY;
 
     }
 
@@ -767,25 +788,35 @@ body, html {
        SUBIENDO
     ========================================== */
 
-    else if (accumulatedMovement <= -scrollThreshold) {
+    else if (distance <= -scrollThreshold) {
 
-      header.classList.remove('cm-header-hidden');
+      /*
+         Solo mostrar si actualmente
+         está oculto.
+      */
 
-      accumulatedMovement = 0;
+      if (!headerVisible) {
+
+        header.classList.remove('cm-header-hidden');
+
+        headerVisible = true;
+
+      }
+
+
+      /*
+         Crear un nuevo punto de referencia.
+      */
+
+      lastStableScrollY = currentScrollY;
 
     }
 
-
-    lastScrollY = currentScrollY;
 
     ticking = false;
 
   }
 
-
-  /* ==========================================
-     ESCUCHAR SCROLL
-  ========================================== */
 
   window.addEventListener('scroll', function () {
 
@@ -803,6 +834,9 @@ body, html {
 })();
 
 </script>
+
+
+
 
 
 
