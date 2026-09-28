@@ -36,664 +36,1250 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-
 <!-- NUEVA TIPOGRAFIA -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 
 
-<style>
-  html, body { height: 100%; font-family: 'Poppins', sans-serif; margin:0; padding:0; }
-
-body, html {
-  background-color: #ffffff !important;
-}
-</style>
-
-</head>
-<body class="bg-stone-50 text-stone-900">
-
-<!-- Tipografia de codigo millonario menu -->
-<style>
-.navbar-logo {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.3px;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Versión para footer con fondo oscuro */
-.navbar-logo-footer {
-    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
-    font-weight: bold;
-    font-size: 20px;
-    color: #fff; /* blanco para footer */
-    text-decoration: none;
-}
-</style>
 
 
 
 
 
 
-<!-- IMAGEN PRINCIPAL MENU -->
-<nav class="navbar">
-<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
-<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
-  <img src="./assets/img/codigo-millonario-logo.png" 
-       alt="Inspiración Código Millonario"
-       class="logo-img object-contain">
-</div>
-
-<style>
-/* TAMAÑO NORMAL */
-.logo-img {
-  width: 11rem; /* equivalente a w-56 */
-  height: auto;
-  transition: width 0.3s ease;
-}
-
-/* responsive */
-@media (min-width: 640px) {
-  .logo-img { width: 13rem; } /* sm:w-64 */
-}
-
-@media (min-width: 768px) {
-  .logo-img { width: 15rem; } /* md:w-72 */
-}
-
-/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
-.logo-small {
-  width: 8rem !important;
-}
-
-@media (min-width: 640px) {
-  .logo-small { width: 10rem !important; }
-}
-
-@media (min-width: 768px) {
-  .logo-small { width: 11rem !important; }
-}
-
-/* mover a la izquierda solo en PC */
-@media (min-width: 768px) {
-  .logo-img {
-    transform: translateX(-40px); /* 👈 mueve a la izquierda */
-  }
-}
-</style>
-
-<script>
-const logo = document.querySelector('.logo-img');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    logo.classList.add('logo-small');
-  } else {
-    logo.classList.remove('logo-small');
-  }
-});
-</script>
 
 
+<!-- =====================================================
+     MENÚ PRINCIPAL · CÓDIGO MILLONARIO
+===================================================== -->
+
+<header class="cm-header">
+
+  <div class="cm-header-inner">
+
+<!-- LOGO -->
+
+<a href="/" class="cm-logo">
+
+  <span class="cm-logo-title">Código Millonario</span>
+
+</a>
 
 
+<!-- NAVEGACIÓN -->
 
-<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
-<div class="btn-container pc-only">
+<nav class="cm-nav">
 
-  <!-- FORMULARIO -->
-  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
-    
-    <!-- 🔐 CONFIG WEB3FORMS -->
-    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
-    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
-    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+  <div class="cm-nav-dropdown">
 
-    <!-- 🧠 IDENTIFICADOR -->
-    <input type="hidden" name="tipo" value="suscriptor">
-    <input type="hidden" name="from_name" value="Suscriptores Web">
-
-    <!-- BOTÓN -->
-    <button type="button" class="btn-rojo" id="btnTogglePC">
-      Newsletter
+    <button class="cm-nav-link cm-dropdown-btn">
+      FINANZAS
     </button>
 
-    <!-- INPUT -->
-    <div class="input-box" id="inputBoxPC">
-      <input 
-        type="email" 
-        name="email" 
-        required
-        placeholder="Tu correo"
-        class="input-email">
+    <div class="cm-dropdown-menu">
 
-      <button type="submit" class="btn-enviar">Enviar</button>
+      <a href="/educacion-financiera.html">Dinero</a>
+      <a href="/ahorro.html">Ahorro</a>
+      <a href="/psicologia-del-dinero.html">Psicología del Dinero</a>
+      <a href="/inversiones.html">Inversiones</a>
+      <a href="/Herramientas.html">Herramientas</a>
+
     </div>
 
-  </form>
-
-</div>
-
-<style>
-
-/* 🚫 OCULTAR EN MÓVIL */
-@media (max-width: 768px) {
-  .pc-only {
-    display: none !important;
-  }
-}
-
-/* 📌 CONTENEDOR PC */
-.pc-only {
-  position: fixed;
-  right: 80px;
-  top: 20px;
-  z-index: 9999;
-}
-
-/* FORM */
-.form-suscriptor {
-  position: relative;
-}
-
-/* BOTÓN */
-.btn-rojo {
-  background-color: #e60000;
-  color: #fff;
-  border: none;
-  padding: 8px 28px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.btn-rojo:hover {
-  background-color: #cc0000;
-}
-
-/* INPUT */
-.input-box {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  display: flex;
-  align-items: center;
-
-  opacity: 0;
-  pointer-events: none;
-}
-
-.input-box.activo {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.input-email {
-  padding: 8px 10px;
-  border: none;
-  outline: none;
-  border-radius: 10px 0 0 10px;
-  font-size: 14px;
-  width: 150px;
-}
-
-/* BOTÓN ENVIAR */
-.btn-enviar {
-  background-color: #e60000;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.btn-enviar:hover {
-  background-color: #cc0000;
-}
-
-</style>
-
-<script>
-const btnPC = document.getElementById("btnTogglePC");
-const inputBoxPC = document.getElementById("inputBoxPC");
-
-btnPC.addEventListener("click", (e) => {
-  e.stopPropagation();
-
-  btnPC.style.display = "none";
-  inputBoxPC.classList.add("activo");
-});
-
-inputBoxPC.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
-
-document.addEventListener("click", () => {
-  inputBoxPC.classList.remove("activo");
-  btnPC.style.display = "inline-block";
-});
-</script>
+  </div>
 
 
+  <div class="cm-nav-divider"></div>
 
 
+  <div class="cm-nav-dropdown">
 
-
-
-<!-- MENU ORITIGNAL SECCIONES -->
-<script src="./assets/menu.js"></script>
-
-
-
-
-
-
-
-<!-- MENU ORITIGNAL PC Y TELEFONOS -->
-<div class="navbar-line"></div>
-  <div class="navbar-container">
-    <!-- Logo -->
-    <a href="./index.html" class="navbar-logo">Código Millonario</a>
-
-    <!-- Menú escritorio -->
-    <ul class="navbar-menu">
-      <li><a href="./index.html">Inicio</a></li>
-      <li><a href="./educacion-financiera.html">Educación Financiera</a></li>
-      <li><a href="./mentalidad/index.html">Mentalidad</a></li>
-      <li><a href="./blog/negocios/index.html">Negocios</a></li>
-      <li><a href="./herramientas.html">Herramientas</a></li>
-      <li><a href="./opiniones.html">Opiniones</a></li>
-      <li><a href="./nuestro-equipo.html">Staff</a></li>
-      <li><a href="./contacto.html">Contacto</a></li>
-    </ul>
-
-    <div class="navbar-space"></div>
-
-    <!-- Botón hamburguesa -->
-    <button class="navbar-toggler" id="menu-toggle">
-      <span class="navbar-toggler-icon"></span>
+    <button class="cm-nav-link cm-dropdown-btn">
+      NEGOCIOS
     </button>
-  </div>
 
-  <!-- Overlay oscuro -->
-  <div id="mobileOverlay"></div>
+    <div class="cm-dropdown-menu">
 
-<div id="mobileMenu">
+      <a href="/negocios.html">Negocios</a>
+      <a href="/modelos-de-negocio.html">Modelos de Negocio</a>
+      <a href="/emprendimientos.html">Emprendimientos</a>
+      <a href="/productos.html">Productos</a>
 
-  <button id="closeMobileMenu">&times;</button>
-
-  <div class="mobile-menu-logo">
-    <img src="./assets/img/codigo-millonario-logo.png" alt="Código Millonario">
-  </div>
-
-  <div class="mobile-menu-links">
-
-    <a href="./index.html">Inicio</a>
-
-    <a href="./educacion-financiera.html">
-      Educación Financiera
-    </a>
-
-    <a href="./mentalidad/index.html">
-      Mentalidad
-    </a>
-
-    <a href="./blog/negocios/index.html">
-      Negocios
-    </a>
-
-    <a href="./herramientas.html">
-      Herramientas
-    </a>
-
-    <a href="./opiniones.html">
-      Opiniones
-    </a>
-
-    <a href="./nuestro-equipo.html">
-      Staff
-    </a>
-
-    <a href="./contacto.html">
-      Contacto
-    </a>
+    </div>
 
   </div>
-</div>
+
+
+  <div class="cm-nav-divider"></div>
+
+
+  <div class="cm-nav-dropdown">
+
+    <button class="cm-nav-link cm-dropdown-btn">
+      MUNDO MILLONARIO
+    </button>
+
+    <div class="cm-dropdown-menu">
+
+      <a href="/mundo-millonario.html">Mundo Millonario</a>
+      <a href="/millonarios.html">Millonarios</a>
+      <a href="/grandes-fortunas.html">Grandes Fortunas</a>
+
+      <a href="/biografias-de-millonarios.html">
+        Biografías de Millonarios
+      </a>
+
+    </div>
+
+  </div>
 
 </nav>
 
+
+<!-- DERECHA -->
+
+<div class="cm-header-right">
+
+  <button
+    class="cm-search"
+    aria-label="Buscar"
+    type="button">
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+  </button>
+
+
+  <button
+    class="cm-menu-mobile"
+    aria-label="Abrir menú"
+    aria-expanded="false"
+    type="button">
+
+    <i class="fa-solid fa-bars"></i>
+
+  </button>
+
+</div>
+
+  </div>
+
+  <!-- =====================================================
+       CUADRO DEL LOGO · DEBAJO DEL MENÚ
+  ===================================================== -->
+
+<div class="cm-logo-box">
+
+  <img
+    src="./assets/img/logo-cm.jpeg"
+    alt="Código Millonario"
+    class="cm-square-logo">
+
+</div>
+
+  <!-- =====================================================
+       MENÚ MOBILE
+  ===================================================== -->
+
+  <div class="cm-mobile-menu">
+
+<div class="cm-mobile-section">
+
+  <button class="cm-mobile-title" type="button">
+
+    <span>FINANZAS</span>
+
+    <i class="fa-solid fa-chevron-down"></i>
+
+  </button>
+
+
+  <div class="cm-mobile-links">
+
+    <a href="/educacion-financiera.html">Dinero</a>
+    <a href="/ahorro.html">Ahorro</a>
+    <a href="/psicologia-del-dinero.html">
+      Psicología del Dinero
+    </a>
+    <a href="/inversiones.html">Inversiones</a>
+    <a href="/Herramientas.html">Herramientas</a>
+
+  </div>
+
+</div>
+
+
+<div class="cm-mobile-section">
+
+  <button class="cm-mobile-title" type="button">
+
+    <span>NEGOCIOS</span>
+
+    <i class="fa-solid fa-chevron-down"></i>
+
+  </button>
+
+
+  <div class="cm-mobile-links">
+
+    <a href="/negocios.html">Negocios</a>
+    <a href="/modelos-de-negocio.html">
+      Modelos de Negocio
+    </a>
+    <a href="/emprendimientos.html">
+      Emprendimientos
+    </a>
+    <a href="/productos.html">Productos</a>
+
+  </div>
+
+</div>
+
+
+<div class="cm-mobile-section">
+
+  <button class="cm-mobile-title" type="button">
+
+    <span>MUNDO MILLONARIO</span>
+
+    <i class="fa-solid fa-chevron-down"></i>
+
+  </button>
+
+
+  <div class="cm-mobile-links">
+
+    <a href="/mundo-millonario.html">
+      Mundo Millonario
+    </a>
+
+    <a href="/millonarios.html">
+      Millonarios
+    </a>
+
+    <a href="/grandes-fortunas.html">
+      Grandes Fortunas
+    </a>
+
+    <a href="/biografias-de-millonarios.html">
+      Biografías de Millonarios
+    </a>
+
+  </div>
+
+</div>
+
+  </div>
+
+</header>
+
 <style>
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+
+/* =====================================================
+   CÓDIGO MILLONARIO · HEADER
+===================================================== */
+
+.cm-header {
+
   width: 100%;
-background: #0f0f0f; 
-  z-index: 9999;
+
+  background: #000000;
+
+  border-bottom: 1px solid #1f1f1f;
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  z-index: 1000;
+
+  transition: transform .28s ease;
+
+}
+
+
+/* OCULTAR HEADER AL BAJAR */
+
+.cm-header.cm-header-hidden {
+
+  transform: translateY(-100%);
+
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.cm-header-inner {
+
+  max-width: 1440px;
+
+  height: 64px;
+
+  margin: 0 auto;
+
+  padding: 0 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+
+/* =====================================================
+   LOGO / NOMBRE
+===================================================== */
+
+.cm-logo {
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  font-family: 'Manrope', sans-serif;
+
+  display: flex;
+
+  align-items: center;
+
+  width: auto;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transform: translateX(-12px);
+
+}
+
+
+.cm-logo-title {
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.055em;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+}
+
+
+/* =====================================================
+   CUADRO DEL LOGO · DEBAJO DEL MENÚ
+===================================================== */
+
+.cm-logo-box {
+
+  position: absolute;
+
+  top: 100%;
+
+  left: 10px;
+
+  width: 28px;
+
+  height: 28px;
+
+  background: #000000;
+
+  border: 1px solid #1f1f1f;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  z-index: 1001;
+
+}
+
+
+.cm-square-logo {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+}
+
+
+/* =====================================================
+   NAVEGACIÓN
+===================================================== */
+
+.cm-nav {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 24px;
+
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+}
+
+
+.cm-nav-link {
+
+  border: 0;
+
+  background: transparent;
+
+  text-decoration: none;
+
+  color: #ffffff;
 
   font-family: 'Open Sans', sans-serif;
-}
 
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  height: 49px;
-}
-
-.navbar-spacer {
-  height: 60px;
-  background: transparent;
-}
-
-@media(max-width: 767px) {
-  .navbar-container { height: 60px; }
-  .navbar-spacer { height: 60px; }
-}
-
-.navbar-line { 
-  height: 1px; 
-  width: 100%; 
-  background: rgba(255,255,255,0.2); 
-}
-
-.navbar-logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff; /* blanco */
-  text-decoration: none;
-}
-
-.navbar-menu {
-  list-style: none;
-  display: flex;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-menu li a {
-  text-decoration: none;
-  color: #fff; /* blanco */
-  font-size: 16px;
-}
-
-.navbar-menu li a:hover {
-  color: #ccc; /* efecto premium */
-}
-
-.navbar-toggler {
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: none;
-  z-index: 1101;
-}
-
-.navbar-toggler-icon {
-  width: 25px;
-  height: 2px;
-  background: #fff; /* blanco */
-  display: block;
-  position: relative;
-  transition: 0.3s;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 2px;
-  background: #fff; /* blanco */
-  left: 0;
-  transition: 0.3s;
-}
-
-.navbar-toggler-icon::before { top: -7px; }
-.navbar-toggler-icon::after { top: 7px; }
-
-.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
-.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
-.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
-
-/* ===== Overlay ===== */
-#mobileOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  z-index: 1000;
-}
-
-#mobileOverlay.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* ===== Menú móvil ===== */
-#mobileMenu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  max-width: 320px;
-  height: 100%;
-  background: #111111; /* negro */
-  z-index: 1001;
-  overflow-y: auto;
-  transition: 0.3s ease;
-  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
-}
-
-#mobileMenu.show {
-  left: 0;
-}
-
-.mobile-menu-logo {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-}
-
-.mobile-menu-logo img {
-  width: 110px;
-  height: auto;
-}
-
-#closeMobileMenu {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  line-height: 1;
-}
-
-.mobile-menu-links {
-  display: flex;
-  flex-direction: column;
-  margin-top: 80px;
-}
-
-.mobile-menu-links a {
-  color: #fff;
-  text-decoration: none;
-  padding: 22px 20px 18px 40px;
   font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 22px 0;
+
+  white-space: nowrap;
+
+  transition: color .2s ease;
+
+}
+
+
+.cm-nav-link:hover {
+
+  color: #ccc;
+
+}
+
+
+/* =====================================================
+   SEPARADORES
+===================================================== */
+
+.cm-nav-divider {
+
+  width: 1px;
+
+  height: 16px;
+
+  background: #ffffff;
+
+  flex-shrink: 0;
+
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.cm-nav-dropdown {
+
   position: relative;
+
 }
 
-.mobile-menu-links a::after {
-  content: "";
+
+.cm-dropdown-btn span {
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  color: #ffffff;
+
+}
+
+
+.cm-dropdown-menu {
+
   position: absolute;
-  left: 40px;
-  right: 40px;
-  bottom: 0;
-  height: 1px;
-  background: rgba(255,255,255,0.15);
+
+  top: calc(100% - 4px);
+
+  left: -18px;
+
+  width: 230px;
+
+  background: #000000;
+
+  border: 1px solid #292929;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+
+  padding: 10px 0;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(7px);
+
+  transition:
+    opacity .18s ease,
+    transform .18s ease,
+    visibility .18s ease;
+
 }
 
-.mobile-menu-links a:hover {
-  background: rgba(255,255,255,0.05);
+
+.cm-nav-dropdown:hover .cm-dropdown-menu {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+
 }
 
-@media(min-width: 768px) {
-  .navbar-menu li:nth-child(4) {
-    position: relative;
-    padding-right: 16px;
-    margin-right: 16px;
+
+.cm-dropdown-menu a {
+
+  display: block;
+
+  padding: 12px 18px;
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  font-family: 'Open Sans', sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  transition:
+    background .18s ease,
+    color .18s ease;
+
+}
+
+
+.cm-dropdown-menu a:hover {
+
+  background: #1a1a1a;
+
+  color: #ccc;
+
+}
+
+
+/* =====================================================
+   DERECHA
+===================================================== */
+
+.cm-header-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-left: auto;
+
+}
+
+
+.cm-search {
+
+  border: 0;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  padding: 8px;
+
+}
+
+
+.cm-search:hover {
+
+  color: #ccc;
+
+}
+
+
+/* =====================================================
+   MENÚ MOBILE · BOTÓN
+===================================================== */
+
+.cm-menu-mobile {
+
+  display: none;
+
+  border: 0;
+
+  background: transparent;
+
+  font-size: 20px;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  padding: 8px;
+
+  line-height: 1;
+
+}
+
+
+/* =====================================================
+   MENÚ MOBILE · CONTENEDOR
+===================================================== */
+
+.cm-mobile-menu {
+
+  display: none;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1050px) {
+
+  .cm-nav {
+
+    gap: 20px;
+
   }
 
-  .navbar-menu li:nth-child(4)::after {
-    content: "";
-    position: absolute;
-    right: -9px; /* mover la línea hacia el centro */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 24px;
-    background: rgba(223, 222, 222, 0.85);
-  }
-}
 
-@media(max-width: 767px) {
-  .navbar-menu { display: none; }
-  .navbar-toggler { display: block; }
-}
+  .cm-nav-link {
 
-@media(min-width: 768px) {
-  #mobileMenu,
-  #mobileOverlay { display: none !important; }
-}
+    font-size: 15px;
 
-body {
-  margin: 0;
-  padding-top: 61px;
-}
-
-@media(max-width: 767px) {
-  body { padding-top: 51px; }
-}
-
-/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
-@media(max-width: 767px) {
-
-  /* Contenedor del botón */
-  .navbar-toggler {
-    width: 75px;
-    height: 36px;
-    padding: 0 6px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-
-    box-shadow: 
-      0 2px 10px rgba(255, 255, 255, 0.08),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   }
 
-  /* 🔥 Ocultamos las 3 rayitas */
-  .navbar-toggler-icon {
+}
+
+
+@media (max-width: 850px) {
+
+  .cm-header {
+
+    top: env(safe-area-inset-top);
+
+  }
+
+
+  .cm-header-inner {
+
+    height: 60px;
+
+    padding: 0 20px;
+
+  }
+
+
+  .cm-logo {
+
+    width: auto;
+
+    max-width: calc(100% - 8px);
+
+  }
+
+
+  .cm-logo-title {
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.055em;
+
+  }
+
+
+  /* CUADRO DEL LOGO EN TELÉFONOS */
+
+  .cm-logo-box {
+
+    left: 10px;
+
+    width: 28px;
+
+    height: 28px;
+
+  }
+
+
+  .cm-nav {
+
     display: none;
+
   }
 
-  /* ===== LOGO (lado izquierdo) ===== */
-  .navbar-toggler::before {
-    content: "";
-    width: 24px;
-    height: 24px;
 
-    border-radius: 50%;
-    background: #000 url('./assets/img/dinero.webp') center/cover no-repeat;
+  .cm-menu-mobile {
 
     display: block;
+
   }
 
-  /* ===== FLECHA (lado derecho) ===== */
-  .navbar-toggler::after {
-    content: "";
-    width: 7px;
-    height: 7px;
 
-    border-right: 2px solid #dcdcdc;
-    border-bottom: 2px solid #dcdcdc;
+  /* ===================================================
+     PANEL MOBILE
+  =================================================== */
 
-    transform: rotate(45deg);
-    transition: 0.3s;
-  }
+.cm-mobile-menu {
 
-  /* ===== ANIMACIÓN AL ABRIR ===== */
-  .navbar-toggler.active::after {
-    transform: rotate(-135deg);
-  }
+  position: absolute;
+
+  top: 100%;
+
+  left: 0;
+
+  right: 0;
+
+  background: #000000;
+
+  border-top: 1px solid #1f1f1f;
+
+  border-bottom: 1px solid #292929;
+
+  padding: 66px 20px 10px;
+
+  display: block;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform: translateY(0);
+
+  transition:
+    opacity .20s ease,
+    visibility .20s ease;
+
+  max-height: calc(100vh - 60px);
+
+  overflow-y: auto;
+
 }
-/* 🔥 Cuando el menú está abierto, el botón se va detrás */
-@media(max-width: 767px) {
-  .navbar-toggler.active {
-    z-index: 999; /* menor que el menú (1001) */
-  }
+
+
+/* MENÚ ABIERTO */
+
+.cm-header.cm-mobile-open .cm-mobile-menu {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
 }
+
+  /* ===================================================
+     SECCIONES
+  =================================================== */
+
+  .cm-mobile-section {
+
+    border-bottom: 1px solid #252525;
+
+  }
+
+
+  .cm-mobile-section:last-child {
+
+    border-bottom: 0;
+
+  }
+
+
+  .cm-mobile-title {
+
+    width: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    padding: 14px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: .03em;
+
+    cursor: pointer;
+
+    text-align: left;
+
+  }
+
+
+  .cm-mobile-title i {
+
+    font-size: 11px;
+
+    transition: transform .20s ease;
+
+  }
+
+
+  /* ===================================================
+     ENLACES
+  =================================================== */
+
+  .cm-mobile-links {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .22s ease;
+
+  }
+
+
+  .cm-mobile-links a {
+
+    display: block;
+
+    color: #d8d8d8;
+
+    text-decoration: none;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    padding: 10px 8px 10px 12px;
+
+    border-top: 1px solid #151515;
+
+  }
+
+
+  .cm-mobile-links a:active {
+
+    background: #151515;
+
+  }
+
+
+  /* SECCIÓN ABIERTA */
+
+  .cm-mobile-section.cm-open .cm-mobile-links {
+
+    max-height: 300px;
+
+  }
+
+
+  .cm-mobile-section.cm-open .cm-mobile-title i {
+
+    transform: rotate(180deg);
+
+  }
+
+}
+
+
+/* =====================================================
+   RESPETAR REDUCCIÓN DE MOVIMIENTO
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cm-header,
+  .cm-mobile-menu,
+  .cm-mobile-links,
+  .cm-mobile-title i {
+
+    transition: none;
+
+  }
+
+}
+
 </style>
 
 <script>
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileOverlay = document.getElementById('mobileOverlay');
 
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  mobileMenu.classList.toggle('show');
-  mobileOverlay.classList.toggle('show');
-});
+(function () {
 
-mobileOverlay.addEventListener('click', () => {
-  menuToggle.classList.remove('active');
-  mobileMenu.classList.remove('show');
-  mobileOverlay.classList.remove('show');
-});
+  const header = document.querySelector('.cm-header');
 
-document.querySelectorAll('#mobileMenu a').forEach(link => {
-  link.addEventListener('click', () => {
-    menuToggle.classList.remove('active');
-    mobileMenu.classList.remove('show');
-    mobileOverlay.classList.remove('show');
+  if (!header) return;
+
+
+  /* ===================================================
+     FUNCIONES MENÚ MOBILE
+  =================================================== */
+
+  const mobileButton =
+    header.querySelector('.cm-menu-mobile');
+
+  const mobileMenu =
+    header.querySelector('.cm-mobile-menu');
+
+  const mobileIcon =
+    mobileButton
+      ? mobileButton.querySelector('i')
+      : null;
+
+  const mobileSections =
+    header.querySelectorAll('.cm-mobile-section');
+
+
+  if (!mobileButton || !mobileMenu) return;
+
+
+  /* ===================================================
+     CERRAR MENÚ MOBILE
+  =================================================== */
+
+  function closeMobileMenu() {
+
+    header.classList.remove('cm-mobile-open');
+
+
+    mobileButton.setAttribute(
+      'aria-expanded',
+      'false'
+    );
+
+
+    mobileButton.setAttribute(
+      'aria-label',
+      'Abrir menú'
+    );
+
+
+    if (mobileIcon) {
+
+      mobileIcon.classList.remove('fa-xmark');
+
+      mobileIcon.classList.add('fa-bars');
+
+    }
+
+
+    mobileSections.forEach(function (section) {
+
+      section.classList.remove('cm-open');
+
+    });
+
+  }
+
+
+  /* ===================================================
+     ABRIR / CERRAR MENÚ
+  =================================================== */
+
+  mobileButton.addEventListener('click', function () {
+
+    const isOpen =
+      header.classList.contains('cm-mobile-open');
+
+
+    if (isOpen) {
+
+      closeMobileMenu();
+
+      return;
+
+    }
+
+
+    header.classList.add('cm-mobile-open');
+
+
+    mobileButton.setAttribute(
+      'aria-expanded',
+      'true'
+    );
+
+
+    mobileButton.setAttribute(
+      'aria-label',
+      'Cerrar menú'
+    );
+
+
+    if (mobileIcon) {
+
+      mobileIcon.classList.remove('fa-bars');
+
+      mobileIcon.classList.add('fa-xmark');
+
+    }
+
   });
-});
-const closeMobileMenu =
-document.getElementById('closeMobileMenu');
 
-closeMobileMenu.addEventListener('click', () => {
-  menuToggle.classList.remove('active');
-  mobileMenu.classList.remove('show');
-  mobileOverlay.classList.remove('show');
-});
+
+  /* ===================================================
+     SUBMENÚS MOBILE
+  =================================================== */
+
+  mobileSections.forEach(function (section) {
+
+    const title =
+      section.querySelector('.cm-mobile-title');
+
+
+    if (!title) return;
+
+
+    title.addEventListener('click', function () {
+
+      const isOpen =
+        section.classList.contains('cm-open');
+
+
+      mobileSections.forEach(function (otherSection) {
+
+        if (otherSection !== section) {
+
+          otherSection.classList.remove('cm-open');
+
+        }
+
+      });
+
+
+      section.classList.toggle(
+        'cm-open',
+        !isOpen
+      );
+
+    });
+
+  });
+
+
+  /* ===================================================
+     CERRAR AL TOCAR UN ENLACE
+  =================================================== */
+
+  const mobileLinks =
+    header.querySelectorAll('.cm-mobile-links a');
+
+
+  mobileLinks.forEach(function (link) {
+
+    link.addEventListener('click', function () {
+
+      closeMobileMenu();
+
+    });
+
+  });
+
+
+  /* ===================================================
+     ESC · CERRAR MENÚ
+  =================================================== */
+
+  document.addEventListener('keydown', function (event) {
+
+    if (event.key === 'Escape') {
+
+      closeMobileMenu();
+
+    }
+
+  });
+
+
+  /* ===================================================
+     HEADER · SCROLL
+  =================================================== */
+
+  let headerVisible = true;
+
+  let lastStableScrollY = window.scrollY;
+
+  const scrollThreshold = 18;
+
+  let ticking = false;
+
+
+  function updateHeader() {
+
+    const currentScrollY = window.scrollY;
+
+    const distance =
+      currentScrollY - lastStableScrollY;
+
+
+    /* ==========================================
+       CERRAR HAMBURGUESA AL HACER SCROLL
+    ========================================== */
+
+    if (header.classList.contains('cm-mobile-open')) {
+
+      closeMobileMenu();
+
+    }
+
+
+    /* ==========================================
+       PARTE SUPERIOR
+    ========================================== */
+
+    if (currentScrollY <= 10) {
+
+      if (!headerVisible) {
+
+        header.classList.remove(
+          'cm-header-hidden'
+        );
+
+        headerVisible = true;
+
+      }
+
+
+      lastStableScrollY = currentScrollY;
+
+      ticking = false;
+
+      return;
+
+    }
+
+
+    /* ==========================================
+       BAJANDO
+    ========================================== */
+
+    if (distance >= scrollThreshold) {
+
+      if (headerVisible) {
+
+        header.classList.add(
+          'cm-header-hidden'
+        );
+
+        headerVisible = false;
+
+      }
+
+
+      lastStableScrollY = currentScrollY;
+
+    }
+
+
+    /* ==========================================
+       SUBIENDO
+    ========================================== */
+
+    else if (distance <= -scrollThreshold) {
+
+      if (!headerVisible) {
+
+        header.classList.remove(
+          'cm-header-hidden'
+        );
+
+        headerVisible = true;
+
+      }
+
+
+      lastStableScrollY = currentScrollY;
+
+    }
+
+
+    ticking = false;
+
+  }
+
+
+  window.addEventListener(
+    'scroll',
+    function () {
+
+      if (!ticking) {
+
+        window.requestAnimationFrame(
+          updateHeader
+        );
+
+        ticking = true;
+
+      }
+
+    },
+    { passive: true }
+  );
+
+
+})();
+
 </script>
+
+
+
 
 
 
@@ -733,21 +1319,6 @@ emailInput.addEventListener('input', () => {
 
 
 
-
-
-<!-- SCRIPT PARA DESCARGAR GUIA GRATIS DEL MENU -->
-<script>
-  // FUNCIONES PARA ABRIR Y CERRAR POPUP
-  function openPopup() {
-    const overlay = document.getElementById("popupOverlay");
-    overlay.style.display = "flex";
-  }
-
-  function closePopup() {
-    const overlay = document.getElementById("popupOverlay");
-    overlay.style.display = "none";
-  }
-</script>
 
 
 
@@ -903,10 +1474,6 @@ fetch('posts.json')
 
 
 
-<!-- popup Descargar Guia -->
-<script src="https://codigomillonario.blog/assets/popup.js"></script>
-
-
 
 
 <div class="marquee-line"></div>
@@ -958,281 +1525,9 @@ fetch('posts.json')
 
 
 <!-- ESPACIO ARRIBA -->
- <div style="height: 300px;"></div>
+ <div style="height: 130px;"></div>
 
     
-
-
-
-<!-- =========================================
-     CABECERA EDITORIAL — CÓDIGO MILLONARIO
-========================================= -->
-
-<section class="cm-top-editorial">
-
-  <div class="cm-top-inner">
-
-    <!-- =========================
-         IDENTIDAD DEL MEDIO
-    ========================== -->
-
-    <div class="cm-top-identity">
-
-      <div class="cm-top-kicker">
-
-<h3 class="etiqueta-enfoque">
-  ENFOQUE
-  <span class="etiqueta-medio">MEDIO</span>
-</h3>
-
-      </div>
-
-      <p class="cm-top-description">
-        Análisis del dinero, las decisiones financieras y la construcción de patrimonio.
-      </p>
-
-    </div>
-
-
-    <!-- =========================
-         ACCIONES EDITORIALES
-    ========================== -->
-
-    <div class="cm-top-actions">
-
-      <!-- HERRAMIENTAS -->
-
-      <div class="cm-tools">
-
-        <button
-          type="button"
-          class="cm-tools-toggle"
-          data-cm-tools-toggle
-          aria-expanded="false"
-          aria-controls="cm-tools-menu"
-        >
-
-          <span>
-            Herramientas financieras
-          </span>
-
-          <span class="cm-tools-icon">
-            +
-          </span>
-
-        </button>
-
-
-        <!-- MENÚ DESPLEGABLE -->
-
-        <div
-          class="cm-tools-menu"
-          id="cm-tools-menu"
-        >
-
-          <a href="./herramientas/oraculo-financiero.html">
-            Oráculo Financiero
-          </a>
-
-          <a href="./herramientas/examen-financiero.html">
-            Examen Financiero
-          </a>
-
-          <a href="./herramientas/interes-compuesto.html">
-            Calculadora de Interés Compuesto
-          </a>
-
-          <a href="./herramientas/presupuesto-financiero.html">
-            Planificador de Presupuesto
-          </a>
-
-          <a href="./herramientas/simulador-de-invercion.html">
-            Simulador de Inversión
-          </a>
-
-          <a href="./herramientas/libertad-financiera.html">
-            Calculadora de Libertad Financiera
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- REDES -->
-
-      <div class="cm-top-social">
-
-        <span class="cm-top-social-label">
-          Redes
-        </span>
-
-        <div class="cm-top-socials">
-
-          <!-- Instagram -->
-
-          <a
-            href="https://www.instagram.com/codigomillonarioblog?igsh=MWE2Z3pnenJ2dzg3Yw=="
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-
-
-          <!-- X -->
-
-          <a
-            href="https://x.com/CMillonarioblog"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X"
-          >
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 1227"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-
-              <path d="M714.163 519.284L1160.89 0H1052.5L667.137 447.561L359.244 0H0L468.492 681.821L0 1226.37H108.39L515.91 752.69L840.756 1226.37H1200L714.137 519.284H714.163Z"/>
-
-            </svg>
-
-          </a>
-
-
-          <!-- YouTube -->
-
-          <a
-            href="https://youtube.com/@codigomillonarioblog?si=VMxSwkJJdTSdsFag"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-          >
-            <i class="fab fa-youtube"></i>
-          </a>
-
-
-          <!-- Facebook -->
-
-          <a
-            href="https://www.facebook.com/share/1FVSBquigd/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
-            <i class="fab fa-facebook-f"></i>
-          </a>
-
-
-          <!-- TikTok -->
-
-          <a
-            href="https://www.tiktok.com/@codigomillonarioblog?_r=1&_t=ZN-93rmqJzv5xG"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TikTok"
-          >
-            <i class="fab fa-tiktok"></i>
-          </a>
-
-
-          <!-- Pinterest -->
-
-          <a
-            href="https://pin.it/3tqNXYoAA"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Pinterest"
-          >
-            <i class="fab fa-pinterest-p"></i>
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================
-       SEPARADOR EDITORIAL
-  ========================== -->
-
-  <div class="cm-top-divider"></div>
-
-</section>
-
-<style>
-.etiqueta-enfoque{display:inline-flex;align-items:center;gap:6px;margin:0;padding:0;border:0;background:none;color:#111;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:9px;line-height:1;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
-.etiqueta-medio{display:inline-flex;align-items:center;padding:3px 5px 2px;background:#111;color:#fff;font-size:7px;line-height:1;font-weight:700;letter-spacing:1.1px;text-transform:uppercase}
-.cm-top-editorial{width:calc(100% - 100px);max-width:1080px;margin:0 auto 38px;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.cm-top-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
-.cm-top-identity{min-width:0}
-.cm-top-kicker{display:flex;align-items:center;gap:7px;margin-bottom:7px}
-.cm-top-label{color:#111;font-size:9px;line-height:1;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-.cm-top-badge{display:inline-flex;align-items:center;padding:3px 5px 2px;background:#111;color:#fff;font-size:7px;line-height:1;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
-.cm-top-description{max-width:600px;margin:0;color:#555;font-size:12px;line-height:1.55;font-weight:400}
-.cm-top-actions{display:flex;align-items:center;justify-content:flex-end;gap:25px;flex-shrink:0}
-.cm-tools{position:relative}
-.cm-tools-toggle{display:flex;align-items:center;gap:7px;padding:0;border:0;background:none;color:#222;font-family:inherit;font-size:10px;line-height:1.2;font-weight:600;letter-spacing:.1px;white-space:nowrap;cursor:pointer}
-.cm-tools-icon{display:inline-block;color:#777;font-size:13px;line-height:10px;font-weight:400;transition:transform .18s ease,color .18s ease}
-.cm-tools.open .cm-tools-icon{transform:rotate(45deg);color:#111}
-.cm-tools-menu{position:absolute;top:23px;right:0;z-index:1000;width:235px;padding:5px 0;background:#fff;border:1px solid #e8e8e8;box-shadow:0 8px 22px rgba(0,0,0,.06);opacity:0;visibility:hidden;transform:translateY(-3px);transition:opacity .16s ease,visibility .16s ease,transform .16s ease}
-.cm-tools.open .cm-tools-menu{opacity:1;visibility:visible;transform:translateY(0)}
-.cm-tools-menu a{display:block;padding:8px 12px;color:#333;font-size:10px;line-height:1.35;font-weight:400;text-decoration:none;border-bottom:1px solid #f3f3f3;transition:background .15s ease,color .15s ease}
-.cm-tools-menu a:last-child{border-bottom:0}
-.cm-tools-menu a:hover{background:#fafafa;color:#111}
-.cm-top-social{display:flex;align-items:center;gap:9px}
-.cm-top-social-label{color:#999;font-size:8px;line-height:1;font-weight:600;letter-spacing:1.1px;text-transform:uppercase}
-.cm-top-socials{display:flex;align-items:center;gap:10px}
-.cm-top-socials a{display:flex;align-items:center;justify-content:center;width:14px;height:14px;color:#777;text-decoration:none;transition:color .16s ease,transform .16s ease}
-.cm-top-socials a:hover{color:#111;transform:translateY(-1px)}
-.cm-top-socials i{font-size:11px}
-.cm-top-socials svg{width:10px;height:10px}
-.cm-top-divider{width:100%;height:1px;margin-top:20px;background:#e7e7e7}
-@media(max-width:900px){
-.cm-top-editorial{width:calc(100% - 60px)}
-.cm-top-inner{display:block}
-.cm-top-actions{justify-content:flex-start;margin-top:17px}
-}
-@media(max-width:600px){
-.cm-top-editorial{width:calc(100% - 36px);margin-bottom:32px}
-.cm-top-description{max-width:100%;font-size:11.5px;line-height:1.55}
-.cm-top-actions{gap:18px;margin-top:15px}
-.cm-top-social-label{display:none}
-.cm-top-socials{gap:10px}
-.cm-tools-menu{left:0;right:auto;width:225px}
-.cm-top-divider{margin-top:17px}
-}
-</style>
-
-<script>
-(function(){
-const root=document.querySelector(".cm-tools"),toggle=document.querySelector("[data-cm-tools-toggle]"),menu=document.getElementById("cm-tools-menu");
-if(!root||!toggle||!menu)return;
-toggle.addEventListener("click",function(event){
-event.stopPropagation();
-const isOpen=root.classList.toggle("open");
-toggle.setAttribute("aria-expanded",isOpen?"true":"false");
-});
-document.addEventListener("click",function(event){
-if(!root.contains(event.target)){
-root.classList.remove("open");
-toggle.setAttribute("aria-expanded","false");
-}
-});
-menu.addEventListener("click",function(event){event.stopPropagation()});
-})();
-</script>
-
-
-
 
 
 
@@ -1257,6 +1552,29 @@ menu.addEventListener("click",function(event){event.stopPropagation()});
 <section class="forbes-home">
 
   <div class="forbes-grid">
+
+
+    <!-- ========================================= -->
+    <!-- ENFOQUE DEL MEDIO -->
+    <!-- ========================================= -->
+
+    <div class="forbes-intro">
+
+      <h3 class="etiqueta-enfoque">
+        ENFOQUE
+        <span class="etiqueta-medio">MEDIO</span>
+      </h3>
+
+      <p class="forbes-intro-description">
+        Análisis del dinero, las decisiones financieras y la construcción de patrimonio.
+      </p>
+
+    </div>
+
+    <!-- LÍNEA DIRECTAMENTE DEBAJO DEL ENFOQUE -->
+
+    <div class="forbes-top-line"></div>
+
 
 
     <!-- ========================================= -->
@@ -1307,7 +1625,7 @@ menu.addEventListener("click",function(event){event.stopPropagation()});
             </span>
 
             <h3>
-             Errores que hacen fracasar nuevos negocios y cómo evitarlos
+              Errores que hacen fracasar nuevos negocios y cómo evitarlos
             </h3>
 
           </div>
@@ -1457,7 +1775,7 @@ menu.addEventListener("click",function(event){event.stopPropagation()});
               </span>
 
               <h3>
-               7 cualidades que tienen y usan los millonarios
+                7 cualidades que tienen y usan los millonarios
               </h3>
 
             </div>
@@ -1499,7 +1817,7 @@ menu.addEventListener("click",function(event){event.stopPropagation()});
             </span>
 
             <h3>
-            30 reglas sobre el dinero que pueden cambiar tu forma de verlo
+              30 reglas sobre el dinero que pueden cambiar tu forma de verlo
             </h3>
 
           </div>
@@ -1571,7 +1889,6 @@ menu.addEventListener("click",function(event){event.stopPropagation()});
 <!-- ========================================= -->
 
 <style>
-
 /* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#fff;color:#111;font-family:'Inter',sans-serif}
@@ -1580,20 +1897,89 @@ img{width:100%;display:block}
 
 
 /* ===== WRAPPER ===== */
-.forbes-home{width:100%;padding:40px 40px 80px}
+.forbes-home{
+  width:100%;
+  padding:40px 40px 80px
+}
 
 .forbes-grid{
   max-width:1080px;
   margin:0 auto;
   display:grid;
   grid-template-columns:210px 540px 230px;
-  gap:20px;
+  column-gap:20px;
+  row-gap:0;
   align-items:start;
+  position:relative;
+}
+
+
+/* ===== ENFOQUE DEL MEDIO ===== */
+
+.forbes-intro{
+  grid-column:1 / -1;
+  width:100%;
+  margin:0;
+  padding:0 0 12px;
+}
+
+.etiqueta-enfoque{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin:0 0 7px;
+  padding:0;
+  border:0;
+  background:none;
+  color:#111;
+  font-family:'Inter',sans-serif;
+  font-size:9px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.etiqueta-medio{
+  display:inline-flex;
+  align-items:center;
+  padding:3px 5px 2px;
+  background:#111;
+  color:#fff;
+  font-size:7px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+}
+
+.forbes-intro-description{
+  max-width:600px;
+  margin:0;
+  padding:0;
+  color:#555;
+  font-size:12px;
+  line-height:1.55;
+  font-weight:400;
+}
+
+
+/* ===== LÍNEA SUPERIOR CONTINUA ===== */
+
+.forbes-top-line{
+  grid-column:1 / -1;
+  width:calc(100% + 60px);
+  height:1px;
+  background:#ececec;
+  margin:0 0 20px;
+  padding:0;
 }
 
 
 /* ===== LEFT ===== */
-.editorial-column{padding-top:10px}
+.editorial-column{
+  padding-top:10px
+}
 
 .editorial-label{
   font-size:11px;
@@ -1621,12 +2007,20 @@ img{width:100%;display:block}
   transition:opacity .25s ease;
 }
 
-.editorial-points a:last-child{border-bottom:none}
-.editorial-points a:hover{opacity:.6}
+.editorial-points a:last-child{
+  border-bottom:none
+}
+
+.editorial-points a:hover{
+  opacity:.6
+}
 
 
 /* ===== CENTER ===== */
-.hero-main{width:540px;max-width:540px}
+.hero-main{
+  width:540px;
+  max-width:540px
+}
 
 .hero-image{
   width:540px;
@@ -1686,7 +2080,9 @@ img{width:100%;display:block}
   padding-top:18px;
 }
 
-.hero-bottom-cards .side-article{flex:1}
+.hero-bottom-cards .side-article{
+  flex:1
+}
 
 
 /* ===== RIGHT SIDEBAR ===== */
@@ -1724,7 +2120,9 @@ img{width:100%;display:block}
   transition:opacity .25s ease;
 }
 
-.side-article:hover h3{opacity:.6}
+.side-article:hover h3{
+  opacity:.6
+}
 
 
 /* ===== PC: LO MÁS LEÍDO ===== */
@@ -1736,7 +2134,9 @@ img{width:100%;display:block}
     margin-right:-60px;
   }
 
-  .sidebar-news .side-article{padding:20px 0}
+  .sidebar-news .side-article{
+    padding:20px 0
+  }
 
   .sidebar-news .side-article img{
     width:272px;
@@ -1746,8 +2146,13 @@ img{width:100%;display:block}
     margin-bottom:12px;
   }
 
-  .sidebar-news .side-content{width:272px}
-  .sidebar-news .side-content span{font-size:10px}
+  .sidebar-news .side-content{
+    width:272px
+  }
+
+  .sidebar-news .side-content span{
+    font-size:10px
+  }
 
   .sidebar-news .side-content h3{
     font-size:17px;
@@ -1756,10 +2161,6 @@ img{width:100%;display:block}
 
 
   /* ===== UNA SOLA LINEA PARA LOS 4 ARTICULOS ===== */
-
-  .forbes-grid{
-    position:relative;
-  }
 
   .editorial-column .side-article,
   .hero-bottom-cards .side-article{
@@ -1770,12 +2171,16 @@ img{width:100%;display:block}
     border-top:1px solid #ececec;
   }
 
+
+  /* ===== LÍNEA INFERIOR ===== */
+
   .forbes-grid::after{
     content:"";
     position:absolute;
     left:0;
-    width:770px;
+    right:-10px;
     bottom:0;
+    width:auto;
     height:1px;
     background:#ececec;
   }
@@ -1788,11 +2193,13 @@ img{width:100%;display:block}
 
   .forbes-grid{
     grid-template-columns:1fr;
-    gap:60px;
+    row-gap:0;
     max-width:800px;
   }
 
-  .editorial-column{display:none}
+  .editorial-column{
+    display:none
+  }
 
   .hero-main{
     width:100%;
@@ -1811,20 +2218,1303 @@ img{width:100%;display:block}
     padding-left:0;
   }
 
-  .hero-bottom-cards{flex-direction:column}
+  .hero-bottom-cards{
+    flex-direction:column
+  }
 }
 
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
 
-  .forbes-home{padding:20px 20px 60px}
-  .hero-main h1{font-size:1.9rem}
-  .hero-content p{font-size:17px}
-  .side-content h3{font-size:22px}
+  .forbes-home{
+    padding:20px 20px 60px;
+  }
+
+  /* ENFOQUE PEGADO A LA LÍNEA */
+
+  .forbes-intro{
+    width:100%;
+    padding-bottom:8px;
+  }
+
+  .forbes-intro-description{
+    max-width:100%;
+    font-size:11.5px;
+    line-height:1.45;
+  }
+
+  /* LÍNEA JUSTO ENCIMA DE LA IMAGEN */
+
+  .forbes-top-line{
+    width:100%;
+    height:1px;
+    margin:0 0 14px;
+    background:#ececec;
+  }
+
+  .hero-main h1{
+    font-size:1.9rem
+  }
+
+  .hero-content p{
+    font-size:17px
+  }
+
+  .side-content h3{
+    font-size:22px
+  }
 }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+  /* =====================================================
+     RESET
+  ===================================================== */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #ffffff;
+    color: #111111;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+
+  /* =====================================================
+     CONTENEDOR GENERAL
+  ===================================================== */
+
+  .cm-archivo {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 65px 40px 100px;
+  }
+
+
+  /* =====================================================
+     CABECERA EDITORIAL
+  ===================================================== */
+
+  .cm-archivo-heading {
+    border-top: 1px solid #111111;
+    border-bottom: 1px solid #111111;
+    padding: 28px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+  }
+
+  .cm-archivo-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+
+  .cm-archivo-title {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: .98;
+    font-weight: 800;
+    letter-spacing: -2.5px;
+  }
+
+  .cm-archivo-intro {
+    max-width: 390px;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+
+  /* =====================================================
+     BÚSQUEDA
+  ===================================================== */
+
+  .cm-archivo-search {
+    margin: 30px 0 20px;
+    display: flex;
+    border-bottom: 1px solid #111111;
+    max-width: 620px;
+  }
+
+  .cm-archivo-search input {
+    width: 100%;
+    height: 48px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #111111;
+  }
+
+  .cm-archivo-search input::placeholder {
+    color: #777777;
+  }
+
+  .cm-archivo-search-icon {
+    width: 45px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+
+  /* =====================================================
+     CATEGORÍAS
+  ===================================================== */
+
+  .cm-archivo-categories {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    flex-wrap: wrap;
+    padding: 14px 0 42px;
+    border-bottom: 1px solid #d7d7d7;
+  }
+
+  .cm-archivo-category {
+    position: relative;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #555555;
+    padding-bottom: 6px;
+    transition: color .2s ease;
+  }
+
+  .cm-archivo-category:hover {
+    color: #111111;
+  }
+
+  .cm-archivo-category.active {
+    color: #111111;
+  }
+
+  .cm-archivo-category.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #111111;
+  }
+
+
+  /* =====================================================
+     CABECERA DESTACADOS
+  ===================================================== */
+
+  .cm-featured-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 42px 0 18px;
+  }
+
+  .cm-section-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+  }
+
+  .cm-section-count {
+    color: #777777;
+    font-size: 10px;
+  }
+
+
+  /* =====================================================
+     DESTACADOS
+  ===================================================== */
+
+  .cm-featured {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, .85fr);
+    gap: 1px;
+    background: #111111;
+    border: 1px solid #111111;
+    align-items: start;
+  }
+
+
+  /* =====================================================
+     DESTACADO PRINCIPAL · 16:9
+  ===================================================== */
+
+  .cm-featured-main {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #eeeeee;
+  }
+
+  .cm-featured-main > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .cm-featured-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s ease;
+  }
+
+  .cm-featured-main:hover img {
+    transform: scale(1.025);
+  }
+
+  .cm-featured-main::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,.82) 0%,
+      rgba(0,0,0,.28) 48%,
+      rgba(0,0,0,0) 75%
+    );
+    pointer-events: none;
+  }
+
+  .cm-featured-main-content {
+    position: absolute;
+    z-index: 2;
+    left: 28px;
+    right: 28px;
+    bottom: 27px;
+    color: #ffffff;
+  }
+
+  .cm-featured-meta {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+  }
+
+  .cm-featured-main h2 {
+    max-width: 620px;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(28px, 3.4vw, 43px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -1.1px;
+  }
+
+  .cm-featured-main p {
+    max-width: 570px;
+    margin-top: 12px;
+    color: #e3e3e3;
+    font-size: 11.5px;
+    line-height: 1.55;
+  }
+
+
+  /* =====================================================
+     DESTACADOS SECUNDARIOS
+     CADA IMAGEN ES 16:9
+  ===================================================== */
+
+  .cm-featured-side {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: #111111;
+  }
+
+  .cm-featured-small {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f1f1ef;
+  }
+
+  .cm-featured-small > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .cm-featured-small img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s ease;
+  }
+
+  .cm-featured-small:hover img {
+    transform: scale(1.025);
+  }
+
+  .cm-featured-small::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,.82),
+      rgba(0,0,0,.08) 70%
+    );
+    pointer-events: none;
+  }
+
+  .cm-featured-small-content {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    color: #ffffff;
+  }
+
+  .cm-featured-small .cm-featured-meta {
+    margin-bottom: 7px;
+    font-size: 8px;
+  }
+
+  .cm-featured-small h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -.3px;
+  }
+
+
+  /* =====================================================
+     ARCHIVO
+  ===================================================== */
+
+  .cm-archive-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 65px 0 22px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #111111;
+  }
+
+  .cm-archive-header h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+
+  .cm-archive-total {
+    font-size: 10px;
+    font-weight: 600;
+    color: #666666;
+  }
+
+
+  /* =====================================================
+     GRID DE ARTÍCULOS
+  ===================================================== */
+
+  .cm-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+    row-gap: 45px;
+  }
+
+
+  /* =====================================================
+     ARTÍCULO
+  ===================================================== */
+
+  .cm-article {
+    min-width: 0;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .cm-article-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #eeeeee;
+    margin-bottom: 17px;
+  }
+
+  .cm-article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+  }
+
+  .cm-article:hover .cm-article-image img {
+    transform: scale(1.025);
+  }
+
+  .cm-article-category {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 8px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #555555;
+  }
+
+  .cm-article h3 {
+    max-width: 680px;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -.55px;
+  }
+
+  .cm-article h3 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  .cm-article-description {
+    max-width: 650px;
+    margin-top: 10px;
+    color: #666666;
+    font-size: 11.5px;
+    line-height: 1.6;
+  }
+
+  .cm-article-date {
+    margin-top: 13px;
+    color: #888888;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+
+  /* =====================================================
+     PAGINACIÓN
+  ===================================================== */
+
+  .cm-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #111111;
+  }
+
+  .cm-pagination a {
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d0d0d0;
+    font-size: 10px;
+    font-weight: 700;
+    transition: all .2s ease;
+  }
+
+  .cm-pagination a:hover,
+  .cm-pagination a.active {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+  }
+
+
+  /* =====================================================
+     RESPONSIVE TABLET
+  ===================================================== */
+
+  @media (max-width: 950px) {
+
+    .cm-archivo {
+      padding: 50px 25px 80px;
+    }
+
+    .cm-archivo-heading {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .cm-featured {
+      grid-template-columns: 1fr;
+    }
+
+    .cm-featured-side {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .cm-featured-small {
+      aspect-ratio: 16 / 9;
+    }
+
+    .cm-articles-grid {
+      column-gap: 25px;
+    }
+
+  }
+
+
+  /* =====================================================
+     RESPONSIVE MÓVIL
+  ===================================================== */
+
+  @media (max-width: 650px) {
+
+    .cm-archivo {
+      padding: 40px 18px 70px;
+    }
+
+    .cm-archivo-heading {
+      padding: 22px 0 24px;
+    }
+
+    .cm-archivo-kicker {
+      font-size: 9px;
+      letter-spacing: 1.6px;
+    }
+
+    .cm-archivo-title {
+      font-size: 43px;
+      letter-spacing: -1.4px;
+    }
+
+    .cm-archivo-intro {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+
+    /* CATEGORÍAS */
+
+    .cm-archivo-categories {
+      gap: 17px 20px;
+      padding-bottom: 30px;
+    }
+
+    .cm-archivo-category {
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+
+    /* DESTACADOS */
+
+    .cm-featured-heading {
+      margin-top: 35px;
+    }
+
+    .cm-featured {
+      display: block;
+    }
+
+    .cm-featured-main {
+      aspect-ratio: 16 / 9;
+    }
+
+    .cm-featured-main-content {
+      left: 18px;
+      right: 18px;
+      bottom: 19px;
+    }
+
+    .cm-featured-main h2 {
+      font-size: 28px;
+      letter-spacing: -.6px;
+    }
+
+    .cm-featured-main p {
+      display: none;
+    }
+
+    .cm-featured-side {
+      display: block;
+    }
+
+    .cm-featured-small {
+      aspect-ratio: 16 / 9;
+      border-top: 1px solid #111111;
+    }
+
+    .cm-featured-small-content {
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+    }
+
+    .cm-featured-small h3 {
+      font-size: 22px;
+      letter-spacing: -.35px;
+    }
+
+
+    /* ARCHIVO */
+
+    .cm-archive-header {
+      margin-top: 55px;
+    }
+
+    .cm-archive-header h2 {
+      font-size: 30px;
+    }
+
+    .cm-archive-total {
+      font-size: 9px;
+    }
+
+
+    /* ARTÍCULOS */
+
+    .cm-articles-grid {
+      display: block;
+    }
+
+    .cm-article {
+      margin-bottom: 38px;
+      padding-bottom: 38px;
+    }
+
+    .cm-article-image {
+      margin-bottom: 16px;
+    }
+
+    .cm-article h3 {
+      font-size: 27px;
+      line-height: 1.12;
+      letter-spacing: -.5px;
+    }
+
+    .cm-article-description {
+      font-size: 12px;
+    }
+
+    .cm-article-date {
+      margin-top: 13px;
+    }
+
+
+    /* PAGINACIÓN */
+
+    .cm-pagination {
+      margin-top: 45px;
+    }
+
+  }
+
+
+  /* =====================================================
+     REDUCCIÓN DE MOVIMIENTO
+  ===================================================== */
+
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      transition: none !important;
+    }
+
+  }
 
 </style>
+
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       ARCHIVO EDITORIAL · CÓDIGO MILLONARIO
+  ===================================================== -->
+
+  <main class="cm-archivo">
+
+
+    <!-- ===================================================
+         CABECERA
+    =================================================== -->
+
+    <section class="cm-archivo-heading">
+
+
+      <div>
+
+        <div class="cm-archivo-kicker">
+          Código Millonario
+        </div>
+
+        <h1 class="cm-archivo-title">
+          Archivo Editorial
+        </h1>
+
+      </div>
+
+      <p class="cm-archivo-intro">
+        Artículos, análisis y contexto sobre riqueza, negocios,
+        educación financiera y las ideas detrás de la construcción
+        de patrimonio.
+      </p>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         BUSCADOR
+    =================================================== -->
+
+    <div class="cm-archivo-search">
+
+      <input
+        type="search"
+        placeholder="Buscar artículos..."
+        aria-label="Buscar artículos"
+      >
+
+      <div class="cm-archivo-search-icon">
+        /
+      </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         CATEGORÍAS
+    =================================================== -->
+
+    <nav class="cm-archivo-categories" aria-label="Categorías">
+
+      <a href="#" class="cm-archivo-category active">
+        Todos
+      </a>
+
+      <a href="#" class="cm-archivo-category">
+        Educación Financiera
+      </a>
+
+      <a href="#" class="cm-archivo-category">
+        Mentalidad
+      </a>
+
+      <a href="#" class="cm-archivo-category">
+        Negocios
+      </a>
+
+      <a href="#" class="cm-archivo-category">
+        Mundo Millonario
+      </a>
+
+      <a href="#" class="cm-archivo-category">
+        Herramientas
+      </a>
+
+      <a href="#" class="cm-archivo-category">
+        Opiniones
+      </a>
+
+    </nav>
+
+
+
+    <!-- ===================================================
+         DESTACADOS
+    =================================================== -->
+
+    <section>
+
+      <div class="cm-featured-heading">
+
+        <span class="cm-section-label">
+          Selección editorial
+        </span>
+
+        <span class="cm-section-count">
+          Artículos destacados
+        </span>
+
+      </div>
+
+
+      <div class="cm-featured">
+
+
+        <!-- ARTÍCULO PRINCIPAL -->
+
+        <article class="cm-featured-main">
+
+          <a href="#">
+
+            <img
+              src="/assets/img/articulo-destacado.jpg"
+              alt="Negocios y riqueza"
+            >
+
+            <div class="cm-featured-main-content">
+
+              <div class="cm-featured-meta">
+                Negocios · Análisis
+              </div>
+
+              <h2>
+                Cómo los millonarios empiezan un negocio realmente rentable
+              </h2>
+
+              <p>
+                Modelos de negocio, activos y decisiones que ayudan a
+                entender cómo se construyen empresas con capacidad de
+                generar valor a largo plazo.
+              </p>
+
+            </div>
+
+          </a>
+
+        </article>
+
+
+
+        <!-- ARTÍCULOS SECUNDARIOS -->
+
+        <div class="cm-featured-side">
+
+
+          <!-- DESTACADO 2 -->
+
+          <article class="cm-featured-small">
+
+            <a href="#">
+
+              <img
+                src="/assets/img/articulo-destacado-2.jpg"
+                alt="Educación financiera"
+              >
+
+              <div class="cm-featured-small-content">
+
+                <div class="cm-featured-meta">
+                  Educación Financiera
+                </div>
+
+                <h3>
+                  30 reglas del dinero que conviene entender antes de ganar más
+                </h3>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+
+          <!-- DESTACADO 3 -->
+
+          <article class="cm-featured-small">
+
+            <a href="#">
+
+              <img
+                src="/assets/img/articulo-destacado-3.jpg"
+                alt="Mundo Millonario"
+              >
+
+              <div class="cm-featured-small-content">
+
+                <div class="cm-featured-meta">
+                  Mundo Millonario
+                </div>
+
+                <h3>
+                  Negocios que los millonarios usan para ganar dinero
+                </h3>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         TODOS LOS ARTÍCULOS
+    =================================================== -->
+
+    <section>
+
+      <div class="cm-archive-header">
+
+        <h2>
+          Todos los artículos
+        </h2>
+
+        <span class="cm-archive-total">
+          124 artículos
+        </span>
+
+      </div>
+
+
+
+      <div class="cm-articles-grid">
+
+
+        <!-- =================================================
+             ARTÍCULO 01
+        ================================================= -->
+
+        <article class="cm-article">
+
+          <a href="#">
+
+            <div class="cm-article-image">
+
+              <img
+                src="/assets/img/articulo-01.jpg"
+                alt="Negocios millonarios"
+                loading="lazy"
+              >
+
+            </div>
+
+            <span class="cm-article-category">
+              Negocios · Análisis
+            </span>
+
+            <h3>
+              Cómo los millonarios empiezan un negocio realmente rentable
+            </h3>
+
+            <p class="cm-article-description">
+              Una mirada a los modelos, activos y decisiones que pueden
+              convertir una idea en un negocio con capacidad de crecer.
+            </p>
+
+            <div class="cm-article-date">
+              28 septiembre 2026
+            </div>
+
+          </a>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARTÍCULO 02
+        ================================================= -->
+
+        <article class="cm-article">
+
+          <a href="#">
+
+            <div class="cm-article-image">
+
+              <img
+                src="/assets/img/articulo-02.jpg"
+                alt="Reglas del dinero"
+                loading="lazy"
+              >
+
+            </div>
+
+            <span class="cm-article-category">
+              Educación Financiera
+            </span>
+
+            <h3>
+              30 reglas del dinero que conviene entender antes de ganar más
+            </h3>
+
+            <p class="cm-article-description">
+              Principios relacionados con la administración del dinero,
+              el ahorro, el consumo y la construcción de patrimonio.
+            </p>
+
+            <div class="cm-article-date">
+              26 septiembre 2026
+            </div>
+
+          </a>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARTÍCULO 03
+        ================================================= -->
+
+        <article class="cm-article">
+
+          <a href="#">
+
+            <div class="cm-article-image">
+
+              <img
+                src="/assets/img/articulo-03.jpg"
+                alt="Millonarios y negocios"
+                loading="lazy"
+              >
+
+            </div>
+
+            <span class="cm-article-category">
+              Mundo Millonario
+            </span>
+
+            <h3>
+              Negocios que los millonarios usan para ganar dinero
+            </h3>
+
+            <p class="cm-article-description">
+              Modelos empresariales, propiedad intelectual y productos
+              que muestran diferentes caminos para construir valor.
+            </p>
+
+            <div class="cm-article-date">
+              24 septiembre 2026
+            </div>
+
+          </a>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARTÍCULO 04
+        ================================================= -->
+
+        <article class="cm-article">
+
+          <a href="#">
+
+            <div class="cm-article-image">
+
+              <img
+                src="/assets/img/articulo-04.jpg"
+                alt="Riqueza y dinero"
+                loading="lazy"
+              >
+
+            </div>
+
+            <span class="cm-article-category">
+              Mentalidad
+            </span>
+
+            <h3>
+              48 frases reales que muestran cómo piensan algunas personas ricas
+            </h3>
+
+            <p class="cm-article-description">
+              Ideas y declaraciones documentadas que permiten observar
+              diferentes formas de entender el dinero, el trabajo y el patrimonio.
+            </p>
+
+            <div class="cm-article-date">
+              22 septiembre 2026
+            </div>
+
+          </a>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARTÍCULO 05
+        ================================================= -->
+
+        <article class="cm-article">
+
+          <a href="#">
+
+            <div class="cm-article-image">
+
+              <img
+                src="/assets/img/articulo-05.jpg"
+                alt="Rico y millonario"
+                loading="lazy"
+              >
+
+            </div>
+
+            <span class="cm-article-category">
+              Educación Financiera
+            </span>
+
+            <h3>
+              12 diferencias entre ser rico y ser millonario
+            </h3>
+
+            <p class="cm-article-description">
+              Dos conceptos que suelen utilizarse como sinónimos, pero
+              que pueden representar realidades financieras diferentes.
+            </p>
+
+            <div class="cm-article-date">
+              20 septiembre 2026
+            </div>
+
+          </a>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARTÍCULO 06
+        ================================================= -->
+
+        <article class="cm-article">
+
+          <a href="#">
+
+            <div class="cm-article-image">
+
+              <img
+                src="/assets/img/articulo-06.jpg"
+                alt="Ideas de negocios"
+                loading="lazy"
+              >
+
+            </div>
+
+            <span class="cm-article-category">
+              Negocios
+            </span>
+
+            <h3>
+              22 ideas de negocios millonarios para 2027
+            </h3>
+
+            <p class="cm-article-description">
+              Diferentes modelos de negocio y sectores que pueden servir
+              como punto de partida para analizar oportunidades empresariales.
+            </p>
+
+            <div class="cm-article-date">
+              18 septiembre 2026
+            </div>
+
+          </a>
+
+        </article>
+
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           PAGINACIÓN
+      ================================================= -->
+
+      <nav class="cm-pagination" aria-label="Paginación">
+
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">→</a>
+
+      </nav>
+
+
+    </section>
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2207,11 +3897,6 @@ img{width:100%;display:block}
 
 
 
-
-
-
-<!-- ESPACIO ARRIBA -->
- <div style="height: 100px;"></div>
 
 
 
@@ -4154,7 +5839,7 @@ con el dinero y tu futuro financiero.
         <!-- Noticia 3 -->
     <a href="./blog/negocios/negocios-millonarios-ocultos.html" class="news-item">
       <div class="news-thumb">
-        <img src="./assets/png/negocios-que-hacen-ricos-a-millonarios.jpg" alt="">
+        <img src="./assets/png/negocios-que-hacen-ricos-a-millonarios.webp" alt="">
       </div>
       <div class="news-text">
         <h3>¿En qué negocios invierten los ricos para construir y conservar su patrimonio?</h3>
