@@ -1,1392 +1,697 @@
-/* =====================================================
-   CÓDIGO MILLONARIO · MENÚ CENTRALIZADO
-   Archivo: /assets/menu.js
-===================================================== */
+/* =========================================================
+   CÓDIGO MILLONARIO — MENÚ DE SECCIONES
+   HTML + CSS + JS desde un único archivo
+========================================================= */
 
 (function () {
 
-  'use strict';
+  /* =========================================================
+     RUTA ABSOLUTA DEL LOGO
+     Funciona desde cualquier profundidad del sitio
+  ========================================================= */
 
-  /* =====================================================
-     HTML DEL MENÚ
-  ===================================================== */
+  const logoURL =
+    window.location.origin +
+    "/assets/img/codigo-millonario-logo.png";
+
+
+  /* =========================================================
+     HTML
+  ========================================================= */
 
   const menuHTML = `
-<header class="cm-header">
 
-  <div class="cm-header-inner">
-
-    <!-- LOGO -->
-
-    <a href="/" class="cm-logo">
-      <span class="cm-logo-title">Código Millonario</span>
-    </a>
-
-    <!-- NAVEGACIÓN -->
-
-    <nav class="cm-nav">
-
-      <div class="cm-nav-dropdown">
-
-        <button class="cm-nav-link cm-dropdown-btn">
-          FINANZAS
-        </button>
-
-        <div class="cm-dropdown-menu">
-
-          <a href="/educacion-financiera.html">Dinero</a>
-          <a href="/ahorro.html">Ahorro</a>
-          <a href="/psicologia-del-dinero.html">
-            Psicología del Dinero
-          </a>
-          <a href="/inversiones.html">Inversiones</a>
-          <a href="/Herramientas.html">Herramientas</a>
-
-        </div>
-
-      </div>
-
-      <div class="cm-nav-divider"></div>
-
-      <div class="cm-nav-dropdown">
-
-        <button class="cm-nav-link cm-dropdown-btn">
-          NEGOCIOS
-        </button>
-
-        <div class="cm-dropdown-menu">
-
-          <a href="/negocios.html">Negocios</a>
-          <a href="/modelos-de-negocio.html">
-            Modelos de Negocio
-          </a>
-          <a href="/emprendimientos.html">
-            Emprendimientos
-          </a>
-          <a href="/productos.html">Productos</a>
-
-        </div>
-
-      </div>
-
-      <div class="cm-nav-divider"></div>
-
-      <div class="cm-nav-dropdown">
-
-        <button class="cm-nav-link cm-dropdown-btn">
-          MUNDO MILLONARIO
-        </button>
-
-        <div class="cm-dropdown-menu">
-
-          <a href="/mundo-millonario.html">
-            Mundo Millonario
-          </a>
-
-          <a href="/millonarios.html">
-            Millonarios
-          </a>
-
-          <a href="/grandes-fortunas.html">
-            Grandes Fortunas
-          </a>
-
-          <a href="/biografias-de-millonarios.html">
-            Biografías de Millonarios
-          </a>
-
-        </div>
-
-      </div>
-
-    </nav>
-
-    <!-- DERECHA -->
-
-    <div class="cm-header-right">
+    <!-- BOTÓN DEL MENÚ -->
+    <div class="cm-secciones-trigger">
 
       <button
-        class="cm-search"
-        aria-label="Buscar"
-        type="button">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-      </button>
-
-      <button
-        class="cm-menu-mobile"
+        type="button"
+        class="cm-secciones-btn"
+        id="cmOpenMenu"
         aria-label="Abrir menú"
-        aria-expanded="false"
-        type="button">
+        aria-expanded="false">
 
-        <i class="fa-solid fa-bars"></i>
+        <span class="cm-secciones-icon">
+
+          <span class="cm-secciones-lines"></span>
+
+          <span class="cm-secciones-glass"></span>
+
+        </span>
 
       </button>
 
     </div>
 
-  </div>
+
+    <!-- OVERLAY -->
+    <div
+      class="cm-secciones-overlay"
+      id="cmMenuOverlay">
+    </div>
 
 
-  <!-- =====================================================
-       CUADRO DEL LOGO · DEBAJO DEL MENÚ
-  ===================================================== -->
-
-  <div class="cm-logo-box">
-
-    <img
-      src="/assets/img/logo-cm.jpeg"
-      alt="Código Millonario"
-      class="cm-square-logo">
-
-  </div>
+    <!-- MENÚ LATERAL -->
+    <aside
+      class="cm-secciones-menu"
+      id="cmSideMenu"
+      aria-hidden="true">
 
 
-  <!-- =====================================================
-       MENÚ MOBILE
-  ===================================================== -->
+      <!-- BOTÓN CERRAR -->
+      <button
+        type="button"
+        class="cm-secciones-close"
+        id="cmCloseMenu"
+        aria-label="Cerrar menú">
 
-  <div class="cm-mobile-menu">
-
-    <div class="cm-mobile-section">
-
-      <button class="cm-mobile-title" type="button">
-
-        <span>FINANZAS</span>
-
-        <i class="fa-solid fa-chevron-down"></i>
+        &times;
 
       </button>
 
-      <div class="cm-mobile-links">
 
-        <a href="/educacion-financiera.html">
-          Dinero
-        </a>
+      <!-- LOGO -->
+      <div class="cm-secciones-logo">
 
-        <a href="/ahorro.html">
-          Ahorro
-        </a>
-
-        <a href="/psicologia-del-dinero.html">
-          Psicología del Dinero
-        </a>
-
-        <a href="/inversiones.html">
-          Inversiones
-        </a>
-
-        <a href="/Herramientas.html">
-          Herramientas
-        </a>
+        <img
+          src="${logoURL}"
+          alt="Código Millonario">
 
       </div>
 
-    </div>
+
+     <!-- ENCABEZADO EDITORIAL -->
+
+     <div class="cm-secciones-heading">
+
+     <span class="cm-secciones-heading-line"></span>
+
+     <span class="cm-secciones-heading-text">
+      EXPLORA NUESTRAS ÁREAS
+     </span>
+
+      </div>
 
 
-    <div class="cm-mobile-section">
+      <!-- ENLACES -->
+      <nav class="cm-secciones-links">
 
-      <button class="cm-mobile-title" type="button">
 
-        <span>NEGOCIOS</span>
-
-        <i class="fa-solid fa-chevron-down"></i>
-
-      </button>
-
-      <div class="cm-mobile-links">
-
-        <a href="/negocios.html">
-          Negocios
+        <a href="/blog/ahorro/index.html">
+          Construir Capital
         </a>
 
-        <a href="/modelos-de-negocio.html">
-          Modelos de Negocio
+        <a href="/blog/inversiones/index.html">
+          Hacer Crecer el Dinero
         </a>
 
-        <a href="/emprendimientos.html">
-          Emprendimientos
+        <a href="/blog/negocios/index.html">
+          Crear Riqueza
         </a>
 
-        <a href="/productos.html">
+        <a href="/blog/psicologia-del-dinero/index.html">
+          La Mente y el Dinero
+        </a>
+
+        <a href="/blog/servicios-financieros/index.html">
+          El Sistema Financiero
+        </a>
+
+        <a href="/blog/biografia-de-millonarios/index.html">
+          Historias de Riqueza
+        </a>
+
+        <a href="/blog/hechos-lujos-curiosidades/index.html">
+          Dinero, Poder y Lujo
+        </a>
+
+        <a href="/blog/finanzas-personales/index.html">
+         El Arte del Dinero
+        </a>
+
+        <a href="/blog/deudas/index.html">
+         El Peso de las Deudas
+        </a>
+
+        <a href="/blog/desarrollo-profesional/index.html">
+         Construir una Carrera
+        </a>
+
+        <a href="/blog/fundamentos-del-dinero/index.html">
+         Los Principios del Dinero
+        </a>
+
+        <a href="/blog/mentalidad-de-exito/index.html">
+         La Mentalidad para Avanzar
+        </a>
+
+        <a href="/tienda.html">
           Productos
         </a>
 
-      </div>
-
-    </div>
+      </nav>
 
 
-    <div class="cm-mobile-section">
+    </aside>
 
-      <button class="cm-mobile-title" type="button">
+  `;
 
-        <span>MUNDO MILLONARIO</span>
 
-        <i class="fa-solid fa-chevron-down"></i>
+  /* =========================================================
+     INSERTAR HTML
+  ========================================================= */
 
-      </button>
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    menuHTML
+  );
 
-      <div class="cm-mobile-links">
 
-        <a href="/mundo-millonario.html">
-          Mundo Millonario
-        </a>
+  /* =========================================================
+     CSS
+  ========================================================= */
 
-        <a href="/millonarios.html">
-          Millonarios
-        </a>
+  const style = document.createElement("style");
 
-        <a href="/grandes-fortunas.html">
-          Grandes Fortunas
-        </a>
-
-        <a href="/biografias-de-millonarios.html">
-          Biografías de Millonarios
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</header>
-`;
-
+  style.textContent = `
 
   /* =====================================================
-     CSS DEL MENÚ
-  ===================================================== */
-
-  const menuCSS = `
-
-/* =====================================================
-   CÓDIGO MILLONARIO · HEADER
+   ENCABEZADO EDITORIAL
 ===================================================== */
 
-.cm-header {
-
-  width: 100%;
-
-  background: #000000;
-
-  border-bottom: 1px solid #1f1f1f;
-
-  position: fixed;
-
-  top: 0;
-
-  left: 0;
-
-  right: 0;
-
-  z-index: 1000;
-
-  transition: transform .28s ease;
-
-}
-
-
-/* OCULTAR HEADER AL BAJAR */
-
-.cm-header.cm-header-hidden {
-
-  transform: translateY(-100%);
-
-}
-
-
-/* =====================================================
-   CONTENEDOR
-===================================================== */
-
-.cm-header-inner {
-
-  max-width: 1440px;
-
-  height: 64px;
-
-  margin: 0 auto;
-
-  padding: 0 32px;
-
+.cm-secciones-heading {
   display: flex;
-
   align-items: center;
-
-  justify-content: space-between;
-
-}
-
-
-/* =====================================================
-   LOGO / NOMBRE
-===================================================== */
-
-.cm-logo {
-
-  text-decoration: none;
-
-  color: #ffffff;
-
-  font-family: 'Manrope', sans-serif;
-
-  display: flex;
-
-  align-items: center;
-
-  width: auto;
-
-  line-height: 1;
-
-  white-space: nowrap;
-
-  transform: translateX(-12px);
-
-}
-
-
-.cm-logo-title {
-
-  font-size: 28px;
-
-  font-weight: 800;
-
-  letter-spacing: -0.055em;
-
-  line-height: 1;
-
-  white-space: nowrap;
-
-}
-
-
-/* =====================================================
-   CUADRO DEL LOGO · DEBAJO DEL MENÚ
-===================================================== */
-
-.cm-logo-box {
-
-  position: absolute;
-
-  top: 100%;
-
-  left: 10px;
-
-  width: 28px;
-
-  height: 28px;
-
-  background: #000000;
-
-  border: 1px solid #1f1f1f;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  overflow: hidden;
-
-  z-index: 1001;
-
-}
-
-
-.cm-square-logo {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-}
-
-
-/* =====================================================
-   NAVEGACIÓN
-===================================================== */
-
-.cm-nav {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 24px;
-
-  position: absolute;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-}
-
-
-.cm-nav-link {
-
-  border: 0;
-
-  background: transparent;
-
-  text-decoration: none;
-
-  color: #ffffff;
-
-  font-family: 'Open Sans', sans-serif;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 6px;
-
-  padding: 22px 0;
-
-  white-space: nowrap;
-
-  transition: color .2s ease;
-
-}
-
-
-.cm-nav-link:hover {
-
-  color: #ccc;
-
-}
-
-
-/* =====================================================
-   SEPARADORES
-===================================================== */
-
-.cm-nav-divider {
-
-  width: 1px;
-
-  height: 16px;
-
-  background: #ffffff;
-
+  margin-top: 78px;
+  padding: 0 40px 14px 40px;
   flex-shrink: 0;
-
 }
 
-
-/* =====================================================
-   DROPDOWN
-===================================================== */
-
-.cm-nav-dropdown {
-
-  position: relative;
-
-}
-
-
-.cm-dropdown-btn span {
-
-  font-size: 16px;
-
-  line-height: 1;
-
-  color: #ffffff;
-
-}
-
-
-.cm-dropdown-menu {
-
-  position: absolute;
-
-  top: calc(100% - 4px);
-
-  left: -18px;
-
-  width: 230px;
-
-  background: #000000;
-
-  border: 1px solid #292929;
-
-  box-shadow:
-    0 15px 35px rgba(0,0,0,.35);
-
-  padding: 10px 0;
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  transform: translateY(7px);
-
-  transition:
-    opacity .18s ease,
-    transform .18s ease,
-    visibility .18s ease;
-
-}
-
-
-.cm-nav-dropdown:hover .cm-dropdown-menu {
-
-  opacity: 1;
-
-  visibility: visible;
-
-  transform: translateY(0);
-
-}
-
-
-.cm-dropdown-menu a {
-
-  display: block;
-
-  padding: 12px 18px;
-
-  text-decoration: none;
-
-  color: #ffffff;
-
-  font-family: 'Open Sans', sans-serif;
-
-  font-size: 13px;
-
-  font-weight: 500;
-
-  transition:
-    background .18s ease,
-    color .18s ease;
-
-}
-
-
-.cm-dropdown-menu a:hover {
-
-  background: #1a1a1a;
-
-  color: #ccc;
-
-}
-
-
-/* =====================================================
-   DERECHA
-===================================================== */
-
-.cm-header-right {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 18px;
-
-  margin-left: auto;
-
-}
-
-
-.cm-search {
-
-  border: 0;
-
-  background: transparent;
-
-  color: #ffffff;
-
-  font-size: 15px;
-
-  cursor: pointer;
-
-  padding: 8px;
-
-}
-
-
-.cm-search:hover {
-
-  color: #ccc;
-
-}
-
-
-/* =====================================================
-   MENÚ MOBILE · BOTÓN
-===================================================== */
-
-.cm-menu-mobile {
-
+.cm-secciones-heading-line {
   display: none;
+}
 
-  border: 0;
-
-  background: transparent;
-
-  font-size: 20px;
-
-  color: #ffffff;
-
-  cursor: pointer;
-
-  padding: 8px;
-
+.cm-secciones-heading-text {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
   line-height: 1;
-
+  white-space: nowrap;
 }
 
+    /* =====================================================
+       BOTÓN
+    ===================================================== */
 
-/* =====================================================
-   MENÚ MOBILE · CONTENEDOR
-===================================================== */
+    .cm-secciones-trigger {
 
-.cm-mobile-menu {
+      position: fixed;
 
-  display: none;
+      top: 10px;
+      right: 20px;
 
-}
-
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
-@media (max-width: 1050px) {
-
-  .cm-nav {
-
-    gap: 20px;
-
-  }
-
-
-  .cm-nav-link {
-
-    font-size: 15px;
-
-  }
-
-}
-
-
-@media (max-width: 850px) {
-
-  .cm-header {
-
-    top: env(safe-area-inset-top);
-
-  }
-
-
-  .cm-header-inner {
-
-    height: 60px;
-
-    padding: 0 20px;
-
-  }
-
-
-  .cm-logo {
-
-    width: auto;
-
-    max-width: calc(100% - 8px);
-
-  }
-
-
-  .cm-logo-title {
-
-    font-size: 22px;
-
-    font-weight: 800;
-
-    letter-spacing: -0.055em;
-
-  }
-
-
-  /* CUADRO DEL LOGO EN TELÉFONOS */
-
-  .cm-logo-box {
-
-    left: 10px;
-
-    width: 28px;
-
-    height: 28px;
-
-  }
-
-
-  .cm-nav {
-
-    display: none;
-
-  }
-
-
-  .cm-menu-mobile {
-
-    display: block;
-
-  }
-
-
-  /* ===================================================
-     PANEL MOBILE
-  =================================================== */
-
-  .cm-mobile-menu {
-
-    position: absolute;
-
-    top: 100%;
-
-    left: 0;
-
-    right: 0;
-
-    background: #000000;
-
-    border-top: 1px solid #1f1f1f;
-
-    border-bottom: 1px solid #292929;
-
-    padding: 66px 20px 10px;
-
-    display: block;
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    pointer-events: none;
-
-    transform: translateY(0);
-
-    transition:
-      opacity .20s ease,
-      visibility .20s ease;
-
-    max-height: calc(100vh - 60px);
-
-    overflow-y: auto;
-
-  }
-
-
-  /* MENÚ ABIERTO */
-
-  .cm-header.cm-mobile-open .cm-mobile-menu {
-
-    opacity: 1;
-
-    visibility: visible;
-
-    pointer-events: auto;
-
-  }
-
-
-  /* ===================================================
-     SECCIONES
-  =================================================== */
-
-  .cm-mobile-section {
-
-    border-bottom: 1px solid #252525;
-
-  }
-
-
-  .cm-mobile-section:last-child {
-
-    border-bottom: 0;
-
-  }
-
-
-  .cm-mobile-title {
-
-    width: 100%;
-
-    border: 0;
-
-    background: transparent;
-
-    color: #ffffff;
-
-    padding: 14px 0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    font-family: 'Open Sans', sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    letter-spacing: .03em;
-
-    cursor: pointer;
-
-    text-align: left;
-
-  }
-
-
-  .cm-mobile-title i {
-
-    font-size: 11px;
-
-    transition: transform .20s ease;
-
-  }
-
-
-  /* ===================================================
-     ENLACES
-  =================================================== */
-
-  .cm-mobile-links {
-
-    max-height: 0;
-
-    overflow: hidden;
-
-    transition: max-height .22s ease;
-
-  }
-
-
-  .cm-mobile-links a {
-
-    display: block;
-
-    color: #d8d8d8;
-
-    text-decoration: none;
-
-    font-family: 'Open Sans', sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 400;
-
-    padding: 10px 8px 10px 12px;
-
-    border-top: 1px solid #151515;
-
-  }
-
-
-  .cm-mobile-links a:active {
-
-    background: #151515;
-
-  }
-
-
-  /* SECCIÓN ABIERTA */
-
-  .cm-mobile-section.cm-open .cm-mobile-links {
-
-    max-height: 300px;
-
-  }
-
-
-  .cm-mobile-section.cm-open .cm-mobile-title i {
-
-    transform: rotate(180deg);
-
-  }
-
-}
-
-
-/* =====================================================
-   RESPETAR REDUCCIÓN DE MOVIMIENTO
-===================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .cm-header,
-
-  .cm-mobile-menu,
-
-  .cm-mobile-links,
-
-  .cm-mobile-title i {
-
-    transition: none;
-
-  }
-
-}
-
-`;
-
-
-  /* =====================================================
-     INSERTAR CSS UNA SOLA VEZ
-  ===================================================== */
-
-  function insertStyles() {
-
-    if (document.getElementById('cm-menu-styles')) {
-      return;
-    }
-
-    const style = document.createElement('style');
-
-    style.id = 'cm-menu-styles';
-
-    style.textContent = menuCSS;
-
-    document.head.appendChild(style);
-
-  }
-
-
-  /* =====================================================
-     INSERTAR HTML UNA SOLA VEZ
-  ===================================================== */
-
-  function insertMenu() {
-
-    if (document.querySelector('.cm-header')) {
-      return;
-    }
-
-    document.body.insertAdjacentHTML(
-      'afterbegin',
-      menuHTML
-    );
-
-  }
-
-
-  /* =====================================================
-     FUNCIONES MENÚ MOBILE
-  ===================================================== */
-
-  function initializeMenu() {
-
-    const header =
-      document.querySelector('.cm-header');
-
-    if (!header) return;
-
-
-    const mobileButton =
-      header.querySelector('.cm-menu-mobile');
-
-    const mobileMenu =
-      header.querySelector('.cm-mobile-menu');
-
-    const mobileIcon =
-      mobileButton
-        ? mobileButton.querySelector('i')
-        : null;
-
-    const mobileSections =
-      header.querySelectorAll(
-        '.cm-mobile-section'
-      );
-
-
-    if (!mobileButton || !mobileMenu) {
-      return;
-    }
-
-
-    /* ===================================================
-       CERRAR MENÚ MOBILE
-    =================================================== */
-
-    function closeMobileMenu() {
-
-      header.classList.remove(
-        'cm-mobile-open'
-      );
-
-
-      mobileButton.setAttribute(
-        'aria-expanded',
-        'false'
-      );
-
-
-      mobileButton.setAttribute(
-        'aria-label',
-        'Abrir menú'
-      );
-
-
-      if (mobileIcon) {
-
-        mobileIcon.classList.remove(
-          'fa-xmark'
-        );
-
-        mobileIcon.classList.add(
-          'fa-bars'
-        );
-
-      }
-
-
-      mobileSections.forEach(
-        function (section) {
-
-          section.classList.remove(
-            'cm-open'
-          );
-
-        }
-      );
+      z-index: 99990;
 
     }
 
 
-    /* ===================================================
-       ABRIR / CERRAR MENÚ
-    =================================================== */
+    @media (min-width: 768px) {
 
-    mobileButton.addEventListener(
-      'click',
-      function () {
-
-        const isOpen =
-          header.classList.contains(
-            'cm-mobile-open'
-          );
-
-
-        if (isOpen) {
-
-          closeMobileMenu();
-
-          return;
-
-        }
-
-
-        header.classList.add(
-          'cm-mobile-open'
-        );
-
-
-        mobileButton.setAttribute(
-          'aria-expanded',
-          'true'
-        );
-
-
-        mobileButton.setAttribute(
-          'aria-label',
-          'Cerrar menú'
-        );
-
-
-        if (mobileIcon) {
-
-          mobileIcon.classList.remove(
-            'fa-bars'
-          );
-
-          mobileIcon.classList.add(
-            'fa-xmark'
-          );
-
-        }
-
+      .cm-secciones-trigger {
+        top: 20px;
       }
+
+    }
+
+
+    .cm-secciones-btn {
+
+      width: 49px;
+      height: 49px;
+
+      padding: 10px;
+
+      border: none;
+
+      background: transparent;
+
+      cursor: pointer;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+    }
+
+
+    .cm-secciones-icon {
+
+      position: relative;
+
+      width: 29px;
+      height: 29px;
+
+      display: block;
+
+    }
+
+
+    /* =====================================================
+       LÍNEAS
+    ===================================================== */
+
+    .cm-secciones-lines {
+
+      position: absolute;
+
+      left: 0;
+      top: 6px;
+
+      width: 12px;
+      height: 2.2px;
+
+      background: #fff;
+
+      box-shadow:
+        0 5px 0 #fff,
+        0 10px 0 #fff;
+
+    }
+
+
+    /* =====================================================
+       LUPA
+    ===================================================== */
+
+    .cm-secciones-glass {
+
+      position: absolute;
+
+      right: 6px;
+      top: 0;
+
+      width: 13px;
+      height: 13px;
+
+      border: 3px solid #fff;
+
+      border-radius: 50%;
+
+      background: #000;
+
+    }
+
+
+    .cm-secciones-glass::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 8px;
+      height: 2.2px;
+
+      background: #fff;
+
+      bottom: -3px;
+      right: -5px;
+
+      transform: rotate(30deg);
+
+    }
+
+
+    /* =====================================================
+       OVERLAY
+    ===================================================== */
+
+    .cm-secciones-overlay {
+
+      position: fixed;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(0,0,0,.62);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transition:
+        opacity .3s ease,
+        visibility .3s ease;
+
+      z-index: 99991;
+
+    }
+
+
+    .cm-secciones-overlay.cm-active {
+
+      opacity: 1;
+
+      visibility: visible;
+
+    }
+
+
+    /* =====================================================
+       MENÚ
+    ===================================================== */
+
+    .cm-secciones-menu {
+
+      position: fixed;
+
+      top: 0;
+      right: 0;
+
+      width: 85%;
+      max-width: 320px;
+
+      height: 100vh;
+      height: 100dvh;
+
+      background: #0f0f0f;
+
+      z-index: 99992;
+
+      transform: translateX(105%);
+
+      transition:
+        transform .4s cubic-bezier(.4,0,.2,1);
+
+      box-shadow:
+        -8px 0 30px rgba(0,0,0,.55);
+
+      display: flex;
+
+      flex-direction: column;
+
+      overflow-y: auto;
+
+      overscroll-behavior: contain;
+
+      -webkit-overflow-scrolling: touch;
+
+    }
+
+
+    @media (min-width: 1024px) {
+
+      .cm-secciones-menu {
+        max-width: 460px;
+      }
+
+    }
+
+
+    .cm-secciones-menu.cm-active {
+
+      transform: translateX(0);
+
+    }
+
+
+    /* =====================================================
+       CERRAR
+    ===================================================== */
+
+    .cm-secciones-close {
+
+      position: absolute;
+
+      top: 15px;
+      right: 25px;
+
+      width: 35px;
+      height: 35px;
+
+      padding: 0;
+
+      background: transparent;
+
+      border: none;
+
+      color: #fff;
+
+      font-size: 26px;
+
+      line-height: 1;
+
+      cursor: pointer;
+
+      z-index: 5;
+
+    }
+
+
+    .cm-secciones-close:hover {
+      opacity: .65;
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .cm-secciones-logo {
+
+      position: absolute;
+
+      top: 25px;
+      left: 20px;
+
+      width: 110px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: flex-start;
+
+    }
+
+
+    .cm-secciones-logo img {
+
+      display: block;
+
+      width: 110px;
+
+      height: auto;
+
+      max-width: 110px;
+
+      object-fit: contain;
+
+    }
+
+
+    /* =====================================================
+       ENLACES
+    ===================================================== */
+
+    .cm-secciones-links {
+
+      display: flex;
+
+      flex-direction: column;
+
+      margin-top: 0px;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .cm-secciones-links a {
+
+      color: #fff;
+
+      text-decoration: none;
+
+      padding:
+        20px
+        20px
+        17px
+        40px;
+
+      font-family:
+        "Open Sans",
+        sans-serif;
+
+      font-size: 15px;
+
+      line-height: 1.4;
+
+      position: relative;
+
+      transition:
+        background .2s ease,
+        padding-left .2s ease;
+
+    }
+
+
+    .cm-secciones-links a::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 40px;
+      right: 40px;
+
+      bottom: 0;
+
+      height: 1px;
+
+      background:
+        rgba(255,255,255,.14);
+
+    }
+
+
+    .cm-secciones-links a:hover {
+
+      background:
+        rgba(255,255,255,.045);
+
+      padding-left: 44px;
+
+    }
+
+  `;
+
+  document.head.appendChild(style);
+
+
+  /* =========================================================
+     ELEMENTOS
+  ========================================================= */
+
+  const openBtn =
+    document.getElementById("cmOpenMenu");
+
+  const closeBtn =
+    document.getElementById("cmCloseMenu");
+
+  const menu =
+    document.getElementById("cmSideMenu");
+
+  const overlay =
+    document.getElementById("cmMenuOverlay");
+
+
+  /* =========================================================
+     ABRIR
+  ========================================================= */
+
+  function openMenu() {
+
+    menu.classList.add("cm-active");
+
+    overlay.classList.add("cm-active");
+
+    openBtn.setAttribute(
+      "aria-expanded",
+      "true"
     );
 
-
-    /* ===================================================
-       SUBMENÚS MOBILE
-    =================================================== */
-
-    mobileSections.forEach(
-      function (section) {
-
-        const title =
-          section.querySelector(
-            '.cm-mobile-title'
-          );
-
-
-        if (!title) return;
-
-
-        title.addEventListener(
-          'click',
-          function () {
-
-            const isOpen =
-              section.classList.contains(
-                'cm-open'
-              );
-
-
-            mobileSections.forEach(
-              function (otherSection) {
-
-                if (otherSection !== section) {
-
-                  otherSection.classList.remove(
-                    'cm-open'
-                  );
-
-                }
-
-              }
-            );
-
-
-            section.classList.toggle(
-              'cm-open',
-              !isOpen
-            );
-
-          }
-        );
-
-      }
+    menu.setAttribute(
+      "aria-hidden",
+      "false"
     );
 
+  }
 
-    /* ===================================================
-       CERRAR AL TOCAR UN ENLACE
-    =================================================== */
 
-    const mobileLinks =
-      header.querySelectorAll(
-        '.cm-mobile-links a'
+  /* =========================================================
+     CERRAR
+  ========================================================= */
+
+  function closeMenu() {
+
+    menu.classList.remove("cm-active");
+
+    overlay.classList.remove("cm-active");
+
+    openBtn.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    menu.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+  }
+
+
+  /* =========================================================
+     EVENTOS
+  ========================================================= */
+
+  openBtn.addEventListener(
+    "click",
+    openMenu
+  );
+
+
+  closeBtn.addEventListener(
+    "click",
+    closeMenu
+  );
+
+
+  overlay.addEventListener(
+    "click",
+    closeMenu
+  );
+
+
+  /* =========================================================
+     CERRAR AL ENTRAR EN UNA SECCIÓN
+  ========================================================= */
+
+  menu
+    .querySelectorAll(".cm-secciones-links a")
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        closeMenu
       );
 
-
-    mobileLinks.forEach(
-      function (link) {
-
-        link.addEventListener(
-          'click',
-          function () {
-
-            closeMobileMenu();
-
-          }
-        );
-
-      }
-    );
+    });
 
 
-    /* ===================================================
-       ESC · CERRAR MENÚ
-    =================================================== */
+  /* =========================================================
+     ESCAPE
+  ========================================================= */
 
-    document.addEventListener(
-      'keydown',
-      function (event) {
-
-        if (event.key === 'Escape') {
-
-          closeMobileMenu();
-
-        }
-
-      }
-    );
-
-
-    /* ===================================================
-       HEADER · SCROLL
-    =================================================== */
-
-    let headerVisible = true;
-
-    let lastStableScrollY =
-      window.scrollY;
-
-    const scrollThreshold = 18;
-
-    let ticking = false;
-
-
-    function updateHeader() {
-
-      const currentScrollY =
-        window.scrollY;
-
-      const distance =
-        currentScrollY - lastStableScrollY;
-
-
-      /* ==========================================
-         CERRAR HAMBURGUESA AL HACER SCROLL
-      ========================================== */
+  document.addEventListener(
+    "keydown",
+    function (event) {
 
       if (
-        header.classList.contains(
-          'cm-mobile-open'
-        )
+        event.key === "Escape" &&
+        menu.classList.contains("cm-active")
       ) {
 
-        closeMobileMenu();
+        closeMenu();
 
       }
-
-
-      /* ==========================================
-         PARTE SUPERIOR
-      ========================================== */
-
-      if (currentScrollY <= 10) {
-
-        if (!headerVisible) {
-
-          header.classList.remove(
-            'cm-header-hidden'
-          );
-
-          headerVisible = true;
-
-        }
-
-
-        lastStableScrollY =
-          currentScrollY;
-
-        ticking = false;
-
-        return;
-
-      }
-
-
-      /* ==========================================
-         BAJANDO
-      ========================================== */
-
-      if (distance >= scrollThreshold) {
-
-        if (headerVisible) {
-
-          header.classList.add(
-            'cm-header-hidden'
-          );
-
-          headerVisible = false;
-
-        }
-
-
-        lastStableScrollY =
-          currentScrollY;
-
-      }
-
-
-      /* ==========================================
-         SUBIENDO
-      ========================================== */
-
-      else if (
-        distance <= -scrollThreshold
-      ) {
-
-        if (!headerVisible) {
-
-          header.classList.remove(
-            'cm-header-hidden'
-          );
-
-          headerVisible = true;
-
-        }
-
-
-        lastStableScrollY =
-          currentScrollY;
-
-      }
-
-
-      ticking = false;
 
     }
-
-
-    window.addEventListener(
-      'scroll',
-      function () {
-
-        if (!ticking) {
-
-          window.requestAnimationFrame(
-            updateHeader
-          );
-
-          ticking = true;
-
-        }
-
-      },
-      { passive: true }
-    );
-
-  }
-
-
-  /* =====================================================
-     INICIALIZACIÓN
-  ===================================================== */
-
-  function init() {
-
-    insertStyles();
-
-    insertMenu();
-
-    initializeMenu();
-
-  }
-
-
-  /* =====================================================
-     EJECUTAR INMEDIATAMENTE
-     El script ya está al final del <body>
-  ===================================================== */
-
-  init();
-
+  );
 
 })();
