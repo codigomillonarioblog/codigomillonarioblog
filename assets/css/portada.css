@@ -1,0 +1,1536 @@
+/* =========================================================
+   CÓDIGO MILLONARIO · PORTADA EDITORIAL
+   ESTILO REVISTA FINANCIERA
+========================================================= */
+
+.cm-front {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px 70px;
+  color: #161616;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   INTRODUCCIÓN DEL MEDIO
+========================================================= */
+
+.cm-front-intro {
+  padding: 38px 0 34px;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.cm-front-kicker {
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.cm-front-intro-title {
+  max-width: 760px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.cm-front-intro-text {
+  max-width: 720px;
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #555;
+}
+
+/* =========================================================
+   ENCABEZADO DE SECCIÓN
+========================================================= */
+
+.cm-front-section {
+  padding: 34px 0;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.cm-front-section-head {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 35px;
+  margin-bottom: 24px;
+}
+
+.cm-front-section-name {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.cm-front-section-description {
+  max-width: 650px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* =========================================================
+   DESTACADO PRINCIPAL
+========================================================= */
+
+.cm-front-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, .75fr);
+  gap: 30px;
+}
+
+.cm-front-lead-image {
+  display: block;
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.cm-front-lead-info {
+  padding-top: 2px;
+}
+
+.cm-front-category {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.cm-front-lead-title {
+  margin-top: 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 31px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -.025em;
+}
+
+.cm-front-lead-description {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #555;
+}
+
+.cm-front-read {
+  display: inline-block;
+  margin-top: 19px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #222;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* =========================================================
+   TRES ARTÍCULOS SECUNDARIOS
+========================================================= */
+
+.cm-front-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.cm-front-card {
+  min-width: 0;
+}
+
+.cm-front-card + .cm-front-card {
+  border-left: 1px solid #d2d2d2;
+  padding-left: 25px;
+}
+
+.cm-front-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.cm-front-card-title {
+  margin-top: 11px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -.015em;
+}
+
+.cm-front-card-text {
+  margin-top: 9px;
+  font-size: 11px;
+  line-height: 1.55;
+  color: #666;
+}
+
+/* =========================================================
+   EXPLORAR TEMAS
+========================================================= */
+
+.cm-front-topics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #222;
+}
+
+.cm-front-topic {
+  min-height: 135px;
+  padding: 19px 18px 18px 0;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.cm-front-topic + .cm-front-topic {
+  padding-left: 18px;
+  border-left: 1px solid #d2d2d2;
+}
+
+.cm-front-topic-number {
+  font-size: 9px;
+  color: #888;
+}
+
+.cm-front-topic-title {
+  margin-top: 25px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.cm-front-topic-text {
+  margin-top: 7px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #777;
+}
+
+/* =========================================================
+   BLOQUE DE ANÁLISIS
+========================================================= */
+
+.cm-front-analysis {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 45px;
+}
+
+.cm-front-analysis-main {
+  border-top: 1px solid #222;
+}
+
+.cm-front-analysis-item {
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr);
+  gap: 22px;
+  padding: 20px 0;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.cm-front-analysis-image {
+  width: 155px;
+  height: 105px;
+  object-fit: cover;
+}
+
+.cm-front-analysis-title {
+  margin-top: 7px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+.cm-front-analysis-text {
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* =========================================================
+   COLUMNA CONTEXTUAL
+========================================================= */
+
+.cm-front-context {
+  padding-left: 24px;
+  border-left: 1px solid #d2d2d2;
+}
+
+.cm-front-context-title {
+  padding-bottom: 9px;
+  border-bottom: 2px solid #222;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.cm-front-context-text {
+  margin-top: 15px;
+  font-size: 12px;
+  line-height: 1.65;
+  color: #555;
+}
+
+.cm-front-context-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* =========================================================
+   PIE EDITORIAL
+========================================================= */
+
+.cm-front-editorial-note {
+  padding: 34px 0 0;
+  max-width: 760px;
+}
+
+.cm-front-editorial-note-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.cm-front-editorial-note-text {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.65;
+  color: #666;
+}
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .cm-front {
+    padding: 0 16px 50px;
+  }
+
+  /* INTRO */
+
+  .cm-front-intro {
+    padding: 28px 0 27px;
+  }
+
+  .cm-front-kicker {
+    font-size: 8px;
+    margin-bottom: 8px;
+  }
+
+  .cm-front-intro-title {
+    font-size: 25px;
+    line-height: 1.14;
+  }
+
+  .cm-front-intro-text {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  /* SECCIONES */
+
+  .cm-front-section {
+    padding: 27px 0;
+  }
+
+  .cm-front-section-head {
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  .cm-front-section-name {
+    font-size: 9px;
+  }
+
+  .cm-front-section-description {
+    margin-top: 8px;
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
+  /* DESTACADO */
+
+  .cm-front-lead {
+    display: block;
+  }
+
+  .cm-front-lead-image {
+    height: 215px;
+  }
+
+  .cm-front-lead-info {
+    padding-top: 15px;
+  }
+
+  .cm-front-category {
+    font-size: 8px;
+  }
+
+  .cm-front-lead-title {
+    margin-top: 7px;
+    font-size: 25px;
+    line-height: 1.1;
+  }
+
+  .cm-front-lead-description {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .cm-front-read {
+    margin-top: 15px;
+    font-size: 9px;
+  }
+
+  /* TARJETAS */
+
+  .cm-front-grid {
+    display: block;
+  }
+
+  .cm-front-card {
+    padding: 18px 0 20px;
+    border-bottom: 1px solid #d2d2d2;
+  }
+
+  .cm-front-card + .cm-front-card {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .cm-front-card-image {
+    height: 180px;
+  }
+
+  .cm-front-card-title {
+    font-size: 21px;
+  }
+
+  .cm-front-card-text {
+    font-size: 11px;
+  }
+
+  /* TEMAS */
+
+  .cm-front-topics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cm-front-topic {
+    min-height: 115px;
+    padding: 15px 12px 15px 0;
+  }
+
+  .cm-front-topic + .cm-front-topic {
+    padding-left: 12px;
+  }
+
+  .cm-front-topic:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .cm-front-topic-title {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .cm-front-topic-text {
+    font-size: 9px;
+  }
+
+  /* ANÁLISIS */
+
+  .cm-front-analysis {
+    display: block;
+  }
+
+  .cm-front-analysis-item {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .cm-front-analysis-image {
+    width: 105px;
+    height: 85px;
+  }
+
+  .cm-front-analysis-title {
+    margin-top: 5px;
+    font-size: 17px;
+    line-height: 1.12;
+  }
+
+  .cm-front-analysis-text {
+    display: none;
+  }
+
+  /* CONTEXTO */
+
+  .cm-front-context {
+    margin-top: 28px;
+    padding: 20px 0 0;
+    border-left: 0;
+    border-top: 1px solid #d2d2d2;
+  }
+
+  .cm-front-context-text {
+    font-size: 11px;
+  }
+
+  /* NOTA */
+
+  .cm-front-editorial-note {
+    padding-top: 26px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CÓDIGO MILLONARIO · BLOQUE EDITORIAL FINAL
+   ESTÉTICA MAGAZINE / ECONOMIST
+========================================================= */
+
+.cm-econ-final {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 28px 70px;
+  color: #161616;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   ELEMENTOS GENERALES
+========================================================= */
+
+.cm-econ-label {
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.cm-econ-rule {
+  width: 100%;
+  height: 4px;
+  background: #222;
+  margin-bottom: 28px;
+}
+
+.cm-econ-redline {
+  width: 100%;
+  height: 4px;
+  background: #222;
+  margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   01 · MÉTODO EDITORIAL
+========================================================= */
+
+.cm-econ-method {
+  padding-bottom: 58px;
+  border-bottom: 1px solid #222;
+}
+
+.cm-econ-method-top {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 760px);
+  gap: 35px;
+  align-items: start;
+}
+
+.cm-econ-method-heading h2 {
+  margin: 0;
+  max-width: 700px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  line-height: .98;
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+
+.cm-econ-deck {
+  max-width: 650px;
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #4f4f4f;
+}
+
+.cm-econ-method-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 52px;
+  margin-top: 35px;
+}
+
+.cm-econ-method-copy {
+  max-width: 690px;
+}
+
+.cm-econ-method-copy p {
+  margin: 0 0 16px;
+  font-size: 12px;
+  line-height: 1.72;
+  color: #525252;
+}
+
+.cm-econ-method-figure {
+  margin: 0;
+}
+
+.cm-econ-method-figure img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.cm-econ-method-figure figcaption {
+  margin-top: 8px;
+  font-size: 9px;
+  line-height: 1.45;
+  color: #777;
+}
+
+.cm-econ-method-signature {
+  display: inline-block;
+  margin-top: 26px;
+  padding-top: 9px;
+  border-top: 1px solid #999;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.cm-econ-method-signature span {
+  padding: 0 5px;
+  color: #222;
+}
+
+
+/* =========================================================
+   02 · NUESTRO MÉTODO
+========================================================= */
+
+.cm-econ-levels {
+  padding: 58px 0;
+  border-bottom: 1px solid #222;
+}
+
+.cm-econ-levels-head {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 35px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.cm-econ-levels-head h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 31px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -.025em;
+}
+
+.cm-econ-levels-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.cm-econ-level-item {
+  min-width: 0;
+  padding: 18px 22px 20px 0;
+}
+
+.cm-econ-level-item + .cm-econ-level-item {
+  padding-left: 22px;
+  border-left: 1px solid #c8c8c8;
+}
+
+.cm-econ-level-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.cm-econ-level-meta span {
+  color: #222;
+  text-transform: uppercase;
+}
+
+.cm-econ-level-item p {
+  max-width: 300px;
+  margin: 15px 0 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.cm-econ-principle {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 650px);
+  gap: 35px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 3px solid #222;
+}
+
+.cm-econ-principle-title {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.cm-econ-principle-body blockquote {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  line-height: 1.18;
+  font-weight: 600;
+  letter-spacing: -.015em;
+}
+
+.cm-econ-principle-body p {
+  max-width: 600px;
+  margin: 13px 0 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #666;
+}
+
+
+/* =========================================================
+   03 · IDENTIDAD
+========================================================= */
+
+.cm-econ-identity {
+  padding: 58px 0;
+  border-bottom: 1px solid #222;
+}
+
+.cm-econ-identity-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px;
+  gap: 30px;
+  align-items: end;
+}
+
+.cm-econ-identity-header h2 {
+  max-width: 760px;
+  margin: 13px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 43px;
+  line-height: .99;
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+
+.cm-econ-identity-mark {
+  align-self: end;
+  padding-bottom: 4px;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #777;
+  text-align: right;
+}
+
+.cm-econ-identity-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 410px;
+  gap: 50px;
+  margin-top: 35px;
+}
+
+.cm-econ-identity-copy {
+  max-width: 650px;
+}
+
+.cm-econ-identity-copy h3 {
+  margin: 0 0 17px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  line-height: 1.13;
+  font-weight: 600;
+}
+
+.cm-econ-identity-copy p {
+  margin: 0 0 15px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.cm-econ-identity-figure {
+  margin: 0;
+}
+
+.cm-econ-identity-figure img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.cm-econ-identity-figure figcaption {
+  margin-top: 8px;
+  font-size: 9px;
+  line-height: 1.45;
+  color: #777;
+}
+
+.cm-econ-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 35px;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.cm-econ-fact {
+  min-width: 0;
+  padding: 17px 18px 19px 0;
+}
+
+.cm-econ-fact + .cm-econ-fact {
+  padding-left: 18px;
+  border-left: 1px solid #c8c8c8;
+}
+
+.cm-econ-fact span {
+  display: block;
+  font-size: 8px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.cm-econ-fact strong {
+  display: block;
+  margin-top: 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.cm-econ-fact p {
+  max-width: 220px;
+  margin: 9px 0 0;
+  font-size: 10px;
+  line-height: 1.52;
+  color: #666;
+}
+
+
+/* =========================================================
+   04 · APRENDIZAJE
+========================================================= */
+
+.cm-econ-learning {
+  padding: 58px 0;
+  border-bottom: 1px solid #222;
+}
+
+.cm-econ-learning-top {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 35px;
+}
+
+.cm-econ-learning-top h2 {
+  margin: 0;
+  max-width: 760px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  line-height: .99;
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+
+.cm-econ-learning-intro {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 650px);
+  gap: 35px;
+  margin-top: 30px;
+}
+
+.cm-econ-learning-tag {
+  padding-top: 4px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.cm-econ-learning-copy h3 {
+  margin: 0 0 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+.cm-econ-learning-copy p {
+  margin: 0 0 15px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.cm-econ-principles {
+  margin-top: 38px;
+  border-top: 1px solid #222;
+}
+
+.cm-econ-principles article {
+  display: grid;
+  grid-template-columns: 65px minmax(0, 1fr);
+  gap: 20px;
+  padding: 18px 0 20px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.cm-econ-principles article > span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: #777;
+}
+
+.cm-econ-principles h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.13;
+  font-weight: 600;
+}
+
+.cm-econ-principles p {
+  max-width: 650px;
+  margin: 8px 0 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.cm-econ-learning-note {
+  max-width: 650px;
+  margin: 20px 0 0 85px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  line-height: 1.5;
+  font-style: italic;
+  color: #555;
+}
+
+
+/* =========================================================
+   05 · ÁREAS DE ANÁLISIS
+   AQUÍ CAMBIA COMPLETAMENTE LA COMPOSICIÓN
+========================================================= */
+
+.cm-econ-areas {
+  padding: 58px 0 0;
+}
+
+.cm-econ-areas-masthead {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 760px);
+  gap: 35px;
+  padding-bottom: 28px;
+  border-bottom: 4px solid #222;
+}
+
+.cm-econ-areas-masthead h2 {
+  margin: 0;
+  max-width: 760px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  line-height: .99;
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+
+.cm-econ-areas-masthead p {
+  grid-column: 2;
+  max-width: 640px;
+  margin: -8px 0 0;
+  font-size: 12px;
+  line-height: 1.65;
+  color: #5d5d5d;
+}
+
+
+/* ---------------------------------------------------------
+   LOS 3 TEMAS NO SON TARJETAS:
+   SE COMPORTAN COMO TRES COLUMNAS EDITORIALES
+--------------------------------------------------------- */
+
+.cm-econ-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0;
+  border-bottom: 1px solid #222;
+}
+
+.cm-econ-topic {
+  min-width: 0;
+  padding: 20px 22px 22px 0;
+}
+
+.cm-econ-topic + .cm-econ-topic {
+  padding-left: 22px;
+  border-left: 1px solid #c7c7c7;
+}
+
+
+/* CABECERA DE CADA MINI MÓDULO */
+
+.cm-econ-topic-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.cm-econ-topic-head span {
+  flex: 0 0 auto;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: #222;
+}
+
+.cm-econ-topic-head strong {
+  flex: 1;
+  font-size: 8px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-align: right;
+  text-transform: uppercase;
+  color: #555;
+}
+
+
+/* TITULAR */
+
+.cm-econ-topic h3 {
+  margin: 17px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+
+/* TEXTO */
+
+.cm-econ-topic p {
+  margin: 12px 0 0;
+  font-size: 10.5px;
+  line-height: 1.62;
+  color: #5e5e5e;
+}
+
+
+/* PIE DEL MINI MÓDULO */
+
+.cm-econ-topic-foot {
+  margin-top: 18px;
+  padding-top: 8px;
+  border-top: 1px solid #d4d4d4;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .cm-econ-final {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .cm-econ-method-top,
+  .cm-econ-levels-head,
+  .cm-econ-learning-top,
+  .cm-econ-areas-masthead {
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .cm-econ-method-heading h2 {
+    font-size: 39px;
+  }
+
+  .cm-econ-method-grid {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 30px;
+  }
+
+  .cm-econ-identity-header {
+    grid-template-columns: minmax(0, 1fr) 130px;
+  }
+
+  .cm-econ-identity-header h2,
+  .cm-econ-learning-top h2,
+  .cm-econ-areas-masthead h2 {
+    font-size: 36px;
+  }
+
+  .cm-econ-identity-main {
+    grid-template-columns: minmax(0, 1fr) 310px;
+    gap: 30px;
+  }
+
+  .cm-econ-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cm-econ-fact:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid #c8c8c8;
+    padding-left: 0;
+  }
+
+  .cm-econ-fact:nth-child(4) {
+    border-top: 1px solid #c8c8c8;
+  }
+
+  .cm-econ-topic {
+    padding-right: 14px;
+  }
+
+  .cm-econ-topic + .cm-econ-topic {
+    padding-left: 14px;
+  }
+
+  .cm-econ-topic h3 {
+    font-size: 19px;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .cm-econ-final {
+    padding: 44px 16px 50px;
+  }
+
+  .cm-econ-rule,
+  .cm-econ-redline {
+    height: 3px;
+    margin-bottom: 22px;
+  }
+
+
+  /* MÉTODO */
+
+  .cm-econ-method {
+    padding-bottom: 40px;
+  }
+
+  .cm-econ-method-top,
+  .cm-econ-levels-head,
+  .cm-econ-learning-top,
+  .cm-econ-areas-masthead {
+    display: block;
+  }
+
+  .cm-econ-method-heading,
+  .cm-econ-levels-head h2,
+  .cm-econ-learning-top h2,
+  .cm-econ-areas-masthead h2 {
+    margin-top: 10px;
+  }
+
+  .cm-econ-method-heading h2 {
+    font-size: 32px;
+    line-height: 1.02;
+  }
+
+  .cm-econ-deck {
+    margin-top: 11px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .cm-econ-method-grid {
+    display: block;
+    margin-top: 24px;
+  }
+
+  .cm-econ-method-copy p {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .cm-econ-method-figure {
+    margin-top: 22px;
+  }
+
+  .cm-econ-method-figure img {
+    height: 195px;
+  }
+
+  .cm-econ-method-signature {
+    margin-top: 20px;
+    font-size: 8px;
+  }
+
+
+  /* NIVELES */
+
+  .cm-econ-levels {
+    padding: 40px 0;
+  }
+
+  .cm-econ-levels-head h2 {
+    font-size: 29px;
+  }
+
+  .cm-econ-levels-strip {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .cm-econ-level-item {
+    padding: 16px 0;
+  }
+
+  .cm-econ-level-item + .cm-econ-level-item {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid #c8c8c8;
+  }
+
+  .cm-econ-level-item p {
+    max-width: 100%;
+    margin-top: 10px;
+    font-size: 10.5px;
+  }
+
+  .cm-econ-principle {
+    display: block;
+    margin-top: 22px;
+    padding-top: 18px;
+  }
+
+  .cm-econ-principle-body {
+    margin-top: 10px;
+  }
+
+  .cm-econ-principle-body blockquote {
+    font-size: 20px;
+  }
+
+  .cm-econ-principle-body p {
+    font-size: 10.5px;
+  }
+
+
+  /* IDENTIDAD */
+
+  .cm-econ-identity {
+    padding: 40px 0;
+  }
+
+  .cm-econ-identity-header {
+    display: block;
+  }
+
+  .cm-econ-identity-header h2 {
+    margin-top: 10px;
+    font-size: 31px;
+  }
+
+  .cm-econ-identity-mark {
+    margin-top: 13px;
+    text-align: left;
+  }
+
+  .cm-econ-identity-main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 23px;
+    gap: 22px;
+  }
+
+  .cm-econ-identity-copy h3 {
+    font-size: 21px;
+  }
+
+  .cm-econ-identity-copy p {
+    font-size: 11px;
+  }
+
+  .cm-econ-identity-figure img {
+    height: 190px;
+  }
+
+  .cm-econ-facts {
+    display: block;
+    margin-top: 25px;
+  }
+
+  .cm-econ-fact {
+    padding: 15px 0 16px;
+  }
+
+  .cm-econ-fact + .cm-econ-fact {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid #c8c8c8;
+  }
+
+  .cm-econ-fact strong {
+    font-size: 21px;
+  }
+
+
+  /* APRENDIZAJE */
+
+  .cm-econ-learning {
+    padding: 40px 0;
+  }
+
+  .cm-econ-learning-top h2 {
+    font-size: 30px;
+  }
+
+  .cm-econ-learning-intro {
+    display: block;
+    margin-top: 22px;
+  }
+
+  .cm-econ-learning-copy {
+    margin-top: 10px;
+  }
+
+  .cm-econ-learning-copy h3 {
+    font-size: 21px;
+  }
+
+  .cm-econ-learning-copy p {
+    font-size: 11px;
+  }
+
+  .cm-econ-principles {
+    margin-top: 25px;
+  }
+
+  .cm-econ-principles article {
+    grid-template-columns: 35px minmax(0, 1fr);
+    gap: 10px;
+    padding: 15px 0 17px;
+  }
+
+  .cm-econ-principles h3 {
+    font-size: 18px;
+  }
+
+  .cm-econ-principles p {
+    font-size: 10.5px;
+  }
+
+  .cm-econ-learning-note {
+    margin: 17px 0 0 45px;
+    font-size: 11px;
+  }
+
+
+  /* ÁREAS */
+
+  .cm-econ-areas {
+    padding-top: 40px;
+  }
+
+  .cm-econ-areas-masthead {
+    padding-bottom: 21px;
+  }
+
+  .cm-econ-areas-masthead h2 {
+    font-size: 31px;
+    line-height: 1.02;
+  }
+
+  .cm-econ-areas-masthead p {
+    margin-top: 11px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  /*
+     LOS TRES MÓDULOS PASAN A SER
+     PEQUEÑOS BLOQUES EDITORIALES
+     UNO DEBAJO DEL OTRO.
+  */
+
+  .cm-econ-topic-grid {
+    display: block;
+  }
+
+  .cm-econ-topic {
+    padding: 17px 0 19px;
+  }
+
+  .cm-econ-topic + .cm-econ-topic {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid #c7c7c7;
+  }
+
+  .cm-econ-topic-head {
+    padding-bottom: 9px;
+  }
+
+  .cm-econ-topic-head strong {
+    text-align: left;
+  }
+
+  .cm-econ-topic h3 {
+    margin-top: 13px;
+    font-size: 20px;
+    line-height: 1.08;
+  }
+
+  .cm-econ-topic p {
+    margin-top: 9px;
+    font-size: 10.5px;
+    line-height: 1.58;
+  }
+
+  .cm-econ-topic-foot {
+    margin-top: 13px;
+    font-size: 7.5px;
+  }
+
+}
+
+
+
+/* =========================================================
+   SOBRE CÓDIGO MILLONARIO
+========================================================= */
+
+.cm-sobre-heading {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.cm-sobre-heading .subtitulo-editorial {
+  margin: 0 0 30px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -.02em;
+
+  color: #111;
+}
+
+@media (max-width: 700px) {
+
+  .cm-sobre-heading {
+    padding: 0 16px;
+  }
+
+  .cm-sobre-heading .subtitulo-editorial {
+    margin-bottom: 22px;
+    font-size: 18px;
+    line-height: 1.15;
+  }
+
+}
