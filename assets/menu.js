@@ -1036,7 +1036,9 @@
 
   left: 20px;
 
-  width: 110px;
+  width: 75px;
+
+  height: auto;
 
   display: flex;
 
@@ -1051,11 +1053,11 @@
 
   display: block;
 
-  width: 110px;
+  width: 75px;
 
   height: auto;
 
-  max-width: 110px;
+  max-width: 75px;
 
   object-fit: contain;
 
