@@ -950,8 +950,7 @@ img{width:100%;display:block}
 
 
 <style>
-
-  /* =====================================================
+/* =====================================================
      RESET
   ===================================================== */
 
@@ -1034,43 +1033,6 @@ img{width:100%;display:block}
 
 
   /* =====================================================
-     BÚSQUEDA
-  ===================================================== */
-
-  .cm-archivo-search {
-    margin: 30px 0 20px;
-    display: flex;
-    border-bottom: 1px solid #111111;
-    max-width: 620px;
-  }
-
-  .cm-archivo-search input {
-    width: 100%;
-    height: 48px;
-    border: 0;
-    outline: none;
-    background: transparent;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    color: #111111;
-  }
-
-  .cm-archivo-search input::placeholder {
-    color: #777777;
-  }
-
-  .cm-archivo-search-icon {
-    width: 45px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 500;
-  }
-
-
-  /* =====================================================
      CATEGORÍAS
   ===================================================== */
 
@@ -1085,12 +1047,16 @@ img{width:100%;display:block}
 
   .cm-archivo-category {
     position: relative;
+    border: 0;
+    background: transparent;
+    font-family: "Inter", sans-serif;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     color: #555555;
-    padding-bottom: 6px;
+    padding: 0 0 6px;
+    cursor: pointer;
     transition: color .2s ease;
   }
 
@@ -1430,25 +1396,65 @@ img{width:100%;display:block}
     margin-top: 60px;
     padding-top: 25px;
     border-top: 1px solid #111111;
+    flex-wrap: wrap;
   }
 
-  .cm-pagination a {
+  .cm-pagination a,
+  .cm-pagination button {
     min-width: 35px;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #d0d0d0;
+    background: #ffffff;
+    color: #111111;
+    font-family: "Inter", sans-serif;
     font-size: 10px;
     font-weight: 700;
+    cursor: pointer;
     transition: all .2s ease;
+    padding: 0 10px;
   }
 
   .cm-pagination a:hover,
-  .cm-pagination a.active {
+  .cm-pagination button:hover:not(:disabled) {
     background: #111111;
     color: #ffffff;
     border-color: #111111;
+  }
+
+  .cm-pagination a.active,
+  .cm-pagination button.active {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+  }
+
+  .cm-pagination button:disabled {
+    color: #aaaaaa;
+    background: #f7f7f7;
+    border-color: #e4e4e4;
+    cursor: default;
+  }
+
+  .cm-pagination-prev,
+  .cm-pagination-next {
+    min-width: 92px !important;
+  }
+
+  .cm-pagination-prev span,
+  .cm-pagination-next span {
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  .cm-pagination-prev span {
+    margin-right: 6px;
+  }
+
+  .cm-pagination-next span {
+    margin-left: 6px;
   }
 
 
@@ -1629,6 +1635,28 @@ img{width:100%;display:block}
 
     .cm-pagination {
       margin-top: 45px;
+      gap: 5px;
+    }
+
+    .cm-pagination a,
+    .cm-pagination button {
+      min-width: 34px;
+      height: 34px;
+      padding: 0 8px;
+    }
+
+    .cm-pagination-prev,
+    .cm-pagination-next {
+      min-width: 34px !important;
+      width: 34px;
+      padding: 0 !important;
+      font-size: 0 !important;
+    }
+
+    .cm-pagination-prev span,
+    .cm-pagination-next span {
+      margin: 0;
+      font-size: 14px;
     }
 
   }
@@ -1648,530 +1676,276 @@ img{width:100%;display:block}
     }
 
   }
+  </style>
+</head>
 
-</style>
+<body>
 
+  <!-- TODO EL CONTENIDO DE LA PÁGINA AQUÍ -->
 
-
-  <!-- =====================================================
-       ARCHIVO EDITORIAL · CÓDIGO MILLONARIO
-  ===================================================== -->
-
-  <main class="cm-archivo">
+<main class="cm-archivo">
 
 
-    <!-- ===================================================
-         CABECERA
-    =================================================== -->
+  <!-- ===================================================
+       CABECERA
+  =================================================== -->
 
-    <section class="cm-archivo-heading">
+  <section class="cm-archivo-heading">
+
+    <div>
+
+      <div class="cm-archivo-kicker">
+        Código Millonario
+      </div>
+
+      <h1 class="cm-archivo-title">
+        Archivo Editorial
+      </h1>
+
+    </div>
+
+    <p class="cm-archivo-intro">
+      Artículos, análisis y contexto sobre riqueza, negocios,
+      educación financiera y las ideas detrás de la construcción
+      de patrimonio.
+    </p>
+
+  </section>
 
 
-      <div>
+<!-- ===================================================
+     TEMAS EDITORIALES
+=================================================== -->
 
-        <div class="cm-archivo-kicker">
-          Código Millonario
-        </div>
+<div class="cm-archivo-categories" aria-label="Temas editoriales">
 
-        <h1 class="cm-archivo-title">
-          Archivo Editorial
-        </h1>
+  <span class="cm-archivo-category active">
+    Todos
+  </span>
+
+  <span class="cm-archivo-category">
+    Educación Financiera
+  </span>
+
+  <span class="cm-archivo-category">
+    Mentalidad
+  </span>
+
+  <span class="cm-archivo-category">
+    Negocios
+  </span>
+
+  <span class="cm-archivo-category">
+    Mundo Millonario
+  </span>
+
+</div>
+
+
+  <!-- ===================================================
+       DESTACADOS
+  =================================================== -->
+
+  <section>
+
+    <div class="cm-featured-heading">
+
+      <span class="cm-section-label">
+        Selección editorial
+      </span>
+
+      <span class="cm-section-count">
+        Artículos destacados
+      </span>
+
+    </div>
+
+
+    <div class="cm-featured">
+
+
+      <!-- ARTÍCULO PRINCIPAL -->
+
+      <article class="cm-featured-main">
+
+        <a href="./blog/negocios/negocios-millonarios-ocultos.html">
+
+          <img
+            src="./assets/png/negocios-que-hacen-ricos-a-millonarios.webp"
+            alt="Negocios y riqueza"
+          >
+
+          <div class="cm-featured-main-content">
+
+            <div class="cm-featured-meta">
+              Negocios · Análisis
+            </div>
+
+            <h2>
+              Negocios que los millonarios utilizan para generar ingresos
+            </h2>
+
+            <p>
+              Los sectores tradicionales, aburridos y de alta 
+              demanda que las grandes fortunas prefieren operar en silencio, 
+              lejos de las modas y los reflectores.
+
+            </p>
+
+          </div>
+
+        </a>
+
+      </article>
+
+
+
+      <!-- ARTÍCULOS SECUNDARIOS -->
+
+      <div class="cm-featured-side">
+
+
+        <!-- DESTACADO 2 -->
+
+        <article class="cm-featured-small">
+
+          <a href="./blog/psicologia-del-dinero/3-cosas-millonarios-entienden-dinero.html">
+
+            <img
+              src="./assets/png/millonarios-entienden-sobre-el-dinero.webp"
+              alt="Educación financiera"
+            >
+
+            <div class="cm-featured-small-content">
+
+              <div class="cm-featured-meta">
+                Educación Financiera
+              </div>
+
+              <h3>
+                3 cosas que los millonarios entienden sobre el dinero
+              </h3>
+
+            </div>
+
+          </a>
+
+        </article>
+
+
+
+        <!-- DESTACADO 3 -->
+
+        <article class="cm-featured-small">
+
+          <a href="./blog/mentalidad-de-exito/31-frases-sobre-ganar-dinero-riqueza-y-patrimonio.html">
+
+            <img
+              src="./assets/png/31-frases-sobre-ganar-dinero-riqueza-patrimonio.webp"
+              alt="Mundo Millonario"
+            >
+
+            <div class="cm-featured-small-content">
+
+              <div class="cm-featured-meta">
+                Mundo Millonario
+              </div>
+
+              <h3>
+                31 frases sobre ganar dinero, riqueza y patrimonio
+              </h3>
+
+            </div>
+
+          </a>
+
+        </article>
+
 
       </div>
 
-      <p class="cm-archivo-intro">
-        Artículos, análisis y contexto sobre riqueza, negocios,
-        educación financiera y las ideas detrás de la construcción
-        de patrimonio.
-      </p>
+    </div>
 
-    </section>
+  </section>
 
 
 
-    <!-- ===================================================
-         BUSCADOR
-    =================================================== -->
+  <!-- ===================================================
+       TODOS LOS ARTÍCULOS
+  =================================================== -->
 
-    <div class="cm-archivo-search">
+  <section>
 
-      <input
-        type="search"
-        placeholder="Buscar artículos..."
-        aria-label="Buscar artículos"
-      >
+    <div class="cm-archive-header">
 
-      <div class="cm-archivo-search-icon">
-        /
-      </div>
+      <h2>
+       Contenido editorial
+      </h2>
+
+      <span class="cm-archive-total">
+        124 artículos
+      </span>
 
     </div>
 
 
 
-    <!-- ===================================================
-         CATEGORÍAS
-    =================================================== -->
+    <!-- =================================================
+         TODOS LOS ARTÍCULOS
+         AÑADE LOS NUEVOS ARTÍCULOS AQUÍ
+         LA PAGINACIÓN LOS REPARTIRÁ AUTOMÁTICAMENTE
+    ================================================= -->
 
-    <nav class="cm-archivo-categories" aria-label="Categorías">
+    <div class="cm-articles-grid" id="cmArticlesGrid">
+      <!-- Los artículos se cargan automáticamente desde /assets/js/articulos.js -->
+    </div>
 
-      <a href="#" class="cm-archivo-category active">
-        Todos
-      </a>
 
-      <a href="#" class="cm-archivo-category">
-        Educación Financiera
-      </a>
 
-      <a href="#" class="cm-archivo-category">
-        Mentalidad
-      </a>
+    <!-- =================================================
+         PAGINACIÓN AUTOMÁTICA
+    ================================================= -->
 
-      <a href="#" class="cm-archivo-category">
-        Negocios
-      </a>
+    <nav
+      class="cm-pagination"
+      id="cmPagination"
+      aria-label="Paginación"
+    >
 
-      <a href="#" class="cm-archivo-category">
-        Mundo Millonario
-      </a>
+      <button
+        type="button"
+        class="cm-pagination-prev"
+        id="cmPaginationPrev"
+        aria-label="Página anterior"
+      >
+        <span>←</span>
+        <b>Anterior</b>
+      </button>
 
-      <a href="#" class="cm-archivo-category">
-        Herramientas
-      </a>
+      <div
+        id="cmPaginationNumbers"
+        style="display:flex;align-items:center;justify-content:center;gap:7px;"
+      ></div>
 
-      <a href="#" class="cm-archivo-category">
-        Opiniones
-      </a>
+      <button
+        type="button"
+        class="cm-pagination-next"
+        id="cmPaginationNext"
+        aria-label="Página siguiente"
+      >
+        <b>Siguiente</b>
+        <span>→</span>
+      </button>
 
     </nav>
 
 
+  </section>
 
-    <!-- ===================================================
-         DESTACADOS
-    =================================================== -->
+</main>
 
-    <section>
-
-      <div class="cm-featured-heading">
-
-        <span class="cm-section-label">
-          Selección editorial
-        </span>
-
-        <span class="cm-section-count">
-          Artículos destacados
-        </span>
-
-      </div>
-
-
-      <div class="cm-featured">
-
-
-        <!-- ARTÍCULO PRINCIPAL -->
-
-        <article class="cm-featured-main">
-
-          <a href="#">
-
-            <img
-              src="/assets/img/articulo-destacado.jpg"
-              alt="Negocios y riqueza"
-            >
-
-            <div class="cm-featured-main-content">
-
-              <div class="cm-featured-meta">
-                Negocios · Análisis
-              </div>
-
-              <h2>
-                Cómo los millonarios empiezan un negocio realmente rentable
-              </h2>
-
-              <p>
-                Modelos de negocio, activos y decisiones que ayudan a
-                entender cómo se construyen empresas con capacidad de
-                generar valor a largo plazo.
-              </p>
-
-            </div>
-
-          </a>
-
-        </article>
-
-
-
-        <!-- ARTÍCULOS SECUNDARIOS -->
-
-        <div class="cm-featured-side">
-
-
-          <!-- DESTACADO 2 -->
-
-          <article class="cm-featured-small">
-
-            <a href="#">
-
-              <img
-                src="/assets/img/articulo-destacado-2.jpg"
-                alt="Educación financiera"
-              >
-
-              <div class="cm-featured-small-content">
-
-                <div class="cm-featured-meta">
-                  Educación Financiera
-                </div>
-
-                <h3>
-                  30 reglas del dinero que conviene entender antes de ganar más
-                </h3>
-
-              </div>
-
-            </a>
-
-          </article>
-
-
-
-          <!-- DESTACADO 3 -->
-
-          <article class="cm-featured-small">
-
-            <a href="#">
-
-              <img
-                src="/assets/img/articulo-destacado-3.jpg"
-                alt="Mundo Millonario"
-              >
-
-              <div class="cm-featured-small-content">
-
-                <div class="cm-featured-meta">
-                  Mundo Millonario
-                </div>
-
-                <h3>
-                  Negocios que los millonarios usan para ganar dinero
-                </h3>
-
-              </div>
-
-            </a>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         TODOS LOS ARTÍCULOS
-    =================================================== -->
-
-    <section>
-
-      <div class="cm-archive-header">
-
-        <h2>
-          Todos los artículos
-        </h2>
-
-        <span class="cm-archive-total">
-          124 artículos
-        </span>
-
-      </div>
-
-
-
-      <div class="cm-articles-grid">
-
-
-        <!-- =================================================
-             ARTÍCULO 01
-        ================================================= -->
-
-        <article class="cm-article">
-
-          <a href="#">
-
-            <div class="cm-article-image">
-
-              <img
-                src="/assets/img/articulo-01.jpg"
-                alt="Negocios millonarios"
-                loading="lazy"
-              >
-
-            </div>
-
-            <span class="cm-article-category">
-              Negocios · Análisis
-            </span>
-
-            <h3>
-              Cómo los millonarios empiezan un negocio realmente rentable
-            </h3>
-
-            <p class="cm-article-description">
-              Una mirada a los modelos, activos y decisiones que pueden
-              convertir una idea en un negocio con capacidad de crecer.
-            </p>
-
-            <div class="cm-article-date">
-              28 septiembre 2026
-            </div>
-
-          </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARTÍCULO 02
-        ================================================= -->
-
-        <article class="cm-article">
-
-          <a href="#">
-
-            <div class="cm-article-image">
-
-              <img
-                src="/assets/img/articulo-02.jpg"
-                alt="Reglas del dinero"
-                loading="lazy"
-              >
-
-            </div>
-
-            <span class="cm-article-category">
-              Educación Financiera
-            </span>
-
-            <h3>
-              30 reglas del dinero que conviene entender antes de ganar más
-            </h3>
-
-            <p class="cm-article-description">
-              Principios relacionados con la administración del dinero,
-              el ahorro, el consumo y la construcción de patrimonio.
-            </p>
-
-            <div class="cm-article-date">
-              26 septiembre 2026
-            </div>
-
-          </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARTÍCULO 03
-        ================================================= -->
-
-        <article class="cm-article">
-
-          <a href="#">
-
-            <div class="cm-article-image">
-
-              <img
-                src="/assets/img/articulo-03.jpg"
-                alt="Millonarios y negocios"
-                loading="lazy"
-              >
-
-            </div>
-
-            <span class="cm-article-category">
-              Mundo Millonario
-            </span>
-
-            <h3>
-              Negocios que los millonarios usan para ganar dinero
-            </h3>
-
-            <p class="cm-article-description">
-              Modelos empresariales, propiedad intelectual y productos
-              que muestran diferentes caminos para construir valor.
-            </p>
-
-            <div class="cm-article-date">
-              24 septiembre 2026
-            </div>
-
-          </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARTÍCULO 04
-        ================================================= -->
-
-        <article class="cm-article">
-
-          <a href="#">
-
-            <div class="cm-article-image">
-
-              <img
-                src="/assets/img/articulo-04.jpg"
-                alt="Riqueza y dinero"
-                loading="lazy"
-              >
-
-            </div>
-
-            <span class="cm-article-category">
-              Mentalidad
-            </span>
-
-            <h3>
-              48 frases reales que muestran cómo piensan algunas personas ricas
-            </h3>
-
-            <p class="cm-article-description">
-              Ideas y declaraciones documentadas que permiten observar
-              diferentes formas de entender el dinero, el trabajo y el patrimonio.
-            </p>
-
-            <div class="cm-article-date">
-              22 septiembre 2026
-            </div>
-
-          </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARTÍCULO 05
-        ================================================= -->
-
-        <article class="cm-article">
-
-          <a href="#">
-
-            <div class="cm-article-image">
-
-              <img
-                src="/assets/img/articulo-05.jpg"
-                alt="Rico y millonario"
-                loading="lazy"
-              >
-
-            </div>
-
-            <span class="cm-article-category">
-              Educación Financiera
-            </span>
-
-            <h3>
-              12 diferencias entre ser rico y ser millonario
-            </h3>
-
-            <p class="cm-article-description">
-              Dos conceptos que suelen utilizarse como sinónimos, pero
-              que pueden representar realidades financieras diferentes.
-            </p>
-
-            <div class="cm-article-date">
-              20 septiembre 2026
-            </div>
-
-          </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARTÍCULO 06
-        ================================================= -->
-
-        <article class="cm-article">
-
-          <a href="#">
-
-            <div class="cm-article-image">
-
-              <img
-                src="/assets/img/articulo-06.jpg"
-                alt="Ideas de negocios"
-                loading="lazy"
-              >
-
-            </div>
-
-            <span class="cm-article-category">
-              Negocios
-            </span>
-
-            <h3>
-              22 ideas de negocios millonarios para 2027
-            </h3>
-
-            <p class="cm-article-description">
-              Diferentes modelos de negocio y sectores que pueden servir
-              como punto de partida para analizar oportunidades empresariales.
-            </p>
-
-            <div class="cm-article-date">
-              18 septiembre 2026
-            </div>
-
-          </a>
-
-        </article>
-
-
-
-      </div>
-
-
-
-      <!-- =================================================
-           PAGINACIÓN
-      ================================================= -->
-
-      <nav class="cm-pagination" aria-label="Paginación">
-
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">→</a>
-
-      </nav>
-
-
-    </section>
-
-  </main>
-
-
-
-
-
-
+<script src="./assets/js/articulos.js"></script>
+<script src="./assets/js/archivo.js"></script>
 
 
 
@@ -2333,8 +2107,6 @@ img{width:100%;display:block}
 }
 
 </style>
-
-
 
 
 
@@ -3383,15 +3155,16 @@ con el dinero y tu futuro financiero.
     </a>
 
         <!-- Noticia 3 -->
-    <a href="./blog/negocios/negocios-millonarios-ocultos.html" class="news-item">
+    <a href="./blog/mentalidad-de-exito/index.html" class="news-item">
       <div class="news-thumb">
-        <img src="./assets/png/negocios-que-hacen-ricos-a-millonarios.webp" alt="">
+        <img src="./assets/png/el-exito-empieza-en-la-mente.webp" alt="">
       </div>
       <div class="news-text">
-        <h3>¿En qué negocios invierten los ricos para construir y conservar su patrimonio?</h3>
+        <h3>Claves de la Mentalidad que Te Llevan al Éxito: Piensa y Actúa Como un Líder de Verdad</h3>
         <p>
-La riqueza rara vez aparece en lo visible; los negocios silenciosos son los que sostienen fortunas. 
-No busques lo que brilla hoy, busca lo que resuelve problemas reales y se mantiene en el tiempo.
+El éxito sostenible nace de decisiones claras, disciplina y visión a largo plazo
+Una mentalidad fuerte permite actuar con intención, aprender de los errores y construir 
+resultados sólidos mediante hábitos consistentes y enfoque estratégico.
         </p>
       </div>
     </a>
