@@ -99,6 +99,10 @@
             Mundo Millonario
           </a>
 
+          <a href="./blog/biografia-de-millonarios/index.html">
+           Biografías de Millonarios
+          </a>
+
         </div>
 
       </div>
@@ -165,25 +169,11 @@
 
       <div class="cm-mobile-links">
 
-        <a href="/educacion-financiera.html">
-          Dinero
-        </a>
-
-        <a href="/ahorro.html">
-          Ahorro
-        </a>
-
-        <a href="/psicologia-del-dinero.html">
-          Psicología del Dinero
-        </a>
-
-        <a href="/inversiones.html">
-          Inversiones
-        </a>
-
-        <a href="/Herramientas.html">
-          Herramientas
-        </a>
+          <a href="./index.html">Dinero</a>
+          <a href="./blog/ahorro/index.html">Ahorro</a>
+          <a href="./blog/psicologia-del-dinero/index.html">Psicología del Dinero</a>
+          <a href="./blog/inversiones/index.html">Inversiones</a>
+          <a href="./herramientas.html">Herramientas</a>
 
       </div>
 
@@ -202,21 +192,8 @@
 
       <div class="cm-mobile-links">
 
-        <a href="/negocios.html">
-          Negocios
-        </a>
-
-        <a href="/modelos-de-negocio.html">
-          Modelos de Negocio
-        </a>
-
-        <a href="/emprendimientos.html">
-          Emprendimientos
-        </a>
-
-        <a href="/productos.html">
-          Productos
-        </a>
+          <a href="./blog/negocios/index.html">Negocios</a>
+          <a href="./tienda.html">Productos</a>
 
       </div>
 
@@ -235,19 +212,11 @@
 
       <div class="cm-mobile-links">
 
-        <a href="/mundo-millonario.html">
-          Mundo Millonario
-        </a>
+          <a href="./blog/mundo-millonario/index.html">
+            Mundo Millonario
+          </a>
 
-        <a href="/millonarios.html">
-          Millonarios
-        </a>
-
-        <a href="/grandes-fortunas.html">
-          Grandes Fortunas
-        </a>
-
-        <a href="/biografias-de-millonarios.html">
+        <a href="./blog/biografia-de-millonarios/index.html">
           Biografías de Millonarios
         </a>
 
