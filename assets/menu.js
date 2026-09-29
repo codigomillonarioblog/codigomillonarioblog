@@ -209,20 +209,6 @@
 
 
     <!-- =====================================================
-         CUADRO DEL LOGO · DEBAJO DEL MENÚ
-    ===================================================== -->
-
-    <div class="cm-logo-box">
-
-      <img
-        src="/assets/img/logo-cm.jpeg"
-        alt="Código Millonario"
-        class="cm-square-logo">
-
-    </div>
-
-
-    <!-- =====================================================
          MENÚ MOBILE
     ===================================================== -->
 
@@ -384,8 +370,8 @@
       <div class="cm-secciones-logo">
 
         <img
-          src="/assets/img/codigo-millonario-logo.png"
-          alt="Código Millonario">
+          src="/assets/img/logo-cm.jpeg"
+          alt="">
 
       </div>
 
@@ -593,52 +579,6 @@
   line-height: 1;
 
   white-space: nowrap;
-
-}
-
-
-/* =====================================================
-   CUADRO DEL LOGO
-===================================================== */
-
-.cm-logo-box {
-
-  position: absolute;
-
-  top: 100%;
-
-  left: 10px;
-
-  width: 28px;
-
-  height: 28px;
-
-  background: #000000;
-
-  border: 1px solid #1f1f1f;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  overflow: hidden;
-
-  z-index: 1001;
-
-}
-
-
-.cm-square-logo {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
 
 }
 
