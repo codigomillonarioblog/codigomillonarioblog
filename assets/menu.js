@@ -58,11 +58,11 @@
 
         <div class="cm-dropdown-menu">
 
-          <a href="./index.html">Dinero</a>
-          <a href="./blog/ahorro/index.html">Ahorro</a>
-          <a href="./blog/psicologia-del-dinero/index.html">Psicología del Dinero</a>
-          <a href="./blog/inversiones/index.html">Inversiones</a>
-          <a href="./herramientas.html">Herramientas</a>
+          <a href="/index.html">Dinero</a>
+          <a href="/blog/ahorro/index.html">Ahorro</a>
+          <a href="/blog/psicologia-del-dinero/index.html">Psicología del Dinero</a>
+          <a href="/blog/inversiones/index.html">Inversiones</a>
+          <a href="/herramientas.html">Herramientas</a>
 
         </div>
 
@@ -78,8 +78,8 @@
 
         <div class="cm-dropdown-menu">
 
-          <a href="./blog/negocios/index.html">Negocios</a>
-          <a href="./tienda.html">Productos</a>
+          <a href="/blog/negocios/index.html">Negocios</a>
+          <a href="/tienda.html">Productos</a>
 
         </div>
 
@@ -95,11 +95,11 @@
 
         <div class="cm-dropdown-menu">
 
-          <a href="./blog/mundo-millonario/index.html">
+          <a href="/blog/mundo-millonario/index.html">
             Mundo Millonario
           </a>
 
-          <a href="./blog/biografia-de-millonarios/index.html">
+          <a href="/blog/biografia-de-millonarios/index.html">
            Biografías de Millonarios
           </a>
 
@@ -169,11 +169,11 @@
 
       <div class="cm-mobile-links">
 
-          <a href="./index.html">Dinero</a>
-          <a href="./blog/ahorro/index.html">Ahorro</a>
-          <a href="./blog/psicologia-del-dinero/index.html">Psicología del Dinero</a>
-          <a href="./blog/inversiones/index.html">Inversiones</a>
-          <a href="./herramientas.html">Herramientas</a>
+          <a href="/index.html">Dinero</a>
+          <a href="/blog/ahorro/index.html">Ahorro</a>
+          <a href="/blog/psicologia-del-dinero/index.html">Psicología del Dinero</a>
+          <a href="/blog/inversiones/index.html">Inversiones</a>
+          <a href="/herramientas.html">Herramientas</a>
 
       </div>
 
@@ -192,8 +192,8 @@
 
       <div class="cm-mobile-links">
 
-          <a href="./blog/negocios/index.html">Negocios</a>
-          <a href="./tienda.html">Productos</a>
+          <a href="/blog/negocios/index.html">Negocios</a>
+          <a href="/tienda.html">Productos</a>
 
       </div>
 
@@ -212,11 +212,11 @@
 
       <div class="cm-mobile-links">
 
-          <a href="./blog/mundo-millonario/index.html">
+          <a href="/blog/mundo-millonario/index.html">
             Mundo Millonario
           </a>
 
-        <a href="./blog/biografia-de-millonarios/index.html">
+        <a href="/blog/biografia-de-millonarios/index.html">
           Biografías de Millonarios
         </a>
 
