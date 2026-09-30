@@ -370,7 +370,7 @@
       <div class="cm-secciones-logo">
 
         <img
-          src="/assets/img/logo-cm.jpeg"
+          src="/assets/img/logo-cm.png"
           alt="">
 
       </div>
@@ -1029,38 +1029,22 @@
 ===================================================== */
 
 .cm-secciones-logo {
-
   position: absolute;
-
-  top: 25px;
-
+  top: 22px;
   left: 20px;
-
-  width: 75px;
-
+  width: 45px;
   height: auto;
-
   display: flex;
-
   align-items: center;
-
   justify-content: flex-start;
-
 }
 
-
 .cm-secciones-logo img {
-
   display: block;
-
-  width: 75px;
-
+  width: 45px;
   height: auto;
-
-  max-width: 75px;
-
+  max-width: 45px;
   object-fit: contain;
-
 }
 
 
