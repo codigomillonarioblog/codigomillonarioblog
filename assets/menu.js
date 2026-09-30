@@ -1030,9 +1030,9 @@
 
 .cm-secciones-logo {
   position: absolute;
-  top: 22px;
-  left: 20px;
-  width: 45px;
+  top: 24px;
+  left: 40px;
+  width: 32px;
   height: auto;
   display: flex;
   align-items: center;
@@ -1041,9 +1041,9 @@
 
 .cm-secciones-logo img {
   display: block;
-  width: 45px;
+  width: 32px;
   height: auto;
-  max-width: 45px;
+  max-width: 32px;
   object-fit: contain;
 }
 
