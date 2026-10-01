@@ -6,6 +6,7 @@
     /* =========================================================
        CÓDIGO MILLONARIO
        FIRMA EDITORIAL + COMPARTIR
+       DISEÑO EDITORIAL
        ========================================================= */
 
 
@@ -23,6 +24,7 @@
             "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css";
 
         document.head.appendChild(link);
+
     }
 
 
@@ -42,75 +44,35 @@
 
     .cm-editorial-signature {
 
-        margin: 90px 0 42px;
+        margin: 82px 0 34px;
 
         padding: 0;
 
-        width: 100%;
+        max-width: 620px;
 
     }
 
+
+    /* Línea editorial */
 
     .cm-editorial-signature__line {
 
-        width: 60px;
+        width: 42px;
 
         height: 1px;
 
-        background: #d6d3d1;
+        background: #b8b4ae;
 
-        margin-bottom: 18px;
+        margin: 0 0 15px;
 
     }
 
+
+    /* Nombre del medio */
 
     .cm-editorial-signature__name {
 
-        font-family:
-            "Cormorant Garamond",
-            Georgia,
-            serif;
-
-        font-size: 24px;
-
-        line-height: 1.2;
-
-        color: #292524;
-
-        font-style: italic;
-
-        margin: 0 0 6px;
-
-    }
-
-
-    .cm-editorial-signature__label {
-
-        font-family:
-            Inter,
-            Arial,
-            sans-serif;
-
-        font-size: 10px;
-
-        line-height: 1.4;
-
-        letter-spacing: 2px;
-
-        text-transform: uppercase;
-
-        color: #78716c;
-
-        margin: 0 0 14px;
-
-    }
-
-
-    .cm-editorial-signature__text {
-
-        margin: 0;
-
-        max-width: 520px;
+        margin: 0 0 5px;
 
         font-family:
             Inter,
@@ -119,29 +81,82 @@
 
         font-size: 13px;
 
-        line-height: 1.8;
+        line-height: 1.3;
 
-        color: #57534e;
+        font-weight: 600;
+
+        letter-spacing: .2px;
+
+        color: #292929;
+
+    }
+
+
+    /* Categoría editorial */
+
+    .cm-editorial-signature__label {
+
+        margin: 0 0 10px;
+
+        font-family:
+            Inter,
+            Arial,
+            sans-serif;
+
+        font-size: 9px;
+
+        line-height: 1.3;
+
+        font-weight: 500;
+
+        letter-spacing: 1.8px;
+
+        text-transform: uppercase;
+
+        color: #8a8680;
+
+    }
+
+
+    /* Texto */
+
+    .cm-editorial-signature__text {
+
+        margin: 0;
+
+        max-width: 590px;
+
+        font-family:
+            Inter,
+            Arial,
+            sans-serif;
+
+        font-size: 11px;
+
+        line-height: 1.65;
+
+        font-weight: 400;
+
+        letter-spacing: .05px;
+
+        color: #77736d;
 
     }
 
 
     /* =====================================================
-       BLOQUE DE COMPARTIR
+       BLOQUE COMPARTIR
        ===================================================== */
 
     .cm-share-editorial {
 
         width: 100%;
 
-        margin: 0 0 70px;
+        margin: 0 0 68px;
 
-        padding-top: 0;
+        padding: 14px 0 0;
 
-        font-family:
-            Inter,
-            Arial,
-            sans-serif;
+        border-top: 1px solid #e4e1dc;
 
     }
 
@@ -152,112 +167,62 @@
 
         align-items: center;
 
-        gap: 16px;
+        justify-content: space-between;
 
-        flex-wrap: wrap;
+        gap: 20px;
 
     }
 
 
     /* =====================================================
-       TEXTO COMPARTIR
+       ETIQUETA
        ===================================================== */
 
     .cm-share-editorial__label {
 
-        display: inline-block;
+        display: flex;
+
+        align-items: center;
+
+        gap: 9px;
 
         font-family:
             Inter,
             Arial,
             sans-serif;
 
-        font-size: 11px;
+        font-size: 9px;
 
         line-height: 1;
 
         font-weight: 600;
 
-        letter-spacing: 1.4px;
+        letter-spacing: 1.8px;
 
         text-transform: uppercase;
 
-        color: #57534e;
+        color: #68645f;
 
         white-space: nowrap;
 
     }
 
 
-    /* =====================================================
-       CONTENEDOR ICONOS
-       ===================================================== */
+    /* Pequeño indicador editorial */
 
-    .cm-share-editorial__icons {
+    .cm-share-editorial__label::before {
 
-        display: flex;
+        content: "";
 
-        align-items: center;
+        display: block;
 
-        gap: 7px;
+        width: 5px;
 
-        flex-wrap: wrap;
+        height: 5px;
 
-    }
+        background: #292929;
 
-
-    /* =====================================================
-       BOTONES
-       ===================================================== */
-
-    .cm-share-editorial__icons a {
-
-        display: inline-flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        width: 34px;
-
-        height: 34px;
-
-        padding: 0;
-
-        border: 1px solid #d6d3d1;
-
-        border-radius: 0;
-
-        background: #ffffff;
-
-        color: #44403c;
-
-        text-decoration: none;
-
-        transition:
-            background-color .18s ease,
-            border-color .18s ease,
-            color .18s ease;
-
-    }
-
-
-    .cm-share-editorial__icons a:hover {
-
-        background: #292524;
-
-        border-color: #292524;
-
-        color: #ffffff;
-
-    }
-
-
-    .cm-share-editorial__icons a:focus-visible {
-
-        outline: 2px solid #a8a29e;
-
-        outline-offset: 2px;
+        border-radius: 50%;
 
     }
 
@@ -266,9 +231,81 @@
        ICONOS
        ===================================================== */
 
+    .cm-share-editorial__icons {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 17px;
+
+    }
+
+
+    /* =====================================================
+       ENLACES
+       ===================================================== */
+
+    .cm-share-editorial__icons a {
+
+        position: relative;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 18px;
+
+        height: 18px;
+
+        padding: 0;
+
+        margin: 0;
+
+        border: 0;
+
+        background: transparent;
+
+        color: #77736d;
+
+        text-decoration: none;
+
+        transition:
+            color .18s ease,
+            transform .18s ease;
+
+    }
+
+
+    .cm-share-editorial__icons a:hover {
+
+        color: #171717;
+
+        transform: translateY(-1px);
+
+    }
+
+
+    .cm-share-editorial__icons a:focus-visible {
+
+        outline: 1px solid #aaa59e;
+
+        outline-offset: 5px;
+
+    }
+
+
+    /* =====================================================
+       ICONOS FONT AWESOME
+       ===================================================== */
+
     .cm-share-editorial__icons i {
 
-        font-size: 14px;
+        display: block;
+
+        font-size: 13px;
 
         line-height: 1;
 
@@ -283,13 +320,41 @@
 
     .cm-share-editorial__x {
 
-        width: 13px;
+        display: block;
+
+        width: 12px;
+
+        height: 12px;
+
+        fill: currentColor;
+
+    }
+
+
+    /* =====================================================
+       EMAIL
+       ===================================================== */
+
+    .cm-share-editorial__icons .cm-share-email i {
+
+        font-size: 12px;
+
+    }
+
+
+    /* =====================================================
+       SEPARADOR VISUAL
+       ===================================================== */
+
+    .cm-share-editorial__separator {
+
+        width: 1px;
 
         height: 13px;
 
-        display: block;
+        background: #d9d6d1;
 
-        fill: currentColor;
+        margin: 0 1px;
 
     }
 
@@ -302,75 +367,109 @@
 
         .cm-editorial-signature {
 
-            margin: 70px 0 36px;
+            margin: 64px 0 30px;
+
+        }
+
+
+        .cm-editorial-signature__line {
+
+            width: 35px;
+
+            margin-bottom: 13px;
 
         }
 
 
         .cm-editorial-signature__name {
 
-            font-size: 22px;
+            font-size: 12px;
+
+        }
+
+
+        .cm-editorial-signature__label {
+
+            font-size: 8px;
+
+            letter-spacing: 1.6px;
+
+            margin-bottom: 9px;
 
         }
 
 
         .cm-editorial-signature__text {
 
-            font-size: 12.5px;
+            font-size: 10.5px;
 
-            line-height: 1.75;
+            line-height: 1.65;
 
         }
 
 
         .cm-share-editorial {
 
-            margin-bottom: 50px;
+            margin-bottom: 48px;
+
+            padding-top: 13px;
 
         }
 
 
         .cm-share-editorial__inner {
 
-            gap: 13px;
+            justify-content: flex-start;
+
+            gap: 20px;
+
+        }
+
+
+        .cm-share-editorial__label {
+
+            font-size: 8px;
+
+            letter-spacing: 1.5px;
 
         }
 
 
         .cm-share-editorial__icons {
 
-            gap: 6px;
+            gap: 15px;
 
         }
 
 
         .cm-share-editorial__icons a {
 
-            width: 32px;
+            width: 17px;
 
-            height: 32px;
+            height: 17px;
 
         }
 
 
         .cm-share-editorial__icons i {
 
-            font-size: 13px;
+            font-size: 12px;
 
         }
 
 
         .cm-share-editorial__x {
 
-            width: 12px;
+            width: 11px;
 
-            height: 12px;
+            height: 11px;
 
         }
 
     }
 
     `;
+
 
     document.head.appendChild(style);
 
@@ -384,8 +483,10 @@
         const signature =
             document.createElement("div");
 
+
         signature.className =
             "cm-editorial-signature";
+
 
         signature.setAttribute(
             "data-cm-editorial-signature",
@@ -406,15 +507,18 @@
             </div>
 
             <p class="cm-editorial-signature__text">
-                Este contenido analiza distintas trayectorias, decisiones y formas de
-                construir patrimonio. No plantea una fórmula para copiar en la vida real;
-                aplicar cualquier decisión sin analizar sus riesgos podría poner su dinero en riesgo.
+                Este contenido analiza distintas trayectorias,
+                decisiones y formas de construir patrimonio.
+                No plantea una fórmula para copiar en la vida real;
+                cualquier decisión financiera debe analizarse de acuerdo
+                con sus riesgos y circunstancias.
             </p>
 
         `;
 
 
         return signature;
+
     }
 
 
@@ -427,8 +531,10 @@
         const widget =
             document.createElement("div");
 
+
         widget.className =
             "cm-share-editorial";
+
 
         widget.setAttribute(
             "data-cm-share-widget",
@@ -439,6 +545,7 @@
         widget.innerHTML = `
 
             <div class="cm-share-editorial__inner">
+
 
                 <span class="cm-share-editorial__label">
                     Compartir
@@ -526,6 +633,14 @@
                     </a>
 
 
+                    <!-- SEPARADOR -->
+
+                    <span
+                        class="cm-share-editorial__separator"
+                        aria-hidden="true"
+                    ></span>
+
+
                     <!-- EMAIL -->
 
                     <a
@@ -548,6 +663,7 @@
 
 
         return widget;
+
     }
 
 
@@ -560,6 +676,7 @@
         const currentURL =
             window.location.href;
 
+
         const currentTitle =
             document.title;
 
@@ -567,30 +684,25 @@
         const encodedURL =
             encodeURIComponent(currentURL);
 
+
         const encodedTitle =
             encodeURIComponent(currentTitle);
 
 
         /* FACEBOOK */
 
-        const facebook =
-            widget.querySelector(
-                ".cm-share-facebook"
-            );
-
-        facebook.href =
+        widget.querySelector(
+            ".cm-share-facebook"
+        ).href =
             "https://www.facebook.com/sharer/sharer.php?u=" +
             encodedURL;
 
 
         /* X */
 
-        const x =
-            widget.querySelector(
-                ".cm-share-x"
-            );
-
-        x.href =
+        widget.querySelector(
+            ".cm-share-x"
+        ).href =
             "https://twitter.com/intent/tweet?url=" +
             encodedURL +
             "&text=" +
@@ -599,24 +711,18 @@
 
         /* LINKEDIN */
 
-        const linkedin =
-            widget.querySelector(
-                ".cm-share-linkedin"
-            );
-
-        linkedin.href =
+        widget.querySelector(
+            ".cm-share-linkedin"
+        ).href =
             "https://www.linkedin.com/sharing/share-offsite/?url=" +
             encodedURL;
 
 
         /* TELEGRAM */
 
-        const telegram =
-            widget.querySelector(
-                ".cm-share-telegram"
-            );
-
-        telegram.href =
+        widget.querySelector(
+            ".cm-share-telegram"
+        ).href =
             "https://t.me/share/url?url=" +
             encodedURL +
             "&text=" +
@@ -625,12 +731,9 @@
 
         /* WHATSAPP */
 
-        const whatsapp =
-            widget.querySelector(
-                ".cm-share-whatsapp"
-            );
-
-        whatsapp.href =
+        widget.querySelector(
+            ".cm-share-whatsapp"
+        ).href =
             "https://api.whatsapp.com/send?text=" +
             encodedTitle +
             "%0A%0A" +
@@ -688,7 +791,9 @@
                     )
                 ) {
 
-                    link.target = "_blank";
+                    link.target =
+                        "_blank";
+
 
                     link.rel =
                         "noopener noreferrer";
@@ -714,7 +819,7 @@
 
 
     /* =========================================================
-       7. BUSCAR EL CONTENIDO PRINCIPAL
+       7. BUSCAR CONTENIDO PRINCIPAL
        ========================================================= */
 
     function findArticleContainer() {
@@ -777,10 +882,7 @@
     function initialize() {
 
 
-        /*
-         * Si ya existen elementos generados,
-         * no hacemos nada.
-         */
+        /* Evitar duplicados */
 
         if (
             document.querySelector(
@@ -796,10 +898,9 @@
         }
 
 
-        /*
-         * Primero intentamos utilizar el
-         * .share-here que ya existe.
-         */
+        /* =====================================================
+           CONTENEDOR EXISTENTE
+           ===================================================== */
 
         const existingShare =
             findExistingShareContainer();
@@ -808,17 +909,9 @@
         if (existingShare) {
 
 
-            /*
-             * Creamos la firma.
-             */
-
             const signature =
                 createEditorialSignature();
 
-
-            /*
-             * Creamos compartir.
-             */
 
             const widget =
                 createShareWidget();
@@ -829,14 +922,10 @@
             );
 
 
-            /*
-             * La firma va ANTES
-             * de compartir.
-             */
-
             existingShare.appendChild(
                 signature
             );
+
 
             existingShare.appendChild(
                 widget
@@ -848,11 +937,9 @@
         }
 
 
-        /*
-         * Si no existe .share-here,
-         * buscamos automáticamente
-         * el contenido del artículo.
-         */
+        /* =====================================================
+           CONTENIDO DEL ARTÍCULO
+           ===================================================== */
 
         const article =
             findArticleContainer();
@@ -864,10 +951,6 @@
 
         }
 
-
-        /*
-         * Creamos los dos elementos.
-         */
 
         const signature =
             createEditorialSignature();
@@ -882,14 +965,10 @@
         );
 
 
-        /*
-         * Los añadimos al final
-         * del artículo.
-         */
-
         article.appendChild(
             signature
         );
+
 
         article.appendChild(
             widget
