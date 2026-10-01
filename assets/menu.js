@@ -62,23 +62,16 @@
 
 
         <!-- FINANZAS -->
-
         <div class="cm-nav-dropdown">
 
           <button
             class="cm-nav-link cm-dropdown-btn"
             type="button">
-
             FINANZAS
-
           </button>
 
 
           <div class="cm-dropdown-menu">
-
-            <a href="/index.html">
-              Dinero
-            </a>
 
             <a href="/blog/ahorro/index.html">
               Ahorro
@@ -95,36 +88,9 @@
             <a href="/herramientas.html">
               Herramientas
             </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="cm-nav-divider"></div>
-
-
-        <!-- NEGOCIOS -->
-
-        <div class="cm-nav-dropdown">
-
-          <button
-            class="cm-nav-link cm-dropdown-btn"
-            type="button">
-
-            NEGOCIOS
-
-          </button>
-
-
-          <div class="cm-dropdown-menu">
-
+            
             <a href="/blog/negocios/index.html">
               Negocios
-            </a>
-
-            <a href="/tienda.html">
-              Productos
             </a>
 
           </div>
@@ -136,15 +102,11 @@
 
 
         <!-- MUNDO MILLONARIO -->
-
         <div class="cm-nav-dropdown">
-
           <button
             class="cm-nav-link cm-dropdown-btn"
             type="button">
-
             MUNDO MILLONARIO
-
           </button>
 
 
@@ -162,6 +124,44 @@
 
         </div>
 
+
+        <div class="cm-nav-divider"></div>
+
+
+        <!-- MEDIO -->
+        <div class="cm-nav-dropdown">
+          <button
+            class="cm-nav-link cm-dropdown-btn"
+            type="button">
+            EL MEDIO
+          </button>
+
+
+          <div class="cm-dropdown-menu">
+
+          <a href="/index.html">
+            Portada
+          </a>
+
+          <a href="/educacion-financiera.html">
+            Contenidos
+          </a>
+
+          <a href="/informacion-legal.html">
+            Políticas
+          </a>
+
+          <a href="/opiniones.html">
+            Aportes
+          </a>
+
+          <a href="/contacto.html">
+            Escríbenos
+          </a>
+
+          </div>
+
+        </div>
 
       </nav>
 
@@ -208,6 +208,11 @@
     </div>
 
 
+
+
+
+
+
     <!-- =====================================================
          MENÚ MOBILE
     ===================================================== -->
@@ -216,13 +221,11 @@
 
 
       <!-- FINANZAS -->
-
       <div class="cm-mobile-section">
 
         <button
           class="cm-mobile-title"
           type="button">
-
           <span>
             FINANZAS
           </span>
@@ -233,10 +236,6 @@
 
 
         <div class="cm-mobile-links">
-
-          <a href="/index.html">
-            Dinero
-          </a>
 
           <a href="/blog/ahorro/index.html">
             Ahorro
@@ -253,37 +252,9 @@
           <a href="/herramientas.html">
             Herramientas
           </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- NEGOCIOS -->
-
-      <div class="cm-mobile-section">
-
-        <button
-          class="cm-mobile-title"
-          type="button">
-
-          <span>
-            NEGOCIOS
-          </span>
-
-          <i class="fa-solid fa-chevron-down"></i>
-
-        </button>
-
-
-        <div class="cm-mobile-links">
-
+          
           <a href="/blog/negocios/index.html">
             Negocios
-          </a>
-
-          <a href="/tienda.html">
-            Productos
           </a>
 
         </div>
@@ -292,7 +263,6 @@
 
 
       <!-- MUNDO MILLONARIO -->
-
       <div class="cm-mobile-section">
 
         <button
@@ -307,7 +277,6 @@
 
         </button>
 
-
         <div class="cm-mobile-links">
 
           <a href="/blog/mundo-millonario/index.html">
@@ -317,6 +286,47 @@
           <a href="/blog/biografia-de-millonarios/index.html">
             Biografías de Millonarios
           </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- EL MEDIO -->
+      <div class="cm-mobile-section">
+        <button
+          class="cm-mobile-title"
+          type="button">
+          <span>
+            EL MEDIO
+          </span>
+
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="cm-mobile-links">
+
+
+          <a href="/index.html">
+            Portada
+          </a>
+
+          <a href="/educacion-financiera.html">
+            Contenidos
+          </a>
+
+          <a href="/informacion-legal.html">
+            Políticas
+          </a>
+
+          <a href="/opiniones.html">
+            Aportes
+          </a>
+
+          <a href="/contacto.html">
+            Escríbenos
+          </a>
+
 
         </div>
 
