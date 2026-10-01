@@ -44,7 +44,7 @@
 
     .cm-editorial-signature {
 
-        margin: 82px 0 34px;
+        margin: 82px 0 26px;
 
         padding: 0;
 
@@ -53,63 +53,69 @@
     }
 
 
-    /* Línea editorial */
+    /* =====================================================
+       LÍNEA DE LA FIRMA
+       ===================================================== */
 
     .cm-editorial-signature__line {
 
-        width: 42px;
+        width: 38px;
 
         height: 1px;
 
         background: #b8b4ae;
 
-        margin: 0 0 15px;
+        margin: 0 0 13px;
 
     }
 
 
-    /* Nombre del medio */
+    /* =====================================================
+       NOMBRE DEL MEDIO
+       ===================================================== */
 
     .cm-editorial-signature__name {
 
-        margin: 0 0 5px;
+        margin: 0 0 4px;
 
         font-family:
-            Inter,
-            Arial,
-            sans-serif;
+            Georgia,
+            "Times New Roman",
+            serif;
 
-        font-size: 13px;
+        font-size: 14px;
 
         line-height: 1.3;
 
         font-weight: 600;
 
-        letter-spacing: .2px;
+        letter-spacing: .05px;
 
         color: #292929;
 
     }
 
 
-    /* Categoría editorial */
+    /* =====================================================
+       ETIQUETA EDITORIAL
+       ===================================================== */
 
     .cm-editorial-signature__label {
 
-        margin: 0 0 10px;
+        margin: 0 0 8px;
 
         font-family:
             Inter,
             Arial,
             sans-serif;
 
-        font-size: 9px;
+        font-size: 8px;
 
         line-height: 1.3;
 
         font-weight: 500;
 
-        letter-spacing: 1.8px;
+        letter-spacing: 1.7px;
 
         text-transform: uppercase;
 
@@ -118,26 +124,28 @@
     }
 
 
-    /* Texto */
+    /* =====================================================
+       TEXTO EDITORIAL
+       ===================================================== */
 
     .cm-editorial-signature__text {
 
         margin: 0;
 
-        max-width: 590px;
+        max-width: 570px;
 
         font-family:
-            Inter,
-            Arial,
-            sans-serif;
+            Georgia,
+            "Times New Roman",
+            serif;
 
-        font-size: 11px;
+        font-size: 10.5px;
 
-        line-height: 1.65;
+        line-height: 1.6;
 
         font-weight: 400;
 
-        letter-spacing: .05px;
+        letter-spacing: 0;
 
         color: #77736d;
 
@@ -145,7 +153,18 @@
 
 
     /* =====================================================
-       BLOQUE COMPARTIR
+       ÉNFASIS DEL TEXTO
+       ===================================================== */
+
+    .cm-editorial-signature__text em {
+
+        font-style: italic;
+
+    }
+
+
+    /* =====================================================
+       BLOQUE DE COMPARTIR
        ===================================================== */
 
     .cm-share-editorial {
@@ -154,12 +173,14 @@
 
         margin: 0 0 68px;
 
-        padding: 14px 0 0;
-
-        border-top: 1px solid #e4e1dc;
+        padding: 0;
 
     }
 
+
+    /* =====================================================
+       CONTENEDOR
+       ===================================================== */
 
     .cm-share-editorial__inner {
 
@@ -167,62 +188,9 @@
 
         align-items: center;
 
-        justify-content: space-between;
+        justify-content: flex-start;
 
-        gap: 20px;
-
-    }
-
-
-    /* =====================================================
-       ETIQUETA
-       ===================================================== */
-
-    .cm-share-editorial__label {
-
-        display: flex;
-
-        align-items: center;
-
-        gap: 9px;
-
-        font-family:
-            Inter,
-            Arial,
-            sans-serif;
-
-        font-size: 9px;
-
-        line-height: 1;
-
-        font-weight: 600;
-
-        letter-spacing: 1.8px;
-
-        text-transform: uppercase;
-
-        color: #68645f;
-
-        white-space: nowrap;
-
-    }
-
-
-    /* Pequeño indicador editorial */
-
-    .cm-share-editorial__label::before {
-
-        content: "";
-
-        display: block;
-
-        width: 5px;
-
-        height: 5px;
-
-        background: #292929;
-
-        border-radius: 50%;
+        gap: 0;
 
     }
 
@@ -237,7 +205,7 @@
 
         align-items: center;
 
-        gap: 17px;
+        gap: 20px;
 
     }
 
@@ -256,9 +224,9 @@
 
         justify-content: center;
 
-        width: 18px;
+        width: 22px;
 
-        height: 18px;
+        height: 22px;
 
         padding: 0;
 
@@ -268,7 +236,7 @@
 
         background: transparent;
 
-        color: #77736d;
+        color: #716d67;
 
         text-decoration: none;
 
@@ -279,6 +247,10 @@
     }
 
 
+    /* =====================================================
+       HOVER
+       ===================================================== */
+
     .cm-share-editorial__icons a:hover {
 
         color: #171717;
@@ -288,11 +260,15 @@
     }
 
 
+    /* =====================================================
+       FOCUS
+       ===================================================== */
+
     .cm-share-editorial__icons a:focus-visible {
 
         outline: 1px solid #aaa59e;
 
-        outline-offset: 5px;
+        outline-offset: 4px;
 
     }
 
@@ -305,11 +281,71 @@
 
         display: block;
 
-        font-size: 13px;
+        font-size: 16px;
 
         line-height: 1;
 
         color: currentColor;
+
+    }
+
+
+    /* =====================================================
+       FACEBOOK
+       ===================================================== */
+
+    .cm-share-editorial__icons
+    .cm-share-facebook i {
+
+        font-size: 16px;
+
+    }
+
+
+    /* =====================================================
+       LINKEDIN
+       ===================================================== */
+
+    .cm-share-editorial__icons
+    .cm-share-linkedin i {
+
+        font-size: 17px;
+
+    }
+
+
+    /* =====================================================
+       TELEGRAM
+       ===================================================== */
+
+    .cm-share-editorial__icons
+    .cm-share-telegram i {
+
+        font-size: 17px;
+
+    }
+
+
+    /* =====================================================
+       WHATSAPP
+       ===================================================== */
+
+    .cm-share-editorial__icons
+    .cm-share-whatsapp i {
+
+        font-size: 18px;
+
+    }
+
+
+    /* =====================================================
+       EMAIL
+       ===================================================== */
+
+    .cm-share-editorial__icons
+    .cm-share-email i {
+
+        font-size: 15px;
 
     }
 
@@ -322,39 +358,11 @@
 
         display: block;
 
-        width: 12px;
+        width: 15px;
 
-        height: 12px;
+        height: 15px;
 
         fill: currentColor;
-
-    }
-
-
-    /* =====================================================
-       EMAIL
-       ===================================================== */
-
-    .cm-share-editorial__icons .cm-share-email i {
-
-        font-size: 12px;
-
-    }
-
-
-    /* =====================================================
-       SEPARADOR VISUAL
-       ===================================================== */
-
-    .cm-share-editorial__separator {
-
-        width: 1px;
-
-        height: 13px;
-
-        background: #d9d6d1;
-
-        margin: 0 1px;
 
     }
 
@@ -367,43 +375,45 @@
 
         .cm-editorial-signature {
 
-            margin: 64px 0 30px;
+            margin: 64px 0 22px;
 
         }
 
 
         .cm-editorial-signature__line {
 
-            width: 35px;
+            width: 32px;
 
-            margin-bottom: 13px;
+            margin-bottom: 12px;
 
         }
 
 
         .cm-editorial-signature__name {
 
-            font-size: 12px;
+            font-size: 13px;
 
         }
 
 
         .cm-editorial-signature__label {
 
-            font-size: 8px;
+            font-size: 7.5px;
 
-            letter-spacing: 1.6px;
+            letter-spacing: 1.5px;
 
-            margin-bottom: 9px;
+            margin-bottom: 7px;
 
         }
 
 
         .cm-editorial-signature__text {
 
-            font-size: 10.5px;
+            font-size: 10px;
 
-            line-height: 1.65;
+            line-height: 1.6;
+
+            max-width: 100%;
 
         }
 
@@ -412,57 +422,45 @@
 
             margin-bottom: 48px;
 
-            padding-top: 13px;
-
-        }
-
-
-        .cm-share-editorial__inner {
-
-            justify-content: flex-start;
-
-            gap: 20px;
-
-        }
-
-
-        .cm-share-editorial__label {
-
-            font-size: 8px;
-
-            letter-spacing: 1.5px;
-
         }
 
 
         .cm-share-editorial__icons {
 
-            gap: 15px;
+            gap: 19px;
 
         }
 
 
         .cm-share-editorial__icons a {
 
-            width: 17px;
+            width: 21px;
 
-            height: 17px;
+            height: 21px;
 
         }
 
 
         .cm-share-editorial__icons i {
 
-            font-size: 12px;
+            font-size: 15px;
+
+        }
+
+
+        .cm-share-editorial__icons
+        .cm-share-whatsapp i {
+
+            font-size: 17px;
 
         }
 
 
         .cm-share-editorial__x {
 
-            width: 11px;
+            width: 14px;
 
-            height: 11px;
+            height: 14px;
 
         }
 
@@ -498,20 +496,27 @@
 
             <div class="cm-editorial-signature__line"></div>
 
+
             <div class="cm-editorial-signature__name">
-                Código Millonario
+                Firma Código Millonario
             </div>
+
 
             <div class="cm-editorial-signature__label">
                 Análisis Editorial
             </div>
 
+
             <p class="cm-editorial-signature__text">
-                Este contenido analiza distintas trayectorias,
-                decisiones y formas de construir patrimonio.
-                No plantea una fórmula para copiar en la vida real;
-                cualquier decisión financiera debe analizarse de acuerdo
-                con sus riesgos y circunstancias.
+
+                <em>
+                    Este contenido analiza distintas trayectorias,
+                    decisiones y formas de construir patrimonio.
+                    No plantea una fórmula para copiar en la vida real;
+                    cualquier decisión financiera debe analizarse de acuerdo
+                    con sus riesgos y circunstancias.
+                </em>
+
             </p>
 
         `;
@@ -545,11 +550,6 @@
         widget.innerHTML = `
 
             <div class="cm-share-editorial__inner">
-
-
-                <span class="cm-share-editorial__label">
-                    Compartir
-                </span>
 
 
                 <div class="cm-share-editorial__icons">
@@ -633,14 +633,6 @@
                     </a>
 
 
-                    <!-- SEPARADOR -->
-
-                    <span
-                        class="cm-share-editorial__separator"
-                        aria-hidden="true"
-                    ></span>
-
-
                     <!-- EMAIL -->
 
                     <a
@@ -689,7 +681,9 @@
             encodeURIComponent(currentTitle);
 
 
-        /* FACEBOOK */
+        /* =====================================================
+           FACEBOOK
+           ===================================================== */
 
         widget.querySelector(
             ".cm-share-facebook"
@@ -698,7 +692,9 @@
             encodedURL;
 
 
-        /* X */
+        /* =====================================================
+           X
+           ===================================================== */
 
         widget.querySelector(
             ".cm-share-x"
@@ -709,7 +705,9 @@
             encodedTitle;
 
 
-        /* LINKEDIN */
+        /* =====================================================
+           LINKEDIN
+           ===================================================== */
 
         widget.querySelector(
             ".cm-share-linkedin"
@@ -718,7 +716,9 @@
             encodedURL;
 
 
-        /* TELEGRAM */
+        /* =====================================================
+           TELEGRAM
+           ===================================================== */
 
         widget.querySelector(
             ".cm-share-telegram"
@@ -729,7 +729,9 @@
             encodedTitle;
 
 
-        /* WHATSAPP */
+        /* =====================================================
+           WHATSAPP
+           ===================================================== */
 
         widget.querySelector(
             ".cm-share-whatsapp"
@@ -740,7 +742,9 @@
             encodedURL;
 
 
-        /* EMAIL */
+        /* =====================================================
+           EMAIL
+           ===================================================== */
 
         const email =
             widget.querySelector(
@@ -779,7 +783,9 @@
         );
 
 
-        /* NUEVA PESTAÑA */
+        /* =====================================================
+           NUEVA PESTAÑA
+           ===================================================== */
 
         widget
             .querySelectorAll("a")
@@ -882,7 +888,9 @@
     function initialize() {
 
 
-        /* Evitar duplicados */
+        /* =====================================================
+           EVITAR DUPLICADOS
+           ===================================================== */
 
         if (
             document.querySelector(
