@@ -541,7 +541,7 @@ No perseguir el dinero. Entender cómo se comporta
       Ir
     </button>
 
-    <a id="viewAllBtn" href="../NOMBREDELASECCION/index.html" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
+    <a id="viewAllBtn" href="../mundo-millonario/index.html" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
       Ver todos
     </a>
   </div>
@@ -756,7 +756,7 @@ searchInput.addEventListener("input",()=>{
   renderAll(allArticles.filter(a=>a.title.toLowerCase().includes(q)));
 });
 
-fetch("../NOMBREDELASECCION/index.html")
+fetch("../mundo-millonario/index.html")
 .then(r=>r.text())
 .then(html=>{
   const parser=new DOMParser();
