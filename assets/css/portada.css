@@ -841,11 +841,11 @@ img{
 @media(max-width:600px){
 
   .documentales{
-    padding:30px 18px 38px;
+    padding:26px 18px 32px;
   }
 
   .encabezado-documentales{
-    margin-bottom:20px;
+    margin-bottom:16px;
   }
 
   .documentales h2{
@@ -861,38 +861,66 @@ img{
     display:none;
   }
 
-  .card-documental{
-    min-width:82%;
-    max-width:82%;
+  /* ===== TARJETAS ===== */
 
-    padding:0 14px;
+  .card-documental{
+    min-width:76%;
+    max-width:76%;
+    padding:0 10px;
   }
 
   .card-documental:first-child{
     padding-left:0;
   }
 
+  /* ===== IMAGEN ===== */
+
   .miniatura-documental{
     aspect-ratio:16 / 9;
-    margin-bottom:16px;
+    margin-bottom:11px;
   }
+
+  /* ===== CONTENIDO ===== */
+
+  .contenido-documental{
+    padding:0;
+  }
+
+  /* ===== CATEGORÍA ===== */
+
+  .categoria-documental{
+    margin:0 0 6px;
+    font-size:7px;
+    letter-spacing:1.4px;
+  }
+
+  /* ===== TÍTULO ===== */
 
   .contenido-documental h3{
-    font-size:19px;
-    line-height:1.2;
-    margin-bottom:14px;
+    font-size:17px;
+    line-height:1.16;
+    letter-spacing:-.2px;
+    margin:0 0 8px;
   }
+
+  /* ===== DESCRIPCIÓN ===== */
 
   .contenido-documental p{
-    font-size:14px;
-    line-height:1.52;
+    font-size:12px;
+    line-height:1.42;
   }
 
+  /* ===== LEER ANÁLISIS ===== */
+
   .leer-analisis{
-    margin-top:auto;
-    padding-top:30px;
-    padding-bottom:14px;
+    margin-top:16px;
+    padding-top:0;
+    padding-bottom:10px;
+    font-size:7px;
+    letter-spacing:1.2px;
   }
+
+  /* ===== BOTONES ===== */
 
   .btn-slider{
     display:none;
@@ -900,20 +928,34 @@ img{
 
 }
 
-
 /* =========================================================
    MÓVIL PEQUEÑO
 ========================================================= */
 
-@media(max-width:400px){
+@media(max-width:600px){
+
+  .slider-documentales{
+    overflow-x:auto;
+    scrollbar-width:none;
+    padding-left:9%;
+    padding-right:9%;
+  }
+
+  .slider-documentales::-webkit-scrollbar{
+    display:none;
+  }
 
   .card-documental{
-    min-width:88%;
-    max-width:88%;
+    min-width:82%;
+    max-width:82%;
+    padding:0 10px;
+  }
+
+  .card-documental:first-child{
+    padding-left:10px;
   }
 
 }
-
 
 
 /* =========================================================
