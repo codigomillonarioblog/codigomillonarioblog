@@ -2,380 +2,509 @@
    SECCIÓN · PORTADA PRINCIPAL
 ========================================================= */
 
-*{margin:0;padding:0;box-sizing:border-box} 
-body{background:#fff;color:#111;font-family:'Inter',sans-serif} 
-a{text-decoration:none;color:inherit} 
-img{width:100%;display:block} 
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:#fff;
+  color:#111;
+  font-family:'Inter',sans-serif
+}
+
+a{
+  text-decoration:none;
+  color:inherit
+}
+
+img{
+  width:100%;
+  display:block
+}
 
 
 /* ===== WRAPPER ===== */
-.forbes-home{ 
-  width:100%; 
-  padding:40px 40px 80px 
-} 
- 
-.forbes-grid{ 
-  max-width:1080px; 
-  margin:0 auto; 
-  display:grid; 
-  grid-template-columns:210px 540px 230px; 
-  column-gap:20px; 
-  row-gap:0; 
-  align-items:start; 
-  position:relative; 
-} 
+
+.forbes-home{
+  width:100%;
+  padding:30px 40px 55px
+}
+
+.forbes-grid{
+  max-width:1080px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:210px 540px 230px;
+  column-gap:20px;
+  row-gap:0;
+  align-items:start;
+  position:relative
+}
 
 
-/* ===== ENFOQUE DEL MEDIO ===== */ 
- 
-.forbes-intro{ 
-  grid-column:1 / -1; 
-  width:100%; 
-  margin:0; 
-  padding:0 0 12px; 
-} 
- 
-.etiqueta-enfoque{ 
-  display:inline-flex; 
-  align-items:center; 
-  gap:6px; 
-  margin:0 0 7px; 
-  padding:0; 
-  border:0; 
-  background:none; 
-  color:#111; 
-  font-family:'Inter',sans-serif; 
-  font-size:9px; 
-  line-height:1; 
-  font-weight:800; 
-  letter-spacing:1.8px; 
-  text-transform:uppercase; 
-} 
- 
-.etiqueta-medio{ 
-  display:inline-flex; 
-  align-items:center; 
-  padding:3px 5px 2px; 
-  background:#111; 
-  color:#fff; 
-  font-size:7px; 
-  line-height:1; 
-  font-weight:700; 
-  letter-spacing:1.1px; 
-  text-transform:uppercase; 
-} 
- 
-.forbes-intro-description{ 
-  max-width:600px; 
-  margin:0; 
-  padding:0; 
-  color:#555; 
-  font-size:12px; 
-  line-height:1.55; 
-  font-weight:400; 
-} 
+/* ===== ENFOQUE DEL MEDIO ===== */
+
+.forbes-intro{
+  grid-column:1 / -1;
+  width:100%;
+  margin:0;
+  padding:0 0 8px
+}
+
+.etiqueta-enfoque{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin:0 0 5px;
+  padding:0;
+  border:0;
+  background:none;
+  color:#111;
+  font-family:'Inter',sans-serif;
+  font-size:9px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:1.8px;
+  text-transform:uppercase
+}
+
+.etiqueta-medio{
+  display:inline-flex;
+  align-items:center;
+  padding:3px 5px 2px;
+  background:#111;
+  color:#fff;
+  font-size:7px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:1.1px;
+  text-transform:uppercase
+}
+
+.forbes-intro-description{
+  max-width:600px;
+  margin:0;
+  padding:0;
+  color:#555;
+  font-size:12px;
+  line-height:1.45;
+  font-weight:400
+}
 
 
-/* ===== LÍNEA SUPERIOR CONTINUA ===== */ 
- 
-.forbes-top-line{ 
-  grid-column:1 / -1; 
-  width:calc(100% + 60px); 
-  height:1px; 
-  background:#ececec; 
-  margin:0 0 20px; 
-  padding:0; 
-} 
+/* ===== LÍNEA SUPERIOR CONTINUA ===== */
+
+.forbes-top-line{
+  grid-column:1 / -1;
+  width:calc(100% + 60px);
+  height:1px;
+  background:#ececec;
+  margin:0 0 12px;
+  padding:0
+}
 
 
-/* ===== LEFT ===== */ 
-.editorial-column{ 
-  padding-top:10px 
-} 
- 
-.editorial-label{ 
-  font-size:11px; 
-  font-weight:700; 
-  text-transform:uppercase; 
-  letter-spacing:1px; 
-  border-bottom:2px solid #111; 
-  padding-bottom:8px; 
-  display:inline-block; 
-} 
- 
-.editorial-points{ 
-  margin-top:28px; 
-  display:flex; 
-  flex-direction:column; 
-} 
- 
-.editorial-points a{ 
-  font-size:16px; 
-  line-height:1.4; 
-  font-weight:500; 
-  color:#111; 
-  padding:14px 0; 
-  border-bottom:1px solid #ececec; 
-  transition:opacity .25s ease; 
-} 
- 
-.editorial-points a:last-child{ 
-  border-bottom:none 
-} 
- 
-.editorial-points a:hover{ 
-  opacity:.6 
-} 
+/* ===== LEFT ===== */
+
+.editorial-column{
+  padding-top:4px
+}
+
+.editorial-label{
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  border-bottom:2px solid #111;
+  padding-bottom:6px;
+  display:inline-block
+}
 
 
-/* ===== CENTER ===== */ 
-.hero-main{ 
-  width:540px; 
-  max-width:540px 
-} 
- 
-.hero-image{ 
-  width:540px; 
-  max-width:540px; 
-  overflow:hidden; 
-} 
- 
-.hero-image img{ 
-  width:100%; 
-  aspect-ratio:16/9; 
-  object-fit:cover; 
-} 
- 
-.hero-content{ 
-  margin-top:24px; 
-  display:flex; 
-  flex-direction:column; 
-  align-items:center; 
-  text-align:center;
-} 
- 
-.hero-category{ 
-  font-size:11px; 
-  font-weight:700; 
-  text-transform:uppercase; 
-  letter-spacing:.8px; 
-  color:#666; 
-  padding-bottom:0; 
-  border-bottom:none; 
-  margin-bottom:11px; 
-} 
- 
-.hero-main h1{ 
-  font-size:clamp(1.65rem,2.4vw,2.45rem); 
-  line-height:1.07; 
-  font-weight:800; 
-  letter-spacing:-1.1px; 
-  max-width:540px; 
-  padding-bottom:0; 
-  border-bottom:none; 
-  margin-bottom:15px; 
-} 
- 
-.hero-content p{ 
-  font-size:16px; 
-  line-height:1.42; 
-  font-weight:500; 
-  color:#111; 
-  margin-top:0; 
-} 
 
 
-/* ===== CENTER BOTTOM CARDS ===== */ 
-.hero-bottom-cards{ 
-  display:flex; 
-  gap:18px; 
-  margin-top:24px; 
-  border-top:1px solid #ececec; 
-  padding-top:18px; 
-} 
- 
-.hero-bottom-cards .side-article{ 
-  flex:1 
-} 
+.editorial-points{
+  margin-top:14px;
+  display:flex;
+  flex-direction:column
+}
+
+.editorial-points a{
+  display:grid;
+  grid-template-columns:30px 1fr;
+  column-gap:9px;
+  align-items:start;
+  padding:10px 0;
+  border-bottom:1px solid #ececec;
+  color:#111;
+  transition:opacity .25s ease
+}
+
+.editorial-number{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:18px;
+  line-height:1.2;
+  font-weight:800;
+  color:#555;
+  padding-top:1px
+}
+
+.editorial-quote{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:13px;
+  line-height:1.42;
+  font-weight:400;
+  color:#222
+}
+
+.quote-mark{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:22px;
+  line-height:0;
+  font-weight:700;
+  color:#8b1e1e;
+  vertical-align:-3px
+}
+
+.editorial-points a:last-child{
+  border-bottom:none
+}
+
+.editorial-points a:hover{
+  opacity:.6
+}
 
 
-/* ===== RIGHT SIDEBAR ===== */ 
-.sidebar-news{ 
-  width:230px; 
-  border-left:1px solid #e5e7eb; 
-  padding-left:18px; 
-} 
- 
-.side-article{ 
-  padding:18px 0; 
-  border-bottom:1px solid #ececec; 
-} 
- 
-.side-article img{ 
-  width:100%; 
-  aspect-ratio:16/9; 
-  object-fit:cover; 
-  margin-bottom:11px; 
-} 
- 
-.side-content span{ 
-  font-size:9px; 
-  text-transform:uppercase; 
-  font-weight:700; 
-  color:#777; 
-  letter-spacing:.7px; 
-} 
- 
-.side-content h3{ 
-  margin-top:6px; 
-  font-size:16px; 
-  line-height:1.18; 
-  font-weight:800; 
-  transition:opacity .25s ease; 
-} 
- 
-.side-article:hover h3{ 
-  opacity:.6 
-} 
+/* ===== CENTER ===== */
 
-/* ===== PC: LO MÁS LEÍDO ===== */ 
-@media(min-width:1201px){ 
- 
-  .sidebar-news{ 
-    width:290px; 
-    min-width:290px; 
-    margin-right:-60px; 
-  } 
- 
-  .sidebar-news .side-article{ 
-    padding:20px 0; 
+.hero-main{
+  width:540px;
+  max-width:540px
+}
+
+.hero-image{
+  width:540px;
+  max-width:540px;
+  overflow:hidden
+}
+
+.hero-image img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover
+}
+
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+
+.hero-content{
+  margin-top:16px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  text-align:left
+}
+
+
+/* ===== CATEGORÍAS ===== */
+
+.hero-category{
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  color:#666;
+  padding-bottom:0;
+  border-bottom:none;
+  margin-bottom:7px
+}
+
+
+/* ===== TÍTULO PRINCIPAL ===== */
+
+.hero-main h1{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(1.65rem,2.4vw,2.45rem);
+  line-height:1.07;
+  font-weight:700;
+  letter-spacing:-.5px;
+  max-width:540px;
+  padding-bottom:0;
+  border-bottom:none;
+  margin-bottom:10px
+}
+
+
+/* ===== DESCRIPCIÓN ===== */
+
+.hero-content p{
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  line-height:1.4;
+  font-weight:400;
+  color:#555;
+  margin-top:0
+}
+
+
+/* ===== CENTER BOTTOM CARDS ===== */
+
+.hero-bottom-cards{
+  display:flex;
+  gap:18px;
+  margin-top:12px;
+  border-top:1px solid #ececec;
+  padding-top:8px
+}
+
+.hero-bottom-cards .side-article{
+  flex:1;
+  padding:7px 0
+}
+
+.hero-bottom-cards .side-article img{
+  margin-bottom:5px
+}
+
+.hero-bottom-cards .side-content h3{
+  margin-top:3px
+}
+
+
+/* ===== RIGHT SIDEBAR ===== */
+
+.sidebar-news{
+  width:230px;
+  border-left:1px solid #e5e7eb;
+  padding-left:18px
+}
+
+.side-article{
+  padding:14px 0;
+  border-bottom:1px solid #ececec
+}
+
+.side-article img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  margin-bottom:8px
+}
+
+.side-content span{
+  font-family:'Inter',sans-serif;
+  font-size:9px;
+  text-transform:uppercase;
+  font-weight:700;
+  color:#777;
+  letter-spacing:.7px
+}
+
+.side-content h3{
+  margin-top:5px;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:16px;
+  line-height:1.18;
+  font-weight:700;
+  letter-spacing:-.2px;
+  transition:opacity .25s ease
+}
+
+.side-article:hover h3{
+  opacity:.6
+}
+
+
+/* ===== PC: LO MÁS LEÍDO ===== */
+
+@media(min-width:1201px){
+
+  .sidebar-news{
+    width:290px;
+    min-width:290px;
+    margin-right:-60px
   }
 
-  /* MANTENER LAS LÍNEAS DE LOS ARTÍCULOS */
   .sidebar-news .side-article{
-    border-bottom:1px solid #ececec;
+    padding:11px 0;
+    border-bottom:1px solid #ececec
   }
 
-  /* QUITAR SOLO LA LÍNEA DEL ÚLTIMO ARTÍCULO */
   .sidebar-news .side-article:last-child{
-    border-bottom:none;
+    border-bottom:none
   }
- 
-  .sidebar-news .side-article img{ 
-    width:272px; 
-    max-width:272px; 
-    aspect-ratio:16/9; 
-    object-fit:cover; 
-    margin-bottom:12px; 
-  } 
- 
-  .sidebar-news .side-content{ 
-    width:272px 
-  } 
- 
-  .sidebar-news .side-content span{ 
-    font-size:10px 
-  } 
- 
-  .sidebar-news .side-content h3{ 
-    font-size:17px; 
-    line-height:1.2; 
-  } 
+
+  .sidebar-news .side-article img{
+    width:272px;
+    max-width:272px;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    margin-bottom:6px
+  }
+
+  .sidebar-news .side-content{
+    width:272px
+  }
+
+  .sidebar-news .side-content span{
+    font-size:10px
+  }
+
+  .sidebar-news .side-content h3{
+    font-size:17px;
+    line-height:1.2;
+    margin-top:3px
+  }
 
 
-  /* ===== ARTÍCULOS INFERIORES ===== */ 
- 
-  .editorial-column .side-article, 
-  .hero-bottom-cards .side-article{ 
-    border-bottom:none; 
-  } 
- 
-  .hero-bottom-cards{ 
-    border-top:1px solid #ececec; 
-  } 
+  /* ===== ARTÍCULOS INFERIORES ===== */
 
+  .editorial-column .side-article,
+  .hero-bottom-cards .side-article{
+    border-bottom:none
+  }
 
+  .hero-bottom-cards{
+    border-top:1px solid #ececec
+  }
 
 }
 
 
-/* ===== TABLET ===== */ 
-@media(max-width:1200px){ 
- 
-  .forbes-grid{ 
-    grid-template-columns:1fr; 
-    row-gap:0; 
-    max-width:800px; 
-  } 
- 
-  .editorial-column{ 
-    display:none 
-  } 
- 
-  .hero-main{ 
-    width:100%; 
-    max-width:100%; 
-  } 
- 
-  .hero-image{ 
-    width:100%; 
-    max-width:100%; 
-  } 
- 
-  .sidebar-news{ 
-    width:100%; 
-    max-width:800px; 
-    border-left:none; 
-    padding-left:0; 
-  } 
- 
-  .hero-bottom-cards{ 
-    flex-direction:column 
-  } 
-} 
+/* ===== TABLET ===== */
+
+@media(max-width:1200px){
+
+  .forbes-grid{
+    grid-template-columns:1fr;
+    row-gap:0;
+    max-width:800px
+  }
+
+  .editorial-column{
+    display:none
+  }
+
+  .hero-main{
+    width:100%;
+    max-width:100%
+  }
+
+  .hero-image{
+    width:100%;
+    max-width:100%
+  }
+
+  .sidebar-news{
+    width:100%;
+    max-width:800px;
+    border-left:none;
+    padding-left:0
+  }
+
+  .hero-bottom-cards{
+    flex-direction:column
+  }
+
+}
 
 
-/* ===== MOBILE ===== */ 
-@media(max-width:768px){ 
- 
-  .forbes-home{ 
-    padding:20px 20px 60px; 
-  } 
- 
-  /* ENFOQUE PEGADO A LA LÍNEA */ 
- 
-  .forbes-intro{ 
-    width:100%; 
-    padding-bottom:8px; 
-  } 
- 
-  .forbes-intro-description{ 
-    max-width:100%; 
-    font-size:11.5px; 
-    line-height:1.45; 
-  } 
- 
-  /* LÍNEA JUSTO ENCIMA DE LA IMAGEN */ 
- 
-  .forbes-top-line{ 
-    width:100%; 
-    height:1px; 
-    margin:0 0 14px; 
-    background:#ececec; 
-  } 
- 
-  .hero-main h1{ 
-    font-size:1.9rem 
-  } 
- 
-  .hero-content p{ 
-    font-size:17px 
-  } 
- 
-  .side-content h3{ 
-    font-size:22px 
-  } 
-} 
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+  .forbes-home{
+    padding:16px 20px 45px
+  }
+
+  /* ENFOQUE PEGADO A LA LÍNEA */
+
+  .forbes-intro{
+    width:100%;
+    padding-bottom:6px
+  }
+
+  .forbes-intro-description{
+    max-width:100%;
+    font-size:11.5px;
+    line-height:1.4
+  }
+
+  /* LÍNEA JUSTO ENCIMA DE LA IMAGEN */
+
+  .forbes-top-line{
+    width:100%;
+    height:1px;
+    margin:0 0 10px;
+    background:#ececec
+  }
+
+  /* CONTENIDO PRINCIPAL A LA IZQUIERDA */
+
+  .hero-content{
+    align-items:flex-start;
+    text-align:left;
+    margin-top:14px
+  }
+
+  /* CATEGORÍAS */
+
+  .hero-category{
+    font-size:10px;
+    line-height:1.1;
+    margin-bottom:6px
+  }
+
+  /* TÍTULO PRINCIPAL */
+
+  .hero-main h1{
+    font-size:1.65rem;
+    line-height:1.08;
+    letter-spacing:-.3px;
+    margin-bottom:8px
+  }
+
+  /* DESCRIPCIÓN */
+
+  .hero-content p{
+    font-size:12px;
+    line-height:1.4;
+    font-weight:400
+  }
+
+  /* TARJETAS INFERIORES */
+
+  .hero-bottom-cards{
+    gap:14px;
+    margin-top:11px;
+    padding-top:8px
+  }
+
+  .hero-bottom-cards .side-article{
+    padding:7px 0
+  }
+
+  .hero-bottom-cards .side-article img{
+    margin-bottom:5px
+  }
+
+  .hero-bottom-cards .side-content h3{
+    margin-top:3px
+  }
+
+  /* TÍTULOS DE TARJETAS */
+
+  .side-content h3{
+    font-size:22px
+  }
+
+  /* QUITAR SOLO LA LÍNEA FINAL EN MÓVIL */
+
+  .sidebar-news .side-article:last-child{
+    border-bottom:none
+  }
+
+}
+
 
 
 /* =========================================================
@@ -798,12 +927,22 @@ img{width:100%;display:block}
    SECCIÓN · GUÍAS PRINCIPALES
 ========================================================= */
 
+/* =========================================================
+   GUÍAS PRINCIPALES
+========================================================= */
+
 .guias-principales{
+
   width:100%;
+
   max-width:1080px;
+
   margin:0 auto;
+
   padding:0 40px;
+
   font-family:'Inter',sans-serif;
+
 }
 
 
@@ -812,10 +951,15 @@ img{width:100%;display:block}
 ========================================================= */
 
 .guias-header{
+
   width:100%;
+
   max-width:700px;
+
   margin:0 auto 28px;
+
   text-align:center;
+
 }
 
 
@@ -824,16 +968,27 @@ img{width:100%;display:block}
 ========================================================= */
 
 .guias-header h2{
+
   width:100%;
+
   margin:0;
+
   padding:0;
+
   border:0;
+
   font-size:16px;
+
   line-height:1.2;
+
   letter-spacing:-.2px;
+
   font-weight:600;
+
   color:#111;
+
   text-align:center;
+
 }
 
 
@@ -842,10 +997,15 @@ img{width:100%;display:block}
 ========================================================= */
 
 .guias-grid{
+
   display:grid;
+
   grid-template-columns:repeat(4, minmax(0, 1fr));
-  gap:20px;
+
+  gap:0;
+
   align-items:start;
+
 }
 
 
@@ -854,15 +1014,39 @@ img{width:100%;display:block}
 ========================================================= */
 
 .guia{
+
   min-width:0;
-  padding:0;
+
+  padding:0 20px;
+
   border:0;
+
+  border-left:1px solid #e5e5e5;
+
 }
 
+
+/* QUITAR LÍNEA DEL PRIMER BLOQUE */
+
+.guia:first-child{
+
+  border-left:none;
+
+}
+
+
+/* =========================================================
+   ENLACES
+========================================================= */
+
 .guia a{
+
   display:block;
+
   color:inherit;
+
   text-decoration:none;
+
 }
 
 
@@ -871,22 +1055,35 @@ img{width:100%;display:block}
 ========================================================= */
 
 .guia-imagen{
+
   width:100%;
+
   aspect-ratio:16 / 9;
+
   overflow:hidden;
+
   margin-bottom:13px;
+
 }
 
 .guia-imagen img{
+
   width:100%;
+
   height:100%;
+
   display:block;
+
   object-fit:cover;
+
   transition:transform .4s ease;
+
 }
 
 .guia:hover .guia-imagen img{
+
   transform:scale(1.025);
+
 }
 
 
@@ -895,39 +1092,74 @@ img{width:100%;display:block}
 ========================================================= */
 
 .guia-contenido{
+
   width:100%;
+
 }
 
 .guia-category{
+
   display:block;
+
   margin:0 0 7px;
+
   font-size:9px;
+
   font-weight:700;
+
   letter-spacing:.8px;
+
   text-transform:uppercase;
+
   color:#777;
+
 }
 
+
+/* =========================================================
+   TÍTULOS · TIPOGRAFÍA EDITORIAL ANTIGUA
+========================================================= */
+
 .guia h3{
+
   margin:0 0 8px;
+
+  font-family:Georgia,'Times New Roman',serif;
+
   font-size:17px;
+
   line-height:1.18;
-  letter-spacing:-.45px;
-  font-weight:800;
+
+  letter-spacing:-.35px;
+
+  font-weight:700;
+
   color:#111;
+
   transition:opacity .25s ease;
+
 }
 
 .guia p{
+
   margin:0;
+
+  font-family:'Inter',sans-serif;
+
   font-size:12px;
+
   line-height:1.5;
+
   font-weight:400;
+
   color:#666;
+
 }
 
 .guia:hover h3{
+
   opacity:.65;
+
 }
 
 
@@ -938,12 +1170,37 @@ img{width:100%;display:block}
 @media(max-width:900px){
 
   .guias-principales{
+
     padding:0 30px;
+
   }
 
   .guias-grid{
+
     grid-template-columns:repeat(2, minmax(0, 1fr));
-    gap:28px 20px;
+
+    gap:0;
+
+  }
+
+  .guia{
+
+    padding:0 20px;
+
+    border-left:1px solid #e5e5e5;
+
+  }
+
+  .guia:nth-child(odd){
+
+    border-left:none;
+
+  }
+
+  .guia:nth-child(n+3){
+
+    margin-top:28px;
+
   }
 
 }
@@ -956,35 +1213,354 @@ img{width:100%;display:block}
 @media(max-width:600px){
 
   .guias-principales{
+
     margin:0 auto;
+
     padding:0 20px;
+
   }
 
   .guias-header{
+
     width:100%;
+
     max-width:700px;
+
     margin:0 auto 24px;
+
     text-align:center;
+
   }
 
   .guias-header h2{
+
     width:100%;
+
     margin:0;
+
     padding:0;
+
     font-size:16px;
+
     text-align:center;
+
   }
 
   .guias-grid{
+
     grid-template-columns:1fr;
-    gap:32px;
+
+    gap:0;
+
+  }
+
+  .guia{
+
+    padding:0 0 24px;
+
+    margin:0 0 24px;
+
+    border-left:none;
+
+    border-bottom:1px solid #e5e5e5;
+
+  }
+
+  /* LÍNEA ENTRE GUÍAS */
+
+  .guia:not(:last-child){
+
+    border-bottom:1px solid #e5e5e5;
+
+  }
+
+  /* SIN LÍNEA EN LA ÚLTIMA */
+
+  .guia:last-child{
+
+    border-bottom:none;
+
+    margin-bottom:0;
+
   }
 
   .guia h3{
+
     font-size:20px;
+
+    line-height:1.18;
+
   }
 
 }
+
+
+
+/* =========================================================
+    SECCIÓN CURIOSIDADES
+========================================================= */
+
+/* ===== CURIOSIDADES ===== */
+
+
+/* =========================================================
+   Datos que vale la pena conocer = CURIOSIDADES
+========================================================= */
+
+
+.cm-curiosidades{
+  width:100%;
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 40px;
+  font-family:'Inter',sans-serif;
+  color:#111;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.cm-curiosidades-header{
+  width:100%;
+  margin:0 0 18px;
+}
+
+.cm-curiosidades-kicker{
+  display:block;
+  margin:0;
+  font-size:9px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+  color:#111;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.cm-curiosidades-grid{
+  display:grid;
+  grid-template-columns:1.35fr 1fr 1fr;
+  grid-template-rows:auto auto;
+  column-gap:0;
+  row-gap:0;
+  border-top:0;
+}
+
+/* =========================================================
+   PIEZA PRINCIPAL
+========================================================= */
+
+.cm-curiosidad-feature{
+  grid-row:1 / 3;
+  padding:18px 22px 0 0;
+  border-right:1px solid #dedede;
+}
+
+.cm-curiosidad-feature a{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+
+.cm-curiosidad-feature-image{
+  width:100%;
+  aspect-ratio:16 / 9;
+  overflow:hidden;
+  margin:0 0 14px;
+}
+
+.cm-curiosidad-feature-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+
+.cm-curiosidad-feature:hover img{
+  transform:scale(1.02);
+}
+
+.cm-curiosidad-feature-content{
+  padding:0;
+}
+
+.cm-curiosidad-label{
+  display:block;
+  margin:0 0 7px;
+  font-size:8px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+  color:#888;
+}
+
+.cm-curiosidad-feature h3{
+  margin:0 0 9px;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:23px;
+  line-height:1.13;
+  letter-spacing:-.5px;
+  font-weight:700;
+  color:#111;
+}
+
+.cm-curiosidad-feature p{
+  max-width:500px;
+  margin:0;
+  font-size:11px;
+  line-height:1.55;
+  color:#666;
+}
+
+
+/* =========================================================
+   CURIOSIDADES
+========================================================= */
+
+.cm-curiosidad-item{
+  min-width:0;
+  padding:18px 0 17px 18px;
+  border-bottom:1px solid #dedede;
+}
+
+.cm-curiosidad-item:nth-last-child(-n+2){
+  border-bottom:0;
+}
+
+.cm-curiosidad-number{
+  display:inline-block;
+  margin:0 7px 7px 0;
+  font-size:8px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.8px;
+  color:#9a7b1f;
+}
+
+.cm-curiosidad-item .cm-curiosidad-label{
+  display:inline-block;
+  margin:0 0 7px;
+}
+
+.cm-curiosidad-item h3{
+  margin:0 0 7px;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:18px;
+  line-height:1.16;
+  letter-spacing:-.35px;
+  font-weight:700;
+  color:#111;
+  transition:color .2s ease;
+}
+
+.cm-curiosidad-item p{
+  margin:0;
+  font-size:10.5px;
+  line-height:1.5;
+  color:#707070;
+}
+
+.cm-curiosidad-item:hover h3{
+  color:#555;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+  .cm-curiosidades{
+    padding:0 30px;
+  }
+
+  .cm-curiosidades-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .cm-curiosidad-feature{
+    grid-column:1 / -1;
+    grid-row:auto;
+    padding:0 0 20px;
+    border-right:0;
+    border-bottom:1px solid #dedede;
+  }
+
+  .cm-curiosidad-feature-image{
+    display:none;
+  }
+
+  .cm-curiosidad-item{
+    padding-left:0;
+    padding-right:18px;
+  }
+
+  .cm-curiosidad-item:nth-child(even){
+    padding-left:18px;
+    padding-right:0;
+    border-left:1px solid #dedede;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media(max-width:600px){
+
+  .cm-curiosidades{
+    padding:0 20px;
+  }
+
+  .cm-curiosidades-header{
+    margin-bottom:16px;
+  }
+
+  .cm-curiosidades-kicker{
+    font-size:8px;
+  }
+
+  .cm-curiosidades-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cm-curiosidad-feature{
+    display:none;
+  }
+
+  .cm-curiosidad-item{
+    padding:15px 0;
+    border-left:0 !important;
+    border-bottom:1px solid #dedede;
+  }
+
+  .cm-curiosidad-item:last-child{
+    border-bottom:0;
+  }
+
+  .cm-curiosidad-item h3{
+    font-size:19px;
+  }
+
+  .cm-curiosidad-item p{
+    font-size:10.5px;
+    line-height:1.5;
+  }
+
+}
+
+
 
 
 /* =========================================================
@@ -2367,8 +2943,10 @@ img{width:100%;display:block}
 
 
 
+
+
 /* =========================================================
-   SECCION · SOBRE EL MEDIO 
+   SECCIONES DIVISIONES
 ========================================================= */
 
 .seccion-label{
@@ -2382,13 +2960,24 @@ img{width:100%;display:block}
   font-weight:700;
   letter-spacing:1.8px;
   text-transform:uppercase;
+  position:relative;
+  padding-bottom:10px;
+}
+
+.seccion-label::after{
+  content:"";
+  display:block;
+  width:42px;
+  height:2px;
+  background:#111;
+  margin:9px auto 0;
 }
 
 
 
 
 /* =========================================================
-   SECCIONES · DISEÑOS 
+    SEPARADORES · DISEÑOS 
 ========================================================= */
 
 /* =========================================================
@@ -2423,7 +3012,4 @@ img{width:100%;display:block}
   }
 
 }
-
-
-
 
