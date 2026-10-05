@@ -1,3 +1,4 @@
+
 /* =========================================================
    SECCIÓN · PORTADA PRINCIPAL
 ========================================================= */
@@ -117,9 +118,6 @@ img{
   padding-bottom:6px;
   display:inline-block
 }
-
-
-
 
 .editorial-points{
   margin-top:14px;
@@ -314,7 +312,9 @@ img{
 }
 
 
-/* ===== PC: LO MÁS LEÍDO ===== */
+/* =========================================================
+   PC · LO MÁS LEÍDO
+========================================================= */
 
 @media(min-width:1201px){
 
@@ -355,7 +355,6 @@ img{
     margin-top:3px
   }
 
-
   /* ===== ARTÍCULOS INFERIORES ===== */
 
   .editorial-column .side-article,
@@ -370,7 +369,9 @@ img{
 }
 
 
-/* ===== TABLET ===== */
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media(max-width:1200px){
 
@@ -408,7 +409,9 @@ img{
 }
 
 
-/* ===== MOBILE ===== */
+/* =========================================================
+   MÓVIL · PORTADA PRINCIPAL
+========================================================= */
 
 @media(max-width:768px){
 
@@ -416,7 +419,7 @@ img{
     padding:16px 20px 45px
   }
 
-  /* ENFOQUE PEGADO A LA LÍNEA */
+  /* ENFOQUE */
 
   .forbes-intro{
     width:100%;
@@ -429,7 +432,7 @@ img{
     line-height:1.4
   }
 
-  /* LÍNEA JUSTO ENCIMA DE LA IMAGEN */
+  /* LÍNEA SUPERIOR */
 
   .forbes-top-line{
     width:100%;
@@ -438,7 +441,7 @@ img{
     background:#ececec
   }
 
-  /* CONTENIDO PRINCIPAL A LA IZQUIERDA */
+  /* CONTENIDO PRINCIPAL */
 
   .hero-content{
     align-items:flex-start;
@@ -446,15 +449,11 @@ img{
     margin-top:14px
   }
 
-  /* CATEGORÍAS */
-
   .hero-category{
     font-size:10px;
     line-height:1.1;
     margin-bottom:6px
   }
-
-  /* TÍTULO PRINCIPAL */
 
   .hero-main h1{
     font-size:1.65rem;
@@ -463,47 +462,167 @@ img{
     margin-bottom:8px
   }
 
-  /* DESCRIPCIÓN */
-
   .hero-content p{
     font-size:12px;
     line-height:1.4;
     font-weight:400
   }
 
-  /* TARJETAS INFERIORES */
+
+  /* =====================================================
+     DOS ARTÍCULOS INFERIORES DEL CENTRO
+  ===================================================== */
 
   .hero-bottom-cards{
-    gap:14px;
-    margin-top:11px;
-    padding-top:8px
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    margin-top:18px;
+    padding-top:8px;
+    border-top:1px solid #ececec
   }
 
   .hero-bottom-cards .side-article{
-    padding:7px 0
+    flex:none;
+    width:100%;
+    margin:0;
+    padding:12px 0;
+    border-bottom:1px solid #ececec
   }
 
-  .hero-bottom-cards .side-article img{
-    margin-bottom:5px
-  }
-
-  .hero-bottom-cards .side-content h3{
-    margin-top:3px
-  }
-
-  /* TÍTULOS DE TARJETAS */
-
-  .side-content h3{
-    font-size:22px
-  }
-
-  /* QUITAR SOLO LA LÍNEA FINAL EN MÓVIL */
-
-  .sidebar-news .side-article:last-child{
+  .hero-bottom-cards .side-article:last-child{
     border-bottom:none
   }
 
+  .hero-bottom-cards .side-article > a{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 108px;
+    column-gap:13px;
+    align-items:center;
+    width:100%
+  }
+
+  .hero-bottom-cards .side-article > a > .side-content{
+    grid-column:1;
+    grid-row:1;
+    width:100%;
+    min-width:0;
+    padding:0
+  }
+
+  .hero-bottom-cards .side-article > a > .side-content > span{
+    display:block;
+    margin:0 0 6px;
+    font-size:9px;
+    line-height:1.2;
+    letter-spacing:.65px
+  }
+
+  .hero-bottom-cards .side-article > a > .side-content > h3{
+    margin:0;
+    font-size:16px;
+    line-height:1.17;
+    font-weight:700;
+    letter-spacing:-.15px
+  }
+
+  .hero-bottom-cards .side-article > a > img{
+    grid-column:2;
+    grid-row:1;
+    width:108px;
+    height:80px;
+    aspect-ratio:auto;
+    object-fit:cover;
+    margin:0
+  }
+
+
+  /* =====================================================
+     LO MÁS LEÍDO · DOS ARTÍCULOS
+  ===================================================== */
+
+  .sidebar-news{
+    display:block;
+    width:100%;
+    max-width:100%;
+    margin-top:28px;
+    padding:0;
+    border:0
+  }
+
+  /* ENCABEZADO ÚNICO */
+
+  .sidebar-news > .editorial-label{
+    display:inline-block;
+    margin:0 0 8px;
+    padding:0 0 6px;
+    font-size:11px;
+    line-height:1.2;
+    border-bottom:2px solid #111
+  }
+
+  /* ARTÍCULOS */
+
+  .sidebar-news > .side-article{
+    display:block;
+    width:100%;
+    margin:0;
+    padding:12px 0;
+    border-bottom:1px solid #ececec
+  }
+
+  .sidebar-news > .side-article:last-child{
+    border-bottom:none
+  }
+
+  .sidebar-news > .side-article > a{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 108px;
+    column-gap:13px;
+    align-items:center;
+    width:100%
+  }
+
+  /* TEXTO A LA IZQUIERDA */
+
+  .sidebar-news > .side-article > a > .side-content{
+    grid-column:1;
+    grid-row:1;
+    width:100%;
+    min-width:0;
+    padding:0
+  }
+
+  .sidebar-news > .side-article > a > .side-content > span{
+    display:block;
+    margin:0 0 6px;
+    font-size:9px;
+    line-height:1.2;
+    letter-spacing:.65px
+  }
+
+  .sidebar-news > .side-article > a > .side-content > h3{
+    margin:0;
+    font-size:16px;
+    line-height:1.17;
+    font-weight:700;
+    letter-spacing:-.15px
+  }
+
+  /* IMAGEN A LA DERECHA */
+
+  .sidebar-news > .side-article > a > img{
+    grid-column:2;
+    grid-row:1;
+    width:108px;
+    height:80px;
+    aspect-ratio:auto;
+    object-fit:cover;
+    margin:0
+  }
+
 }
+
 
 
 
@@ -513,302 +632,342 @@ img{
 
 /* ===== ANÁLISIS ===== */
 
-.documentales{
-  padding:34px 30px 48px;
-  background:#fff;
-  overflow:hidden;
-  font-family:"Inter", Arial, sans-serif;
+/* =========================================================
+   CÓDIGO MILLONARIO — PORTADA EDITORIAL
+   Adaptación Financial Times
+   Dimensión editorial CM · 1080px
+   ========================================================= */
+
+.cm-home{
+    width:100%;
+    max-width:1080px;
+    margin:0 auto;
+    padding:0;
+    font-family:Georgia,"Times New Roman",serif;
+    color:#111;
+    background:transparent;
+    box-sizing:border-box;
+}
+
+.cm-home *,
+.cm-home *::before,
+.cm-home *::after{
+    box-sizing:border-box;
+}
+
+.cm-home a{
+    color:inherit;
+    text-decoration:none;
 }
 
 
 /* =========================================================
-   CONTENEDOR
+   GRID PRINCIPAL
 ========================================================= */
 
-.contenedor-documentales{
-  width:100%;
-  max-width:1180px;
-  margin:0 auto;
+.cm-home-grid{
+    display:grid;
+    grid-template-columns:310px 310px 1fr;
+    gap:0;
+    width:100%;
 }
 
 
 /* =========================================================
-   ENCABEZADO
+   HISTORIA PRINCIPAL
 ========================================================= */
 
-.encabezado-documentales{
-  width:100%;
-  text-align:center;
-  margin:0 0 25px;
+.cm-main-story{
+    grid-column:1 / 3;
+    display:grid;
+    grid-template-columns:270px 350px;
+    min-height:300px;
+    border-right:1px solid #e5e5e5;
 }
 
-.etiqueta-documentales{
-  display:block;
-  margin:0 0 6px;
-  color:#777;
-  font-size:7px;
-  line-height:1;
-  font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
+.cm-main-text{
+    padding:18px 18px 18px 0;
 }
 
-.documentales h2{
-  margin:0;
-  color:#111;
-  font-size:16px;
-  line-height:1.2;
-  letter-spacing:-.2px;
-  font-weight:600;
+.cm-kicker{
+    display:block;
+    margin-bottom:7px;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-size:10px;
+    font-weight:700;
+    line-height:1.2;
+    letter-spacing:.7px;
+    text-transform:uppercase;
+    color:#555;
+}
+
+.cm-main-title{
+    margin:0 0 12px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:34px;
+    font-weight:700;
+    line-height:1.02;
+    letter-spacing:-.4px;
+}
+
+.cm-description{
+    margin:0 0 8px;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-size:12px;
+    line-height:1.45;
+    color:#555;
+}
+
+.cm-time{
+    display:block;
+    margin-top:8px;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-size:8px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+    color:#777;
+}
+
+.cm-main-links{
+    margin:12px 0 0;
+    padding:0;
+    list-style:none;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-size:10px;
+    line-height:1.35;
+    color:#333;
+}
+
+.cm-main-links li{
+    margin:6px 0;
+}
+
+.cm-main-links li::before{
+    content:"›";
+    margin-right:5px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:14px;
+    color:#777;
+}
+
+.cm-main-image{
+    min-height:300px;
+    overflow:hidden;
+}
+
+.cm-main-image img{
+    width:100%;
+    height:100%;
+    min-height:300px;
+    display:block;
+    object-fit:cover;
 }
 
 
 /* =========================================================
-   SLIDER
+   COLUMNA FAST
 ========================================================= */
 
-.slider-wrapper{
-  position:relative;
-  width:100%;
+.cm-fast{
+    grid-column:3;
+    grid-row:1;
+    border-left:1px solid #e5e5e5;
+    padding:0 0 0 16px;
 }
 
-.slider-documentales{
-  display:flex;
-  gap:0;
-  width:100%;
-  margin:0 auto;
-  overflow:hidden;
-  scroll-behavior:smooth;
+.cm-fast-header{
+    padding:8px 0 9px;
+    border-bottom:1px solid #e5e5e5;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:18px;
+    font-style:italic;
+    font-weight:700;
+    color:#222;
+}
+
+.cm-fast-header span{
+    margin-left:3px;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-size:10px;
+    font-style:normal;
+    font-weight:700;
+    color:#777;
+}
+
+.cm-fast-item{
+    padding:11px 0;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.cm-fast-item:last-child{
+    border-bottom:none;
+}
+
+.cm-fast-title{
+    margin:0;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:14px;
+    line-height:1.2;
+    font-weight:400;
+    color:#222;
+}
+
+.cm-fast-time{
+    display:block;
+    margin-top:6px;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-size:8px;
+    text-transform:uppercase;
+    letter-spacing:.45px;
+    color:#777;
 }
 
 
 /* =========================================================
-   TARJETAS
-   MÁS EDITORIAL · MENOS "CARD"
+   3 NOTICIAS INFERIORES
 ========================================================= */
 
-.card-documental{
-  min-width:25%;
-  max-width:25%;
-  flex-shrink:0;
-  position:relative;
-
-  padding:0 18px;
-
-  border-left:1px solid #dedede;
+.cm-lower-grid{
+    grid-column:1 / 3;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
 }
 
-.card-documental:first-child{
-  border-left:none;
+.cm-card{
+    min-width:0;
+    padding:10px 10px 0 0;
+    margin-right:10px;
+    border-right:1px solid #e5e5e5;
+}
+
+.cm-card:nth-child(3n){
+    margin-right:0;
+    border-right:none;
+}
+
+.cm-card-image{
+    width:100%;
+    height:112px;
+    overflow:hidden;
+}
+
+.cm-card-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+.cm-card-content{
+    padding:9px 0 14px;
+}
+
+.cm-card-title{
+    margin:0 0 7px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:17px;
+    font-weight:400;
+    line-height:1.08;
+    letter-spacing:-.15px;
+    color:#222;
+}
+
+.cm-card-description{
+    margin:0 0 7px;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-size:10.5px;
+    line-height:1.35;
+    color:#666;
+}
+
+.cm-card-time{
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-size:8px;
+    text-transform:uppercase;
+    letter-spacing:.45px;
+    color:#777;
 }
 
 
 /* =========================================================
-   ENLACE
+   3 ARTÍCULOS PEQUEÑOS — DERECHA
 ========================================================= */
 
-.enlace-documental{
-  display:flex;
-  flex-direction:column;
-  height:100%;
+.cm-small-row{
+    grid-column:3;
+    display:block;
+    border-left:1px solid #e5e5e5;
+    padding-left:16px;
+}
 
-  color:inherit;
-  text-decoration:none;
+.cm-small-card{
+    display:grid;
+    grid-template-columns:92px minmax(0,1fr);
+    column-gap:10px;
+    min-height:82px;
+    padding:10px 0;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.cm-small-card:first-child{
+    padding-top:10px;
+}
+
+.cm-small-card:last-child{
+    border-bottom:none;
+}
+
+.cm-small-image{
+    width:92px;
+    height:68px;
+    overflow:hidden;
+}
+
+.cm-small-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.cm-small-card > div:last-child{
+    min-width:0;
+}
+
+.cm-small-title{
+    margin:2px 0 5px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:15px;
+    line-height:1.08;
+    font-weight:400;
+    color:#222;
+}
+
+.cm-small-time{
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-size:8px;
+    text-transform:uppercase;
+    letter-spacing:.45px;
+    color:#777;
 }
 
 
 /* =========================================================
-   IMAGEN
+   HOVER EDITORIAL
 ========================================================= */
 
-.miniatura-documental{
-  width:100%;
-  aspect-ratio:16 / 9;
-
-  overflow:hidden;
-
-  background:#f2f2f2;
-
-  margin-bottom:19px;
-
-  flex-shrink:0;
+.cm-home a:hover .cm-main-title,
+.cm-home a:hover .cm-card-title,
+.cm-home a:hover .cm-small-title,
+.cm-home a:hover .cm-fast-title{
+    opacity:.65;
 }
 
-.miniatura-documental img{
-  width:100%;
-  height:100%;
-
-  display:block;
-
-  object-fit:cover;
-
-  transition:
-    transform .45s ease,
-    opacity .35s ease;
-}
-
-.enlace-documental:hover .miniatura-documental img{
-  transform:scale(1.018);
-  opacity:.94;
-}
-
-
-/* =========================================================
-   CONTENIDO
-========================================================= */
-
-.contenido-documental{
-  padding:0;
-}
-
-
-/* =========================================================
-   CATEGORÍA
-========================================================= */
-
-.categoria-documental{
-  display:block;
-
-  margin:0 0 10px;
-
-  color:#777;
-
-  font-size:8px;
-  line-height:1;
-
-  font-weight:700;
-
-  letter-spacing:1.6px;
-
-  text-transform:uppercase;
-}
-
-
-/* =========================================================
-   TÍTULO
-========================================================= */
-
-.contenido-documental h3{
-  margin:0 0 14px;
-
-  color:#111;
-
-  font-family:Georgia, "Times New Roman", serif;
-
-  font-size:19px;
-  line-height:1.18;
-
-  letter-spacing:-.3px;
-
-  font-weight:700;
-
-  transition:color .2s ease;
-}
-
-.enlace-documental:hover .contenido-documental h3{
-  color:#333;
-}
-
-
-/* =========================================================
-   DESCRIPCIÓN
-========================================================= */
-
-.contenido-documental p{
-  margin:0;
-
-  color:#555;
-
-  font-size:14px;
-  line-height:1.52;
-
-  font-weight:400;
-}
-
-
-/* =========================================================
-   LEER ANÁLISIS
-========================================================= */
-
-.leer-analisis{
-  display:block;
-
-  margin-top:auto;
-
-  padding-top:31px;
-  padding-bottom:15px;
-
-  color:#777;
-
-  font-size:8px;
-  line-height:1.2;
-
-  font-weight:600;
-
-  letter-spacing:1.3px;
-
-  text-transform:uppercase;
-}
-
-.leer-analisis strong{
-  color:#111;
-  font-weight:800;
-}
-
-
-/* =========================================================
-   BOTONES
-   MÁS EDITORIALES · MENOS APP
-========================================================= */
-
-.btn-slider{
-  position:absolute;
-
-  top:34%;
-
-  transform:translateY(-50%);
-
-  z-index:5;
-
-  width:30px;
-  height:30px;
-
-  border:1px solid #cfcfcf;
-
-  border-radius:0;
-
-  background:#fff;
-
-  color:#333;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  cursor:pointer;
-
-  font-size:13px;
-
-  line-height:1;
-
-  box-shadow:none;
-
-  transition:
-    background .2s ease,
-    border-color .2s ease;
-}
-
-.btn-slider.prev{
-  left:-15px;
-}
-
-.btn-slider.next{
-  right:-15px;
-}
-
-.btn-slider:hover{
-  background:#f7f7f7;
-  border-color:#999;
+.cm-main-title,
+.cm-card-title,
+.cm-small-title,
+.cm-fast-title{
+    transition:opacity .2s ease;
 }
 
 
@@ -816,146 +975,296 @@ img{
    TABLET
 ========================================================= */
 
-@media(max-width:1100px){
+@media(max-width:900px){
 
-  .card-documental{
-    min-width:50%;
-    max-width:50%;
-  }
+    .cm-home{
+        max-width:800px;
+    }
 
-  .contenido-documental h3{
-    font-size:18px;
-  }
+    .cm-home-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-  .contenido-documental p{
-    font-size:14px;
-  }
+    .cm-main-story{
+        grid-column:1 / 3;
+        grid-template-columns:1fr 1.35fr;
+        border-right:none;
+    }
+
+    .cm-main-text{
+        padding:18px 18px 18px 0;
+    }
+
+    .cm-fast{
+        grid-column:2;
+        grid-row:auto;
+        border-left:1px solid #e5e5e5;
+    }
+
+    .cm-lower-grid{
+        grid-column:1 / 3;
+    }
+
+    .cm-small-row{
+        grid-column:1 / 3;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        border-left:none;
+        padding-left:0;
+    }
+
+    .cm-small-card{
+        padding:10px 14px 10px 0;
+        margin-right:14px;
+        border-right:1px solid #e5e5e5;
+    }
+
+    .cm-small-card:last-child{
+        margin-right:0;
+        padding-right:0;
+        border-right:none;
+    }
 
 }
 
+
+
+@media(max-width:620px){
+    .cm-main-title{
+        font-size:24px;
+    }
+}
 
 /* =========================================================
    MÓVIL
 ========================================================= */
 
-@media(max-width:600px){
+@media(max-width:620px){
 
-  .documentales{
-    padding:26px 18px 32px;
-  }
+    .cm-home{
+        width:100%;
+        max-width:none;
+        padding:0 20px;
+    }
 
-  .encabezado-documentales{
-    margin-bottom:16px;
-  }
+    .cm-home-grid{
+        display:block;
+    }
 
-  .documentales h2{
-    font-size:15px;
-  }
 
-  .slider-documentales{
-    overflow-x:auto;
-    scrollbar-width:none;
-  }
+    /* =====================================================
+       HISTORIA PRINCIPAL
+    ===================================================== */
 
-  .slider-documentales::-webkit-scrollbar{
-    display:none;
-  }
+    .cm-main-story{
+        display:block;
+        border-right:none;
+    }
 
-  /* ===== TARJETAS ===== */
+    .cm-main-text{
+        padding:18px 0 16px;
+    }
 
-  .card-documental{
-    min-width:76%;
-    max-width:76%;
-    padding:0 10px;
-  }
+    .cm-main-title{
+        font-size:30px;
+        line-height:1.04;
+    }
 
-  .card-documental:first-child{
-    padding-left:0;
-  }
+    .cm-description{
+        font-size:12px;
+    }
 
-  /* ===== IMAGEN ===== */
+    .cm-main-image{
+        height:auto;
+        min-height:0;
+    }
 
-  .miniatura-documental{
-    aspect-ratio:16 / 9;
-    margin-bottom:11px;
-  }
+    .cm-main-image img{
+        min-height:0;
+        height:auto;
+        aspect-ratio:16 / 9;
+    }
 
-  /* ===== CONTENIDO ===== */
 
-  .contenido-documental{
-    padding:0;
-  }
+    /* =====================================================
+       FAST
+    ===================================================== */
 
-  /* ===== CATEGORÍA ===== */
+    .cm-fast{
+        border-left:none;
+        padding:0;
+        margin-top:16px;
+    }
 
-  .categoria-documental{
-    margin:0 0 6px;
-    font-size:7px;
-    letter-spacing:1.4px;
-  }
+    .cm-fast-header{
+        padding:8px 0;
+    }
 
-  /* ===== TÍTULO ===== */
+    .cm-fast-item{
+        padding:11px 0;
+    }
 
-  .contenido-documental h3{
-    font-size:17px;
-    line-height:1.16;
-    letter-spacing:-.2px;
-    margin:0 0 8px;
-  }
 
-  /* ===== DESCRIPCIÓN ===== */
+    /* =====================================================
+       3 TARJETAS GRANDES
+       EN MÓVIL SE VUELVEN ARTÍCULOS PEQUEÑOS
+    ===================================================== */
 
-  .contenido-documental p{
-    font-size:12px;
-    line-height:1.42;
-  }
+    .cm-lower-grid{
+        display:block;
+    }
 
-  /* ===== LEER ANÁLISIS ===== */
+    .cm-card{
+        display:grid;
+        grid-template-columns:105px minmax(0,1fr);
+        column-gap:10px;
+        align-items:start;
+        width:100%;
+        min-width:0;
+        margin:0;
+        padding:12px 0;
+        border-right:none;
+        border-bottom:1px solid #e5e5e5;
+    }
 
-  .leer-analisis{
-    margin-top:16px;
-    padding-top:0;
-    padding-bottom:10px;
-    font-size:7px;
-    letter-spacing:1.2px;
-  }
+    .cm-card:first-child{
+        padding-top:12px;
+    }
 
-  /* ===== BOTONES ===== */
+    .cm-card:last-child{
+        border-bottom:none;
+    }
 
-  .btn-slider{
-    display:none;
-  }
+    .cm-card-image{
+        width:105px;
+        height:78px;
+        overflow:hidden;
+    }
+
+    .cm-card-image img{
+        width:100%;
+        height:100%;
+        display:block;
+        object-fit:cover;
+    }
+
+    .cm-card-content{
+        min-width:0;
+        padding:0;
+    }
+
+    .cm-card-content .cm-kicker{
+        margin:0 0 5px;
+        font-size:9px;
+        line-height:1.15;
+        letter-spacing:.65px;
+    }
+
+    .cm-card-title{
+        margin:0 0 6px;
+        font-size:16px;
+        line-height:1.08;
+        letter-spacing:-.1px;
+    }
+
+    .cm-card-description{
+        margin:0 0 6px;
+        font-size:10px;
+        line-height:1.3;
+    }
+
+    .cm-card-time{
+        display:block;
+        font-size:8px;
+        line-height:1.2;
+    }
+
+
+    /* =====================================================
+       3 ARTÍCULOS PEQUEÑOS DERECHA
+       TAMBIÉN COMPACTOS EN MÓVIL
+    ===================================================== */
+
+    .cm-small-row{
+        display:block;
+        width:100%;
+        border-left:none;
+        padding-left:0;
+        margin-top:4px;
+    }
+
+    .cm-small-card{
+        display:grid;
+        grid-template-columns:105px minmax(0,1fr);
+        column-gap:10px;
+        align-items:start;
+        width:100%;
+        min-height:0;
+        margin:0;
+        padding:12px 0;
+        border-right:none;
+        border-bottom:1px solid #e5e5e5;
+    }
+
+    .cm-small-card:first-child{
+        padding-top:12px;
+    }
+
+    .cm-small-card:last-child{
+        border-bottom:none;
+    }
+
+    .cm-small-image{
+        width:105px;
+        height:78px;
+        overflow:hidden;
+    }
+
+    .cm-small-image img{
+        width:100%;
+        height:100%;
+        display:block;
+        object-fit:cover;
+    }
+
+    .cm-small-card > div:last-child{
+        min-width:0;
+        padding:0;
+    }
+
+    .cm-small-card .cm-kicker{
+        margin:0 0 5px;
+        font-size:9px;
+        line-height:1.15;
+        letter-spacing:.65px;
+    }
+
+    .cm-small-title{
+        margin:0 0 6px;
+        font-size:16px;
+        line-height:1.08;
+        letter-spacing:-.1px;
+    }
+
+    .cm-small-time{
+        display:block;
+        margin:0;
+        font-size:8px;
+        line-height:1.2;
+    }
 
 }
 
-/* =========================================================
-   MÓVIL PEQUEÑO
-========================================================= */
-
-@media(max-width:600px){
-
-  .slider-documentales{
-    overflow-x:auto;
-    scrollbar-width:none;
-    padding-left:9%;
-    padding-right:9%;
-  }
-
-  .slider-documentales::-webkit-scrollbar{
-    display:none;
-  }
-
-  .card-documental{
-    min-width:82%;
-    max-width:82%;
-    padding:0 10px;
-  }
-
-  .card-documental:first-child{
-    padding-left:10px;
-  }
-
+.solo-desktop{
+    display:block;
 }
+
+@media(max-width:620px){
+    .solo-desktop{
+        display:none !important;
+    }
+}
+
 
 
 /* =========================================================
