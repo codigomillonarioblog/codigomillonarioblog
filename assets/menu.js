@@ -549,46 +549,54 @@
 
 
 /* =====================================================
-   SOMBRA / PC - TELEFONOS
-===================================================== */
-
-.cm-header {
-  /* tus propiedades actuales */
-  box-shadow: 0 9px 9px rgba(0,0,0,.16);
-}
-
-/* =====================================================
    LOGO / NOMBRE
 ===================================================== */
 
 .cm-logo {
+
   text-decoration: none;
+
   color: #ffffff;
+
   font-family:
     'Manrope',
     sans-serif;
+
   display: flex;
+
   align-items: center;
+
   width: auto;
+
   line-height: 1;
+
   white-space: nowrap;
+
   transform:
     translateX(-12px);
+
 }
 
 .cm-logo-title {
+
   font-family:
     Georgia,
     "Times New Roman",
     serif;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 700;
-  letter-spacing: -.055em;
-  line-height: 1;
-  white-space: nowrap;
-}
 
+  font-size: 28px;
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  letter-spacing: -.055em;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+}
 
 /* =====================================================
    NAVEGACIÓN
@@ -1248,7 +1256,7 @@
 
     font-size: 22px;
 
-    font-weight: 800;
+    font-weight: 400;
 
     letter-spacing: -.055em;
 
