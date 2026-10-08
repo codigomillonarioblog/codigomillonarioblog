@@ -50,7 +50,7 @@
 
         max-width: 620px;
 
-        --cm-editorial-note-size: 10px;
+        --cm-editorial-note-size: 12px;
 
     }
 
