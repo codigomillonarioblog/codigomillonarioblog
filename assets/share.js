@@ -139,7 +139,7 @@
             "Times New Roman",
             serif;
 
-        font-size: 10.5px;
+        font-size: 7px;
 
         line-height: 1.6;
 
