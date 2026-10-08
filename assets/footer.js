@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <form action="https://api.web3forms.com/submit" method="POST">
 
         <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
-        <input type="hidden" name="subject" value="🚀 Nuevo usuario registrado desde el FOOTER - Código Millonario">
+        <input type="hidden" name="subject" value=" Nuevo usuario registrado desde el FOOTER - Código Millonario">
         <input type="hidden" name="from_name" value="Código Millonario Footer">
         <input type="hidden" name="message" value="Nuevo registro desde el footer para recibir guías semanales.">
         <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
@@ -188,6 +188,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .footer-newsletter p {
@@ -196,6 +197,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 }
 
 /* BRAND */
+
 .footer-brand-box {
   background: #000;
   color: #fff;
@@ -205,6 +207,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
   font-family: 'Playfair Display', serif;
   font-size: 15px;
   font-weight: 700;
+  font-style: italic;
 }
 
 /* FORM */
@@ -372,6 +375,10 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
   .footer-newsletter button {
     padding: 16px;
     font-size: 18px;
+  }
+
+  .footer-newsletter h3 {
+    font-size: 27px;
   }
 
   .footer-col {
