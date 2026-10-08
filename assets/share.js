@@ -236,7 +236,7 @@
 
         background: transparent;
 
-        color: #716d67;
+        color: #080807;
 
         text-decoration: none;
 
