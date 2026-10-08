@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </label>
 
         <p style="font-size:12px; color:#555;">
-          Puedes cancelar tu suscripción en cualquier momento.<br><br>
+          <em>Puedes cancelar tu suscripción en cualquier momento.</em><br><br>
           La información que envíes estará regida por el 
           <a href="/informacion-legal#registro-newsletter" class="privacy-link">
             Aviso de privacidad de nuestro sitio.
@@ -206,7 +206,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 400;
   font-style: italic;
 }
 
