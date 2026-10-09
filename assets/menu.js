@@ -974,16 +974,19 @@
    PANEL DESKTOP
 ===================================================== */
 
+/* PC */
 @media (min-width: 1024px) {
-
   .cm-secciones-menu {
-
     max-width: 460px;
-
   }
-
 }
 
+/* Teléfonos */
+@media (max-width: 768px) {
+  .cm-secciones-menu {
+    max-width: 100%;
+  }
+}
 
 /* =====================================================
    PANEL ABIERTO
