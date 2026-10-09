@@ -50,6 +50,9 @@
 
 
 
+
+
+
 <!-- TARJETA DE NUEVO ARTÍCULO ACTUALIZABLE -->
 <div id="new-article-bubble">
   
@@ -69,17 +72,17 @@
     width: 320px;
     max-width: calc(100vw - 40px);
 
-    background: #111; /* más acorde a modo oscuro */
+    background: #111;
     color: #fff;
 
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 0;
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.30);
 
     font-family: 'Poppins', sans-serif;
 
-    padding: 14px 14px 16px 14px;
+    padding: 11px 12px 13px;
 
     display: none;
     flex-direction: column;
@@ -89,54 +92,59 @@
     transition: all 0.35s ease;
 
     z-index: 9999;
+    box-sizing: border-box;
   }
 
-  /* Encabezado */
+  /* ENCABEZADO */
+
   .bubble-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .bubble-label {
-    font-size: 11px;
-    letter-spacing: 0.08em;
+    font-size: 10px;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.65);
   }
 
-  /* Botón cerrar en esquina superior derecha */
+  /* CERRAR */
+
   #close-bubble {
     cursor: pointer;
-    font-size: 14px;
-    color: rgba(255,255,255,0.6);
-    transition: 0.2s;
+    font-size: 13px;
+    color: rgba(255,255,255,0.60);
+    transition: color 0.2s ease;
   }
 
   #close-bubble:hover {
-    color: #f5f6f8;
-    transform: scale(1.1);
+    color: #fff;
   }
 
-  /* Título del artículo */
+  /* TÍTULO DEL ARTÍCULO */
+
   #new-article-link {
     display: block;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 
-    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.3;
 
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   #new-article-link:hover {
-    color: #eeeeee;
+    color: #d6d6d6;
   }
 
-  /* Responsive móvil */
+  /* MÓVILES */
+
   @media (max-width: 480px) {
     #new-article-bubble {
       width: 90%;
@@ -188,8 +196,6 @@ fetch('posts.json')
   })
   .catch(err => console.error(err));
 </script>
-
-
 
 
 
