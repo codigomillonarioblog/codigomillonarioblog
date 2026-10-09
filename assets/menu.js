@@ -462,7 +462,7 @@
         </a>
 
 
-        <a href="/tienda.html">
+        <a href="/biblioteca.html">
           Productos
         </a>
 
