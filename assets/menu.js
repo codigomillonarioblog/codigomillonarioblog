@@ -462,8 +462,8 @@
         </a>
 
 
-        <a href="/biblioteca.html">
-          Productos
+        <a href="/tienda.html">
+          biblioteca
         </a>
 
 
@@ -974,18 +974,16 @@
    PANEL DESKTOP
 ===================================================== */
 
-/* PC */
-@media (min-width: 1024px) {
-  .cm-secciones-menu {
-    max-width: 460px;
-  }
-}
+/* PC y TELEFONOS */
 
-/* Teléfonos */
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
+
   .cm-secciones-menu {
-    max-width: 100%;
+
+    max-width: 460px;
+
   }
+
 }
 
 /* =====================================================
