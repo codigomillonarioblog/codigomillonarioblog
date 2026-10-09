@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lo Que Dicen Nuestros Usuarios: Opiniones y Reseñas | Código Millonario</title>
-<meta name="description" content="Conoce lo que dicen los usuarios sobre herramientas y cursos digitales. Opiniones y experiencias en Código Millonario.">
+<title>Opiniones de Lectores | Código Millonario</title>
+<meta name="description" content="Conoce las opiniones de lectores sobre los contenidos de Código Millonario, medio digital de educación financiera, negocios y construcción de patrimonio.">
 
 <!-- Favicon -->
 <link rel="icon" href="./assets/img/codigo-millonario-medio-digital.png" type="image/png">
@@ -78,13 +78,12 @@
 
     <!-- ETIQUETA -->
     <span class="hero-tag">
-      OPINIONES DE LA COMUNIDAD
+      OPINIONES DE LECTORES
     </span>
 
     <!-- TITULO -->
     <h1>
-      Experiencias de lectores y participantes <br>
-      que dejaron sus puntos de vista
+      Las opiniones de quienes leen Código Millonario
     </h1>
 
     <!-- LINEA -->
@@ -92,8 +91,7 @@
 
     <!-- SUBTITULO -->
     <p>
-      Explora consejos prácticos, experiencias y estrategias para mejorar tus finanzas, alcanzar tus
-      metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
+      Un espacio para conocer las experiencias y los puntos de vista de lectores sobre los contenidos de Código Millonario y su enfoque de la educación financiera, los negocios y la construcción de patrimonio.
     </p>
 
   </div>
@@ -250,801 +248,429 @@
 
 
 
-<!-- FORMULARIO COMPARTIR HISTORIA -->
-<section class="max-w-3xl mx-auto my-10 px-4">
-
-  <div id="FORMULARIO-HISTORIA" class="scroll-mt-40 bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm">
-
-    <div class="text-center mb-8">
-
-      <span class="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-semibold mb-4">
-        Código Millonario
-      </span>
-
-      <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
-          style="font-family:'Poppins',sans-serif;">
-        Comparte tu Historia
-      </h1>
-
-    </div>
-    
-<form id="historiaForm"
-      action="https://api.web3forms.com/submit"
-      method="POST"
-      class="space-y-6"
-      novalidate>
-
-  <!-- WEB3FORMS -->
-  <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
-  <input type="hidden" name="subject" value="NUEVA HISTORIA SUPERACION">
-  <input type="hidden" name="from_name" value="Código Millonario - Historias">
-  <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
-
-  <!-- Honeypot anti spam -->
-  <input type="checkbox" name="botcheck" style="display:none;">
 
 
-  <!-- Nombre -->
-  <div>
-    <label class="block text-sm font-medium text-slate-700 mb-2">
-      Nombre o seudónimo
-    </label>
 
-    <input
-      id="nombre"
-      type="text"
-      name="nombre"
-      required
-      minlength="2"
-      maxlength="60"
-      placeholder="Ejemplo: Juan Pérez"
-      class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500">
 
-    <p id="nombreError" class="hidden text-sm text-red-600 mt-2">
-      Debes ingresar un nombre válido.
+
+
+
+
+<!-- ================= OPINIONES DE LECTORES ================= -->
+
+<main class="cm-opinions">
+
+  <header class="cm-opinions-header">
+    <h1>Lo que dicen nuestros lectores</h1>
+    <p>
+      Opiniones sobre los contenidos de Código Millonario y su enfoque
+      de la educación financiera, los negocios y la construcción de patrimonio.
     </p>
-  </div>
-
-  <!-- Correo -->
-  <div>
-    <label class="block text-sm font-medium text-slate-700 mb-2">
-      Correo electrónico
-    </label>
-
-    <input
-      id="correo"
-      type="email"
-      name="correo"
-      required
-      minlength="6"
-      maxlength="100"
-      placeholder="correo@ejemplo.com"
-      class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500">
-
-    <p id="correoError" class="hidden text-sm text-red-600 mt-2">
-      Debes ingresar un correo válido.
-    </p>
-  </div>
-
-  <!-- Historia -->
-  <div>
-    <label class="block text-sm font-medium text-slate-700 mb-2">
-      Tu historia
-    </label>
-
-    <textarea
-      id="historia"
-      name="historia"
-      rows="12"
-      required
-      minlength="100"
-      maxlength="10000"
-      placeholder="Cuéntanos tu experiencia relacionada con dinero, negocios, emprendimiento, inversiones, ahorro, deudas, trabajo o crecimiento financiero..."
-      class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
-
-    <p id="historiaError" class="hidden text-sm text-red-600 mt-2">
-      La historia debe tener al menos 100 caracteres.
-    </p>
-  </div>
-
-  <!-- Políticas -->
-  <div class="flex items-start gap-3">
-
-    <input
-      type="checkbox"
-      id="politicas"
-      required
-      class="mt-1 w-5 h-5">
-
-    <label for="politicas" class="text-sm text-slate-600 leading-relaxed">
-
-      Acepto las
-      <a href="informacion-legal.html#compartir-historias"
-         class="text-amber-600 hover:text-amber-700 font-medium">
-        políticas para compartir historias
-      </a>
-
-      y autorizo a Código Millonario a revisar, editar,
-      adaptar y publicar mi historia si es seleccionada.
-
-    </label>
-
-  </div>
-
-  <p id="politicasError" class="hidden text-sm text-red-600">
-    Debes aceptar las políticas para continuar.
-  </p>
-
-  <!-- Requisitos -->
-  <div class="flex items-start gap-3">
-
-    <input
-      type="checkbox"
-      id="requisitos"
-      required
-      class="mt-1 w-5 h-5">
-
-    <label for="requisitos" class="text-sm text-slate-600 leading-relaxed">
-
-      He leído los
-      <a href="informacion-legal.html#requisitos-historias"
-         class="text-amber-600 hover:text-amber-700 font-medium">
-        requisitos para enviar historias
-      </a>
-
-      y confirmo que mi contenido cumple con las condiciones establecidas.
-
-    </label>
-
-  </div>
-
-  <p id="requisitosError" class="hidden text-sm text-red-600">
-    Debes confirmar que leíste los requisitos.
-  </p>
-
-  <!-- Aviso -->
-  <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
-
-    <p class="text-sm text-slate-600">
-      <strong>Aviso editorial:</strong>
-      El envío de una historia no garantiza su publicación.
-      Todas las historias son revisadas antes de ser publicadas.
-    </p>
-
-  </div>
-
-  <!-- Botón -->
-  <button
-    type="submit"
-    class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-4 rounded-xl transition duration-300">
-
-    Enviar Historia
-
-  </button>
-
-  </div>
-</section>
-
-</form>
-
-<style>
-html {
-  scroll-behavior: smooth;
-}
-</style>
-
-<script>
-
-const form = document.getElementById('historiaForm');
-
-const nombre = document.getElementById('nombre');
-const correo = document.getElementById('correo');
-const historia = document.getElementById('historia');
-
-const politicas = document.getElementById('politicas');
-const requisitos = document.getElementById('requisitos');
-
-const nombreError = document.getElementById('nombreError');
-const correoError = document.getElementById('correoError');
-const historiaError = document.getElementById('historiaError');
-
-const politicasError = document.getElementById('politicasError');
-const requisitosError = document.getElementById('requisitosError');
-
-function validarCampo(campo, error) {
-
-  if (!campo.value.trim() || !campo.checkValidity()) {
-    error.classList.remove('hidden');
-    return false;
-  }
-
-  error.classList.add('hidden');
-  return true;
-}
-
-function validarCheckbox(box, error) {
-
-  if (!box.checked) {
-    error.classList.remove('hidden');
-    return false;
-  }
-
-  error.classList.add('hidden');
-  return true;
-}
-
-[nombre, correo, historia].forEach(campo => {
-
-  campo.addEventListener('input', () => {
-
-    if (campo === nombre) validarCampo(nombre, nombreError);
-    if (campo === correo) validarCampo(correo, correoError);
-    if (campo === historia) validarCampo(historia, historiaError);
-
-  });
-
-});
-
-politicas.addEventListener('change', () => {
-  validarCheckbox(politicas, politicasError);
-});
-
-requisitos.addEventListener('change', () => {
-  validarCheckbox(requisitos, requisitosError);
-});
-
-form.addEventListener('submit', function(e) {
-
-  const nombreValido = validarCampo(nombre, nombreError);
-  const correoValido = validarCampo(correo, correoError);
-  const historiaValida = validarCampo(historia, historiaError);
-
-  const politicasValidas = validarCheckbox(politicas, politicasError);
-  const requisitosValidos = validarCheckbox(requisitos, requisitosError);
-
-  if (
-    !nombreValido ||
-    !correoValido ||
-    !historiaValida ||
-    !politicasValidas ||
-    !requisitosValidos
-  ) {
-    e.preventDefault();
-  }
-
-});
-
-</script>
-
-
-
-
-
-
-
-
-
-<!-- ================= COMENTARIOS ================= -->
-
-<main class="cm-comments-section">
-
-    <section class="cm-comments-container">
-
-        <div class="cm-comments-header">
-
-            <span class="cm-tag">
-                Comunidad
-            </span>
-
-            <h2>Comentarios de lectores</h2>
-
-            <p>
-                Algunas opiniones de personas que han aprendido sobre dinero, ahorro e inversión con Código Millonario.
-            </p>
-
-        </div>
-
-        <div class="comment-list">
-
-            <!-- 1 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=47" alt="Carolina López">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            Carolina López
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Empecé a organizar mejor mis gastos después de leer varios artículos.
-                        No fue algo mágico, pero sí me ayudó a tener más claridad con mi dinero.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 2 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=8" alt="David Herrera">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            David Herrera
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Me sirvió para entender algunas cosas básicas de inversión.
-                        No lo vi como “ganar dinero rápido”, sino como educación.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 3 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=5" alt="Valentina Torres">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            Valentina Torres
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        He ido cambiando hábitos poco a poco. Antes no registraba nada,
-                        ahora al menos tengo control de mis gastos mensuales.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 4 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=33" alt="Juan Ríos">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            Juan Ríos
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Explica las cosas de forma simple. No es complicado de leer,
-                        eso ayuda bastante cuando uno empieza desde cero.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 5 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=41" alt="María Fernanda">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            María Fernanda
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Me ayudó a entender mejor cómo funcionan los ingresos pasivos,
-                        aunque todavía estoy en proceso de aplicarlo.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 6 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=15" alt="Sebastián Gómez">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            Sebastián Gómez
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        He mejorado mis hábitos financieros poco a poco.
-                        No todo cambia de un día para otro, pero sí se nota diferencia.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 7 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=22" alt="Andrés Molina">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            Andrés Molina
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Lo encontré buscando información básica de finanzas.
-                        Está bien para entender conceptos sin tanta complicación.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 8 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=12" alt="Laura Castillo">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            Laura Castillo
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Me gustó porque no promete cosas exageradas.
-                        Más bien te hace pensar en cómo manejas tu dinero.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 9 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=29" alt="Diego Fernández">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            Diego Fernández
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Algunas ideas ya las había escuchado, pero aquí están explicadas
-                        de una forma más directa y fácil de aplicar.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 10 -->
-            <div class="comment">
-                <img src="https://i.pravatar.cc/80?img=18" alt="Camila Reyes">
-
-                <div class="comment-content">
-
-                    <div class="comment-head">
-
-                        <span class="name">
-                            Camila Reyes
-                        </span>
-
-                        <span class="time">
-                            hace un tiempo
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Es contenido tranquilo, sin presión ni promesas raras.
-                        Sirve más como guía general que como “receta rápida”.
-                    </p>
-
-                </div>
-            </div>
-
-        </div>
-
-    </section>
+  </header>
+
+  <section class="cm-opinions-grid" aria-label="Opiniones de lectores">
+
+    <!-- OPINIÓN DESTACADA -->
+    <article class="cm-opinion cm-opinion-feature">
+      <img src="https://i.pravatar.cc/500?img=47"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lector</span>
+        <h2>Carolina López</h2>
+        <p>
+          Empecé a organizar mejor mis gastos después de leer varios
+          artículos. No fue algo mágico, pero sí me ayudó a tener
+          más claridad con mi dinero.
+        </p>
+      </div>
+    </article>
+
+    <!-- OPINIÓN 2 -->
+    <article class="cm-opinion">
+      <img src="https://i.pravatar.cc/300?img=8"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lector</span>
+        <h2>David Herrera</h2>
+        <p>
+          Me sirvió para entender algunas cosas básicas de inversión.
+          No lo vi como «ganar dinero rápido», sino como educación.
+        </p>
+      </div>
+    </article>
+
+    <!-- OPINIÓN 3 -->
+    <article class="cm-opinion">
+      <img src="https://i.pravatar.cc/300?img=5"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lectora</span>
+        <h2>Valentina Torres</h2>
+        <p>
+          He ido cambiando hábitos poco a poco. Antes no registraba nada;
+          ahora al menos tengo control de mis gastos mensuales.
+        </p>
+      </div>
+    </article>
+
+    <!-- OPINIÓN 4 -->
+    <article class="cm-opinion">
+      <img src="https://i.pravatar.cc/300?img=33"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lector</span>
+        <h2>Juan Ríos</h2>
+        <p>
+          Explica las cosas de forma simple. No es complicado de leer,
+          eso ayuda bastante cuando uno empieza desde cero.
+        </p>
+      </div>
+    </article>
+
+    <!-- OPINIÓN 5 -->
+    <article class="cm-opinion">
+      <img src="https://i.pravatar.cc/300?img=41"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lectora</span>
+        <h2>María Fernanda</h2>
+        <p>
+          Me ayudó a entender mejor cómo funcionan los ingresos pasivos,
+          aunque todavía estoy en proceso de aplicarlo.
+        </p>
+      </div>
+    </article>
+
+    <!-- OPINIÓN 6 -->
+    <article class="cm-opinion">
+      <img src="https://i.pravatar.cc/300?img=15"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lector</span>
+        <h2>Sebastián Gómez</h2>
+        <p>
+          He mejorado mis hábitos financieros poco a poco.
+          No todo cambia de un día para otro, pero sí se nota diferencia.
+        </p>
+      </div>
+    </article>
+
+    <!-- OPINIÓN 7 -->
+    <article class="cm-opinion">
+      <img src="https://i.pravatar.cc/300?img=22"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lector</span>
+        <h2>Andrés Molina</h2>
+        <p>
+          Lo encontré buscando información básica de finanzas.
+          Está bien para entender conceptos sin tanta complicación.
+        </p>
+      </div>
+    </article>
+
+    <!-- OPINIÓN 8 -->
+    <article class="cm-opinion">
+      <img src="https://i.pravatar.cc/300?img=12"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lector</span>
+        <h2>Mateo Ramírez</h2>
+        <p>
+          Me gustó porque no promete cosas exageradas.
+          Más bien te hace pensar en cómo manejas tu dinero.
+        </p>
+      </div>
+    </article>
+
+    <!-- OPINIÓN 9 -->
+    <article class="cm-opinion">
+      <img src="https://i.pravatar.cc/300?img=29"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lector</span>
+        <h2>Camila Reyes</h2>
+        <p>
+          Algunas ideas ya las había escuchado, pero aquí están explicadas
+          de una forma más directa y fácil de aplicar.
+        </p>
+      </div>
+    </article>
+
+    <!-- OPINIÓN 10 -->
+    <article class="cm-opinion">
+      <img src="https://i.pravatar.cc/300?img=18"
+           alt=""
+           loading="lazy">
+
+      <div class="cm-opinion-content">
+        <span class="cm-opinion-label">Opinión de lector</span>
+        <h2>Diego Fernández</h2>
+        <p>
+          Es contenido tranquilo, sin presión ni promesas raras.
+          Sirve más como guía general que como «receta rápida».
+        </p>
+      </div>
+    </article>
+
+  </section>
 
 </main>
 
 <style>
+/* =========================================
+   CÓDIGO MILLONARIO — PORTADA DE OPINIONES
+========================================= */
 
-/*==============================
-        SECCIÓN
-==============================*/
-
-.cm-comments-section{
-
-    background:#fafaf9;
-
-    padding:90px 20px;
-
-    font-family:'Inter',sans-serif;
-
+.cm-opinions,
+.cm-opinions * {
+  box-sizing: border-box;
 }
 
-.cm-comments-container{
-
-    max-width:980px;
-
-    margin:auto;
-
+.cm-opinions {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px 45px;
+  color: #171717;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/*==============================
-        CABECERA
-==============================*/
+/* ENCABEZADO EDITORIAL */
 
-.cm-comments-header{
-
-    text-align:center;
-
-    margin-bottom:55px;
-
+.cm-opinions-header {
+  max-width: 850px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #bcbcbc;
 }
 
-.cm-tag{
-
-    display:inline-block;
-
-    padding:6px 14px;
-
-    background:#ecfdf5;
-
-    color:#0f766e;
-
-    border-radius:999px;
-
-    font-size:13px;
-
-    font-weight:600;
-
-    margin-bottom:18px;
-
+.cm-opinions-header h1 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1px;
 }
 
-.cm-comments-header h2{
-
-    font-size:2.3rem;
-
-    font-weight:700;
-
-    color:#1c1917;
-
-    margin-bottom:14px;
-
-    letter-spacing:-1px;
-
+.cm-opinions-header p {
+  max-width: 720px;
+  margin: 0;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-.cm-comments-header p{
+/* CUADRÍCULA EDITORIAL */
 
-    color:#57534e;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-    max-width:650px;
-
-    margin:auto;
-
+.cm-opinions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 22px;
+  align-items: start;
 }
 
-/*==============================
-      LISTA
-==============================*/
+/* BLOQUES DE OPINIONES */
 
-.comment-list{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
+.cm-opinion {
+  min-width: 0;
+  margin: 0;
+  padding: 0 0 22px;
+  border-bottom: 1px solid #c9c9c9;
+  margin-bottom: 22px;
 }
 
-/*==============================
-      COMENTARIO
-==============================*/
-
-.comment{
-
-    display:flex;
-
-    gap:18px;
-
-    background:#fff;
-
-    border:1px solid #e7e5e4;
-
-    border-radius:18px;
-
-    padding:22px;
-
-    transition:.28s ease;
-
+.cm-opinion > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin: 0 0 13px;
+  object-fit: cover;
+  background: #f0f0f0;
 }
 
-.comment:hover{
+/* TEXTO */
 
-    transform:translateY(-3px);
-
-    border-color:#0f766e;
-
-    box-shadow:0 14px 32px rgba(0,0,0,.06);
-
+.cm-opinion-content {
+  padding: 0;
 }
 
-.comment img{
-
-    width:52px;
-
-    height:52px;
-
-    border-radius:50%;
-
-    flex-shrink:0;
-
+.cm-opinion-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #666;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .65px;
+  text-transform: uppercase;
 }
 
-.comment-content{
-
-    flex:1;
-
+.cm-opinion-content h2 {
+  margin: 0 0 9px;
+  color: #171717;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -.35px;
 }
 
-.comment-head{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    margin-bottom:10px;
-
-    flex-wrap:wrap;
-
+.cm-opinion-content p {
+  margin: 0;
+  color: #383838;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-.name{
+/* BLOQUE PRINCIPAL */
 
-    font-size:16px;
-
-    font-weight:600;
-
-    color:#1c1917;
-
+.cm-opinion-feature {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+  padding-bottom: 24px;
 }
 
-.time{
-
-    font-size:12px;
-
-    color:#78716c;
-
-    background:#f5f5f4;
-
-    padding:4px 10px;
-
-    border-radius:999px;
-
+.cm-opinion-feature > img {
+  aspect-ratio: 5 / 4;
+  margin: 0;
 }
 
-.comment p{
-
-    margin:0;
-
-    color:#57534e;
-
-    line-height:1.8;
-
-    font-size:15.5px;
-
+.cm-opinion-feature .cm-opinion-content {
+  padding-top: 2px;
 }
 
-/*==============================
-      RESPONSIVE
-==============================*/
-
-@media(max-width:640px){
-
-    .cm-comments-section{
-
-        padding:70px 18px;
-
-    }
-
-    .cm-comments-header h2{
-
-        font-size:2rem;
-
-    }
-
-    .comment{
-
-        padding:18px;
-
-    }
-
-    .comment img{
-
-        width:46px;
-
-        height:46px;
-
-    }
-
+.cm-opinion-feature .cm-opinion-content h2 {
+  font-size: 32px;
+  line-height: 1.12;
 }
 
+.cm-opinion-feature .cm-opinion-content p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+  .cm-opinions {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .cm-opinions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 18px;
+  }
+
+  .cm-opinion-feature {
+    grid-column: span 2;
+  }
+
+  .cm-opinion-content h2 {
+    font-size: 21px;
+  }
+}
+
+/* MÓVIL */
+
+@media (max-width: 520px) {
+  .cm-opinions {
+    padding: 24px 16px 32px;
+  }
+
+  .cm-opinions-header {
+    margin-bottom: 22px;
+    padding-bottom: 17px;
+  }
+
+  .cm-opinions-header h1 {
+    font-size: 32px;
+    letter-spacing: -.6px;
+  }
+
+  .cm-opinions-header p {
+    font-size: 15px;
+  }
+
+  .cm-opinions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 14px;
+  }
+
+  .cm-opinion {
+    padding-bottom: 16px;
+    margin-bottom: 17px;
+  }
+
+  .cm-opinion > img {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 10px;
+  }
+
+  .cm-opinion-label {
+    font-size: 10px;
+    letter-spacing: .4px;
+  }
+
+  .cm-opinion-content h2 {
+    margin-bottom: 7px;
+    font-size: 19px;
+    line-height: 1.2;
+  }
+
+  .cm-opinion-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .cm-opinion-feature {
+    grid-column: span 2;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding-bottom: 20px;
+  }
+
+  .cm-opinion-feature > img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .cm-opinion-feature .cm-opinion-content h2 {
+    font-size: 27px;
+  }
+
+  .cm-opinion-feature .cm-opinion-content p {
+    font-size: 15px;
+  }
+}
 </style>
+
+
+
 
 
 
