@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos, Guías y Herramientas para Emprender y Mejorar las Finanzas | Código Millonario</title>
+    <meta name="description" content="Tienda de eBooks y cursos prácticos para mejorar tu mentalidad financiera, multiplicar ingresos y aprender a invertir en Colombia.">
+
+<!-- Favicon -->
+<link rel="icon" href="./assets/img/codigo-millonario-medio-digital.png" type="image/png">
+
+<!-- canonical -->
+<link rel="canonical" href="https://codigomillonario.blog/tienda.html">
+
+<!-- tailwin -->
+<script src="https://cdn.tailwindcss.com"></script>
+    
+<!-- Google Fonts Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+<style>
+body, html {
+  background-color: #ffffff !important;
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+<!-- Tipografia de codigo millonario menu -->
+<style>
+.navbar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Versión para footer con fondo oscuro */
+.navbar-logo-footer {
+    font-family: "Linux Libertine", "Georgia", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff; /* blanco para footer */
+    text-decoration: none;
+}
+</style>
+
+
+
+
+
+
+<!-- IMAGEN PRINCIPAL MENU -->
+<nav class="navbar">
+<!-- Imagen dentro del espacio blanco superior, más pequeña en PC y móviles -->
+<div class="donate-hero flex justify-start md:justify-center mt-1 mb-1">
+  <img src="./assets/img/codigo-millonario-logo.png" 
+       alt="Inspiración Código Millonario"
+       class="logo-img object-contain">
+</div>
+
+<style>
+/* TAMAÑO NORMAL */
+.logo-img {
+  width: 11rem; /* equivalente a w-56 */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .logo-img { width: 13rem; } /* sm:w-64 */
+}
+
+@media (min-width: 768px) {
+  .logo-img { width: 15rem; } /* md:w-72 */
+}
+
+/* 🔥 CUANDO HACES SCROLL (tamaño REAL más pequeño) */
+.logo-small {
+  width: 8rem !important;
+}
+
+@media (min-width: 640px) {
+  .logo-small { width: 10rem !important; }
+}
+
+@media (min-width: 768px) {
+  .logo-small { width: 11rem !important; }
+}
+
+/* mover a la izquierda solo en PC */
+@media (min-width: 768px) {
+  .logo-img {
+    transform: translateX(-40px); /* 👈 mueve a la izquierda */
+  }
+}
+</style>
+
+<script>
+const logo = document.querySelector('.logo-img');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    logo.classList.add('logo-small');
+  } else {
+    logo.classList.remove('logo-small');
+  }
+});
+</script>
+
+
+
+
+<!-- CONTENEDOR SUSCRIPCION SOLO PC -->
+<div class="btn-container pc-only">
+
+  <!-- FORMULARIO -->
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-suscriptor">
+    
+    <!-- 🔐 CONFIG WEB3FORMS -->
+    <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+    <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+    <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+    <!-- 🧠 IDENTIFICADOR -->
+    <input type="hidden" name="tipo" value="suscriptor">
+    <input type="hidden" name="from_name" value="Suscriptores Web">
+
+    <!-- BOTÓN -->
+    <button type="button" class="btn-rojo" id="btnTogglePC">
+      Newsletter
+    </button>
+
+    <!-- INPUT -->
+    <div class="input-box" id="inputBoxPC">
+      <input 
+        type="email" 
+        name="email" 
+        required
+        placeholder="Tu correo"
+        class="input-email">
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+<style>
+
+/* 🚫 OCULTAR EN MÓVIL */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* 📌 CONTENEDOR PC */
+.pc-only {
+  position: fixed;
+  right: 80px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* FORM */
+.form-suscriptor {
+  position: relative;
+}
+
+/* BOTÓN */
+.btn-rojo {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-rojo:hover {
+  background-color: #cc0000;
+}
+
+/* INPUT */
+.input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.input-email {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-enviar:hover {
+  background-color: #cc0000;
+}
+
+</style>
+
+<script>
+const btnPC = document.getElementById("btnTogglePC");
+const inputBoxPC = document.getElementById("inputBoxPC");
+
+btnPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  btnPC.style.display = "none";
+  inputBoxPC.classList.add("activo");
+});
+
+inputBoxPC.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  inputBoxPC.classList.remove("activo");
+  btnPC.style.display = "inline-block";
+});
+</script>
+
+
+
+
+
+
+<!-- MENU ORITIGNAL SECCIONES -->
+<script src="./assets/menu.js"></script>
+
+
+
+
+<!-- MENU ORITIGNAL PC Y TELEFONOS -->
+<div class="navbar-line"></div>
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="./index.html" class="navbar-logo">Código Millonario</a>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a href="./index.html">Inicio</a></li>
+      <li><a href="./educacion-financiera.html">Educación Financiera</a></li>
+      <li><a href="./mentalidad/index.html">Mentalidad</a></li>
+      <li><a href="./blog/negocios/index.html">Negocios</a></li>
+      <li><a href="./herramientas.html">Herramientas</a></li>
+      <li><a href="./opiniones.html">Opiniones</a></li>
+      <li><a href="./nuestro-equipo.html">Staff</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-space"></div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div id="mobileOverlay"></div>
+
+<div id="mobileMenu">
+
+  <button id="closeMobileMenu">&times;</button>
+
+  <div class="mobile-menu-logo">
+    <img src="./assets/img/codigo-millonario-logo.png" alt="Código Millonario">
+  </div>
+
+  <div class="mobile-menu-links">
+
+    <a href="./index.html">Inicio</a>
+
+    <a href="./educacion-financiera.html">
+      Educación Financiera
+    </a>
+
+    <a href="./mentalidad/index.html">
+      Mentalidad
+    </a>
+
+    <a href="./blog/negocios/index.html">
+      Negocios
+    </a>
+
+    <a href="./herramientas.html">
+      Herramientas
+    </a>
+
+    <a href="./opiniones.html">
+      Opiniones
+    </a>
+
+    <a href="./nuestro-equipo.html">
+      Staff
+    </a>
+
+    <a href="./contacto.html">
+      Contacto
+    </a>
+
+  </div>
+</div>
+
+</nav>
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background: #0f0f0f; 
+  z-index: 9999;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 49px;
+}
+
+.navbar-spacer {
+  height: 60px;
+  background: transparent;
+}
+
+@media(max-width: 767px) {
+  .navbar-container { height: 60px; }
+  .navbar-spacer { height: 60px; }
+}
+
+.navbar-line { 
+  height: 1px; 
+  width: 100%; 
+  background: rgba(255,255,255,0.2); 
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* blanco */
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff; /* blanco */
+  font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc; /* efecto premium */
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff; /* blanco */
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after { top: 7px; }
+
+.navbar-toggler.active .navbar-toggler-icon { background: transparent; }
+.navbar-toggler.active .navbar-toggler-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggler.active .navbar-toggler-icon::after { transform: rotate(-45deg); top: 0; }
+
+/* ===== Overlay ===== */
+#mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#mobileOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Menú móvil ===== */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #111111; /* negro */
+  z-index: 1001;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#mobileMenu.show {
+  left: 0;
+}
+
+.mobile-menu-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.mobile-menu-logo img {
+  width: 110px;
+  height: auto;
+}
+
+#closeMobileMenu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.mobile-menu-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 22px 20px 18px 40px;
+  font-size: 15px;
+  position: relative;
+}
+
+.mobile-menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+@media(min-width: 768px) {
+  .navbar-menu li:nth-child(4) {
+    position: relative;
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+
+  .navbar-menu li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: -9px; /* mover la línea hacia el centro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: rgba(223, 222, 222, 0.85);
+  }
+}
+
+@media(max-width: 767px) {
+  .navbar-menu { display: none; }
+  .navbar-toggler { display: block; }
+}
+
+@media(min-width: 768px) {
+  #mobileMenu,
+  #mobileOverlay { display: none !important; }
+}
+
+body {
+  margin: 0;
+  padding-top: 61px;
+}
+
+@media(max-width: 767px) {
+  body { padding-top: 51px; }
+}
+
+/* ===== REEMPLAZO VISUAL DEL BOTÓN (SOLO MOBILE) ===== */
+@media(max-width: 767px) {
+
+  /* Contenedor del botón */
+  .navbar-toggler {
+    width: 75px;
+    height: 36px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 
+      0 2px 10px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* 🔥 Ocultamos las 3 rayitas */
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* ===== LOGO (lado izquierdo) ===== */
+  .navbar-toggler::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #000 url('./assets/img/dinero.webp') center/cover no-repeat;
+
+    display: block;
+  }
+
+  /* ===== FLECHA (lado derecho) ===== */
+  .navbar-toggler::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  /* ===== ANIMACIÓN AL ABRIR ===== */
+  .navbar-toggler.active::after {
+    transform: rotate(-135deg);
+  }
+}
+/* 🔥 Cuando el menú está abierto, el botón se va detrás */
+@media(max-width: 767px) {
+  .navbar-toggler.active {
+    z-index: 999; /* menor que el menú (1001) */
+  }
+}
+</style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('show');
+  mobileOverlay.classList.toggle('show');
+});
+
+mobileOverlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('show');
+    mobileOverlay.classList.remove('show');
+  });
+});
+const closeMobileMenu =
+document.getElementById('closeMobileMenu');
+
+closeMobileMenu.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('show');
+  mobileOverlay.classList.remove('show');
+});
+</script>
+
+
+
+
+
+
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 250px;"></div>
+
+<!-- popup Descargar Guia -->
+<script src="https://codigomillonario.blog/assets/popup.js"></script>
+
+<!-- ========================================= -->
+<!-- GOOGLE FONTS -->
+<!-- ========================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- =========================
+     HERO TITULO
+========================= -->
+
+<section class="hero-blog tienda-hero">
+
+  <div class="hero-blog-content">
+
+    <!-- ETIQUETA -->
+    <span class="hero-tag">
+      TIENDA Y RECURSOS
+    </span>
+
+    <!-- TITULO -->
+    <h1>
+      Recursos y herramientas para potenciar tu crecimiento financiero
+    </h1>
+
+    <!-- LINEA -->
+    <span class="hero-line"></span>
+
+    <!-- SUBTITULO -->
+    <p>
+      Descubre materiales, herramientas y recursos seleccionados para ayudarte a mejorar tu relación con el dinero,
+      desarrollar nuevas habilidades y ampliar tus posibilidades de crecimiento personal y financiero.
+    </p>
+
+  </div>
+
+</section>
+
+<style>
+
+/* =========================
+   HERO BLOG
+========================= */
+
+.hero-blog{
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-bottom: 45px;
+
+    padding-left: 90px;
+
+    padding-right: 90px;
+}
+
+/* CONTENIDO */
+
+.hero-blog-content{
+
+    max-width: 980px;
+}
+
+/* ETIQUETA */
+
+.hero-tag{
+
+    display: inline-block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8b7355;
+
+    margin-bottom: 18px;
+}
+
+/* TITULO */
+
+.hero-blog h1{
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 3rem;
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    color: #111111;
+
+    letter-spacing: -1.8px;
+
+    margin-bottom: 24px;
+}
+
+
+/* SUBTITULO */
+
+.hero-blog p{
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: #555555;
+
+    max-width: 760px;
+
+    margin-bottom: 0;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1024px){
+
+    .hero-blog{
+
+        padding-left: 40px;
+
+        padding-right: 40px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 3.2rem;
+    }
+
+}
+
+/* =========================
+   TELEFONOS
+========================= */
+
+@media (max-width: 640px){
+
+    .hero-blog{
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        margin-top: 35px;
+    }
+
+    .hero-blog h1{
+
+        font-size: 2.2rem;
+
+        line-height: 1.05;
+    }
+
+    .hero-blog p{
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+}
+
+</style>
+
+
+
+
+
+  <!--  Esoaciado al final  -->
+<div style="height: 100px;"></div>
+
+
+
+
+
+<style>
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px 0;
+}
+
+/* 🔥 DESPLAZAMIENTO SOLO EN PC */
+@media (min-width: 1024px){
+  .product-grid{
+    margin-left: 320px;
+  }
+}
+
+/* 📱 CENTRADO SOLO EN TELÉFONOS */
+@media (max-width: 768px){
+  .product-grid{
+    justify-content: center;
+  }
+}
+
+/* Tarjeta */
+.product-card {
+  width: 280px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Imagen */
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Título */
+.product-card h2 {
+  font-size: 15px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+/* Precio */
+.product-price {
+  font-weight: bold;
+  color: #b12704;
+  margin: 5px 0;
+  font-family: Arial, sans-serif;
+}
+
+.product-price .currency {
+  font-size: 18px;
+}
+
+.product-price .amount {
+  font-size: 26px;
+}
+
+/* Tipo */
+.product-type {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Texto preview */
+.product-text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Botón leer más */
+.read-more {
+  color: #007185;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+/* Botón */
+.product-button a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 16px;
+  background: #ffd814;
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 20px;
+  border: 1px solid #fcd200;
+  font-weight: 500;
+}
+
+.product-button a:hover {
+  background: #f7ca00;
+}
+
+/* =========================
+   🔥 MODAL PREMIUM
+========================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.modal {
+  background: #fff;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+
+  transform: scale(0.92);
+  opacity: 0;
+  transition: all .25s ease;
+
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+/* cuando se abre */
+.modal-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-overlay.show .modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* 🔥 H2 MÁS GRANDE EN EL POPUP */
+.modal h3 {
+  margin-top: 0;
+  font-size: 22px;   /* 👈 AUMENTADO */
+  line-height: 1.3;
+}
+
+/* 🔥 X MÁS ARRIBA Y MÁS LIMPIA */
+.modal-close {
+  position: absolute;
+  top: 2px;              /* 👈 más arriba que antes */
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  z-index: 10;
+  background: rgba(255,255,255,0.9);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+#modal-content {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+/* 📱 SOLO MÓVILES */
+@media (max-width: 768px) {
+  .modal {
+    max-height: 80vh;
+  }
+
+  #modal-content {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+}
+
+/* 🔥 bloqueo scroll fondo */
+body.no-scroll {
+  overflow: hidden;
+}
+</style>
+
+<div class="product-grid">
+
+  <!-- TARJETA 1 -->
+  <div class="product-card">
+    <img src="./assets/img/como-organizar-tu-dinero-aunque-ganes-poco.webp">
+
+    <h2><strong>Deja de vivir al día y toma el Control de tu dinero en 90 Días</strong>
+
+    <div class="product-type">En oferta • Sin descuento</div>
+
+    <div class="product-price">
+      <span class="currency">$</span><span class="amount">10.00</span> USD
+    </div>
+
+    <div class="product-type">(Guía en PDF • Acceso inmediato)</div>
+
+    <div class="product-text">
+    ¿En qué se te va el dinero cada mes?
+    </div>
+
+    <div class="full-text" style="display:none;">
+      La mayoría de personas no sabe en qué se le va el dinero<br><br>
+
+      Y por eso, aunque gane poco o mucho, termina igual: sin nada al final del mes.<br><br>
+
+      No encontrarás teorías complicadas ni promesas irreales.<br><br>
+
+      Es una guía práctica para organizar tu dinero paso a paso, incluso si ganas poco.<br><br>
+
+      En solo 90 días puedes empezar a:<br><br>
+
+      • Entender en qué se va tu dinero.<br>
+      • Controlar tus gastos sin dejar de vivir.<br>
+      • Tomar decisiones financieras más inteligentes.<br><br>
+
+      Si estás cansado de vivir al día, este puede ser el primer paso para cambiar tu situación.
+    </div>
+
+    <span class="read-more">Leer más</span>
+
+    <div class="product-button">
+      <a href="https://go.hotmart.com/G105591082M">Ver producto</a>
+    </div>
+  </div>
+
+
+
+<!-- TARJETA 2 -->
+  <div class="product-card">
+    <img src="./assets/img/ganar-dinero-celular-2026.webp">
+
+    <h2><strong>7 Formas de Ganar Dinero con Tu Celular en 2026: Guía Práctica y Directa</strong>
+
+    <div class="product-type">En oferta • Sin descuento</div>
+
+    <div class="product-price">
+      <span class="currency">$</span><span class="amount">5.59</span> USD
+    </div>
+
+    <div class="product-type">(Ebook digital • Acceso inmediato)</div>
+    
+    <div class="product-text">
+      ¿Quieres generar ingresos extra desde tu celular?
+    </div>
+
+    <div class="full-text" style="display:none;">
+Hoy en día existen varias formas de hacerlo, pero la mayoría de personas no sabe por dónde empezar o pierde 
+tiempo en cosas que no funcionan.<br><br>
+
+Este programa reúne distintas opciones reales que puedes explorar usando solo 
+tu celular, desde ideas básicas hasta métodos más estructurados.<br><br>
+
+No son resultados garantizados y puede que no funcionen a la primera.<br><br>
+
+Sin embargo, aporta valor como una guía para entender la realidad detrás de emprender de forma autónoma, 
+qué caminos existen y cómo empezar.<br><br>
+
+Puede ser útil si estás buscando formas de generar ingresos extra sin necesidad de grandes inversiones, con lo que 
+tienes y desde donde estás. Por tiempo limitado
+    </div>
+
+    <span class="read-more">Leer más</span>
+
+    <div class="product-button">
+      <a href="https://go.hotmart.com/K105598949U">Ver producto</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- 🔥 MODAL GLOBAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <span class="modal-close" id="closeModal">✕</span>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modal-content");
+const closeModal = document.getElementById("closeModal");
+
+document.querySelectorAll(".read-more").forEach(btn => {
+  btn.addEventListener("click", function() {
+
+    const card = this.closest(".product-card");
+    const title = card.querySelector("h2").innerHTML;
+    const fullText = card.querySelector(".full-text").innerHTML;
+
+    modalContent.innerHTML = `
+      <h3>${title}</h3>
+      <p>${fullText}</p>
+    `;
+
+    modal.classList.add("show");
+    document.body.classList.add("no-scroll");
+  });
+});
+
+function closeModalFunc(){
+  modal.classList.remove("show");
+  document.body.classList.remove("no-scroll");
+}
+
+closeModal.addEventListener("click", closeModalFunc);
+
+modal.addEventListener("click", (e) => {
+  if(e.target === modal){
+    closeModalFunc();
+  }
+});
+</script>
+
+
+
+
+  <!--  Esoaciado al final  -->
+<div style="height: 180px;"></div>
+
+
+
+
+
+  <!--  Footer  -->
+<div class="footer-here"></div>
+
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+
+
+
+</body>
+</html>
+
