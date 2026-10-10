@@ -1,0 +1,1106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora 4x1000 Gratis | Código Millonario</title>
+  <meta name="description" content="Calcula en segundos cuánto pagas por el impuesto del 4x1000 (GMF) en tus transacciones bancarias en Colombia y optimiza tus finanzas personales.">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://codigomillonario.blog/herramientas/calculadora-4x1000.html">
+  <style>
+:root {
+  --brand-primary: #111827;
+  --brand-accent: #5e4b8b;
+  --brand-accent-hover: #4a3a70;
+  --bg-gray: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border-light: #e5e7eb;
+  --success-color: #10b981;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-main);
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+
+.container {
+  width: min(1080px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+/* --- FONDO GRIS SUPERIOR (HERO DE TIBA) --- */
+.hero-section {
+  background-color: var(--bg-gray);
+  padding-top: 50px;
+  padding-bottom: 70px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.badge-tag {
+  display: inline-block;
+  background: #eef2ff;
+  color: var(--brand-accent);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  color: var(--brand-primary);
+  line-height: 1.2;
+  letter-spacing: -1px;
+  max-width: 800px;
+  margin: 0 auto 14px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+/* --- TARJETA DE LA CALCULADORA CENTRADA --- */
+.calc-card {
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 32px 36px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-light);
+  text-align: left;
+}
+
+.calc-header {
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 16px;
+}
+
+.calc-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+.calc-header p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-primary);
+  margin-bottom: 8px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.input-container input {
+  width: 100%;
+  padding: 14px 16px 14px 38px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--brand-primary);
+  background: #f9fafb;
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-container input:focus {
+  background: #ffffff;
+  border-color: var(--brand-accent);
+  box-shadow: 0 0 0 4px rgba(94, 75, 139, 0.1);
+}
+
+.result-card {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 24px;
+  border: 1px solid var(--border-light);
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.result-row span {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.result-row strong {
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+.result-row.total {
+  border-top: 1px dashed var(--border-light);
+  margin-top: 8px;
+  padding-top: 14px;
+}
+
+.result-row.total span {
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+.result-row.total strong {
+  font-size: 22px;
+  color: var(--brand-accent);
+}
+
+.calc-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-primary {
+  flex: 1;
+  background: var(--brand-accent);
+  color: #ffffff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background: var(--brand-accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1.5px solid var(--border-light);
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-gray);
+  color: var(--brand-primary);
+}
+
+/* --- SECCIONES DE CONTENIDO DEBAJO DEL FONDO GRIS --- */
+.content-section {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 48px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--brand-primary);
+  letter-spacing: -0.5px;
+}
+
+.section-title p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #f3f0ff;
+  color: var(--brand-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* BANNER DE RECOMENDACIÓN ESTILO TIBA */
+.banner-box {
+  background: linear-gradient(135deg, #1f1b2e 0%, #3b2c5e 100%);
+  border-radius: 20px;
+  padding: 40px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.banner-box h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.banner-box p {
+  font-size: 14px;
+  color: #d1d5db;
+  max-width: 550px;
+}
+
+.banner-btn {
+  background: #ffffff;
+  color: var(--brand-primary);
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* FAQ SECTION */
+.faq-section {
+  background: #fafafa;
+  padding: 70px 0;
+  border-top: 1px solid var(--border-light);
+}
+
+.faq-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.faq-item details summary {
+  padding: 20px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--brand-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item details summary::after {
+  content: "+";
+  font-size: 20px;
+  color: var(--brand-accent);
+}
+
+.faq-item details[open] summary::after {
+  content: "−";
+}
+
+.faq-item details p {
+  padding: 0 24px 20px 24px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 850px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .banner-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding-top: 36px;
+    padding-bottom: 48px;
+  }
+  .calc-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  .input-container input {
+    font-size: 16px;
+  }
+  .calc-actions {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* PORTADA 4X1000 · CÓDIGO MILLONARIO */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+.cm-4x1000-hero,
+.cm-4x1000-hero * {
+  box-sizing: border-box;
+}
+
+.cm-4x1000-hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 76px 24px 72px;
+  background: #151515;
+  color: #f7f6f2;
+  text-align: center;
+  border-bottom: 1px solid #343027;
+}
+
+.cm-4x1000-hero-inner {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.cm-4x1000-eyebrow {
+  display: inline-block;
+  margin: 0 0 24px;
+  color: #51c5e2;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cm-4x1000-hero h1 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  color: #f7f6f2;
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: clamp(34px, 3.8vw, 48px);
+  font-weight: 300 !important;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  text-align: center;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+.cm-4x1000-divider {
+  width: 48px;
+  height: 2px;
+  margin: 27px auto 23px;
+  background: #51c5e2;
+}
+
+.cm-4x1000-description {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0;
+  color: #c9c7c1;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+/* TABLETAS */
+
+@media (max-width: 768px) {
+  .cm-4x1000-hero {
+    padding: 58px 24px 54px;
+  }
+
+  .cm-4x1000-hero h1 {
+    font-size: clamp(30px, 5.5vw, 39px);
+    font-weight: 300 !important;
+    line-height: 1.2;
+    letter-spacing: -1px;
+  }
+
+  .cm-4x1000-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+/* TELÉFONOS */
+
+@media (max-width: 480px) {
+  .cm-4x1000-hero {
+    padding: 44px 20px 42px;
+  }
+
+  .cm-4x1000-eyebrow {
+    margin-bottom: 18px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .cm-4x1000-hero h1 {
+    font-size: 29px;
+    font-weight: 300 !important;
+    line-height: 1.23;
+    letter-spacing: -0.8px;
+  }
+
+  .cm-4x1000-divider {
+    width: 42px;
+    margin: 21px auto 19px;
+  }
+
+  .cm-4x1000-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* TELÉFONOS ESTRECHOS */
+
+@media (max-width: 360px) {
+  .cm-4x1000-hero {
+    padding: 38px 16px 35px;
+  }
+
+  .cm-4x1000-hero h1 {
+    font-size: 26px;
+    letter-spacing: -0.6px;
+  }
+
+  .cm-4x1000-description {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+/* ======================================
+   CÓDIGO MILLONARIO · BLOQUES 4X1000
+   Imágenes cuadradas con esquinas redondeadas
+   ====================================== */
+
+.cm-gmf-info,
+.cm-gmf-info * {
+  box-sizing: border-box;
+}
+
+.cm-gmf-info {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 28px 50px;
+  color: #202020;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.cm-gmf-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(35px, 6vw, 76px);
+  padding: 48px 0;
+}
+
+.cm-gmf-row + .cm-gmf-row {
+  border-top: 1px solid #e8e5de;
+}
+
+/* ALTERNANCIA DE IMAGEN Y TEXTO */
+
+.cm-gmf-row-reverse .cm-gmf-image-wrap {
+  order: 2;
+}
+
+.cm-gmf-row-reverse .cm-gmf-copy {
+  order: 1;
+}
+
+/* IMÁGENES CUADRADAS */
+
+.cm-gmf-image-wrap {
+  width: 100%;
+  max-width: 410px;
+  aspect-ratio: 1 / 1;
+  justify-self: center;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f0eee8;
+}
+
+.cm-gmf-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+/* TEXTO EDITORIAL */
+
+.cm-gmf-copy {
+  min-width: 0;
+}
+
+.cm-gmf-kicker {
+  display: block;
+  margin: 0 0 17px;
+  color: #98783d;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.cm-gmf-copy h2 {
+  margin: 0 0 19px;
+  padding: 0;
+  color: #191919;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: clamp(25px, 2.7vw, 34px);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -1.1px;
+  text-wrap: balance;
+}
+
+.cm-gmf-copy p {
+  max-width: 480px;
+  margin: 0;
+  padding: 0;
+  color: #66645f;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+/* TABLETAS */
+
+@media (max-width: 760px) {
+  .cm-gmf-info {
+    padding: 15px 24px 35px;
+  }
+
+  .cm-gmf-row {
+    gap: 28px;
+    padding: 38px 0;
+  }
+
+  .cm-gmf-image-wrap {
+    border-radius: 15px;
+  }
+
+  .cm-gmf-copy h2 {
+    font-size: 25px;
+    letter-spacing: -0.7px;
+  }
+
+  .cm-gmf-copy p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+/* TELÉFONOS */
+
+@media (max-width: 560px) {
+  .cm-gmf-info {
+    padding: 8px 21px 30px;
+  }
+
+  .cm-gmf-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    padding: 34px 0;
+  }
+
+  .cm-gmf-image-wrap {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1 / 1;
+    justify-self: center;
+    border-radius: 15px;
+  }
+
+  .cm-gmf-row-reverse .cm-gmf-image-wrap,
+  .cm-gmf-row-reverse .cm-gmf-copy {
+    order: initial;
+  }
+
+  .cm-gmf-copy h2 {
+    margin-bottom: 14px;
+    font-size: 27px;
+    line-height: 1.24;
+    letter-spacing: -0.8px;
+  }
+
+  .cm-gmf-copy p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .cm-gmf-kicker {
+    margin-bottom: 13px;
+  }
+}
+
+/* TELÉFONOS ESTRECHOS */
+
+@media (max-width: 360px) {
+  .cm-gmf-info {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .cm-gmf-image-wrap {
+    border-radius: 12px;
+  }
+
+  .cm-gmf-copy h2 {
+    font-size: 25px;
+  }
+
+  .cm-gmf-copy p {
+    font-size: 13px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+<main>
+
+
+<!-- PORTADA EDITORIAL · CALCULADORA 4X1000 · CÓDIGO MILLONARIO -->
+
+<section class="cm-4x1000-hero" aria-labelledby="cm-4x1000-title">
+  <div class="cm-4x1000-hero-inner">
+
+    <span class="cm-4x1000-eyebrow">
+      HERRAMIENTA FINANCIERA
+    </span>
+
+    <h1 id="cm-4x1000-title">
+      Calculadora 4x1000: descubre cuánto te descuentan y cómo invertir mejor
+    </h1>
+
+    <div class="cm-4x1000-divider" aria-hidden="true"></div>
+
+    <p class="cm-4x1000-description">
+      Con nuestra Calculadora 4×1000 sabrás al instante cuánto pagas
+      por este impuesto en tus transacciones y aprenderás cómo redirigir
+      ese dinero hacia un plan de inversión que haga crecer tu capital.
+    </p>
+
+    <span class="cm-4x1000-eyebrow">
+     Actualizado · 2027
+    </span>
+
+  </div>
+</section>
+
+
+
+
+  <!-- SECCIÓN SUPERIOR CON FONDO GRIS Y CALCULADORA CENTRADA -->
+  <section class="hero-section">
+    <div class="container">
+      <span class="badge-tag">Herramienta Financiera Gratis</span>
+      <h1 class="hero-title">Calculadora del 4x1000</h1>
+      <p class="hero-subtitle">
+        Descubre al instante cuánto dinero pagas por el impuesto del Gravamen a los Movimientos Financieros en Colombia y proyecta mejor tus transferencias.
+      </p>
+
+      <!-- TARJETA PRINCIPAL DE LA CALCULADORA -->
+      <div class="calc-card" id="calculadora">
+        <div class="calc-header">
+          <h2>Calcula tu impuesto en segundos</h2>
+          <p>Ingresa el valor del movimiento que deseas realizar:</p>
+        </div>
+
+        <div class="form-group">
+          <label for="amountInput">Monto de la transacción o retiro</label>
+          <div class="input-container">
+            <span class="currency-symbol">$</span>
+            <input type="text" id="amountInput" placeholder="Ej: 1.000.000" autocomplete="off" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-row">
+            <span>Monto consultado:</span>
+            <strong id="resAmount">$ 0</strong>
+          </div>
+          <div class="result-row">
+            <span>Tarifa aplicada (4x1000):</span>
+            <strong>0,4%</strong>
+          </div>
+          <div class="result-row total">
+            <span>Impuesto a pagar:</span>
+            <strong id="resTax">$ 0</strong>
+          </div>
+        </div>
+
+        <div class="calc-actions">
+          <button type="button" class="btn-primary" onclick="document.getElementById('amountInput').focus()">Ingresar monto</button>
+          <button type="button" id="clearBtn" class="btn-secondary">Limpiar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO INFORMATIVO DEBAJO DEL FONDO GRIS -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>¿Cómo funciona el 4x1000 en Colombia?</h2>
+        <p>Aprende cómo afecta tu bolsillo y las mejores formas de administrar tus recursos.</p>
+      </div>
+
+
+
+   <!-- SECCIONES EXPLICATIVAS · CALCULADORA 4X1000 -->
+
+<section class="cm-gmf-info">
+
+  <!-- BLOQUE 1 -->
+  <article class="cm-gmf-row">
+
+    <div class="cm-gmf-image-wrap">
+      <img
+        src="../assets/png/que-es-el-4x1000.jpg"
+        alt="Representación visual del impuesto 4x1000 en Colombia"
+        class="cm-gmf-image"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="cm-gmf-copy">
+      <span class="cm-gmf-kicker">01 · CONCEPTO FINANCIERO</span>
+
+      <h2>¿Qué es el 4×1000 y cómo afecta tus finanzas?</h2>
+
+      <p>
+        El 4×1000, también conocido como gravamen a los movimientos
+        financieros (GMF), es un impuesto que se aplica a determinadas
+        operaciones financieras en Colombia. Comprender cómo funciona
+        te ayuda a calcular su impacto al mover tu dinero.
+      </p>
+    </div>
+
+  </article>
+
+  <!-- BLOQUE 2 -->
+  <article class="cm-gmf-row cm-gmf-row-reverse">
+
+    <div class="cm-gmf-image-wrap">
+      <img
+        src="../assets/png/cuanto-cuesta-el-4x1000.jpg"
+        alt="Cálculo del impuesto 4x1000 sobre una transacción"
+        class="cm-gmf-image"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="cm-gmf-copy">
+      <span class="cm-gmf-kicker">02 · CÁLCULO PRÁCTICO</span>
+
+      <h2>Calcula cuánto te descuentan por cada movimiento</h2>
+
+      <p>
+        Introduce el valor de tu transacción en la calculadora y consulta
+        cuánto representa el 4×1000. Así podrás estimar el costo de las
+        operaciones gravadas y organizar mejor tus movimientos financieros.
+      </p>
+    </div>
+
+  </article>
+
+
+    <!-- BLOQUE 1 -->
+  <article class="cm-gmf-row">
+
+    <div class="cm-gmf-image-wrap">
+      <img
+        src="../assets/png/que-es-el-4x1000.jpg"
+        alt="Representación visual del impuesto 4x1000 en Colombia"
+        class="cm-gmf-image"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="cm-gmf-copy">
+      <span class="cm-gmf-kicker">01 · CONCEPTO FINANCIERO</span>
+
+      <h2>¿Qué es el 4×1000 y cómo afecta tus finanzas?</h2>
+
+      <p>
+        El 4×1000, también conocido como gravamen a los movimientos
+        financieros (GMF), es un impuesto que se aplica a determinadas
+        operaciones financieras en Colombia. Comprender cómo funciona
+        te ayuda a calcular su impacto al mover tu dinero.
+      </p>
+    </div>
+
+  </article>
+
+</section>
+
+
+
+
+
+
+
+      <div class="info-grid">
+        <article class="info-card">
+          <div class="icon-box">📌</div>
+          <h3>¿Qué es el GMF?</h3>
+          <p>Es un impuesto indirecto del Gobierno Nacional que se aplica sobre las transacciones bancarias. Por cada $1.000 pesos que retiras o transfieres, pagas $4 pesos de gravamen.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="icon-box">🛡️</div>
+          <h3>Cuenta Exenta</h3>
+          <p>Por ley, puedes solicitar a tu entidad financiera marcar una única cuenta de ahorros para estar exento de este cobro hasta el límite legal mensual.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="icon-box">💡</div>
+          <h3>Optimiza tu dinero</h3>
+          <p>Evita realizar múltiples pequeñas transferencias y centraliza tus pagos desde tu cuenta exenta para no pagar impuesto de manera innecesaria.</p>
+        </article>
+      </div>
+
+      <!-- BANNER DE CONSEJO ESTILO TIBA -->
+      <div class="banner-box">
+        <div>
+          <h3>Convierte los impuestos en rendimientos</h3>
+          <p>Proyectar adecuadamente tus movimientos bancarios te ayuda a ahorrar recursos que puedes dirigir a fondos de inversión o metas de ahorro personal.</p>
+        </div>
+        <a href="#calculadora" class="banner-btn">Calcular ahora ↑</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Preguntas Frecuentes</h2>
+        <p>Resolvemos tus dudas sobre el impuesto y el uso de la calculadora.</p>
+      </div>
+
+      <div class="faq-wrapper">
+        <div class="faq-item">
+          <details>
+            <summary>¿Cómo se hace el cálculo del 4x1000?</summary>
+            <p>Es un cálculo sencillo: solo debes multiplicar el valor total de tu transacción por 0,004. Nuestra calculadora realiza este procedimiento de forma inmediata mientras escribes.</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>¿Puedo exonerar más de una cuenta del 4x1000?</summary>
+            <p>No, la legislación colombiana estipula que cada ciudadano solo puede tener una cuenta de ahorros exenta del Gravamen a los Movimientos Financieros dentro de todo el sistema bancario.</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>¿Los traslados entre mis propias cuentas pagan 4x1000?</summary>
+            <p>Las transferencias entre cuentas de ahorros o corrientes que pertenezcan al mismo y único titular en un mismo banco o entidad financiera suelen estar exentas del cobro.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ESPACIO PEQUEÑO FINAL -->
+<section class="py-12"></section>
+
+<!-- Footer Real por JS -->
+<div class="footer-here"></div>
+<script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+<!-- MENU COMPLETO Real por JS -->
+<script src="../assets/menu.js"></script>
+
+<script>
+"use strict";
+const amountInput = document.getElementById("amountInput");
+const resAmount = document.getElementById("resAmount");
+const resTax = document.getElementById("resTax");
+const clearBtn = document.getElementById("clearBtn");
+
+function calculateTax() {
+  let rawValue = amountInput.value.replace(/\D/g, "");
+  if (!rawValue) {
+    resAmount.textContent = "$ 0";
+    resTax.textContent = "$ 0";
+    return;
+  }
+  
+  let numberVal = parseFloat(rawValue);
+  
+  // Formatea el valor con separadores de miles mientras el usuario escribe
+  amountInput.value = numberVal.toLocaleString("es-CO");
+  
+  // Cálculo del 4x1000 (0.004)
+  let taxVal = numberVal * 0.004;
+  
+  resAmount.textContent = "$ " + numberVal.toLocaleString("es-CO");
+  resTax.textContent = "$ " + Math.round(taxVal).toLocaleString("es-CO");
+}
+
+amountInput.addEventListener("input", calculateTax);
+
+clearBtn.addEventListener("click", () => {
+  amountInput.value = "";
+  resAmount.textContent = "$ 0";
+  resTax.textContent = "$ 0";
+  amountInput.focus();
+});
+</script>
+</body>
+</html>
