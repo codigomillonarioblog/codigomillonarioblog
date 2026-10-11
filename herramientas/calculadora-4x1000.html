@@ -7,6 +7,9 @@
 <title>Calculadora 4x1000 Colombia: calcula el 4 por mil gratis | Código Millonario</title>
 <meta name="description" content="Calcula el 4x1000 o 4 por mil en Colombia gratis. Descubre cuánto descuentan de un millón de pesos, cómo calcular este impuesto y cuánto pagarías por tus transacciones.">
 
+<!-- Favicon -->
+<link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
+
   <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
 <script>
@@ -419,6 +422,7 @@ button, input { font: inherit; }
   line-height: 1.7;
 }
 
+
 /* --- RESPONSIVO --- */
 @media (max-width: 850px) {
   .info-grid {
@@ -431,28 +435,37 @@ button, input { font: inherit; }
   }
 }
 
+
+/* --- RESPONSIVO H1 TELEFONOS --- */
+ 
 @media (max-width: 600px) {
+
   .hero-section {
     padding-top: 36px;
     padding-bottom: 48px;
   }
+
+
+#cm-4x1000-title {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
   .calc-card {
     padding: 20px;
     border-radius: 16px;
   }
+
   .input-container input {
     font-size: 16px;
   }
+
   .calc-actions {
     flex-direction: column;
   }
+
 }
-
-
-
-
-
-
 
 
 
@@ -504,7 +517,7 @@ button, input { font: inherit; }
   color: #f7f6f2;
   font-family: 'Inter', Arial, sans-serif !important;
   font-size: clamp(40px, 4.2vw, 56px);
-  font-weight: 600 !important;
+  font-weight: 800 !important;
   line-height: 1.12;
   letter-spacing: -1.8px;
   text-align: center;
@@ -833,6 +846,8 @@ button, input { font: inherit; }
 
 
 
+   <!-- ESPACIO FINAL -->
+<div style="height: 100px;"></div>
 
 
 <main>
@@ -843,26 +858,25 @@ button, input { font: inherit; }
 <section class="cm-4x1000-hero" aria-labelledby="cm-4x1000-title">
   <div class="cm-4x1000-hero-inner">
 
+<span class="cm-4x1000-eyebrow">
+  HERRAMIENTA FINANCIERA
+</span>
 
-   <span class="cm-4x1000-eyebrow">
-      HERRAMIENTA FINANCIERA
-    </span>
+<h1 id="cm-4x1000-title">
+  Calculadora del 4×1000 en Colombia: calcula cuánto pagas por tus transacciones
+</h1>
 
-    <h1 id="cm-4x1000-title">
-      Calculadora del 4×1000 en Colombia: calcula cuánto pagas por tus transacciones
-    </h1>
+<div class="cm-4x1000-divider" aria-hidden="true"></div>
 
-    <div class="cm-4x1000-divider" aria-hidden="true"></div>
+<p class="cm-4x1000-description">
+  Calcula el valor del 4×1000 sobre tus movimientos de dinero en Colombia.
+  Introduce el monto de la transacción para estimar cuánto representa este
+  impuesto y cuánto dinero te quedaría después del descuento.
+</p>
 
-    <p class="cm-4x1000-description">
-     Calcula cuánto pagas por el 4×1000 en tus transacciones en Colombia y conoce el impacto 
-     de este impuesto en tus finanzas personales.
-    </p>
-
-    <span class="cm-4x1000-update">
-      Actualizado · 2027
-    </span>
-
+<span class="cm-4x1000-update">
+  Actualizado · Octubre de 2026
+</span>
 
   </div>
 </section>
@@ -870,60 +884,70 @@ button, input { font: inherit; }
 
 
 
-  <!-- SECCIÓN SUPERIOR CON FONDO GRIS Y CALCULADORA CENTRADA -->
-  <section class="hero-section">
-    <div class="container">
-      <span class="badge-tag">Herramienta Financiera Gratis</span>
-      <h1 class="hero-title">Calculadora del 4x1000</h1>
-      <p class="hero-subtitle">
-        Descubre al instante cuánto dinero pagas por el impuesto del Gravamen a los Movimientos Financieros en Colombia y proyecta mejor tus transferencias.
-      </p>
+<!-- SECCIÓN SUPERIOR CON FONDO GRIS Y CALCULADORA CENTRADA -->
+<section class="hero-section">
+  <div class="container">
+    <span class="badge-tag">Herramienta financiera gratuita</span>
 
-      <!-- TARJETA PRINCIPAL DE LA CALCULADORA -->
-      <div class="calc-card" id="calculadora">
-        <div class="calc-header">
-          <h2>Calcula tu impuesto en segundos</h2>
-          <p>Ingresa el valor del movimiento que deseas realizar:</p>
-        </div>
+    <h1 class="hero-title">Calculadora del 4×1000 en Colombia</h1>
 
-        <div class="form-group">
-          <label for="amountInput">Monto de la transacción o retiro</label>
-          <div class="input-container">
-            <span class="currency-symbol">$</span>
-            <input type="text" id="amountInput" placeholder="Ej: 1.000.000" autocomplete="off" inputmode="numeric">
-          </div>
-        </div>
+    <p class="hero-subtitle">
+      Estima cuánto representa el Gravamen a los Movimientos Financieros (GMF)
+      sobre una operación en Colombia e identifica su impacto en el monto
+      de dinero que deseas mover.
+    </p>
 
-        <div class="result-card">
-          <div class="result-row">
-            <span>Monto consultado:</span>
-            <strong id="resAmount">$ 0</strong>
-          </div>
-          <div class="result-row">
-            <span>Tarifa aplicada (4x1000):</span>
-            <strong>0,4%</strong>
-          </div>
-          <div class="result-row total">
-            <span>Impuesto a pagar:</span>
-            <strong id="resTax">$ 0</strong>
-          </div>
-        </div>
+    <!-- TARJETA PRINCIPAL DE LA CALCULADORA -->
+    <div class="calc-card" id="calculadora">
+      <div class="calc-header">
+        <h2>Calcula el valor del 4×1000</h2>
+        <p>Ingresa el monto de la operación que deseas estimar:</p>
+      </div>
 
-        <div class="calc-actions">
-          <button type="button" class="btn-primary" onclick="document.getElementById('amountInput').focus()">Ingresar monto</button>
-          <button type="button" id="clearBtn" class="btn-secondary">Limpiar</button>
+      <div class="form-group">
+        <label for="amountInput">Monto de la operación en pesos colombianos</label>
+        <div class="input-container">
+          <span class="currency-symbol">$</span>
+          <input type="text" id="amountInput" placeholder="Ej: 1.000.000" autocomplete="off" inputmode="numeric">
         </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-row">
+          <span>Monto ingresado:</span>
+          <strong id="resAmount">$ 0</strong>
+        </div>
+        <div class="result-row">
+          <span>Tarifa de referencia (4×1000):</span>
+          <strong>0,4%</strong>
+        </div>
+        <div class="result-row total">
+          <span>Valor estimado del impuesto:</span>
+          <strong id="resTax">$ 0</strong>
+        </div>
+      </div>
+
+      <div class="calc-actions">
+        <button type="button" class="btn-primary" onclick="document.getElementById('amountInput').focus()">Ingresar monto</button>
+        <button type="button" id="clearBtn" class="btn-secondary">Limpiar</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTENIDO INFORMATIVO DEBAJO DEL FONDO GRIS -->
-  <section class="content-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>¿Cómo funciona el 4x1000 en Colombia?</h2>
-        <p>Aprende cómo afecta tu bolsillo y las mejores formas de administrar tus recursos.</p>
-      </div>
+
+
+
+
+<!-- CONTENIDO INFORMATIVO DEBAJO DEL FONDO GRIS -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>¿Qué es el 4×1000 y cómo funciona en Colombia?</h2>
+      <p>Conoce cómo se calcula el Gravamen a los Movimientos Financieros, cuándo puede aplicarse y qué debes tener en cuenta para estimar su impacto en tu dinero.</p>
+    </div>
+
+
 
 
 
@@ -931,13 +955,13 @@ button, input { font: inherit; }
 
 <section class="cm-gmf-info">
 
-  <!-- BLOQUE 1 -->
+  <!-- BLOQUE 1 · CONCEPTO FINANCIERO -->
   <article class="cm-gmf-row">
 
     <div class="cm-gmf-image-wrap">
       <img
-        src="../assets/png/que-es-el-4x1000.jpg"
-        alt="Representación visual del impuesto 4x1000 en Colombia"
+        src="../assets/png/que-es-el-4x1000.webp"
+        alt="Representación del Gravamen a los Movimientos Financieros en Colombia"
         class="cm-gmf-image"
         loading="lazy"
       >
@@ -949,22 +973,23 @@ button, input { font: inherit; }
       <h2>¿Qué es el 4×1000 y cómo afecta tus finanzas?</h2>
 
       <p>
-        El 4×1000, también conocido como gravamen a los movimientos
-        financieros (GMF), es un impuesto que se aplica a determinadas
-        operaciones financieras en Colombia. Comprender cómo funciona
-        te ayuda a calcular su impacto al mover tu dinero.
+        El 4×1000, conocido oficialmente como Gravamen a los Movimientos
+        Financieros (GMF), es un impuesto colombiano que recae sobre
+        determinadas transacciones financieras. Su aplicación depende
+        de las características de la operación y de las exenciones
+        previstas en la normativa.
       </p>
     </div>
 
   </article>
 
-  <!-- BLOQUE 2 -->
+  <!-- BLOQUE 2 · CÁLCULO PRÁCTICO -->
   <article class="cm-gmf-row cm-gmf-row-reverse">
 
     <div class="cm-gmf-image-wrap">
       <img
-        src="../assets/png/cuanto-cuesta-el-4x1000.jpg"
-        alt="Cálculo del impuesto 4x1000 sobre una transacción"
+        src="../assets/png/cuanto-cuesta-el-4x1000.webp"
+        alt="Ejemplo de cálculo del 4×1000 sobre un monto en pesos colombianos"
         class="cm-gmf-image"
         loading="lazy"
       >
@@ -973,76 +998,50 @@ button, input { font: inherit; }
     <div class="cm-gmf-copy">
       <span class="cm-gmf-kicker">02 · CÁLCULO PRÁCTICO</span>
 
-      <h2>Calcula cuánto te descuentan por cada movimiento</h2>
+      <h2>Calcula cuánto representa el 4×1000 sobre una operación</h2>
 
       <p>
-        Introduce el valor de tu transacción en la calculadora y consulta
-        cuánto representa el 4×1000. Así podrás estimar el costo de las
-        operaciones gravadas y organizar mejor tus movimientos financieros.
+        Introduce el monto en pesos colombianos para estimar el valor
+        equivalente al 4×1000. El resultado corresponde al cálculo
+        matemático de referencia y no confirma por sí solo que el
+        impuesto se cobre en una operación concreta, ya que pueden
+        aplicar exenciones o condiciones particulares.
       </p>
     </div>
 
   </article>
 
-
-    <!-- BLOQUE 1 -->
+  <!-- BLOQUE 3 · PRIVACIDAD Y CONFIANZA -->
   <article class="cm-gmf-row">
 
     <div class="cm-gmf-image-wrap">
       <img
-        src="../assets/png/que-es-el-4x1000.jpg"
-        alt="Representación visual del impuesto 4x1000 en Colombia"
+        src="../assets/png/impuesto-4x1000-transacciones-bancarias.webp"
+        alt="Uso de una calculadora financiera para estimar el 4×1000"
         class="cm-gmf-image"
         loading="lazy"
       >
     </div>
 
     <div class="cm-gmf-copy">
-      <span class="cm-gmf-kicker">01 · CONCEPTO FINANCIERO</span>
+      <span class="cm-gmf-kicker">03 · PRIVACIDAD Y CONFIANZA</span>
 
-      <h2>¿Qué es el 4×1000 y cómo afecta tus finanzas?</h2>
+      <h2>Calcula el 4×1000 sin introducir datos bancarios</h2>
 
       <p>
-        El 4×1000, también conocido como gravamen a los movimientos
-        financieros (GMF), es un impuesto que se aplica a determinadas
-        operaciones financieras en Colombia. Comprender cómo funciona
-        te ayuda a calcular su impacto al mover tu dinero.
+        Para utilizar esta calculadora, solo necesitas introducir el
+        monto de la operación que deseas estimar. No se requieren tu
+        nombre, número de cuenta, saldo bancario ni credenciales
+        financieras.
+      </p>
+
+      <p>
+        Por seguridad, nunca introduzcas contraseñas ni datos de acceso
+        a tus cuentas bancarias en una calculadora financiera.
       </p>
     </div>
 
   </article>
-
-<!-- BLOQUE 2 · PRIVACIDAD Y CONFIANZA -->
-<article class="cm-gmf-row cm-gmf-row-reverse">
-
-  <div class="cm-gmf-image-wrap">
-    <img
-      src="../assets/png/cuanto-cuesta-el-4x1000.jpg"
-      alt="Privacidad al calcular el impuesto 4x1000 en Colombia"
-      class="cm-gmf-image"
-      loading="lazy"
-    >
-  </div>
-
-  <div class="cm-gmf-copy">
-    <span class="cm-gmf-kicker">02 · PRIVACIDAD Y CONFIANZA</span>
-
-    <h2>Calcula el 4×1000 sin compartir tus datos bancarios</h2>
-
-    <p>
-      Consulta cuánto pagarías por el 4×1000 introduciendo únicamente
-      el valor de la transacción que deseas calcular. No necesitas
-      proporcionar tu nombre, número de cuenta, saldo bancario ni
-      credenciales financieras para utilizar esta herramienta.
-    </p>
-
-    <p>
-      Tu información bancaria es privada. Por seguridad, nunca
-      introduzcas contraseñas ni datos de acceso a tus cuentas.
-    </p>
-  </div>
-
-</article>
 
 </section>
 
@@ -1052,70 +1051,98 @@ button, input { font: inherit; }
 
 
 
-      <div class="info-grid">
-        <article class="info-card">
-          <div class="icon-box">📌</div>
-          <h3>¿Qué es el GMF?</h3>
-          <p>Es un impuesto indirecto del Gobierno Nacional que se aplica sobre las transacciones bancarias. Por cada $1.000 pesos que retiras o transfieres, pagas $4 pesos de gravamen.</p>
-        </article>
 
-        <article class="info-card">
-          <div class="icon-box">🛡️</div>
-          <h3>Cuenta Exenta</h3>
-          <p>Por ley, puedes solicitar a tu entidad financiera marcar una única cuenta de ahorros para estar exento de este cobro hasta el límite legal mensual.</p>
-        </article>
+<div class="info-grid">
+  <article class="info-card">
+    <div class="icon-box">📌</div>
+    <h3>¿Qué es el GMF?</h3>
+    <p>El Gravamen a los Movimientos Financieros (GMF), conocido como 4×1000, es un impuesto que se aplica a determinadas operaciones financieras en Colombia. La tarifa general equivale a $4 por cada $1.000 de una operación gravada.</p>
+  </article>
 
-        <article class="info-card">
-          <div class="icon-box">💡</div>
-          <h3>Optimiza tu dinero</h3>
-          <p>Evita realizar múltiples pequeñas transferencias y centraliza tus pagos desde tu cuenta exenta para no pagar impuesto de manera innecesaria.</p>
-        </article>
-      </div>
+  <article class="info-card">
+    <div class="icon-box">🛡️</div>
+    <h3>Exenciones del 4×1000</h3>
+    <p>La normativa contempla exenciones sujetas a condiciones y límites. Antes de asumir que una operación está exenta, verifica las reglas vigentes y cómo las aplica tu entidad financiera.</p>
+  </article>
 
-      <!-- BANNER DE CONSEJO ESTILO TIBA -->
-      <div class="banner-box">
-        <div>
-          <h3>Convierte los impuestos en rendimientos</h3>
-          <p>Proyectar adecuadamente tus movimientos bancarios te ayuda a ahorrar recursos que puedes dirigir a fondos de inversión o metas de ahorro personal.</p>
-        </div>
-        <a href="#calculadora" class="banner-btn">Calcular ahora ↑</a>
-      </div>
+  <article class="info-card">
+    <div class="icon-box">💡</div>
+    <h3>Planifica tus movimientos</h3>
+    <p>Conocer qué operaciones pueden generar el GMF y cuáles están exentas te ayuda a anticipar posibles costos bancarios y organizar mejor tus pagos y transferencias.</p>
+  </article>
+</div>
+
+<!-- BANNER INFORMATIVO · CÓDIGO MILLONARIO -->
+<div class="banner-box">
+  <div>
+    <h3>Calcula antes de mover tu dinero</h3>
+    <p>Estima cuánto representa el 4×1000 sobre el monto de una operación y ten presente que el cobro efectivo puede depender de las exenciones y condiciones aplicables.</p>
+  </div>
+  <a href="#calculadora" class="banner-btn">Calcular ahora ↑</a>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+<!-- PREGUNTAS FRECUENTES -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Preguntas frecuentes sobre el 4×1000 en Colombia</h2>
+      <p>Resuelve tus dudas sobre el cálculo del impuesto, las exenciones y las transacciones bancarias.</p>
     </div>
-  </section>
 
-  <!-- PREGUNTAS FRECUENTES -->
-  <section class="faq-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Preguntas Frecuentes</h2>
-        <p>Resolvemos tus dudas sobre el impuesto y el uso de la calculadora.</p>
+    <div class="faq-wrapper">
+
+      <div class="faq-item">
+        <details>
+          <summary>¿Cómo se calcula el 4×1000 en Colombia?</summary>
+          <p>Multiplica el monto de la operación gravada por 0,004. Por ejemplo, el 4×1000 de $1.000.000 equivale a $4.000. El cobro efectivo depende de si la operación está gravada o cuenta con una exención aplicable.</p>
+        </details>
       </div>
 
-      <div class="faq-wrapper">
-        <div class="faq-item">
-          <details>
-            <summary>¿Cómo se hace el cálculo del 4x1000?</summary>
-            <p>Es un cálculo sencillo: solo debes multiplicar el valor total de tu transacción por 0,004. Nuestra calculadora realiza este procedimiento de forma inmediata mientras escribes.</p>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>¿Puedo exonerar más de una cuenta del 4x1000?</summary>
-            <p>No, la legislación colombiana estipula que cada ciudadano solo puede tener una cuenta de ahorros exenta del Gravamen a los Movimientos Financieros dentro de todo el sistema bancario.</p>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>¿Los traslados entre mis propias cuentas pagan 4x1000?</summary>
-            <p>Las transferencias entre cuentas de ahorros o corrientes que pertenezcan al mismo y único titular en un mismo banco o entidad financiera suelen estar exentas del cobro.</p>
-          </details>
-        </div>
+      <div class="faq-item">
+        <details>
+          <summary>¿Cuánto es el 4×1000 de $100.000, $500.000 o $1.000.000?</summary>
+          <p>Sobre operaciones gravadas, el 4×1000 de $100.000 es $400; el de $500.000 es $2.000; y el de $1.000.000 es $4.000. Estos valores son cálculos matemáticos de referencia, antes de considerar posibles exenciones.</p>
+        </details>
       </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>¿Cuánto dinero está exento del 4×1000 al mes?</summary>
+          <p>La normativa contempla una exención de hasta 350 UVT mensuales para determinadas operaciones de personas naturales. Su aplicación debe considerar las reglas vigentes y el funcionamiento del sistema de las entidades financieras. Consulta con tu banco si necesitas confirmar cómo se aplica a tus cuentas.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>¿Las transferencias entre cuentas propias pagan 4×1000?</summary>
+          <p>Depende de las características de la operación y de las exenciones aplicables. No todas las transferencias entre cuentas propias reciben necesariamente el mismo tratamiento. Verifica las condiciones con tu entidad financiera antes de asumir que el movimiento está exento.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>¿Cómo calcular el 4×1000 de una transferencia bancaria?</summary>
+          <p>Introduce el monto de la transferencia en la calculadora y estima el 0,4 % del valor ingresado. El resultado te permite conocer el importe de referencia del impuesto, pero el banco puede aplicar un cobro distinto si existen exenciones o condiciones particulares.</p>
+        </details>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
+
 </main>
+
+
+
 
 <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
