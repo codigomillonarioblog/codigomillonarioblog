@@ -599,6 +599,10 @@
 }
 
 @media (max-width: 500px) {
+  .cm-logo-title {
+    font-weight: 900 !important;
+  }
+
   .cm-copyright {
     font-size: 0.55em;
     margin-left: 2px;
