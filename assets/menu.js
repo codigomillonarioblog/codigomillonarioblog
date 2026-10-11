@@ -581,39 +581,30 @@
 ===================================================== */
 
 .cm-logo-title {
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
+  font-family: "Inter", Arial, sans-serif;
   font-size: 28px;
-
-  font-weight: 400;
-
-  letter-spacing: -.055em;
-
+  font-weight: 700;
+  letter-spacing: -0.055em;
   line-height: 1;
-
   white-space: nowrap;
-
 }
 
 .cm-copyright {
   display: inline-block;
-  font-size: 0.35em;
+  font-size: 0.42em;
   vertical-align: super;
-  margin-left: 2px;
+  margin-left: 3px;
   line-height: 0;
   font-weight: 400;
 }
 
-  @media (max-width: 500px) {
+@media (max-width: 500px) {
   .cm-copyright {
     font-size: 0.55em;
+    margin-left: 2px;
   }
 }
-
+  
 /* =====================================================
    NAVEGACIÓN
 ===================================================== */
