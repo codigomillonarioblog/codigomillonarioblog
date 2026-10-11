@@ -45,13 +45,12 @@
            LOGO
       ================================================= -->
 
-      <a href="/" class="cm-logo">
 
-        <span class="cm-logo-title">
-          Código Millonario
-        </span>
-
-      </a>
+<a href="/" class="cm-logo">
+  <span class="cm-logo-title">
+    Código Millonario<span class="cm-copyright">©</span>
+  </span>
+</a>
 
 
       <!-- =================================================
@@ -577,6 +576,10 @@
 
 }
 
+/* =====================================================
+   H1 TITULO - TITLE
+===================================================== */
+
 .cm-logo-title {
 
   font-family:
@@ -586,8 +589,6 @@
 
   font-size: 28px;
 
-  font-style: italic;
-
   font-weight: 400;
 
   letter-spacing: -.055em;
@@ -596,6 +597,15 @@
 
   white-space: nowrap;
 
+}
+
+.cm-copyright {
+  display: inline-block;
+  font-size: 0.35em;
+  vertical-align: super;
+  margin-left: 2px;
+  line-height: 0;
+  font-weight: 400;
 }
 
 /* =====================================================
