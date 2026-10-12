@@ -55,8 +55,6 @@
 
 
 
-
-
 <!-- TARJETA DE NUEVO ARTÍCULO ACTUALIZABLE -->
 <div id="new-article-bubble">
   
@@ -205,20 +203,88 @@ fetch('posts.json')
 
 
 
+
+
+
 <!-- ESPACIO ARRIBA -->
-<div style="height: 240px;"></div>
+<div style="height: 60px;"></div>
 
 
+
+<!-- ========================================================= -->
+<!-- CINTILLO BURSÁTIL EN TIEMPO REAL (TRADINGVIEW) -->
+<!-- ========================================================= -->
+<div class="financial-ticker-wrapper">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        {
+          "proName": "FX_IDC:USDCOP",
+          "title": "DÓLAR / COP"
+        },
+        {
+          "proName": "FX_IDC:EURUSD",
+          "title": "EURO / USD"
+        },
+        {
+          "proName": "BITSTAMP:BTCUSD",
+          "title": "BITCOIN"
+        },
+        {
+          "proName": "FOREXCOM:SPXUSD",
+          "title": "S&P 500"
+        },
+        {
+          "proName": "OANDA:XAUUSD",
+          "title": "ORO"
+        },
+        {
+          "proName": "TVC:USOIL",
+          "title": "PETRÓLEO WTI"
+        }
+      ],
+      "showSymbolLogo": true,
+      "isTransparent": false,
+      "displayMode": "adaptive",
+      "colorTheme": "dark",
+      "locale": "es"
+    }
+    </script>
+  </div>
+</div>
+
+<style>
+/* =========================================================
+   ESTILO DEL CINTILLO FINANCIERO SUPERIOR
+========================================================= */
+.financial-ticker-wrapper {
+  width: 100%;
+  background-color: #111111;
+  border-bottom: 1px solid #222222;
+  margin-bottom: 25px;
+}
+
+.tradingview-widget-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+</style>
+
+
+
+
+
+
+
+<!-- ESPACIO ARRIBA -->
+<div style="height: 100px;"></div>
 
 
 
 <!-- CSS PLATILLA --> 
 <link rel="stylesheet" href="./assets/css/portada.css">
-
-
-
-
-
 
 
 <!-- ========================================= -->
@@ -289,7 +355,7 @@ fetch('posts.json')
     <!-- COLUMNA CENTRAL: NOTICIA PRINCIPAL & CARDS -->
     <!-- ========================================= -->
     <main class="hero-main">
-      <a href="./blog/psicologia-del-dinero/bloqueos-mentales-dinero.html">
+      <a href="./blog/mentalidad-de-exito/30-reglas-sobre-el-dinero.html">
         <!-- IMAGEN PRINCIPAL -->
         <div class="hero-image">
           <picture>
@@ -301,13 +367,14 @@ fetch('posts.json')
         <!-- CONTENIDO PRINCIPAL -->
         <div class="hero-content">
           <span class="hero-category">
-            Dinero
+            Mundo Millonario
           </span>
           <h1>
-            Finanzas Personales y Riqueza: Cómo Tomar Mejores Decisiones con tu Dinero
+            Qué hacen los millonarios con el dinero que los demás gastan y qué hay detrás de sus decisiones
           </h1>
           <p>
-            Información y análisis sobre dinero, patrimonio y las estructuras financieras que sostienen las decisiones a largo plazo.
+            Un análisis sobre cómo los millonarios utilizan su dinero, las decisiones que toman frente al gasto y los factores que influyen en la construcción de su patrimonio.
+
           </p>
         </div>
       </a>
