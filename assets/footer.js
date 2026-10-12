@@ -11,12 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="footer-newsletter">
 
       <div class="footer-brand-box">
-        Código Millonario
+       Código Millonario
       </div>
+      <br>      
 
       <h3>Mantente conectado</h3>
+
       <br>
-      <p>Regístrate para recibir contenido sobre finanzas personales directamente en tu correo.</p>
+      <p>Información, análisis y actualidad sobre finanzas, economía y negocios, directamente en tu correo.</p>
       <br>
 
       <form action="https://api.web3forms.com/submit" method="POST">
@@ -35,8 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <span>Acepto los términos de protección de datos</span>
         </label>
 
-        <p style="font-size:12px; color:#555;">
-          <em>Puedes cancelar tu suscripción en cualquier momento.</em><br><br>
+        <p style="font-size:16px; color:#555;">
+         Puedes cancelar tu suscripción en cualquier momento.
+         <br><br>
           La información que envíes estará regida por el 
           <a href="/informacion-legal#registro-newsletter" class="privacy-link">
             Aviso de privacidad de nuestro sitio.
@@ -66,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="footer-col">
         <h4>Información Legal</h4>
         <ul>
-          <li><a href="/informacion-legal#sobre-el-blog">Sobre el Medio</a></li>
+          <li><a href="/informacion-legal#sobre-codigo-millonario">Sobre el Medio</a></li>
           <li><a href="/informacion-legal#politica-privacidad">Política de Privacidad</a></li>
           <li><a href="/informacion-legal#terminos-condiciones">Términos y Condiciones</a></li>
           <li><a href="/informacion-legal#nuestra-filosofia">Nuestra filosofía</a></li>
@@ -117,8 +120,8 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 
       <div class="footer-bottom">
         <p>
-          © 2026 Código Millonario — Todos los derechos reservados.<br>
-          Medio digital especializado en educación financiera, construcción de patrimonio y psicología del dinero.
+          © 2026 Código Millonario — Todos los derechos reservados.
+          Medio digital especializado en educación financiera, construcción de patrimonio, economía, negocios y psicología del dinero.
         </p>
       </div>
 
@@ -204,10 +207,12 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
   display: inline-block;
   padding: 3px 6px;
   margin-bottom: 20px;
-  font-family: 'Playfair Display', serif;
+
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.4px;
 }
 
 /* FORM */
@@ -230,7 +235,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .check-container input {
@@ -283,7 +288,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 
 /* COLUMNAS */
 .footer-col h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
