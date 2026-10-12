@@ -207,7 +207,7 @@ fetch('posts.json')
 
 
 <!-- ESPACIO ARRIBA -->
-<div style="height: 60px;"></div>
+<div style="height: 65px;"></div>
 
 
 
@@ -277,66 +277,10 @@ fetch('posts.json')
 
 
 
-<!-- ESPACIO ARRIBA -->
-<div style="height: 100px;"></div>
-
-
-
-
-
-
-<div class="sidebar-news world-news-section">
-  <span class="editorial-label">Actualidad Global</span>
-  
-  <!-- Contenedor donde se inyectarán las noticias automáticas -->
-  <div id="global-news-container">
-    <div class="side-article">
-      <div class="side-content">
-        <span>Mundo · En Vivo</span>
-        <h3>Cargando últimos acontecimientos internacionales...</h3>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-  // Aquí puedes conectar una API de noticias gratuita para jalar acontecimientos mundiales
-  fetch('https://gnews.io/api/v4/top-headlines?category=world&lang=es&apikey=TU_API_KEY_GRATIS')
-    .then(response => response.json())
-    .then(data => {
-      const container = document.getElementById('global-news-container');
-      container.innerHTML = ''; // Limpiar carga
-      
-      data.articles.slice(0, 3).forEach(article => {
-        const articleHtml = `
-          <article class="side-article">
-            <a href="${article.url}" target="_blank">
-              <img src="${article.image || './assets/png/default.webp'}" alt="${article.title}">
-              <div class="side-content">
-                <span>${article.source.name}</span>
-                <h3>${article.title}</h3>
-              </div>
-            </a>
-          </article>
-        `;
-        container.innerHTML += articleHtml;
-      });
-    })
-    .catch(error => console.log('Error cargando noticias:', error));
-</script>
-
-
-
 
 
 <!-- ESPACIO ARRIBA -->
-<div style="height: 100px;"></div>
-
-
-
-
-
+<div style="height: 80px;"></div>
 
 
 
@@ -378,11 +322,13 @@ fetch('posts.json')
     <!-- COLUMNA IZQUIERDA: CONCEPTOS EDITORIALES -->
     <!-- ========================================= -->
     <aside class="editorial-column">
+
+
       <span class="editorial-label">
         Conceptos
       </span>
 
-      <div class="editorial-points">
+    <div class="editorial-points">
         <a href="#">
           <span class="editorial-number">01</span>
           <span class="editorial-quote">
@@ -494,7 +440,6 @@ fetch('posts.json')
 
   </div>
 </section>
-
 
 
 
@@ -1638,8 +1583,64 @@ GUÍAS
 
 
 
-
   <div style="height: 140px;"></div>
+
+
+
+
+<aside class="sidebar-news world-news-section"></aside>
+<div class="seccion-label">
+Actualidad Global
+</div>
+  
+  <!-- WIDGET OFICIAL DE RSS.APP DIRECTO -->
+  <iframe 
+    src="https://rss.app/embed/v1/list/oMMasvZzNNlIRWtP" 
+    title="Noticias de Actualidad Global"
+    width="100%" 
+    height="450" 
+    frameborder="0" 
+    style="border: none; border-radius: 4px; width: 100%; display: block;"
+    scrolling="yes">
+  </iframe>
+
+<!-- Script ligero para leer tu XML y mostrarlo con estilo -->
+<script>
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://rss.app/feeds/oMMasvZzNNlIRWtP.xml'))
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('custom-rss-feed');
+      if (data.status === 'ok') {
+        container.innerHTML = ''; // Limpiar el "cargando"
+        
+        // Tomamos los primeros 3 o 4 artículos del feed
+        data.items.slice(0, 3).forEach((item, index) => {
+          const articleHtml = `
+            <a href="${item.link}" target="_blank" class="trending-item">
+              <span class="trending-number">${index + 1}</span>
+              <div class="trending-content">
+                <span>Actualidad · ${data.feed.title || 'Mundo'}</span>
+                <h3>${item.title}</h3>
+              </div>
+            </a>
+          `;
+          container.innerHTML += articleHtml;
+        });
+      } else {
+        document.getElementById('custom-rss-feed').innerHTML = '<p style="font-size:12px; color:#666;">No se pudieron cargar las noticias en este momento.</p>';
+      }
+    })
+    .catch(error => {
+      console.error('Error al cargar el RSS:', error);
+    });
+</script>
+</aside>
+
+
+
+
+
+  <div style="height: 240px;"></div>
 
 <!-- =========================================================
      SEPARADOR EDITORIAL
@@ -1812,6 +1813,7 @@ GUÍAS
 
 
   <div style="height: 100px;"></div>
+
 <!-- =========================================================
      SEPARADOR EDITORIAL
      AQUÍ COMIENZA LA SECCIÓN LA MIRADA DE CÓDIGO MILLONARIO
