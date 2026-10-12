@@ -277,9 +277,67 @@ fetch('posts.json')
 
 
 
+<!-- ESPACIO ARRIBA -->
+<div style="height: 100px;"></div>
+
+
+
+
+
+
+<div class="sidebar-news world-news-section">
+  <span class="editorial-label">Actualidad Global</span>
+  
+  <!-- Contenedor donde se inyectarán las noticias automáticas -->
+  <div id="global-news-container">
+    <div class="side-article">
+      <div class="side-content">
+        <span>Mundo · En Vivo</span>
+        <h3>Cargando últimos acontecimientos internacionales...</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // Aquí puedes conectar una API de noticias gratuita para jalar acontecimientos mundiales
+  fetch('https://gnews.io/api/v4/top-headlines?category=world&lang=es&apikey=TU_API_KEY_GRATIS')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('global-news-container');
+      container.innerHTML = ''; // Limpiar carga
+      
+      data.articles.slice(0, 3).forEach(article => {
+        const articleHtml = `
+          <article class="side-article">
+            <a href="${article.url}" target="_blank">
+              <img src="${article.image || './assets/png/default.webp'}" alt="${article.title}">
+              <div class="side-content">
+                <span>${article.source.name}</span>
+                <h3>${article.title}</h3>
+              </div>
+            </a>
+          </article>
+        `;
+        container.innerHTML += articleHtml;
+      });
+    })
+    .catch(error => console.log('Error cargando noticias:', error));
+</script>
+
+
+
+
 
 <!-- ESPACIO ARRIBA -->
 <div style="height: 100px;"></div>
+
+
+
+
+
+
 
 
 
