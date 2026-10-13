@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Interés Compuesto - Código Millonario</title>
+
+<title>Calculadora de Interés Compuesto Gratis y Confiable | Código Millonario</title>
+<meta name="description" content="Usa gratis una calculadora de interés compuesto para proyectar el crecimiento de tu dinero según el capital inicial, las aportaciones periódicas, la tasa de interés y el tiempo.">
 
 <!-- Favicon -->
 <link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
@@ -42,112 +44,10 @@
 
 
 
-<style>
-/* =========================
-   TITULO SECCION NUEVO
-========================= */
-
-.titulo-seccion{
-
-    max-width: 1400px;
-
-    margin: 70px auto 35px auto;
-
-    padding: 0 90px;
-}
-
-/* TEXTO */
-
-.titulo-seccion span{
-
-    font-family:'Inter',sans-serif;
-
-    font-size:1.55rem;
-
-    font-weight:900;
-
-    color:#111111;
-
-    letter-spacing:-1px;
-
-    line-height:1;
-
-    display:inline-block;
-
-    text-transform:uppercase;
-}
-
-/* LINEA */
-
-.linea-seccion{
-
-    width:100%;
-
-    height:4px;
-
-    background:#111111;
-
-    margin-top:10px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-    .titulo-seccion{
-
-        padding:0 30px;
-
-        margin:55px auto 28px auto;
-    }
-
-    .titulo-seccion span{
-
-        font-size:1.35rem;
-
-        letter-spacing:-0.8px;
-    }
-
-    .linea-seccion{
-
-        height:3px;
-
-        margin-top:8px;
-    }
-
-}
-
-@media(max-width:480px){
-
-    .titulo-seccion{
-
-        padding:0 18px;
-    }
-
-    .titulo-seccion span{
-
-        font-size:1.2rem;
-    }
-
-}
-</style>
-
-
-
-
-
-
-
 
 
    <!-- ESPACIO FINAL -->
-<div style="height: 300px;"></div>
-
-
-
-
+<div style="height: 200px;"></div>
 
 
 
@@ -318,6 +218,7 @@
 
 <div class="calc-wrapper">
   <h2>Calculadora de Interés Compuesto</h2>
+  <br>
   
   <div class="calc-section">
     <div class="calc-summary">
@@ -356,7 +257,6 @@
 
         <div class="calc-group">
           <label for="years" id="yearsLabel">Años a invertir</label>
-          <!-- Se ajusta dinámicamente el max según dispositivo -->
           <input type="number" id="years" value="10" min="1" oninput="validarYCalcular(this)">
         </div>
 
@@ -417,12 +317,10 @@
 <script>
   let myChart = null;
 
-  // Detectar si es móvil para fijar los límites correctos (300 en móvil, 1000 en PC)
   function getMaxYears() {
     return window.innerWidth <= 768 ? 300 : 1000;
   }
 
-  // Ajustar el atributo max y el texto de la etiqueta al cargar y redimensionar
   function actualizarLimitesAños() {
     const maxVal = getMaxYears();
     const yearsInput = document.getElementById('years');
@@ -475,21 +373,13 @@
 
     const annualRate = (parseFloat(document.getElementById('interestRate').value) || 0) / 100;
     const contribution = parseFormattedNumber(document.getElementById('contribution').value);
-    const contribFreq = parseInt(document.getElementById('contributionFreq').value);
-    const compoundFreq = parseInt(document.getElementById('compoundFreq').value);
+    const contribFreq = parseInt(document.getElementById('contributionFreq').value); // 1, 12, 24, 52
+    const compoundFreq = parseInt(document.getElementById('compoundFreq').value);   // 1, 12, 365
 
-    let labels = [];
-    let depositedData = [];
-    let interestData = [];
+    let labels = ['Año 0'];
+    let depositedData = [initial];
+    let interestData = [0];
     let tableRows = '';
-
-    let currentBalance = initial;
-    let totalDeposited = initial;
-    let accumulatedInterest = 0;
-    
-    labels.push('Año 0');
-    depositedData.push(initial);
-    interestData.push(0);
 
     tableRows += `
       <tr>
@@ -501,21 +391,102 @@
       </tr>
     `;
 
-    const totalMonths = years * 12;
-    const monthlyRate = annualRate / 12;
+    let currentBalance = initial;
+    let totalDeposited = initial;
+    let accumulatedInterest = 0;
 
-    for (let month = 1; month <= totalMonths; month++) {
-      const contribsThisMonth = contribFreq / 12;
-      const monthContribution = contribution * contribsThisMonth;
+    // Motor de cálculo riguroso basado en la frecuencia de capitalización seleccionada
+    if (compoundFreq === 365) {
+      // Simulación diaria exacta (365 periodos por año)
+      const totalDays = years * 365;
+      const dailyRate = annualRate / 365;
       
-      currentBalance += monthContribution;
-      totalDeposited += monthContribution;
+      // Contribución convertida a tasa exacta por día según su frecuencia
+      // Ej: Si es semanal (52), se multiplica por 52 y se divide entre 365 días del año
+      const annualContributions = contribution * contribFreq;
+      const dailyContribution = annualContributions / 365;
 
-      let monthlyInterest = currentBalance * monthlyRate;
-      currentBalance += monthlyInterest;
+      let prevYearBalance = initial;
 
-      if (month % 12 === 0) {
-        let yearNum = month / 12;
+      for (let day = 1; day <= totalDays; day++) {
+        currentBalance += dailyContribution;
+        totalDeposited += dailyContribution;
+
+        let dailyInterest = currentBalance * dailyRate;
+        currentBalance += dailyInterest;
+
+        if (day % 365 === 0) {
+          let yearNum = day / 365;
+          let newAccumulated = currentBalance - totalDeposited;
+          let interestThisYear = newAccumulated - accumulatedInterest;
+          accumulatedInterest = newAccumulated;
+
+          labels.push('Año ' + yearNum);
+          depositedData.push(totalDeposited);
+          interestData.push(accumulatedInterest);
+
+          tableRows += `
+            <tr>
+              <td><strong>Año ${yearNum}</strong></td>
+              <td>${formatMoney(interestThisYear < 0 ? 0 : interestThisYear)}</td>
+              <td>${formatMoney(accumulatedInterest)}</td>
+              <td>${formatMoney(totalDeposited)}</td>
+              <td><strong>${formatMoney(currentBalance)}</strong></td>
+            </tr>
+          `;
+          prevYearBalance = currentBalance;
+        }
+      }
+    } else if (compoundFreq === 12) {
+      // Simulación mensual exacta (12 periodos por año)
+      const totalMonths = years * 12;
+      const monthlyRate = annualRate / 12;
+      const annualContributions = contribution * contribFreq;
+      const monthlyContribution = annualContributions / 12;
+
+      let prevYearBalance = initial;
+
+      for (let month = 1; month <= totalMonths; month++) {
+        currentBalance += monthlyContribution;
+        totalDeposited += monthlyContribution;
+
+        let monthlyInterest = currentBalance * monthlyRate;
+        currentBalance += monthlyInterest;
+
+        if (month % 12 === 0) {
+          let yearNum = month / 12;
+          let newAccumulated = currentBalance - totalDeposited;
+          let interestThisYear = newAccumulated - accumulatedInterest;
+          accumulatedInterest = newAccumulated;
+
+          labels.push('Año ' + yearNum);
+          depositedData.push(totalDeposited);
+          interestData.push(accumulatedInterest);
+
+          tableRows += `
+            <tr>
+              <td><strong>Año ${yearNum}</strong></td>
+              <td>${formatMoney(interestThisYear < 0 ? 0 : interestThisYear)}</td>
+              <td>${formatMoney(accumulatedInterest)}</td>
+              <td>${formatMoney(totalDeposited)}</td>
+              <td><strong>${formatMoney(currentBalance)}</strong></td>
+            </tr>
+          `;
+          prevYearBalance = currentBalance;
+        }
+      }
+    } else {
+      // Simulación anual exacta (1 periodo por año)
+      const totalYears = years;
+      const annualContributions = contribution * contribFreq;
+
+      for (let yearNum = 1; yearNum <= totalYears; yearNum++) {
+        currentBalance += annualContributions;
+        totalDeposited += annualContributions;
+
+        let annualInterest = currentBalance * annualRate;
+        currentBalance += annualInterest;
+
         let newAccumulated = currentBalance - totalDeposited;
         let interestThisYear = newAccumulated - accumulatedInterest;
         accumulatedInterest = newAccumulated;
@@ -609,206 +580,227 @@
 
 
 
+   <!-- ESPACIO FINAL -->
+<div style="height: 80px;"></div>
 
-<!-- TITULO -->
-<div class="titulo-seccion">
 
-  <span>
-    Preguntas frecuentes
-  </span>
+
+
+
+
+
+
+<!-- CÓDIGO EDITORIAL INDEPENDIENTE - ESTILO WIKIPEDIA CLÁSICO -->
+<style>
+  .wiki-container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: sans-serif;
+    color: #202122;
+    background: #ffffff;
+    line-height: 1.6;
+    font-size: 14.5px;
+  }
+
+  /* Título principal idéntico a Wikipedia */
+  .wiki-container h1 {
+    font-family: 'Linux Libertine', Georgia, Times, serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a2a9b1;
+    color: #000;
+  }
+
+  .wiki-subtitle {
+    font-size: 12.5px;
+    color: #54595d;
+    margin-bottom: 25px;
+  }
+
+  /* Subtítulos de sección con la línea gris clásica de Wikipedia */
+  .wiki-container h2 {
+    font-family: 'Linux Libertine', Georgia, Times, serif;
+    font-size: 20px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 4px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #000;
+  }
+
+  .wiki-container h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #202122;
+  }
+
+  .wiki-container p {
+    margin: 0 0 15px 0;
+  }
+
+  .wiki-container ul {
+    margin: 0 0 15px 0;
+    padding-left: 25px;
+  }
+
+  .wiki-container li {
+    margin-bottom: 5px;
+  }
+
+  /* Estilo de enlaces al clásico color azul Wikipedia */
+  .wiki-container a {
+    color: #0645ad;
+    text-decoration: none;
+  }
+
+  .wiki-container a:hover {
+    text-decoration: underline;
+  }
+
+  /* Cajas de contenidos o notas estilo Wiki */
+  .wiki-box {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  .wiki-box-title {
+    font-weight: bold;
+    border-bottom: 1px solid #eaecf0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #202122;
+  }
+
+  /* Estructura en dos columnas */
+  .wiki-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .wiki-grid-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Tabla de resumen */
+  .wiki-table-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 13.5px;
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+  }
+
+  .wiki-table-info th,
+  .wiki-table-info td {
+    border: 1px solid #a2a9b1;
+    padding: 8px 12px;
+    text-align: left;
+  }
+
+  .wiki-table-info th {
+    background: #eaecf0;
+    width: 35%;
+  }
+</style>
+
+<div class="wiki-container">
+
+<h1>Calculadora de interés compuesto gratis</h1>
+
+<div class="wiki-subtitle">
+  Herramienta financiera online | Código Millonario
+</div>
+
+<p>
+  La <strong>calculadora de interés compuesto</strong> permite proyectar cómo podría evolucionar un capital a lo largo del tiempo, teniendo en cuenta el depósito inicial, las aportaciones periódicas y una tasa de interés anual. 
+</p>
+
+<p>  
+  Puedes modificar el plazo de inversión y consultar el balance final, el dinero depositado y los intereses acumulados mediante una gráfica y una tabla de resultados por año.
+</p>
+
+<div class="wiki-box">
+  <div class="wiki-box-title">Qué puedes calcular</div>
+  <ul style="margin: 0; padding-left: 20px;">
+    <li><strong>Balance final:</strong> el valor total proyectado al terminar el plazo.</li>
+    <li><strong>Total depositado:</strong> el capital inicial más las aportaciones realizadas.</li>
+    <li><strong>Intereses acumulados:</strong> la diferencia entre el balance final y el dinero depositado.</li>
+    <li><strong>Evolución anual:</strong> una gráfica y una tabla para comparar el capital aportado y los intereses generados.</li>
+  </ul>
+</div>
+
+<h2>Cómo utilizar la calculadora de interés compuesto</h2>
+
+<p>
+  Introduce el <strong>depósito inicial</strong>, el número de años y la tasa de interés anual estimada. Después, indica cuánto aportarás en cada periodo y selecciona la frecuencia de las aportaciones. La herramienta permite elegir aportaciones mensuales, quincenales, semanales o anuales.
+</p>
+
+<p>
+  También puedes seleccionar la frecuencia de capitalización de los intereses. Una vez introducidos los valores, consulta el balance final, el total depositado, los intereses acumulados y su evolución a lo largo de los años.
+</p>
+
+<h2>Cómo interpretar los resultados</h2>
+
+<p>
+  El <strong>balance final</strong> representa el capital proyectado al terminar el periodo. El total depositado muestra cuánto dinero habrías aportado entre el depósito inicial y las contribuciones posteriores. La diferencia entre ambas cifras corresponde a los intereses acumulados según los supuestos utilizados.
+</p>
+
+<p>
+  La <strong>calculadora de interés compuesto</strong> permite proyectar cómo podría evolucionar un capital a lo largo del tiempo, teniendo en cuenta el depósito inicial, las aportaciones periódicas y una tasa de interés anual. Introduce los importes en la unidad monetaria que prefieras y los resultados se expresarán en esa misma unidad. Puedes modificar el plazo de inversión y consultar el balance final, el dinero depositado y los intereses acumulados mediante una gráfica y una tabla de resultados por año.
+</p>
+
+<p>
+  Estas cifras son estimaciones matemáticas, no rendimientos garantizados. El resultado real puede variar según la rentabilidad obtenida, las comisiones, los impuestos y las condiciones del producto financiero. Una tasa constante en la calculadora no significa que una inversión real vaya a generar esa rentabilidad todos los años.
+</p>
+
+<h2>Preguntas frecuentes (FAQ) sobre el interés compuesto</h2>
+
+<h3>¿Qué es el interés compuesto?</h3>
+
+<p>
+  Es un mecanismo por el que los intereses acumulados se incorporan al capital y pueden generar nuevos intereses en periodos posteriores. Su efecto depende de la tasa aplicada, el tiempo y las condiciones de capitalización.
+</p>
+
+<h3>¿Qué diferencia hay entre el interés simple y el compuesto?</h3>
+
+<p>
+  Con el interés simple, los intereses se calculan sobre el capital inicial. Con el compuesto, los intereses acumulados también pueden generar nuevos intereses cuando se incorporan al capital.
+</p>
+
+<h3>¿Puedo calcular el efecto de realizar aportaciones periódicas?</h3>
+
+<p>
+  Sí. Puedes introducir una cantidad adicional y elegir si las aportaciones serán mensuales, quincenales, semanales o anuales. La calculadora incorpora esas aportaciones a la proyección del capital.
+</p>
+
+<h3>¿Los resultados representan ganancias garantizadas?</h3>
+
+<p>
+  No. Son proyecciones basadas en los valores introducidos. Los resultados reales dependen de las condiciones de la inversión y pueden ser diferentes de los estimados.
+</p>
 
 </div>
 
 
 
 
- <section class="mb-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
-
-    <!-- ================= ACORDEÓN ================= -->
-
-  <style>
-  .cf-accordion {
-    margin-top: 60px;
-  }
-
-  .cf-accordion * {
-    box-sizing: border-box;
-  }
-
-  .cf-accordion-item {
-    background: #ffffff; /* fondo blanco fijo */
-    border-radius: 14px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
-    transform: translateY(0);
-    will-change: transform; /* optimiza animación */
-    border: 1px solid rgba(0,0,0,0.03);
-  }
-
-  /* Animación tipo card con sombra */
-  .cf-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
-  }
-
-  .cf-accordion-header {
-    padding: 14px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000;
-    user-select: none;
-    background: #ffffff;
-    transition: none;
-  }
-
-  .cf-accordion-header:hover {
-    background: #ffffff;
-  }
-
-  /* ICONO */
-  .cf-accordion-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(45deg);
-    transform-origin: center;
-    transition: transform 0.35s ease;
-    margin-left: 12px;
-    flex-shrink: 0;
-  }
-
-  .cf-accordion-item.is-open .cf-accordion-icon {
-    transform: rotate(-135deg);
-  }
-
-  .cf-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: relative;
-  }
-
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
-  .cf-accordion-item.is-open .cf-accordion-content::before {
-    content: "";
-    display: block;
-    width: 88%;
-    margin: 0 auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .cf-accordion-content p {
-    padding: 18px 22px 22px;
-    margin: 0;
-    color: #000000;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-</style>
 
 
-    <div class="cf-accordion">
-
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
-         Entiende el efecto del interés compuesto
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-  
-          <p>
-La 
-<strong>
-Calculadora de Interés Compuesto
-</strong>
-es una herramienta diseñada para ayudarte a visualizar cómo puede crecer tu
-dinero a lo largo del tiempo, ya sea mediante una inversión inicial,
-aportes mensuales o ambos.
-</p>
-
-<p>
-El interés compuesto funciona reinvirtiendo las ganancias generadas,
-permitiendo que tu capital crezca de forma progresiva y acumulativa.
-Esta calculadora te permite entender ese efecto de manera clara y práctica.
-</p>
-
-<p>
-
-<strong>
-No se trata de una promesa de rentabilidad
-</strong>,
-sino de una simulación financiera que te ayuda a proyectar escenarios
-y tomar decisiones más informadas sobre ahorro e inversión.
-</p>
-
-<p>
-<strong>
-Esta calculadora es ideal para:
-</strong>
-</p>
-
-<ul style="padding-left: 30px;">
-  <li>→ Personas que desean empezar a invertir.</li>
-  <li>→ Quienes quieren entender el poder del interés compuesto.</li>
-  <li>→ Ahorristas que realizan aportes mensuales.</li>
-  <li>→ Usuarios que planifican objetivos financieros a largo plazo.</li>
-</ul>
-
-<p>
-Al ajustar variables como el monto inicial, el aporte periódico, la tasa de
-interés y el tiempo, podrás ver cómo pequeñas decisiones pueden generar
-grandes diferencias en el resultado final.
-</p>
-
-<p>
-Usa esta Calculadora de Interés Compuesto como una herramienta de apoyo
-para planificar tu futuro financiero y reforzar una mentalidad de crecimiento
-constante y disciplinado.
-</p>
 
 
-        </div>
-      </div>
-
-    </div>
-
-    <script>
-    document.querySelectorAll('.cf-accordion').forEach(accordion => {
-  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.cf-accordion-item');
-      const content = item.querySelector('.cf-accordion-content');
-
-      // Solo afecta los items de ESTE acordeón
-      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          other.querySelector('.cf-accordion-content').style.maxHeight = null;
-        }
-      });
-
-      item.classList.toggle('is-open');
-
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    });
-  });
-});
-    </script>
-
-
-</section>
 
 
 
