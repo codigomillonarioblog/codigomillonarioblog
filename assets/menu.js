@@ -42,7 +42,7 @@
 
 
       <!-- =================================================
-           LOGO
+           LOGO (INDEPENDIZADO A LA IZQUIERDA)
       ================================================= -->
 
       <a href="/" class="cm-logo">
@@ -165,7 +165,7 @@
 
 
       <!-- =================================================
-           DERECHA (INDEPENDIZADA)
+           DERECHA (INDEPENDIZADA A LA DERECHA)
       ================================================= -->
 
       <div class="cm-header-right">
@@ -476,13 +476,15 @@
   height: 64px;
   margin: 0 auto;
   padding: 0 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative; /* Contenedor de referencia base */
+  position: relative; /* Contenedor base de referencia absoluto para todo */
 }
 
+/* Logo independizado a la izquierda */
 .cm-logo {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-12px);
   text-decoration: none;
   color: #ffffff;
   font-family: 'Manrope', sans-serif;
@@ -491,7 +493,6 @@
   width: auto;
   line-height: 1;
   white-space: nowrap;
-  transform: translateX(-12px);
   z-index: 2;
 }
 
@@ -523,7 +524,7 @@
   }
 }
   
-/* Menú central totalmente independiente del logo y la derecha */
+/* Menú central totalmente independiente en coordenadas */
 .cm-nav {
   display: flex;
   align-items: center;
@@ -611,12 +612,17 @@
   color: #ccc;
 }
 
+/* Controles de la derecha (lupa y hamburguesa) independizados y fijos a la derecha */
 .cm-header-right {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-left: auto;
   z-index: 2;
+  width: auto;
 }
 
 .cm-search {
@@ -627,6 +633,7 @@
   cursor: pointer;
   padding: 8px;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .cm-search:hover {
@@ -642,6 +649,9 @@
   cursor: pointer;
   padding: 8px;
   line-height: 1;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
 }
 
 .cm-mobile-menu {
@@ -816,13 +826,17 @@
     padding: 0 20px;
   }
   .cm-logo {
+    left: 20px;
     width: auto;
-    max-width: calc(100% - 8px);
+    max-width: calc(100% - 100px);
   }
   .cm-logo-title {
     font-size: 22px;
     font-weight: 400;
     letter-spacing: -.055em;
+  }
+  .cm-header-right {
+    right: 20px;
   }
   .cm-nav {
     display: none;
