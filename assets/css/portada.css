@@ -268,12 +268,7 @@ img {
   transition: color 0.2s ease;
 }
 
-@media (max-width: 600px) {
-  .hero-main h1 {
-    font-size: 2.3rem;
-    line-height: 1.08;
-  }
-}
+
 
 .hero-main > a:hover h1 {
   color: #464c50;
@@ -426,7 +421,7 @@ img {
     margin-bottom: 12px;
   }
   .hero-main h1 {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
   }
 
   /* Tarjetas inferiores y Lo más leído en formato compacto de 2 columnas (Texto izq / Imagen der) */
@@ -570,12 +565,7 @@ img {
     letter-spacing: -.4px;
 }
 
-@media (max-width: 600px) {
-    .cm-main-title {
-        font-size: 25px;
-        line-height: 1.08;
-    }
-}
+
 
 .cm-description{
     margin:0 0 8px;
@@ -898,7 +888,7 @@ img {
 
 @media(max-width:620px){
     .cm-main-title{
-        font-size:24px;
+        font-size:17px;
     }
 }
 
