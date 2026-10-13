@@ -145,295 +145,447 @@
    <!-- ESPACIO FINAL -->
 <div style="height: 300px;"></div>
 
-<!-- ========================================= -->
-<!-- GOOGLE FONTS -->
-<!-- ========================================= -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
-<!-- =========================
-     HERO TITULO
-========================= -->
 
-<section class="hero-blog">
 
-  <div class="hero-blog-content">
 
-    <!-- ETIQUETA -->
-    <span class="hero-tag">
-      CALCULADORA DE INTERÉS COMPUESTO
-    </span>
 
-    <!-- TITULO -->
-    <h1>
-      Descubre cómo crecerá tu dinero invirtiendo de forma inteligente
-    </h1>
 
-    <!-- SUBTITULO -->
-    <p>
-      Visualiza el potencial de crecimiento de tu dinero al invertir con estrategia y disciplina. Aprende cómo funcionan los rendimientos, el interés compuesto y la planificación a largo plazo para tomar decisiones inteligentes que multipliquen tu capital y fortalezcan tu futuro financiero.
-    </p>
 
-  </div>
 
-</section>
 
+
+<!-- Carga de librerías necesarias para la gráfica -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-
-/* =========================
-   HERO BLOG
-========================= */
-
-.hero-blog{
-
+  .calc-wrapper {
+    max-width: 1000px;
     width: 100%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    background: #ffffff;
+    box-sizing: border-box; /* Previene desbordamientos */
+    overflow-x: hidden;    /* Evita scroll horizontal en toda la página */
+  }
+  
+  .calc-wrapper h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Georgia, serif;
+    font-size: 28px;
+  }
 
-    margin-top: 50px;
+  /* Estilos de títulos limpios */
+  .calc-section-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #222;
+  }
 
-    margin-bottom: 45px;
+  /* Líneas divisorias sutiles */
+  .calc-divider {
+    border: none;
+    border-top: 1px solid #eaeaea;
+    margin: 30px 0;
+  }
 
-    padding-left: 90px;
+  /* Resumen Financiero (Arriba) */
+  .calc-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .calc-summary { grid-template-columns: 1fr; gap: 10px; }
+    .summary-box { padding: 12px !important; }
+    .summary-box p { font-size: 18px !important; }
+    .calc-wrapper { padding: 10px; } /* Ajuste de espacio en móviles */
+    .calc-wrapper h2 { font-size: 22px; margin-bottom: 20px; }
+  }
+  
+  .summary-box {
+    background: #f8f9fa;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #eef0f2;
+    box-sizing: border-box;
+  }
+  .summary-box h4 {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+  }
+  .summary-box p {
+    margin: 8px 0 0 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0066ff;
+  }
 
-    padding-right: 90px;
-}
+  /* Layout inferior para PC: Gráfica izquierda, Parámetros derecha */
+  .calc-main-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .calc-main-grid { grid-template-columns: 1fr; gap: 20px; }
+  }
 
+  /* Parámetros (Derecha en PC) */
+  .params-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  @media (max-width: 500px) {
+    .params-grid { grid-template-columns: 1fr; }
+    .calc-group[style*="grid-column: span 2"] { grid-column: span 1 !important; }
+  }
 
-/* CONTENIDO */
+  .calc-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .calc-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #444;
+  }
+  .calc-group input, .calc-group select {
+    padding: 9px 11px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .calc-group input:focus, .calc-group select:focus {
+    border-color: #0066ff;
+  }
 
-.hero-blog-content{
+  /* Gráfica (Izquierda en PC) */
+  .chart-container {
+    position: relative;
+    height: 380px;
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    .chart-container { height: 260px; } /* Altura optimizada para móviles */
+  }
 
-    max-width: 980px;
-}
-
-
-/* =========================
-   ETIQUETA
-========================= */
-
-.hero-tag{
-
-    display: inline-block;
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 0.78rem;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #8b7355;
-
-    margin-bottom: 18px;
-}
-
-
-/* =========================
-   TITULO
-========================= */
-
-.hero-blog h1{
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 4.2rem;
-
-    line-height: 0.98;
-
-    font-weight: 800;
-
-    color: #111111;
-
-    letter-spacing: -3px;
-
-    margin-bottom: 24px;
-}
-
-
-/* =========================
-   SUBTITULO
-========================= */
-
-.hero-blog p{
-
-    font-family: 'Open Sans', sans-serif;
-
-    font-size: 1.15rem;
-
-    line-height: 1.8;
-
-    color: #555555;
-
-    max-width: 760px;
-
-    margin-bottom: 0;
-}
-
-
-/* =========================
-   TABLETS
-========================= */
-
-@media (max-width: 1024px){
-
-    .hero-blog{
-
-        padding-left: 40px;
-
-        padding-right: 40px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 3.2rem;
-    }
-
-}
-
-
-/* =========================
-   TELEFONOS
-========================= */
-
-@media (max-width: 640px){
-
-    .hero-blog{
-
-        padding-left: 18px;
-
-        padding-right: 18px;
-
-        margin-top: 35px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 2.2rem;
-
-        line-height: 1.05;
-
-        letter-spacing: -1.5px;
-    }
-
-    .hero-blog p{
-
-        font-size: 1rem;
-
-        line-height: 1.7;
-    }
-
-}
-
+  /* Tabla de Resultados por Año con Scroll Contenido */
+  .table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto; /* Permite scroll horizontal solo dentro de la tabla si no cabe en el teléfono */
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  .calc-table {
+    width: 100%;
+    min-width: 500px; /* Evita que las columnas se aplasten en pantallas pequeñas */
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+  }
+  .calc-table th {
+    background: #f8f9fa;
+    color: #333;
+    padding: 12px 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+  }
+  .calc-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f2f2f2;
+    color: #555;
+    white-space: nowrap;
+  }
+  .calc-table tr:hover {
+    background: #fafafa;
+  }
 </style>
 
+<div class="calc-wrapper">
+  <h2>Calculadora de Interés Compuesto</h2>
+  
+  <!-- 1. RESUMEN FINANCIERO (ARRIBA) -->
+  <div class="calc-section">
+    <div class="calc-summary">
+      <div class="summary-box">
+        <h4>Balance Final</h4>
+        <p id="totalBalance">$0.00</p>
+      </div>
+      <div class="summary-box">
+        <h4>Total Depositado</h4>
+        <p id="totalDeposited" style="color: #555;">$0.00</p>
+      </div>
+      <div class="summary-box">
+        <h4>Interés Ganado</h4>
+        <p id="totalInterest" style="color: #28a745;">$0.00</p>
+      </div>
+    </div>
+  </div>
 
+  <hr class="calc-divider">
 
-
-
-  <!-- ESPACIO PEQUEÑO FINAL -->
-<section class="py-20"></section>
-
-
-
-    <main>
-      <section class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-24 relative z-10 border border-stone-200">
-            <form id="calcForm" class="space-y-6">
-                <div>
-                    <label class="block text-sm font-medium mb-2">Inversión inicial ($)</label>
-                    <input id="inicial" type="text" oninput="formatearNumero(this)" class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-2">Aporte mensual ($)</label>
-                    <input id="aporte" type="text" oninput="formatearNumero(this)" class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-2">Tasa anual (%)</label>
-                    <input id="tasa" type="number" step="0.01" class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-2">Años</label>
-                    <input id="años" type="number" class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
-                </div>
-
-                <button type="button" onclick="calcular()" class="w-full bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition-colors">
-                    Calcular
-                </button>
-                <button type="button" onclick="reiniciarCalculadora()" class="w-full bg-stone-200 text-stone-800 py-3 rounded-xl text-lg font-semibold hover:bg-stone-300 transition-colors">
-                    Reiniciar Calculadora
-                </button>
-            </form>
-        </section>
-    </main>
-
-    <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-[999]">
-        <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl animate-[modalShow_.3s_ease]">
-            <h3 class="text-3xl font-bold text-center mb-6">Resultado</h3>
-            <p class="text-lg text-stone-700 text-center">
-                Total acumulado:
-                <span id="m_total" class="font-bold text-green-700"></span>
-            </p>
-            <button onclick="cerrarModal()" class="w-full mt-8 bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition">
-                Cerrar
-            </button>
-        </div>
+  <!-- 2 & 3. GRÁFICA (IZQUIERDA) Y PARÁMETROS (DERECHA) EN PC -->
+  <div class="calc-main-grid">
+    <!-- GRÁFICA -->
+    <div>
+      <h3 class="calc-section-title">Proyección Gráfica</h3>
+      <div class="chart-container">
+        <canvas id="compoundChart"></canvas>
+      </div>
     </div>
 
-    <section class="py-20"></section>
+    <!-- PARÁMETROS DE INVERSIÓN -->
+    <div>
+      <h3 class="calc-section-title">Parámetros de Inversión</h3>
+      <div class="params-grid">
+        <div class="calc-group">
+          <label for="initialDeposit">Depósito inicial ($)</label>
+          <input type="text" id="initialDeposit" value="10,000" oninput="formatInputAndCalculate(this)">
+        </div>
 
+        <div class="calc-group">
+          <label for="years">Años a invertir</label>
+          <input type="number" id="years" value="10" min="1" max="50" oninput="calcular()">
+        </div>
 
-    <script>
-        function limpiarFormato(valor) {
-            return valor.replace(/\./g, "");
-        }
+        <div class="calc-group">
+          <label for="interestRate">Tasa anual (%)</label>
+          <input type="number" id="interestRate" value="10" min="0" step="0.1" oninput="calcular()">
+        </div>
 
-        function formatearNumero(input) {
-            let valor = input.value;
-            valor = limpiarFormato(valor);
-            if (!/^[0-9]*$/.test(valor)) return;
-            input.value = Number(valor).toLocaleString("es-CO");
-        }
+        <div class="calc-group">
+          <label for="contribution">Aportación ($)</label>
+          <input type="text" id="contribution" value="1,000" oninput="formatInputAndCalculate(this)">
+        </div>
 
-        function obtenerNumero(id) {
-            return parseFloat(limpiarFormato(document.getElementById(id).value)) || 0;
-        }
+        <div class="calc-group" style="grid-column: span 2;">
+          <label for="contributionFreq">Frecuencia de aportación</label>
+          <select id="contributionFreq" onchange="calcular()">
+            <option value="12" selected>Mensual</option>
+            <option value="24">Quincenal</option>
+            <option value="52">Semanal</option>
+            <option value="1">Anual</option>
+          </select>
+        </div>
 
-        function calcular() {
-            const inicial = obtenerNumero("inicial");
-            const aporte = obtenerNumero("aporte");
-            const tasa = (parseFloat(document.getElementById("tasa").value) || 0) / 100 / 12;
-            const meses = (parseFloat(document.getElementById("años").value) || 0) * 12;
+        <div class="calc-group" style="grid-column: span 2;">
+          <label for="compoundFreq">Frecuencia de capitalización</label>
+          <select id="compoundFreq" onchange="calcular()">
+            <option value="365">Diario</option>
+            <option value="12" selected>Mensual</option>
+            <option value="1">Anual</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            let total = inicial * Math.pow(1 + tasa, meses);
-            for (let i = 1; i <= meses; i++) {
-                total += aporte * Math.pow(1 + tasa, meses - i);
+  <hr class="calc-divider">
+
+  <!-- 4. TABLA DE RESULTADOS POR AÑO -->
+  <div>
+    <h3 class="calc-section-title" style="text-align: center;">Resultados por Año</h3>
+    <div class="table-container">
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Año</th>
+            <th>Interés Anual</th>
+            <th>Interés Acumulado</th>
+            <th>Total Depositado</th>
+            <th>Balance Final</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Se llena dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  let myChart = null;
+
+  function parseFormattedNumber(val) {
+    if (!val) return 0;
+    const cleanVal = val.toString().replace(/,/g, '');
+    return parseFloat(cleanVal) || 0;
+  }
+
+  function formatInputAndCalculate(input) {
+    let cleanVal = input.value.replace(/[^0-9]/g, '');
+    if (cleanVal !== '') {
+      input.value = parseInt(cleanVal, 10).toLocaleString('en-US');
+    } else {
+      input.value = '';
+    }
+    calcular();
+  }
+
+  function formatMoney(amount) {
+    return '$' + amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function calcular() {
+    const initial = parseFormattedNumber(document.getElementById('initialDeposit').value);
+    const years = parseInt(document.getElementById('years').value) || 0;
+    const annualRate = (parseFloat(document.getElementById('interestRate').value) || 0) / 100;
+    const contribution = parseFormattedNumber(document.getElementById('contribution').value);
+    const contribFreq = parseInt(document.getElementById('contributionFreq').value);
+    const compoundFreq = parseInt(document.getElementById('compoundFreq').value);
+
+    let labels = [];
+    let depositedData = [];
+    let interestData = [];
+    let tableRows = '';
+
+    let currentBalance = initial;
+    let totalDeposited = initial;
+    let accumulatedInterest = 0;
+    
+    labels.push('Año 0');
+    depositedData.push(initial);
+    interestData.push(0);
+
+    tableRows += `
+      <tr>
+        <td><strong>Año 0</strong></td>
+        <td>$0.00</td>
+        <td>$0.00</td>
+        <td>${formatMoney(initial)}</td>
+        <td><strong>${formatMoney(initial)}</strong></td>
+      </tr>
+    `;
+
+    const totalMonths = years * 12;
+    const monthlyRate = annualRate / 12;
+
+    for (let month = 1; month <= totalMonths; month++) {
+      const contribsThisMonth = contribFreq / 12;
+      const monthContribution = contribution * contribsThisMonth;
+      
+      currentBalance += monthContribution;
+      totalDeposited += monthContribution;
+
+      let monthlyInterest = currentBalance * monthlyRate;
+      currentBalance += monthlyInterest;
+
+      if (month % 12 === 0) {
+        let yearNum = month / 12;
+        let newAccumulated = currentBalance - totalDeposited;
+        let interestThisYear = newAccumulated - accumulatedInterest;
+        accumulatedInterest = newAccumulated;
+
+        labels.push('Año ' + yearNum);
+        depositedData.push(totalDeposited);
+        interestData.push(accumulatedInterest);
+
+        tableRows += `
+          <tr>
+            <td><strong>Año ${yearNum}</strong></td>
+            <td>${formatMoney(interestThisYear < 0 ? 0 : interestThisYear)}</td>
+            <td>${formatMoney(accumulatedInterest)}</td>
+            <td>${formatMoney(totalDeposited)}</td>
+            <td><strong>${formatMoney(currentBalance)}</strong></td>
+          </tr>
+        `;
+      }
+    }
+
+    document.getElementById('totalBalance').innerText = formatMoney(currentBalance);
+    document.getElementById('totalDeposited').innerText = formatMoney(totalDeposited);
+    document.getElementById('totalInterest').innerText = formatMoney(accumulatedInterest);
+    document.getElementById('tableBody').innerHTML = tableRows;
+
+    renderChart(labels, depositedData, interestData);
+  }
+
+  function renderChart(labels, depositedData, interestData) {
+    const ctx = document.getElementById('compoundChart').getContext('2d');
+
+    if (myChart) {
+      myChart.destroy();
+    }
+
+    myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Total Depositado',
+            data: depositedData,
+            backgroundColor: '#6c757d',
+            stack: 'Stack 0'
+          },
+          {
+            label: 'Interés Generado',
+            data: interestData,
+            backgroundColor: '#0066ff',
+            stack: 'Stack 0'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.dataset.label + ': ' + formatMoney(context.raw);
+              }
             }
-
-            document.getElementById("m_total").textContent =
-                "$" + total.toLocaleString("es-CO", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-
-            document.getElementById('modal').classList.remove("hidden");
+          }
+        },
+        scales: {
+          x: { stacked: true },
+          y: { 
+            stacked: true,
+            ticks: {
+              callback: function(value) { return '$' + value.toLocaleString(); }
+            }
+          }
         }
+      }
+    });
+  }
 
-        function cerrarModal() {
-            document.getElementById('modal').classList.add("hidden");
-        }
-
-        function reiniciarCalculadora() {
-            document.getElementById("inicial").value = "";
-            document.getElementById("aporte").value = "";
-            document.getElementById("tasa").value = "";
-            document.getElementById("años").value = "";
-            cerrarModal();
-        }
-    </script>
+  window.onload = calcular;
+</script>
 
 
-     
+
+
+
+
+
+
 
 
 <!-- TITULO -->
