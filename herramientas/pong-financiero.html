@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>Pong Financiero: Juego de Educación Financiera | Código Millonario</title>
+<meta name="description" content="Juega al Pong Financiero de Código Millonario, una versión del clásico videojuego para divertirte mientras exploras los juegos y herramientas de educación financiera.">
+
+
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cmGold: '#d4af37',
+                        cmDark: '#0b0f19',
+                        cmCard: '#131c2e',
+                        cmGreen: '#10b981',
+                        cmRed: '#ef4444'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #070913;
+            color: #f3f4f6;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            overflow-x: hidden;
+        }
+        canvas {
+            touch-action: none;
+            background: radial-gradient(circle at center, #111827 0%, #030712 100%);
+            box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+
+       <!-- ESPACIO FINAL -->
+<div style="height: 100px;"></div>
+
+
+    <div id="cm-game-wrapper" class="w-full max-w-4xl mx-auto px-4 py-6 flex-grow flex flex-col items-center justify-center">
+        
+        <header class="text-center mb-6">
+            <p class="text-xs md:text-sm text-gray-400 uppercase tracking-widest mt-1">Terminal de Duelo Financiero Pong</p>
+        </header>
+
+        <div class="w-full bg-cmCard border border-amber-500/20 rounded-2xl shadow-2xl p-4 md:p-6 relative backdrop-blur-md">
+            
+            <div class="grid grid-cols-2 gap-4 mb-4 pb-4 border-b border-gray-800 text-sm md:text-base">
+                <div class="flex flex-col items-start bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+                    <span class="text-xs text-gray-400 font-semibold uppercase">🤖 Banco Máquina</span>
+                    <span id="ai-money" class="text-lg md:text-2xl font-bold text-red-400">$1,000</span>
+                    <span class="text-xs text-gray-500" id="ai-goals">Goles: 0</span>
+                </div>
+                <div class="flex flex-col items-end bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+                    <span class="text-xs text-amber-400 font-semibold uppercase">💼 Tu Presupuesto</span>
+                    <span id="player-money" class="text-lg md:text-2xl font-bold text-green-400">$1,000</span>
+                    <span class="text-xs text-gray-500" id="player-goals">Goles: 0</span>
+                </div>
+            </div>
+
+            <div id="menu-screen" class="flex flex-col items-center justify-center py-6 space-y-6">
+                <div class="text-center space-y-2">
+                    <h2 class="text-xl font-bold text-white">Ajuste de Volatilidad / Velocidad de Mercado</h2>
+                    <p class="text-xs text-gray-400 max-w-md">Desliza la barra estilo volumen para ajustar la velocidad de la bola. ¡A mayor velocidad, mayor riesgo y reflejos requeridos!</p>
+                </div>
+
+                <div class="flex items-center space-x-6 bg-gray-900/80 p-5 rounded-2xl border border-amber-500/30 shadow-xl w-full max-w-md">
+                    <div class="flex flex-col items-center space-y-2">
+                        <span class="text-xs text-amber-400 font-bold uppercase">Nivel</span>
+                        <div class="relative w-12 h-44 bg-gray-950 rounded-2xl border border-gray-800 flex items-end p-1 overflow-hidden shadow-inner">
+                            <div id="speed-volume-fill" class="w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-red-500 rounded-xl transition-all duration-150" style="height: 50%;"></div>
+                            <input type="range" id="speed-range" min="1" max="5" value="3" step="1" oninput="updateSpeedControl(this.value)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" style="-webkit-appearance: slider-vertical;">
+                        </div>
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-between space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-semibold uppercase">Indicador</span>
+                            <span id="speed-label" class="text-sm font-black text-amber-400">NIVEL 3 - ALTA ⚡</span>
+                        </div>
+                        
+                        <div class="flex items-end space-x-1.5 h-12 bg-black/40 p-2 rounded-xl border border-gray-800 justify-between">
+                            <div id="bar-1" class="w-1/5 bg-emerald-500 rounded-t transition-all duration-300" style="height: 30%;"></div>
+                            <div id="bar-2" class="w-1/5 bg-emerald-400 rounded-t transition-all duration-300" style="height: 45%;"></div>
+                            <div id="bar-3" class="w-1/5 bg-amber-400 rounded-t transition-all duration-300" style="height: 60%;"></div>
+                            <div id="bar-4" class="w-1/5 bg-amber-500 opacity-30 rounded-t transition-all duration-300" style="height: 80%;"></div>
+                            <div id="bar-5" class="w-1/5 bg-red-500 opacity-30 rounded-t transition-all duration-300" style="height: 100%;"></div>
+                        </div>
+
+                        <p id="speed-desc" class="text-[11px] text-gray-400 italic">Velocidad rápida e intempestiva. Requiere buena precisión.</p>
+                    </div>
+                </div>
+
+                <button onclick="startGame()" class="mt-2 px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-black rounded-xl text-lg shadow-lg shadow-amber-500/20 transform hover:scale-105 transition-all">
+                    INICIAR DUELO FINANCIERO 🚀
+                </button>
+            </div>
+
+            <div id="game-container" class="hidden flex flex-col items-center">
+                <div class="relative w-full flex justify-center overflow-hidden rounded-xl border border-amber-500/30">
+                    <canvas id="pongCanvas" class="w-full max-w-[500px] h-[400px] rounded-xl cursor-crosshair"></canvas>
+                    
+                    <div id="round-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-xs flex flex-col items-center justify-center text-center p-4">
+                        <h3 id="round-message" class="text-xl font-bold text-amber-400 mb-2">¡Listo para operar!</h3>
+                        <p class="text-xs text-gray-300 mb-4">Mueve tu barra con el mouse, toque táctil o flechas izq/der.</p>
+                        <button onclick="launchBall()" class="px-6 py-2.5 bg-yellow-500 hover:bg-yellow-400 text-gray-950 font-bold rounded-lg shadow-md transition-all text-sm">
+                            LANZAR BOLITA ⚡
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex justify-between w-full max-w-[500px] mt-4 gap-4 sm:hidden">
+                    <button ontouchstart="moveLeft(true)" ontouchend="moveLeft(false)" onmousedown="moveLeft(true)" onmouseup="moveLeft(false)" class="flex-1 py-3 bg-gray-800 active:bg-amber-500 active:text-gray-950 text-white rounded-xl font-bold border border-gray-700 select-none">
+                        ◀ Izquierda
+                    </button>
+                    <button ontouchstart="moveRight(true)" ontouchend="moveRight(false)" onmousedown="moveRight(true)" onmouseup="moveRight(false)" class="flex-1 py-3 bg-gray-800 active:bg-amber-500 active:text-gray-950 text-white rounded-xl font-bold border border-gray-700 select-none">
+                        Derecha ▶
+                    </button>
+                </div>
+            </div>
+
+            <div id="gameover-screen" class="hidden flex flex-col items-center justify-center py-10 text-center space-y-4">
+                <div id="gameover-icon" class="text-5xl">🏆</div>
+                <h2 id="gameover-title" class="text-2xl md:text-3xl font-black text-white">¡Fin del Duelo!</h2>
+                <p id="gameover-desc" class="text-sm text-gray-300 max-w-md">El saldo de uno de los jugadores llegó a números rojos ($0).</p>
+                <button onclick="resetGameMenu()" class="mt-4 px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-gray-950 font-bold rounded-xl shadow-lg transition-all">
+                    JUGAR NUEVAMENTE 🔄
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+  <!-- ESPACIO FINAL -->
+<div style="height: 160px;"></div>
+
+
+
+
+    <div class="footer-here"></div>
+    <script src="https://codigomillonario.blog/assets/footer.js"></script>
+    <script src="../assets/menu.js"></script>
+
+    <script>
+        let speedLevel = 3;
+        let playerMoney = 1000;
+        let aiMoney = 1000;
+        let playerGoals = 0;
+        let aiGoals = 0;
+        const penaltyAmount = 200;
+
+        let gameActive = false;
+        let ballInPlay = false;
+
+        const speedConfigs = {
+            1: { baseSpeed: 16, aiReaction: 0.35, label: "NIVEL 1 - MODERADA 🟢", fillPercent: "20%", desc: "Velocidad estándar fluida para calentamiento." },
+            2: { baseSpeed: 24, aiReaction: 0.48, label: "NIVEL 2 - MEDIA 🟡", fillPercent: "40%", desc: "Velocidad acelerada. Requiere buenos reflejos." },
+            3: { baseSpeed: 34, aiReaction: 0.65, label: "NIVEL 3 - ALTA ⚡", fillPercent: "60%", desc: "Velocidad muy rápida. Duelo de alta intensidad." },
+            4: { baseSpeed: 45, aiReaction: 0.85, label: "NIVEL 4 - ULTRA 🔥", fillPercent: "80%", desc: "Velocidad extrema de mercado. Reacción inmediata requerida." },
+            5: { baseSpeed: 55, aiReaction: 1.00, label: "NIVEL 5 - HIPERVELOZ 🚀", fillPercent: "100%", desc: "Límite del ojo humano. Solo para traders experimentados." }
+        };
+
+        const menuScreen = document.getElementById('menu-screen');
+        const gameContainer = document.getElementById('game-container');
+        const gameoverScreen = document.getElementById('gameover-screen');
+        const roundOverlay = document.getElementById('round-overlay');
+        const roundMessage = document.getElementById('round-message');
+        const playerMoneyEl = document.getElementById('player-money');
+        const aiMoneyEl = document.getElementById('ai-money');
+        const playerGoalsEl = document.getElementById('player-goals');
+        const aiGoalsEl = document.getElementById('ai-goals');
+        const gameoverTitle = document.getElementById('gameover-title');
+        const gameoverDesc = document.getElementById('gameover-desc');
+        const gameoverIcon = document.getElementById('gameover-icon');
+
+        const speedVolumeFill = document.getElementById('speed-volume-fill');
+        const speedLabel = document.getElementById('speed-label');
+        const speedDesc = document.getElementById('speed-desc');
+
+        const canvas = document.getElementById('pongCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = 500;
+        canvas.height = 400;
+
+        let ball = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            radius: 8,
+            speedX: 0,
+            speedY: 0,
+            baseSpeed: 10
+        };
+
+        let playerPaddle = {
+            width: 100,
+            height: 12,
+            x: canvas.width / 2 - 50,
+            y: canvas.height - 25,
+            dx: 0,
+            speed: 10
+        };
+
+        let aiPaddle = {
+            width: 90,
+            height: 12,
+            x: canvas.width / 2 - 45,
+            y: 15,
+            reaction: 0.25
+        };
+
+        function updateSpeedControl(val) {
+            speedLevel = parseInt(val);
+            const cfg = speedConfigs[speedLevel];
+            
+            speedVolumeFill.style.height = cfg.fillPercent;
+            speedLabel.textContent = cfg.label;
+            speedDesc.textContent = cfg.desc;
+
+            for (let i = 1; i <= 5; i++) {
+                const bar = document.getElementById(`bar-${i}`);
+                if (i <= speedLevel) {
+                    bar.classList.remove('opacity-30');
+                    bar.classList.add('opacity-100');
+                } else {
+                    bar.classList.add('opacity-30');
+                    bar.classList.remove('opacity-100');
+                }
+            }
+
+            ball.baseSpeed = cfg.baseSpeed;
+            aiPaddle.reaction = cfg.aiReaction;
+        }
+
+        let audioCtx = null;
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function playSound(type) {
+            try {
+                initAudio();
+                if (!audioCtx) return;
+                
+                let osc = audioCtx.createOscillator();
+                let gainNode = audioCtx.createGain();
+                osc.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+
+                let now = audioCtx.currentTime;
+
+                if (type === 'bounce') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(400, now);
+                    osc.frequency.exponentialRampToValueAtTime(800, now + 0.08);
+                    gainNode.gain.setValueAtTime(0.15, now);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+                    osc.start(now);
+                    osc.stop(now + 0.08);
+                } else if (type === 'goal') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(220, now);
+                    osc.frequency.setValueAtTime(150, now + 0.15);
+                    gainNode.gain.setValueAtTime(0.3, now);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                } else if (type === 'victory') {
+                    osc.type = 'square';
+                    osc.frequency.setValueAtTime(300, now);
+                    osc.frequency.setValueAtTime(450, now + 0.1);
+                    osc.frequency.setValueAtTime(600, now + 0.2);
+                    gainNode.gain.setValueAtTime(0.2, now);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.5);
+                    osc.start(now);
+                    osc.stop(now + 0.5);
+                }
+            } catch(e) {
+                console.log("Audio no soportado o bloqueado", e);
+            }
+        }
+
+        function startGame() {
+            menuScreen.classList.add('hidden');
+            gameContainer.classList.remove('hidden');
+            gameoverScreen.classList.add('hidden');
+            
+            playerMoney = 1000;
+            aiMoney = 1000;
+            playerGoals = 0;
+            aiGoals = 0;
+            updateStatsUI();
+
+            gameActive = true;
+            resetBall();
+            roundOverlay.classList.remove('hidden');
+            roundMessage.textContent = "Duelo Financiero Iniciado 💼";
+        }
+
+        function resetBall() {
+            ball.x = canvas.width / 2;
+            ball.y = canvas.height / 2;
+            ball.speedX = 0;
+            ball.speedY = 0;
+            ballInPlay = false;
+        }
+
+        function launchBall() {
+            if (ballInPlay) return;
+            roundOverlay.classList.add('hidden');
+            ballInPlay = true;
+
+            let directionY = Math.random() > 0.5 ? 1 : -1;
+            let directionX = (Math.random() - 0.5) * 1.5;
+            
+            ball.speedX = directionX * (ball.baseSpeed * 0.6);
+            ball.speedY = directionY * ball.baseSpeed;
+        }
+
+        let moveLeftFlag = false;
+        let moveRightFlag = false;
+
+        function moveLeft(isPressed) { moveLeftFlag = isPressed; }
+        function moveRight(isPressed) { moveRightFlag = isPressed; }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'a') moveLeftFlag = true;
+            if (e.key === 'ArrowRight' || e.key === 'd') moveRightFlag = true;
+        });
+        window.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'a') moveLeftFlag = false;
+            if (e.key === 'ArrowRight' || e.key === 'd') moveRightFlag = false;
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            let rect = canvas.getBoundingClientRect();
+            let rootX = e.clientX - rect.left;
+            let scaleX = canvas.width / rect.width;
+            playerPaddle.x = (rootX * scaleX) - (playerPaddle.width / 2);
+            clampPlayerPaddle();
+        });
+
+        canvas.addEventListener('touchmove', (e) => {
+            let rect = canvas.getBoundingClientRect();
+            let touchX = e.touches[0].clientX - rect.left;
+            let scaleX = canvas.width / rect.width;
+            playerPaddle.x = (touchX * scaleX) - (playerPaddle.width / 2);
+            clampPlayerPaddle();
+            e.preventDefault();
+        }, { passive: false });
+
+        function clampPlayerPaddle() {
+            if (playerPaddle.x < 0) playerPaddle.x = 0;
+            if (playerPaddle.x + playerPaddle.width > canvas.width) {
+                playerPaddle.x = canvas.width - playerPaddle.width;
+            }
+        }
+
+        function update() {
+            if (!gameActive) return;
+
+            if (moveLeftFlag) playerPaddle.x -= playerPaddle.speed;
+            if (moveRightFlag) playerPaddle.x += playerPaddle.speed;
+            clampPlayerPaddle();
+
+            if (ballInPlay) {
+                let targetX = ball.x - (aiPaddle.width / 2);
+                aiPaddle.x += (targetX - aiPaddle.x) * aiPaddle.reaction;
+                
+                if (aiPaddle.x < 0) aiPaddle.x = 0;
+                if (aiPaddle.x + aiPaddle.width > canvas.width) aiPaddle.x = canvas.width - aiPaddle.width;
+
+                // --- SUB-STEPPING (Antitunelamiento para alta velocidad) ---
+                let subSteps = 6;
+                let subX = ball.speedX / subSteps;
+                let subY = ball.speedY / subSteps;
+
+                for (let i = 0; i < subSteps; i++) {
+                    ball.x += subX;
+                    ball.y += subY;
+
+                    if (ball.x - ball.radius < 0) {
+                        ball.x = ball.radius;
+                        ball.speedX *= -1;
+                        playSound('bounce');
+                        break;
+                    } else if (ball.x + ball.radius > canvas.width) {
+                        ball.x = canvas.width - ball.radius;
+                        ball.speedX *= -1;
+                        playSound('bounce');
+                        break;
+                    }
+
+                    if (ball.y - ball.radius <= aiPaddle.y + aiPaddle.height &&
+                        ball.y >= aiPaddle.y &&
+                        ball.x >= aiPaddle.x && ball.x <= aiPaddle.x + aiPaddle.width) {
+                        
+                        ball.y = aiPaddle.y + aiPaddle.height + ball.radius;
+                        let hitPoint = (ball.x - (aiPaddle.x + aiPaddle.width / 2)) / (aiPaddle.width / 2);
+                        ball.speedX = hitPoint * (ball.baseSpeed * 0.7);
+                        ball.speedY *= -1;
+                        playSound('bounce');
+                        break;
+                    }
+
+                    if (ball.y + ball.radius >= playerPaddle.y &&
+                        ball.y <= playerPaddle.y + playerPaddle.height &&
+                        ball.x >= playerPaddle.x && ball.x <= playerPaddle.x + playerPaddle.width) {
+                        
+                        ball.y = playerPaddle.y - ball.radius;
+                        let hitPoint = (ball.x - (playerPaddle.x + playerPaddle.width / 2)) / (playerPaddle.width / 2);
+                        ball.speedX = hitPoint * (ball.baseSpeed * 0.7);
+                        ball.speedY *= -1;
+                        playSound('bounce');
+                        break;
+                    }
+                }
+
+                if (ball.y > canvas.height) {
+                    aiGoals++;
+                    playerMoney -= penaltyAmount;
+                    if (playerMoney < 0) playerMoney = 0;
+                    playSound('goal');
+                    handleGoalScored("¡La Máquina anotó! Perdiste capital.");
+                }
+
+                if (ball.y < 0) {
+                    playerGoals++;
+                    aiMoney -= penaltyAmount;
+                    if (aiMoney < 0) aiMoney = 0;
+                    playSound('goal');
+                    handleGoalScored("¡Gol del Jugador! Le restaste capital a la IA.");
+                }
+            }
+        }
+
+        function handleGoalScored(message) {
+            updateStatsUI();
+            resetBall();
+
+            if (playerMoney <= 0 || aiMoney <= 0) {
+                endGame();
+            } else {
+                roundOverlay.classList.remove('hidden');
+                roundMessage.textContent = message;
+            }
+        }
+
+        function updateStatsUI() {
+            playerMoneyEl.textContent = `$${playerMoney.toLocaleString()}`;
+            aiMoneyEl.textContent = `$${aiMoney.toLocaleString()}`;
+            playerGoalsEl.textContent = `Goles: ${playerGoals}`;
+            aiGoalsEl.textContent = `Goles: ${aiGoals}`;
+        }
+
+        function endGame() {
+            gameActive = false;
+            gameContainer.classList.add('hidden');
+            gameoverScreen.classList.remove('hidden');
+
+            if (playerMoney <= 0) {
+                gameoverIcon.textContent = "📉";
+                gameoverTitle.textContent = "¡Quiebra Financiera!";
+                gameoverDesc.textContent = "Tu capital llegó a $0. La máquina te ha liquidado en el mercado.";
+                playSound('goal');
+            } else {
+                gameoverIcon.textContent = "🏆";
+                gameoverTitle.textContent = "¡Victoria Millonaria!";
+                gameoverDesc.textContent = "¡Felicidades! La máquina se quedó sin fondos y tú dominas la bolsa.";
+                playSound('victory');
+            }
+        }
+
+        function resetGameMenu() {
+            gameoverScreen.classList.add('hidden');
+            menuScreen.classList.remove('hidden');
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.strokeStyle = "rgba(212, 175, 55, 0.15)";
+            ctx.lineWidth = 2;
+            ctx.setLineDash([6, 6]);
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height / 2);
+            ctx.lineTo(canvas.width, canvas.height / 2);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            let aiGradient = ctx.createLinearGradient(aiPaddle.x, aiPaddle.y, aiPaddle.x, aiPaddle.y + aiPaddle.height);
+            aiGradient.addColorStop(0, '#FF5252');
+            aiGradient.addColorStop(1, '#b91c1c');
+            ctx.fillStyle = aiGradient;
+            ctx.shadowColor = '#FF5252';
+            ctx.shadowBlur = 10;
+            ctx.fillRect(aiPaddle.x, aiPaddle.y, aiPaddle.width, aiPaddle.height);
+
+            let playerGradient = ctx.createLinearGradient(playerPaddle.x, playerPaddle.y, playerPaddle.x, playerPaddle.y + playerPaddle.height);
+            playerGradient.addColorStop(0, '#00E676');
+            playerGradient.addColorStop(1, '#008e47');
+            ctx.fillStyle = playerGradient;
+            ctx.shadowColor = '#00E676';
+            ctx.shadowBlur = 12;
+            ctx.fillRect(playerPaddle.x, playerPaddle.y, playerPaddle.width, playerPaddle.height);
+
+            ctx.fillStyle = '#d4af37';
+            ctx.shadowColor = '#d4af37';
+            ctx.shadowBlur = 15;
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.shadowBlur = 0;
+        }
+
+        function gameLoop() {
+            update();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        window.onload = function() {
+            updateSpeedControl(3);
+            gameLoop();
+        };
+    </script>
+
+
+
+</body>
+</html>
