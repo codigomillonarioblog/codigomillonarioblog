@@ -331,112 +331,690 @@
 
 
 
-    <!-- CONTENIDO -->
-    <main>
-      <section class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10 border border-stone-200">
 
-            <form id="calcForm" class="space-y-6">
 
-                <div>
-                    <label class="block text-sm font-medium mb-2">Tus gastos mensuales (COP)</label>
-                    <input type="text" id="gastos" class="inputNumber w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
-                </div>
 
-                <div>
-                    <label class="block text-sm font-medium mb-2">Rendimiento anual estimado (%)</label>
-                    <input type="text" id="rendimiento" class="inputPercent w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600">
-                </div>
 
-                <button type="button" onclick="calcularLibertad()"
-                    class="w-full bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition-colors">
-                    Calcular
-                </button>
 
-                <button type="button" onclick="reiniciarCalc()"
-                    class="w-full bg-stone-200 text-stone-700 py-3 rounded-xl text-lg font-semibold hover:bg-stone-300 transition-colors">
-                    Reiniciar Calculadora
-                </button>
 
-            </form>
+<div class="financial-freedom-calculator-container">
+  <!-- Carga de CanvasJS para la gráfica exacta -->
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <style>
+    .financial-freedom-calculator-container {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #333;
+      max-width: 950px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .ffc-title {
+      text-align: center;
+      color: #555;
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 30px;
+    }
+    .ffc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .ffc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .ffc-box {
+      border: 1px solid #f0ad4e;
+      border-radius: 4px;
+      background: #fff;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .ffc-box-header {
+      background-color: #f0ad4e;
+      color: white;
+      padding: 10px 15px;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .ffc-box-content {
+      padding: 15px;
+    }
+    .ffc-form-group {
+      margin-bottom: 15px;
+    }
+    .ffc-form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    .ffc-input-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .ffc-input-row input[type="text"],
+    .ffc-input-row input[type="number"],
+    .ffc-input-row select {
+      flex: 1;
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      text-align: right;
+    }
+    .ffc-input-row input[type="range"] {
+      flex: 1;
+    }
+    .ffc-addon {
+      background: #eee;
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .ffc-radio-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 5px;
+    }
+    .ffc-radio-group label {
+      font-weight: normal;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .ffc-accordion-box {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: #f8f9fa;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+    .ffc-accordion-header {
+      padding: 12px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: #2980b9;
+      font-size: 0.9rem;
+    }
+    .ffc-accordion-content {
+      padding: 15px;
+      border-top: 1px solid #ddd;
+      background: #fff;
+      display: none;
+    }
+    .ffc-btn-container {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .ffc-main-btn {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .ffc-main-btn:hover {
+      background-color: #219653;
+    }
+    .ffc-results-wrapper {
+      border: 1px solid #d4edda;
+      border-radius: 4px;
+      background: #e9f7ef;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+    .ffc-results-header {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 10px 15px;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .ffc-results-body {
+      padding: 20px;
+    }
+    .ffc-results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      .ffc-results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .ffc-big-number {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+      line-height: 1;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .ffc-age-label {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .ffc-editorial-note {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+      line-height: 1.4;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+    }
+  </style>
 
-        </section>
-    </main>
+  <h2 class="ffc-title">Calculadora de Independencia Financiera</h2>
 
-    <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-[999]">
-        <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl animate-[modalShow_.3s_ease]">
-
-            <h3 class="text-3xl font-bold text-center mb-6">Resultado</h3>
-
-            <p class="text-lg text-stone-700">
-                Gastos anuales: <span id="m_gastosAnuales" class="font-semibold"></span>
-            </p>
-
-            <p class="text-lg text-stone-700 mt-2">
-                Rendimiento anual estimado: <span id="m_rendimiento" class="font-semibold"></span>
-            </p>
-
-            <p class="text-xl font-bold text-green-600 text-center mt-6">Capital necesario:</p>
-
-            <p class="text-4xl text-green-700 font-extrabold text-center mt-2" id="m_capital"></p>
-
-            <button onclick="cerrarModal()" 
-                class="w-full mt-8 bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition">
-                Cerrar
-            </button>
-
+  <div class="ffc-grid">
+    <!-- COLUMNA IZQUIERDA -->
+    <div>
+      <div class="ffc-box">
+        <div class="ffc-box-header">Configuración Global</div>
+        <div class="ffc-box-content">
+          <div class="ffc-form-group">
+            <label for="ffc_currency_symbol">Símbolo o Moneda</label>
+            <div class="ffc-input-row">
+              <select id="ffc_currency_symbol">
+                <option value="$" selected>Dólar / Peso ($)</option>
+                <option value="€">Euro (€)</option>
+                <option value="US$">Dólar USA (US$)</option>
+                <option value="CLP$">Peso Chileno (CLP$)</option>
+                <option value="ARS$">Peso Argentino (ARS$)</option>
+                <option value="COP$">Peso Colombiano (COP$)</option>
+                <option value="MXN$">Peso Mexicano (MXN$)</option>
+                <option value="S/.">Sol Peruano (S/.)</option>
+              </select>
+            </div>
+          </div>
+          <div class="ffc-form-group">
+            <label>Tipo de cálculo</label>
+            <div class="ffc-radio-group">
+              <label><input type="radio" name="ffc_calc_type" value="personal" checked> Estimación personal</label>
+              <label><input type="radio" name="ffc_calc_type" value="rule4"> Regla del 4%</label>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="ffc-box">
+        <div class="ffc-box-header">Situación personal</div>
+        <div class="ffc-box-content">
+          <div class="ffc-form-group">
+            <label for="ffc_birth_year">Año de nacimiento</label>
+            <div class="ffc-input-row">
+              <input type="number" id="ffc_birth_year" value="1999">
+            </div>
+          </div>
+          <div class="ffc-form-group">
+            <label for="ffc_net_income">Ingresos recurrentes netos (anuales)</label>
+            <div class="ffc-input-row">
+              <input type="text" id="ffc_net_income" value="50.000">
+              <span class="ffc-addon currency-label">$</span>
+            </div>
+          </div>
+          <div class="ffc-form-group">
+            <label for="ffc_expenses">Gastos (anuales)</label>
+            <div class="ffc-input-row">
+              <input type="text" id="ffc_expenses" value="20.000">
+              <span class="ffc-addon currency-label">$</span>
+            </div>
+          </div>
+          <div class="ffc-form-group">
+            <label for="ffc_current_capital">Capital invertido actual</label>
+            <div class="ffc-input-row">
+              <input type="text" id="ffc_current_capital" value="30.000">
+              <span class="ffc-addon currency-label">$</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <section class="py-12"></section>
+    <!-- COLUMNA DERECHA -->
+    <div>
+      <div class="ffc-box">
+        <div class="ffc-box-header">Estimaciones</div>
+        <div class="ffc-box-content">
+          <div class="ffc-form-group">
+            <label for="ffc_salary_inc">Incremento medio anual del sueldo</label>
+            <div class="ffc-input-row">
+              <input type="range" id="ffc_salary_inc_range" min="0" max="10" step="0.1" value="1.0">
+              <input type="number" id="ffc_salary_inc" value="1.0" step="0.1" style="max-width: 80px;">
+              <span class="ffc-addon">%</span>
+            </div>
+          </div>
+          <div class="ffc-form-group">
+            <label for="ffc_inflation">Inflación media anual</label>
+            <div class="ffc-input-row">
+              <input type="range" id="ffc_inflation_range" min="0" max="10" step="0.1" value="2.0">
+              <input type="number" id="ffc_inflation" value="2.0" step="0.1" style="max-width: 80px;">
+              <span class="ffc-addon">%</span>
+            </div>
+          </div>
+          <div class="ffc-form-group">
+            <label for="ffc_roi">Rentabilidad anual media de las inversiones</label>
+            <div class="ffc-input-row">
+              <input type="range" id="ffc_roi_range" min="0" max="20" step="0.1" value="5.0">
+              <input type="number" id="ffc_roi" value="5.0" step="0.1" style="max-width: 80px;">
+              <span class="ffc-addon">%</span>
+            </div>
+          </div>
+          <div class="ffc-form-group" id="ffc_tax_group">
+            <label for="ffc_taxes">Impuestos estimados sobre plusvalías (informativo)</label>
+            <div class="ffc-input-row">
+              <input type="range" id="ffc_taxes_range" min="0" max="50" step="0.1" value="21.0">
+              <input type="number" id="ffc_taxes" value="21.0" step="0.1" style="max-width: 80px;">
+              <span class="ffc-addon">%</span>
+            </div>
+          </div>
+          <div class="ffc-form-group" id="ffc_withdrawal_group" style="display:none;">
+            <label for="ffc_withdrawal_rate">Tasa de retiro del capital</label>
+            <div class="ffc-input-row">
+              <input type="range" id="ffc_withdrawal_rate_range" min="0.5" max="10" step="0.1" value="4.0">
+              <input type="number" id="ffc_withdrawal_rate" value="4.0" step="0.1" style="max-width: 80px;">
+              <span class="ffc-addon">%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script>
-        function cleanNumberFormat(value) {
-            return parseFloat(value.replace(/\./g, '').replace(/,/g, '').replace(/%/g, '')) || 0;
+  <!-- ACORDIONES INFERIORES -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <div class="ffc-accordion-box" id="ffc_acc_exp">
+      <div class="ffc-accordion-header">
+        <span>Gastos futuros adicionales (opcional)</span>
+        <span>▼</span>
+      </div>
+      <div class="ffc-accordion-content">
+        <div class="ffc-form-group">
+          <label>Gastos anuales adicionales</label>
+          <div class="ffc-input-row"><input type="text" id="ffc_extra_expense" value="0"><span class="ffc-addon currency-label">$</span></div>
+        </div>
+        <div class="ffc-form-group">
+          <label>Edad en la que empezará el gasto</label>
+          <div class="ffc-input-row"><input type="number" id="ffc_extra_exp_start" value="65"></div>
+        </div>
+        <div class="ffc-form-group">
+          <label>Edad en la que terminará el gasto</label>
+          <div class="ffc-input-row"><input type="number" id="ffc_extra_exp_end" value="80"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ffc-accordion-box" id="ffc_acc_inc">
+      <div class="ffc-accordion-header">
+        <span>Ingresos futuros adicionales (opcional)</span>
+        <span>▼</span>
+      </div>
+      <div class="ffc-accordion-content">
+        <div class="ffc-form-group">
+          <label>Ingresos netos anuales adicionales</label>
+          <div class="ffc-input-row"><input type="text" id="ffc_extra_income" value="0"><span class="ffc-addon currency-label">$</span></div>
+        </div>
+        <div class="ffc-form-group">
+          <label>Edad en la que empezarán los ingresos</label>
+          <div class="ffc-input-row"><input type="number" id="ffc_extra_inc_start" value="67"></div>
+        </div>
+        <div class="ffc-form-group">
+          <label>Edad en la que terminarán los ingresos</label>
+          <div class="ffc-input-row"><input type="number" id="ffc_extra_inc_end" value="110"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTÓN CENTRAL -->
+  <div class="ffc-btn-container">
+    <button class="ffc-main-btn" id="ffc_calc_btn">Actualizar datos</button>
+  </div>
+
+  <!-- RESULTADOS Y GRÁFICA -->
+  <div class="ffc-results-wrapper">
+    <div class="ffc-results-header">Resultados</div>
+    <div class="ffc-results-body" id="ffc_results_content">
+      <!-- Contenido dinámico -->
+    </div>
+  </div>
+
+  <!-- NOTA EDITORIAL -->
+  <div class="ffc-editorial-note">
+    <strong>Nota editorial:</strong> Los resultados ofrecidos por esta herramienta son estimaciones orientativas basadas exclusivamente en los datos introducidos y en supuestos teóricos de rentabilidad e inflación. No constituyen asesoramiento financiero ni garantías de rentabilidad futura. La selección de moneda identifica únicamente la unidad de medida de los importes.
+  </div>
+
+  <script>
+    (function() {
+      // Selector de moneda acotado estrictamente al contenedor de la calculadora
+      const container = document.querySelector('.financial-freedom-calculator-container');
+      const currencySelect = container.querySelector('#ffc_currency_symbol');
+      
+      function updateCurrencyLabels() {
+        const symbol = currencySelect.value;
+        container.querySelectorAll('.currency-label').forEach(el => {
+          el.textContent = symbol;
+        });
+      }
+      currencySelect.addEventListener('change', updateCurrencyLabels);
+      updateCurrencyLabels();
+
+      // Formateo automático de miles para campos monetarios
+      function formatMoneyInput(input) {
+        let value = input.value.replace(/[^\d]/g, '');
+        if (!value) {
+          input.value = '';
+          return;
         }
+        input.value = parseInt(value, 10).toLocaleString('es-ES');
+      }
 
-        document.querySelectorAll('.inputNumber').forEach(input => {
-            input.addEventListener('input', function() {
-                let raw = this.value.replace(/\D/g, '');
-                this.value = raw === '' ? '' : parseInt(raw).toLocaleString('es-CO');
-            });
+      function setupMoneyInput(id) {
+        const input = container.querySelector('#' + id);
+        if (!input) return;
+        input.addEventListener('input', function() {
+          let cursorPosition = input.selectionStart;
+          let oldLength = input.value.length;
+          
+          formatMoneyInput(input);
+          
+          let newLength = input.value.length;
+          input.setSelectionRange(cursorPosition + (newLength - oldLength), cursorPosition + (newLength - oldLength));
         });
+      }
 
-        document.querySelectorAll('.inputPercent').forEach(input => {
-            input.addEventListener('input', function() {
-                let raw = this.value.replace(/\D/g, '');
-                this.value = raw === '' ? '' : raw + '%';
-            });
+      setupMoneyInput('ffc_net_income');
+      setupMoneyInput('ffc_expenses');
+      setupMoneyInput('ffc_current_capital');
+      setupMoneyInput('ffc_extra_expense');
+      setupMoneyInput('ffc_extra_income');
+
+      // Sincronización robusta de Sliders e Inputs numéricos con validación de límites
+      function syncInputRange(numberId, rangeId, minVal, maxVal) {
+        const numInput = container.querySelector('#' + numberId);
+        const rangeInput = container.querySelector('#' + rangeId);
+        if(!numInput || !rangeInput) return;
+
+        numInput.addEventListener('input', () => {
+          let val = parseFloat(numInput.value.replace(',', '.')) || 0;
+          if (val > maxVal) val = maxVal;
+          if (val < minVal) val = minVal;
+          rangeInput.value = val;
         });
+        
+        rangeInput.addEventListener('input', () => {
+          numInput.value = rangeInput.value;
+        });
+      }
 
-        function calcularLibertad() {
-            const gastos = cleanNumberFormat(document.getElementById("gastos").value);
-            const rendimiento = cleanNumberFormat(document.getElementById("rendimiento").value) / 100;
+      syncInputRange('ffc_salary_inc', 'ffc_salary_inc_range', 0, 10);
+      syncInputRange('ffc_inflation', 'ffc_inflation_range', 0, 10);
+      syncInputRange('ffc_roi', 'ffc_roi_range', 0, 20);
+      syncInputRange('ffc_taxes', 'ffc_taxes_range', 0, 50);
+      syncInputRange('ffc_withdrawal_rate', 'ffc_withdrawal_rate_range', 0.5, 10);
 
-            if (!gastos || !rendimiento) {
-                alert("Por favor llena todos los campos.");
-                return;
+      // Configuración de acordeones móviles
+      function setupAccordion(boxId) {
+        const box = container.querySelector('#' + boxId);
+        if (!box) return;
+        const header = box.querySelector('.ffc-accordion-header');
+        const content = box.querySelector('.ffc-accordion-content');
+        header.addEventListener('click', () => {
+          if (content.style.display === 'block') {
+            content.style.display = 'none';
+            header.querySelector('span:last-child').textContent = '▼';
+          } else {
+            content.style.display = 'block';
+            header.querySelector('span:last-child').textContent = '▲';
+          }
+        });
+      }
+      setupAccordion('ffc_acc_exp');
+      setupAccordion('ffc_acc_inc');
+
+      // Gestión de modos de cálculo
+      const calcTypeRadios = container.querySelectorAll('input[name="ffc_calc_type"]');
+      const withdrawalGroup = container.querySelector('#ffc_withdrawal_group');
+      const taxGroup = container.querySelector('#ffc_tax_group');
+
+      calcTypeRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          if(container.querySelector('input[name="ffc_calc_type"]:checked').value === 'rule4') {
+            withdrawalGroup.style.display = 'block';
+            taxGroup.style.display = 'none';
+          } else {
+            withdrawalGroup.style.display = 'none';
+            taxGroup.style.display = 'block';
+          }
+        });
+      });
+
+      function parseMoneyVal(id) {
+        const el = container.querySelector('#' + id);
+        if(!el) return 0;
+        let cleanVal = el.value.replace(/\./g, '').replace(',', '.');
+        let val = parseFloat(cleanVal) || 0;
+        return val < 0 ? 0 : val;
+      }
+
+      function parsePercentVal(id) {
+        const el = container.querySelector('#' + id);
+        if(!el) return 0;
+        let val = parseFloat(el.value.replace(',', '.')) || 0;
+        return val < 0 ? 0 : val;
+      }
+
+      function calculate() {
+        const currencySymbol = currencySelect.value;
+        const currentYear = new Date().getFullYear();
+        let birthYear = parseInt(container.querySelector('#ffc_birth_year').value) || 1999;
+        if (birthYear > currentYear) birthYear = currentYear;
+        let currentAge = currentYear - birthYear;
+        if (currentAge < 0) currentAge = 0;
+
+        let income = parseMoneyVal('ffc_net_income');
+        let expenses = parseMoneyVal('ffc_expenses');
+        let capital = parseMoneyVal('ffc_current_capital');
+
+        const salaryInc = parsePercentVal('ffc_salary_inc') / 100;
+        const inflation = parsePercentVal('ffc_inflation') / 100;
+        const roi = parsePercentVal('ffc_roi') / 100;
+        const calcType = container.querySelector('input[name="ffc_calc_type"]:checked').value;
+        
+        let withdrawalRate = parsePercentVal('ffc_withdrawal_rate') / 100;
+        if (withdrawalRate <= 0) withdrawalRate = 0.04;
+
+        const extraExp = parseMoneyVal('ffc_extra_expense');
+        let extraExpStart = parseInt(container.querySelector('#ffc_extra_exp_start').value) || 0;
+        let extraExpEnd = parseInt(container.querySelector('#ffc_extra_exp_end').value) || 0;
+        if (extraExpStart > extraExpEnd) extraExpEnd = extraExpStart;
+
+        const extraInc = parseMoneyVal('ffc_extra_income');
+        let extraIncStart = parseInt(container.querySelector('#ffc_extra_inc_start').value) || 0;
+        let extraIncEnd = parseInt(container.querySelector('#ffc_extra_inc_end').value) || 0;
+        if (extraIncStart > extraIncEnd) extraIncEnd = extraIncStart;
+
+        let dataPoints = [];
+        let simulatedAge = currentAge;
+        let simulatedCapital = capital;
+        let simulatedIncome = income;
+        let simulatedExpenses = expenses;
+        let reached = false;
+        let targetAge = null;
+        let requiredCapitalAtTarget = 0;
+        let yearsPassed = 0;
+
+        const maxAge = 110;
+
+        // Función para calcular dinámicamente el capital objetivo año por año con gastos inflados
+        function getTargetCapitalAtAge(targetEvalAge, baseExp, baseInflation) {
+          if (calcType === 'rule4') {
+            let expAtAge = baseExp;
+            if (targetEvalAge >= extraExpStart && targetEvalAge <= extraExpEnd) expAtAge += extraExp;
+            return withdrawalRate > 0 ? expAtAge / withdrawalRate : expAtAge / 0.04;
+          } else {
+            let totalPresentValueSum = 0;
+            let yearsRemaining = maxAge - targetEvalAge;
+            if (yearsRemaining < 1) yearsRemaining = 1;
+
+            let runningExp = baseExp;
+            for (let i = 0; i < yearsRemaining; i++) {
+              let evalAge = targetEvalAge + i;
+              let currentYearExp = runningExp;
+              if (evalAge >= extraExpStart && evalAge <= extraExpEnd) currentYearExp += extraExp;
+
+              if (Math.abs(roi) < 0.0001) {
+                totalPresentValueSum += currentYearExp;
+              } else {
+                totalPresentValueSum += currentYearExp / Math.pow(1 + roi, i + 1);
+              }
+              runningExp *= (1 + baseInflation);
             }
-
-            const gastosAnuales = gastos * 12;
-            const capitalNecesario = gastosAnuales / rendimiento;
-
-            document.getElementById("m_gastosAnuales").textContent = gastosAnuales.toLocaleString("es-CO") + " COP";
-            document.getElementById("m_rendimiento").textContent = (rendimiento * 100).toFixed(2) + "%";
-            document.getElementById("m_capital").textContent = capitalNecesario.toLocaleString("es-CO") + " COP";
-
-            document.getElementById("modal").classList.remove("hidden");
+            return totalPresentValueSum;
+          }
         }
 
-        function cerrarModal() {
-            document.getElementById("modal").classList.add("hidden");
+        let initialTarget = getTargetCapitalAtAge(currentAge, simulatedExpenses, inflation);
+        if (simulatedCapital >= initialTarget) {
+          reached = true;
+          targetAge = currentAge;
+          requiredCapitalAtTarget = initialTarget;
+          yearsPassed = 0;
+          dataPoints.push({ x: currentAge, y: Math.round(simulatedCapital) });
         }
 
-        function reiniciarCalc() {
-            document.getElementById("gastos").value = "";
-            document.getElementById("rendimiento").value = "";
-            cerrarModal();
+        while (simulatedAge <= maxAge && !reached) {
+          let currentExpenses = simulatedExpenses;
+          if (simulatedAge >= extraExpStart && simulatedAge <= extraExpEnd) currentExpenses += extraExp;
+
+          let currentIncome = simulatedIncome;
+          if (simulatedAge >= extraIncStart && simulatedAge <= extraIncEnd) currentIncome += extraInc;
+
+          let currentTarget = getTargetCapitalAtAge(simulatedAge, simulatedExpenses, inflation);
+
+          dataPoints.push({ x: simulatedAge, y: Math.round(simulatedCapital) });
+
+          if (simulatedCapital >= currentTarget) {
+            reached = true;
+            targetAge = simulatedAge;
+            requiredCapitalAtTarget = currentTarget;
+            break;
+          }
+
+          let annualSavings = currentIncome - currentExpenses;
+          simulatedCapital = (simulatedCapital + annualSavings) * (1 + roi);
+          if (simulatedCapital < 0) simulatedCapital = 0;
+
+          simulatedIncome = simulatedIncome * (1 + salaryInc);
+          simulatedExpenses = simulatedExpenses * (1 + inflation);
+          simulatedAge++;
+          yearsPassed++;
         }
-    </script>
+
+        if (!reached && simulatedAge <= maxAge && dataPoints.length === 0) {
+          dataPoints.push({ x: simulatedAge, y: Math.round(simulatedCapital) });
+        }
+
+        const resultsContainer = container.querySelector('#ffc_results_content');
+
+        if (!reached) {
+          resultsContainer.innerHTML = `
+            <div style="color: #a94442; background: #f2dede; padding: 15px; border-radius: 4px; margin-bottom: 15px;">
+              Con los datos y parámetros introducidos no se alcanza el objetivo de independencia financiera antes de los 110 años. Prueba a incrementar tu tasa de ahorro, reducir gastos o mejorar la rentabilidad estimada.
+            </div>
+            <div id="ffcChartContainer" style="height: 350px; width: 100%;"></div>
+          `;
+        } else {
+          let formattedCapital = requiredCapitalAtTarget.toLocaleString('es-ES', {minimumFractionDigits:2, maximumFractionDigits:2}) + currencySymbol;
+          let extraText = calcType === 'rule4'
+            ? `Estimación según la tasa de retiro seleccionada: necesitarías acumular <b>${formattedCapital}</b> de capital.`
+            : `Según esta estimación orientativa, necesitarías acumular <b>${formattedCapital}</b> de capital nominal para cubrir tus gastos proyectados hasta los 110 años.`;
+
+          resultsContainer.innerHTML = `
+            <div class="ffc-results-grid">
+              <div>
+                <div class="ffc-age-label">Alcanzarías la independencia financiera a la edad de:</div>
+                <div class="ffc-big-number">${targetAge}</div>
+                <div class="ffc-age-label">años</div>
+              </div>
+              <div>
+                <p style="margin-top: 0; line-height: 1.5; font-size: 0.95rem;">${extraText}</p>
+                <p style="margin-bottom: 0; font-size: 0.95rem;">Tardarías <b>${yearsPassed}</b> años en conseguirlo desde tu edad actual.</p>
+              </div>
+            </div>
+            <div id="ffcChartContainer" style="height: 350px; width: 100%;"></div>
+          `;
+        }
+
+        setTimeout(() => {
+          try {
+            const chartDiv = container.querySelector("#ffcChartContainer");
+            if (!chartDiv) return;
+
+            if (typeof CanvasJS !== 'undefined') {
+              let chart = new CanvasJS.Chart("ffcChartContainer", {
+                animationEnabled: true,
+                axisY: {
+                  title: "Capital",
+                  prefix: currencySymbol + " ",
+                  gridColor: "#e5e5e5"
+                },
+                axisX: {
+                  interval: 10,
+                  gridColor: "#e5e5e5",
+                  title: "Edad (Años)"
+                },
+                data: [{
+                  type: "area",
+                  color: "#f39c12",
+                  fillOpacity: 0.8,
+                  dataPoints: dataPoints.map(p => ({ x: p.x, y: p.y }))
+                }]
+              });
+              chart.render();
+            } else {
+              chartDiv.innerHTML = "<p style='text-align:center; color:#666;'>La gráfica interactiva no se pudo cargar por un problema de red con la librería externa.</p>";
+            }
+          } catch(e) {
+            console.error("Error al renderizar la gráfica:", e);
+            const chartDiv = container.querySelector("#ffcChartContainer");
+            if (chartDiv) {
+              chartDiv.innerHTML = "<p style='text-align:center; color:#a94442;'>Se produjo un error al mostrar la gráfica de evolución del capital.</p>";
+            }
+          }
+        }, 100);
+      }
+
+      container.querySelector('#ffc_calc_btn').addEventListener('click', calculate);
+      
+      // Cálculo inicial al cargar
+      calculate();
+    })();
+  </script>
+</div>
 
 
 
