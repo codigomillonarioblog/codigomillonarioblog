@@ -1,18 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Inversión - Código Millonario</title>
+
+<title>Calculadoras Financieras y Simuladores de Inversión | Código Millonario</title>
+<meta name="description" content="Utiliza calculadoras financieras y simuladores de inversión para proyectar rendimientos, calcular el interés compuesto y analizar distintos escenarios para tu dinero.">
 
 <!-- Favicon -->
 <link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
 
 <!-- canonical -->
 <link rel="canonical" href="https://codigomillonario.blog/herramientas/simulador-de-invercion.html">
-
-<!-- tailwin -->
-<script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
@@ -31,631 +30,831 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 
-</head>
-
-<body>
 
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 
 
-<style>
-/* =========================
-   TITULO SECCION NUEVO
-========================= */
 
-.titulo-seccion{
 
-    max-width: 1400px;
-
-    margin: 70px auto 35px auto;
-
-    padding: 0 90px;
+ <style>
+/* --- ESTILOS SECCIÓN PREGUNTAS FRECUENTES (FAQ) --- */
+.faq-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #e7eaee;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* TEXTO */
-
-.titulo-seccion span{
-
-    font-family:'Inter',sans-serif;
-
-    font-size:1.55rem;
-
-    font-weight:900;
-
-    color:#111111;
-
-    letter-spacing:-1px;
-
-    line-height:1;
-
-    display:inline-block;
-
-    text-transform:uppercase;
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* LINEA */
-
-.linea-seccion{
-
-    width:100%;
-
-    height:4px;
-
-    background:#111111;
-
-    margin-top:10px;
+.faq-header {
+  text-align: center;
+  margin-bottom: 48px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-    .titulo-seccion{
-
-        padding:0 30px;
-
-        margin:55px auto 28px auto;
-    }
-
-    .titulo-seccion span{
-
-        font-size:1.35rem;
-
-        letter-spacing:-0.8px;
-    }
-
-    .linea-seccion{
-
-        height:3px;
-
-        margin-top:8px;
-    }
-
+.faq-eyebrow {
+  display: inline-block;
+  color: #4f8fd2;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
-@media(max-width:480px){
-
-    .titulo-seccion{
-
-        padding:0 18px;
-    }
-
-    .titulo-seccion span{
-
-        font-size:1.2rem;
-    }
-
-}
-</style>
-
-
-
-
-
-
-   <!-- ESPACIO FINAL -->
-<div style="height: 300px;"></div>
-
-<!-- ========================================= -->
-<!-- GOOGLE FONTS -->
-<!-- ========================================= -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
-<!-- =========================
-     HERO TITULO
-========================= -->
-
-<section class="hero-blog">
-
-  <div class="hero-blog-content">
-
-    <!-- ETIQUETA -->
-    <span class="hero-tag">
-      PROYECCIÓN DE INVERSIÓN
-    </span>
-
-    <!-- TITULO -->
-    <h1>
-      Calcula cómo crecería tu inversión según el rendimiento anual estimado
-    </h1>
-
-    <!-- SUBTITULO -->
-    <p>
-      Explora consejos prácticos, experiencias y estrategias para mejorar tus finanzas, alcanzar tus metas profesionales y tomar decisiones más inteligentes en tu vida diaria.
-    </p>
-
-  </div>
-
-</section>
-
-
-<style>
-
-/* =========================
-   HERO BLOG
-========================= */
-
-.hero-blog{
-
-    width: 100%;
-
-    margin-top: 50px;
-
-    margin-bottom: 45px;
-
-    padding-left: 90px;
-
-    padding-right: 90px;
+.faq-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #102b55;
+  letter-spacing: -0.03em;
+  margin: 0 0 12px 0;
 }
 
-
-/* CONTENIDO */
-
-.hero-blog-content{
-
-    max-width: 980px;
+.faq-subtitle {
+  color: #68717d;
+  font-size: 0.92rem;
+  margin: 0;
 }
 
-
-/* =========================
-   ETIQUETA
-========================= */
-
-.hero-tag{
-
-    display: inline-block;
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 0.78rem;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #8b7355;
-
-    margin-bottom: 18px;
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-
-/* =========================
-   TITULO
-========================= */
-
-.hero-blog h1{
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 4.2rem;
-
-    line-height: 0.98;
-
-    font-weight: 800;
-
-    color: #111111;
-
-    letter-spacing: -3px;
-
-    margin-bottom: 24px;
+.faq-item {
+  border: 1px solid #e7eaee;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 }
 
-
-/* =========================
-   SUBTITULO
-========================= */
-
-.hero-blog p{
-
-    font-family: 'Open Sans', sans-serif;
-
-    font-size: 1.15rem;
-
-    line-height: 1.8;
-
-    color: #555555;
-
-    max-width: 760px;
-
-    margin-bottom: 0;
+.faq-item[open] {
+  border-color: #4f8fd2;
+  box-shadow: 0 4px 20px rgba(79, 143, 210, 0.08);
 }
 
-
-/* =========================
-   TABLETS
-========================= */
-
-@media (max-width: 1024px){
-
-    .hero-blog{
-
-        padding-left: 40px;
-
-        padding-right: 40px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 3.2rem;
-    }
-
+.faq-question {
+  padding: 20px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #20232a;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  user-select: none;
 }
 
-
-/* =========================
-   TELEFONOS
-========================= */
-
-@media (max-width: 640px){
-
-    .hero-blog{
-
-        padding-left: 18px;
-
-        padding-right: 18px;
-
-        margin-top: 35px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 2.2rem;
-
-        line-height: 1.05;
-
-        letter-spacing: -1.5px;
-    }
-
-    .hero-blog p{
-
-        font-size: 1rem;
-
-        line-height: 1.7;
-    }
-
+.faq-question::-webkit-details-marker {
+  display: none;
 }
 
-</style>
+.faq-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
 
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #102b55;
+  border-radius: 2px;
+  transition: transform 0.25s ease;
+}
 
+/* Línea Horizontal */
+.faq-icon::before {
+  top: 7px;
+  left: 0;
+  width: 16px;
+  height: 2px;
+}
 
+/* Línea Vertical (Símbolo +) */
+.faq-icon::after {
+  top: 0;
+  left: 7px;
+  width: 2px;
+  height: 16px;
+}
 
+/* Transformación a menos (-) al abrir */
+.faq-item[open] .faq-icon::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
 
-      <!-- ESPACIO FINAL -->
-    <section class="py-20"></section>
+.faq-answer {
+  padding: 0 24px 22px 24px;
+  color: #68717d;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
 
+.faq-answer p {
+  margin: 0;
+}
 
-   
-
-    <main>
-<section class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-24 relative z-10 border border-stone-200">
-
-            <form id="simuladorForm" class="space-y-6">
-
-                <div>
-                    <label class="block text-sm font-medium mb-2">Monto inicial (COP)</label>
-                    <input type="text" id="inicial" class="w-full border border-stone-300 rounded-xl px-4 py-3" required>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-medium mb-2">Rendimiento anual (%)</label>
-                    <input type="text" id="interes" class="w-full border border-stone-300 rounded-xl px-4 py-3" required>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-medium mb-2">Años de inversión</label>
-                    <input type="text" id="anios" class="w-full border border-stone-300 rounded-xl px-4 py-3" required>
-                </div>
-
-                <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition">
-                    Calcular
-                </button>
-
-                <button type="button" onclick="reiniciarSimulador()"
-                    class="w-full bg-stone-200 text-stone-800 py-3 rounded-xl text-lg font-semibold hover:bg-stone-300 transition">
-                    Reiniciar Calculadora
-                </button>
-
-            </form>
-
-        </section>
-    </main>
-
-    <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-[999]">
-        <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl animate-[modalShow_.3s_ease]">
-
-            <h3 class="text-3xl font-bold text-center mb-6">Resultado</h3>
-
-            <p class="text-lg text-stone-700 text-center">
-                Valor estimado al final:
-                <span id="m_valor" class="font-bold text-green-700"></span>
-            </p>
-
-            <button onclick="cerrarModal()" 
-                class="w-full mt-8 bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition">
-                Cerrar
-            </button>
-
-        </div>
-    </div>
-
-    <section class="py-12"></section>
-
-
-    <script>
-        lucide.createIcons();
-
-        function formatNumberInput(input) {
-            let value = input.value.replace(/[^0-9]/g, "");
-            if (value === "") { input.value = ""; return; }
-            input.value = parseInt(value).toLocaleString("es-CO");
-        }
-
-        document.querySelectorAll("input[type='text']").forEach(input => {
-            input.addEventListener("input", () => formatNumberInput(input));
-        });
-
-        document.getElementById("simuladorForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            let inicial = parseFloat(document.getElementById("inicial").value.replace(/\./g, "").replace(/,/g, ""));
-            let interes = parseFloat(document.getElementById("interes").value.replace(/\./g, "").replace(/,/g, ""));
-            let anios = parseFloat(document.getElementById("anios").value.replace(/\./g, "").replace(/,/g, ""));
-
-            interes = interes / 100;
-
-            let valorFinal = inicial * Math.pow(1 + interes, anios);
-
-            document.getElementById("m_valor").innerText =
-                "COP " + valorFinal.toLocaleString("es-CO");
-
-            document.getElementById("modal").classList.remove("hidden");
-        });
-
-        function cerrarModal() {
-            document.getElementById("modal").classList.add("hidden");
-        }
-
-        function reiniciarSimulador() {
-            document.getElementById("inicial").value = "";
-            document.getElementById("interes").value = "";
-            document.getElementById("anios").value = "";
-            cerrarModal();
-        }
-    </script>
-
-
-
-
-
-<!-- TITULO -->
-<div class="titulo-seccion">
-
-  <span>
-    Preguntas frecuentes
-  </span>
-
-</div>
-
-
-
-
- <section class="mb-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
-
-    <!-- ================= ACORDEÓN ================= -->
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 50px 16px;
+  }
+  .faq-title {
+    font-size: 1.6rem;
+  }
+  .faq-question {
+    padding: 16px 18px;
+    font-size: 0.92rem;
+  }
+  .faq-answer {
+    padding: 0 18px 18px 18px;
+    font-size: 0.85rem;
+  }
+}
+    </style>
 
     <style>
-  .cf-accordion {
-    margin-top: 60px;
-  }
+        :root {
+            --navy: #102b55;
+            --blue: #4f8fd2;
+            --ink: #20232a;
+            --muted: #68717d;
+            --line: #e7eaee;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--ink);
+            background-color: #ffffff;
+        }
+        .hero-bg {
+            background-color: #152d50;
+            background-image: url("https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=2000&q=90");
+            background-position: center 46%;
+            background-size: cover;
+        }
+        .hero-shade {
+            background: linear-gradient(90deg, rgba(12,35,70,0.97) 0%, rgba(16,42,78,0.88) 42%, rgba(17,39,69,0.22) 100%);
+        }
+        .subtle-border-b {
+            border-bottom: 1px solid var(--line);
+        }
+        input[type="range"] {
+            accent-color: #10b981;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
 
-  .cf-accordion * {
-    box-sizing: border-box;
-  }
+    <!-- MENU COMPLETO Real por JS -->
+    <script src="../assets/menu.js"></script>
 
-  .cf-accordion-item {
-    background: #ffffff; /* fondo blanco fijo */
-    border-radius: 14px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
-    transform: translateY(0);
-    will-change: transform; /* optimiza animación */
-    border: 1px solid rgba(0,0,0,0.03);
-  }
-
-  /* Animación tipo card con sombra */
-  .cf-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
-  }
-
-  .cf-accordion-header {
-    padding: 14px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000;
-    user-select: none;
-    background: #ffffff;
-    transition: none;
-  }
-
-  .cf-accordion-header:hover {
-    background: #ffffff;
-  }
-
-  /* ICONO */
-  .cf-accordion-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(45deg);
-    transform-origin: center;
-    transition: transform 0.35s ease;
-    margin-left: 12px;
-    flex-shrink: 0;
-  }
-
-  .cf-accordion-item.is-open .cf-accordion-icon {
-    transform: rotate(-135deg);
-  }
-
-  .cf-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: relative;
-  }
-
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
-  .cf-accordion-item.is-open .cf-accordion-content::before {
-    content: "";
-    display: block;
-    width: 88%;
-    margin: 0 auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .cf-accordion-content p {
-    padding: 18px 22px 22px;
-    margin: 0;
-    color: #000000;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-</style>
-
-
-    <div class="cf-accordion">
-
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
-         Gana confianza y desarrolla una mentalidad estratégica
-          <span class="cf-accordion-icon"></span>
+    <!-- SECCIÓN HERO DE LA PÁGINA -->
+    <section class="hero-bg relative text-white isolation-auto">
+        <div class="hero-shade absolute inset-0 -z-10"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-28 sm:pb-32">
+            <div class="max-w-xl space-y-4">
+                <span class="text-xs font-bold tracking-widest text-blue-200 uppercase">Herramientas para tus decisiones</span>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">Haz que tu dinero trabaje para tus metas</h1>
+                <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+                    Simula CDT, calcula interés compuesto y descubre cómo evoluciona tu poder adquisitivo antes de tomar una decisión.
+                </p>
+                <div class="pt-2">
+                    <button onclick="document.getElementById('simuladores-section').scrollIntoView({behavior:'smooth'})" class="inline-flex items-center gap-2 bg-[#4f8fd2] hover:bg-[#3679bd] text-white text-xs font-bold px-5 py-3 rounded transition shadow-md">
+                        Explorar simuladores <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="cf-accordion-content">
-  
-           <p>
-El 
-<strong>
-Simulador de Inversión
-</strong>
-es una herramienta educativa diseñada para ayudarte a practicar inversiones
-en distintos activos como acciones, ETFs y criptomonedas, sin arriesgar
-dinero real.
-</p>
 
-<p>
-Mediante simulaciones financieras, podrás analizar posibles rendimientos,
-entender cómo influyen el tiempo, el capital y la volatilidad, y mejorar
-tu criterio al momento de tomar decisiones de inversión.
-</p>
-
-<p>
-
-<strong>
-No es asesoría financiera ni garantiza resultados reales
-</strong>.
-Es un entorno de aprendizaje que te permite experimentar y cometer errores
-sin consecuencias económicas.
-</p>
-
-<p>
-<strong>
-Este simulador es ideal para:
-</strong>
-</p>
-
-<ul style="padding-left: 30px;">
-  <li>→ Personas que quieren aprender a invertir desde cero.</li>
-  <li>→ Usuarios que desean practicar estrategias de inversión.</li>
-  <li>→ Quienes buscan entender el comportamiento de distintos activos.</li>
-  <li>→ Personas interesadas en inversiones a corto y largo plazo.</li>
-</ul>
-
-<p>
-Simular antes de invertir te ayuda a ganar confianza, identificar riesgos
-y desarrollar una mentalidad más estratégica frente al mercado.
-</p>
-
-<p>
-Usa este Simulador de Inversión como una herramienta de práctica constante
-para fortalecer tus conocimientos y tomar decisiones más informadas en el futuro.
-</p>
-
-
+        <!-- TRES TARJETAS DE CARACTERÍSTICAS SOLICITADAS -->
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative -bottom-10 sm:-bottom-12">
+            <div class="bg-white text-gray-900 rounded-xl shadow-xl border border-gray-100 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 p-4 sm:p-6 text-center">
+                <article class="p-4 space-y-1">
+                    <span class="block text-2xl font-bold text-[#102b55]">↗</span>
+                    <h3 class="text-sm font-bold text-gray-900">Proyecta tu inversión</h3>
+                    <p class="text-xs text-gray-500">Compara plazos y rendimientos estimados.</p>
+                </article>
+                <article class="p-4 space-y-1">
+                    <span class="block text-2xl font-bold text-[#102b55]">∑</span>
+                    <h3 class="text-sm font-bold text-gray-900">Entiende el interés compuesto</h3>
+                    <p class="text-xs text-gray-500">Observa cómo crece tu capital con el tiempo.</p>
+                </article>
+                <article class="p-4 space-y-1">
+                    <span class="block text-2xl font-bold text-[#102b55]">◎</span>
+                    <h3 class="text-sm font-bold text-gray-900">Planea con propósito</h3>
+                    <p class="text-xs text-gray-500">Convierte tus metas en un plan alcanzable.</p>
+                </article>
+            </div>
         </div>
-      </div>
+    </section>
 
+    <!-- CONTENEDOR PRINCIPAL DE LOS 4 SIMULADORES FINANCIEROS -->
+    <main id="simuladores-section" class="max-w-4xl mx-auto px-4 sm:px-6 pt-24 pb-16 space-y-20">
+
+        <!-- Encabezado de la Sección de Simuladores -->
+        <header class="text-center space-y-2">
+            <span class="text-xs font-bold tracking-widest text-[#4f8fd2] uppercase">Herramientas Interactivas</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Calculadoras de Inversión</h2>
+            <p class="text-xs sm:text-sm text-gray-500 max-w-lg mx-auto">
+                Ingresa tus valores y observa en tiempo real los resultados proyectados.
+            </p>
+        </header>
+
+        <!-- ========================================== -->
+        <!-- SIMULADOR 1: CDT -->
+        <!-- ========================================== -->
+        <section id="cdt-simulator" class="space-y-8 pb-16 subtle-border-b">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-emerald-600 uppercase">Herramienta 01</span>
+                    <h2 class="text-2xl font-normal text-gray-900">Simulador de CDT</h2>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs text-gray-400 block">Rendimiento Neto</span>
+                    <span id="cdt-ganancia-total" class="text-xl font-semibold text-emerald-600">$0</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-5 space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Capital Inicial ($)</label>
+                        <input type="text" id="cdt-capital" value="5.000.000" class="money-input w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tasa Efectiva Anual (E.A. %)</label>
+                        <input type="number" id="cdt-tasa" value="11.5" step="0.1" class="w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Plazo en Meses</label>
+                        <input type="number" id="cdt-meses" value="12" min="1" max="120" class="w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex justify-between items-center text-sm text-gray-600">
+                        <span>Capital Final Estimado:</span>
+                        <span id="cdt-capital-final" class="font-semibold text-gray-900 text-base">$0</span>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 flex flex-col justify-center">
+                    <div class="h-64 relative">
+                        <canvas id="cdtChart"></canvas>
+                    </div>
+                    <p class="text-xs text-gray-400 text-center mt-3">*Cálculo sujeto a retención en la fuente sobre rendimientos financieros (4% según ley vigente).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SIMULADOR 2: INTERÉS COMPUESTO -->
+        <!-- ========================================== -->
+        <section id="compound-simulator" class="space-y-8 pb-16 subtle-border-b">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-emerald-600 uppercase">Herramienta 02</span>
+                    <h2 class="text-2xl font-normal text-gray-900">Interés Compuesto</h2>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs text-gray-400 block">Patrimonio Total</span>
+                    <span id="comp-total-patrimonio" class="text-xl font-semibold text-emerald-600">$0</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-5 space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Inversión Inicial ($)</label>
+                        <input type="text" id="comp-inicial" value="2.000.000" class="money-input w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Aporte Periódico Mensual ($)</label>
+                        <input type="text" id="comp-aporte" value="300.000" class="money-input w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Rentabilidad Anual Estimada (%)</label>
+                        <input type="number" id="comp-tasa" value="14" step="0.5" class="w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tiempo (Años)</label>
+                        <input type="number" id="comp-anos" value="10" min="1" max="40" class="w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 flex flex-col justify-center">
+                    <div class="h-64 relative">
+                        <canvas id="compoundChart"></canvas>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-4 px-2">
+                        <span>Total Aportado: <strong id="comp-total-aportado" class="text-gray-800">$0</strong></span>
+                        <span>Intereses Generados: <strong id="comp-total-intereses" class="text-emerald-600">$0</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SIMULADOR 3: INVERSIÓN GENERAL & INFLACIÓN -->
+        <!-- ========================================== -->
+        <section id="general-simulator" class="space-y-8 pb-16 subtle-border-b">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-emerald-600 uppercase">Herramienta 03</span>
+                    <h2 class="text-2xl font-normal text-gray-900">Inversión y Poder Adquisitivo (Inflación)</h2>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs text-gray-400 block">Valor Real (Ajustado)</span>
+                    <span id="gen-valor-real" class="text-xl font-semibold text-blue-600">$0</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-5 space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Capital Inicial ($)</label>
+                        <input type="text" id="gen-capital" value="10.000.000" class="money-input w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Rentabilidad Anual Inversión (%)</label>
+                        <input type="number" id="gen-tasa-inv" value="12" step="0.5" class="w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Inflación Anual Estimada (%)</label>
+                        <input type="number" id="gen-tasa-inf" value="5" step="0.1" class="w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Plazo (Años)</label>
+                        <input type="number" id="gen-anos" value="10" min="1" max="30" class="w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 flex flex-col justify-center">
+                    <div class="h-64 relative">
+                        <canvas id="generalChart"></canvas>
+                    </div>
+                    <p class="text-xs text-gray-400 text-center mt-3">Compara el crecimiento nominal frente al valor real de tu dinero descontando la inflación.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SIMULADOR 4: METAS FINANCIERAS -->
+        <!-- ========================================== -->
+        <section id="goals-simulator" class="space-y-8 pb-12">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-emerald-600 uppercase">Herramienta 04</span>
+                    <h2 class="text-2xl font-normal text-gray-900">Metas Financieras</h2>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs text-gray-400 block">Ahorro Mensual Requerido</span>
+                    <span id="goal-cuota-mensual" class="text-xl font-semibold text-emerald-600">$0</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-5 space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Meta u Objetivo Financiero ($)</label>
+                        <input type="text" id="goal-monto" value="50.000.000" class="money-input w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Ahorro Inicial Disponible ($)</label>
+                        <input type="text" id="goal-inicial" value="5.000.000" class="money-input w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Rentabilidad Anual Estimada (%)</label>
+                        <input type="number" id="goal-tasa" value="10" step="0.5" class="w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Plazo para la Meta (Años)</label>
+                        <input type="number" id="goal-anos" value="5" min="1" max="30" class="w-full px-3 py-2 text-base rounded border border-gray-300 focus:outline-none focus:border-gray-900 transition">
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 flex flex-col justify-center">
+                    <div class="h-64 relative">
+                        <canvas id="goalChart"></canvas>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-4 px-2">
+                        <span>Progreso Inicial: <strong id="goal-pct-inicial" class="text-gray-800">0%</strong></span>
+                        <span>Rendimiento Estimado: <strong id="goal-rendimiento-total" class="text-emerald-600">$0</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RESTO DEL CONTENIDO INFORMATIVO -->
+    <section class="bg-gray-50 py-16 border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=85" alt="Decisiones Financieras" class="rounded-2xl shadow-lg w-full h-80 object-cover">
+                <div class="absolute -bottom-4 -left-4 bg-[#4f8fd2] text-white p-4 rounded-xl shadow-lg flex items-center gap-3">
+                    <span class="text-xl">✓</span>
+                    <div>
+                        <strong class="block text-xs uppercase tracking-wider">Decisiones informadas</strong>
+                        <span class="text-xs text-blue-100">Simula antes de invertir</span>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <span class="text-xs font-bold tracking-widest text-[#4f8fd2] uppercase">Tu centro de herramientas</span>
+                <h2 class="text-2xl font-bold text-gray-900">Entiende tus números. Decide con confianza.</h2>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Explora escenarios de ahorro e inversión con calculadoras sencillas. Ajusta el monto, la tasa y el plazo para comprender cuánto podría crecer tu dinero y cómo la inflación puede afectar su valor real.
+                </p>
+                <p class="text-xs text-gray-400 italic">
+                    *Los resultados son estimaciones educativas y no constituyen una oferta ni una recomendación de inversión.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+<section class="faq-section">
+  <div class="faq-container">
+    <div class="faq-header">
+      <span class="faq-eyebrow">Resuelve tus dudas</span>
+      <h2 class="faq-title">Preguntas Frecuentes</h2>
+      <p class="faq-subtitle">Todo lo que necesitas saber sobre nuestras herramientas de simulación e inversión.</p>
     </div>
 
-    <script>
-    document.querySelectorAll('.cf-accordion').forEach(accordion => {
-  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.cf-accordion-item');
-      const content = item.querySelector('.cf-accordion-content');
+    <div class="faq-accordion">
+      <!-- Pregunta 1 -->
+      <details class="faq-item" open>
+        <summary class="faq-question">
+          <span>¿Los cálculos de las herramientas son exactos o 100% garantizados?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Son estimaciones educativas e informativas. Los resultados finales en entidades reales pueden variar debido a impuestos (como la retención en la fuente), variaciones diarias de tasas de interés o comisiones específicas de cada institución financiera.</p>
+        </div>
+      </details>
 
-      // Solo afecta los items de ESTE acordeón
-      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          other.querySelector('.cf-accordion-content').style.maxHeight = null;
-        }
-      });
+      <!-- Pregunta 2 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>¿Qué diferencia hay entre un CDT y la calculadora de interés compuesto?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Un <strong>CDT</strong> es una inversión a plazo fijo a una tasa pactada donde normalmente recibes tus rendimientos al final del periodo. La herramienta de <strong>interés compuesto</strong> calcula la reinversión constante de los intereses generados (más aportes periódicos) a lo largo de varios años o periodos.</p>
+        </div>
+      </details>
 
-      item.classList.toggle('is-open');
+      <!-- Pregunta 3 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>¿Cómo afecta la inflación a los rendimientos de mi inversión?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>La inflación reduce el poder de compra de tu dinero con el tiempo. Nuestra herramienta de inversión general calcula el <strong>valor real ajustar por inflación</strong> para mostrarte cuánto equivaldrán tus ganancias futuras en dinero de hoy.</p>
+        </div>
+      </details>
 
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    });
-  });
-});
-    </script>
-
-
- </div>
+      <!-- Pregunta 4 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>¿Mis datos o información guardada quedan almacenados aquí?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>No. Todos los cálculos se procesan de forma privada directamente en el navegador de tu dispositivo. No guardamos ni solicitamos información financiera personal sensible.</p>
+        </div>
+      </details>
+    </div>
+  </div>
 </section>
-    <!-- ================= FIN ACORDEÓN ================= -->
-
-     
 
 
 
-  <!-- ESPACIO PEQUEÑO FINAL -->
-<section class="py-12"></section>
 
+    <!-- Footer Real por JS -->
+    <div class="footer-here"></div>
+    <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
+    <!-- LÓGICA DE SIMULADORES Y GRÁFICAS -->
+    <script>
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('es-CO', {
+                style: 'currency',
+                currency: 'COP',
+                maximumFractionDigits: 0
+            }).format(value);
+        }
 
-   
+        function parseMoneyValue(text) {
+            if (!text) return 0;
+            const cleanText = text.toString().replace(/\./g, '').replace(/[^0-9]/g, '');
+            return parseInt(cleanText, 10) || 0;
+        }
 
-  <!--  Footer  -->
-<div class="footer-here"></div>
+        function formatThousand(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
 
-<script src="https://codigomillonario.blog/assets/footer.js"></script>
+        function applyDynamicThousandFormat(inputElement, onUpdateCallback) {
+            inputElement.addEventListener('input', function(e) {
+                const cursorPosition = this.selectionStart;
+                const originalLength = this.value.length;
+                
+                const rawValue = parseMoneyValue(this.value);
+                const formattedValue = rawValue > 0 ? formatThousand(rawValue) : '';
+                
+                this.value = formattedValue;
+                
+                const newLength = this.value.length;
+                let newCursorPosition = cursorPosition + (newLength - originalLength);
+                if (newCursorPosition < 0) newCursorPosition = 0;
 
-<!-- MENU COMPLETO -->
-<script src="../assets/menu.js"></script>
+                this.setSelectionRange(newCursorPosition, newCursorPosition);
 
+                if (onUpdateCallback) onUpdateCallback();
+            });
+        }
 
+        let cdtChart, compoundChart, generalChart, goalChart;
 
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.font.size = 12;
+        Chart.defaults.color = '#6b7280';
+
+        function initCDT() {
+            const capitalInput = document.getElementById('cdt-capital');
+            const tasaInput = document.getElementById('cdt-tasa');
+            const mesesInput = document.getElementById('cdt-meses');
+            const gananciaElem = document.getElementById('cdt-ganancia-total');
+            const finalElem = document.getElementById('cdt-capital-final');
+            const ctx = document.getElementById('cdtChart').getContext('2d');
+
+            function calculate() {
+                const P = parseMoneyValue(capitalInput.value);
+                const tea = parseFloat(tasaInput.value) || 0;
+                const meses = parseInt(mesesInput.value) || 0;
+
+                const tem = Math.pow(1 + (tea / 100), 1 / 12) - 1;
+                const gananciaBruta = P * (Math.pow(1 + tem, meses) - 1);
+                const retencion = gananciaBruta * 0.04;
+                const gananciaNeta = gananciaBruta - retencion;
+                const capitalFinal = P + gananciaNeta;
+
+                gananciaElem.textContent = formatCurrency(gananciaNeta);
+                finalElem.textContent = formatCurrency(capitalFinal);
+
+                const labels = ['Mes 0'];
+                const dataValues = [P];
+                let current = P;
+
+                for (let i = 1; i <= meses; i++) {
+                    labels.push(`Mes ${i}`);
+                    current += (current * tem) * 0.96;
+                    dataValues.push(Math.round(current));
+                }
+
+                updateChart(cdtChart, ctx, labels, dataValues, 'Capital Acumulado ($)', '#10b981');
+            }
+
+            cdtChart = new Chart(ctx, {
+                type: 'line',
+                data: { labels: [], datasets: [{ data: [], borderColor: '#10b981', borderWidth: 2, tension: 0.1, fill: false }] },
+                options: getChartOptions()
+            });
+
+            applyDynamicThousandFormat(capitalInput, calculate);
+            [tasaInput, mesesInput].forEach(el => el.addEventListener('input', calculate));
+            calculate();
+        }
+
+        function initCompound() {
+            const inicialInput = document.getElementById('comp-inicial');
+            const aporteInput = document.getElementById('comp-aporte');
+            const tasaInput = document.getElementById('comp-tasa');
+            const anosInput = document.getElementById('comp-anos');
+            const totalPatrimonio = document.getElementById('comp-total-patrimonio');
+            const totalAportado = document.getElementById('comp-total-aportado');
+            const totalIntereses = document.getElementById('comp-total-intereses');
+            const ctx = document.getElementById('compoundChart').getContext('2d');
+
+            function calculate() {
+                const P = parseMoneyValue(inicialInput.value);
+                const PMT = parseMoneyValue(aporteInput.value);
+                const r = (parseFloat(tasaInput.value) || 0) / 100;
+                const years = parseInt(anosInput.value) || 0;
+
+                const labels = ['Año 0'];
+                const dataValues = [P];
+                let current = P;
+                let aportesAcumulados = P;
+
+                for (let y = 1; y <= years; y++) {
+                    labels.push(`Año ${y}`);
+                    for (let m = 1; m <= 12; m++) {
+                        current = (current + PMT) * (1 + r / 12);
+                        aportesAcumulados += PMT;
+                    }
+                    dataValues.push(Math.round(current));
+                }
+
+                const interesesGen = current - aportesAcumulados;
+
+                totalPatrimonio.textContent = formatCurrency(current);
+                totalAportado.textContent = formatCurrency(aportesAcumulados);
+                totalIntereses.textContent = formatCurrency(interesesGen);
+
+                updateChart(compoundChart, ctx, labels, dataValues, 'Patrimonio ($)', '#10b981');
+            }
+
+            compoundChart = new Chart(ctx, {
+                type: 'line',
+                data: { labels: [], datasets: [{ data: [], borderColor: '#10b981', borderWidth: 2, tension: 0.2, fill: false }] },
+                options: getChartOptions()
+            });
+
+            applyDynamicThousandFormat(inicialInput, calculate);
+            applyDynamicThousandFormat(aporteInput, calculate);
+            [tasaInput, anosInput].forEach(el => el.addEventListener('input', calculate));
+            calculate();
+        }
+
+        function initGeneral() {
+            const capitalInput = document.getElementById('gen-capital');
+            const tasaInvInput = document.getElementById('gen-tasa-inv');
+            const tasaInfInput = document.getElementById('gen-tasa-inf');
+            const anosInput = document.getElementById('gen-anos');
+            const valorRealElem = document.getElementById('gen-valor-real');
+            const ctx = document.getElementById('generalChart').getContext('2d');
+
+            function calculate() {
+                const P = parseMoneyValue(capitalInput.value);
+                const rInv = (parseFloat(tasaInvInput.value) || 0) / 100;
+                const rInf = (parseFloat(tasaInfInput.value) || 0) / 100;
+                const years = parseInt(anosInput.value) || 0;
+
+                const labels = ['Hoy'];
+                const nominalData = [P];
+                const realData = [P];
+
+                let nominal = P;
+                let real = P;
+
+                for (let y = 1; y <= years; y++) {
+                    labels.push(`Año ${y}`);
+                    nominal *= (1 + rInv);
+                    real = nominal / Math.pow(1 + rInf, y);
+
+                    nominalData.push(Math.round(nominal));
+                    realData.push(Math.round(real));
+                }
+
+                valorRealElem.textContent = formatCurrency(real);
+
+                generalChart.data.labels = labels;
+                generalChart.data.datasets[0].data = nominalData;
+                generalChart.data.datasets[1].data = realData;
+                generalChart.update();
+            }
+
+            generalChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [
+                        { label: 'Nominal', data: [], borderColor: '#10b981', borderWidth: 2, tension: 0.1 },
+                        { label: 'Real (Sin Inflación)', data: [], borderColor: '#3b82f6', borderWidth: 2, tension: 0.1 }
+                    ]
+                },
+                options: getChartOptions(true)
+            });
+
+            applyDynamicThousandFormat(capitalInput, calculate);
+            [tasaInvInput, tasaInfInput, anosInput].forEach(el => el.addEventListener('input', calculate));
+            calculate();
+        }
+
+        function initGoals() {
+            const montoInput = document.getElementById('goal-monto');
+            const inicialInput = document.getElementById('goal-inicial');
+            const tasaInput = document.getElementById('goal-tasa');
+            const anosInput = document.getElementById('goal-anos');
+            const cuotaMensualElem = document.getElementById('goal-cuota-mensual');
+            const pctInicialElem = document.getElementById('goal-pct-inicial');
+            const rendimientoElem = document.getElementById('goal-rendimiento-total');
+            const ctx = document.getElementById('goalChart').getContext('2d');
+
+            function calculate() {
+                const FV = parseMoneyValue(montoInput.value);
+                const PV = parseMoneyValue(inicialInput.value);
+                const r = (parseFloat(tasaInput.value) || 0) / 100 / 12;
+                const years = parseInt(anosInput.value) || 0;
+                const n = years * 12;
+
+                const pctInit = FV > 0 ? Math.min(100, Math.round((PV / FV) * 100)) : 0;
+                pctInicialElem.textContent = `${pctInit}%`;
+
+                let PMT = 0;
+                if (n > 0) {
+                    if (r === 0) {
+                        PMT = Math.max(0, (FV - PV) / n);
+                    } else {
+                        const factor = Math.pow(1 + r, n);
+                        PMT = (FV - (PV * factor)) * r / (factor - 1);
+                        if (PMT < 0) PMT = 0;
+                    }
+                }
+
+                cuotaMensualElem.textContent = formatCurrency(PMT);
+
+                const labels = ['Año 0'];
+                const dataValues = [PV];
+                let current = PV;
+                let totalAportes = PV;
+
+                for (let y = 1; y <= years; y++) {
+                    labels.push(`Año ${y}`);
+                    for (let m = 1; m <= 12; m++) {
+                        current = (current + PMT) * (1 + r);
+                        totalAportes += PMT;
+                    }
+                    dataValues.push(Math.round(current));
+                }
+
+                const rendimientoTotal = Math.max(0, current - totalAportes);
+                rendimientoElem.textContent = formatCurrency(rendimientoTotal);
+
+                updateChart(goalChart, ctx, labels, dataValues, 'Crecimiento de Meta ($)', '#10b981');
+            }
+
+            goalChart = new Chart(ctx, {
+                type: 'line',
+                data: { labels: [], datasets: [{ data: [], borderColor: '#10b981', borderWidth: 2, tension: 0.1, fill: false }] },
+                options: getChartOptions()
+            });
+
+            applyDynamicThousandFormat(montoInput, calculate);
+            applyDynamicThousandFormat(inicialInput, calculate);
+            [tasaInput, anosInput].forEach(el => el.addEventListener('input', calculate));
+            calculate();
+        }
+
+        function updateChart(chartInstance, context, labels, data, labelName, color) {
+            chartInstance.data.labels = labels;
+            chartInstance.data.datasets[0].label = labelName;
+            chartInstance.data.datasets[0].data = data;
+            chartInstance.data.datasets[0].borderColor = color;
+            chartInstance.update();
+        }
+
+        function getChartOptions(showLegend = false) {
+            return {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: showLegend, position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) { label += ': '; }
+                                if (context.parsed.y !== null) {
+                                    label += formatCurrency(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+                    y: { grid: { color: '#f3f4f6' }, ticks: { font: { size: 10 }, callback: value => '$' + (value >= 1000000 ? (value / 1000000).toFixed(1) + 'M' : formatThousand(value)) } }
+                }
+            };
+        }
+
+        window.onload = function() {
+            initCDT();
+            initCompound();
+            initGeneral();
+            initGoals();
+        };
+    </script>
 </body>
 </html>
