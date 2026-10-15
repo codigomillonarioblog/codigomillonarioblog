@@ -3,359 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pon a Prueba tus Conocimientos Financieros y Mejora tus Decisiones - Código Millonario</title>
+    <title>Examen Financiero - Casino Millonario</title>
     
-<!-- Favicon -->
-<link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://codigomillonario.blog/herramientas/examen-financiero.html">
 
-<!-- canonical -->
-<link rel="canonical" href="https://codigomillonario.blog/herramientas/examen-financiero.html">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0826LEMPPY');
+    </script>
 
-<!-- tailwin -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0826LEMPPY');
-</script>
-
-<!-- Google Fonts Poppins -->
+    <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-<script src="https://unpkg.com/lucide@latest"></script>
-
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
+
+    <!-- Google Fonts Poppins & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --bg-casino-dark: #070b19;
+            --bg-casino-card: #0e1628;
+            --border-casino: #1e2d4d;
+            --gold-primary: #f59e0b;
+            --gold-light: #fbbf24;
+            --neon-blue: #38bdf8;
+        }
+
+        /* Reset y aislamiento total para evitar interferencias con el menú o footer externos */
+        html, body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: var(--bg-casino-dark) !important;
+            font-family: 'Poppins', sans-serif !important;
+            color: #f8fafc !important;
+            overflow-x: hidden;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        /* Contenedor principal de la herramienta con fondo de casino aislado */
+        .casino-tool-wrapper {
+            background-color: var(--bg-casino-dark);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(14, 22, 40, 0.9) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(30, 41, 59, 0.6) 0%, transparent 40%);
+            width: 100%;
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 16px 60px 16px;
+        }
+
+        .casino-card {
+            background: linear-gradient(145deg, #0f172a 0%, #090d16 100%);
+            border: 2px solid var(--border-casino);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .gold-text {
+            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .casino-btn {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .casino-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+
+        .casino-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .option-btn {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid var(--border-casino);
+            transition: all 0.25s ease;
+        }
+
+        .option-btn:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: var(--neon-blue);
+            transform: scale(1.01);
+        }
+
+        .option-btn.selected {
+            background: rgba(245, 158, 11, 0.15);
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+        }
+
+        @keyframes pulseRed {
+            0% { color: #f8fafc; transform: scale(1); }
+            50% { color: #ef4444; transform: scale(1.1); text-shadow: 0 0 10px rgba(239, 68, 68, 0.8); }
+            100% { color: #f8fafc; transform: scale(1); }
+        }
+        .money-deduct {
+            animation: pulseRed 0.6s ease;
+        }
+    </style>
 </head>
-
-<body>
-
-
-
-
-
-
-
-<style>
-/* =========================
-   TITULO SECCION NUEVO
-========================= */
-
-.titulo-seccion{
-
-    max-width: 1400px;
-
-    margin: 70px auto 35px auto;
-
-    padding: 0 90px;
-}
-
-/* TEXTO */
-
-.titulo-seccion span{
-
-    font-family:'Inter',sans-serif;
-
-    font-size:1.55rem;
-
-    font-weight:900;
-
-    color:#111111;
-
-    letter-spacing:-1px;
-
-    line-height:1;
-
-    display:inline-block;
-
-    text-transform:uppercase;
-}
-
-/* LINEA */
-
-.linea-seccion{
-
-    width:100%;
-
-    height:4px;
-
-    background:#111111;
-
-    margin-top:10px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-    .titulo-seccion{
-
-        padding:0 30px;
-
-        margin:55px auto 28px auto;
-    }
-
-    .titulo-seccion span{
-
-        font-size:1.35rem;
-
-        letter-spacing:-0.8px;
-    }
-
-    .linea-seccion{
-
-        height:3px;
-
-        margin-top:8px;
-    }
-
-}
-
-@media(max-width:480px){
-
-    .titulo-seccion{
-
-        padding:0 18px;
-    }
-
-    .titulo-seccion span{
-
-        font-size:1.2rem;
-    }
-
-}
-</style>
 
 
    <!-- ESPACIO FINAL -->
-<div style="height: 300px;"></div>
-
-
-<!-- ========================================= -->
-<!-- GOOGLE FONTS -->
-<!-- ========================================= -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
-<!-- =========================
-     HERO TITULO
-========================= -->
-
-<section class="hero-blog">
-
-  <div class="hero-blog-content">
-
-    <!-- ETIQUETA -->
-    <span class="hero-tag">
-      EXAMEN FINANCIERO
-    </span>
-
-    <!-- TITULO -->
-    <h1>
-      Evalúa tu nivel de conocimiento financiero y toma decisiones inteligentes
-    </h1>
-
-    <!-- SUBTITULO -->
-    <p>
-      Descubre qué tan sólido es tu conocimiento financiero con una evaluación práctica y clara. 
-    </p>
-
-  </div>
-
-</section>
-
-
-<style>
-
-/* =========================
-   HERO BLOG
-========================= */
-
-.hero-blog{
-
-    width: 100%;
-
-    margin-top: 50px;
-
-    margin-bottom: 45px;
-
-    padding-left: 90px;
-
-    padding-right: 90px;
-}
-
-
-/* CONTENIDO */
-
-.hero-blog-content{
-
-    max-width: 980px;
-}
-
-
-/* ETIQUETA */
-
-.hero-tag{
-
-    display: inline-block;
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 0.78rem;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #8b7355;
-
-    margin-bottom: 18px;
-}
-
-
-/* TITULO */
-
-.hero-blog h1{
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 4.2rem;
-
-    line-height: 0.98;
-
-    font-weight: 800;
-
-    color: #111111;
-
-    letter-spacing: -3px;
-
-    margin-bottom: 24px;
-}
-
-
-/* SUBTITULO */
-
-.hero-blog p{
-
-    font-family: 'Open Sans', sans-serif;
-
-    font-size: 1.15rem;
-
-    line-height: 1.8;
-
-    color: #555555;
-
-    max-width: 760px;
-
-    margin-bottom: 0;
-}
-
-
-/* =========================
-   TABLETS
-========================= */
-
-@media (max-width: 1024px){
-
-    .hero-blog{
-
-        padding-left: 40px;
-
-        padding-right: 40px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 3.2rem;
-    }
-
-}
-
-
-/* =========================
-   TELEFONOS
-========================= */
-
-@media (max-width: 640px){
-
-    .hero-blog{
-
-        padding-left: 18px;
-
-        padding-right: 18px;
-
-        margin-top: 35px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 2.2rem;
-
-        line-height: 1.05;
-
-        letter-spacing: -1.5px;
-    }
-
-    .hero-blog p{
-
-        font-size: 1rem;
-
-        line-height: 1.7;
-    }
-
-}
-
-</style>
-
-
-
-
-
-
-
-<section class="py-20"></section>
-      
-
-
-
-
-
-    <!-- QUIZ -->
-    <section class="py-12 max-w-4xl mx-auto">
-        <div id="quizContainer" class="bg-white p-8 rounded-3xl shadow-lg relative border border-stone-200">
-        <span id="questionIndicator" class="absolute top-4 left-4 font-semibold text-stone-700">Pregunta 1/10</span>
-            <div id="quizQuestions" class="mb-6 mt-8"></div>
-
-            <div class="flex justify-between items-center mb-4">
-                <button id="nextQuestionBtn" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 transition">Siguiente</button>
-                <button id="submitQuiz" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition" disabled>Ver resultados</button>
+<div style="height: 90px;"></div>
+
+<body>
+
+    <!-- MENÚ SUPERIOR (Inyectado por el script externo original sin romper estilos) -->
+    <script src="../assets/menu.js"></script>
+
+    <!-- ENVOLTORIO AISLADO DEL JUEGO (Evita interferencia de fondos o espacios blancos) -->
+    <div class="casino-tool-wrapper">
+
+        <!-- ENCABEZADO / TÍTULO -->
+        <header class="text-center max-w-2xl mb-8 mt-4">
+            <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 font-semibold border border-amber-500/20">
+               VIP
+            </span>
+            <h1 class="text-3xl md:text-5xl font-extrabold font-['Montserrat'] mt-3 mb-2 tracking-tight text-white">
+                Examen <span class="gold-text">Millonario</span>
+            </h1>
+            <p class="text-slate-400 text-sm md:text-base">
+                Pon a prueba tus finanzas, conserva tu capital y demuestra tu nivel de inteligencia económica.
+            </p>
+        </header>
+
+        <!-- CONTENEDOR PRINCIPAL DEL JUEGO -->
+        <main class="w-full max-w-2xl">
+            <div id="quizContainer" class="casino-card p-6 md:p-10 rounded-3xl relative">
+                
+                <!-- BARRA DE ESTADO (Progreso y Dinero en Juego) -->
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-slate-800 text-sm md:text-base">
+                    <span id="questionIndicator" class="font-semibold text-slate-300">Pregunta 1/10</span>
+                    <div class="flex items-center gap-2 bg-slate-900/80 px-4 py-2 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 uppercase tracking-wider">Capital:</span>
+                        <span id="moneyDisplay" class="font-bold text-emerald-400 text-lg">$10,000</span>
+                    </div>
+                </div>
+
+                <!-- CONTENEDOR DE PREGUNTAS Y OPCIONES -->
+                <div id="quizQuestions" class="mb-8">
+                    <!-- Se inyecta dinámicamente con JS -->
+                </div>
+
+                <!-- BOTONES DE ACCIÓN -->
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <button id="nextQuestionBtn" class="w-full sm:w-auto casino-btn text-slate-950 font-bold px-8 py-3.5 rounded-full uppercase tracking-wider text-sm">
+                        Siguiente Pregunta
+                    </button>
+                    <button id="submitQuiz" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-full shadow-lg transition uppercase tracking-wider text-sm" style="display: none;" disabled>
+                        Ver Resultados
+                    </button>
+                </div>
             </div>
+        </main>
 
-            <button id="newQuiz" class="w-full mt-4 bg-yellow-500 text-white py-3 rounded-full shadow hover:bg-yellow-600 transition">Nuevo examen</button>
+        <!-- MODAL DE RESULTADOS FINALES -->
+        <div id="quizModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center hidden z-50 p-4">
+            <div class="casino-card rounded-3xl p-8 max-w-md w-full relative shadow-2xl text-center border border-amber-500/30">
+                <h2 class="text-2xl font-bold font-['Montserrat'] gold-text mb-3">¡Examen Finalizado!</h2>
+                <div id="quizResult" class="text-slate-300 leading-relaxed text-base my-4 space-y-2">
+                    <!-- Resultados inyectados por JS -->
+                </div>
+                <button id="newQuiz" class="w-full mt-6 casino-btn text-slate-950 font-bold py-3.5 rounded-full uppercase tracking-wider text-sm">
+                    Jugar de Nuevo
+                </button>
+            </div>
         </div>
-    </section>
 
-    <!-- Modal Resultados -->
-    <div id="quizModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-        <div class="bg-white rounded-3xl p-8 max-w-md w-full relative shadow-lg">
-            <button id="closeModal" class="absolute top-4 right-4 text-stone-700 font-bold text-xl hover:text-red-600">&times;</button>
-            <h2 class="text-2xl font-semibold text-green-600 mb-4">Resultados del Examen</h2>
-            <p id="quizResult" class="text-stone-700 leading-relaxed text-center text-lg"></p>
-        </div>
     </div>
 
+       <!-- ESPACIO FINAL -->
+<div style="height: 200px;"></div>
+
+
+    <!-- SCRIPT DE FUNCIONAMIENTO DEL JUEGO Y 300 PREGUNTAS -->
     <script>
         const questions = [
             { q: "¿Qué es un presupuesto?", a: ["Plan de gastos", "Ingresos futuros", "Dinero ahorrado", "Inversión en acciones"], correct: 0 },
@@ -368,6 +221,277 @@
             { q: "¿Qué significa diversificación?", a: ["Poner todo el dinero en un activo", "Repartir inversiones en varios activos", "Ahorrar solo en efectivo", "Invertir solo en acciones"], correct: 1 },
             { q: "¿Qué es una meta financiera SMART?", a: ["Específica, Medible, Alcanzable, Relevante, Temporal", "Simple, Moderna, Asequible, Realista, Temporal", "Segura, Mínima, Aceptable, Realista, Técnica", "Sin riesgo, Medible, Alta, Rentable, Temporal"], correct: 0 },
             { q: "¿Qué se recomienda antes de invertir?", a: ["Pagar deudas y tener fondo de emergencia", "Invertir todo el dinero", "Gastar en bienes de lujo", "Pedir crédito adicional"], correct: 0 },
+            { q: "¿Qué es la inflación?", a: ["Aumento generalizado y sostenido de los precios", "La bajada de los impuestos", "El incremento de los salarios mínimos", "Una devaluación de la moneda local"], correct: 0 },
+            { q: "¿Qué es el costo de oportunidad?", a: ["Lo que cuesta un producto en oferta", "El valor de la opción a la que se renuncia al tomar una decisión", "El precio de envío de una compra", "El interés cobrado por un banco"], correct: 1 },
+            { q: "¿Qué es una tarjeta de crédito?", a: ["Un préstamo rotativo a corto plazo otorgado por un banco", "Dinero regalado por el banco para comprar", "Una cuenta de ahorros digital", "Un documento de identidad bancaria"], correct: 0 },
+            { q: "¿Qué es el historial crediticio?", a: ["Un registro de cómo has manejado tus deudas y pagos en el pasado", "La cantidad total de dinero que tienes ahorrado", "Tu sueldo mensual actual", "El límite de dinero que puedes gastar al mes"], correct: 0 },
+            { q: "¿Qué es una acción en la bolsa de valores?", a: ["Un préstamo a una empresa", "Una parte proporcional de propiedad en una empresa", "Una moneda extranjera", "Un contrato de seguro médico"], correct: 1 },
+            { q: "¿Qué es un bono financiero?", a: ["Un título de deuda emitido por un gobierno o empresa", "Un bono de regalo para tiendas", "Una ganancia extra por buen desempeño laboral", "Un descuento en impuestos"], correct: 0 },
+            { q: "¿Qué significa que una inversión tenga alto riesgo?", a: ["Que vas a perder dinero obligatoriamente", "Que la probabilidad de fluctuación o pérdida es mayor, aunque con potencial de mayor ganancia", "Que el banco te vigila de cerca", "Que no se puede retirar nunca"], correct: 1 },
+            { q: "¿Qué es el patrimonio neto?", a: ["La suma de todos tus ingresos anuales", "La diferencia entre tus activos totales y tus pasivos (deudas)", "El dinero que tienes debajo del colchón", "El valor de tu vehículo nuevo"], correct: 1 },
+            { q: "¿Qué son los pasivos en finanzas personales?", a: ["Todo lo que posees y te da dinero", "Todas tus deudas y obligaciones financieras", "Tus fuentes de ingresos principales", "Los gastos diarios en comida"], correct: 1 },
+            { q: "¿Qué es la regla 50/30/20 del presupuesto?", a: ["50% necesidades, 30% deseos, 20% ahorro/deudas", "50% ahorro, 30% comida, 20% lujos", "50% deudas, 30% inversión, 20% ocio", "50% impuestos, 30% vivienda, 20% inversión"], correct: 0 },
+            { q: "¿Cuál es la principal ventaja de un fondo indexado?", a: ["Garantiza un 100% de rendimiento diario", "Bajos costos de gestión y diversificación automática al seguir un índice", "Que puedes retirarlo en oro físico", "Que está exento de cualquier tipo de riesgo"], correct: 1 },
+            { q: "¿Qué es una tasa de interés fija?", a: ["Una tasa que cambia todos los meses según el clima económico", "Una tasa que se mantiene igual durante todo el plazo del préstamo o inversión", "Una multa por pagar tarde", "Un impuesto gubernamental"], correct: 1 },
+            { q: "¿Qué es una tasa de interés variable?", a: ["Una tasa que está sujeta a cambios según las condiciones del mercado", "Un préstamo sin intereses", "Una ganancia fija anual", "Una tarifa única de apertura"], correct: 0 },
+            { q: "¿Qué es la dación en pago?", a: ["Entregar un bien (como una casa) para saldar una deuda hipotecaria", "Hacer un regalo en efectivo al banco", "Pedir un préstamo extra", "Comprar acciones con descuento"], correct: 0 },
+            { q: "¿Qué es la amortización de un crédito?", a: ["El proceso de pagar una deuda mediante cuotas periódicas que cubren capital e intereses", "El tiempo que tardas en solicitar un crédito", "La cancelación total de una tarjeta", "El cobro de comisiones ocultas"], correct: 0 },
+            { q: "¿Qué es un plan de pensiones privado?", a: ["Un ahorro voluntario a largo plazo enfocado en la jubilación", "Una ayuda obligatoria del gobierno", "Un seguro de vida temporal", "Un crédito para comprar casa en la tercera edad"], correct: 0 },
+            { q: "¿Qué es el dinero fiduciario (fiats)?", a: ["Dinero respaldado por oro físico en bóvedas", "Moneda sin respaldo en metal precioso, cuyo valor se basa en la confianza en el Estado", "Dinero exclusivo para transacciones digitales", "Monedas antiguas de colección"], correct: 1 },
+            { q: "¿Qué es la devaluación?", a: ["La pérdida de valor de una moneda local frente a las monedas extranjeras", "El aumento de los precios en el supermercado", "La reducción de las tasas de interés bancarias", "El ahorro en cuentas de alto rendimiento"], correct: 0 },
+            { q: "¿Qué es una burbuja financiera?", a: ["Un aumento desproporcionado en el precio de un activo impulsado por la especulación, seguido de un desplome", "Un ahorro seguro en época de crisis", "Una estrategia de marketing bancario", "Una cuenta de burbujas de inversión"], correct: 0 },
+            { q: "¿Qué es el apalancamiento financiero?", a: ["Usar deuda o capital prestado para financiar una inversión y potenciar ganancias (o pérdidas)", "Ahorrar dinero poco a poco", "Gastar menos de lo que ingresas", "Vender tus bienes personales"], correct: 0 },
+            { q: "¿Qué es un dividendo?", a: ["Una comisión que cobra el bróker", "La parte de los beneficios de una empresa repartida entre sus accionistas", "Un impuesto a las ganancias de capital", "Un tipo de interés bancario"], correct: 1 },
+            { q: "¿Qué es la diversificación geográfica?", a: ["Invertir únicamente en tu país de residencia", "Distribuir tus inversiones en diferentes países y regiones económicas para reducir riesgos", "Comprar bienes raíces en la playa", "Cambiar de moneda local a dólares físicos"], correct: 1 },
+            { q: "¿Qué es un fondo de inversión monetaria?", a: ["Un fondo enfocado en activos muy seguros y de corto plazo como letras del tesoro", "Inversiones de alto riesgo en criptomonedas", "Una caja fuerte personal", "Un préstamo entre particulares"], correct: 0 },
+            { q: "¿Qué es una letra del tesoro?", a: ["Un título de deuda pública a muy corto plazo emitido por un gobierno", "Una carta de recomendación bancaria", "Un premio de la lotería nacional", "Un certificado de depósito a 10 años"], correct: 0 },
+            { q: "¿Qué es el análisis fundamental?", a: ["Estudiar los gráficos de precios históricos de una acción", "Evaluar la salud financiera, la gestión y el valor real de una empresa o activo", "Preguntar a amigos en qué invertir", "Revisar el estado de cuenta diario"], correct: 1 },
+            { q: "¿Qué es el análisis técnico?", a: ["Estudiar gráficos, tendencias y patrones de precios en el mercado para predecir movimientos", "Reparar cajeros automáticos", "Configurar la banca en línea", "Revisar contratos de hipotecas"], correct: 0 },
+            { q: "¿Qué es una criptomoneda?", a: ["Un activo digital descentralizado que utiliza criptografía para asegurar transacciones", "Dinero físico impreso por el banco central", "Una tarjeta de crédito virtual", "Un bono del estado digital"], correct: 0 },
+            { q: "¿Qué es la tecnología Blockchain?", a: ["Una base de datos descentralizada y segura que registra transacciones en bloques encadenados", "Un sistema de seguridad para cajeros", "Una red social para millonarios", "Un tipo de criptomoneda famosa"], correct: 0 },
+            { q: "¿Qué es una wallet o cartera fría de criptomonedas?", a: ["Una cuenta bancaria en un paraíso fiscal", "Un dispositivo físico desconectado de internet para almacenar claves criptográficas de forma segura", "Una aplicación móvil con contraseña débil", "Una tarjeta de crédito de metal"], correct: 1 },
+            { q: "¿Qué es el interés simple?", a: ["Interés calculado únicamente sobre el capital principal inicial, sin acumularse", "Interés que cambia cada semana", "Interés compuesto acumulado", "Un préstamo sin intereses"], correct: 0 },
+            { q: "¿Qué es el costo de vida?", a: ["El promedio de gastos necesarios para mantener un determinado nivel de vida (vivienda, comida, etc.)", "Lo que cuesta comprar un coche de lujo", "Los impuestos anuales fijos", "El precio de los pasajes de avión"], correct: 0 },
+            { q: "¿Qué es un plan de jubilación 401(k) o equivalente?", a: ["Un plan de ahorro para el retiro patrocinado por el empleador con ventajas fiscales", "Un crédito de libre inversión", "Un seguro de desempleo temporal", "Un bono vacacional"], correct: 0 },
+            { q: "¿Qué es una hipoteca de tasa fija?", a: ["Un préstamo para vivienda donde la cuota mensual de interés y capital no cambia durante el plazo", "Un préstamo donde la cuota sube según la inflación", "Un alquiler con opción a compra", "Una ayuda estatal para jóvenes"], correct: 0 },
+            { q: "¿Qué es el periodo de gracia en un crédito?", a: ["Un tiempo en el que no estás obligado a pagar capital o intereses", "Una multa por retraso", "El tiempo que tarda el banco en aprobarte", "Un descuento por pago adelantado"], correct: 0 },
+            { q: "¿Qué es la morosidad?", a: ["El retraso o impago en el cumplimiento de una obligación financiera", "El ahorro en cuentas extranjeras", "La puntualidad en los pagos", "Un tipo de inversión segura"], correct: 0 },
+            { q: "¿Qué es un seguro de vida?", a: ["Un contrato que garantiza una compensación económica a los beneficiarios en caso de fallecimiento del asegurado", "Una cuenta de ahorros para emergencias médicas", "Un plan de pensiones anticipado", "Un crédito en caso de desempleo"], correct: 0 },
+            { q: "¿Qué es un seguro de responsabilidad civil?", a: ["Un seguro que cubre los daños que causes involuntariamente a terceros", "Un seguro exclusivo para vehículos de lujo", "Una cobertura para robos en casa", "Un fondo de ahorro obligatorio"], correct: 0 },
+            { q: "¿Qué es la titularización o bursatilización?", a: ["Convertir activos ilíquidos (como hipotecas) en títulos valores negociables en el mercado", "Hacerte dueño de una empresa", "Abrir una cuenta bancaria internacional", "Comprar oro en lingotes"], correct: 0 },
+            { q: "¿Qué es el arbitraje financiero?", a: ["Comprar un activo en un mercado a menor precio y venderlo simultáneamente en otro a mayor precio para ganar la diferencia", "Discutir con el banco por una comisión", "Negociar una deuda pendiente", "Hacer un presupuesto familiar"], correct: 0 },
+            { q: "¿Qué es una OPI (Oferta Pública Inicial)?", a: ["El momento en que una empresa privada vende acciones al público por primera vez en la bolsa", "Una oferta de empleo en un banco", "El cierre fiscal de año", "Un préstamo internacional"], correct: 0 },
+            { q: "¿Qué es un bróker financiero?", a: ["Una persona o entidad intermediaria que ejecuta órdenes de compra y venta de activos en los mercados", "Un asesor de deudas personales", "Un cajero automático avanzado", "Un auditor de impuestos"], correct: 0 },
+            { q: "¿Qué es la tasa libre de riesgo?", a: ["El rendimiento teórico de una inversión con riesgo cero de impago (usualmente bonos del gobierno a corto plazo)", "Una cuenta de ahorros común", "Invertir en acciones estables", "Guardar dinero en efectivo en casa"], correct: 0 },
+            { q: "¿Qué es el ratio de endeudamiento?", a: ["El porcentaje de tus ingresos que se destina a pagar deudas", "La cantidad total de tarjetas de crédito que posees", "El tiempo que tardas en pagar una hipoteca", "El dinero que te sobra al mes"], correct: 0 },
+            { q: "¿Qué es el capital social de una empresa?", a: ["El conjunto de aportaciones dinerarias o de bienes que los socios hacen a una sociedad", "Las donaciones caritativas que realiza", "El valor de sus deudas comerciales", "Los beneficios netos anuales"], correct: 0 },
+            { q: "¿Qué es la evasión fiscal?", a: ["El uso de prácticas ilegales para ocultar ingresos o no pagar los impuestos correspondientes", "Planificar legalmente tus impuestos para pagar menos", "El pago puntual de tributos", "Pedir una devolución de impuestos"], correct: 0 },
+            { q: "¿Qué es la elusión fiscal?", a: ["Aprovechar vacíos legales de forma lícita para minimizar el pago de impuestos", "No declarar los ingresos al fisco", "Cometer un delito financiero", "Pagar multas de tránsito"], correct: 0 },
+            { q: "¿Qué es una auditoría financiera?", a: ["Una revisión y verificación independiente de los estados contables de una empresa o entidad", "Un cálculo rápido de tus gastos personales", "La aprobación de un crédito bancario", "Una multa por retraso fiscal"], correct: 0 },
+            { q: "¿Qué es un fondo de cobertura (Hedge Fund)?", a: ["Un vehículo de inversión alternativo y privado dirigido a inversores cualificados, con estrategias complejas", "Un fondo para emergencias domésticas", "Una cuenta de ahorros bancaria tradicional", "Un seguro contra catástrofes naturales"], correct: 0 },
+            { q: "¿Qué es la dación en pago inversa?", a: ["Una figura jurídica que no existe comúnmente", "Un sistema de renta vitalicia inmobiliaria donde vendes tu casa pero sigues viviendo en ella", "Pedir un préstamo al revés", "Pagar una deuda por cuotas adelantadas"], correct: 1 },
+            { q: "¿Qué es una carta de crédito?", a: ["Un documento de pago emitido por un banco que garantiza que el vendedor recibirá su dinero", "Una tarjeta de crédito con diseño especial", "Una recomendación para pedir un préstamo", "Una carta de rechazo de hipoteca"], correct: 0 },
+            { q: "¿Qué es el dinero plástico?", a: ["Tarjetas de débito o crédito utilizadas para realizar pagos electrónicos", "Monedas hechas de polímero especial", "Dinero de juguete para niños", "Fichas de casino"], correct: 0 },
+            { q: "¿Qué es la banca de inversión?", a: ["El área de la banca que ayuda a corporaciones y gobiernos a recaudar capital y hacer operaciones de fusiones y adquisiciones", "Cuentas de ahorro para estudiantes", "Cajeros automáticos nocturnos", "Préstamos para comprar vehículos"], correct: 0 },
+            { q: "¿Qué es un pagaré?", a: ["Un documento contable que contiene la promesa incondicional de pagar una suma de dinero en una fecha fija", "Una factura de compraventa simple", "Un recibo de luz o agua", "Un contrato de alquiler"], correct: 0 },
+            { q: "¿Qué es el flujo de caja operativo?", a: ["El dinero en efectivo generado por las operaciones principales de una empresa", "El saldo de tu cuenta personal de ahorros", "El dinero gastado en marketing", "Los ingresos por venta de activos fijos"], correct: 0 },
+            { q: "¿Qué es la tasa anual equivalente (TAE o APR)?", a: ["El indicador que refleja el costo o rendimiento efectivo anual de un producto financiero incluyendo comisiones", "El interés nominal mensual sin comisiones", "El impuesto anual aplicado al salario", "La ganancia neta por inversiones de riesgo"], correct: 0 },
+            { q: "¿Qué es el tipo de interés nominal (TIN)?", a: ["El porcentaje fijo que se acuerda como pago por el uso del dinero prestado, sin incluir otros gastos", "La tasa real ajustada por la inflación", "El total de intereses pagados al final del préstamo", "Una comisión bancaria oculta"], correct: 0 },
+            { q: "¿Qué es una plusvalía?", a: ["El incremento en el valor de un activo o bien por causas ajenas a la inversión directa", "La pérdida de valor de un coche", "Un impuesto municipal", "Un dividendo trimestral"], correct: 0 },
+            { q: "¿Qué es una minusvalía financiera?", a: ["Una pérdida económica al vender un activo por debajo de su precio de compra", "Una discapacidad física avalada por el banco", "Un descuento por pronto pago", "Un impuesto a las ganancias"], correct: 0 },
+            { q: "¿Qué es el test de idoneidad en inversiones?", a: ["Un cuestionario obligatorio que hacen las entidades para comprobar tus conocimientos y experiencia antes de ofrecerte un producto complejo", "Un examen físico para asegurar tu vida", "Una prueba de mecanografía para trabajar en el banco", "Un test psicológico de estrés"], correct: 0 },
+            { q: "¿Qué es el blanqueo de capitales (lavado de dinero)?", a: ["El proceso de hacer que fondos obtenidos de actividades ilegales parezcan legítimos", "Limpiar monedas y billetes viejos en el banco", "Cambiar moneda local a dólares", "Pagar los impuestos a tiempo"], correct: 0 },
+            { q: "¿Qué es un paraíso fiscal?", a: ["Un territorio con baja o nula tributación y estrictas leyes de secreto bancario", "Un parque temático de finanzas", "Una cuenta de ahorros con alto rendimiento", "Un fondo de inversión gubernamental"], correct: 0 },
+            { q: "¿Qué es la responsabilidad limitada en una empresa?", a: ["Que los socios solo responden por las deudas hasta el límite de su aportación de capital", "Que el banco te presta sin límite", "Que no pagas impuestos nunca", "Que la empresa no puede ser demandada"], correct: 0 },
+            { q: "¿Qué es el crowdfunding?", a: ["Financiación colectiva a través de pequeñas aportaciones de múltiples inversores, usualmente por internet", "Un crédito bancario tradicional", "Una subvención del gobierno", "Un préstamo entre familiares directos"], correct: 0 },
+            { q: "¿Qué es el crowdlending?", a: ["Préstamos entre inversores particulares y prestatarios a través de plataformas digitales especializadas", "Comprar acciones en masa", "Donar dinero a causas benéficas", "Ahorrar en conjunto con amigos"], correct: 0 },
+            { q: "¿Qué es un plan de incentivos por objetivos?", a: ["Una compensación económica extra ligada al cumplimiento de metas de rendimiento laboral", "Un descuento en el supermercado", "Una tasa de interés preferencial", "Un bono de permanencia bancaria"], correct: 0 },
+            { q: "¿Qué es el capital de riesgo (Venture Capital)?", a: ["Inversión financiera en empresas emergentes (startups) con alto potencial de crecimiento y riesgo", "Comprar bonos del estado a largo plazo", "Apostar en el casino con dinero prestado", "Pagar deudas de tarjetas de crédito"], correct: 0 },
+            { q: "¿Qué es un fondo de capital privado (Private Equity)?", a: ["Fondo que invierte en empresas privadas que no cotizan en bolsa para reestructurarlas y venderlas con ganancia", "Una cuenta de ahorros secreta", "Un préstamo personal sin aval", "Un plan de jubilación obligatorio"], correct: 0 },
+            { q: "¿Qué es la amortización anticipada?", a: ["Devolver parte o la totalidad de un préstamo antes de la fecha de vencimiento pactada", "Retrasar el pago de una cuota mensual", "Pedir un nuevo crédito para pagar otro", "Aumentar el plazo de la hipoteca"], correct: 0 },
+            { q: "¿Qué es una tarjeta de débito?", a: ["Una tarjeta que te permite gastar el dinero que ya tienes depositado en tu cuenta bancaria", "Un crédito automático del banco", "Una tarjeta exclusiva para compras por internet", "Un monedero de criptomonedas"], correct: 0 },
+            { q: "¿Qué es un cajero automático (ATM)?", a: ["Un dispositivo electromecánico para realizar operaciones bancarias básicas sin ir a ventanilla", "Una máquina para cambiar monedas por billetes", "Un sistema de seguridad para tarjetas", "Una caja fuerte personal portátil"], correct: 0 },
+            { q: "¿Qué es el PIN de una tarjeta?", a: ["Un número de identificación personal secreto de 4 o más dígitos para autorizar transacciones", "El número largo impreso en el frente de la tarjeta", "La fecha de caducidad del plástico", "El código de seguridad trasero (CVV)"], correct: 0 },
+            { q: "¿Qué es el código CVV de una tarjeta?", a: ["Un código de seguridad de 3 o 4 dígitos situado al dorso o frente de la tarjeta para compras online", "Tu número de documento de identidad", "La clave secreta del cajero", "El número de la cuenta corriente asociada"], correct: 0 },
+            { q: "¿Qué es una transferencia bancaria SEPA?", a: ["Una transferencia de fondos en euros dentro de la zona europea bajo normas unificadas", "Un envío de dinero internacional con comisiones altas", "Un pago en efectivo en ventanilla", "Un cheque de viajero"], correct: 0 },
+            { q: "¿Qué es una orden de domiciliación bancaria?", a: ["Una autorización para que un proveedor cobre automáticamente sus servicios en tu cuenta", "Una orden para bloquear tu tarjeta", "Una transferencia manual mensual", "Un tipo de inversión a plazo fijo"], correct: 0 },
+            { q: "¿Qué es la banca electrónica o digital?", a: ["La prestación de servicios bancarios a través de internet y aplicaciones móviles", "Usar cajeros automáticos físicos solamente", "Llamar por teléfono al asesor financiero", "Pagar exclusivamente con efectivo"], correct: 0 },
+            { q: "¿Qué es el phishing financiero?", a: ["Un fraude cibernético para obtener información confidencial haciéndose pasar por una entidad legítima", "Una estrategia de inversión en pesca comercial", "Una comisión por uso de cajero ajeno", "Un tipo de préstamo rápido online"], correct: 0 },
+            { q: "¿Qué es el ransomware?", a: ["Un software malicioso que cifra tus archivos o bloquea tu sistema pidiendo un rescate económico", "Un programa para hacer presupuestos", "Una aplicación de banca móvil segura", "Un fondo de inversión en tecnología"], correct: 0 },
+            { q: "¿Qué es la tokenización en pagos?", a: ["Reemplazar los datos sensibles de tu tarjeta por un identificador digital único (token) para mayor seguridad", "Convertir monedas físicas en fichas de casino", "Crear criptomonedas propias", "Imprimir dinero en plástico"], correct: 0 },
+            { q: "¿Qué es una línea de crédito?", a: ["Un monto de dinero que el banco pone a tu disposición y del que puedes disponer según tus necesidades pagando intereses solo por lo usado", "Un préstamo fijo que se paga en cuotas iguales", "Una tarjeta de débito sin saldo", "Una donación bancaria"], correct: 0 },
+            { q: "¿Qué es un pagaré bancario?", a: ["Un título valor emitido por un banco que promete pagar una cantidad en fecha determinada", "Un recibo de luz", "Un contrato de alquiler de caja fuerte", "Una multa por descubierto"], correct: 0 },
+            { q: "¿Qué es la brecha salarial?", a: ["La diferencia media entre los ingresos salariales percibidos por hombres y mujeres", "La diferencia entre el sueldo mínimo y el máximo en una empresa", "Lo que te descuentan en impuestos", "El incremento anual por inflación"], correct: 0 },
+            { q: "¿Qué es el salario bruto?", a: ["La retribución total antes de aplicar retenciones de impuestos y cotizaciones de seguridad social", "El dinero neto que llega a tu cuenta bancaria", "Los beneficios adicionales o bonos", "El sueldo mínimo legal"], correct: 0 },
+            { q: "¿Qué es el salario neto?", a: ["La cantidad líquida que recibe el trabajador tras deducir impuestos y cotizaciones del salario bruto", "El sueldo total antes de deducciones", "El valor de los beneficios en especie", "La suma del salario más las horas extra"], correct: 0 },
+            { q: "¿Qué son los beneficios marginales o en especie?", a: ["Retribuciones no dinerarias facilitadas por la empresa (coche de empresa, seguro médico, vale de comida)", "Comisiones bancarias por manejo de cuenta", "Descuentos en tiendas locales", "Intereses de cuentas de ahorro"], correct: 0 },
+            { q: "¿Qué es un plan de ahorro sistemático?", a: ["Una aportación periódica y automática de una cantidad fija a un producto de ahorro o inversión", "Ahorrar solo cuando sobra dinero a fin de mes", "Guardar dinero debajo del colchón de vez en cuando", "Gastar sin control y luego pagar todo de golpe"], correct: 0 },
+            { q: "¿Qué es un fondo de inversión solidario?", a: ["Un fondo que destina parte de sus beneficios o comisiones a proyectos benéficos o sociales", "Un fondo exclusivo para ayudar a familiares", "Una cuenta bancaria congelada", "Un préstamo sin intereses para amigos"], correct: 0 },
+            { q: "¿Qué es la inversión ESG (Ambiental, Social y de Gobernanza)?", a: ["Inversiones que evalúan criterios ecológicos, sociales y de buenas prácticas empresariales además de la rentabilidad", "Invertir únicamente en empresas de combustibles fósiles", "Una estafa piramidal moderna", "Un impuesto ecológico obligatorio"], correct: 0 },
+            { q: "¿Qué es el greenwashing o lavado verde?", a: ["Práctica de ciertas empresas para dar una imagen engañosa de responsabilidad ecológica", "Lavar dinero en negocios de energías limpias", "Pagar impuestos por reciclar", "Un fondo de inversión en agricultura"], correct: 0 },
+            { q: "¿Qué es una cooperativa de crédito o caja de ahorros?", a: ["Una entidad financiera sin ánimo de lucro orientada a servir a sus socios con base en la economía social", "Un banco comercial internacional privado", "Una empresa de préstamos rápidos informales", "Una casa de cambio de divisas"], correct: 0 },
+            { q: "¿Qué es el microcrédito?", a: ["Pequeños préstamos otorgados a personas de bajos recursos o emprendedores sin acceso a la banca tradicional", "Un crédito millonario para grandes empresas", "Una tarjeta de crédito con límite bajo", "Un adelanto de nómina de un día"], correct: 0 },
+            { q: "¿Qué es la inclusión financiera?", a: ["Acceso y uso de servicios financieros formales y útiles por parte de todos los sectores de la población", "Obligar a todos a tener tarjeta de crédito", "Abrir cuentas en paraísos fiscales", "Pagar todo en efectivo sin registrar"], correct: 0 },
+            { q: "¿Qué es la educación financiera?", a: ["La capacidad de entender y aplicar eficazmente habilidades financieras, incluida la gestión personal", "Saber sumar y restar en el colegio", "Trabajar en Wall Street", "Conocer los nombres de las monedas del mundo"], correct: 0 },
+            { q: "¿Qué es una estafa piramidal (esquema Ponzi)?", a: ["Un fraude donde se paga a los primeros inversores con el dinero aportado por los nuevos inversores engañados", "Un sistema legal de inversión en bienes raíces", "Una pirámide de ahorro familiar tradicional", "Un fondo de inversión en oro"], correct: 0 },
+            { q: "¿Qué es el coste sunk (coste hundido)?", a: ["Un costo en el que ya se ha incurrido y que no se puede recuperar, el cual no debe influir en decisiones futuras", "El precio de un barco que se hunde", "Una deuda incobrable con el banco", "Un impuesto por transporte marítimo"], correct: 0 },
+            { q: "¿Qué es un plan de contingencia financiera?", a: ["Un protocolo o estrategia detallada para afrontar crisis económicas personales o empresariales", "Gastar dinero en vacaciones sin planear", "Pedir préstamos cuando te quedas sin trabajo", "Ignorar las deudas hasta que prescriban"], correct: 0 },
+            { q: "¿Qué es la resiliencia financiera?", a: ["La capacidad de resistir y recuperarse rápidamente de los shocks económicos adversos", "Tener mucho dinero heredado", "No gastar nunca en nada", "Trabajar horas extra todos los días"], correct: 0 },
+            { q: "¿Qué es el patrimonio familiar?", a: ["El conjunto de bienes, derechos y obligaciones que pertenecen a una familia", "El dinero que guarda el padre en su cartera", "Una herencia bloqueada por juicio", "Las deudas acumuladas de los hijos"], correct: 0 },
+            { q: "¿Qué es una beca de estudios?", a: ["Una ayuda económica concedida para sufragar los gastos de educación sin obligación de devolución", "Un préstamo estudiantil con intereses altos", "Un crédito del banco para comprar libros", "Un salario por ir a la universidad"], correct: 0 },
+            { q: "¿Qué es un préstamo estudiantil?", a: ["Un crédito específico destinado a financiar la educación superior, el cual debe devolverse con intereses", "Un regalo del gobierno por estudiar", "Una beca de excelencia académica", "Un ahorro escolar a plazo fijo"], correct: 0 },
+            { q: "¿Qué es el factoring?", a: ["Operación donde una empresa cede sus facturas por cobrar a una entidad financiera a cambio de liquidez inmediata", "Fabricar productos financieros en serie", "Pagar las facturas de la luz tarde", "Comprar acciones de manufactura"], correct: 0 },
+            { q: "¿Qué es el confirming?", a: ["Servicio de gestión de pagos de una empresa a sus proveedores con opción de cobro anticipado", "Confirmar una cita con el asesor", "Aceptar una tarjeta de crédito nueva", "Verificar saldo en el cajero"], correct: 0 },
+            { q: "¿Qué es el leasing financiero?", a: ["Un contrato de arrendamiento financiero con opción de compra del bien al finalizar el plazo", "Alquilar una casa por un fin de semana", "Prestar dinero a un amigo sin contrato", "Comprar un coche al contado"], correct: 0 },
+            { q: "¿Qué es el renting?", a: ["Un alquiler a largo plazo de bienes (como vehículos o equipos) que incluye servicios de mantenimiento y seguro", "Comprar un bien a plazos fijos", "Vender un activo rápidamente", "Un préstamo con garantía de renta"], correct: 0 },
+            { q: "¿Qué es un holding empresarial?", a: ["Una sociedad matriz que posee la mayoría de las acciones de otras empresas para controlarlas", "Una caja fuerte de seguridad", "Una reunión de accionistas", "Un fondo de inversión público"], correct: 0 },
+            { q: "¿Qué es una franquicia?", a: ["Un modelo de negocio donde se cede el derecho a comercializar una marca y producto a cambio de regalías", "Comprar acciones de una tienda famosa", "Un préstamo comercial del gobierno", "Una tienda sin empleados"], correct: 0 },
+            { q: "¿Qué es el mercado primario de valores?", a: ["El mercado donde se emiten y venden por primera vez los títulos valores directamente al inversor", "El mercado de compraventa de segunda mano entre particulares", "La bolsa de valores central", "Una casa de cambio de divisas"], correct: 0 },
+            { q: "¿Qué es el mercado secundario de valores?", a: ["El mercado donde se compran y venden títulos valores ya emitidos previamente entre inversores", "El banco central de un país", "El mercado de alimentos frescos", "Una tienda de empeños"], correct: 0 },
+            { q: "¿Qué es la volatilidad del mercado?", a: ["La medida de la frecuencia y magnitud de los cambios en el precio de un activo a lo largo del tiempo", "La estabilidad absoluta de una cuenta de ahorros", "El volumen de dinero impreso por el banco", "La ganancia fija anual de un bono"], correct: 0 },
+            { q: "¿Qué es un mercado alcista (Bull Market)?", a: ["Un mercado financiero en el que los precios de los activos muestran una tendencia sostenida al alza", "Un mercado donde predominan las caídas de precios", "Un mercado enfocado en la ganadería", "Una crisis económica general"], correct: 0 },
+            { q: "¿Qué es un mercado bajista (Bear Market)?", a: ["Un mercado financiero caracterizado por la caída prolongada en los precios de los activos", "Un mercado con alta rentabilidad en acciones", "Una época de rebajas comerciales", "Un sistema de ahorro seguro"], correct: 0 },
+            { q: "¿Qué es la diversificación de carteras?", a: ["Estrategia de distribuir el capital en diferentes tipos de activos para minimizar el riesgo global", "Invertir todo el dinero en una sola empresa tecnológica", "Guardar billetes de diferentes denominaciones", "Comprar casas en distintas calles"], correct: 0 },
+            { q: "¿Qué es el rebalanceo de cartera?", a: ["Ajustar periódicamente las proporciones de los activos en tu portafolio para mantener el nivel de riesgo deseado", "Cambiar de banco cada mes", "Retirar todo el dinero de la bolsa", "Pagar deudas con ganancias de inversión"], correct: 0 },
+            { q: "¿Qué es una orden de compra limitada (Limit Order)?", a: ["Una orden para comprar un activo solo a un precio específico o mejor", "Comprar sin mirar el precio de mercado", "Una tarjeta con límite de gasto diario", "Un préstamo limitado por el banco"], correct: 0 },
+            { q: "¿Qué es una orden de stop-loss?", a: ["Una orden automática para vender un activo cuando su precio cae a un nivel determinado para limitar pérdidas", "Detener todas tus inversiones para siempre", "Un límite de velocidad al gastar", "Un seguro de vida obligatorio"], correct: 0 },
+            { q: "¿Qué es el ratio P/E (Precio/Beneficio)?", a: ["Un indicador financiero que compara el precio de una acción con los beneficios por acción de la empresa", "El porcentaje de descuento en una tienda", "La relación entre tu sueldo y tus deudas", "El costo de mantenimiento de una tarjeta"], correct: 0 },
+            { q: "¿Qué es la rentabilidad por dividendo?", a: ["El porcentaje que representan los dividendos repartidos por una acción respecto a su precio actual", "El interés que paga una cuenta corriente", "Un impuesto a las ganancias bursátiles", "El costo de comprar un bono"], correct: 0 },
+            { q: "¿Qué es el flujo de caja libre?", a: ["El efectivo que genera una empresa después de deducir los gastos operativos y de capital", "El dinero que te sobra al gastar en ocio", "Un subsidio gubernamental", "El saldo de tu tarjeta de débito"], correct: 0 },
+            { q: "¿Qué es una auditoría interna?", a: ["Una evaluación de los controles y procesos internos de una empresa realizada por su propio personal", "Una revisión de tus finanzas personales por un familiar", "Una inspección de hacienda obligatoria", "Un control de seguridad en cajeros"], correct: 0 },
+            { q: "¿Qué es una auditoría externa?", a: ["Una revisión contable realizada por auditores independientes ajenos a la empresa para garantizar transparencia", "Un control interno de los empleados", "Una auditoría hecha por la policía", "Un análisis de mercado de la competencia"], correct: 0 },
+            { q: "¿Qué es el capital circulante o fondo de maniobra?", a: ["Los recursos financieros líquidos que una empresa necesita para poder operar en el corto plazo", "El dinero gastado en la compra de camiones de reparto", "Los ahorros de los dueños de la empresa", "Las deudas a largo plazo de la compañía"], correct: 0 },
+            { q: "¿Qué es el apalancamiento operativo?", a: ["El grado en que una empresa puede aumentar sus beneficios operando con costes fijos altos", "Pedir un préstamo para comprar maquinaria", "Ahorrar en costos de producción", "Reducir la plantilla de trabajadores"], correct: 0 },
+            { q: "¿Qué es el riesgo de crédito?", a: ["El riesgo de que el prestatario o emisor de un bono no cumpla con sus pagos de intereses o capital", "El riesgo de que el dinero pierda valor por la inflación", "El riesgo de no poder vender un activo rápido", "El riesgo de perder tu tarjeta en la calle"], correct: 0 },
+            { q: "¿Qué es el riesgo de mercado?", a: ["El riesgo de que el valor de una inversión disminuya debido a fluctuaciones generales del mercado", "El riesgo de que te roben en el supermercado", "El riesgo de que el banco cierre su sucursal física", "El riesgo de no tener efectivo a mano"], correct: 0 },
+            { q: "¿Qué es el riesgo de liquidez?", a: ["El riesgo de no poder convertir un activo en efectivo rápidamente sin sufrir pérdidas significativas", "El riesgo de gastar toda el agua de casa", "El riesgo de que llueva el día de cobro", "El riesgo de tener demasiadas monedas"], correct: 0 },
+            { q: "¿Qué es el riesgo operacional?", a: ["El riesgo de pérdidas derivadas de fallos en procesos, sistemas, personas o eventos externos", "El riesgo de perder dinero en la bolsa de valores", "El riesgo de una mala inversión inmobiliaria", "El riesgo de inflación alta"], correct: 0 },
+            { q: "¿Qué es una letra de cambio?", a: ["Un documento mercantil que garantiza el pago de una cantidad en una fecha concreta", "Un billete falso detectado en ventanilla", "Una moneda extranjera antigua", "Un recibo de luz digital"], correct: 0 },
+            { q: "¿Qué es un cheque nominativo?", a: ["Un cheque emitido a favor de una persona o entidad específica que solo puede cobrar ella", "Un cheque que puede cobrar cualquiera que lo tenga", "Un documento sin validez legal", "Un vale de descuento comercial"], correct: 0 },
+            { q: "¿Qué es un cheque al portador?", a: ["Un cheque que no especifica beneficiario y puede ser cobrado por quien lo presente", "Un cheque exclusivo para cuentas de empresas", "Un documento con firma electrónica", "Una orden de transferencia internacional"], correct: 0 },
+            { q: "¿Qué es la banca comercial?", a: ["Instituciones financieras que ofrecen servicios a particulares y empresas (cuentas, préstamos, tarjetas)", "Bancos dedicados solo a grandes inversiones bursátiles", "Casas de cambio en aeropuertos", "Cooperativas de ahorro sin fines de lucro"], correct: 0 },
+            { q: "¿Qué es el Banco Central?", a: ["La institución pública que gestiona la moneda, la política monetaria y la regulación del sistema financiero de un país", "El banco más grande de propiedad privada", "Una caja de ahorros municipal", "Un fondo internacional de préstamos"], correct: 0 },
+            { q: "¿Qué es la política monetaria expansiva?", a: ["Medidas del banco central para aumentar la cantidad de dinero en circulación y bajar tipos de interés", "Subir los impuestos y las tasas de interés", "Reducir el gasto público drásticamente", "Congelar las cuentas bancarias"], correct: 0 },
+            { q: "¿Qué es la política monetaria restrictiva?", a: ["Medidas del banco central para reducir la masa monetaria y frenar la inflación subiendo tipos de interés", "Regalar dinero a los ciudadanos", "Imprimir más billetes sin control", "Bajar los tipos de interés al 0%"], correct: 0 },
+            { q: "¿Qué es el encaje bancario o reserva legal?", a: ["El porcentaje de los depósitos que los bancos deben mantener retenidos en efectivo sin prestar", "Las ganancias netas de una sucursal", "El dinero que guardas en tu caja de seguridad", "Las comisiones por mantenimiento"], correct: 0 },
+            { q: "¿Qué es el tipo de interés oficial de referencia?", a: ["La tasa fijada por el banco central que sirve de base para el costo del dinero en el sistema financiero", "El interés que te cobra tu tarjeta de crédito", "Una tasa opcional entre particulares", "El rendimiento de las acciones tecnológicas"], correct: 0 },
+            { q: "¿Qué es la tasa de desempleo?", a: ["El porcentaje de la población activa que busca trabajo pero no lo encuentra", "El número total de jubilados de un país", "La cantidad de personas que no quieren trabajar", "El porcentaje de empleados públicos"], correct: 0 },
+            { q: "¿Qué es el Producto Interno Bruto (PIB)?", a: ["El valor total de todos los bienes y servicios finales producidos en un país durante un periodo determinado", "La suma de los ahorros de todos los bancos", "El presupuesto anual del gobierno", "La cantidad de dinero físico en circulación"], correct: 0 },
+            { q: "¿Qué es la balanza de pagos?", a: ["Un registro contable de todas las transacciones económicas entre un país y el resto del mundo", "El pago de las deudas externas de un ciudadano", "La factura mensual de los servicios básicos", "El control de gastos de una empresa"], correct: 0 },
+            { q: "¿Qué es el superávit fiscal?", a: ["Cuando los ingresos del gobierno superan a sus gastos en un periodo determinado", "Cuando el estado gasta más de lo que ingresa", "Una deuda pública acumulada", "Un impuesto extraordinario"], correct: 0 },
+            { q: "¿Qué es el déficit fiscal?", a: ["Cuando los gastos del gobierno son superiores a sus ingresos recaudados", "Когда el estado tiene ahorros en el banco", "Un balance financiero equilibrado", "Una ganancia extraordinaria nacional"], correct: 0 },
+            { q: "¿Qué es la deuda pública?", a: ["El conjunto de deudas que mantiene el Estado frente a los ciudadanos y otros países u organismos", "Las deudas personales de los habitantes de un país", "El dinero impreso por el banco central", "Un préstamo entre empresas privadas"], correct: 0 },
+            { q: "¿Qué es la prima de riesgo?", a: ["El sobrecoste que un país o emisor debe pagar para financiarse en comparación con otros considerados más seguros", "Un seguro contra robos en cajeros", "Una comisión por cambio de divisa", "El riesgo de perder dinero en acciones"], correct: 0 },
+            { q: "¿Qué es una calificadora de riesgo (Rating)?", a: ["Una agencia que evalúa la solvencia y capacidad de pago de empresas o países (ej. Moody's, S&P)", "Un inspector de hacienda fiscal", "Un asesor financiero personal", "Un software de contabilidad"], correct: 0 },
+            { q: "¿Qué es el grado de inversión?", a: ["Una calificación alta otorgada a emisores de deuda con bajo riesgo de impago", "Tener dinero para comprar una casa", "Un curso avanzado de finanzas", "Una tarjeta de crédito VIP"], correct: 0 },
+            { q: "¿Qué es el bono basura (High Yield)?", a: ["Bonos con baja calificación crediticia, alto riesgo de impago y mayor rentabilidad ofrecida", "Papel reciclado de oficinas bancarias", "Acciones de empresas que quebraron", "Monedas antiguas sin valor"], correct: 0 },
+            { q: "¿Qué es el dinero en efectivo?", a: ["Monedas y billetes de curso legal emitidos por la autoridad monetaria", "Dinero depositado en cuentas corrientes", "Tarjetas de débito y crédito", "Criptomonedas descentralizadas"], correct: 0 },
+            { q: "¿Qué es un fondo de inversión inmobiliaria (REIT / SOCIMI)?", a: ["Sociedades que cotizan en bolsa y poseen o financian bienes raíces generadores de renta", "Comprar una casa para vivir toda la vida", "Un préstamo hipotecario comercial", "Una constructora de edificios"], correct: 0 },
+            { q: "¿Qué es el interés penalatorio o moratorio?", a: ["Un interés adicional que se cobra por retrasarse en el pago de una deuda", "Un descuento por pagar antes de tiempo", "Una tasa de interés fija mensual", "Una comisión por apertura de cuenta"], correct: 0 },
+            { q: "¿Qué es la dación en pago liberatoria?", a: ["Entregar el inmueble hipotecado para cancelar totalmente la deuda sin que quede saldo pendiente", "Un pago parcial de la hipoteca", "Un préstamo con aval de terceros", "Una refinanciación de deudas"], correct: 0 },
+            { q: "¿Qué es el embargo de bienes?", a: ["La retención judicial de bienes ordenada para asegurar el cumplimiento de una deuda impagada", "Un regalo del banco por buen cliente", "La compra de acciones judiciales", "Un bloqueo temporal de la tarjeta por seguridad"], correct: 0 },
+            { q: "¿Qué es la insolvencia?", a: ["La incapacidad financiera temporal o definitiva para hacer frente a las obligaciones de pago", "Tener exceso de dinero ahorrado", "Pagar las deudas antes de tiempo", "Ganar un premio de lotería"], correct: 0 },
+            { q: "¿Qué es la bancarrota o quiebra?", a: ["Un procedimiento legal para personas o empresas insolventes que no pueden pagar sus deudas", "Un cambio de moneda nacional", "Una estrategia de marketing bancario", "El cierre temporal de un banco por feriado"], correct: 0 },
+            { q: "¿Qué es la reestructuración de deuda?", a: ["Modificar los términos originales de un préstamo (plazo, interés) para facilitar su pago", "Pedir un nuevo crédito con intereses más altos", "Ignorar las deudas por cinco años", "Declarar quiebra inmediata"], correct: 0 },
+            { q: "¿Qué es un avalista o fiador?", a: ["Una persona que garantiza el pago de una deuda ajena en caso de que el deudor principal no lo haga", "El director del banco que aprueba créditos", "Un asesor financiero independiente", "El beneficiario de un seguro de vida"], correct: 0 },
+            { q: "¿Qué es un préstamo quirografario?", a: ["Un préstamo basado únicamente en la confianza y la firma del deudor, sin garantía real específica (hipoteca o prenda)", "Un crédito respaldado por oro físico", "Un préstamo exclusivo para comprar libros", "Una línea de crédito empresarial"], correct: 0 },
+            { q: "¿Qué es un préstamo con garantía hipotecaria?", a: ["Un préstamo donde se deja un bien inmueble como garantía de pago ante el banco", "Un crédito rápido sin requisitos", "Una tarjeta de crédito sin límite", "Un préstamo entre familiares"], correct: 0 },
+            { q: "¿Qué es un préstamo con garantía prendaria?", a: ["Un préstamo donde se deja un bien mueble (como un vehículo o maquinaria) como garantía", "Un crédito garantizado con una casa", "Un préstamo personal sin aval", "Una cuenta de ahorros bloqueada"], correct: 0 },
+            { q: "¿Qué es el leasing operativo?", a: ["Un contrato de alquiler de bienes sin opción de compra obligatoria, orientado a uso temporal", "Comprar acciones a plazos", "Un crédito para remodelar la cocina", "Un fondo de inversión a corto plazo"], correct: 0 },
+            { q: "¿Qué es el capital semilla?", a: ["Financiación inicial aportada para poner en marcha una nueva idea de negocio o startup", "Dinero invertido en granjas y agricultura", "Un ahorro para la universidad de los hijos", "Un bono del estado a largo plazo"], correct: 0 },
+            { q: "¿Qué es una start-up?", a: ["Una empresa de nueva creación con alto potencial de crecimiento basada en innovación y tecnología", "Una tienda tradicional de barrio", "Una sucursal bancaria móvil", "Una empresa multinacional consolidada"], correct: 0 },
+            { q: "¿Qué es la contabilidad creativa?", a: ["Uso de los vacíos de la normativa contable para presentar los estados financieros de forma más favorable", "Diseñar logotipos para bancos", "Llevar la contabilidad en colores", "Un curso de finanzas para artistas"], correct: 0 },
+            { q: "¿Qué es el blanqueo de dinero en efectivo?", a: ["Ingresar grandes sumas de dinero ilícito fraccionadas para evitar controles bancarios", "Lavar billetes manchados de tinte", "Cambiar moneda local a divisa extranjera", "Pagar los impuestos en ventanilla"], correct: 0 },
+            { q: "¿Qué es una cuenta nodriza o cuenta puente?", a: ["Una cuenta temporal utilizada para transferir fondos entre distintas entidades o cuentas", "Una cuenta de ahorros para madres", "Un crédito para comprar pañales", "Un fondo de pensiones privado"], correct: 0 },
+            { q: "¿Qué es el secreto bancario?", a: ["La obligación legal de las entidades financieras de no revelar datos de sus clientes sin autorización o mandato judicial", "Una contraseña secreta de la tarjeta", "Un tipo de cuenta oculta en el extranjero", "Un método de ahorro seguro"], correct: 0 },
+            { q: "¿Qué es un fondo monetario internacional (FMI)?", a: ["Organización internacional que fomenta la cooperación monetaria mundial y presta ayuda financiera a países en crisis", "Un banco comercial privado global", "Una red de cajeros automáticos mundiales", "Una bolsa de valores internacional"], correct: 0 },
+            { q: "¿Qué es el Banco Mundial?", a: ["Una organización internacional centrada en proporcionar financiación y asesoramiento para el desarrollo de países", "Un banco para ahorrar en dólares", "La bolsa de valores de Nueva York", "Una agencia de calificación de riesgo"], correct: 0 },
+            { q: "¿Qué es la banca ética?", a: ["Un sistema financiero que prioriza criterios sociales y medioambientales por encima de la rentabilidad económica pura", "Un banco que no cobra comisiones nunca", "Una entidad que regala dinero a los pobres", "Un préstamo sin intereses entre amigos"], correct: 0 },
+            { q: "¿Qué es una criptomoneda estable (Stablecoin)?", a: ["Una criptomoneda cuyo valor está vinculado al de otro activo estable, como el dólar estadounidense", "Una criptomoneda que nunca sube de precio", "Una moneda digital emitida por el banco central", "Un token de un videojuego"], correct: 0 },
+            { q: "¿Qué es una CBDC (Moneda Digital de Banco Central)?", a: ["Dinero digital soberano emitido directamente por el banco central de un país", "Cualquier criptomoneda descentralizada", "Una tarjeta de débito virtual", "Un bono digital del gobierno"], correct: 0 },
+            { q: "¿Qué es la minería de criptomonedas?", a: ["El proceso de validar transacciones y asegurar la red blockchain a cambio de nuevas monedas generadas", "Extraer oro físico para respaldar tokens", "Comprar y vender acciones en la bolsa", "Buscar contraseñas de cuentas bancarias"], correct: 0 },
+            { q: "¿Qué es una llave privada en criptomonedas?", a: ["Una clave criptográfica secreta que te da acceso y control sobre tus fondos en la blockchain", "La contraseña de tu correo electrónico", "El PIN de tu tarjeta de débito física", "El código de seguridad CVV"], correct: 0 },
+            { q: "¿Qué es una llave pública en criptomonedas?", a: ["Una dirección criptográfica compartida que funciona como tu número de cuenta para recibir fondos", "Tu contraseña secreta de acceso", "Tu número de documento de identidad", "La clave de recuperación de tu wallet"], correct: 0 },
+            { q: "¿Qué es el gas fee en redes blockchain?", a: ["Una comisión pagada a los validadores para procesar y ejecutar transacciones en una red blockchain", "El costo de la electricidad en casa", "Un impuesto gubernamental digital", "Una tarifa de mantenimiento de tarjeta"], correct: 0 },
+            { q: "¿Qué es un contrato inteligente (Smart Contract)?", a: ["Un programa informático que se ejecuta automáticamente cuando se cumplen condiciones predefinidas en la blockchain", "Un contrato de alquiler firmado en papel", "Un acuerdo verbal entre prestamistas", "Una póliza de seguro médico digital"], correct: 0 },
+            { q: "¿Qué es una DAO (Organización Autónoma Descentralizada)?", a: ["Una organización digital gobernada por contratos inteligentes y votaciones de sus miembros sin jerarquía central", "Una empresa tradicional con director general", "Un banco central descentralizado", "Una red social de finanzas"], correct: 0 },
+            { q: "¿Qué es el staking de criptomonedas?", a: ["Bloquear criptomonedas en una red para colaborar en su seguridad y validación a cambio de recompensas", "Comprar y vender criptomonedas rápidamente", "Guardar dinero en efectivo en el banco", "Pagar deudas con tokens digitales"], correct: 0 },
+            { q: "¿Qué es el rendimiento porcentual anual (APY)?", a: ["La tasa de rendimiento anual que incluye el efecto del interés compuesto generado", "El interés simple sin reinvertir", "La comisión anual de una tarjeta", "El impuesto sobre la renta anual"], correct: 0 },
+            { q: "¿Qué es la tasa de interés anual efectiva (APR)?", a: ["El costo anualizado de un préstamo o la ganancia sin incluir necesariamente el interés compuesto frecuente", "El interés nominal sin comisiones", "El rendimiento total con interés compuesto diario", "Una tarifa fija bancaria"], correct: 0 },
+            { q: "¿Qué es un fondo cotizado en bolsa (ETF)?", a: ["Un fondo de inversión que cotiza en bolsa como si fuera una acción individual, replicando un índice", "Un depósito a plazo fijo tradicional", "Una criptomoneda volátil", "Un bono del estado a 30 años"], correct: 0 },
+            { q: "¿Qué es el rebalanceo automático de cartera?", a: ["Una función automatizada de algunas plataformas para ajustar tu portafolio a los porcentajes originales", "Pagar deudas automáticamente cada mes", "Transferir dinero entre cuentas sin permiso", "Comprar acciones al azar"], correct: 0 },
+            { q: "¿Qué es una orden de mercado (Market Order)?", a: ["Una orden para comprar o vender un activo inmediatamente al precio actual disponible en el mercado", "Una orden que se ejecuta solo si baja el precio", "Un pedido de compras en el supermercado", "Una transferencia bancaria programada"], correct: 0 },
+            { q: "¿Qué es un fondo de acumulación?", a: ["Un fondo de inversión que reinvierte automáticamente los dividendos obtenidos en lugar de repartirlos", "Un fondo que guarda efectivo en una caja", "Una cuenta de ahorros para jubilados", "Un plan de pensiones privado"], correct: 0 },
+            { q: "¿Qué es un fondo de distribución?", a: ["Un fondo de inversión que reparte periódicamente los dividendos o beneficios entre sus partícipes", "Un fondo que reparte ropa y comida", "Una cuenta corriente compartida", "Un plan de pagos de deudas"], correct: 0 },
+            { q: "¿Qué es el análisis técnico chartista?", a: ["Estudio de patrones geométricos y formaciones en los gráficos de precios bursátiles", "Auditoría de balances contables de empresas", "Cálculo de impuestos anuales", "Revisión de contratos de crédito"], correct: 0 },
+            { q: "¿Qué es el análisis cuantitativo en finanzas?", a: ["Uso de modelos matemáticos y estadísticos complejos para valorar activos y gestionar riesgos", "Contar billetes a mano en el banco", "Revisar los recibos de la luz", "Calcular el presupuesto familiar básico"], correct: 0 },
+            { q: "¿Qué es la diversificación temporal?", a: ["Invertir capital de forma escalonada a lo largo del tiempo (ej. promediando costos) en lugar de todo de golpe", "Ahorrar solo los fines de semana", "Pagar las deudas en varios años", "Esperar un año antes de invertir"], correct: 0 },
+            { q: "¿Qué es el costo de transacción?", a: ["Los gastos o comisiones asociados a la compraventa de un activo o servicio financiero", "El costo de vida mensual familiar", "El precio de un producto en el supermercado", "Los intereses de una hipoteca"], correct: 0 },
+            { q: "¿Qué es la banca privada?", a: ["Servicios financieros altamente personalizados y exclusivos para clientes con alto patrimonio", "Cuentas corrientes para estudiantes universitarios", "Cajeros automáticos privados en casa", "Préstamos rápidos sin requisitos"], correct: 0 },
+            { q: "¿Qué es un family office?", a: ["Una empresa privada de asesoría de gestión de patrimonios para familias de alto poder adquisitivo", "Una gestora de presupuestos familiares básicos", "Un fondo de ayuda estatal para familias", "Una cuenta conjunta de ahorros"], correct: 0 },
+            { q: "¿Qué es el capital flotante (Free Float)?", a: ["El porcentaje de acciones de una empresa que está en manos de inversores públicos y cotiza libremente", "El dinero disponible en tu cuenta corriente", "El fondo de emergencia familiar", "Los beneficios netos anuales"], correct: 0 },
+            { q: "¿Qué es un split de acciones?", a: ["La división de las acciones existentes de una empresa en múltiples acciones nuevas para reducir su precio unitario", "La quiebra de una empresa cotizada", "La fusión de dos compañías", "El reparto de dividendos en efectivo"], correct: 0 },
+            { q: "¿Qué es un contrasplit (Reverse Split)?", a: ["La agrupación de varias acciones en una sola para aumentar el precio nominal por acción", "Un préstamo bancario devuelto", "La división de beneficios entre socios", "Una reducción de capital social"], correct: 0 },
+            { q: "¿Qué es el valor intrínseco de un activo?", a: ["El valor real y fundamental de un activo calculado mediante análisis financiero, independiente de su precio de mercado", "El precio al que se vende en la bolsa hoy", "El valor nominal impreso en un billete", "El costo de producción de una moneda"], correct: 0 },
+            { q: "¿Qué es el margen de seguridad en inversión?", a: ["La diferencia entre el valor intrínseco estimado de un activo y su precio de mercado actual", "El dinero guardado para emergencias en casa", "Un seguro contra caídas de la bolsa", "El límite de crédito de una tarjeta"], correct: 0 },
+            { q: "¿Qué es la gestión pasiva de inversiones?", a: ["Estrategia de inversión que busca replicar el rendimiento de un índice de mercado sin intentar superarlo", "No revisar nunca tus cuentas bancarias", "Dejar el dinero en una caja fuerte", "Comprar y vender acciones cada hora"], correct: 0 },
+            { q: "¿Qué es la gestión activa de inversiones?", a: ["Estrategia donde gestores profesionales seleccionan activos buscando superar el rendimiento promedio del mercado", "Ahorrar dinero todos los meses con disciplina", "Pagar deudas rápidamente usando métodos de bola de nieve", "Comprar fondos indexados automáticos"], correct: 0 },
+            { q: "¿Qué es una cartera equilibrada?", a: ["Un portafolio de inversión que combina activos de renta fija y renta variable para balancear riesgo y rentabilidad", "Una cuenta bancaria con saldo cero", "Tener la misma cantidad de deudas que de ahorros", "Gastar exactamente lo que ingresas"], correct: 0 },
+            { q: "¿Qué es la renta fija?", a: ["Conjunto de activos financieros donde el emisor se obliga a devolver el principal con un interés prefijado", "Un sueldo que no sube nunca con la inflación", "Un alquiler de vivienda con precio invariable", "Acciones de empresas estables"], correct: 0 },
+            { q: "¿Qué es la renta variable?", a: ["Activos financieros cuya rentabilidad no está garantizada de antemano y depende de los resultados de la empresa o mercado", "Un salario que cambia con las horas extra", "Un depósito bancario a plazo fijo", "Un bono del gobierno a tasa fija"], correct: 0 },
+            { q: "¿Qué es el mercado de derivados financieros?", a: ["Mercado cuyos instrumentos financieros basan su precio en el valor de otro activo subyacente (futuros, opciones)", "Mercado de compraventa de coches usados", "Un banco comercial tradicional", "Una tienda de cambio de divisas"], correct: 0 },
+            { q: "¿Qué es un contrato de opciones financieras?", a: ["Un contrato que otorga el derecho (mas no la obligación) de comprar o vender un activo a un precio fijado", "Una opción para cambiar de banco sin costo", "Un crédito con opción a prórroga", "Un seguro de vida opcional"], correct: 0 },
+            { q: "¿Qué es un contrato de futuros?", a: ["Un acuerdo estandarizado para comprar o vender un activo en una fecha futura a un precio preestablecido", "Una previsión del presupuesto familiar anual", "Un plan de pensiones a largo plazo", "Un préstamo bancario a 20 años"], correct: 0 },
+            { q: "¿Qué es un swap financiero?", a: ["Un acuerdo de intercambio de flujos financieros futuros entre dos partes según condiciones pactadas", "Cambiar billetes viejos por nuevos en el banco", "Pagar una deuda con otra tarjeta", "Un intercambio de bienes raíces"], correct: 0 },
+            { q: "¿Qué es el riesgo sistémico?", a: ["El riesgo de colapso de todo un sistema financiero o economía debido a la quiebra en cadena de sus componentes", "El riesgo de que tu ordenador personal falle", "El riesgo de perder tu empleo individual", "El riesgo de inflación local"], correct: 0 },
+            { q: "¿Qué es el dinero bancario?", a: ["El dinero creado por los bancos comerciales a través de la concesión de créditos y depósitos electrónicos", "Las monedas y billetes físicos impresos", "Criptomonedas descentralizadas", "Fichas de casino virtuales"], correct: 0 },
+            { q: "¿Qué es la base monetaria?", a: ["El total de efectivo en circulación más las reservas de los bancos en el banco central", "El dinero total que tienes en tus cuentas de ahorro", "El presupuesto anual de un país", "El valor de todas las acciones en bolsa"], correct: 0 },
+            { q: "¿Qué es la oferta monetaria (M1, M2, M3)?", a: ["Los diferentes agregados que miden la cantidad total de dinero circulante en una economía según su liquidez", "Las fases de un examen financiero", "Los niveles de riesgo de una inversión", "Las categorías de tarjetas de crédito"], correct: 0 },
+            { q: "¿Qué es la velocidad de circulación del dinero?", a: ["La rapidez con la que el dinero cambia de manos en una economía durante un periodo determinado", "La velocidad de una transferencia bancaria online", "El tiempo que tardas en retirar dinero del cajero", "El plazo de un préstamo rápido"], correct: 0 },
+            { q: "¿Qué es la estanflación?", a: ["Una situación económica excepcional caracterizada por alta inflación, estancamiento económico y desempleo elevado", "Una época de crecimiento y riqueza general", "Un periodo de deflación con salarios altos", "Una crisis bancaria temporal"], correct: 0 },
+            { q: "¿Qué es la deflación?", a: ["Una caída generalizada y prolongada de los precios de bienes y servicios en una economía", "El aumento de los impuestos de importación", "La bajada de las tasas de interés del banco", "Una devaluación de la moneda local"], correct: 0 },
+            { q: "¿Qué es la desinflación?", a: ["Una desaceleración en el ritmo al que suben los precios (la inflación baja, pero sigue siendo positiva)", "Una caída absoluta de los precios generales", "La eliminación total de los impuestos", "El cierre de cuentas bancarias"], correct: 0 },
+            { q: "¿Qué es un fondo de garantía de depósitos?", a: ["Un mecanismo estatal que protege los ahorros de los clientes ante la quiebra de una entidad financiera hasta cierto límite", "Un seguro de vida obligatorio para inversores", "Un fondo para rescatar empresas privadas", "Una garantía de préstamos hipotecarios"], correct: 0 },
+            { q: "¿Qué es el blanqueo de capitales por fraccionamiento (smurfing)?", a: ["Realizar múltiples depósitos pequeños para evitar los límites de declaración obligatoria ante las autoridades", "Ahorrar monedas sueltas en una alcancía", "Comprar acciones fraccionadas en bolsa", "Pagar una deuda en cuotas mínimas"], correct: 0 },
+            { q: "¿Qué es el arbitraje de tasas de interés?", a: ["Aprovechar las diferencias de tipos de interés entre distintos mercados para obtener beneficio sin riesgo", "Pagar los intereses de un préstamo con otro", "Negociar la rebaja de una hipoteca", "Ahorrar en cuentas de alto rendimiento"], correct: 0 },
+            { q: "¿Qué es un fondo soberano de inversión?", a: ["Un fondo de inversión propiedad de un Estado alimentado por surplus gubernamentales o recursos naturales", "Un préstamo internacional del FMI", "El presupuesto general de defensa de un país", "Una cuenta de ahorros del presidente"], correct: 0 },
+            { q: "¿Qué es la banca corporativa?", a: ["División de un banco enfocada en ofrecer servicios financieros a grandes empresas y corporaciones", "Cuentas corrientes para autónomos y freelancers", "Cajeros automáticos exclusivos para empleados", "Préstamos personales rápidos"], correct: 0 },
+            { q: "¿Qué es la banca minorista (Retail Banking)?", a: ["Servicios bancarios dirigidos al público general, pequeños ahorradores y consumidores particulares", "Banca de inversión de alto riesgo en bolsa", "Gestión de fondos soberanos estatales", "Préstamos internacionales entre países"], correct: 0 },
+            { q: "¿Qué es la titulización de activos?", a: ["Transformación de créditos o préstamos ilíquidos en títulos negociables en los mercados financieros", "Hacerte accionista de un banco", "Vender propiedades inmobiliarias al contado", "Abrir cuentas en el extranjero"], correct: 0 },
+            { q: "¿Qué es una tarjeta prepago?", a: ["Una tarjeta en la que cargas una cantidad de dinero específica antes de usarla, ideal para control de gastos o compras online", "Una tarjeta de crédito con saldo ilimitado", "Un documento de identidad bancaria", "Un crédito rápido de consumo"], correct: 0 },
+            { q: "¿Qué es la provisión por insolvencia?", a: ["Fondos que los bancos reservan contablemente para cubrir posibles impagos de sus prestatarios", "Un seguro de vida para clientes de tarjetas", "Una multa por retraso en el pago de impuestos", "Las ganancias netas de un banco"], correct: 0 },
+            { q: "¿Qué es el ratio de solvencia?", a: ["Indicador que mide la capacidad de una empresa o banco para hacer frente a todas sus deudas a largo plazo", "La cantidad de dinero en efectivo en caja", "El porcentaje de ahorro mensual personal", "El límite de crédito de una tarjeta"], correct: 0 },
+            { q: "¿Qué es el ratio de liquidez corriente?", a: ["Indicador que mide la capacidad de una empresa para cubrir sus obligaciones a corto plazo con sus activos más líquidos", "El sueldo neto anual dividido por meses", "El total de tarjetas de crédito activas", "El valor de una propiedad hipotecada"], correct: 0 },
+            { q: "¿Qué es un test de estrés financiero?", a: ["Una simulación de escenarios económicos extremos para comprobar si un banco o cartera resiste una crisis grave", "Un examen psicológico para gestores de fondos", "Una prueba de esfuerzo físico en el banco", "Un cálculo de presupuesto mensual ajustado"], correct: 0 },
+            { q: "¿Qué es el colateral en un préstamo?", a: ["Un activo o bien aportado en garantía para asegurar el cumplimiento del pago del préstamo", "Una comisión por apertura de cuenta", "Un interés adicional acumulado", "Un seguro contra incendios"], correct: 0 },
+            { q: "¿Qué es la moratoria de un crédito?", a: ["Un aplazamiento temporal autorizado en el pago de las cuotas de un préstamo", "La cancelación definitiva de una deuda", "Una multa por impago acumulado", "Un aumento en la tasa de interés"], correct: 0 },
+            { q: "¿Qué es el tipo de interés de blanqueo?", a: ["Un concepto no estándar o término confuso en finanzas formales", "Una tasa de interés fija anual", "El interés que cobra una tarjeta de crédito", "El rendimiento de un bono del estado"], correct: 0 },
+            { q: "¿Qué es una cuenta de alta remuneración?", a: ["Una cuenta bancaria que ofrece un tipo de interés superior al promedio por mantener tus ahorros en ella", "Una cuenta con comisiones muy altas", "Una cuenta exclusiva para empresas multinacionales", "Un fondo de inversión en acciones"], correct: 0 },
+            { q: "¿Qué es una tarjeta revolving?", a: ["Una tarjeta de crédito donde las compras se aplazan automáticamente pagando cuotas mensuales con intereses elevados", "Una tarjeta que gira sobre su propio eje", "Una tarjeta de débito sin comisiones", "Un monedero electrónico de criptomonedas"], correct: 0 },
+            { q: "¿Qué es el coste efectivo de un préstamo?", a: ["El costo total real que pagas por el préstamo sumando intereses, comisiones y gastos asociados", "Únicamente el valor del capital prestado", "La tasa de interés nominal mensual", "El valor de las cuotas sin intereses"], correct: 0 },
+            { q: "¿Qué es la prima de emisión de acciones?", a: ["El sobreprecio que pagan los inversores sobre el valor nominal de una acción en una ampliación de capital", "Una comisión que cobra el bróker por operar", "Un dividendo extraordinario trimestral", "Un impuesto bursátil gubernamental"], correct: 0 },
+            { q: "¿Qué es una ampliación de capital?", a: ["Una operación financiera para aumentar los recursos propios de una empresa mediante emisión de nuevas acciones o aumento de valor", "Pedir un crédito bancario comercial", "Reducir las deudas con proveedores", "Repartir beneficios entre socios"], correct: 0 },
+            { q: "¿Qué es la reducción de capital social?", a: ["Una operación para disminuir el capital social de una empresa por devolución de aportaciones o absorción de pérdidas", "Aumentar los ahorros de los socios", "Pedir un préstamo a largo plazo", "Comprar acciones de la competencia"], correct: 0 },
+            { q: "¿Qué es una OPA (Oferta Pública de Adquisición)?", a: ["Una oferta pública dirigida a los accionistas de una empresa para comprar todas o parte de sus acciones y controlarla", "Una oferta de empleo en bolsa", "El cierre fiscal de una compañía", "Un fondo de inversión en start-ups"], correct: 0 },
+            { q: "¿Qué es una OPA hostil?", a: ["Una OPA lanzada sin el consentimiento ni la aprobación previa del consejo de administración de la empresa afectada", "Una oferta de trabajo mal pagada", "Un impuesto extraordinario de aduanas", "Una demanda judicial por deudas"], correct: 0 },
+            { q: "¿Qué es una fusión de empresas?", a: ["La unión jurídica de dos o más empresas en una sola organización integrada", "La quiebra simultánea de dos compañías", "La compra de acciones menores en bolsa", "Un préstamo entre sociedades mercantiles"], correct: 0 },
+            { q: "¿Qué es la absorción empresarial?", a: ["Una operación donde una empresa extingue su personalidad jurídica integrándose en otra ya existente que la absorbe", "Un crédito bancario de refinanciación", "La compra de material de oficina", "Un fondo de inversión privado"], correct: 0 },
+            { q: "¿Qué es la escisión de empresas?", a: ["La división de una empresa en dos o más sociedades independientes", "La unión de dos corporaciones grandes", "La quiebra de una filial comercial", "Un aumento de capital social"], correct: 0 },
+            { q: "¿Qué es el fondo de comercio (Goodwill)?", a: ["Un activo intangible que representa el valor de la marca, prestigio y clientela de una empresa adquirida", "Una caja de ahorros solidaria", "Los beneficios netos anuales", "El dinero en efectivo en caja"], correct: 0 },
+            { q: "¿Qué son los activos intangibles?", a: ["Bienes sin sustancia física pero con valor económico (patentes, marcas, derechos de autor)", "Dinero en efectivo y monedas", "Bienes raíces y vehículos de empresa", "Acciones físicas en papel"], correct: 0 },
+            { q: "¿Qué son los activos tangibles?", a: ["Bienes que tienen existencia física y se pueden tocar (maquinaria, inmuebles, inventario)", "Derechos de propiedad intelectual", "Marcas registradas y patentes", "Acciones digitales en bolsa"], correct: 0 },
+            { q: "¿Qué es la depreciación contable?", a: ["La pérdida sistemática de valor contable de los activos tangibles por el paso del tiempo o su uso", "La subida de precio de una casa", "Una ganancia en la bolsa de valores", "Un impuesto municipal anual"], correct: 0 },
+            { q: "¿Qué es la amortización de activos intangibles?", a: ["La distribución sistemática del costo de un activo intangible a lo largo de su vida útil estimada", "El pago de una deuda de tarjeta", "Un préstamo bancario a largo plazo", "El cálculo de los intereses de un bono"], correct: 0 },
+            { q: "¿Qué es el cash flow libre apalancado?", a: ["El flujo de caja disponible para los accionistas después de pagar deudas e intereses financieros", "El dinero gastado en ocio personal", "Un subsidio estatal para empresas", "El saldo total de una cuenta de ahorro"], correct: 0 },
+            { q: "¿Qué es el EBITDA?", a: ["Beneficio antes de intereses, impuestos, depreciaciones y amortizaciones", "El sueldo neto mensual de un trabajador", "El total de deudas de una empresa", "El valor de las acciones en bolsa"], correct: 0 },
+            { q: "¿Qué es el beneficio neto contable?", a: ["El resultado final de restar todos los gastos, impuestos y amortizaciones a los ingresos totales", "El total de ingresos brutos de ventas", "El dinero disponible en el cajero automático", "El capital inicial aportado por los socios"], correct: 0 },
+            { q: "¿Qué es la rentabilidad financiera (ROE)?", a: ["Indicador que mide el rendimiento obtenido sobre los fondos propios de los socios o accionistas", "El interés que paga una cuenta de ahorros", "El porcentaje de impuestos anuales", "El costo de mantenimiento de un crédito"], correct: 0 },
+            { q: "¿Qué es la rentabilidad económica (ROA)?", a: ["Indicador que mide la capacidad de los activos totales de una empresa para generar beneficios operativos", "El rendimiento de las acciones tecnológicas", "El interés simple de un bono gubernamental", "El sueldo bruto de los empleados"], correct: 0 },
+            { q: "¿Qué es el fondo de maniobra negativo?", a: ["Cuando el activo corriente es menor que el pasivo corriente, indicando posibles problemas de liquidez a corto plazo", "Cuando tienes muchos ahorros en el banco", "Cuando tus inversiones dan mucha ganancia", "Cuando el presupuesto está perfectamente equilibrado"], correct: 0 },
+            { q: "¿Qué es el periodo medio de cobro?", a: ["El tiempo promedio que tarda una empresa en cobrar de sus clientes por las ventas realizadas", "El tiempo que tardas en pagar tu tarjeta", "El plazo de una hipoteca bancaria", "El tiempo de entrega de un producto"], correct: 0 },
+            { q: "¿Qué es el periodo medio de pago?", a: ["El tiempo promedio que tarda una empresa en pagar a sus proveedores por las compras efectuadas", "El plazo para devolver un préstamo personal", "El tiempo que tardas en recibir tu sueldo", "La duración de un depósito a plazo fijo"], correct: 0 },
+            { q: "¿Qué es el fondo de reserva legal de una sociedad?", a: ["Una parte de los beneficios que la ley obliga a reservar para proteger el capital social de la empresa", "Un ahorro para las vacaciones de los jefes", "Un fondo para pagar multas de tráfico", "Una cuenta secreta en el extranjero"], correct: 0 },
+            { q: "¿Qué es una acción preferente?", a: ["Acción que otorga prioridad en el cobro de dividendos frente a las ordinarias, pero usualmente sin derecho a voto", "Una acción que siempre sube de precio en bolsa", "Un bono del estado a largo plazo", "Una tarjeta de crédito VIP"], correct: 0 },
+            { q: "¿Qué es una acción ordinaria?", a: ["Título que representa propiedad en una empresa y otorga derechos políticos (voto) y económicos (dividendos)", "Una acción común sin valor de mercado", "Un bono de deuda bancaria", "Una participación en un fondo de pensiones"], correct: 0 },
+            { q: "¿Qué es el warrant financiero?", a: ["Un derivado financiero que da derecho a comprar o vender un activo subyacente a un precio determinado en una fecha futura", "Una garantía de electrodomésticos", "Un cheque bancario sin fondos", "Un contrato de alquiler de vivienda"], correct: 0 },
+            { q: "¿Qué es un fondo monetario offshore?", a: ["Un fondo de inversión monetario domiciliado en un país extranjero, a menudo con ventajas fiscales", "Una cuenta de ahorros en la esquina de tu barrio", "Un cajero automático nocturno", "Un préstamo personal online"], correct: 0 },
+            { q: "¿Qué es la banca de proximidad?", a: ["Modelo de banca tradicional basado en una amplia red de sucursales físicas y atención personal cercana", "Banca exclusivamente digital por internet", "Cajeros automáticos automáticos sin personal", "Fondos de inversión en criptomonedas"], correct: 0 },
+            { q: "¿Qué es el open banking (banca abierta)?", a: ["Sistema que permite a terceros (fintechs) acceder a datos bancarios de clientes mediante APIs con su consentimiento", "Robar contraseñas de cuentas ajenas", "Dejar las puertas del banco abiertas de noche", "Cajeros automáticos sin comisiones"], correct: 0 },
+            { q: "¿Qué es una Fintech?", a: ["Empresa que utiliza la tecnología para ofrecer servicios financieros innovadores y eficientes", "Una marca de ropa para banqueros", "Un tipo de criptomoneda volátil", "Una entidad gubernamental de impuestos"], correct: 0 },
+            { q: "¿Qué es el crowdfunding de donación?", a: ["Financiación colectiva donde los aportantes no esperan retorno financiero, sino apoyar una causa benéfica", "Invertir en start-ups para ganar dividendos", "Pedir un préstamo a un familiar directo", "Comprar acciones en la bolsa de valores"], correct: 0 },
+            { q: "¿Qué es el crowdfunding de recompensa?", a: ["Financiación colectiva donde los mecenas reciben un producto, servicio o reconocimiento a cambio de su aportación", "Donar dinero sin recibir nada a cambio", "Un crédito bancario tradicional con aval", "Un fondo de inversión inmobiliaria"], correct: 0 },
+            { q: "¿Qué es el capital semilla corporativo?", a: ["Inversión de capital realizada por grandes corporaciones en start-ups innovadoras vinculadas a su sector", "Ahorros de los empleados de una empresa", "Préstamos rápidos para comprar material de oficina", "Un fondo de pensiones privado"], correct: 0 },
+            { q: "¿Qué es el descuento comercial de efectos?", a: ["Operación financiera donde un banco anticipa a una empresa el importe de una letra de cambio antes de su vencimiento", "Rebajas en tiendas por temporada", "Descuentos en comisiones de cajeros", "Un plan de ahorro familiar"], correct: 0 },
+            { q: "¿Qué es la línea de descuento?", a: ["Un límite de crédito concedido por un banco para anticipar el cobro de efectos comerciales", "Una tarjeta de descuento en supermercados", "Un préstamo hipotecario a plazos fijos", "Una cuenta de ahorros con intereses altos"], correct: 0 },
+            { q: "¿Qué es el confirming internacional?", a: ["Servicio de gestión de pagos a proveedores extranjeros con opción de financiación y anticipo", "Un envío de dinero por remesas familiares", "Una transferencia SEPA en euros", "Un cheque de viajero impreso"], correct: 0 },
+            { q: "¿Qué es el leasing internacional (cross-border leasing)?", a: ["Un contrato de arrendamiento financiero donde el arrendador y el arrendatario están en países distintos", "Alquilar un coche en el aeropuerto", "Un préstamo personal en el extranjero", "Comprar acciones de una multinacional"], correct: 0 },
+            { q: "¿Qué es el riesgo de tipo de cambio?", a: ["El riesgo de sufrir pérdidas económicas debido a la fluctuación adversa en el valor de las divisas", "El riesgo de que te roben moneda extranjera", "El riesgo de inflación en tu país local", "El riesgo de que el cajero falle al dar billetes"], correct: 0 },
+            { q: "¿Qué es la cobertura de tipo de cambio (Hedging de divisas)?", a: ["Estrategia financiera para protegerse frente a las fluctuaciones desfavorables en el tipo de cambio", "Comprar dólares y guardarlos en casa", "Cambiar de moneda local cada semana", "Pagar comisiones altas en el banco"], correct: 0 },
+            { q: "¿Qué es el mercado de divisas (Forex)?", a: ["El mercado global descentralizado donde se negocian las diferentes monedas del mundo", "La bolsa de valores local de acciones", "Un mercado de materias primas agrícolas", "Una casa de empeños de oro"], correct: 0 },
+            { q: "¿Qué es un par de divisas en Forex?", a: ["La cotización simultánea de dos monedas en la que una se valora en función de la otra (ej. EUR/USD)", "Dos billetes falsos juntos", "Una cuenta bancaria compartida", "Un préstamo en dos monedas distintas"], correct: 0 },
+            { q: "¿Qué es la moneda base en Forex?", a: ["La primera moneda que aparece en un par de divisas, la cual se compra o vende frente a la cotizada", "La moneda oficial de tu país de residencia", "El dólar estadounidense por defecto", "La moneda con menor valor en el mercado"], correct: 0 },
+            { q: "¿Qué es la moneda cotizada o contraparte en Forex?", a: ["La segunda moneda en un par de divisas, que sirve para expresar el valor de la moneda base", "La moneda que tienes guardada en el banco", "El oro físico en lingotes de las reservas", "La divisa local del inversor"], correct: 0 },
+            { q: "¿Qué es el apalancamiento operativo alto?", a: ["Cuando una empresa tiene costos fijos elevados, de modo que un pequeño cambio en ventas genera un gran impacto en beneficios", "Cuando pides muchos préstamos al banco", "Cuando ahorras el 50% de tu sueldo", "Cuando tus inversiones no tienen riesgo"], correct: 0 }
         ];
 
         const quizQuestionsEl = document.getElementById("quizQuestions");
@@ -376,28 +500,40 @@
         const submitBtn = document.getElementById("submitQuiz");
         const newQuizBtn = document.getElementById("newQuiz");
         const quizModal = document.getElementById("quizModal");
-        const closeModal = document.getElementById("closeModal");
         const resultContainer = document.getElementById("quizResult");
+        const moneyDisplay = document.getElementById("moneyDisplay");
 
         let quizQuestions = [];
         let currentIndex = 0;
         let userAnswers = [];
+        let playerMoney = 10000;
+        const penaltyPerMistake = 1000;
 
         function getRandomQuestions(num) {
             const shuffled = [...questions].sort(() => 0.5 - Math.random());
             return shuffled.slice(0, Math.min(num, shuffled.length));
         }
 
+        function updateMoneyDisplay(deducted = false) {
+            moneyDisplay.textContent = `$${playerMoney.toLocaleString()}`;
+            if (deducted) {
+                moneyDisplay.classList.add('money-deduct');
+                setTimeout(() => moneyDisplay.classList.remove('money-deduct'), 600);
+            }
+        }
+
         function renderQuestion() {
             const q = quizQuestions[currentIndex];
             quizQuestionsEl.innerHTML = `
-                <p class="font-semibold mb-4">${q.q}</p>
-                ${q.a.map((option, idx) => `
-                    <label class="flex items-center gap-2 cursor-pointer py-2 px-4 rounded hover:bg-green-50 transition">
-                        <input type="radio" name="q${currentIndex}" value="${idx}" class="accent-green-600" ${userAnswers[currentIndex] == idx ? 'checked' : ''}>
-                        <span>${option}</span>
-                    </label>
-                `).join('')}
+                <h3 class="font-semibold text-lg md:text-xl mb-6 text-slate-100">${q.q}</h3>
+                <div class="space-y-3">
+                    ${q.a.map((option, idx) => `
+                        <label class="option-btn flex items-center gap-3 cursor-pointer py-3.5 px-5 rounded-2xl text-slate-200 text-sm md:text-base ${userAnswers[currentIndex] == idx ? 'selected' : ''}">
+                            <input type="radio" name="q${currentIndex}" value="${idx}" class="accent-amber-500 w-4 h-4" ${userAnswers[currentIndex] == idx ? 'checked' : ''}>
+                            <span>${option}</span>
+                        </label>
+                    `).join('')}
+                </div>
             `;
 
             indicator.textContent = `Pregunta ${currentIndex + 1}/${quizQuestions.length}`;
@@ -409,18 +545,43 @@
             document.querySelectorAll(`input[name="q${currentIndex}"]`).forEach(radio => {
                 radio.onchange = () => {
                     userAnswers[currentIndex] = parseInt(radio.value);
+                    document.querySelectorAll('.option-btn').forEach(lbl => lbl.classList.remove('selected'));
+                    radio.closest('label').classList.add('selected');
                     if (currentIndex === quizQuestions.length - 1) submitBtn.disabled = false;
                 };
             });
         }
 
         function calculateScore() {
-            return quizQuestions.reduce((score, q, i) => score + (userAnswers[i] === q.correct ? 1 : 0), 0);
+            let score = 0;
+            quizQuestions.forEach((q, i) => {
+                if (userAnswers[i] === q.correct) {
+                    score++;
+                } else {
+                    playerMoney = Math.max(0, playerMoney - penaltyPerMistake);
+                }
+            });
+            return score;
         }
 
         function showResults() {
+            playerMoney = 10000;
             const score = calculateScore();
-            resultContainer.textContent = `Obtuviste ${score} de ${quizQuestions.length} respuestas correctas`;
+            let message = "";
+            if (score === 10) {
+                message = `¡Impecable! Acertaste todas las preguntas y conservaste tus <span class="text-emerald-400 font-bold">$${playerMoney.toLocaleString()}</span> íntegros. ¡Eres un maestro de las finanzas!`;
+            } else if (score >= 7) {
+                message = `¡Muy bien! Tienes bases sólidas. Obtuviste ${score} de ${quizQuestions.length} correctas. Tu capital final fue de <span class="text-emerald-400 font-bold">$${playerMoney.toLocaleString()}</span>.`;
+            } else if (score >= 4) {
+                message = `Buen intento. Obtuviste ${score} de ${quizQuestions.length} correctas. Entre penalizaciones, tu capital final bajó a <span class="text-amber-400 font-bold">$${playerMoney.toLocaleString()}</span>. ¡A repasar conceptos!`;
+            } else {
+                message = `Obtuviste ${score} de ${quizQuestions.length} correctas. Las malas decisiones financieras costaron caro y tu capital llegó a <span class="text-red-400 font-bold">$${playerMoney.toLocaleString()}</span>. ¡Sigue aprendiendo!`;
+            }
+
+            resultContainer.innerHTML = `
+                <p class="text-lg font-semibold text-slate-100 mb-2">Puntuación: ${score} / ${quizQuestions.length}</p>
+                <p class="text-sm text-slate-300">${message}</p>
+            `;
             quizModal.classList.remove("hidden");
         }
 
@@ -428,259 +589,41 @@
             quizQuestions = getRandomQuestions(10);
             currentIndex = 0;
             userAnswers = new Array(quizQuestions.length);
+            playerMoney = 10000;
+            updateMoneyDisplay();
             submitBtn.disabled = true;
+            quizModal.classList.add("hidden");
             renderQuestion();
         }
 
         nextQuestionBtn.addEventListener("click", () => {
             if (userAnswers[currentIndex] == null) {
-                alert("Selecciona una respuesta antes de continuar.");
+                alert("Por favor, selecciona una respuesta antes de continuar.");
                 return;
+            }
+            if (userAnswers[currentIndex] !== quizQuestions[currentIndex].correct) {
+                playerMoney = Math.max(0, playerMoney - penaltyPerMistake);
+                updateMoneyDisplay(true);
             }
             currentIndex++;
             renderQuestion();
         });
 
-        submitBtn.addEventListener("click", showResults);
-        newQuizBtn.addEventListener("click", initQuiz);
+        submitBtn.addEventListener("click", () => {
+            if (userAnswers[currentIndex] !== quizQuestions[currentIndex].correct) {
+                playerMoney = Math.max(0, playerMoney - penaltyPerMistake);
+            }
+            showResults();
+        });
 
-        closeModal.addEventListener("click", () => quizModal.classList.add("hidden"));
-        quizModal.addEventListener("click", e => { if (e.target === quizModal) quizModal.classList.add("hidden"); });
+        newQuizBtn.addEventListener("click", initQuiz);
 
         initQuiz();
     </script>
 
-
-
-
-   
-  <!-- ESPACIO PEQUEÑO FINAL -->
-<section class="py-12"></section>
-
-     
-
-
-<!-- TITULO -->
-<div class="titulo-seccion">
-
-  <span>
-    Preguntas frecuentes
-  </span>
-
-</div>
-
-
- <section class="mb-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
-
-    <!-- ================= ACORDEÓN ================= -->
-
- <style>
-  .cf-accordion {
-    margin-top: 60px;
-  }
-
-  .cf-accordion * {
-    box-sizing: border-box;
-  }
-
-  .cf-accordion-item {
-    background: #ffffff; /* fondo blanco fijo */
-    border-radius: 14px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
-    transform: translateY(0);
-    will-change: transform; /* optimiza animación */
-    border: 1px solid rgba(0,0,0,0.03);
-  }
-
-  /* Animación tipo card con sombra */
-  .cf-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
-  }
-
-  .cf-accordion-header {
-    padding: 14px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000;
-    user-select: none;
-    background: #ffffff;
-    transition: none;
-  }
-
-  .cf-accordion-header:hover {
-    background: #ffffff;
-  }
-
-  /* ICONO */
-  .cf-accordion-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(45deg);
-    transform-origin: center;
-    transition: transform 0.35s ease;
-    margin-left: 12px;
-    flex-shrink: 0;
-  }
-
-  .cf-accordion-item.is-open .cf-accordion-icon {
-    transform: rotate(-135deg);
-  }
-
-  .cf-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: relative;
-  }
-
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
-  .cf-accordion-item.is-open .cf-accordion-content::before {
-    content: "";
-    display: block;
-    width: 88%;
-    margin: 0 auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .cf-accordion-content p {
-    padding: 18px 22px 22px;
-    margin: 0;
-    color: #000000;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-</style>
-
-
-    <div class="cf-accordion">
-
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
-         Pon a prueba tus conocimientos financieros
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-  <p>
-El 
-<strong>
-Examen Financiero
-</strong>
-es una herramienta interactiva diseñada para evaluar tu nivel de conocimientos
-en finanzas personales y ayudarte a identificar qué aspectos puedes mejorar
-para tomar decisiones más inteligentes con tu dinero.
-</p>
-
-<p>
-A través de preguntas claras y situaciones cotidianas, este examen pone a prueba
-tu comprensión sobre ahorro, gastos, planificación financiera y conceptos básicos
-que influyen directamente en tu bienestar económico.
-</p>
-
-<p>
-
-<strong>
-No es una prueba académica ni tiene respuestas perfectas
-</strong>.
-Es una forma práctica de medir tu punto de partida y reflexionar sobre cómo
-manejas tus finanzas en la vida real.
-</p>
-
-<p>
-<strong>
-Este examen es ideal para:
-</strong>
-</p>
-
-<ul style="padding-left: 30px;">
-  <li>→ Personas que desean conocer su nivel de educación financiera.</li>
-  <li>→ Quienes quieren mejorar la forma en que administran su dinero.</li>
-  <li>→ Emprendedores y trabajadores independientes.</li>
-  <li>→ Lectores interesados en fortalecer sus decisiones financieras.</li>
-</ul>
-
-<p>
-Al finalizar el examen obtendrás una visión general de tus conocimientos actuales,
-lo que te permitirá identificar oportunidades de mejora y seguir aprendiendo
-sobre finanzas personales.
-</p>
-
-<p>
-Usa este Examen Financiero como una herramienta de autoevaluación periódica
-para medir tu progreso y reforzar hábitos financieros saludables con el tiempo.
-</p>
-
-
-        </div>
-      </div>
-
-    </div>
-
-    <script>
-    document.querySelectorAll('.cf-accordion').forEach(accordion => {
-  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.cf-accordion-item');
-      const content = item.querySelector('.cf-accordion-content');
-
-      // Solo afecta los items de ESTE acordeón
-      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          other.querySelector('.cf-accordion-content').style.maxHeight = null;
-        }
-      });
-
-      item.classList.toggle('is-open');
-
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    });
-  });
-});
-    </script>
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-        <!-- ESPACIO FINAL -->
-    <section class="py-12"></section>
-
-
-
-
-  <!--  Footer  -->
-<div class="footer-here"></div>
-
-<script src="https://codigomillonario.blog/assets/footer.js"></script>
-
-<!-- MENU COMPLETO -->
-<script src="../assets/menu.js"></script>
-
-
+    <!-- PIE DE PÁGINA (Inyectado por el script externo original de forma aislada) -->
+    <div class="footer-here"></div>
+    <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
 </body>
 </html>
