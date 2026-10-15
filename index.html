@@ -55,24 +55,30 @@
 
 
 
-<!-- TARJETA DE NUEVO ARTÍCULO ACTUALIZABLE -->
+
+
+
+<!-- TARJETA DE NUEVO ARTÍCULO - PESTAÑA LATERAL IZQUIERDA MINIMALISTA -->
 <div id="new-article-bubble">
-  
   <div class="bubble-header">
     <span class="bubble-label">Informe reciente</span>
-    <span id="close-bubble">✖</span>
   </div>
-
   <a id="new-article-link" href="" target="_blank"></a>
 </div>
 
+<!-- ETIQUETA COMPACTA REDONDEADA ("IF") -->
+<div id="bubble-tab" title="Ver informe reciente">
+  <span class="tab-sigla">IF</span>
+</div>
+
 <style>
+  /* --- CONTENEDOR PRINCIPAL (CUADRO DESPLEGABLE) --- */
   #new-article-bubble {
     position: fixed;
     bottom: 24px;
-    right: 24px;
+    left: 24px;
     width: 320px;
-    max-width: calc(100vw - 40px);
+    max-width: calc(100vw - 48px);
 
     background: #111;
     color: #fff;
@@ -81,27 +87,79 @@
     border-radius: 0;
 
     box-shadow: 0 6px 18px rgba(0,0,0,0.30);
-
     font-family: 'Poppins', sans-serif;
+    padding: 12px 14px 14px;
 
-    padding: 11px 12px 13px;
-
-    display: none;
+    display: flex;
     flex-direction: column;
 
+    /* Control de animación de apertura/cierre lateral */
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.35s ease;
+    transform: translateX(-120%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
 
     z-index: 9999;
     box-sizing: border-box;
   }
 
-  /* ENCABEZADO */
+  /* Estado abierto */
+  #new-article-bubble.open {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
+  /* --- PESTAÑA LATERAL COMPACTA (SÓLO SIGLAS "IF") --- */
+  #bubble-tab {
+    position: fixed;
+    bottom: 24px;
+    left: 0;
+    background: #22252a; /* Gris oscuro elegante */
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-left: none;
+    
+    /* Menos altura y un poquito más ancha */
+    padding: 3px 12px 3px 10px;
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.15em; /* Letras más anchas / separadas */
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9998;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.4);
+    
+    /* Punta redondeada tipo píldora al final */
+    border-radius: 0 16px 16px 0;
+    
+    /* Animación de entrada de la pestaña */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease, background 0.2s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  /* Estado visible permanente cuando se activa */
+  #bubble-tab.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  #bubble-tab:hover {
+    background: #33383f;
+  }
+
+  .tab-sigla {
+    color: #f1f5f9;
+    font-weight: 800; /* Letras gruesas */
+  }
+
+  /* ENCABEZADO DEL CUADRO */
   .bubble-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 6px;
   }
@@ -113,21 +171,7 @@
     color: rgba(255,255,255,0.65);
   }
 
-  /* CERRAR */
-
-  #close-bubble {
-    cursor: pointer;
-    font-size: 13px;
-    color: rgba(255,255,255,0.60);
-    transition: color 0.2s ease;
-  }
-
-  #close-bubble:hover {
-    color: #fff;
-  }
-
   /* TÍTULO DEL ARTÍCULO */
-
   #new-article-link {
     display: block;
     color: #fff;
@@ -146,12 +190,15 @@
   }
 
   /* MÓVILES */
-
   @media (max-width: 480px) {
     #new-article-bubble {
-      width: 90%;
-      right: 5%;
+      left: 12px;
+      width: calc(100vw - 24px);
       bottom: 16px;
+    }
+    #bubble-tab {
+      bottom: 16px;
+      padding: 3px 10px 3px 8px;
     }
   }
 </style>
@@ -164,40 +211,60 @@ fetch('posts.json')
     if (!lastPost) return;
 
     const bubble = document.getElementById('new-article-bubble');
+    const tab = document.getElementById('bubble-tab');
     const link = document.getElementById('new-article-link');
-
-    const closed = sessionStorage.getItem('bubbleClosed');
-    if (closed) return;
 
     link.textContent = lastPost.title;
     link.href = lastPost.url;
 
-    const delay = 20000;
+    // Función para mostrar el cuadro abierto
+    function openBubble() {
+      bubble.classList.add('open');
+      tab.classList.remove('visible'); // Oculta la etiqueta mientras el cuadro está desplegado
+    }
 
-    setTimeout(() => {
-      bubble.style.display = 'flex';
-
+    // Función para contraer el cuadro y mostrar la etiqueta fija compacta
+    function collapseBubble() {
+      bubble.classList.remove('open');
       setTimeout(() => {
-        bubble.style.opacity = '1';
-        bubble.style.transform = 'translateY(0)';
-      }, 50);
-
-    }, delay);
-
-    document.getElementById('close-bubble').onclick = () => {
-      bubble.style.opacity = '0';
-      bubble.style.transform = 'translateY(20px)';
-
-      setTimeout(() => {
-        bubble.style.display = 'none';
+        tab.classList.add('visible'); // Sale la etiqueta "IF" y se queda fija
       }, 300);
+    }
 
-      sessionStorage.setItem('bubbleClosed', 'true');
+    // 1. Al cargar la página: muestra el cuadro abierto tras 1.5 segundos
+    setTimeout(() => {
+      openBubble();
+
+      // 2. Después de 6 segundos abierto, se oculta solo y saca la etiqueta compacta fija
+      setTimeout(() => {
+        collapseBubble();
+      }, 6000); 
+
+    }, 1500);
+
+    // Al hacer clic en la etiqueta lateral, se despliega el cuadro
+    tab.onclick = () => {
+      openBubble();
     };
+
+    // Si el usuario hace clic fuera del cuadro (en el fondo de la página), se contrae a la etiqueta
+    document.addEventListener('click', (e) => {
+      if (bubble.classList.contains('open') && !bubble.contains(e.target) && !tab.contains(e.target)) {
+        collapseBubble();
+      }
+    });
+
+    // 3. Si el cuadro está abierto y el usuario hace scroll, se cierra automáticamente y muestra la etiqueta
+    window.addEventListener('scroll', () => {
+      if (bubble.classList.contains('open')) {
+        collapseBubble();
+      }
+    });
 
   })
   .catch(err => console.error(err));
 </script>
+
 
 
 
