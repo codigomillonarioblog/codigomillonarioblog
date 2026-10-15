@@ -1,670 +1,875 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planificador de Presupuesto - Código Millonario</title>
-
-<!-- Favicon -->
+    <title>Presupuesto Financiero Personal: Organiza tus Ingresos y Gastos | Código Millonario</title>
+    <meta name="description" content="Organiza tus ingresos, controla tus gastos, calcula cuánto puedes ahorrar y crea un presupuesto financiero personal con esta herramienta gratuita.">
+    
+    <!-- Favicon -->
 <link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
 
-<!-- canonical -->
-<link rel="canonical" href="https://codigomillonario.blog/herramientas/presupuesto-financiero.html">
-
-<!-- tailwin -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-
-    <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-0826LEMPPY');
 </script>
 
-<!-- Google Fonts Poppins -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
 <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
+    
+    
+    <!-- Chart.js CDN para las gráficas dinámicas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --cm-primary: #10b981;
+            --cm-primary-dark: #059669;
+            --cm-danger: #ef4444;
+            --cm-bg: #f8fafc;
+            --cm-card-bg: #ffffff;
+            --cm-text: #334155;
+            --cm-text-heading: #0f172a;
+            --cm-border: #e2e8f0;
+            --cm-gray: #64748b;
+            --cm-gray-light: #f1f5f9;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            background-color: var(--cm-bg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--cm-text);
+            line-height: 1.5;
+        }
+
+        /* Contenedor general con respiro superior definitivo para evitar el menú fijo */
+        .cm-main-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 120px auto 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Encabezado Principal */
+        .cm-top-header {
+            margin-bottom: 30px;
+        }
+
+        .cm-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--cm-text-heading);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .cm-subtitle {
+            font-size: 1.15rem;
+            color: var(--cm-gray);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .cm-description {
+            font-size: 1rem;
+            color: var(--cm-text);
+        }
+
+        /* Barra de Controles */
+        .cm-controls-card {
+            background: var(--cm-card-bg);
+            border: 1px solid var(--cm-border);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .cm-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-end;
+        }
+
+        .cm-control-group {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .cm-control-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--cm-text-heading);
+        }
+
+        /* Contenedor específico para los botones de acción principal */
+        .cm-action-buttons {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        /* Botones e Inputs */
+        .cm-btn {
+            background-color: #0f172a;
+            color: white;
+            border: none;
+            padding: 11px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .cm-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .cm-btn-primary { background-color: var(--cm-primary); }
+        .cm-btn-primary:hover { background-color: var(--cm-primary-dark); }
+        .cm-btn-danger { background-color: var(--cm-danger); }
+        .cm-btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--cm-border);
+            color: var(--cm-text-heading);
+        }
+        .cm-btn-outline:hover { background-color: var(--cm-gray-light); }
+
+        .cm-select, .cm-input {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid var(--cm-border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            background-color: white;
+            color: var(--cm-text-heading);
+        }
+
+        .cm-select:focus, .cm-input:focus {
+            outline: none;
+            border-color: var(--cm-primary);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+        }
+
+        /* Tarjetas KPI */
+        .cm-kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cm-kpi-card {
+            background: var(--cm-card-bg);
+            border: 1px solid var(--cm-border);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cm-kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--cm-primary);
+        }
+
+        .cm-kpi-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--cm-gray);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .cm-kpi-value {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--cm-text-heading);
+            word-break: break-all;
+        }
+
+        .cm-kpi-sub {
+            font-size: 0.8rem;
+            color: var(--cm-gray);
+            margin-top: 5px;
+        }
+
+        /* Gráficas */
+        .cm-charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .cm-chart-box {
+            background: var(--cm-card-bg);
+            border: 1px solid var(--cm-border);
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            height: 320px;
+        }
+
+        /* Secciones, Formularios y Tablas */
+        .cm-section {
+            background: var(--cm-card-bg);
+            border: 1px solid var(--cm-border);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .cm-section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--cm-text-heading);
+            margin-bottom: 20px;
+        }
+
+        .cm-form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cm-table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .cm-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+            min-width: 550px;
+        }
+
+        .cm-table th, .cm-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--cm-border);
+        }
+
+        .cm-table th {
+            background-color: var(--cm-gray-light);
+            font-weight: 600;
+            color: var(--cm-text-heading);
+        }
+
+        .cm-table tr:hover {
+            background-color: rgba(243, 244, 246, 0.5);
+        }
+
+        /* Alertas y FAQs */
+        .cm-alert {
+            background-color: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            color: #065f46;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .cm-faq-item {
+            margin-bottom: 15px;
+        }
+
+        .cm-faq-q {
+            font-weight: 600;
+            color: var(--cm-text-heading);
+            margin-bottom: 5px;
+        }
+
+        .cm-faq-a {
+            font-size: 0.9rem;
+            color: var(--cm-gray);
+        }
+
+        .cm-footer-note {
+            font-size: 0.8rem;
+            color: var(--cm-gray);
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 10px;
+            border-top: 1px solid var(--cm-border);
+        }
+
+        @media (max-width: 768px) {
+            .cm-main-wrapper {
+                margin-top: 90px;
+                padding: 0 12px;
+            }
+            .cm-title { font-size: 1.7rem; }
+            .cm-toolbar { flex-direction: column; align-items: stretch; }
+            .cm-control-group { width: 100%; min-width: 100%; }
+            
+            /* Solución para celulares: Los 3 botones se acomodan en filas o se ajustan perfectamente */
+            .cm-action-buttons {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .cm-action-buttons .cm-btn:nth-child(3) {
+                grid-column: span 2; /* El botón de restaurar abarca toda la fila inferior para mayor comodidad */
+            }
+
+            .cm-section { padding: 15px; }
+        }
+    </style>
 </head>
-
 <body>
 
-
-
-
-
-
-<style>
-/* =========================
-   TITULO SECCION NUEVO
-========================= */
-
-.titulo-seccion{
-
-    max-width: 1400px;
-
-    margin: 70px auto 35px auto;
-
-    padding: 0 90px;
-}
-
-/* TEXTO */
-
-.titulo-seccion span{
-
-    font-family:'Inter',sans-serif;
-
-    font-size:1.55rem;
-
-    font-weight:900;
-
-    color:#111111;
-
-    letter-spacing:-1px;
-
-    line-height:1;
-
-    display:inline-block;
-
-    text-transform:uppercase;
-}
-
-/* LINEA */
-
-.linea-seccion{
-
-    width:100%;
-
-    height:4px;
-
-    background:#111111;
-
-    margin-top:10px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-    .titulo-seccion{
-
-        padding:0 30px;
-
-        margin:55px auto 28px auto;
-    }
-
-    .titulo-seccion span{
-
-        font-size:1.35rem;
-
-        letter-spacing:-0.8px;
-    }
-
-    .linea-seccion{
-
-        height:3px;
-
-        margin-top:8px;
-    }
-
-}
-
-@media(max-width:480px){
-
-    .titulo-seccion{
-
-        padding:0 18px;
-    }
-
-    .titulo-seccion span{
-
-        font-size:1.2rem;
-    }
-
-}
-</style>
-
-
-
-
-
-
-
-   <!-- ESPACIO FINAL -->
-<div style="height: 300px;"></div>
-
-<!-- ========================================= -->
-<!-- GOOGLE FONTS -->
-<!-- ========================================= -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
-<!-- =========================
-     HERO TITULO
-========================= -->
-
-<section class="hero-blog">
-
-  <div class="hero-blog-content">
-
-    <!-- ETIQUETA -->
-    <span class="hero-tag">
-      GESTIÓN FINANCIERA
-    </span>
-
-    <!-- TITULO -->
-    <h1>
-      Organiza tus gastos, controla tu dinero y toma mejores decisiones financieras todos los meses
-    </h1>
-
-    <!-- SUBTITULO -->
-    <p>
-      Toma el control total de tus finanzas organizando tus gastos de forma simple y efectiva. Aprende a monitorear tu dinero, identificar oportunidades de ahorro y tomar decisiones financieras más inteligentes cada mes para mejorar tu estabilidad y alcanzar tus metas económicas con mayor claridad y confianza.
-    </p>
-
-  </div>
-
-</section>
-
-
-<style>
-
-/* =========================
-   HERO BLOG
-========================= */
-
-.hero-blog{
-
-    width: 100%;
-
-    margin-top: 50px;
-
-    margin-bottom: 45px;
-
-    padding-left: 90px;
-
-    padding-right: 90px;
-}
-
-
-/* CONTENIDO */
-
-.hero-blog-content{
-
-    max-width: 980px;
-}
-
-
-/* =========================
-   ETIQUETA
-========================= */
-
-.hero-tag{
-
-    display: inline-block;
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 0.78rem;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #8b7355;
-
-    margin-bottom: 18px;
-}
-
-
-/* =========================
-   TITULO
-========================= */
-
-.hero-blog h1{
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 4.2rem;
-
-    line-height: 0.98;
-
-    font-weight: 800;
-
-    color: #111111;
-
-    letter-spacing: -3px;
-
-    margin-bottom: 24px;
-}
-
-
-/* =========================
-   SUBTITULO
-========================= */
-
-.hero-blog p{
-
-    font-family: 'Open Sans', sans-serif;
-
-    font-size: 1.15rem;
-
-    line-height: 1.8;
-
-    color: #555555;
-
-    max-width: 760px;
-
-    margin-bottom: 0;
-}
-
-
-/* =========================
-   TABLETS
-========================= */
-
-@media (max-width: 1024px){
-
-    .hero-blog{
-
-        padding-left: 40px;
-
-        padding-right: 40px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 3.2rem;
-    }
-
-}
-
-
-/* =========================
-   TELEFONOS
-========================= */
-
-@media (max-width: 640px){
-
-    .hero-blog{
-
-        padding-left: 18px;
-
-        padding-right: 18px;
-
-        margin-top: 35px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 2.2rem;
-
-        line-height: 1.05;
-
-        letter-spacing: -1.5px;
-    }
-
-    .hero-blog p{
-
-        font-size: 1rem;
-
-        line-height: 1.7;
-    }
-
-}
-
-</style>
-
-
-
-
-
-  
-        <!-- ESPACIO FINAL -->
-    <section class="py-20"></section>
-
-
-
-    <!-- CONTENIDO -->
-     <main class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10 border border-stone-200">
-
-        <div class="space-y-6">
-            
-            <div>
-                <label class="block mb-2 font-medium">Ingresos Mensuales</label>
-                <input id="ingresos" type="text" inputmode="numeric" class="w-full border border-stone-300 rounded-xl px-4 py-3 format-number">
+    <!-- Contenedor Rehecho desde Cero -->
+    <main class="cm-main-wrapper">
+        
+        <!-- Encabezado y Título -->
+        <header class="cm-top-header">
+            <h1 class="cm-title">Presupuesto Financiero Personal</h1>
+            <p class="cm-subtitle">Organiza tus ingresos, controla tus gastos y descubre cuánto dinero puedes ahorrar cada mes.</p>
+            <p class="cm-description">Crea tu presupuesto mensual, registra tus movimientos de forma sencilla y compara en tiempo real tus resultados frente a lo planeado.</p>
+        </header>
+
+        <!-- Controles Principales -->
+        <section class="cm-controls-card">
+            <div class="cm-toolbar">
+                <div class="cm-control-group">
+                    <label for="cm-moneda-select">Moneda</label>
+                    <select id="cm-moneda-select" class="cm-select">
+                        <optgroup label="América Latina">
+                            <option value="COP">Peso Colombiano ($ COP)</option>
+                            <option value="ARS">Peso Argentino ($ ARS)</option>
+                            <option value="MXN">Peso Mexicano ($ MXN)</option>
+                            <option value="USD" selected>Dólar Estadounidense ($ USD)</option>
+                            <option value="CLP">Peso Chileno ($ CLP)</option>
+                            <option value="PEN">Sol Peruano (S/ PEN)</option>
+                            <option value="BRL">Real Brasileño (R$ BRL)</option>
+                            <option value="UYU">Peso Uruguayo ($ UYU)</option>
+                            <option value="DOP">Peso Dominicano ($ DOP)</option>
+                            <option value="CRC">Colón Costarricense (₡ CRC)</option>
+                            <option value="GTQ">Quetzal Guatemalteco (Q GTQ)</option>
+                            <option value="HNL">Lempira Hondureña (L HNL)</option>
+                            <option value="NIO">Córdoba Nicaragüense (C$ NIO)</option>
+                            <option value="PAB">Balboa Panameño (B/. PAB)</option>
+                            <option value="PYG">Guaraní Paraguayo (₲ PYG)</option>
+                            <option value="VES">Bolívares / Moneda Local</option>
+                        </optgroup>
+                        <optgroup label="Internacionales y Oriente">
+                            <option value="EUR">Euro (€ EUR)</option>
+                            <option value="GBP">Libra Esterlina (£ GBP)</option>
+                            <option value="CAD">Dólar Canadiense ($ CAD)</option>
+                            <option value="JPY">Yen Japonés (¥ JPY)</option>
+                            <option value="CNY">Yuan Chino (¥ CNY)</option>
+                            <option value="INR">Rupia India (₹ INR)</option>
+                            <option value="AED">Dirham de EAU (AED)</option>
+                            <option value="SAR">Riyal Saudí (SAR)</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="cm-control-group">
+                    <label for="cm-periodo-select">Período a Analizar</label>
+                    <input type="month" id="cm-periodo-select" class="cm-input">
+                </div>
+
+                <div class="cm-control-group">
+                    <label>Acciones</label>
+                    <div class="cm-action-buttons">
+                        <button type="button" class="cm-btn cm-btn-primary" id="cm-btn-nuevo">Nuevo</button>
+                        <button type="button" class="cm-btn cm-btn-outline" id="cm-btn-exportar">Exportar</button>
+                        <button type="button" class="cm-btn cm-btn-danger" id="cm-btn-reset">Restaurar</button>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div>
-                <label class="block mb-2 font-medium">Gastos Fijos</label>
-                <input id="fijos" type="text" inputmode="numeric" class="w-full border border-stone-300 rounded-xl px-4 py-3 format-number">
+        <!-- Tarjetas KPI -->
+        <div class="cm-kpi-grid">
+            <div class="cm-kpi-card">
+                <div class="cm-kpi-title">Ingresos del Mes</div>
+                <div class="cm-kpi-value" id="cm-kpi-ingresos">0</div>
+                <div class="cm-kpi-sub">Registrados y previstos</div>
             </div>
-
-            <div>
-                <label class="block mb-2 font-medium">Gastos Variables</label>
-                <input id="variables" type="text" inputmode="numeric" class="w-full border border-stone-300 rounded-xl px-4 py-3 format-number">
+            <div class="cm-kpi-card">
+                <div class="cm-kpi-title">Gastos del Mes</div>
+                <div class="cm-kpi-value" id="cm-kpi-gastos">0</div>
+                <div class="cm-kpi-sub">Total egresos</div>
             </div>
+            <div class="cm-kpi-card">
+                <div class="cm-kpi-title">Dinero Disponible</div>
+                <div class="cm-kpi-value" id="cm-kpi-disponible">0</div>
+                <div class="cm-kpi-sub">Ingresos menos gastos</div>
+            </div>
+            <div class="cm-kpi-card">
+                <div class="cm-kpi-title">Ahorro del Mes</div>
+                <div class="cm-kpi-value" id="cm-kpi-ahorro">0</div>
+                <div class="cm-kpi-sub" id="cm-kpi-tasa-ahorro">Tasa: 0%</div>
+            </div>
+        </div>
 
-             <button type="button" onclick="calcular()"
-                    class="w-full bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition-colors">
-                    Calcular
-                </button>
+        <!-- Gráficas -->
+        <div class="cm-charts-grid">
+            <div class="cm-chart-box">
+                <canvas id="cm-chart-ingresos-gastos"></canvas>
+            </div>
+            <div class="cm-chart-box">
+                <canvas id="cm-chart-gastos-categoria"></canvas>
+            </div>
+        </div>
 
-            <button onclick="reiniciarFormulario()"
-                class="w-full bg-stone-200 text-stone-800 py-3 rounded-xl text-lg font-semibold hover:bg-stone-300 transition-colors">
-                Reiniciar Calculadora
-            </button>
+        <!-- Módulo de Ingresos -->
+        <section class="cm-section">
+            <h2 class="cm-section-title">Mis Ingresos</h2>
+            <form id="cm-form-ingreso" class="cm-form-grid">
+                <div class="cm-control-group">
+                    <label>Concepto</label>
+                    <input type="text" id="cm-ing-nombre" class="cm-input" placeholder="Ej. Salario mensual" required>
+                </div>
+                <div class="cm-control-group">
+                    <label>Categoría</label>
+                    <select id="cm-ing-cat" class="cm-select">
+                        <option value="Salario">Salario</option>
+                        <option value="Independiente">Trabajo independiente</option>
+                        <option value="Negocio">Negocio o emprendimiento</option>
+                        <option value="Comisiones">Comisiones</option>
+                        <option value="Inversiones">Rendimientos de inversiones</option>
+                        <option value="Otros">Otros ingresos</option>
+                    </select>
+                </div>
+                <div class="cm-control-group">
+                    <label>Importe</label>
+                    <input type="text" id="cm-ing-importe" class="cm-input cm-input-moneda" placeholder="0" required>
+                </div>
+                <div class="cm-control-group">
+                    <label>Estado</label>
+                    <select id="cm-ing-estado" class="cm-select">
+                        <option value="Recibido">Recibido</option>
+                        <option value="Previsto">Previsto</option>
+                    </select>
+                </div>
+                <div style="display: flex; align-items: flex-end;">
+                    <button type="submit" class="cm-btn cm-btn-primary" style="width: 100%;">Agregar Ingreso</button>
+                </div>
+            </form>
 
+            <div class="cm-table-container">
+                <table class="cm-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Categoría</th>
+                            <th>Importe</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cm-tabla-ingresos-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Módulo de Gastos -->
+        <section class="cm-section">
+            <h2 class="cm-section-title">Mis Gastos</h2>
+            <form id="cm-form-gasto" class="cm-form-grid">
+                <div class="cm-control-group">
+                    <label>Concepto</label>
+                    <input type="text" id="cm-gas-nombre" class="cm-input" placeholder="Ej. Supermercado" required>
+                </div>
+                <div class="cm-control-group">
+                    <label>Categoría</label>
+                    <select id="cm-gas-cat" class="cm-select">
+                        <option value="Vivienda">Vivienda</option>
+                        <option value="Alimentación">Alimentación</option>
+                        <option value="Servicios">Servicios (Agua, Luz...)</option>
+                        <option value="Transporte">Transporte</option>
+                        <option value="Salud">Salud</option>
+                        <option value="Educación">Educación</option>
+                        <option value="Deudas">Deudas y Préstamos</option>
+                        <option value="Entretenimiento">Entretenimiento</option>
+                        <option value="Ahorro">Ahorro e inversión</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+                <div class="cm-control-group">
+                    <label>Importe</label>
+                    <input type="text" id="cm-gas-importe" class="cm-input cm-input-moneda" placeholder="0" required>
+                </div>
+                <div class="cm-control-group">
+                    <label>Tipo de Gasto</label>
+                    <select id="cm-gas-tipo" class="cm-select">
+                        <option value="Fijo">Fijo</option>
+                        <option value="Variable">Variable</option>
+                        <option value="Ocasional">Ocasional</option>
+                    </select>
+                </div>
+                <div style="display: flex; align-items: flex-end;">
+                    <button type="submit" class="cm-btn cm-btn-primary" style="width: 100%;">Agregar Gasto</button>
+                </div>
+            </form>
+
+            <div class="cm-table-container">
+                <table class="cm-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Categoría</th>
+                            <th>Tipo</th>
+                            <th>Importe</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cm-tabla-gastos-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Análisis Financiero -->
+        <section class="cm-section">
+            <h2 class="cm-section-title">Análisis de mi situación financiera</h2>
+            <div id="cm-analisis-contenedor">
+                <div class="cm-alert">Agrega ingresos y gastos para generar un diagnóstico inteligente de tu flujo de caja mensual.</div>
+            </div>
+        </section>
+
+        <!-- Preguntas Frecuentes -->
+        <section class="cm-section">
+            <h2 class="cm-section-title">Preguntas Frecuentes sobre Presupuestos</h2>
+            <div class="cm-faq-item">
+                <div class="cm-faq-q">¿Qué es un presupuesto financiero personal?</div>
+                <div class="cm-faq-a">Es una herramienta de planificación que detalla tus ingresos y gastos para ayudarte a tomar el control absoluto de tus finanzas.</div>
+            </div>
+            <div class="cm-faq-item">
+                <div class="cm-faq-q">¿Cómo se calcula el dinero disponible cada mes?</div>
+                <div class="cm-faq-a">Se obtiene restando a tus ingresos recibidos los gastos efectivamente pagados y obligaciones del período.</div>
+            </div>
+            <div class="cm-faq-item">
+                <div class="cm-faq-q">¿Dónde se guardan mis datos?</div>
+                <div class="cm-faq-a">Tus datos se almacenan de forma segura directamente en la memoria local de tu navegador (localStorage), protegiendo tu privacidad sin servidores externos.</div>
+            </div>
+        </section>
+
+        <div class="cm-footer-note">
+            «Esta herramienta tiene fines educativos y de organización financiera personal. Los resultados dependen de los datos introducidos por el usuario y no constituyen asesoramiento financiero personalizado ni una garantía de resultados futuros».
         </div>
 
     </main>
 
-    <!-- MODAL -->
-    <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-[999]">
+    <!-- Footer Externo -->
+    <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-        <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl animate-[modalShow_.3s_ease]">
-            <h3 class="text-3xl font-bold text-center mb-6">Resultado</h3>
-
-            <p class="text-lg text-stone-700">
-                Ingresos: <span id="m_ingresos" class="font-semibold"></span>
-            </p>
-            <p class="text-lg text-stone-700">
-                Gastos totales: <span id="m_gastos" class="font-semibold"></span>
-            </p>
-            <p class="text-lg mt-4">
-                Balance final: <span id="m_balance" class="font-bold"></span>
-            </p>
-
-            <button onclick="cerrarModal()" 
-                class="w-full mt-8 bg-blue-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transition">
-                Cerrar
-            </button>
-        </div>
-
-    </div>
-
+    <!-- Lógica JavaScript -->
     <script>
-        /* ============================= 🔵 FORMATEO AUTOMÁTICO DE MILES ============================== */
-        document.querySelectorAll(".format-number").forEach(input => {
-            input.addEventListener("input", (e) => {
-                let value = e.target.value.replace(/\./g, "").replace(/,/g, "");
-
-                if (!isNaN(value) && value !== "") {
-                    e.target.value = Number(value).toLocaleString("es-CO");
-                } else {
-                    e.target.value = "";
-                }
-            });
-        });
-
-        function getNumber(id) {
-            return parseFloat(document.getElementById(id).value.replace(/\./g, "").replace(/,/g, "")) || 0;
-        }
-
-        function calcular() {
-            const ingresos = getNumber("ingresos");
-            const fijos = getNumber("fijos");
-            const variables = getNumber("variables");
-
-            const gastos = fijos + variables;
-            const balance = ingresos - gastos;
-
-            document.getElementById('m_ingresos').textContent = "$" + ingresos.toLocaleString("es-CO");
-            document.getElementById('m_gastos').textContent = "$" + gastos.toLocaleString("es-CO");
-            const balanceSpan = document.getElementById('m_balance');
-            balanceSpan.textContent = "$" + balance.toLocaleString("es-CO");
-            balanceSpan.classList.remove("text-red-600", "text-green-600");
-
-            if (balance >= 0) {
-                balanceSpan.classList.add("text-green-600");
-            } else {
-                balanceSpan.classList.add("text-red-600");
+        document.addEventListener('DOMContentLoaded', function () {
+            const periodoInput = document.getElementById('cm-periodo-select');
+            if (periodoInput && !periodoInput.value) {
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = String(now.getMonth() + 1).padStart(2, '0');
+                periodoInput.value = `${year}-${month}`;
             }
 
-            document.getElementById('modal').classList.remove("hidden");
-        }
+            let presupuestoData = {
+                moneda: 'USD',
+                periodo: periodoInput ? periodoInput.value : '',
+                ingresos: [],
+                gastos: []
+            };
 
-        function cerrarModal() {
-            document.getElementById('modal').classList.add("hidden");
-        }
+            const STORAGE_KEY = 'cm_presupuesto_v2_data';
+            const savedData = localStorage.getItem(STORAGE_KEY);
+            
+            if (savedData) {
+                try {
+                    let parsed = JSON.parse(savedData);
+                    if (parsed && typeof parsed === 'object') {
+                        presupuestoData.moneda = parsed.moneda || 'USD';
+                        presupuestoData.periodo = parsed.periodo || (periodoInput ? periodoInput.value : '');
+                        presupuestoData.ingresos = Array.isArray(parsed.ingresos) ? parsed.ingresos : [];
+                        presupuestoData.gastos = Array.isArray(parsed.gastos) ? parsed.gastos : [];
+                    }
+                    if(presupuestoData.moneda) {
+                        document.getElementById('cm-moneda-select').value = presupuestoData.moneda;
+                    }
+                    if(presupuestoData.periodo && periodoInput) {
+                        periodoInput.value = presupuestoData.periodo;
+                    }
+                } catch(e) {
+                    console.error("Error al cargar datos locales", e);
+                }
+            }
 
-        function reiniciarFormulario() {
-            document.getElementById("ingresos").value = "";
-            document.getElementById("fijos").value = "";
-            document.getElementById("variables").value = "";
-            cerrarModal();
-        }
+            function formatearMiles(valor) {
+                if (valor === null || valor === undefined || valor === '') return '';
+                let numeroLimpio = String(valor).replace(/\D/g, '');
+                if (numeroLimpio === '') return '';
+                return Number(numeroLimpio).toLocaleString('es-ES');
+            }
+
+            function obtenerValorNumerico(str) {
+                if (!str) return 0;
+                let limpio = String(str).replace(/\./g, '').replace(/,/g, '');
+                let num = parseFloat(limpio);
+                return isNaN(num) ? 0 : num;
+            }
+
+            document.querySelectorAll('.cm-input-moneda').forEach(input => {
+                input.addEventListener('input', function () {
+                    this.value = formatearMiles(this.value);
+                });
+            });
+
+            document.getElementById('cm-moneda-select').addEventListener('change', function(e) {
+                presupuestoData.moneda = e.target.value;
+                guardarYActualizar();
+            });
+
+            if(periodoInput) {
+                periodoInput.addEventListener('change', function(e) {
+                    presupuestoData.periodo = e.target.value;
+                    guardarYActualizar();
+                });
+            }
+
+            let chartIngresosGastos = null;
+            let chartGastosCategoria = null;
+
+            function inicializarGraficas() {
+                const ctx1 = document.getElementById('cm-chart-ingresos-gastos').getContext('2d');
+                chartIngresosGastos = new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Ingresos', 'Gastos'],
+                        datasets: [{
+                            label: 'Monto Total',
+                            data: [0, 0],
+                            backgroundColor: ['#10b981', '#ef4444'],
+                            borderRadius: 8
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+                });
+
+                const ctx2 = document.getElementById('cm-chart-gastos-categoria').getContext('2d');
+                chartGastosCategoria = new Chart(ctx2, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Sin datos'],
+                        datasets: [{ data: [1], backgroundColor: ['#e2e8f0'] }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false }
+                });
+            }
+
+            inicializarGraficas();
+
+            document.getElementById('cm-form-ingreso').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nombre = document.getElementById('cm-ing-nombre').value.trim();
+                const categoria = document.getElementById('cm-ing-cat').value;
+                const importe = obtenerValorNumerico(document.getElementById('cm-ing-importe').value);
+                const estado = document.getElementById('cm-ing-estado').value;
+
+                if (!nombre || importe <= 0) return;
+
+                presupuestoData.ingresos.push({ id: Date.now() + Math.random(), nombre, categoria, importe, estado });
+                this.reset();
+                guardarYActualizar();
+            });
+
+            document.getElementById('cm-form-gasto').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nombre = document.getElementById('cm-gas-nombre').value.trim();
+                const categoria = document.getElementById('cm-gas-cat').value;
+                const importe = obtenerValorNumerico(document.getElementById('cm-gas-importe').value);
+                const tipo = document.getElementById('cm-gas-tipo').value;
+
+                if (!nombre || importe <= 0) return;
+
+                presupuestoData.gastos.push({ id: Date.now() + Math.random(), nombre, categoria, tipo, importe });
+                this.reset();
+                guardarYActualizar();
+            });
+
+            window.cmEliminarIngreso = function(id) {
+                presupuestoData.ingresos = presupuestoData.ingresos.filter(item => item.id !== id);
+                guardarYActualizar();
+            }
+
+            window.cmEliminarGasto = function(id) {
+                presupuestoData.gastos = presupuestoData.gastos.filter(item => item.id !== id);
+                guardarYActualizar();
+            }
+
+            document.getElementById('cm-btn-nuevo').addEventListener('click', function() {
+                if(confirm('¿Deseas vaciar los registros actuales para iniciar un nuevo presupuesto?')) {
+                    presupuestoData.ingresos = [];
+                    presupuestoData.gastos = [];
+                    guardarYActualizar();
+                }
+            });
+
+            document.getElementById('cm-btn-reset').addEventListener('click', function() {
+                if(confirm('¿Estás seguro de restablecer por completo la herramienta?')) {
+                    localStorage.removeItem(STORAGE_KEY);
+                    location.reload();
+                }
+            });
+
+            document.getElementById('cm-btn-exportar').addEventListener('click', function() {
+                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(presupuestoData, null, 2));
+                const downloadAnchor = document.createElement('a');
+                downloadAnchor.setAttribute("href", dataStr);
+                downloadAnchor.setAttribute("download", "presupuesto_codigo_millonario.json");
+                document.body.appendChild(downloadAnchor);
+                downloadAnchor.click();
+                downloadAnchor.remove();
+            });
+
+            function guardarYActualizar() {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(presupuestoData));
+                renderizarTodo();
+            }
+
+            function renderizarTodo() {
+                const simboloMoneda = presupuestoData.moneda;
+                
+                const tbodyIng = document.getElementById('cm-tabla-ingresos-body');
+                tbodyIng.innerHTML = '';
+                let totalIngresos = 0;
+
+                presupuestoData.ingresos.forEach(item => {
+                    totalIngresos += Number(item.importe) || 0;
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${item.nombre}</td>
+                        <td>${item.categoria}</td>
+                        <td><strong>${formatearMiles(item.importe)} ${simboloMoneda}</strong></td>
+                        <td><span style="padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; background: ${item.estado==='Recibido'?'#d1fae5':'#fef3c7'}; color:${item.estado==='Recibido'?'#065f46':'#92400e'}">${item.estado}</span></td>
+                        <td><button type="button" class="cm-btn cm-btn-danger" style="padding: 5px 10px; font-size: 0.8rem;" onclick="cmEliminarIngreso(${item.id})">Eliminar</button></td>
+                    `;
+                    tbodyIng.appendChild(tr);
+                });
+
+                const tbodyGas = document.getElementById('cm-tabla-gastos-body');
+                tbodyGas.innerHTML = '';
+                let totalGastos = 0;
+                let gastosPorCat = {};
+
+                presupuestoData.gastos.forEach(item => {
+                    let imp = Number(item.importe) || 0;
+                    totalGastos += imp;
+                    gastosPorCat[item.categoria] = (gastosPorCat[item.categoria] || 0) + imp;
+
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${item.nombre}</td>
+                        <td>${item.categoria}</td>
+                        <td>${item.tipo}</td>
+                        <td><strong>${formatearMiles(item.importe)} ${simboloMoneda}</strong></td>
+                        <td><button type="button" class="cm-btn cm-btn-danger" style="padding: 5px 10px; font-size: 0.8rem;" onclick="cmEliminarGasto(${item.id})">Eliminar</button></td>
+                    `;
+                    tbodyGas.appendChild(tr);
+                });
+
+                const dineroDisponible = totalIngresos - totalGastos;
+                const ahorroMes = dineroDisponible > 0 ? dineroDisponible : 0;
+                const tasaAhorro = totalIngresos > 0 ? Math.round((ahorroMes / totalIngresos) * 100) : 0;
+
+                document.getElementById('cm-kpi-ingresos').innerText = `${formatearMiles(totalIngresos)} ${simboloMoneda}`;
+                document.getElementById('cm-kpi-gastos').innerText = `${formatearMiles(totalGastos)} ${simboloMoneda}`;
+                
+                const dispElem = document.getElementById('cm-kpi-disponible');
+                dispElem.innerText = `${formatearMiles(dineroDisponible)} ${simboloMoneda}`;
+                dispElem.style.color = dineroDisponible < 0 ? '#ef4444' : 'var(--cm-text-heading)';
+
+                document.getElementById('cm-kpi-ahorro').innerText = `${formatearMiles(ahorroMes)} ${simboloMoneda}`;
+                document.getElementById('cm-kpi-tasa-ahorro').innerText = `Tasa de ahorro: ${tasaAhorro}%`;
+
+                if (chartIngresosGastos) {
+                    chartIngresosGastos.data.datasets[0].data = [totalIngresos, totalGastos];
+                    chartIngresosGastos.update();
+                }
+
+                if (chartGastosCategoria) {
+                    const catLabels = Object.keys(gastosPorCat);
+                    const catValues = Object.values(gastosPorCat);
+                    if (catLabels.length > 0) {
+                        chartGastosCategoria.data.labels = catLabels;
+                        chartGastosCategoria.data.datasets[0].data = catValues;
+                        chartGastosCategoria.data.datasets[0].backgroundColor = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316'];
+                    } else {
+                        chartGastosCategoria.data.labels = ['Sin gastos'];
+                        chartGastosCategoria.data.datasets[0].data = [1];
+                        chartGastosCategoria.data.datasets[0].backgroundColor = ['#e2e8f0'];
+                    }
+                    chartGastosCategoria.update();
+                }
+
+                const analisisContenedor = document.getElementById('cm-analisis-contenedor');
+                if (totalIngresos === 0 && totalGastos === 0) {
+                    analisisContenedor.innerHTML = `<div class="cm-alert">Agrega ingresos y gastos para generar un diagnóstico inteligente de tu flujo de caja mensual.</div>`;
+                } else {
+                    let htmlAnalisis = '';
+                    if (totalGastos > totalIngresos) {
+                        htmlAnalisis += `<div class="cm-alert" style="background-color: #fef2f2; border-color: #fca5a5; color: #991b1b;">⚠️ Tus gastos superan tus ingresos recibidos en este período por ${formatearMiles(totalGastos - totalIngresos)} ${simboloMoneda}. Te sugerimos revisar tus gastos variables.</div>`;
+                    } else {
+                        htmlAnalisis += `<div class="cm-alert">✅ ¡Buen trabajo! Tus ingresos superan tus egresos, permitiéndote acumular saldo disponible.</div>`;
+                    }
+                    if (totalIngresos > 0) {
+                        const porcentajeGasto = Math.round((totalGastos / totalIngresos) * 100);
+                        htmlAnalisis += `<div class="cm-alert">📊 Tus gastos registrados representan el ${porcentajeGasto}% de tus ingresos totales.</div>`;
+                    }
+                    analisisContenedor.innerHTML = htmlAnalisis;
+                }
+            }
+
+            renderizarTodo();
+        });
     </script>
 
 
-  <!-- ESPACIO PEQUEÑO FINAL -->
-<section class="py-12"></section>
-
-
-
-
-<!-- TITULO -->
-<div class="titulo-seccion">
-
-  <span>
-    Preguntas frecuentes
-  </span>
-
-</div>
-
-
-
- <section class="mb-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
-
-    <!-- ================= ACORDEÓN ================= -->
-
-   <style>
-  .cf-accordion {
-    margin-top: 60px;
-  }
-
-  .cf-accordion * {
-    box-sizing: border-box;
-  }
-
-  .cf-accordion-item {
-    background: #ffffff; /* fondo blanco fijo */
-    border-radius: 14px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
-    transform: translateY(0);
-    will-change: transform; /* optimiza animación */
-    border: 1px solid rgba(0,0,0,0.03);
-  }
-
-  /* Animación tipo card con sombra */
-  .cf-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
-  }
-
-  .cf-accordion-header {
-    padding: 14px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000;
-    user-select: none;
-    background: #ffffff;
-    transition: none;
-  }
-
-  .cf-accordion-header:hover {
-    background: #ffffff;
-  }
-
-  /* ICONO */
-  .cf-accordion-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(45deg);
-    transform-origin: center;
-    transition: transform 0.35s ease;
-    margin-left: 12px;
-    flex-shrink: 0;
-  }
-
-  .cf-accordion-item.is-open .cf-accordion-icon {
-    transform: rotate(-135deg);
-  }
-
-  .cf-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: relative;
-  }
-
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
-  .cf-accordion-item.is-open .cf-accordion-content::before {
-    content: "";
-    display: block;
-    width: 88%;
-    margin: 0 auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .cf-accordion-content p {
-    padding: 18px 22px 22px;
-    margin: 0;
-    color: #000000;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-</style>
-
-
-    <div class="cf-accordion">
-
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Open Sans', sans-serif;">
-        Identifica fugas de dinero y prioridades
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-  
-            <p>
-El 
-<strong>
-Planificador de Presupuesto
-</strong>
-es una herramienta diseñada para ayudarte a organizar tus ingresos y gastos,
-detectar fugas de dinero y tener un mayor control sobre tus finanzas personales.
-</p>
-
-<p>
-Al registrar tus gastos de forma clara y estructurada, podrás identificar
-en qué se va tu dinero, priorizar lo importante y tomar decisiones más
-conscientes para mejorar tu estabilidad financiera.
-</p>
-
-<p>
-
-<strong>
-No se trata de limitarte
-</strong>,
-sino de darte visibilidad y control para usar tu dinero de manera más
-inteligente y alineada con tus objetivos.
-</p>
-
-<p>
-<strong>
-Este planificador es ideal para:
-</strong>
-</p>
-
-<ul style="padding-left: 30px;">
-  <li>→ Personas que quieren organizar mejor sus gastos mensuales.</li>
-  <li>→ Quienes buscan detectar gastos innecesarios.</li>
-  <li>→ Usuarios que desean mejorar su control financiero.</li>
-  <li>→ Personas que quieren ahorrar con mayor disciplina.</li>
-</ul>
-
-<p>
-Un buen presupuesto no se trata de cuánto ganas, sino de cómo administras
-lo que tienes. Esta herramienta te ayuda a construir ese hábito paso a paso.
-</p>
-
-<p>
-Usa este Planificador de Presupuesto de forma constante para fortalecer
-tu disciplina financiera y avanzar hacia una mayor tranquilidad económica.
-</p>
-
-        </div>
-      </div>
-
-    </div>
-
-    <script>
-    document.querySelectorAll('.cf-accordion').forEach(accordion => {
-  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.cf-accordion-item');
-      const content = item.querySelector('.cf-accordion-content');
-
-      // Solo afecta los items de ESTE acordeón
-      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          other.querySelector('.cf-accordion-content').style.maxHeight = null;
-        }
-      });
-
-      item.classList.toggle('is-open');
-
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    });
-  });
-});
-    </script>
-
-
- </div>
-</section>
-    <!-- ================= FIN ACORDEÓN ================= -->
-
-
-
-
-
-  <!--  Footer  -->
+<!-- Footer Real por JS -->
 <div class="footer-here"></div>
-
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-<!-- MENU COMPLETO -->
+<!-- MENU COMPLETO Real por JS -->
 <script src="../assets/menu.js"></script>
-
 
 
 </body>
