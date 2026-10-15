@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
     <title>Pong Financiero: Juego de Educación Financiera | Código Millonario</title>
-<meta name="description" content="Juega al Pong Financiero de Código Millonario, una versión del clásico videojuego para divertirte mientras exploras los juegos y herramientas de educación financiera.">
-
-
-
+    <meta name="description" content="Juega al Pong Financiero de Código Millonario, una versión del clásico videojuego para divertirte mientras exploras los juegos y herramientas de educación financiera.">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,10 +40,8 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between antialiased">
 
-
        <!-- ESPACIO FINAL -->
 <div style="height: 100px;"></div>
-
 
     <div id="cm-game-wrapper" class="w-full max-w-4xl mx-auto px-4 py-6 flex-grow flex flex-col items-center justify-center">
         
@@ -123,14 +115,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-between w-full max-w-[500px] mt-4 gap-4 sm:hidden">
-                    <button ontouchstart="moveLeft(true)" ontouchend="moveLeft(false)" onmousedown="moveLeft(true)" onmouseup="moveLeft(false)" class="flex-1 py-3 bg-gray-800 active:bg-amber-500 active:text-gray-950 text-white rounded-xl font-bold border border-gray-700 select-none">
-                        ◀ Izquierda
-                    </button>
-                    <button ontouchstart="moveRight(true)" ontouchend="moveRight(false)" onmousedown="moveRight(true)" onmouseup="moveRight(false)" class="flex-1 py-3 bg-gray-800 active:bg-amber-500 active:text-gray-950 text-white rounded-xl font-bold border border-gray-700 select-none">
-                        Derecha ▶
-                    </button>
-                </div>
+
             </div>
 
             <div id="gameover-screen" class="hidden flex flex-col items-center justify-center py-10 text-center space-y-4">
@@ -145,13 +130,8 @@
         </div>
     </div>
 
-
-
   <!-- ESPACIO FINAL -->
 <div style="height: 160px;"></div>
-
-
-
 
     <div class="footer-here"></div>
     <script src="https://codigomillonario.blog/assets/footer.js"></script>
@@ -168,12 +148,18 @@
         let gameActive = false;
         let ballInPlay = false;
 
+        // Detector de Dispositivo móvil para aplicar velocidad suave adaptativa
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+
+        // Configuración de velocidades: En móvil se aplica una escala más suave (aprox 45% de la velocidad de PC)
+        const mobileFactor = isMobile ? 0.45 : 1.0;
+
         const speedConfigs = {
-            1: { baseSpeed: 16, aiReaction: 0.35, label: "NIVEL 1 - MODERADA 🟢", fillPercent: "20%", desc: "Velocidad estándar fluida para calentamiento." },
-            2: { baseSpeed: 24, aiReaction: 0.48, label: "NIVEL 2 - MEDIA 🟡", fillPercent: "40%", desc: "Velocidad acelerada. Requiere buenos reflejos." },
-            3: { baseSpeed: 34, aiReaction: 0.65, label: "NIVEL 3 - ALTA ⚡", fillPercent: "60%", desc: "Velocidad muy rápida. Duelo de alta intensidad." },
-            4: { baseSpeed: 45, aiReaction: 0.85, label: "NIVEL 4 - ULTRA 🔥", fillPercent: "80%", desc: "Velocidad extrema de mercado. Reacción inmediata requerida." },
-            5: { baseSpeed: 55, aiReaction: 1.00, label: "NIVEL 5 - HIPERVELOZ 🚀", fillPercent: "100%", desc: "Límite del ojo humano. Solo para traders experimentados." }
+            1: { baseSpeed: 16 * mobileFactor, aiReaction: isMobile ? 0.22 : 0.35, label: "NIVEL 1 - MODERADA 🟢", fillPercent: "20%", desc: "Velocidad estándar fluida para calentamiento." },
+            2: { baseSpeed: 24 * mobileFactor, aiReaction: isMobile ? 0.30 : 0.48, label: "NIVEL 2 - MEDIA 🟡", fillPercent: "40%", desc: "Velocidad acelerada. Requiere buenos reflejos." },
+            3: { baseSpeed: 34 * mobileFactor, aiReaction: isMobile ? 0.42 : 0.65, label: "NIVEL 3 - ALTA ⚡", fillPercent: "60%", desc: "Velocidad muy rápida. Duelo de alta intensidad." },
+            4: { baseSpeed: 45 * mobileFactor, aiReaction: isMobile ? 0.55 : 0.85, label: "NIVEL 4 - ULTRA 🔥", fillPercent: "80%", desc: "Velocidad extrema de mercado. Reacción inmediata requerida." },
+            5: { baseSpeed: 55 * mobileFactor, aiReaction: isMobile ? 0.70 : 1.00, label: "NIVEL 5 - HIPERVELOZ 🚀", fillPercent: "100%", desc: "Límite del ojo humano. Solo para traders experimentados." }
         };
 
         const menuScreen = document.getElementById('menu-screen');
@@ -209,12 +195,12 @@
         };
 
         let playerPaddle = {
-            width: 100,
+            width: isMobile ? 110 : 100, // Paleta ligeramente más cómoda en móvil
             height: 12,
             x: canvas.width / 2 - 50,
             y: canvas.height - 25,
             dx: 0,
-            speed: 10
+            speed: 12
         };
 
         let aiPaddle = {
@@ -388,7 +374,7 @@
                 if (aiPaddle.x < 0) aiPaddle.x = 0;
                 if (aiPaddle.x + aiPaddle.width > canvas.width) aiPaddle.x = canvas.width - aiPaddle.width;
 
-                // --- SUB-STEPPING (Antitunelamiento para alta velocidad) ---
+                // --- SUB-STEPPING (Antitunelamiento optimizado) ---
                 let subSteps = 6;
                 let subX = ball.speedX / subSteps;
                 let subY = ball.speedY / subSteps;
@@ -543,8 +529,6 @@
             gameLoop();
         };
     </script>
-
-
 
 </body>
 </html>
