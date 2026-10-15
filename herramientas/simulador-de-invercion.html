@@ -189,6 +189,52 @@
     font-size: 0.85rem;
   }
 }
+
+
+
+
+
+/* --- ESTILOS PARA EL BOTÓN CENTRADO --- */
+.tool-action-wrap {
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente en PC y móviles */
+  width: 100%;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.btn-complete-calc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f2f5f6; /* Fondo gris pálido sutil */
+  color: #102b55; /* Color azul marino corporativo */
+  border: 1px solid #e7eaee; /* Línea delgada acorde al estilo general */
+  border-radius: 6px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-complete-calc .btn-arrow {
+  stroke: #4f8fd2; /* Azul para la flecha */
+  transition: transform 0.2s ease;
+}
+
+/* Efecto Hover */
+.btn-complete-calc:hover {
+  background-color: #eaf0f2;
+  border-color: #4f8fd2;
+  transform: translateY(-1px);
+}
+
+.btn-complete-calc:hover .btn-arrow {
+  transform: translateX(3px); /* Desplazamiento suave de la flecha */
+}
     </style>
 
     <style>
@@ -367,7 +413,22 @@
                     </div>
                 </div>
             </div>
+
+<br>
+            <!-- Botón para Calculadora Más Completa -->
+<div class="tool-action-wrap">
+  <a href="./herramientas/interes-compuesto.html" class="btn-complete-calc">
+    <span>Ver calculadora completa</span>
+    <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </a>
+</div>
         </section>
+
+
+
 
         <!-- ========================================== -->
         <!-- SIMULADOR 3: INVERSIÓN GENERAL & INFLACIÓN -->
