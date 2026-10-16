@@ -287,8 +287,14 @@ fetch('posts.json')
 
 
 
+
+
+
+
+
+
 <!-- ========================================================= -->
-<!-- CINTILLO BURSÁTIL EN TIEMPO REAL (TRADINGVIEW) -->
+<!-- CINTILLO BURSÁTIL EN TIEMPO REAL (DATOS OFICIALES) -->
 <!-- ========================================================= -->
 <div class="financial-ticker-wrapper">
   <div class="tradingview-widget-container">
@@ -321,7 +327,7 @@ fetch('posts.json')
           "title": "PETRÓLEO WTI"
         }
       ],
-      "showSymbolLogo": true,
+      "showSymbolLogo": false,
       "isTransparent": false,
       "displayMode": "adaptive",
       "colorTheme": "dark",
@@ -333,23 +339,45 @@ fetch('posts.json')
 
 <style>
 /* =========================================================
-   ESTILO DEL CINTILLO FINANCIERO SUPERIOR
+   ESTILOS PROFESIONALES PARA EL CINTILLO FINANCIERO
 ========================================================= */
 .financial-ticker-wrapper {
   width: 100%;
   background-color: #111111;
   border-bottom: 1px solid #222222;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  padding: 0;
+  overflow: hidden;
 }
 
 .tradingview-widget-container {
   max-width: 1200px;
   margin: 0 auto;
+  height: 40px !important;
+}
+
+.tradingview-widget-container__widget,
+.tradingview-widget-container iframe {
+  height: 40px !important;
+  max-height: 40px !important;
+  vertical-align: middle;
+  background-color: transparent !important;
+}
+
+/* Adaptación responsiva para celulares */
+@media (max-width: 600px) {
+  .financial-ticker-wrapper {
+    margin-bottom: 10px;
+  }
+  
+  .tradingview-widget-container,
+  .tradingview-widget-container__widget,
+  .tradingview-widget-container iframe {
+    height: 36px !important;
+    max-height: 36px !important;
+  }
 }
 </style>
-
-
-
 
 
 
@@ -872,7 +900,7 @@ ANÁLISIS
                 <div>
 
                     <span class="cm-kicker">
-                        ECONOMÍA
+                        Economía
                     </span>
 
                     <h2 class="cm-small-title">
@@ -1664,54 +1692,283 @@ GUÍAS
 Actualidad Global
 </div>
   
-  <!-- WIDGET OFICIAL DE RSS.APP DIRECTO -->
-  <iframe 
-    src="https://rss.app/embed/v1/list/oMMasvZzNNlIRWtP" 
-    title="Noticias de Actualidad Global"
-    width="100%" 
-    height="450" 
-    frameborder="0" 
-    style="border: none; border-radius: 4px; width: 100%; display: block;"
-    scrolling="yes">
-  </iframe>
 
-<!-- Script ligero para leer tu XML y mostrarlo con estilo -->
+
+<div class="news-portal-container">
+  <!-- Columna 1: Artículos con miniatura a la izquierda -->
+  <div class="news-column" id="col-list">
+    <div class="column-header">
+      <h2>Mundo</h2>
+    </div>
+    <div class="articles-list-small" id="list-articles"></div>
+  </div>
+
+  <!-- Columna 2: Tarjetas con imagen grande superpuesta -->
+  <div class="news-column" id="col-featured">
+    <div class="column-header">
+      <h2>Actualidad</h2>
+    </div>
+    <div class="articles-cards-large" id="featured-articles"></div>
+  </div>
+
+  <!-- Columna 3: Más leídas con números -->
+  <div class="news-column" id="col-top">
+    <div class="column-header">
+      <h2>Más leídas</h2>
+    </div>
+    <div class="articles-list-ranked" id="top-articles"></div>
+  </div>
+</div>
+
+
+
+<style>
+
+/* =========================================
+   ESTILOS COMPLETOS - PORTAL DE NOTICIAS
+   ========================================= */
+
+/* Contenedor general en 3 columnas (compacto y centrado) */
+.news-portal-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 0.8fr; /* Las dos primeras más anchas, la última (Más leídas) más compacta */
+  gap: 20px;
+  max-width: 1050px; /* Ancho máximo para que no se estire demasiado en monitores grandes */
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Encabezados de las columnas */
+.column-header {
+  border-bottom: 2px solid #111;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.column-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* Etiquetas de categoría */
+.category-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #004481;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* --- COLUMNA 1: Miniatura a la izquierda + Texto --- */
+.articles-list-small {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.small-card {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+
+.small-card img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.small-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.small-card h3 {
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+/* --- COLUMNA 2: Tarjetas grandes con fondo de imagen --- */
+.articles-cards-large {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.large-card {
+  position: relative;
+  height: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+}
+
+.large-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.large-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+  color: #fff;
+}
+
+.large-card-overlay .category-tag {
+  color: #64b5f6;
+}
+
+.large-card h3 {
+  font-size: 0.95rem;
+  margin: 4px 0 0 0;
+  line-height: 1.3;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* --- COLUMNA 3: Más leídas (Compacta y numerada) --- */
+.articles-list-ranked {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio más reducido entre elementos */
+}
+
+.ranked-card {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  align-items: flex-start;
+}
+
+.rank-number {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #002f6c;
+  line-height: 1;
+  min-width: 20px;
+}
+
+.ranked-card h3 {
+  font-size: 0.8rem; /* Títulos más compactos en esta sección */
+  margin: 2px 0 0 0;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO (Móviles y Tablets)
+   ========================================= */
+@media (max-width: 900px) {
+  .news-portal-container {
+    grid-template-columns: 1fr; /* Se apilan en una sola columna en pantallas medianas/pequeñas */
+    max-width: 100%;
+  }
+}
+
+</style>
+
+
+
 <script>
   fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://rss.app/feeds/oMMasvZzNNlIRWtP.xml'))
     .then(response => response.json())
     .then(data => {
-      const container = document.getElementById('custom-rss-feed');
       if (data.status === 'ok') {
-        container.innerHTML = ''; // Limpiar el "cargando"
+        const items = data.items;
         
-        // Tomamos los primeros 3 o 4 artículos del feed
-        data.items.slice(0, 3).forEach((item, index) => {
-          const articleHtml = `
-            <a href="${item.link}" target="_blank" class="trending-item">
-              <span class="trending-number">${index + 1}</span>
-              <div class="trending-content">
-                <span>Actualidad · ${data.feed.title || 'Mundo'}</span>
+        // Función para obtener la imagen del artículo
+        const getImageUrl = (item) => {
+          if (item.thumbnail) return item.thumbnail;
+          if (item.enclosure && item.enclosure.link) return item.enclosure.link;
+          
+          // Buscar tag img en el contenido
+          const imgMatch = item.content ? item.content.match(/<img[^>]+src="([^">]+)"/) : null;
+          if (imgMatch) return imgMatch[1];
+          
+          // Imagen por defecto en caso de no encontrar
+          return 'https://via.placeholder.com/300x200?text=Noticias';
+        };
+
+        // 1. Llenar Columna 1 (Primeros 4 artículos)
+        const listContainer = document.getElementById('list-articles');
+        items.slice(0, 4).forEach(item => {
+          const img = getImageUrl(item);
+          listContainer.innerHTML += `
+            <a href="${item.link}" target="_blank" class="small-card">
+              <img src="${img}" alt="Noticia">
+              <div class="small-card-content">
+                <span class="category-tag">ACTUALIDAD</span>
                 <h3>${item.title}</h3>
               </div>
             </a>
           `;
-          container.innerHTML += articleHtml;
         });
-      } else {
-        document.getElementById('custom-rss-feed').innerHTML = '<p style="font-size:12px; color:#666;">No se pudieron cargar las noticias en este momento.</p>';
+
+        // 2. Llenar Columna 2 (Siguientes 2 artículos destacados)
+        const featuredContainer = document.getElementById('featured-articles');
+        items.slice(4, 6).forEach(item => {
+          const img = getImageUrl(item);
+          featuredContainer.innerHTML += `
+            <a href="${item.link}" target="_blank" class="large-card">
+              <img src="${img}" alt="Noticia">
+              <div class="large-card-overlay">
+                <span class="category-tag">DESTACADO</span>
+                <h3>${item.title}</h3>
+              </div>
+            </a>
+          `;
+        });
+
+        // 3. Llenar Columna 3 (Siguientes 5 artículos más leídos)
+        const topContainer = document.getElementById('top-articles');
+        items.slice(6, 11).forEach((item, index) => {
+          topContainer.innerHTML += `
+            <a href="${item.link}" target="_blank" class="ranked-card">
+              <span class="rank-number">${index + 1}</span>
+              <div>
+                <span class="category-tag">TENDENCIA</span>
+                <h3>${item.title}</h3>
+              </div>
+            </a>
+          `;
+        });
+
       }
     })
-    .catch(error => {
-      console.error('Error al cargar el RSS:', error);
-    });
+    .catch(error => console.error('Error cargando el feed:', error));
 </script>
-</aside>
 
 
 
 
 
-  <div style="height: 240px;"></div>
+
+
+
+
+
+  <div style="height: 200px;"></div>
 
 <!-- =========================================================
      SEPARADOR EDITORIAL
