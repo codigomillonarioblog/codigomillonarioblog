@@ -292,9 +292,8 @@ fetch('posts.json')
 
 
 
-
 <!-- ========================================================= -->
-<!-- CINTILLO BURSÁTIL EN TIEMPO REAL (DATOS OFICIALES) -->
+<!-- CINTILLO BURSÁTIL EN TIEMPO REAL (TRADINGVIEW) -->
 <!-- ========================================================= -->
 <div class="financial-ticker-wrapper">
   <div class="tradingview-widget-container">
@@ -327,7 +326,7 @@ fetch('posts.json')
           "title": "PETRÓLEO WTI"
         }
       ],
-      "showSymbolLogo": false,
+      "showSymbolLogo": true,
       "isTransparent": false,
       "displayMode": "adaptive",
       "colorTheme": "dark",
@@ -339,13 +338,13 @@ fetch('posts.json')
 
 <style>
 /* =========================================================
-   ESTILOS PROFESIONALES PARA EL CINTILLO FINANCIERO
+   ESTILO DEL CINTILLO FINANCIERO SUPERIOR (ORIGINAL PC)
 ========================================================= */
 .financial-ticker-wrapper {
   width: 100%;
   background-color: #111111;
   border-bottom: 1px solid #222222;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   padding: 0;
   overflow: hidden;
 }
@@ -353,28 +352,30 @@ fetch('posts.json')
 .tradingview-widget-container {
   max-width: 1200px;
   margin: 0 auto;
-  height: 40px !important;
+  height: 42px !important; /* Altura original en PC */
 }
 
 .tradingview-widget-container__widget,
 .tradingview-widget-container iframe {
-  height: 40px !important;
-  max-height: 40px !important;
+  height: 42px !important;
+  max-height: 42px !important;
   vertical-align: middle;
-  background-color: transparent !important;
 }
 
-/* Adaptación responsiva para celulares */
+/* =========================================================
+   CORRECCIÓN EXCLUSIVA PARA TELÉFONOS / MÓVILES
+========================================================= */
 @media (max-width: 600px) {
   .financial-ticker-wrapper {
     margin-bottom: 10px;
   }
   
+  /* Liberamos la altura forzada en móvil para que el widget no corte la información */
   .tradingview-widget-container,
   .tradingview-widget-container__widget,
   .tradingview-widget-container iframe {
-    height: 36px !important;
-    max-height: 36px !important;
+    height: 48px !important;
+    max-height: 48px !important;
   }
 }
 </style>
