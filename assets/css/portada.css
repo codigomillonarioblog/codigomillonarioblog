@@ -1204,386 +1204,6 @@ border-bottom: 1px solid #D5D5D5;
 
 
 /* =========================================================
-   SECCIÓN · GUÍAS
-========================================================= */
-
-/* ===== GUÍAS ===== */
-
-
-/* =========================================================
-   SECCIÓN · GUÍAS PRINCIPALES
-========================================================= */
-
-/* =========================================================
-   GUÍAS PRINCIPALES
-========================================================= */
-
-.guias-principales{
-
-  width:100%;
-
-  max-width:1080px;
-
-  margin:0 auto;
-
-  padding:0 40px;
-
-  font-family:'Inter',sans-serif;
-
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.guias-header{
-
-  width:100%;
-
-  max-width:700px;
-
-  margin:0 auto 28px;
-
-  text-align:center;
-
-}
-
-
-/* =========================================================
-   H2
-========================================================= */
-
-.guias-header h2{
-
-  width:100%;
-
-  margin:0;
-
-  padding:0;
-
-  border:0;
-
-  font-size:16px;
-
-  line-height:1.2;
-
-  letter-spacing:-.2px;
-
-  font-weight:600;
-
-  color:#111;
-
-  text-align:center;
-
-}
-
-
-/* =========================================================
-   GRID
-========================================================= */
-
-.guias-grid{
-
-  display:grid;
-
-  grid-template-columns:repeat(4, minmax(0, 1fr));
-
-  gap:0;
-
-  align-items:start;
-
-}
-
-
-/* =========================================================
-   GUÍAS
-========================================================= */
-
-.guia{
-
-  min-width:0;
-
-  padding:0 20px;
-
-  border:0;
-
-  border-left:1px solid #e5e5e5;
-
-}
-
-
-/* QUITAR LINEA DEL PRIMER BLOQUE */
-
-.guia:first-child{
-
-  border-left:none;
-
-}
-
-
-/* =========================================================
-   ENLACES
-========================================================= */
-
-.guia a{
-
-  display:block;
-
-  color:inherit;
-
-  text-decoration:none;
-
-}
-
-
-/* =========================================================
-   IMAGEN
-========================================================= */
-
-.guia-imagen{
-
-  width:100%;
-
-  aspect-ratio:16 / 9;
-
-  overflow:hidden;
-
-  margin-bottom:13px;
-
-}
-
-.guia-imagen img{
-
-  width:100%;
-
-  height:100%;
-
-  display:block;
-
-  object-fit:cover;
-
-  transition:transform .4s ease;
-
-}
-
-.guia:hover .guia-imagen img{
-
-  transform:scale(1.025);
-
-}
-
-
-/* =========================================================
-   CONTENIDO
-========================================================= */
-
-.guia-contenido{
-
-  width:100%;
-
-}
-
-.guia-category{
-
-  display:block;
-
-  margin:0 0 7px;
-
-  font-size:9px;
-
-  font-weight:700;
-
-  letter-spacing:.8px;
-
-  text-transform:uppercase;
-
-  color:#777;
-
-}
-
-
-/* =========================================================
-   TÍTULOS · TIPOGRAFÍA EDITORIAL ANTIGUA
-========================================================= */
-
-.guia h3{
-
-  margin:0 0 8px;
-
-  font-family:Georgia,'Times New Roman',serif;
-
-  font-size:17px;
-
-  line-height:1.18;
-
-  letter-spacing:-.35px;
-
-  font-weight:700;
-
-  color:#111;
-
-  transition:opacity .25s ease;
-
-}
-
-.guia p{
-
-  margin:0;
-
-  font-family:'Inter',sans-serif;
-
-  font-size:12px;
-
-  line-height:1.5;
-
-  font-weight:400;
-
-  color:#666;
-
-}
-
-.guia:hover h3{
-
-  opacity:.65;
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media(max-width:900px){
-
-  .guias-principales{
-
-    padding:0 30px;
-
-  }
-
-  .guias-grid{
-
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-
-    gap:0;
-
-  }
-
-  .guia{
-
-    padding:0 20px;
-
-    border-left:1px solid #e5e5e5;
-
-  }
-
-  .guia:nth-child(odd){
-
-    border-left:none;
-
-  }
-
-  .guia:nth-child(n+3){
-
-    margin-top:28px;
-
-  }
-
-}
-
-
-/* =========================================================
-   MÓVIL
-========================================================= */
-
-@media(max-width:600px){
-
-  .guias-principales{
-
-    margin:0 auto;
-
-    padding:0 20px;
-
-  }
-
-  .guias-header{
-
-    width:100%;
-
-    max-width:700px;
-
-    margin:0 auto 24px;
-
-    text-align:center;
-
-  }
-
-  .guias-header h2{
-
-    width:100%;
-
-    margin:0;
-
-    padding:0;
-
-    font-size:16px;
-
-    text-align:center;
-
-  }
-
-  .guias-grid{
-
-    grid-template-columns:1fr;
-
-    gap:0;
-
-  }
-
-  .guia{
-
-    padding:0 0 24px;
-
-    margin:0 0 24px;
-
-    border-left:none;
-
-    border-bottom:1px solid #e5e5e5;
-
-  }
-
-  /* LINEA ENTRE GUÍAS */
-
-  .guia:not(:last-child){
-
-    border-bottom:1px solid #e5e5e5;
-
-  }
-
-  /* SIN LINEA EN LA ÚLTIMA */
-
-  .guia:last-child{
-
-    border-bottom:none;
-
-    margin-bottom:0;
-
-  }
-
-  .guia h3{
-
-    font-size:20px;
-
-    line-height:1.18;
-
-  }
-
-}
-
-
-
-/* =========================================================
     SECCIÓN CURIOSIDADES
 ========================================================= */
 
@@ -1594,9 +1214,7 @@ border-bottom: 1px solid #D5D5D5;
    Datos que vale la pena conocer = CURIOSIDADES
 ========================================================= */
 
-/* =========================================================
-   PIEZA PRINCIPAL
-========================================================= */
+
 
 .cm-curiosidades{
   width:100%;
@@ -1753,18 +1371,6 @@ border-bottom: 1px solid #D5D5D5;
   margin:0 0 5px;
 }
 
-.cm-curiosidad-item h3{
-  margin:0 0 5px;
-  font-family:Georgia,'Times New Roman',serif;
-  font-size:17px;
-  line-height:1.14;
-  letter-spacing:-.3px;
-  font-weight:400;
-  font-style:normal;
-  color:#111;
-  transition:color .2s ease;
-}
-
 .cm-curiosidad-item p{
   margin:0;
   font-size:10.5px;
@@ -1773,8 +1379,11 @@ border-bottom: 1px solid #D5D5D5;
   color:#707070;
 }
 
+/* EFECTO HOVER: Línea completa directa en ambos tipos de h3 al pasar el mouse por las tarjetas */
+.cm-curiosidad-feature:hover h3,
 .cm-curiosidad-item:hover h3{
-  color:#555;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 
@@ -1874,12 +1483,16 @@ border-bottom: 1px solid #D5D5D5;
 
 }
 
+
 /* =========================================================
    SECCIÓN · MÉTODO EDITORIAL
 ========================================================= */
 
 /* ===== MÉTODO EDITORIAL ===== */
 
+/* =========================================================
+   SECCIÓN · MÉTODO EDITORIAL
+========================================================= */
 
 .cm-analisis{
   width:100%;
@@ -1913,11 +1526,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-analisis-header h2{
   margin:0 0 9px;
-  font-family:'Inter',sans-serif;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:clamp(1.8rem,2.7vw,2.45rem);
   line-height:1.04;
-  letter-spacing:-1.5px;
-  font-weight:800;
+  letter-spacing:-.5px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -1960,10 +1573,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-analisis-copy h3{
   margin:0 0 12px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:22px;
   line-height:1.17;
-  letter-spacing:-.65px;
-  font-weight:750;
+  letter-spacing:-.4px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -2086,9 +1700,10 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-analisis-step h4{
   margin:0 0 5px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:13px;
   line-height:1.2;
-  font-weight:750;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -2344,8 +1959,6 @@ border-bottom: 1px solid #D5D5D5;
 
 }
 
-
-
 /* =========================================================
    SECCIÓN · LA MIRADA DE CÓDIGO MILLONARIO — EDITORIAL
 ========================================================= */
@@ -2355,6 +1968,7 @@ border-bottom: 1px solid #D5D5D5;
 /* =========================================================
    LA MIRADA DE CÓDIGO MILLONARIO
 ========================================================= */
+
 
 .cm-identidad{
   width:100%;
@@ -2390,10 +2004,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-identidad-header h2{
   margin:0 0 9px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:clamp(1.8rem,2.7vw,2.45rem);
   line-height:1.04;
-  letter-spacing:-1.5px;
-  font-weight:800;
+  letter-spacing:-.5px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -2436,10 +2051,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-identidad-content h3{
   margin:0 0 12px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:22px;
   line-height:1.17;
-  letter-spacing:-.65px;
-  font-weight:750;
+  letter-spacing:-.4px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -2511,10 +2127,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-identidad-item h3{
   margin:0 0 7px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:20px;
   line-height:1.12;
-  letter-spacing:-.55px;
-  font-weight:800;
+  letter-spacing:-.4px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -2633,19 +2250,16 @@ border-bottom: 1px solid #D5D5D5;
 }
 
 
+/* =========================================================
+    SECCIÓN FILOSOFIA CÓDIGO MILLONARIO — EDITORIAL
+========================================================= */
+
+/* ===== FILOSOFIA DE CÓDIGO MILLONARIO ===== */
 
 
 /* =========================================================
-    SECCIÓN UNA PERSPECTIVA DE CÓDIGO MILLONARIO — EDITORIAL
+   UNA FILOSOFIA DE CÓDIGO MILLONARIO
 ========================================================= */
-
-/* ===== PERSPECTIVA DE CÓDIGO MILLONARIO ===== */
-
-
-/* =========================================================
-   UNA PERSPECTIVA DE CÓDIGO MILLONARIO
-========================================================= */
-
 
 
 .cm-filosofia{
@@ -2682,10 +2296,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-filosofia-header h2{
   margin:0 0 9px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:clamp(1.8rem,2.7vw,2.45rem);
   line-height:1.04;
-  letter-spacing:-1.5px;
-  font-weight:800;
+  letter-spacing:-.5px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -2732,10 +2347,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-filosofia-main h3{
   margin:0 0 12px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:22px;
   line-height:1.17;
-  letter-spacing:-.65px;
-  font-weight:750;
+  letter-spacing:-.4px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -2812,10 +2428,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-filosofia-item h3{
   margin:0 0 7px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:17px;
   line-height:1.18;
-  letter-spacing:-.4px;
-  font-weight:800;
+  letter-spacing:-.3px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -2945,7 +2562,6 @@ border-bottom: 1px solid #D5D5D5;
 }
 
 
-
 /* =========================================================
     SECCIÓN ÁREAS DE ANÁLISIS — 
 ========================================================= */
@@ -2986,10 +2602,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-areas-header h2{
   margin:0 0 9px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:clamp(1.8rem,2.7vw,2.45rem);
   line-height:1.04;
-  letter-spacing:-1.5px;
-  font-weight:800;
+  letter-spacing:-.5px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -3032,10 +2649,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-area h3{
   margin:0 0 10px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:19px;
   line-height:1.16;
-  letter-spacing:-.5px;
-  font-weight:800;
+  letter-spacing:-.4px;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -3112,10 +2730,11 @@ border-bottom: 1px solid #D5D5D5;
 
 .cm-areas-participa h3{
   margin:0 0 9px;
+  font-family:Georgia, 'Times New Roman', serif;
   font-size:20px;
   line-height:1.18;
   letter-spacing:-.4px;
-  font-weight:750;
+  font-weight:400; /* Tipografía antigua y delgada */
   color:#111;
 }
 
@@ -3255,8 +2874,13 @@ border-bottom: 1px solid #D5D5D5;
 
 
 
+/* =========================================================
+   SECCIONES DIVISIONES
+========================================================= */
 
-
+/* =========================================================
+   SECCIONES DIVISIONES
+========================================================= */
 
 /* =========================================================
    SECCIONES DIVISIONES
@@ -3284,45 +2908,5 @@ border-bottom: 1px solid #D5D5D5;
   height:2px;
   background:#111;
   margin:9px auto 0;
-}
-
-
-
-
-/* =========================================================
-    SEPARADORES · DISEÑOS 
-========================================================= */
-
-/* =========================================================
-   SEPARADOR EDITORIAL · PUNTOS
-========================================================= */
-
-.separador-editorial{
-  width:100%;
-  max-width:1180px;
-  height:9px;
-  margin:0 auto;
-  padding:0;
-
-  background-image:radial-gradient(
-    circle,
-    #999 1px,
-    transparent 1px
-  );
-
-  background-size:5px 3px;
-}
-
-/* =========================================================
-   MÓVIL
-========================================================= */
-
-@media(max-width:600px){
-
-  .separador-editorial{
-    width:100%;
-    height:9px;
-  }
-
 }
 
