@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Fondo de Emergencia y Supervivencia | Código Millonario</title>
+    <meta name="description" content="Calcula cuánto necesitas ahorrar para tu fondo de emergencia, cuántos meses puedes cubrir con tu dinero y cómo prepararte ante una pérdida de ingresos.">
+
+<!-- Favicon -->
+<link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
+
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- html2pdf.js CDN for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1e293b;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Subtle borders instead of cards */
+        .subtle-border-b {
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .subtle-border-r {
+            border-right: 1px solid #e2e8f0;
+        }
+        .subtle-border-t {
+            border-top: 1px solid #e2e8f0;
+        }
+        .subtle-border-all {
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Clean form controls */
+        input, select {
+            background-color: transparent !important;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            color: #0f172a;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #334155;
+            box-shadow: 0 0 0 1px #334155;
+        }
+
+        /* Accordion custom styling */
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- MENU COMPLETO Real por JS -->
+    <script src="../assets/menu.js"></script>
+
+
+
+       <!-- ESPACIO FINAL -->
+<div style="height: 100px;"></div>
+
+
+    <!-- Header / Encabezado Principal -->
+    <header class="w-full py-10 px-4 max-w-6xl mx-auto subtle-border-b flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div class="max-w-2xl">
+            <span class="text-xs uppercase tracking-widest text-slate-500 font-semibold">Planificación Financiera</span>
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-1 tracking-tight">Calculadora de Fondo de Emergencia y Supervivencia</h1>
+            <p class="text-slate-600 mt-2 text-base sm:text-lg font-normal">
+                Evalúa tu capacidad de resistencia financiera ante un desempleo, calcula tu cobertura actual y proyecta la vida útil de tu capital disponible.
+            </p>
+        </div>
+        <!-- Botón sutil para descargar PDF -->
+        <button id="btnExportPDF" onclick="exportarPDF()" class="inline-flex items-center justify-center space-x-2 px-4 py-2 text-xs font-medium text-slate-700 bg-slate-50 hover:bg-slate-100 subtle-border-all rounded-md transition duration-150 ease-in-out shrink-0 self-start md:self-auto">
+            <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Descargar Informe PDF</span>
+        </button>
+    </header>
+
+    <!-- Contenido Principal (Contenedor que se exporta a PDF) -->
+    <main id="reportArea" class="w-full max-w-6xl mx-auto px-4 py-8 flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- SECCIÓN DE ENTRADA DE DATOS (INPUTS) -->
+            <section class="lg:col-span-5 space-y-8">
+                <div>
+                    <h2 class="text-xl font-semibold text-slate-900 mb-1">1. Diagnóstico de Gastos</h2>
+                    <p class="text-xs text-slate-500 mb-4">Ingresa tus egresos indispensables y estilo de vida básico mensual.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1" for="gastosFijos">
+                                Gastos Fijos Mensuales ($)
+                            </label>
+                            <input type="text" id="gastosFijos" value="1.200" class="w-full text-sm formatted-currency-input" placeholder="Vivienda, servicios, comida, deudas...">
+                            <span class="text-[11px] text-slate-400">Gastos esenciales obligatorios.</span>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1" for="gastosVariables">
+                                Gastos Variables / Estilo de Vida ($)
+                            </label>
+                            <input type="text" id="gastosVariables" value="300" class="w-full text-sm formatted-currency-input" placeholder="Ocio, suscripciones, extras...">
+                            <span class="text-[11px] text-slate-400">Gastos que podrías recortar en caso de emergencia.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6 subtle-border-t">
+                    <h2 class="text-xl font-semibold text-slate-900 mb-1">2. Situación Financiera Actual</h2>
+                    <p class="text-xs text-slate-500 mb-4">Información de tu capital e ingresos actuales.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1" for="capitalActual">
+                                Capital Líquido Disponible ($)
+                            </label>
+                            <input type="text" id="capitalActual" value="4.500" class="w-full text-sm formatted-currency-input" placeholder="Efectivo, cuentas bancarias de libre disposición">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1" for="ingresosMensuales">
+                                Ingreso Mensual Neto Actual ($)
+                            </label>
+                            <input type="text" id="ingresosMensuales" value="2.000" class="w-full text-sm formatted-currency-input" placeholder="Salario libre o ingresos netos">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6 subtle-border-t">
+                    <h2 class="text-xl font-semibold text-slate-900 mb-1">3. Riesgo y Ajustes Avanzados</h2>
+                    <p class="text-xs text-slate-500 mb-4">Parámetros de tolerancia e inflación.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1" for="riesgoLaboral">
+                                Estabilidad Laboral / Riesgo
+                            </label>
+                            <select id="riesgoLaboral" class="w-full text-sm">
+                                <option value="3">Estable / Bajo Riesgo (Sugerido: 3 meses)</option>
+                                <option value="6" selected>Moderado (Sugerido: 6 meses)</option>
+                                <option value="9">Independiente / Variable (Sugerido: 9 meses)</option>
+                                <option value="12">Alto Riesgo / Un solo ingreso familiar (Sugerido: 12 meses)</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1" for="inflacion">
+                                    Inflación Anual (%)
+                                </label>
+                                <input type="number" id="inflacion" value="4.0" min="0" max="100" step="0.1" class="w-full text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1" for="rendimiento">
+                                    Rendimiento Capital (%)
+                                </label>
+                                <input type="number" id="rendimiento" value="5.0" min="0" max="100" step="0.1" class="w-full text-sm">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-2 pt-2">
+                            <input type="checkbox" id="modoAusteridad" class="w-4 h-4 text-slate-800 rounded border-slate-300 focus:ring-0">
+                            <label for="modoAusteridad" class="text-xs font-medium text-slate-700 cursor-pointer">
+                                Simular Módulo de Austeridad (Eliminar gastos variables en emergencia)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DE RESULTADOS Y METRICAS -->
+            <section class="lg:col-span-7 flex flex-col justify-between space-y-8">
+                
+                <div>
+                    <!-- Encabezado de métricas principales -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pb-6 subtle-border-b">
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-slate-400 font-medium">Tiempo de Supervivencia</span>
+                            <div class="text-3xl font-extrabold text-slate-900 mt-1" id="resMesesSupervivencia">0.0</div>
+                            <span class="text-xs text-slate-500" id="subtextMeses">Meses de colchón actual</span>
+                        </div>
+
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-slate-400 font-medium">Fondo Meta Sugerido</span>
+                            <div class="text-3xl font-extrabold text-slate-900 mt-1" id="resFondoMeta">$0</div>
+                            <span class="text-xs text-slate-500" id="subtextMeta">Para 6 meses de cobertura</span>
+                        </div>
+
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-slate-400 font-medium">Estado de la Meta</span>
+                            <div class="text-3xl font-extrabold text-slate-900 mt-1" id="resBrechaAhorro">$0</div>
+                            <span class="text-xs text-slate-500" id="subtextBrecha">Faltante por ahorrar</span>
+                        </div>
+                    </div>
+
+                    <!-- Indicadores de Cobertura y Progreso -->
+                    <div class="py-6 subtle-border-b space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs font-medium text-slate-700 mb-1">
+                                <span>Cobertura del Fondo Objetivo</span>
+                                <span id="resPorcentajeMeta">0%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div id="barProgresoMeta" class="bg-slate-800 h-full transition-all duration-300" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <div class="p-3 bg-slate-50 rounded-sm subtle-border-all">
+                                <span class="text-xs text-slate-500 block">Capacidad de Ahorro Mensual</span>
+                                <span class="text-lg font-bold text-slate-800" id="resAhorroMensual">$0 / mes</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-sm subtle-border-all">
+                                <span class="text-xs text-slate-500 block">Tiempo estimado para meta</span>
+                                <span class="text-lg font-bold text-slate-800" id="resTiempoCompletado">0 Meses</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gráfica de Agotamiento / Proyección -->
+                    <div class="py-6 subtle-border-b">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <h3 class="text-base font-semibold text-slate-900">Curva de Desgaste de Capital</h3>
+                                <p class="text-xs text-slate-500">Proyección mes a mes si cesaran tus ingresos hoy.</p>
+                            </div>
+                        </div>
+                        <div class="w-full h-64">
+                            <canvas id="depletionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Tabla Resumen de Agotamiento Proyectado -->
+                    <div class="pt-6">
+                        <h3 class="text-base font-semibold text-slate-900 mb-3">Proyección Mensual Detallada</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs text-slate-600">
+                                <thead class="text-slate-400 uppercase tracking-wider border-b border-slate-200">
+                                    <tr>
+                                        <th class="py-2 pr-4 font-semibold">Mes</th>
+                                        <th class="py-2 px-4 font-semibold">Capital Inicial</th>
+                                        <th class="py-2 px-4 font-semibold">Rendimientos (+)</th>
+                                        <th class="py-2 px-4 font-semibold">Gasto (-)</th>
+                                        <th class="py-2 pl-4 font-semibold text-right">Capital Final</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaProyeccion" class="divide-y divide-slate-100">
+                                    <!-- Filas generadas por JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+<!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+<section class="mt-20 pt-10 subtle-border-t" id="faqSection">
+    <div class="max-w-3xl">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">Preguntas frecuentes</h2>
+        <p class="text-sm text-slate-500 mb-8">Respuestas prácticas para calcular cuánto ahorrar, proteger tus ahorros y prepararte ante una emergencia económica.</p>
+
+        <div class="divide-y divide-slate-200">
+
+            <details class="group py-4">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-slate-900 text-base">
+                    <span>¿Qué es un fondo de emergencia y para qué sirve?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                    Un fondo de emergencia es un dinero reservado para cubrir gastos esenciales cuando surge un imprevisto, como perder el empleo, afrontar una reparación urgente o sufrir una caída de ingresos. Contar con esta reserva permite pagar necesidades básicas sin depender de préstamos o tarjetas de crédito para salir del apuro.
+                </p>
+            </details>
+
+            <details class="group py-4">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-slate-900 text-base">
+                    <span>¿Cuánto dinero debo tener en mi fondo de emergencia?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                    Una referencia habitual es ahorrar el equivalente a entre tres y seis meses de gastos esenciales. Si tus ingresos son variables, trabajas por cuenta propia o tienes personas a tu cargo, puede ser conveniente contar con una reserva mayor. Para calcular tu objetivo, multiplica tus gastos mensuales por el número de meses que deseas cubrir.
+                </p>
+            </details>
+
+            <details class="group py-4">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-slate-900 text-base">
+                    <span>¿Cómo calcular cuántos meses puedo vivir con mis ahorros?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                    Divide el dinero que tienes disponible entre tus gastos mensuales. Por ejemplo, si cuentas con 6.000 y gastas 1.500 al mes, tus ahorros cubrirían aproximadamente cuatro meses sin ingresos, siempre que los gastos se mantengan estables. Esta calculadora permite estimar esa cobertura y proyectar cómo podría disminuir tu capital con el paso del tiempo.
+                </p>
+            </details>
+
+            <details class="group py-4">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-slate-900 text-base">
+                    <span>¿Dónde guardar el dinero del fondo de emergencia?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                    Lo recomendable es mantenerlo en una cuenta de ahorro o en un producto financiero de bajo riesgo al que puedas acceder cuando lo necesites. Antes de elegir, revisa las condiciones de retiro, las comisiones, la protección de los depósitos y la rentabilidad. La prioridad es disponer del dinero a tiempo, no asumir riesgos para obtener una ganancia mayor.
+                </p>
+            </details>
+
+            <details class="group py-4">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-slate-900 text-base">
+                    <span>¿Qué hacer con mis ahorros si pierdo el empleo?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                    Calcula cuánto necesitas para cubrir vivienda, alimentación, servicios, transporte y otras obligaciones esenciales. Reduce los gastos que puedas aplazar, revisa las ayudas o prestaciones a las que tengas derecho y establece un presupuesto para el periodo sin empleo. Controlar las salidas de dinero te ayudará a estimar cuánto tiempo puedes mantenerte mientras buscas nuevos ingresos.
+                </p>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 150px;"></div>
+
+
+    <!-- Footer Real por JS -->
+    <div class="footer-here"></div>
+    <script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+    <!-- LÓGICA Y CÁLCULOS EN JAVASCRIPT -->
+    <script>
+        let chartInstance = null;
+
+        // Formateador de moneda para resultados en es-CO / es-US con puntos en miles
+        const formatMoney = (amount) => {
+            return '$' + Math.round(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        };
+
+        // Convierte texto con puntos de miles a número puro (ej: "1.200" -> 1200)
+        function unformatNumber(val) {
+            if (!val) return 0;
+            const cleanStr = val.toString().replace(/\./g, '').replace(/,/g, '');
+            return parseFloat(cleanStr) || 0;
+        }
+
+        // Formatea el valor del input agregando puntos cada mil
+        function formatInputCurrency(input) {
+            let cursorPosition = input.selectionStart;
+            let originalLength = input.value.length;
+
+            // Extraer solo dígitos
+            let rawDigits = input.value.replace(/\D/g, '');
+            if (rawDigits === '') {
+                input.value = '';
+                return;
+            }
+
+            // Aplicar puntos de miles
+            let formatted = rawDigits.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            input.value = formatted;
+
+            // Ajustar posición del cursor tras re-formatear
+            let newLength = formatted.length;
+            cursorPosition = cursorPosition + (newLength - originalLength);
+            input.setSelectionRange(cursorPosition, cursorPosition);
+        }
+
+        // Configuración de formateo para inputs con clase formatted-currency-input
+        function setupCurrencyInputs() {
+            const currencyInputs = document.querySelectorAll('.formatted-currency-input');
+            currencyInputs.forEach(input => {
+                // Formatear valor inicial
+                formatInputCurrency(input);
+
+                input.addEventListener('input', (e) => {
+                    formatInputCurrency(e.target);
+                    actualizarUI();
+                });
+            });
+        }
+
+        // Captura de entradas y valores
+        function getValues() {
+            const gastosFijos = unformatNumber(document.getElementById('gastosFijos').value);
+            const gastosVariables = unformatNumber(document.getElementById('gastosVariables').value);
+            const capitalActual = unformatNumber(document.getElementById('capitalActual').value);
+            const ingresosMensuales = unformatNumber(document.getElementById('ingresosMensuales').value);
+            
+            const mesesMeta = parseFloat(document.getElementById('riesgoLaboral').value) || 6;
+            const inflacionAnual = (parseFloat(document.getElementById('inflacion').value) || 0) / 100;
+            const rendimientoAnual = (parseFloat(document.getElementById('rendimiento').value) || 0) / 100;
+            const modoAusteridad = document.getElementById('modoAusteridad').checked;
+
+            const gastoMensualEfectivo = modoAusteridad ? gastosFijos : (gastosFijos + gastosVariables);
+
+            return {
+                gastosFijos,
+                gastosVariables,
+                gastoMensualEfectivo,
+                capitalActual,
+                ingresosMensuales,
+                mesesMeta,
+                inflacionAnual,
+                rendimientoAnual,
+                modoAusteridad
+            };
+        }
+
+        function calcularResumen() {
+            const data = getValues();
+            
+            // 1. Fondo Objetivo y Brecha
+            const fondoMeta = data.gastoMensualEfectivo * data.mesesMeta;
+            const brecha = fondoMeta - data.capitalActual;
+            
+            // 2. Capacidad de Ahorro Mensual
+            const capacidadAhorro = data.ingresosMensuales - (data.gastosFijos + data.gastosVariables);
+            
+            // 3. Tiempo para alcanzar la meta con ahorro actual
+            let tiempoParaMeta = 0;
+            if (brecha > 0) {
+                if (capacidadAhorro > 0) {
+                    tiempoParaMeta = Math.ceil(brecha / capacidadAhorro);
+                } else {
+                    tiempoParaMeta = Infinity;
+                }
+            }
+
+            // 4. Proyección de Agotamiento de Capital
+            let capital = data.capitalActual;
+            let gastoMensual = data.gastoMensualEfectivo;
+            const tasaRendimientoMensual = data.rendimientoAnual / 12;
+            const tasaInflacionMensual = data.inflacionAnual / 12;
+
+            const proyeccion = [];
+            let mes = 0;
+
+            // Registramos el punto inicial (Mes 0)
+            proyeccion.push({
+                mes: 0,
+                capitalInicial: capital,
+                rendimiento: 0,
+                gasto: 0,
+                capitalFinal: capital
+            });
+
+            // Límite máximo de simulación: 120 meses (10 años)
+            while (capital > 0 && mes < 120) {
+                mes++;
+                const capInicial = capital;
+                const rend = capInicial * tasaRendimientoMensual;
+                const gastoEfectivo = gastoMensual;
+                
+                capital = capInicial + rend - gastoEfectivo;
+                
+                if (capital < 0) capital = 0;
+
+                proyeccion.push({
+                    mes: mes,
+                    capitalInicial: capInicial,
+                    rendimiento: rend,
+                    gasto: gastoEfectivo,
+                    capitalFinal: capital
+                });
+
+                // Ajustar gasto por inflación para el mes siguiente
+                gastoMensual = gastoMensual * (1 + tasaInflacionMensual);
+            }
+
+            // Calcular meses exactos de supervivencia (con fracción)
+            let mesesSupervivenciaExactos = 0;
+            if (data.gastoMensualEfectivo > 0) {
+                mesesSupervivenciaExactos = data.capitalActual / data.gastoMensualEfectivo;
+            }
+
+            return {
+                data,
+                fondoMeta,
+                brecha,
+                capacidadAhorro,
+                tiempoParaMeta,
+                mesesSupervivenciaExactos,
+                proyeccion
+            };
+        }
+
+        function actualizarUI() {
+            const res = calcularResumen();
+
+            // Métrica: Meses de Supervivencia
+            document.getElementById('resMesesSupervivencia').innerText = res.mesesSupervivenciaExactos.toFixed(1);
+            document.getElementById('subtextMeses').innerText = res.data.modoAusteridad 
+                ? 'Con gastos de austeridad' 
+                : 'Con estilo de vida habitual';
+
+            // Métrica: Fondo Meta
+            document.getElementById('resFondoMeta').innerText = formatMoney(res.fondoMeta);
+            document.getElementById('subtextMeta').innerText = `Objetivo de ${res.data.mesesMeta} meses de gastos`;
+
+            // Métrica: Brecha
+            const elBrecha = document.getElementById('resBrechaAhorro');
+            const elSubBrecha = document.getElementById('subtextBrecha');
+            if (res.brecha <= 0) {
+                elBrecha.innerText = '¡Logrado!';
+                elBrecha.classList.remove('text-slate-900');
+                elBrecha.classList.add('text-slate-700');
+                elSubBrecha.innerText = `Superávit de ${formatMoney(Math.abs(res.brecha))}`;
+            } else {
+                elBrecha.innerText = formatMoney(res.brecha);
+                elBrecha.classList.add('text-slate-900');
+                elSubBrecha.innerText = 'Faltante para cubrir la meta';
+            }
+
+            // Barras de Progreso
+            const porcentaje = res.fondoMeta > 0 ? Math.min(100, Math.max(0, (res.data.capitalActual / res.fondoMeta) * 100)) : 100;
+            document.getElementById('resPorcentajeMeta').innerText = `${porcentaje.toFixed(1)}%`;
+            document.getElementById('barProgresoMeta').style.width = `${porcentaje}%`;
+
+            // Capacidad de Ahorro
+            document.getElementById('resAhorroMensual').innerText = formatMoney(res.capacidadAhorro) + ' / mes';
+
+            // Tiempo estimado
+            const elTiempo = document.getElementById('resTiempoCompletado');
+            if (res.brecha <= 0) {
+                elTiempo.innerText = 'Completado';
+            } else if (res.tiempoParaMeta === Infinity) {
+                elTiempo.innerText = 'Sin capacidad de ahorro';
+            } else {
+                elTiempo.innerText = `~ ${res.tiempoParaMeta} Meses`;
+            }
+
+            // Actualizar Tabla (mostrar primeros 12 meses)
+            const tbody = document.getElementById('tablaProyeccion');
+            tbody.innerHTML = '';
+            
+            const filasAMostrar = res.proyeccion.slice(1, 13); // Primeros 12 meses de desgaste
+            filasAMostrar.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="py-2 pr-4 font-medium text-slate-900">Mes ${row.mes}</td>
+                    <td class="py-2 px-4">${formatMoney(row.capitalInicial)}</td>
+                    <td class="py-2 px-4 text-slate-500">+${formatMoney(row.rendimiento)}</td>
+                    <td class="py-2 px-4 text-slate-500">-${formatMoney(row.gasto)}</td>
+                    <td class="py-2 pl-4 text-right font-medium text-slate-900">${formatMoney(row.capitalFinal)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            // Actualizar Gráfica
+            actualizarGrafica(res.proyeccion);
+        }
+
+        function actualizarGrafica(proyeccion) {
+            const ctx = document.getElementById('depletionChart').getContext('2d');
+
+            const labels = proyeccion.map(p => `Mes ${p.mes}`);
+            const dataCapital = proyeccion.map(p => p.capitalFinal);
+
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+
+            chartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Capital Restante ($)',
+                        data: dataCapital,
+                        borderColor: '#1e293b',
+                        backgroundColor: 'rgba(30, 41, 59, 0.03)',
+                        borderWidth: 2,
+                        fill: true,
+                        pointRadius: 2,
+                        pointHoverRadius: 5,
+                        tension: 0.2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ` Capital: ${formatMoney(context.raw)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: {
+                                    size: 10
+                                },
+                                color: '#64748b'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: '#f1f5f9'
+                            },
+                            ticks: {
+                                font: {
+                                    size: 10
+                                },
+                                color: '#64748b',
+                                callback: function(value) {
+                                    return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Exportación limpia a PDF
+        function exportarPDF() {
+            const element = document.getElementById('reportArea');
+            const opt = {
+                margin:       [10, 10, 10, 10],
+                filename:     'Informe_Fondo_Emergencia.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Notificación visual de generación
+            const btn = document.getElementById('btnExportPDF');
+            const textOriginal = btn.innerHTML;
+            btn.innerHTML = `<span class="text-xs">Generando PDF...</span>`;
+            btn.disabled = true;
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerHTML = textOriginal;
+                btn.disabled = false;
+            }).catch(err => {
+                console.error('Error al exportar PDF:', err);
+                btn.innerHTML = textOriginal;
+                btn.disabled = false;
+            });
+        }
+
+        // Inicialización
+        window.onload = function() {
+            setupCurrencyInputs();
+
+            const nonCurrencyInputs = ['riesgoLaboral', 'inflacion', 'rendimiento', 'modoAusteridad'];
+            nonCurrencyInputs.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', actualizarUI);
+                    el.addEventListener('change', actualizarUI);
+                }
+            });
+
+            actualizarUI();
+        };
+    </script>
+</body>
+</html>
