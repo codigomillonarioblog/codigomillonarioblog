@@ -395,7 +395,7 @@ Análisis:
       Ir
     </button>
 
-    <a id="viewAllBtn" href="../curiosidades/index.html" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
+    <a id="viewAllBtn" href="../hechos-lujos-curiosidades/index.html" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
       Ver todos
     </a>
   </div>
@@ -610,7 +610,7 @@ searchInput.addEventListener("input",()=>{
   renderAll(allArticles.filter(a=>a.title.toLowerCase().includes(q)));
 });
 
-fetch("../curiosidades/index.html")
+fetch("../hechos-lujos-curiosidades/index.html")
 .then(r=>r.text())
 .then(html=>{
   const parser=new DOMParser();
