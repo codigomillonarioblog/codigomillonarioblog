@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   sitemap_job:
     runs-on: ubuntu-latest
@@ -25,3 +28,4 @@ jobs:
         with:
           commit_message: "chore: actualización automática de sitemap.xml"
           file_pattern: "sitemap.xml"
+          skip_ci: true
