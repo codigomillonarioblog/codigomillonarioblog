@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Millonario Studio - AI Character Motion Animator</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #111827;
+        }
+
+        .cm-studio-container {
+            --cm-gold: #d4af37;
+            --cm-gold-hover: #b89628;
+            --cm-border: #e5e7eb;
+            --cm-border-dark: #d1d5db;
+        }
+
+        .border-cm-gray {
+            border-color: var(--cm-border);
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f3f4f6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+
+        /* Canvas workspace overlay styles */
+        .workspace-canvas-wrapper {
+            position: relative;
+            background-color: #f1f5f9;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+
+        .gold-badge {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            color: #92400e;
+            border: 1px solid #f59e0b;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            color: #ffffff;
+            transition: all 0.2s ease;
+        }
+
+        .gold-btn:hover {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Active tool states */
+        .tool-btn.active {
+            border-color: #d4af37;
+            background-color: #fefce8;
+            color: #854d0e;
+            font-weight: 600;
+        }
+
+        .canvas-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        #maskCanvas {
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen cm-studio-container flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-cm-gray bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-lg bg-black flex items-center justify-center text-amber-400 font-bold text-xl shadow">
+                    CM
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg text-gray-900 tracking-tight leading-none flex items-center gap-2">
+                        Código Millonario <span class="text-xs font-semibold px-2 py-0.5 rounded-full gold-badge">STUDIO PRO</span>
+                    </h1>
+                    <p class="text-xs text-gray-500 mt-0.5">Animador de Zonas sobre Imagen Estática</p>
+                </div>
+            </div>
+
+            <!-- Top Actions -->
+            <div class="flex items-center space-x-3">
+                <button id="btn-sample-tesla" class="text-xs px-3 py-1.5 border border-gray-300 rounded-lg hover:bg-gray-50 font-medium text-gray-700 flex items-center gap-1.5 transition">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-500"></i>
+                    Cargar Ejemplo Tesla
+                </button>
+                <label for="image-upload" class="cursor-pointer text-xs px-3 py-1.5 gold-btn rounded-lg font-medium flex items-center gap-1.5">
+                    <i data-lucide="upload" class="w-3.5 h-3.5"></i>
+                    Subir Mi Imagen
+                </label>
+                <input type="file" id="image-upload" accept="image/*" class="hidden">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <div class="flex-1 flex flex-col lg:flex-row overflow-hidden max-w-7xl w-full mx-auto p-4 gap-4">
+        
+        <!-- Left Panel: Controls & Selection -->
+        <aside class="w-full lg:w-80 flex flex-col gap-4 shrink-0">
+            
+            <!-- Step 1: Precise Area Selection -->
+            <div class="bg-white border border-cm-gray rounded-xl p-4 shadow-sm space-y-4">
+                <div class="flex items-center justify-between border-b border-cm-gray pb-2">
+                    <h2 class="text-sm font-semibold text-gray-900 flex items-center gap-2">
+                        <i data-lucide="pen-tool" class="w-4 h-4 text-amber-600"></i>
+                        1. Pintar Zona a Animar
+                    </h2>
+                    <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded">Exacto</span>
+                </div>
+
+                <p class="text-xs text-gray-500 leading-relaxed">
+                    Pinta con el lápiz <strong>solamente</strong> la parte exacta que debe moverse. Todo lo no pintado permanecerá 100% inmóvil sin alterar textos ni fondo.
+                </p>
+
+                <!-- Tools Selection -->
+                <div class="grid grid-cols-2 gap-2">
+                    <button id="tool-brush" class="tool-btn active text-xs py-2 border border-gray-300 rounded-lg font-medium flex items-center justify-center gap-1.5 transition">
+                        <i data-lucide="pencil" class="w-3.5 h-3.5"></i> Lápiz / Pincel
+                    </button>
+                    <button id="tool-eraser" class="tool-btn text-xs py-2 border border-gray-300 rounded-lg font-medium flex items-center justify-center gap-1.5 transition">
+                        <i data-lucide="eraser" class="w-3.5 h-3.5"></i> Borrador
+                    </button>
+                </div>
+
+                <!-- Pencil Thickness Control -->
+                <div class="space-y-2 pt-1 border-t border-gray-100">
+                    <div class="flex justify-between items-center text-xs text-gray-700">
+                        <span class="font-medium flex items-center gap-1">
+                            <i data-lucide="circle-dot" class="w-3.5 h-3.5 text-amber-600"></i> Grosor del Lápiz
+                        </span>
+                        <span id="brush-size-val" class="font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">25 px</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="range" id="brush-size" min="2" max="120" value="25" class="w-full accent-amber-500 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                        <div id="brush-preview" class="w-8 h-8 rounded-lg bg-slate-100 border border-gray-200 flex items-center justify-center shrink-0">
+                            <div id="brush-dot" class="bg-red-500 rounded-full transition-all" style="width: 12px; height: 12px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons for Mask -->
+                <div class="flex justify-between items-center text-xs pt-2 border-t border-gray-100">
+                    <button id="btn-clear-mask" class="text-red-600 hover:text-red-700 font-medium flex items-center gap-1 px-2 py-1 rounded hover:bg-red-50 transition">
+                        <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Limpiar Selección
+                    </button>
+                    <label class="flex items-center gap-1.5 cursor-pointer text-gray-600 select-none">
+                        <input type="checkbox" id="chk-show-mask" checked class="rounded border-gray-300 text-amber-600 focus:ring-amber-500">
+                        Ver Selección
+                    </label>
+                </div>
+            </div>
+
+            <!-- Step 2: Animation Control -->
+            <div class="bg-white border border-cm-gray rounded-xl p-4 shadow-sm space-y-4 flex-1">
+                <div class="flex items-center justify-between border-b border-cm-gray pb-2">
+                    <h2 class="text-sm font-semibold text-gray-900 flex items-center gap-2">
+                        <i data-lucide="sliders" class="w-4 h-4 text-amber-600"></i>
+                        2. Ajustes de Movimiento
+                    </h2>
+                </div>
+
+                <!-- Motion Types -->
+                <div class="space-y-1.5">
+                    <label class="text-xs font-medium text-gray-700">Estilo de Movimiento</label>
+                    <select id="motion-preset" class="w-full text-xs border border-gray-300 rounded-lg p-2.5 bg-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 font-medium text-gray-800">
+                        <option value="breath">Respiración / Flote Suave</option>
+                        <option value="sway">Balanceo Ondulado (Ropa / Pelo)</option>
+                        <option value="pulse">Palpitar / Latido Sutil</option>
+                        <option value="vibration">Vibración / Micro-Movimiento</option>
+                    </select>
+                </div>
+
+                <!-- Motion Intensity Slider -->
+                <div class="space-y-1.5">
+                    <div class="flex justify-between text-xs text-gray-700">
+                        <span class="font-medium">Intensidad</span>
+                        <span id="motion-intensity-val" class="font-bold text-gray-900">Normal (1.0x)</span>
+                    </div>
+                    <input type="range" id="motion-intensity" min="0.1" max="2.5" step="0.1" value="1.0" class="w-full accent-amber-500 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Export Video Duration Selection -->
+                <div class="space-y-1.5 pt-2 border-t border-gray-100">
+                    <label class="text-xs font-medium text-gray-700 flex items-center justify-between">
+                        <span>Duración del Video (HD)</span>
+                        <span class="text-[10px] text-amber-600 font-bold">Formato MP4/WebM</span>
+                    </label>
+                    <div class="grid grid-cols-4 gap-1.5" id="duration-selector">
+                        <button data-duration="3" class="dur-btn text-xs py-1.5 border border-gray-200 rounded-lg font-medium text-center hover:bg-gray-50 transition">3s</button>
+                        <button data-duration="5" class="dur-btn active text-xs py-1.5 border border-amber-500 bg-amber-50 text-amber-900 rounded-lg font-bold text-center transition">5s</button>
+                        <button data-duration="10" class="dur-btn text-xs py-1.5 border border-gray-200 rounded-lg font-medium text-center hover:bg-gray-50 transition">10s</button>
+                        <button data-duration="15" class="dur-btn text-xs py-1.5 border border-gray-200 rounded-lg font-medium text-center hover:bg-gray-50 transition">15s</button>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- Center Workspace: Interactive Canvas Display -->
+        <main class="flex-1 bg-white border border-cm-gray rounded-xl flex flex-col overflow-hidden shadow-sm">
+            
+            <!-- Toolbar Header -->
+            <div class="h-12 border-b border-cm-gray px-4 flex items-center justify-between bg-white">
+                <div class="flex items-center space-x-3 text-xs text-gray-600">
+                    <span id="canvas-status" class="flex items-center gap-1.5 font-medium text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Listo para seleccionar
+                    </span>
+                    <span class="text-gray-300">|</span>
+                    <span id="canvas-dimensions" class="text-gray-500">600 x 1066 px</span>
+                </div>
+
+                <!-- Playback Controls -->
+                <div class="flex items-center space-x-2">
+                    <button id="btn-toggle-play" class="px-3 py-1.5 bg-gray-900 hover:bg-black text-white text-xs rounded-lg font-medium flex items-center gap-1.5 transition">
+                        <i data-lucide="play" id="play-icon" class="w-3.5 h-3.5"></i>
+                        <span id="play-text">Probar Animación</span>
+                    </button>
+                    <button id="btn-reset-view" class="p-1.5 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-600 transition" title="Reiniciar">
+                        <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Canvas Container -->
+            <div class="flex-1 workspace-canvas-wrapper flex items-center justify-center p-4 overflow-hidden relative" id="canvas-viewport">
+                
+                <!-- Main Canvas Frame -->
+                <div class="relative shadow-2xl rounded-lg overflow-hidden border border-gray-300 bg-white" id="canvas-frame">
+                    <!-- Layer 1: Base original background image -->
+                    <canvas id="baseCanvas" class="block"></canvas>
+                    <!-- Layer 2: Isolated strict animated user selection -->
+                    <canvas id="animCanvas" class="canvas-layer"></canvas>
+                    <!-- Layer 3: Interactive Drawing Mask -->
+                    <canvas id="maskCanvas" class="canvas-layer cursor-crosshair"></canvas>
+                </div>
+
+                <!-- Processing Overlay -->
+                <div id="processing-overlay" class="absolute inset-0 bg-white/90 backdrop-blur-sm flex flex-col items-center justify-center hidden z-20">
+                    <div class="w-12 h-12 border-4 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+                    <p class="mt-4 font-semibold text-sm text-gray-900" id="processing-text">Generando archivo de video HD...</p>
+                    <p class="text-xs text-gray-500 mt-1" id="processing-subtext">Por favor espera mientras se procesan los fotogramas</p>
+                    <div class="w-48 bg-gray-200 h-1.5 rounded-full mt-3 overflow-hidden">
+                        <div id="export-progress" class="bg-amber-500 h-full w-0 transition-all duration-200"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Export Actions -->
+            <div class="border-t border-cm-gray p-3 bg-white flex flex-wrap items-center justify-between gap-3 text-xs">
+                <div class="flex items-center gap-2 text-gray-600">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                    <span>Precisión estricta: Solo se mueve lo pintado con el lápiz.</span>
+                </div>
+
+                <!-- Export Video Button -->
+                <div class="flex items-center space-x-2">
+                    <button id="btn-export-video" class="px-5 py-2 gold-btn font-semibold rounded-lg flex items-center gap-2 shadow-sm transition">
+                        <i data-lucide="download" class="w-4 h-4 text-amber-400"></i>
+                        Descargar Video MP4 HD (<span id="btn-dur-label">5s</span>)
+                    </button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-gray-900 text-white text-xs px-4 py-3 rounded-xl shadow-xl flex items-center space-x-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <i data-lucide="info" class="w-4 h-4 text-amber-400 shrink-0"></i>
+        <span id="toast-message">Notificación</span>
+    </div>
+
+    <!-- Core Script -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Sample Tesla SVG Image
+        const TESLA_SAMPLE_SVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="1066" viewBox="0 0 600 1066">
+            <rect width="600" height="1066" fill="#FFFFFF"/>
+            <rect x="20" y="20" width="560" height="1026" fill="none" stroke="#E5E7EB" stroke-width="2"/>
+            
+            <!-- Text Content -->
+            <text x="50%" y="80" fill="#111827" font-family="Georgia, serif" font-size="22" font-weight="bold" text-anchor="middle">TU MENTE ES UN JARDÍN,</text>
+            <text x="50%" y="112" fill="#111827" font-family="Georgia, serif" font-size="22" font-weight="bold" text-anchor="middle">TUS PENSAMIENTOS SON</text>
+            <text x="50%" y="144" fill="#111827" font-family="Georgia, serif" font-size="22" font-weight="bold" text-anchor="middle">LAS SEMILLAS.</text>
+            
+            <text x="50%" y="220" fill="#111827" font-family="Impact, sans-serif" font-size="42" letter-spacing="2" text-anchor="middle">NIKOLA TESLA</text>
+            <text x="50%" y="260" fill="#4B5563" font-family="Georgia, serif" font-size="18" font-weight="bold" text-anchor="middle">OBSERVÓ UN DÍA:</text>
+
+            <text x="50%" y="340" fill="#111827" font-family="Georgia, serif" font-size="28" font-weight="bold" text-anchor="middle">"NO TRABAJO PARA EL</text>
+            <text x="50%" y="380" fill="#111827" font-family="Georgia, serif" font-size="28" font-weight="bold" text-anchor="middle">PRESENTE, SINO PARA UN</text>
+            <text x="50%" y="420" fill="#111827" font-family="Georgia, serif" font-size="28" font-weight="bold" text-anchor="middle">FUTURO QUE YA SIENTO EN</text>
+            <text x="50%" y="460" fill="#111827" font-family="Georgia, serif" font-size="28" font-weight="bold" text-anchor="middle">EL ALMA, Y ESE FUTURO</text>
+            <text x="50%" y="500" fill="#111827" font-family="Georgia, serif" font-size="28" font-weight="bold" text-anchor="middle">ES MÍO."</text>
+
+            <text x="50%" y="980" fill="#374151" font-family="Georgia, serif" font-size="20" font-style="italic" text-anchor="middle">Crea tu propio camino y no temas</text>
+            <text x="50%" y="1010" fill="#374151" font-family="Georgia, serif" font-size="20" font-style="italic" text-anchor="middle">ser malinterpretado.</text>
+
+            <!-- Tesla Illustration -->
+            <g id="tesla-character" stroke="#111827" stroke-width="3" fill="none">
+                <!-- Head & Hair -->
+                <path d="M 440 280 C 420 280, 410 320, 410 350 C 410 390, 430 420, 450 420 C 480 420, 490 380, 490 340 C 490 300, 470 280, 440 280 Z" fill="#FFFFFF"/>
+                <path d="M 415 310 C 425 290, 460 285, 485 305 C 470 320, 435 315, 415 310 Z" fill="#111827"/>
+                <!-- Eyes & Mustache -->
+                <circle cx="435" cy="345" r="3" fill="#111827"/>
+                <circle cx="465" cy="345" r="3" fill="#111827"/>
+                <path d="M 430 365 Q 450 375 470 365" stroke-width="4"/>
+                <!-- Suit Body -->
+                <path d="M 410 420 L 380 500 L 370 700 L 400 950 L 440 950 L 440 680 L 470 680 L 470 950 L 510 950 L 520 680 L 530 500 L 490 420 Z" fill="#FFFFFF"/>
+                <!-- Suit Lines -->
+                <path d="M 450 420 L 450 650"/>
+                <path d="M 410 450 L 450 520 L 490 450"/>
+                <path d="M 435 435 L 465 435" stroke-width="2"/>
+            </g>
+        </svg>
+        `;
+
+        // Canvas Elements
+        const baseCanvas = document.getElementById('baseCanvas');
+        const animCanvas = document.getElementById('animCanvas');
+        const maskCanvas = document.getElementById('maskCanvas');
+
+        const ctxBase = baseCanvas.getContext('2d');
+        const ctxAnim = animCanvas.getContext('2d');
+        const ctxMask = maskCanvas.getContext('2d');
+
+        // Offscreen canvas for strict masking calculations
+        const offCanvas = document.createElement('canvas');
+        const ctxOff = offCanvas.getContext('2d');
+
+        // State Variables
+        let currentImage = new Image();
+        let isDrawing = false;
+        let currentTool = 'brush'; // 'brush' or 'eraser'
+        let brushSize = 25;
+        let isPlaying = false;
+        let animationFrameId = null;
+        let animationTime = 0;
+        let selectedDuration = 5; // seconds
+
+        // Controls
+        const brushSizeInput = document.getElementById('brush-size');
+        const brushSizeVal = document.getElementById('brush-size-val');
+        const brushDot = document.getElementById('brush-dot');
+        const toolBrushBtn = document.getElementById('tool-brush');
+        const toolEraserBtn = document.getElementById('tool-eraser');
+        const chkShowMask = document.getElementById('chk-show-mask');
+        const btnClearMask = document.getElementById('btn-clear-mask');
+        const btnTogglePlay = document.getElementById('btn-toggle-play');
+        const playIcon = document.getElementById('play-icon');
+        const playText = document.getElementById('play-text');
+        const motionPresetSelect = document.getElementById('motion-preset');
+        const motionIntensityInput = document.getElementById('motion-intensity');
+        const motionIntensityVal = document.getElementById('motion-intensity-val');
+        const processingOverlay = document.getElementById('processing-overlay');
+        const exportProgress = document.getElementById('export-progress');
+
+        // Init App
+        window.addEventListener('load', () => {
+            loadSVGSample();
+            setupEventListeners();
+        });
+
+        // Load Default Sample
+        function loadSVGSample() {
+            const blob = new Blob([TESLA_SAMPLE_SVG], { type: 'image/svg+xml' });
+            const url = URL.createObjectURL(blob);
+            
+            currentImage = new Image();
+            currentImage.onload = () => {
+                initCanvasDimensions(currentImage.width, currentImage.height);
+                preselectTeslaHead();
+                showToast("Ejemplo cargado. Cabeza de Tesla seleccionada por defecto.");
+            };
+            currentImage.src = url;
+        }
+
+        // Initialize Canvases
+        function initCanvasDimensions(width, height) {
+            baseCanvas.width = width;
+            baseCanvas.height = height;
+            animCanvas.width = width;
+            animCanvas.height = height;
+            maskCanvas.width = width;
+            maskCanvas.height = height;
+            offCanvas.width = width;
+            offCanvas.height = height;
+
+            // Draw Base
+            ctxBase.clearRect(0, 0, width, height);
+            ctxBase.drawImage(currentImage, 0, 0);
+
+            // Container Scaling
+            const viewport = document.getElementById('canvas-viewport');
+            const maxW = viewport.clientWidth - 32;
+            const maxH = viewport.clientHeight - 32;
+            
+            const scale = Math.min(maxW / width, maxH / height, 1);
+            const frame = document.getElementById('canvas-frame');
+            frame.style.width = `${width * scale}px`;
+            frame.style.height = `${height * scale}px`;
+
+            document.getElementById('canvas-dimensions').textContent = `${width} x ${height} px`;
+        }
+
+        // Default sample brush selection
+        function preselectTeslaHead() {
+            ctxMask.clearRect(0, 0, maskCanvas.width, maskCanvas.height);
+            ctxMask.fillStyle = 'rgba(239, 68, 68, 0.5)';
+            ctxMask.beginPath();
+            ctxMask.arc(450, 350, 55, 0, Math.PI * 2);
+            ctxMask.fill();
+        }
+
+        // Setup Events
+        function setupEventListeners() {
+            // Upload
+            document.getElementById('image-upload').addEventListener('change', handleImageUpload);
+            document.getElementById('btn-sample-tesla').addEventListener('click', loadSVGSample);
+
+            // Tools
+            toolBrushBtn.addEventListener('click', () => setTool('brush'));
+            toolEraserBtn.addEventListener('click', () => setTool('eraser'));
+
+            // Pencil Thickness Control
+            brushSizeInput.addEventListener('input', (e) => {
+                brushSize = parseInt(e.target.value);
+                brushSizeVal.textContent = `${brushSize} px`;
+                const dotSize = Math.max(3, Math.min(28, brushSize * 0.4));
+                brushDot.style.width = `${dotSize}px`;
+                brushDot.style.height = `${dotSize}px`;
+            });
+
+            btnClearMask.addEventListener('click', () => {
+                ctxMask.clearRect(0, 0, maskCanvas.width, maskCanvas.height);
+                showToast("Selección limpiada.");
+            });
+
+            chkShowMask.addEventListener('change', (e) => {
+                maskCanvas.style.opacity = e.target.checked ? "1" : "0";
+            });
+
+            // Canvas Drawing
+            maskCanvas.addEventListener('mousedown', startDrawing);
+            maskCanvas.addEventListener('mousemove', draw);
+            maskCanvas.addEventListener('mouseup', stopDrawing);
+            maskCanvas.addEventListener('mouseleave', stopDrawing);
+
+            // Touch events
+            maskCanvas.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                const touch = e.touches[0];
+                startDrawing(touch);
+            });
+            maskCanvas.addEventListener('touchmove', (e) => {
+                e.preventDefault();
+                const touch = e.touches[0];
+                draw(touch);
+            });
+            maskCanvas.addEventListener('touchend', stopDrawing);
+
+            // Playback
+            btnTogglePlay.addEventListener('click', toggleAnimation);
+            document.getElementById('btn-reset-view').addEventListener('click', resetAnimation);
+
+            // Motion settings
+            motionIntensityInput.addEventListener('input', (e) => {
+                motionIntensityVal.textContent = `${parseFloat(e.target.value).toFixed(1)}x`;
+            });
+
+            // Duration selector
+            document.querySelectorAll('.dur-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.dur-btn').forEach(b => {
+                        b.classList.remove('active', 'border-amber-500', 'bg-amber-50', 'text-amber-900', 'font-bold');
+                        b.classList.add('border-gray-200', 'font-medium');
+                    });
+                    const target = e.currentTarget;
+                    target.classList.add('active', 'border-amber-500', 'bg-amber-50', 'text-amber-900', 'font-bold');
+                    selectedDuration = parseInt(target.dataset.duration);
+                    document.getElementById('btn-dur-label').textContent = `${selectedDuration}s`;
+                });
+            });
+
+            // Video Export
+            document.getElementById('btn-export-video').addEventListener('click', recordAndDownloadVideo);
+        }
+
+        // Tool state
+        function setTool(tool) {
+            currentTool = tool;
+            if (tool === 'brush') {
+                toolBrushBtn.classList.add('active');
+                toolEraserBtn.classList.remove('active');
+            } else {
+                toolEraserBtn.classList.add('active');
+                toolBrushBtn.classList.remove('active');
+            }
+        }
+
+        // Image Upload
+        function handleImageUpload(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                currentImage = new Image();
+                currentImage.onload = () => {
+                    initCanvasDimensions(currentImage.width, currentImage.height);
+                    ctxMask.clearRect(0, 0, maskCanvas.width, maskCanvas.height);
+                    showToast("Imagen cargada. Pinta la zona que deseas animar.");
+                };
+                currentImage.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Drawing Math
+        function getCanvasPos(e) {
+            const rect = maskCanvas.getBoundingClientRect();
+            const scaleX = maskCanvas.width / rect.width;
+            const scaleY = maskCanvas.height / rect.height;
+            return {
+                x: (e.clientX - rect.left) * scaleX,
+                y: (e.clientY - rect.top) * scaleY
+            };
+        }
+
+        function startDrawing(e) {
+            isDrawing = true;
+            draw(e);
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            const pos = getCanvasPos(e);
+
+            ctxMask.lineWidth = brushSize;
+            ctxMask.lineCap = 'round';
+            ctxMask.lineJoin = 'round';
+
+            if (currentTool === 'brush') {
+                ctxMask.globalCompositeOperation = 'source-over';
+                ctxMask.fillStyle = 'rgba(239, 68, 68, 0.5)';
+                ctxMask.strokeStyle = 'rgba(239, 68, 68, 0.5)';
+            } else {
+                ctxMask.globalCompositeOperation = 'destination-out';
+            }
+
+            ctxMask.beginPath();
+            ctxMask.arc(pos.x, pos.y, brushSize / 2, 0, Math.PI * 2);
+            ctxMask.fill();
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+            ctxMask.globalCompositeOperation = 'source-over';
+        }
+
+        // Toggle Animation
+        function toggleAnimation() {
+            if (isPlaying) {
+                stopAnimation();
+            } else {
+                startAnimation();
+            }
+        }
+
+        function startAnimation() {
+            isPlaying = true;
+            playIcon.setAttribute('data-lucide', 'pause');
+            playText.textContent = "Pausar";
+            lucide.createIcons();
+
+            // Hide red mask overlay while animating
+            maskCanvas.style.opacity = "0";
+            animateLoop();
+        }
+
+        function stopAnimation() {
+            isPlaying = false;
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            playIcon.setAttribute('data-lucide', 'play');
+            playText.textContent = "Probar Animación";
+            lucide.createIcons();
+
+            if (chkShowMask.checked) {
+                maskCanvas.style.opacity = "1";
+            }
+            ctxAnim.clearRect(0, 0, animCanvas.width, animCanvas.height);
+        }
+
+        function resetAnimation() {
+            stopAnimation();
+            animationTime = 0;
+            ctxAnim.clearRect(0, 0, animCanvas.width, animCanvas.height);
+            showToast("Vista reiniciada.");
+        }
+
+        // Get Center of the painted selection
+        function getSelectionCenter() {
+            const w = maskCanvas.width;
+            const h = maskCanvas.height;
+            const imgData = ctxMask.getImageData(0, 0, w, h).data;
+            
+            let sumX = 0, sumY = 0, count = 0;
+            for (let y = 0; y < h; y += 4) {
+                for (let x = 0; x < w; x += 4) {
+                    if (imgData[(y * w + x) * 4 + 3] > 20) {
+                        sumX += x;
+                        sumY += y;
+                        count++;
+                    }
+                }
+            }
+
+            if (count > 0) {
+                return { x: sumX / count, y: sumY / count };
+            }
+            return { x: w / 2, y: h / 2 };
+        }
+
+        // STRICT MASKED ANIMATION ENGINE
+        function renderAnimationFrame(t) {
+            const w = animCanvas.width;
+            const h = animCanvas.height;
+
+            ctxAnim.clearRect(0, 0, w, h);
+            ctxOff.clearRect(0, 0, w, h);
+
+            const intensity = parseFloat(motionIntensityInput.value);
+            const mode = motionPresetSelect.value;
+            const center = getSelectionCenter();
+
+            // Calculate Motion Offsets
+            let dx = 0, dy = 0, scale = 1.0, rotate = 0;
+
+            if (mode === 'breath') {
+                dy = Math.sin(t * 2.5) * 4 * intensity;
+                scale = 1.0 + (Math.sin(t * 2.5) * 0.015 * intensity);
+            } else if (mode === 'sway') {
+                dx = Math.sin(t * 2.0) * 5 * intensity;
+                rotate = Math.sin(t * 1.8) * 0.02 * intensity;
+            } else if (mode === 'pulse') {
+                scale = 1.0 + (Math.sin(t * 4.0) * 0.025 * intensity);
+            } else if (mode === 'vibration') {
+                dx = (Math.random() - 0.5) * 3 * intensity;
+                dy = (Math.random() - 0.5) * 3 * intensity;
+            }
+
+            // 1. Draw the user-drawn mask shape onto offscreen canvas
+            ctxOff.drawImage(maskCanvas, 0, 0);
+
+            // 2. Keep ONLY the drawn mask pixels, replace with transformed image
+            ctxOff.globalCompositeOperation = 'source-in';
+            ctxOff.save();
+            ctxOff.translate(center.x + dx, center.y + dy);
+            ctxOff.rotate(rotate);
+            ctxOff.scale(scale, scale);
+            ctxOff.translate(-center.x, -center.y);
+            ctxOff.drawImage(baseCanvas, 0, 0);
+            ctxOff.restore();
+
+            // Reset composite mode
+            ctxOff.globalCompositeOperation = 'source-over';
+
+            // 3. Draw the resulting strictly-clipped animated piece onto animCanvas
+            ctxAnim.drawImage(offCanvas, 0, 0);
+        }
+
+        function animateLoop() {
+            if (!isPlaying) return;
+            animationTime += 0.03;
+            renderAnimationFrame(animationTime);
+            animationFrameId = requestAnimationFrame(animateLoop);
+        }
+
+        // MP4 / WebM VIDEO EXPORT ENGINE
+        async function recordAndDownloadVideo() {
+            if (!isPlaying) startAnimation();
+
+            // Create composite canvas for video output
+            const recordCanvas = document.createElement('canvas');
+            recordCanvas.width = baseCanvas.width;
+            recordCanvas.height = baseCanvas.height;
+            const recCtx = recordCanvas.getContext('2d');
+
+            processingOverlay.classList.remove('hidden');
+            exportProgress.style.width = "0%";
+
+            // Setup Stream and Recorder
+            const stream = recordCanvas.captureStream(30); // 30 FPS
+            
+            let mimeType = 'video/webm;codecs=vp9';
+            if (!MediaRecorder.isTypeSupported(mimeType)) {
+                mimeType = 'video/webm';
+            }
+
+            const recorder = new MediaRecorder(stream, { mimeType: mimeType });
+            const chunks = [];
+
+            recorder.ondataavailable = (e) => {
+                if (e.data.size > 0) chunks.push(e.data);
+            };
+
+            recorder.onstop = () => {
+                const blob = new Blob(chunks, { type: mimeType });
+                const url = URL.createObjectURL(blob);
+                
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = `codigo_millonario_animacion_${selectedDuration}s.mp4`;
+                document.body.appendChild(a);
+                a.click();
+                
+                setTimeout(() => {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                    processingOverlay.classList.add('hidden');
+                    showToast("¡Video descargado con éxito!");
+                }, 100);
+            };
+
+            recorder.start();
+
+            // Render Frame Loop for Duration
+            const totalFrames = selectedDuration * 30;
+            let currentFrame = 0;
+
+            const renderInterval = setInterval(() => {
+                currentFrame++;
+                animationTime += 0.033;
+
+                // Render Background Base
+                recCtx.drawImage(baseCanvas, 0, 0);
+                // Render Animated Masked Overlay
+                renderAnimationFrame(animationTime);
+                recCtx.drawImage(animCanvas, 0, 0);
+
+                // Progress Update
+                const percent = Math.min(100, Math.round((currentFrame / totalFrames) * 100));
+                exportProgress.style.width = `${percent}%`;
+
+                if (currentFrame >= totalFrames) {
+                    clearInterval(renderInterval);
+                    recorder.stop();
+                }
+            }, 1000 / 30);
+        }
+
+        // Helper Toast
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
