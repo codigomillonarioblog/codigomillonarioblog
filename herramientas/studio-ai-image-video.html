@@ -187,7 +187,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!file.type.startsWith('image/')) return;
         selectedImageFile = file;
         
-        placeholderMsg.innerHTML = `<p class="text-xs font-semibold text-gray-800">Imagen cargada: ${file.name}</p>`;
+        // Mostrar miniatura real de la imagen cargada en la vista previa
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            placeholderMsg.innerHTML = `
+                <div class="flex flex-col items-center">
+                    <img src="${e.target.result}" class="max-h-48 rounded-lg shadow-sm mb-2 object-contain" alt="Imagen previa">
+                    <p class="text-[11px] font-medium text-gray-600">${file.name}</p>
+                </div>
+            `;
+        };
+        reader.readAsDataURL(file);
+
         statusBadge.textContent = 'Listo para generar';
         statusBadge.className = 'text-[10px] font-semibold px-2 py-0.5 rounded border border-green-200 bg-green-50 text-green-700';
 
@@ -195,58 +206,67 @@ document.addEventListener('DOMContentLoaded', () => {
         generateBtn.className = "w-full py-3.5 px-4 btn-primary font-bold text-xs rounded-lg cursor-pointer transition flex items-center justify-center gap-2 shadow-sm";
     }
 
-    // Petición real al servidor en Google Colab
+    // Petición optimizada al servidor en Google Colab
     generateBtn.addEventListener('click', async () => {
-        if (!selectedImageFile || !serverUrl) return;
+        if (!serverUrl) return;
 
         processingOverlay.classList.remove('hidden');
         generateBtn.disabled = true;
         downloadBtn.disabled = true;
 
         const formData = new FormData();
-        formData.append('image', selectedImageFile);
-        formData.append('prompt', motionPrompt.value || "character natural motion and blinking");
+        if (selectedImageFile) {
+            formData.append('image', selectedImageFile);
+        }
+        formData.append('prompt', motionPrompt.value || "Cinematic character motion, high quality");
 
-
-try {
-            processingStep.textContent = "Enviando imagen y prompt al servidor GPU...";
+        try {
+            processingStep.textContent = "Conectando con motor gráfico GPU...";
             
             const response = await fetch(`${serverUrl}/generate`, {
                 method: 'POST',
                 headers: {
-                    'ngrok-skip-browser-warning': 'true' // <--- ESTO ES LO QUE FALTABA PARA EVITAR EL BLOQUEO DE NGROK
+                    'ngrok-skip-browser-warning': 'true'
                 },
                 body: formData
             });
 
-            if (!response.ok) throw new Error('Error al procesar el video en el servidor.');
+            if (!response.ok) throw new Error('Error al procesar en el servidor.');
 
-            processingStep.textContent = "Descargando video renderizado...";
+            processingStep.textContent = "Recibiendo resultado de IA...";
             const blob = await response.blob();
             videoBlobUrl = URL.createObjectURL(blob);
 
-            resultVideo.src = videoBlobUrl;
-            placeholderMsg.classList.add('hidden');
-            resultVideo.classList.remove('hidden');
+            // Si el servidor devuelve imagen o video, lo adaptamos al elemento visual
+            if (blob.type.includes('image')) {
+                placeholderMsg.innerHTML = `<img src="${videoBlobUrl}" class="max-h-[500px] object-contain shadow-md" alt="Resultado AI">`;
+                resultVideo.classList.add('hidden');
+            } else {
+                resultVideo.src = videoBlobUrl;
+                placeholderMsg.classList.add('hidden');
+                resultVideo.classList.remove('hidden');
+            }
 
-            statusBadge.textContent = 'Video Generado con Éxito';
+            statusBadge.textContent = '¡Generado con Éxito!';
             statusBadge.className = 'text-[10px] font-semibold px-2 py-0.5 rounded border border-blue-200 bg-blue-50 text-blue-700';
 
             downloadBtn.disabled = false;
             downloadBtn.className = "px-5 py-2.5 bg-gray-900 hover:bg-black text-white font-bold text-xs rounded-lg cursor-pointer transition flex items-center gap-2";
 
         } catch (error) {
-            alert('Error de conexión con el servidor Colab: Asegúrate de que el código en Google Colab esté encendido y la URL de Ngrok sea correcta.');
+            alert('Error de conexión con el servidor Colab: Verifica que la celda en Google Colab esté ejecutándose.');
             console.error(error);
+        } finally {
+            processingOverlay.classList.add('hidden');
+            generateBtn.disabled = false;
         }
-
     });
 
     downloadBtn.addEventListener('click', () => {
         if (!videoBlobUrl) return;
         const a = document.createElement('a');
         a.href = videoBlobUrl;
-        a.download = `codigo-millonario-ai-video-${Date.now()}.mp4`;
+        a.download = `codigo-millonario-ai-${Date.now()}.png`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
