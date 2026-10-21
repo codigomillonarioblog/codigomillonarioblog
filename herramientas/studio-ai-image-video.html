@@ -207,11 +207,15 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('image', selectedImageFile);
         formData.append('prompt', motionPrompt.value || "character natural motion and blinking");
 
-        try {
+
+try {
             processingStep.textContent = "Enviando imagen y prompt al servidor GPU...";
             
             const response = await fetch(`${serverUrl}/generate`, {
                 method: 'POST',
+                headers: {
+                    'ngrok-skip-browser-warning': 'true' // <--- ESTO ES LO QUE FALTABA PARA EVITAR EL BLOQUEO DE NGROK
+                },
                 body: formData
             });
 
@@ -234,10 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             alert('Error de conexión con el servidor Colab: Asegúrate de que el código en Google Colab esté encendido y la URL de Ngrok sea correcta.');
             console.error(error);
-        } finally {
-            processingOverlay.classList.add('hidden');
-            generateBtn.disabled = false;
         }
+
     });
 
     downloadBtn.addEventListener('click', () => {
