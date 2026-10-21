@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Precios por Inflación para Negocios | Código Millonario</title>
+<meta name="description" content="Calcula cuánto debes ajustar tus precios de venta por la inflación para mantener el poder adquisitivo de tus ingresos y actualizar los precios de tu negocio.">
+
+<!-- Favicon -->
+<link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
+
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        borderGray: '#e5e7eb',
+                        subtleBg: '#fcfcfc',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+        }
+        /* Estilos sutiles y bordes delgados */
+        .thin-border {
+            border: 1px solid #e5e7eb;
+        }
+        .thin-border-b {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .thin-border-r {
+            border-right: 1px solid #e5e7eb;
+        }
+        .thin-border-t {
+            border-top: 1px solid #e5e7eb;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #9ca3af !important;
+            box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.1);
+        }
+        /* Ocultar flechas de inputs numéricos */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            appearance: textfield;
+            -moz-appearance: textfield;
+        }
+
+    </style>
+
+
+
+
+<!-- ESTILOS CSS PARA FAQ -->
+<style>
+
+  .faq-container {
+    width: 100%;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 5%;
+  }
+
+  /* CENTRAR ÚNICAMENTE EL TÍTULO Y EL SUBTÍTULO */
+  .faq-container > .faq-title,
+  .faq-container > .faq-subtitle {
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+  }
+
+  .faq-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+
+  .faq-subtitle {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+  }
+
+  .faq-list {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .faq-item {
+    width: 100%;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .faq-question {
+    font-size: 0.938rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .faq-answer {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+
+</style>
+
+
+</head>
+<body class="bg-white min-h-screen flex flex-col justify-between antialiased">
+
+    <!-- MENU COMPLETO Real por JS -->
+    <script src="../assets/menu.js"></script>
+
+        <!-- ESPACIO FINAL -->
+    <div style="height: 100px;"></div>
+
+    <!-- Header Principal Elegante Estilo 'Medio Grande' -->
+    <header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 thin-border-b">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+                <div class="flex items-center gap-2 text-xs font-semibold tracking-wider text-gray-500 uppercase mb-1">
+                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+                    Herramienta Financiera Profesional
+                </div>
+                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">
+                    Calculadora de Precios por Inflación
+                </h1>
+                <p class="text-sm sm:text-base text-gray-500 mt-1 max-w-2xl font-normal">
+                 Calcula cuánto debes ajustar tus precios de venta para compensar la inflación y mantener el valor de tus ingresos.
+                </p>
+            </div>
+            <!-- Seleccionar Moneda Global -->
+            <div class="flex items-center gap-3 bg-gray-50 p-2.5 rounded-lg border border-gray-200 self-start md:self-center">
+                <i data-lucide="globe" class="w-5 h-5 text-gray-500"></i>
+                <label for="currencySelect" class="text-xs font-medium text-gray-600 uppercase">Moneda:</label>
+                <select id="currencySelect" class="bg-transparent font-semibold text-gray-800 text-sm focus:outline-none cursor-pointer pr-2">
+                    <option value="$" selected>USD ($)</option>
+                    <option value="€">EUR (€)</option>
+                    <option value="£">GBP (£)</option>
+                    <option value="COP">COP ($)</option>
+                    <option value="MXN">MXN ($)</option>
+                    <option value="ARS">ARS ($)</option>
+                    <option value="CLP">CLP ($)</option>
+                    <option value="PEN">PEN (S/)</option>
+                    <option value="S/">S/ (Sol)</option>
+                    <option value="¥">JPY/CNY (¥)</option>
+                    <option value="R$">BRL (R$)</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- PANEL DE ENTRADA DE DATOS (Izquierda 5 cols) -->
+            <section class="lg:col-span-5 space-y-6">
+                <div class="pb-3 thin-border-b flex items-center justify-between">
+                    <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+                        <i data-lucide="sliders" class="w-5 h-5 text-gray-600"></i>
+                        Variables de Negocio
+                    </h2>
+                    <span class="text-xs text-gray-400">Actualización en tiempo real</span>
+                </div>
+
+                <div class="space-y-5">
+                    <!-- Campo: Costo del Producto/Servicio -->
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="inputCost" class="text-xs font-semibold text-gray-700 uppercase tracking-wider">Costo Actual por Unidad</label>
+                            <span class="text-xs text-gray-400">Insumos + Operación</span>
+                        </div>
+                        <div class="relative flex items-center">
+                            <span class="absolute left-3.5 text-gray-400 font-medium currency-symbol">$</span>
+                            <input type="text" id="inputCost" value="100.000" class="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-300 rounded-md text-gray-900 font-semibold text-base sm:text-lg tracking-wide focus:border-gray-500 transition-all">
+                        </div>
+                    </div>
+
+                    <!-- Campo: Precio de Venta Actual -->
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="inputPrice" class="text-xs font-semibold text-gray-700 uppercase tracking-wider">Precio de Venta Actual</label>
+                            <span class="text-xs text-gray-400">PVP Público</span>
+                        </div>
+                        <div class="relative flex items-center">
+                            <span class="absolute left-3.5 text-gray-400 font-medium currency-symbol">$</span>
+                            <input type="text" id="inputPrice" value="150.000" class="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-300 rounded-md text-gray-900 font-semibold text-base sm:text-lg tracking-wide focus:border-gray-500 transition-all">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <!-- Tasa de Inflación Anual -->
+                        <div>
+                            <label for="inputInflation" class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Inflación Anual (%)</label>
+                            <div class="relative flex items-center">
+                                <input type="number" step="0.1" min="0" max="1000" id="inputInflation" value="12.5" class="w-full px-3.5 py-2 bg-white border border-gray-300 rounded-md text-gray-900 font-medium text-base focus:border-gray-500 transition-all pr-8">
+                                <span class="absolute right-3 text-gray-400 font-medium">%</span>
+                            </div>
+                        </div>
+
+                        <!-- Aumento Específico Insumos -->
+                        <div>
+                            <label for="inputCostIncrease" class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Aumento Insumos (%)</label>
+                            <div class="relative flex items-center">
+                                <input type="number" step="0.1" min="0" max="1000" id="inputCostIncrease" value="15.0" class="w-full px-3.5 py-2 bg-white border border-gray-300 rounded-md text-gray-900 font-medium text-base focus:border-gray-500 transition-all pr-8">
+                                <span class="absolute right-3 text-gray-400 font-medium">%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frecuencia / Periodo -->
+                    <div>
+                        <label for="selectHorizon" class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Horizonte de Ajuste</label>
+                        <select id="selectHorizon" class="w-full px-3.5 py-2 bg-white border border-gray-300 rounded-md text-gray-800 text-sm font-medium focus:border-gray-500 transition-all cursor-pointer">
+                            <option value="12">Anual (12 Meses)</option>
+                            <option value="6">Semestral (6 Meses)</option>
+                            <option value="3">Trimestral (3 Meses)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Resumen Rápido de Margen Actual -->
+                <div class="pt-4 thin-border-t">
+                    <div class="flex justify-between items-center py-1.5">
+                        <span class="text-xs font-medium text-gray-500 uppercase">Margen Ganancia Actual (Nominal):</span>
+                        <span id="labelCurrentMargin" class="text-sm font-bold text-gray-800">33.3%</span>
+                    </div>
+                    <div class="flex justify-between items-center py-1.5">
+                        <span class="text-xs font-medium text-gray-500 uppercase">Ganancia Bruta Actual por Unidad:</span>
+                        <span id="labelCurrentProfit" class="text-sm font-bold text-gray-800">$50.000</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL DE RESULTADOS Y GRÁFICAS (Derecha 7 cols) -->
+            <section class="lg:col-span-7 space-y-6">
+                
+                <!-- Tarjeta Principal: Precio Sugerido -->
+                <div class="p-6 bg-gray-50/50 rounded-xl thin-border">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 thin-border-b pb-4">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Recomendación Estratégica</span>
+                            <h3 class="text-lg font-bold text-gray-900">Nuevo Precio Sugerido de Venta</h3>
+                        </div>
+                        <div class="text-left sm:text-right">
+                            <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight" id="resSuggestedPrice">$172.500</div>
+                            <span class="text-xs text-emerald-600 font-semibold" id="resPriceIncreasePercent">+15,0% de incremento</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                        <div class="p-2.5 bg-white rounded-lg thin-border">
+                            <span class="block text-[10px] font-semibold uppercase text-gray-400">Aumento Neto</span>
+                            <span class="text-sm sm:text-base font-bold text-gray-800" id="resPriceIncreaseVal">+$22.500</span>
+                        </div>
+                        <div class="p-2.5 bg-white rounded-lg thin-border">
+                            <span class="block text-[10px] font-semibold uppercase text-gray-400">Nuevo Costo</span>
+                            <span class="text-sm sm:text-base font-bold text-gray-800" id="resNewCost">$115.000</span>
+                        </div>
+                        <div class="p-2.5 bg-white rounded-lg thin-border">
+                            <span class="block text-[10px] font-semibold uppercase text-gray-400">Margen Mantener</span>
+                            <span class="text-sm sm:text-base font-bold text-emerald-600" id="resTargetMargin">33.3%</span>
+                        </div>
+                        <div class="p-2.5 bg-white rounded-lg thin-border">
+                            <span class="block text-[10px] font-semibold uppercase text-gray-400">Margen Sin Ajuste</span>
+                            <span class="text-sm sm:text-base font-bold text-red-500" id="resUnadjustedMargin">23.3%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Métricas Impacto sin Ajustar -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 bg-white rounded-xl thin-border">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold text-gray-500 uppercase">Pérdida de Margen (Sin Ajustar)</span>
+                            <i data-lucide="trending-down" class="w-4 h-4 text-red-500"></i>
+                        </div>
+                        <div class="text-xl font-bold text-red-600" id="resMarginDrop">-10.0%</div>
+                        <p class="text-xs text-gray-500 mt-1">Impacto directo de la inflación acumulada en tus ganancias.</p>
+                    </div>
+
+                    <div class="p-4 bg-white rounded-xl thin-border">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold text-gray-500 uppercase">Pérdida Poder Adquisitivo</span>
+                            <i data-lucide="dollar-sign" class="w-4 h-4 text-amber-500"></i>
+                        </div>
+                        <div class="text-xl font-bold text-amber-600" id="resPurchasingPowerLoss">$15.000</div>
+                        <p class="text-xs text-gray-500 mt-1">Dinero real que dejas de percibir por unidad vendida.</p>
+                    </div>
+                </div>
+
+                <!-- Gráfica de Comparación Interactiva (Chart.js) -->
+                <div class="p-5 bg-white rounded-xl thin-border">
+                    <div class="flex items-center justify-between mb-4 pb-2 thin-border-b">
+                        <h4 class="text-xs font-bold text-gray-700 uppercase tracking-wider flex items-center gap-2">
+                            <i data-lucide="bar-chart-2" class="w-4 h-4 text-gray-500"></i>
+                            Análisis Comparativo de Estructura de Precios
+                        </h4>
+                        <span class="text-[11px] text-gray-400">Valores por unidad</span>
+                    </div>
+                    <div class="h-64 w-full relative">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+
+
+
+<!-- ESTRUCTURA HTML DE FAQ (PARA COLOCAR EN LA COLUMNA DERECHA) -->
+<div class="faq-container">
+  <h2 class="faq-title">Preguntas Frecuentes</h2>
+  <p class="faq-subtitle">Aclaraciones sobre el ajuste de precios por inflación.</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-question">¿Por qué debo ajustar mis precios si el costo directo no varió?</div>
+      <div class="faq-answer">
+        Aunque el costo directo de fabricación no cambie, los gastos indirectos (transporte, servicios, alquiler) sí suben por la inflación. Si mantienes el mismo precio, tu margen de ganancia real disminuye.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">¿Qué diferencia hay entre el margen nominal y el margen real?</div>
+      <div class="faq-answer">
+        El margen nominal refleja la cifra en dinero sin descontar la inflación. El margen real mide el poder adquisitivo efectivo que obtienes tras descontar la pérdida de valor de la moneda.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">¿Con qué frecuencia se debe realizar este ajuste?</div>
+      <div class="faq-answer">
+        Es recomendable evaluar tus precios de forma trimestral o cada vez que la inflación acumulada del periodo impacte significativamente la rentabilidad de tu negocio.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">¿Qué porcentaje de inflación se debe ingresar?</div>
+      <div class="faq-answer">
+        Ingresa el porcentaje oficial de inflación acumulada correspondiente al periodo transcurrido desde la última vez que modificaste los precios de tus productos o servicios.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">¿Aplica para cualquier moneda o país?</div>
+      <div class="faq-answer">
+        Sí, el cálculo es totalmente proporcional y basado en porcentajes, por lo que funciona para cualquier divisa sin importar la nacionalidad.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- ESPACIO FINAL -->
+    <div style="height: 100px;"></div>
+
+
+    <!-- Footer Real por JS -->
+    <div class="footer-here"></div>
+    <script src="https://codigomillonario.blog/assets/footer.js"></script>
+
+    <!-- JS de la Herramienta -->
+    <script>
+        // Inicializar Lucide Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+
+        // Configuración Global y Variables
+        let currentCurrency = '$';
+        let priceChart = null;
+
+        // Elementos DOM
+        const currencySelect = document.getElementById('currencySelect');
+        const inputCost = document.getElementById('inputCost');
+        const inputPrice = document.getElementById('inputPrice');
+        const inputInflation = document.getElementById('inputInflation');
+        const inputCostIncrease = document.getElementById('inputCostIncrease');
+        const selectHorizon = document.getElementById('selectHorizon');
+
+        // Resultados Labels
+        const labelCurrentMargin = document.getElementById('labelCurrentMargin');
+        const labelCurrentProfit = document.getElementById('labelCurrentProfit');
+        const resSuggestedPrice = document.getElementById('resSuggestedPrice');
+        const resPriceIncreasePercent = document.getElementById('resPriceIncreasePercent');
+        const resPriceIncreaseVal = document.getElementById('resPriceIncreaseVal');
+        const resNewCost = document.getElementById('resNewCost');
+        const resTargetMargin = document.getElementById('resTargetMargin');
+        const resUnadjustedMargin = document.getElementById('resUnadjustedMargin');
+        const resMarginDrop = document.getElementById('resMarginDrop');
+        const resPurchasingPowerLoss = document.getElementById('resPurchasingPowerLoss');
+
+        // --- FUNCIONES DE FORMATEO (Formato de separador de miles por punto) ---
+        
+        // Formatea un string numérico ingresado por el usuario agregando puntos de millar
+        function formatInputNumber(value) {
+            // Eliminar todo lo que no sea número
+            let clean = value.replace(/\D/g, '');
+            if (!clean) return '';
+            // Formatear con puntos de miles
+            return new Intl.NumberFormat('de-DE').format(clean);
+        }
+
+        // Parsea el valor con puntos a un número flotante Javascript
+        function parseFormattedNumber(value) {
+            if (!value) return 0;
+            // Remover puntos
+            let clean = value.toString().replace(/\./g, '');
+            return parseFloat(clean) || 0;
+        }
+
+        // Formatea números finales para mostrar con moneda
+        function formatCurrency(number) {
+            const formatted = new Intl.NumberFormat('de-DE', {
+                maximumFractionDigits: 0
+            }).format(Math.round(number));
+            return `${currentCurrency}${formatted}`;
+        }
+
+        function formatPercent(number) {
+            return (number).toFixed(1).replace('.', ',') + '%';
+        }
+
+        // --- MANEJO DE EVENTOS EN INPUTS DE TEXTO ---
+        [inputCost, inputPrice].forEach(input => {
+            input.addEventListener('input', (e) => {
+                let cursorPosition = e.target.selectionStart;
+                let originalLength = e.target.value.length;
+                
+                let formatted = formatInputNumber(e.target.value);
+                e.target.value = formatted;
+
+                // Ajustar cursor
+                let newLength = formatted.length;
+                cursorPosition = cursorPosition + (newLength - originalLength);
+                e.target.setSelectionRange(cursorPosition, cursorPosition);
+
+                calculateAll();
+            });
+        });
+
+        [inputInflation, inputCostIncrease, selectHorizon].forEach(input => {
+            input.addEventListener('input', calculateAll);
+        });
+
+        currencySelect.addEventListener('change', (e) => {
+            currentCurrency = e.target.value;
+            // Actualizar los símbolos visuales
+            document.querySelectorAll('.currency-symbol').forEach(el => el.textContent = currentCurrency);
+            calculateAll();
+        });
+
+        // --- CÁLCULOS MATEMÁTICOS Y LÓGICA FINANCIERA ---
+        function calculateAll() {
+            const cost = parseFormattedNumber(inputCost.value);
+            const price = parseFormattedNumber(inputPrice.value);
+            const inflationAnnual = parseFloat(inputInflation.value) || 0;
+            const costIncreaseAnnual = parseFloat(inputCostIncrease.value) || 0;
+            const months = parseInt(selectHorizon.value) || 12;
+
+            // Ajustar tasas por el período seleccionado
+            const periodFactor = months / 12;
+            const periodInflation = inflationAnnual * periodFactor;
+            const periodCostIncrease = costIncreaseAnnual * periodFactor;
+
+            // 1. Margen Nominal Actual
+            let currentProfit = price - cost;
+            let currentMarginPercent = price > 0 ? (currentProfit / price) * 100 : 0;
+
+            labelCurrentMargin.textContent = formatPercent(currentMarginPercent);
+            labelCurrentProfit.textContent = formatCurrency(currentProfit);
+
+            // 2. Cálculo del Nuevo Costo proyectado con el aumento de insumos
+            const newCost = cost * (1 + (periodCostIncrease / 100));
+
+            // 3. Nuevo Precio Sugerido para MANTENER exactamente el mismo margen real de ganancia
+            // Formula: Nuevo Precio = Nuevo Costo / (1 - Margen Deseado en decimal)
+            let suggestedPrice = price;
+            if (currentMarginPercent < 100) {
+                const targetMarginDecimal = currentMarginPercent / 100;
+                suggestedPrice = newCost / (1 - targetMarginDecimal);
+            } else {
+                suggestedPrice = newCost * 1.5;
+            }
+
+            // Si el precio sugerido no cubre al menos la inflación general del precio anterior
+            const minInflationPrice = price * (1 + (periodInflation / 100));
+            if (suggestedPrice < minInflationPrice) {
+                suggestedPrice = minInflationPrice;
+            }
+
+            const priceIncreaseVal = suggestedPrice - price;
+            const priceIncreasePercent = price > 0 ? (priceIncreaseVal / price) * 100 : 0;
+
+            // 4. Margen sin ajustar precio
+            let unadjustedProfit = price - newCost;
+            let unadjustedMarginPercent = price > 0 ? (unadjustedProfit / price) * 100 : 0;
+            let marginDrop = currentMarginPercent - unadjustedMarginPercent;
+
+            // 5. Pérdida de Poder Adquisitivo de la ganancia
+            // Ajustamos la ganancia actual por la inflación general
+            let realPurchasingPowerLoss = currentProfit - (currentProfit / (1 + (periodInflation / 100)));
+            if (unadjustedProfit < currentProfit) {
+                realPurchasingPowerLoss += (currentProfit - unadjustedProfit);
+            }
+
+            // Actualizar la interfaz
+            resSuggestedPrice.textContent = formatCurrency(suggestedPrice);
+            resPriceIncreasePercent.textContent = `+${formatPercent(priceIncreasePercent)} de incremento`;
+            resPriceIncreaseVal.textContent = `+${formatCurrency(priceIncreaseVal)}`;
+            resNewCost.textContent = formatCurrency(newCost);
+            resTargetMargin.textContent = formatPercent(currentMarginPercent);
+            resUnadjustedMargin.textContent = formatPercent(unadjustedMarginPercent);
+            
+            resMarginDrop.textContent = `-${formatPercent(marginDrop)}`;
+            resPurchasingPowerLoss.textContent = formatCurrency(realPurchasingPowerLoss);
+
+            // Actualizar Gráfica
+            updateChart(price, suggestedPrice, cost, newCost, currentProfit, (suggestedPrice - newCost));
+        }
+
+        // --- RENDERIZADO DE LA GRÁFICA INTERACTIVA ---
+        function updateChart(currentPrice, suggestedPrice, currentCost, newCost, currentProfit, newProfit) {
+            const ctx = document.getElementById('priceChart').getContext('2d');
+
+            const data = {
+                labels: ['Estructura Actual', 'Sin Ajuste (Absorber Costos)', 'Sugerido (Margen Protegido)'],
+                datasets: [
+                    {
+                        label: 'Costo de Insumos',
+                        data: [currentCost, newCost, newCost],
+                        backgroundColor: '#f3f4f6',
+                        borderColor: '#d1d5db',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Ganancia Bruta',
+                        data: [currentProfit, Math.max(0, currentPrice - newCost), newProfit],
+                        backgroundColor: ['#3b82f6', '#ef4444', '#10b981'],
+                        borderColor: ['#2563eb', '#dc2626', '#059669'],
+                        borderWidth: 1
+                    }
+                ]
+            };
+
+            if (priceChart) {
+                priceChart.data = data;
+                priceChart.update();
+            } else {
+                priceChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: { family: 'Inter', size: 11 },
+                                    usePointStyle: true,
+                                    boxWidth: 8
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.dataset.label || '';
+                                        if (label) label += ': ';
+                                        if (context.parsed.y !== null) {
+                                            label += formatCurrency(context.parsed.y);
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                stacked: true,
+                                grid: { display: false },
+                                ticks: { font: { family: 'Inter', size: 10 } }
+                            },
+                            y: {
+                                stacked: true,
+                                grid: { color: '#f3f4f6' },
+                                ticks: {
+                                    font: { family: 'Inter', size: 10 },
+                                    callback: function(value) {
+                                        return currentCurrency + new Intl.NumberFormat('de-DE').format(value);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Ejecución Inicial
+        window.onload = function() {
+            calculateAll();
+        };
+    </script>
+</body>
+</html>
