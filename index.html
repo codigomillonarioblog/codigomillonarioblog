@@ -1547,50 +1547,38 @@
 
 <script>
   (function() {
-    window.renderGlobalNewsFeed = function(data) {
-      try {
-        const listContainer = document.getElementById('list-articles');
-        const featuredContainer = document.getElementById('featured-articles');
-        const topContainer = document.getElementById('top-articles');
+    document.addEventListener("DOMContentLoaded", function() {
+      const listContainer = document.getElementById('list-articles');
+      const featuredContainer = document.getElementById('featured-articles');
+      const topContainer = document.getElementById('top-articles');
 
-        if (!listContainer || !featuredContainer || !topContainer) return;
+      if (!listContainer || !featuredContainer || !topContainer) return;
 
-        let items = (data && data.status === 'ok' && data.items) ? data.items : [];
+      // Noticias de respaldo con ENLACES E IMÁGENES ÚNICAS E INDIVIDUALES
+      const sampleNews = [
+        { title: "Actualidad Global: Avances en inteligencia artificial y tecnología", link: "https://www.bbc.com/mundo/articles/c2dwq9zyv4yt", thumbnail: "https://picsum.photos/300/200?random=1" },
+        { title: "Economía internacional: Reporte de mercados y finanzas globales", link: "https://www.bbc.com/mundo/articles/c06ve485yp2t", thumbnail: "https://picsum.photos/300/200?random=2" },
+        { title: "Cumbre ambiental: Medidas globales ante el cambio climático", link: "https://www.bbc.com/mundo/articles/c2dwq9zy127t", thumbnail: "https://picsum.photos/300/200?random=3" },
+        { title: "Ciencia: Descubrimientos clave en la exploración espacial", link: "https://www.bbc.com/mundo/articles/ckfc5513904t", thumbnail: "https://picsum.photos/300/200?random=4" },
+        { title: "Cultura y sociedad: Tendencias del mundo contemporáneo", link: "https://www.bbc.com/mundo/articles/cr1q1143213t", thumbnail: "https://picsum.photos/300/200?random=5" },
+        { title: "Innovación digital: Transformación global en la comunicación", link: "https://www.bbc.com/mundo/articles/c95y3551x2at", thumbnail: "https://picsum.photos/300/200?random=6" },
+        { title: "Análisis: El futuro del transporte y la movilidad urbana", link: "https://www.bbc.com/mundo/articles/cz4pr2er21et", thumbnail: "https://picsum.photos/300/200?random=7" },
+        { title: "Tendencias de consumo digital para los próximos años", link: "https://www.bbc.com/mundo/articles/c404v027pd4t", thumbnail: "https://picsum.photos/300/200?random=8" },
+        { title: "Arquitectura sostenible y diseño de espacios inteligentes", link: "https://www.bbc.com/mundo/articles/cl8l9m2e92jt", thumbnail: "https://picsum.photos/300/200?random=9" },
+        { title: "El impacto del trabajo híbrido en la economía actual", link: "https://www.bbc.com/mundo/articles/c83pl27d9v4t", thumbnail: "https://picsum.photos/300/200?random=10" },
+        { title: "Transición energética: Proyectos renovables a gran escala", link: "https://www.bbc.com/mundo/articles/c1e0921430rt", thumbnail: "https://picsum.photos/300/200?random=11" }
+      ];
 
-        if (items.length === 0) return;
-
-        const getImageUrl = (item, index) => {
-          if (item.thumbnail && item.thumbnail.startsWith('http')) return item.thumbnail;
-          if (item.enclosure && item.enclosure.link) return item.enclosure.link;
-          
-          const desc = item.content || item.description || '';
-          const imgMatch = desc.match(/<img[^>]+src="([^">]+)"/);
-          if (imgMatch) return imgMatch[1];
-
-          return `https://picsum.photos/300/200?random=${index + 1}`;
-        };
-
-        // Función blindada para sacar el link real e individual de la noticia
-        const getValidLink = (item) => {
-          if (item.link && item.link.length > 25 && !item.link.endsWith('mundo')) {
-            return item.link;
-          }
-          if (item.guid && item.guid.startsWith('http')) {
-            return item.guid;
-          }
-          return item.link || 'https://www.bbc.com/mundo';
-        };
-
+      function render(items) {
         listContainer.innerHTML = '';
         featuredContainer.innerHTML = '';
         topContainer.innerHTML = '';
 
-        // 1. Columna 1 (Primeros 4 artículos)
+        // 1. Columna 1
         items.slice(0, 4).forEach((item, index) => {
-          const img = getImageUrl(item, index);
-          const articleUrl = getValidLink(item);
+          const img = item.thumbnail || `https://picsum.photos/300/200?random=${index + 1}`;
           listContainer.innerHTML += `
-            <a href="${articleUrl}" target="_blank" rel="noopener noreferrer" class="small-card">
+            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="small-card">
               <img src="${img}" alt="Noticia">
               <div class="small-card-content">
                 <span class="category-tag">ACTUALIDAD</span>
@@ -1600,12 +1588,11 @@
           `;
         });
 
-        // 2. Columna 2 (Siguientes 2 destacados)
+        // 2. Columna 2
         items.slice(4, 6).forEach((item, index) => {
-          const img = getImageUrl(item, index + 4);
-          const articleUrl = getValidLink(item);
+          const img = item.thumbnail || `https://picsum.photos/300/200?random=${index + 5}`;
           featuredContainer.innerHTML += `
-            <a href="${articleUrl}" target="_blank" rel="noopener noreferrer" class="large-card">
+            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="large-card">
               <img src="${img}" alt="Noticia">
               <div class="large-card-overlay">
                 <span class="category-tag">DESTACADO</span>
@@ -1615,11 +1602,10 @@
           `;
         });
 
-        // 3. Columna 3 (Siguientes 5 más leídas)
+        // 3. Columna 3
         items.slice(6, 11).forEach((item, index) => {
-          const articleUrl = getValidLink(item);
           topContainer.innerHTML += `
-            <a href="${articleUrl}" target="_blank" rel="noopener noreferrer" class="ranked-card">
+            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="ranked-card">
               <span class="rank-number">${index + 1}</span>
               <div>
                 <span class="category-tag">TENDENCIA</span>
@@ -1628,20 +1614,37 @@
             </a>
           `;
         });
-
-      } catch (err) {
-        // Silencioso para no romper nada
       }
-    };
 
-    document.addEventListener("DOMContentLoaded", function() {
-      const targetFeed = 'https://feeds.bbci.co.uk/mundo/rss.xml';
-      const script = document.createElement('script');
-      script.src = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(targetFeed) + '&callback=renderGlobalNewsFeed';
-      document.body.appendChild(script);
+      // Si abres el archivo directamente en la PC (file://), muestra las de muestra con links independientes
+      if (window.location.protocol === 'file:') {
+        render(sampleNews);
+      } else {
+        // En línea: Consulta el feed real de forma limpia
+        fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://feeds.bbci.co.uk/mundo/rss.xml'))
+          .then(res => res.json())
+          .then(data => {
+            if (data && data.status === 'ok' && data.items && data.items.length > 0) {
+              const formattedItems = data.items.map((item, index) => ({
+                title: item.title,
+                link: item.link || item.guid || 'https://www.bbc.com/mundo',
+                thumbnail: item.thumbnail || item.enclosure?.link || `https://picsum.photos/300/200?random=${index + 1}`
+              }));
+              render(formattedItems);
+            } else {
+              render(sampleNews);
+            }
+          })
+          .catch(() => {
+            render(sampleNews);
+          });
+      }
     });
   })();
 </script>
+
+
+
 
 
 
