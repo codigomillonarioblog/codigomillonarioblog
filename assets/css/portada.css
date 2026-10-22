@@ -379,7 +379,7 @@ img {
      left: -10px;
     top: 0;
     width: 1px;
-    height: 138%;
+    height: 99%;
     background: #d3d5d8;
     pointer-events: none;
   }
@@ -564,6 +564,67 @@ img {
   }
 }
 
+
+
+
+
+/* =========================================
+   BLOQUE PROMO / EDITORIAL (SOLO DESKTOP)
+   ========================================= */
+
+.side-promo-box {
+  background-color: #f8f9fa;
+  border-left: 3px solid #004481; /* O el color de acento de tu marca */
+  padding: 18px 16px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.promo-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #004481;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.promo-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.promo-text {
+  font-size: 0.82rem;
+  color: #444444;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.promo-link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #004481;
+  text-decoration: none;
+  margin-top: 4px;
+  transition: color 0.2s ease;
+}
+
+.promo-link:hover {
+  text-decoration: underline;
+}
+
+/* OCULTAR EN MÓVILES / TABLETS (Menos de 900px) */
+@media (max-width: 900px) {
+  .solo-desktop {
+    display: none !important;
+  }
+}
 
 /* =========================================================
    SECCIÓN · Desarrollo Profesional
