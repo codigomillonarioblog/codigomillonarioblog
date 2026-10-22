@@ -1334,7 +1334,6 @@
 
 
 
-
 <div class="news-portal-container">
   <!-- Columna 1: Artículos con miniatura a la izquierda -->
   <div class="news-column" id="col-list">
@@ -1361,28 +1360,23 @@
   </div>
 </div>
 
-
-
 <style>
-
 /* =========================================
    ESTILOS COMPLETOS - PORTAL DE NOTICIAS
    ========================================= */
 
-/* Contenedor general en 3 columnas (Alineado a las medidas de Cultura y Vida: 1100px) */
 .news-portal-container {
   display: grid;
-  grid-template-columns: 1.2fr 1.2fr 0.8fr; /* Las dos primeras más anchas, la última (Más leídas) más compacta */
+  grid-template-columns: 1.2fr 1.2fr 0.8fr;
   gap: 20px;
-  max-width: 1100px; /* Actualizado al mismo ancho de PC que Cultura y Vida */
-  margin: 35px auto;  /* Actualizado al mismo margen superior/inferior */
+  max-width: 1100px;
+  margin: 35px auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #111;
-  padding: 0 20px;    /* Actualizado al mismo padding lateral */
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
-/* Encabezados de las columnas */
 .column-header {
   border-bottom: 2px solid #111;
   margin-bottom: 15px;
@@ -1396,7 +1390,6 @@
   text-transform: capitalize;
 }
 
-/* Etiquetas de categoría */
 .category-tag {
   font-size: 0.65rem;
   font-weight: 700;
@@ -1405,7 +1398,7 @@
   margin-bottom: 4px;
 }
 
-/* --- COLUMNA 1: Miniatura a la izquierda + Texto --- */
+/* --- COLUMNA 1 --- */
 .articles-list-small {
   display: flex;
   flex-direction: column;
@@ -1427,6 +1420,7 @@
   object-fit: cover;
   border-radius: 2px;
   flex-shrink: 0;
+  background-color: #f0f0f0;
 }
 
 .small-card-content {
@@ -1447,7 +1441,7 @@
   text-decoration-thickness: 1px;
 }
 
-/* --- COLUMNA 2: Tarjetas grandes con fondo de imagen --- */
+/* --- COLUMNA 2 --- */
 .articles-cards-large {
   display: flex;
   flex-direction: column;
@@ -1461,6 +1455,7 @@
   overflow: hidden;
   text-decoration: none;
   display: block;
+  background-color: #222;
 }
 
 .large-card img {
@@ -1502,11 +1497,11 @@
   text-decoration-thickness: 1px;
 }
 
-/* --- COLUMNA 3: Más leídas (Compacta y numerada) --- */
+/* --- COLUMNA 3 --- */
 .articles-list-ranked {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espacio más reducido entre elementos */
+  gap: 10px;
 }
 
 .ranked-card {
@@ -1528,7 +1523,7 @@
 }
 
 .ranked-card h3 {
-  font-size: 0.8rem; /* Títulos más compactos en esta sección */
+  font-size: 0.8rem;
   margin: 2px 0 0 0;
   line-height: 1.25;
   font-weight: 600;
@@ -1540,88 +1535,109 @@
   text-decoration-thickness: 1px;
 }
 
-/* =========================================
-   DISEÑO RESPONSIVO (Móviles y Tablets)
-   ========================================= */
+/* RESPONSIVO */
 @media (max-width: 900px) {
   .news-portal-container {
-    grid-template-columns: 1fr; /* Se apilan en una sola columna en pantallas medianas/pequeñas */
+    grid-template-columns: 1fr;
     max-width: 100%;
     padding: 0 15px;
   }
 }
-
 </style>
 
 <script>
-  fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://rss.app/feeds/oMMasvZzNNlIRWtP.xml'))
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'ok') {
-        const items = data.items;
-        
-        // Función para obtener la imagen del artículo
+  document.addEventListener("DOMContentLoaded", function() {
+    // Feed directo de noticias globales públicas que incluye imágenes nativas
+    const targetFeed = 'https://feeds.bbci.co.uk/mundo/rss.xml';
+    const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(targetFeed);
+
+    fetch(proxyUrl)
+      .then(response => {
+        if (!response.ok) throw new Error('Error al conectar');
+        return response.text();
+      })
+      .then(str => new DOMParser().parseFromString(str, "text/xml"))
+      .then(xmlData => {
+        const items = Array.from(xmlData.querySelectorAll("item"));
+        if (items.length === 0) return;
+
         const getImageUrl = (item) => {
-          if (item.thumbnail) return item.thumbnail;
-          if (item.enclosure && item.enclosure.link) return item.enclosure.link;
-          
-          // Buscar tag img en el contenido
-          const imgMatch = item.content ? item.content.match(/<img[^>]+src="([^">]+)"/) : null;
+          // Intenta obtener miniatura de media:thumbnail o enclosure
+          const media = item.getElementsByTagName("media:thumbnail")[0] || item.getElementsByTagName("media:content")[0];
+          if (media && media.getAttribute("url")) return media.getAttribute("url");
+
+          const enclosure = item.querySelector("enclosure");
+          if (enclosure && enclosure.getAttribute("url")) return enclosure.getAttribute("url");
+
+          const desc = item.querySelector("description") ? item.querySelector("description").textContent : "";
+          const imgMatch = desc.match(/<img[^>]+src="([^">]+)"/);
           if (imgMatch) return imgMatch[1];
-          
-          // Imagen por defecto en caso de no encontrar
-          return 'https://via.placeholder.com/300x200?text=Noticias';
+
+          // Imagen fallback limpia si el elemento no trae imagen en el RSS
+          return 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=300&h=200&fit=crop';
         };
 
-        // 1. Llenar Columna 1 (Primeros 4 artículos)
         const listContainer = document.getElementById('list-articles');
+        const featuredContainer = document.getElementById('featured-articles');
+        const topContainer = document.getElementById('top-articles');
+
+        listContainer.innerHTML = '';
+        featuredContainer.innerHTML = '';
+        topContainer.innerHTML = '';
+
+        // 1. Columna 1: Miniaturas izquierda (4 artículos)
         items.slice(0, 4).forEach(item => {
+          const title = item.querySelector("title") ? item.querySelector("title").textContent : "Sin título";
+          const link = item.querySelector("link") ? item.querySelector("link").textContent : "#";
           const img = getImageUrl(item);
+
           listContainer.innerHTML += `
-            <a href="${item.link}" target="_blank" class="small-card">
+            <a href="${link}" target="_blank" class="small-card">
               <img src="${img}" alt="Noticia">
               <div class="small-card-content">
                 <span class="category-tag">ACTUALIDAD</span>
-                <h3>${item.title}</h3>
+                <h3>${title}</h3>
               </div>
             </a>
           `;
         });
 
-        // 2. Llenar Columna 2 (Siguientes 2 artículos destacados)
-        const featuredContainer = document.getElementById('featured-articles');
+        // 2. Columna 2: Tarjetas grandes (2 artículos)
         items.slice(4, 6).forEach(item => {
+          const title = item.querySelector("title") ? item.querySelector("title").textContent : "Sin título";
+          const link = item.querySelector("link") ? item.querySelector("link").textContent : "#";
           const img = getImageUrl(item);
+
           featuredContainer.innerHTML += `
-            <a href="${item.link}" target="_blank" class="large-card">
+            <a href="${link}" target="_blank" class="large-card">
               <img src="${img}" alt="Noticia">
               <div class="large-card-overlay">
                 <span class="category-tag">DESTACADO</span>
-                <h3>${item.title}</h3>
+                <h3>${title}</h3>
               </div>
             </a>
           `;
         });
 
-        // 3. Llenar Columna 3 (Siguientes 5 artículos más leídos)
-        const topContainer = document.getElementById('top-articles');
+        // 3. Columna 3: Más leídas (5 artículos)
         items.slice(6, 11).forEach((item, index) => {
+          const title = item.querySelector("title") ? item.querySelector("title").textContent : "Sin título";
+          const link = item.querySelector("link") ? item.querySelector("link").textContent : "#";
+
           topContainer.innerHTML += `
-            <a href="${item.link}" target="_blank" class="ranked-card">
+            <a href="${link}" target="_blank" class="ranked-card">
               <span class="rank-number">${index + 1}</span>
               <div>
                 <span class="category-tag">TENDENCIA</span>
-                <h3>${item.title}</h3>
+                <h3>${title}</h3>
               </div>
             </a>
           `;
         });
-
-      }
-    })
-    .catch(error => console.error('Error cargando el feed:', error));
+      })
+      .catch(err => console.error("Error al renderizar noticias:", err));
+  });
 </script>
-
 
 
 
