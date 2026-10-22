@@ -1545,10 +1545,8 @@
 }
 </style>
 
-
 <script>
   (function() {
-    // Función global segura para procesar los datos recibidos sin sufrir bloqueos CORS en local
     window.renderGlobalNewsFeed = function(data) {
       try {
         const listContainer = document.getElementById('list-articles');
@@ -1559,22 +1557,7 @@
 
         let items = (data && data.status === 'ok' && data.items) ? data.items : [];
 
-        // Si falla la red o no hay datos, mostramos artículos con enlaces e imágenes variadas
-        if (items.length === 0) {
-          items = [
-            { title: "Actualidad Global: Nuevos avances en tecnología e innovación", link: "https://www.bbc.com/mundo", thumbnail: "https://picsum.photos/300/200?random=1" },
-            { title: "Economía internacional: Reporte de mercados y finanzas", link: "https://www.bbc.com/mundo", thumbnail: "https://picsum.photos/300/200?random=2" },
-            { title: "Cumbre ambiental: Medidas globales ante el cambio climático", link: "https://www.bbc.com/mundo", thumbnail: "https://picsum.photos/300/200?random=3" },
-            { title: "Ciencia: Descubrimientos clave en la exploración espacial", link: "https://www.bbc.com/mundo", thumbnail: "https://picsum.photos/300/200?random=4" },
-            { title: "Cultura y sociedad: Tendencias del mundo contemporáneo", link: "https://www.bbc.com/mundo", thumbnail: "https://picsum.photos/300/200?random=5" },
-            { title: "Innovación digital: Transformación global en la comunicación", link: "https://www.bbc.com/mundo", thumbnail: "https://picsum.photos/300/200?random=6" },
-            { title: "Análisis: El futuro del transporte y la movilidad urbana", link: "https://www.bbc.com/mundo" },
-            { title: "Tendencias de consumo digital para los próximos años", link: "https://www.bbc.com/mundo" },
-            { title: "Arquitectura sostenible y diseño de espacios inteligentes", link: "https://www.bbc.com/mundo" },
-            { title: "El impacto del trabajo híbrido en la economía actual", link: "https://www.bbc.com/mundo" },
-            { title: "Transición energética: Proyectos renovables a gran escala", link: "https://www.bbc.com/mundo" }
-          ];
-        }
+        if (items.length === 0) return;
 
         const getImageUrl = (item, index) => {
           if (item.thumbnail && item.thumbnail.startsWith('http')) return item.thumbnail;
@@ -1587,6 +1570,17 @@
           return `https://picsum.photos/300/200?random=${index + 1}`;
         };
 
+        // Función blindada para sacar el link real e individual de la noticia
+        const getValidLink = (item) => {
+          if (item.link && item.link.length > 25 && !item.link.endsWith('mundo')) {
+            return item.link;
+          }
+          if (item.guid && item.guid.startsWith('http')) {
+            return item.guid;
+          }
+          return item.link || 'https://www.bbc.com/mundo';
+        };
+
         listContainer.innerHTML = '';
         featuredContainer.innerHTML = '';
         topContainer.innerHTML = '';
@@ -1594,8 +1588,9 @@
         // 1. Columna 1 (Primeros 4 artículos)
         items.slice(0, 4).forEach((item, index) => {
           const img = getImageUrl(item, index);
+          const articleUrl = getValidLink(item);
           listContainer.innerHTML += `
-            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="small-card">
+            <a href="${articleUrl}" target="_blank" rel="noopener noreferrer" class="small-card">
               <img src="${img}" alt="Noticia">
               <div class="small-card-content">
                 <span class="category-tag">ACTUALIDAD</span>
@@ -1608,8 +1603,9 @@
         // 2. Columna 2 (Siguientes 2 destacados)
         items.slice(4, 6).forEach((item, index) => {
           const img = getImageUrl(item, index + 4);
+          const articleUrl = getValidLink(item);
           featuredContainer.innerHTML += `
-            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="large-card">
+            <a href="${articleUrl}" target="_blank" rel="noopener noreferrer" class="large-card">
               <img src="${img}" alt="Noticia">
               <div class="large-card-overlay">
                 <span class="category-tag">DESTACADO</span>
@@ -1621,8 +1617,9 @@
 
         // 3. Columna 3 (Siguientes 5 más leídas)
         items.slice(6, 11).forEach((item, index) => {
+          const articleUrl = getValidLink(item);
           topContainer.innerHTML += `
-            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="ranked-card">
+            <a href="${articleUrl}" target="_blank" rel="noopener noreferrer" class="ranked-card">
               <span class="rank-number">${index + 1}</span>
               <div>
                 <span class="category-tag">TENDENCIA</span>
@@ -1633,24 +1630,18 @@
         });
 
       } catch (err) {
-        // Protección total de ejecución
+        // Silencioso para no romper nada
       }
     };
 
-    // Inyección dinámica de script mediante JSONP (evita bloqueos de CORS en archivos locales .html)
     document.addEventListener("DOMContentLoaded", function() {
       const targetFeed = 'https://feeds.bbci.co.uk/mundo/rss.xml';
       const script = document.createElement('script');
       script.src = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(targetFeed) + '&callback=renderGlobalNewsFeed';
-      script.onerror = function() {
-        if (window.renderGlobalNewsFeed) window.renderGlobalNewsFeed(null);
-      };
       document.body.appendChild(script);
     });
   })();
 </script>
-
-
 
 
 
