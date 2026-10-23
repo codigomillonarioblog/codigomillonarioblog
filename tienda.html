@@ -43,8 +43,7 @@
 body {
   margin: 0;
   padding: 0;
-  /* Espacio superior automático para evitar que el menú fijo tape la imagen hero */
-  padding-top: 90px; 
+  padding-top: 0; /* Espacio superior eliminado */
   background-color: #ffffff;
   color: #171717;
   font-family: 'Inter', sans-serif;
@@ -184,11 +183,11 @@ body {
   font-size: 13px;
   font-weight: 600;
   line-height: 1.35;
-  height: 2.7em; 
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 /* AUTOR */
@@ -419,7 +418,7 @@ body {
 
 @media (max-width: 600px) {
   body {
-    padding-top: 75px;
+    padding-top: 0; /* Espacio superior eliminado en móviles */
   }
 
   .ldu-books-hero {
@@ -455,12 +454,12 @@ body {
   .ldu-books-track {
     grid-template-columns: repeat(5, 150px);
     gap: 12px;
-    padding-top: 10px; /* Reducido drásticamente para eliminar el hueco excesivo */
+    padding-top: 10px;
     padding-bottom: 10px;
   }
 
   .ldu-book-card {
-    margin-top: 85px; /* Alineado correctamente al tamaño de la portada */
+    margin-top: 85px;
   }
 
   .ldu-book-cover {
@@ -494,8 +493,12 @@ body {
 }
 </style>
 
-
 </head>
+
+
+<!-- ESPACIO FINAL -->
+<div class="h-[61px] md:h-[100px] bg-black md:bg-transparent"></div>
+
 
 <body>
 
@@ -510,15 +513,13 @@ body {
 
   <nav class="ldu-books-menu" aria-label="Explorar libros">
     <a href="#novedades" class="active">Novedades</a>
-    <a href="#mas-vendidos">Más vendidos</a>
-    <a href="#recomendados">Recomendados</a>
   </nav>
 </section>
 
 
 
    <!-- ESPACIO FINAL -->
-<div style="height: 20px;"></div>
+<div style="height: 30px;"></div>
 
 <section class="ldu-books-heading">
   <p class="ldu-books-eyebrow">PATRONES DE RIQUEZA</p>
@@ -537,7 +538,7 @@ body {
 
       <div class="ldu-book-details"> 
         <div class="ldu-book-labels"> 
-          <span class="ldu-label ldu-format">Libro Físico / Ebook</span> 
+          <span class="ldu-label ldu-format">LLibro / Ebook</span> 
         </div> 
 
         <h3>La psicología del dinero</h3> 
@@ -655,6 +656,57 @@ body {
       </div>
     </article> 
 
+
+        <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/camino-hacia-la-riqueza.webp" alt="El camino hacia la riqueza en acción"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Libro / Ebook</span> 
+        </div> 
+
+        <h3>El camino hacia la riqueza en acción</h3> 
+        <p class="ldu-author">de Brian Tracy</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $6,47 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B0bRY9JXO" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+            <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/trucos-de-los-ricos.webp" alt="Los trucos de los ricos"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Libro / Ebook</span> 
+        </div> 
+
+        <h3>Los trucos de los ricos</h3> 
+        <p class="ldu-author">de Juan Haro</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $13.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B018gDfMA" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
 
 
 
@@ -813,9 +865,6 @@ body {
       </div>
     </article> 
 
-
-
-
             <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
@@ -835,6 +884,32 @@ body {
             <span class="ldu-price">Desde $0.99 USD</span> 
           </div> 
           <a class="ldu-btn-buy" href="https://link.amazon/B0jm6jL1z" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+                <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/Mereces-ser-rico.webp" alt="Vivir con abundancia"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Imprescindible</span> 
+        </div> 
+
+        <h3>Mereces ser rico</h3> 
+        <p class="ldu-author">de Rashad Bilal</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $11.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B09QT9oIJ" target="_blank" rel="noopener noreferrer">
             Ver en Amazon →
           </a>
         </div> 
@@ -864,6 +939,32 @@ body {
   <div class="ldu-books-track"> 
 
 
+            <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/pequeño-libro-para-invertir.webp" alt="CEl pequeño libro para invertir con sentido común"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Ebook</span> 
+          <span class="ldu-label ldu-delivery">Recomendado</span> 
+        </div> 
+
+        <h3>El pequeño libro para invertir con sentido común</h3> 
+        <p class="ldu-author">de John C. Bogle</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $13.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B0atoEwsw" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
         <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
@@ -877,7 +978,7 @@ body {
         </div> 
 
         <h3>Cómo organizar tu dinero aunque ganes poco</h3> 
-        <p class="ldu-author">Diana Baquero</p> 
+        <p class="ldu-author">de Diana Baquero</p> 
 
         <div class="ldu-book-pricing"> 
           <div class="ldu-price-row"> 
@@ -885,6 +986,33 @@ body {
           </div> 
           <a class="ldu-btn-buy" href="https://go.hotmart.com/G105591082M" target="_blank" rel="noopener noreferrer">
             Obtener en Hotmart →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+            <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/hombre-mas-rico-Babilonia.webp" alt="El Hombre Más Rico de Babilonia"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Ebook</span> 
+          <span class="ldu-label ldu-delivery">Recomendado</span> 
+        </div> 
+
+        <h3>El Hombre Más Rico de Babilonia</h3> 
+        <p class="ldu-author">de George S. Clason</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $9.77 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B0dFY5eW3" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
           </a>
         </div> 
       </div>
@@ -912,7 +1040,7 @@ body {
 <main class="ldu-main">
   <section class="ldu-about">
     <span class="ldu-eyebrow">LECTURAS PARA AMPLIAR TUS CONOCIMIENTOS</span>
-    <h2>Libros y recursos para comprender mejor el dinero y los negocios</h2>
+    <h2>Libros y recursos para comprender mejor el dinero, negocios, psicología y el pensamiento</h2>
     <p>
       Explora una selección de libros y recursos educativos sobre finanzas personales, emprendimiento, negocios y construcción de patrimonio. Encuentra nuevas perspectivas, amplía tus conocimientos y profundiza en los temas que influyen en las decisiones económicas de cada día.
     </p>
@@ -921,6 +1049,7 @@ body {
     </p>
   </section>
 </main>
+
 
 <div class="footer-here"></div>
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
