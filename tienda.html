@@ -29,55 +29,40 @@
 <!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
 
-<!-- Google Fonts Poppins -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Nueva tipografía -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-<!-- TODO EL CONTENIDO DE LA PÁGINA AQUÍ -->
-
-
-
-
-
-
-
-
-  <!--  Esoaciado al final  -->
-<div style="height: 180px;"></div>
-
-
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 
 
 
 <style>
-
 /* =====================================
-   TARJETAS LIBRERÍA DE LA U
+   ESTILOS GENERALES Y LIBRERÍA CM
 ===================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Espacio superior automático para evitar que el menú fijo tape la imagen hero */
+  padding-top: 90px; 
+  background-color: #ffffff;
+  color: #171717;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 
 .ldu-books {
   --ldu-orange: #ed642d;
   --ldu-border: #e5e5e5;
-  --ldu-card-bg: #f8f8f8;
+  --ldu-card-bg: #ffffff;
   --ldu-text: #171717;
-  --ldu-muted: #929292;
+  --ldu-muted: #737373;
 
   width: 100%;
   max-width: 1190px;
   margin: 0 auto;
-  padding: 0 8px 12px;
+  padding: 0 16px 24px;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .ldu-books *,
@@ -86,47 +71,50 @@
   box-sizing: border-box;
 }
 
-/* FILA DE TARJETAS */
+/* FILA DE TARJETAS (GRID) */
 
 .ldu-books-track {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 180px));
+  grid-template-columns: repeat(5, minmax(0, 210px));
   align-items: stretch;
   justify-content: center;
-  gap: 16px;
+  gap: 20px;
   width: 100%;
   margin: 0 auto;
 }
 
-/* TARJETA */
+/* TARJETA DE LIBRO */
 
 .ldu-book-card {
   position: relative;
   min-width: 0;
-  min-height: 292px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 137px;
+  margin-top: 120px;
   border: 1px solid var(--ldu-border);
-  border-radius: 6px;
+  border-radius: 8px;
   background: var(--ldu-card-bg);
-  box-shadow: 0 2px 3px rgb(0 0 0 / 5%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
   text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* PORTADA DEL LIBRO */
+.ldu-book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
 
-/* PORTADAS MÁS GRANDES */
+/* PORTADA DEL LIBRO (SOBREPUESTA) */
 
 .ldu-book-cover {
   position: relative;
-  z-index: 1;
-  width: 90%;
-  height: 270px;
-  flex: 0 0 270px;
-  margin-top: -137px;
-  margin-bottom: 26px;
+  z-index: 2;
+  width: 82%;
+  height: 240px;
+  flex: 0 0 240px;
+  margin-top: -110px;
+  margin-bottom: 14px;
   background: transparent;
 }
 
@@ -136,10 +124,10 @@
   height: 100%;
   object-fit: contain;
   object-position: center bottom;
-  filter: drop-shadow(0 3px 2px rgb(0 0 0 / 20%));
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.12));
 }
 
-/* INFORMACIÓN */
+/* INFORMACIÓN DE LA TARJETA */
 
 .ldu-book-details {
   width: 100%;
@@ -148,7 +136,7 @@
   flex: 1;
   flex-direction: column;
   align-items: center;
-  padding: 0 8px 10px;
+  padding: 0 12px 16px;
 }
 
 /* ETIQUETAS */
@@ -158,235 +146,122 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 6px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .ldu-label {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 24px;
-  padding: 3px 5px;
-  border-radius: 2px;
+  min-height: 22px;
+  padding: 2px 8px;
+  border-radius: 4px;
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
 }
 
 .ldu-format {
-  border: 1px solid #777;
-  background: #f8f8f8;
-  color: #5d5d5d;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #475569;
 }
 
 .ldu-delivery {
-  border: 1px solid var(--ldu-orange);
-  background: var(--ldu-orange);
-  color: #fff;
+  border: 1px solid #171717;
+  background: #171717;
+  color: #ffffff;
 }
 
-/* TÍTULO DEL LIBRO */
+/* TÍTULO DEL LIBRO (ALTURA FIJA 2 LÍNEAS PARA SIMETRÍA) */
 
 .ldu-book-details h3 {
   width: 100%;
-  min-height: 17px;
-  margin: 0 0 8px;
-  overflow: hidden;
+  margin: 0 0 4px;
   color: var(--ldu-text);
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 600;
   line-height: 1.35;
-  text-overflow: ellipsis;
+  height: 2.7em; 
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
-/* AUTOR Y EDICIÓN */
+/* AUTOR */
 
 .ldu-author {
   width: 100%;
-  min-height: 16px;
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   overflow: hidden;
   color: var(--ldu-muted);
   font-size: 11px;
   font-weight: 400;
-  line-height: 1.4;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.ldu-edition {
-  margin: -7px 0 3px;
-  color: var(--ldu-text);
-  font-size: 10px;
-  line-height: 1.2;
-}
-
-/* PRECIOS */
+/* PRECIOS Y CTA */
 
 .ldu-book-pricing {
   width: 100%;
   margin-top: auto;
-  padding-top: 2px;
-}
-
-.ldu-old-price {
-  display: block;
-  min-height: 14px;
-  margin-bottom: 1px;
-  color: #aaa;
-  font-size: 10px;
-  line-height: 1.3;
-  text-decoration: line-through;
-}
-
-.ldu-hidden {
-  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .ldu-price-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 3px;
+  justify-content: center;
+  gap: 6px;
   width: 100%;
 }
 
-.ldu-discount {
+.ldu-price {
+  color: var(--ldu-text);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* BOTÓN DE COMPRA (CTA PROFESIONAL) */
+
+.ldu-btn-buy {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 23px;
-  padding: 3px 5px;
-  background: var(--ldu-orange);
-  color: #fff;
+  width: 100%;
+  padding: 9px 12px;
+  background-color: #171717;
+  color: #ffffff;
+  border-radius: 6px;
   font-size: 11px;
-  line-height: 1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.ldu-price {
-  display: block;
-  margin-left: auto;
-  color: var(--ldu-text);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.25;
-  white-space: nowrap;
+.ldu-btn-buy:hover {
+  background-color: #333333;
 }
 
-/* TABLET */
-
-@media (max-width: 1050px) {
-  .ldu-books {
-    max-width: 100%;
-    padding-right: 14px;
-    padding-left: 14px;
-  }
-
-  .ldu-books-track {
-    grid-template-columns: repeat(5, 175px);
-    justify-content: start;
-    gap: 14px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-top: 137px;
-    padding-bottom: 8px;
-    scrollbar-width: thin;
-    scrollbar-color: #ccc transparent;
-  }
-
-  .ldu-book-card {
-    margin-top: 0;
-  }
-
-  .ldu-book-cover {
-    margin-top: -137px;
-  }
+.ldu-btn-buy:active {
+  transform: scale(0.98);
 }
 
-/* TELÉFONOS */
-
-@media (max-width: 600px) {
-  .ldu-books {
-    width: 100%;
-    padding: 0 12px 12px;
-  }
-
-  .ldu-books-track {
-    grid-template-columns: repeat(5, 160px);
-    justify-content: start;
-    gap: 12px;
-    padding-top: 120px;
-    padding-bottom: 12px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .ldu-books-track::-webkit-scrollbar {
-    display: none;
-  }
-
-  .ldu-book-card {
-    min-height: 278px;
-    margin-top: 0;
-    scroll-snap-align: start;
-  }
-
-  .ldu-book-cover {
-    width: 82%;
-    height: 215px;
-    flex-basis: 215px;
-    margin-top: -120px;
-    margin-bottom: 20px;
-  }
-
-  .ldu-book-details {
-    padding: 0 6px 9px;
-  }
-
-  .ldu-book-labels {
-    gap: 4px;
-    margin-bottom: 9px;
-  }
-
-  .ldu-label {
-    padding: 3px 4px;
-    font-size: 9px;
-  }
-
-  .ldu-book-details h3 {
-    font-size: 11px;
-  }
-
-  .ldu-author {
-    font-size: 10px;
-  }
-
-  .ldu-price {
-    font-size: 12px;
-  }
-
-  .ldu-discount {
-    font-size: 10px;
-  }
-}
-
-
-
-
-
-/* IMAGEN SUPERIOR DE LIBROS */
+/* IMAGEN SUPERIOR (HERO) CON PUNTAS CUADRADAS */
 
 .ldu-books-hero {
   width: 100%;
   max-width: 1190px;
-  height: 260px;
-  margin: 0 auto 24px;
+  height: 240px;
+  margin: 0 auto 20px;
   overflow: hidden;
+  border-radius: 0;
 }
 
 .ldu-books-hero img {
@@ -397,409 +272,64 @@
   object-position: center;
 }
 
-/* TABLET */
-@media (max-width: 1050px) {
-  .ldu-books-hero {
-    height: 220px;
-    margin-bottom: 22px;
-  }
-}
-
-/* MÓVIL */
-@media (max-width: 600px) {
-  .ldu-books-hero {
-    height: 170px;
-    margin-bottom: 20px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ENCABEZADO DE LA LIBRERÍA */
+/* ENCABEZADO DE LA SECCIÓN */
 
 .ldu-books-heading {
   width: 100%;
   max-width: 1190px;
-  margin: 0 auto 28px;
-  padding: 0 0 18px;
+  margin: 0 auto 24px;
+  padding: 0 0 12px;
   color: #171717;
-  font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 
 .ldu-books-eyebrow {
-  margin: 0 0 3px;
-  color: #020101;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 25px;
-  line-height: 1.4;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-transform: none;
+  margin: 0 0 4px;
+  color: #666666;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .ldu-books-heading h1 {
   margin: 0;
-  padding: 0;
   color: #171717;
-  font-family: 'Georgia', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 32px;
-  line-height: 1.2;
   font-weight: 700;
-  letter-spacing: -0.7px;
 }
-
-/* NAVEGACIÓN DE LIBROS */
 
 .ldu-books-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 90px;
-  margin-top: 85px;
+  gap: 36px;
+  margin-top: 24px;
   border-bottom: 1px solid #e5e5e5;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .ldu-books-menu a {
-  display: inline-block;
-  padding: 0 0 14px;
-  margin-bottom: -1px;
-  color: #000000;
+  padding-bottom: 10px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
   border-bottom: 2px solid transparent;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 400;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.ldu-books-menu a:hover {
-  color: #050300;
-  border-bottom-color: #000000;
-}
-
-/* TABLET */
-
-@media (max-width: 1050px) {
-  .ldu-books-heading {
-    padding-right: 14px;
-    padding-left: 14px;
-  }
-
-  .ldu-books-eyebrow {
-    font-size: 17px;
-  }
-
-  .ldu-books-heading h1 {
-    font-size: 29px;
-  }
-
-  .ldu-books-menu {
-    gap: 55px;
-    margin-top: 70px;
-  }
-
-  .ldu-books-menu a {
-    font-size: 17px;
-  }
-}
-
-/* TELÉFONOS */
-
-@media (max-width: 600px) {
-  .ldu-books-heading {
-    margin-bottom: 22px;
-    padding-right: 12px;
-    padding-left: 12px;
-  }
-
-  .ldu-books-eyebrow {
-    margin-bottom: 3px;
-    font-size: 15px;
-  }
-
-  .ldu-books-heading h1 {
-    font-size: 26px;
-  }
-
-  .ldu-books-menu {
-    justify-content: center;
-    gap: 30px;
-    margin-top: 55px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-  }
-
-  .ldu-books-menu::-webkit-scrollbar {
-    display: none;
-  }
-
-  .ldu-books-menu a {
-    flex-shrink: 0;
-    padding-bottom: 12px;
-    font-size: 15px;
-  }
-}
-
-
-
-
-
-/* TARJETAS COMPLETAS CLICABLES */
-
-.ldu-book-card-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  color: inherit;
-  text-decoration: none;
-}
-
-.ldu-book-card-link:focus-visible {
-  outline: 2px solid #171717;
-  outline-offset: 4px;
-  border-radius: 6px;
-}
-
-.ldu-book-card {
-  cursor: pointer;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.ldu-book-card:hover {
-  box-shadow: 0 5px 14px rgb(0 0 0 / 10%);
-}
-
-.ldu-book-card-link .ldu-book-details h3 {
+.ldu-books-menu a:hover,
+.ldu-books-menu a.active {
   color: #171717;
+  border-bottom-color: #171717;
 }
 
-</style>
-
-
-
-<!-- IMAGEN SUPERIOR DE LA SECCIÓN DE LIBROS -->
-<div class="ldu-books-hero">
-  <img
-    src="./assets/png/libreria-codigo-millonario.webp"
-    alt="Código Millonario, medio digital de educación financiera y construcción de patrimonio"
-  >
-</div>
-
-  <!--  Esoaciado al final  -->
-<div style="height: 100px;"></div>
-
-
-
-
-<section class="ldu-books-heading">
-
-  <p class="ldu-books-eyebrow">Llegaste a la Biblioteca <em>CM</em></p>
-
-  <h1>¿Qué quieres leer hoy?</h1>
-
-  <nav class="ldu-books-menu" aria-label="Explorar libros">
-    <a href="#novedades">Novedades</a>
-    <a href="#mas-vendidos">Más vendidos</a>
-    <a href="#descuentos">Descuentos</a>
-  </nav>
-
-</section>
-
-<section class="ldu-books"> 
-
-  <div class="ldu-books-track"> 
-
-<!-- LIBRO --> 
-<article class="ldu-book-card"> 
-  <a class="ldu-book-card-link" href="https://go.hotmart.com/G105591082M" target="_blank" rel="noopener noreferrer" aria-label="Consultar y comprar Otros Mundos">
-    <div class="ldu-book-cover"> 
-      <img src="./assets/img/como-organizar-tu-dinero-aunque-ganes-poco.webp" 
-           alt=""> 
-    </div> 
-
-    <div class="ldu-book-details"> 
-      <div class="ldu-book-labels"> 
-        <span class="ldu-label ldu-format">Libro digital</span> 
-        <span class="ldu-label ldu-delivery">Entrega rápida</span> 
-      </div> 
-
-      <h3>No es teoría ni consejos genéricos</h3> 
-      <p class="ldu-author">Diana Baquero</p> 
-
-      <div class="ldu-book-pricing"> 
-        <span class="ldu-old-price ldu-hidden">$0 COP</span> 
-        <div class="ldu-price-row"> 
-          <span class="ldu-discount ldu-hidden">-0%</span> 
-          <span class="ldu-price">$10.00 USD</span> 
-        </div> 
-      </div> 
-    </div>
-  </a>
-</article> 
-
-<!-- LIBRO --> 
-<article class="ldu-book-card"> 
-  <a class="ldu-book-card-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Consultar y comprar ¡Qué Viva La Música!">
-    <div class="ldu-book-cover"> 
-      <img src="./assets/img/.webp" 
-           alt=""> 
-    </div> 
-
-    <div class="ldu-book-details"> 
-      <div class="ldu-book-labels"> 
-        <span class="ldu-label ldu-format">No disponible</span> 
-        <span class="ldu-label ldu-delivery">No disponible</span> 
-      </div> 
-
-      <h3>No disponible</h3> 
-      <p class="ldu-author">Código Millonario</p> 
-
-      <div class="ldu-book-pricing"> 
-        <span class="ldu-old-price ldu-hidden">$0 COP</span> 
-        <div class="ldu-price-row"> 
-          <span class="ldu-discount ldu-hidden">-0%</span> 
-          <span class="ldu-price">$5.59 UDS</span> 
-        </div> 
-      </div> 
-    </div>
-  </a>
-</article> 
-
-<!-- LIBRO --> 
-<article class="ldu-book-card"> 
-  <a class="ldu-book-card-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Consultar y comprar Canciones Desde El Puerto">
-    <div class="ldu-book-cover"> 
-      <img src="./assets/img/.webp" 
-           alt=""> 
-    </div> 
-
-    <div class="ldu-book-details"> 
-      <div class="ldu-book-labels"> 
-        <span class="ldu-label ldu-format">No disponible</span> 
-        <span class="ldu-label ldu-delivery">No disponible</span> 
-      </div> 
-
-      <h3>No disponible</h3> 
-      <p class="ldu-edition"></p> 
-      <p class="ldu-author">Código Millonario</p> 
-
-      <div class="ldu-book-pricing"> 
-        <span class="ldu-old-price ldu-hidden">$0 COP</span> 
-        <div class="ldu-price-row"> 
-          <span class="ldu-discount ldu-hidden">-0%</span> 
-          <span class="ldu-price">No disponible</span> 
-        </div> 
-      </div> 
-    </div>
-  </a>
-</article> 
-
-<!-- LIBRO --> 
-<article class="ldu-book-card"> 
-  <a class="ldu-book-card-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Consultar y comprar Victorian Psycho">
-    <div class="ldu-book-cover"> 
-      <img src="./assets/img/.webp" 
-           alt=""> 
-    </div> 
-
-    <div class="ldu-book-details"> 
-      <div class="ldu-book-labels"> 
-        <span class="ldu-label ldu-format">No disponible</span> 
-        <span class="ldu-label ldu-delivery">No disponible</span> 
-      </div> 
-
-      <h3>No disponible</h3> 
-      <p class="ldu-author">Código Millonario</p> 
-
-      <div class="ldu-book-pricing"> 
-        <span class="ldu-old-price ldu-hidden">$0 COP</span> 
-        <div class="ldu-price-row"> 
-          <span class="ldu-discount ldu-hidden">-0%</span> 
-          <span class="ldu-price">No disponible</span> 
-        </div> 
-      </div> 
-    </div>
-  </a>
-</article> 
-
-<!-- LIBRO --> 
-<article class="ldu-book-card"> 
-  <a class="ldu-book-card-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Consultar y comprar Victorian Psycho">
-    <div class="ldu-book-cover"> 
-      <img src="./assets/img/.webp" 
-           alt=""> 
-    </div> 
-
-    <div class="ldu-book-details"> 
-      <div class="ldu-book-labels"> 
-        <span class="ldu-label ldu-format">No disponible</span> 
-        <span class="ldu-label ldu-delivery">No disponible</span> 
-      </div> 
-
-      <h3>No disponible</h3> 
-      <p class="ldu-author">Código Millonario</p> 
-
-      <div class="ldu-book-pricing"> 
-        <span class="ldu-old-price ldu-hidden">$0 COP</span> 
-        <div class="ldu-price-row"> 
-          <span class="ldu-discount ldu-hidden">-0%</span> 
-          <span class="ldu-price">No disponible</span> 
-        </div> 
-      </div> 
-    </div>
-  </a>
-</article> 
-
-  </div> 
-</section>
-
-
-
-
-
-
-
-
-  <!--  Esoaciado al final  -->
-<div style="height: 100px;"></div>
-
-
-
-
-
-
-
-
-<style>
-/* TEXTO EDITORIAL · BIBLIOTECA */
+/* SECCIÓN TEXTO EDITORIAL */
 
 .cm-biblioteca-texto {
   width: 100%;
   max-width: 900px;
-  margin: 36px auto;
-  padding: 20px 30px;
+  margin: 32px auto;
+  padding: 16px 24px;
   box-sizing: border-box;
 }
 
@@ -809,8 +339,7 @@
 }
 
 .cm-biblioteca-texto p {
-  margin: 0 0 13px;
-  font-family: 'Inter', sans-serif;
+  margin: 0 0 12px;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.8;
@@ -821,93 +350,7 @@
   margin-bottom: 0;
 }
 
-/* TELÉFONOS */
-
-@media (max-width: 768px) {
-  .cm-biblioteca-texto {
-    margin: 24px auto;
-    padding: 12px 20px;
-    text-align: center;
-  }
-
-  .cm-biblioteca-texto__contenido {
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .cm-biblioteca-texto p {
-    font-size: 14px;
-    line-height: 1.75;
-    text-align: center;
-  }
-}
-</style>
-
-<div class="cm-biblioteca-texto">
-  <div class="cm-biblioteca-texto__contenido">
-
-<p>
-  La biblioteca de Código Millonario reúne ebooks, guías y recursos
-  educativos que amplían algunos de los temas tratados por este medio
-  digital. Cada publicación aborda contenidos específicos sobre finanzas
-  personales, negocios o construcción de patrimonio, con información que
-  el lector puede consultar a su propio ritmo.
-</p>
-
-<p>
-  Los materiales están orientados a profundizar en la gestión del dinero,
-  la organización de las finanzas personales, el análisis de oportunidades
-  de negocio y las decisiones relacionadas con la construcción de
-  patrimonio. Su contenido complementa la información y el análisis
-  editorial publicados en Código Millonario.
-</p>
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-<!-- CONTENIDO FINAL: BIBLIOTECA CÓDIGO MILLONARIO -->
-
-<main class="ldu-main">
-
-  <section class="ldu-about">
-    <span class="ldu-eyebrow">LECTURAS PARA AMPLIAR TUS CONOCIMIENTOS</span>
-
-    <h2>Libros y recursos para comprender mejor el dinero y los negocios</h2>
-
-    <p>
-      Explora una selección de libros y recursos educativos sobre finanzas
-      personales, emprendimiento, negocios y construcción de patrimonio.
-      Encuentra nuevas perspectivas, amplía tus conocimientos y profundiza
-      en los temas que influyen en las decisiones económicas de cada día.
-    </p>
-
-    
-<p class="ldu-about-note">
-  Algunos recursos de esta biblioteca incluyen enlaces externos a plataformas
-  o librerías donde puedes consultar sus detalles y opciones de adquisición.
-</p>
-
-  </section>
-
-</main>
-
-
-
-
-<style>
-
-
-/* =========================================================
-   CIERRE EDITORIAL · BIBLIOTECA CÓDIGO MILLONARIO
-========================================================= */
+/* CIERRE EDITORIAL */
 
 .ldu-main {
   width: 100%;
@@ -918,120 +361,570 @@
 .ldu-about {
   width: 100%;
   max-width: 780px;
-  margin: 58px auto 48px;
-  padding: 32px 20px;
-  box-sizing: border-box;
+  margin: 40px auto;
+  padding: 24px 16px;
   text-align: center;
   color: #222;
 }
 
-/* ETIQUETA EDITORIAL */
-
-.ldu-eyebrow {
+.ldu-about .ldu-eyebrow {
   display: block;
-  margin: 0 0 14px;
-  font-family: 'Inter', sans-serif;
+  margin: 0 0 10px;
   font-size: 11px;
   font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   color: #777;
 }
 
-/* TÍTULO */
-
 .ldu-about h2 {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 400;
   line-height: 1.3;
-  letter-spacing: -0.025em;
   color: #171717;
 }
-
-/* TEXTO */
 
 .ldu-about p {
   max-width: 650px;
   margin: 0 auto;
-  font-family: 'Inter', sans-serif;
   font-size: 15px;
-  font-weight: 400;
   line-height: 1.8;
   color: #454545;
 }
 
-/* TELÉFONOS */
-
-@media (max-width: 768px) {
-  .ldu-main {
-    padding: 0 12px;
-  }
-
-  .ldu-about {
-    margin: 34px auto 28px;
-    padding: 24px 8px;
-  }
-
-  .ldu-eyebrow {
-    margin-bottom: 12px;
-    font-size: 10px;
-  }
-
-  .ldu-about h2 {
-    margin-bottom: 14px;
-    font-size: 23px;
-    line-height: 1.3;
-  }
-
-  .ldu-about p {
-    font-size: 14px;
-    line-height: 1.75;
-  }
-}
-
-
-
-/* NOTA SOBRE ENLACES EXTERNOS */
-
-.ldu-about .ldu-about-note {
-  margin: 18px auto 0;
-  max-width: 600px;
-  font-family: 'Inter', sans-serif;
+.ldu-about-note {
+  margin: 16px auto 0;
+  max-width: 550px;
   font-size: 12px;
-  line-height: 1.7;
-  font-weight: 400;
+  line-height: 1.6;
   color: #777;
 }
 
-@media (max-width: 768px) {
-  .ldu-about .ldu-about-note {
-    margin-top: 15px;
-    font-size: 12px;
-    line-height: 1.65;
+/* =====================================
+   ADAPTACIÓN MÓVIL Y TABLET OPTIMIZADA
+===================================== */
+
+@media (max-width: 1050px) {
+  .ldu-books-track {
+    grid-template-columns: repeat(5, 175px);
+    justify-content: start;
+    overflow-x: auto;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
   }
 }
 
+@media (max-width: 600px) {
+  body {
+    padding-top: 75px;
+  }
+
+  .ldu-books-hero {
+    height: 160px;
+    margin-bottom: 16px;
+    border-radius: 0;
+  }
+
+  .ldu-books-heading {
+    margin-bottom: 16px;
+  }
+
+  .ldu-books-eyebrow {
+    font-size: 14px;
+  }
+
+  .ldu-books-heading h1 {
+    font-size: 24px;
+  }
+
+  .ldu-books-menu {
+    gap: 20px;
+    margin-top: 16px;
+    overflow-x: auto;
+    justify-content: start;
+    scrollbar-width: none;
+  }
+
+  .ldu-books-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ldu-books-track {
+    grid-template-columns: repeat(5, 150px);
+    gap: 12px;
+    padding-top: 10px; /* Reducido drásticamente para eliminar el hueco excesivo */
+    padding-bottom: 10px;
+  }
+
+  .ldu-book-card {
+    margin-top: 85px; /* Alineado correctamente al tamaño de la portada */
+  }
+
+  .ldu-book-cover {
+    height: 180px;
+    margin-top: -85px;
+    margin-bottom: 10px;
+  }
+
+  .ldu-book-details {
+    padding: 0 8px 12px;
+  }
+
+  .ldu-book-details h3 {
+    font-size: 12px;
+    height: 2.7em;
+  }
+
+  .ldu-author {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .ldu-price {
+    font-size: 13px;
+  }
+
+  .ldu-btn-buy {
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+}
 </style>
 
 
-  <!--  Esoaciado al final  -->
-<div style="height: 180px;"></div>
+</head>
+
+<body>
+
+<!-- IMAGEN SUPERIOR DE LA SECCIÓN DE LIBROS -->
+<div class="ldu-books-hero">
+  <img src="./assets/png/libreria-codigo-millonario.webp" alt="Biblioteca Digital Código Millonario">
+</div>
+
+<section class="ldu-books-heading">
+  <p class="ldu-books-eyebrow">Llegaste a la Biblioteca <em>CM</em></p>
+  <h1>¿Qué quieres leer hoy?</h1>
+
+  <nav class="ldu-books-menu" aria-label="Explorar libros">
+    <a href="#novedades" class="active">Novedades</a>
+    <a href="#mas-vendidos">Más vendidos</a>
+    <a href="#recomendados">Recomendados</a>
+  </nav>
+</section>
+
+
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 20px;"></div>
+
+<section class="ldu-books-heading">
+  <p class="ldu-books-eyebrow">PATRONES DE RIQUEZA</p>
+  <h1>Fundamentos de Dinero y Liberta Financiera</h1>
+
+</section>
+
+<section class="ldu-books"> 
+  <div class="ldu-books-track"> 
+
+        <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/Psicologia-del-Dinero.webp" alt="La psicología del dinero"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Libro Físico / Ebook</span> 
+        </div> 
+
+        <h3>La psicología del dinero</h3> 
+        <p class="ldu-author">de Morgan Housel</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $8.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B04g17byD" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+        <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/la-via-rapida-millonario.webp" alt="La vía rápida del millonario"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Clásico</span> 
+        </div> 
+
+        <h3>La vía rápida del millonario</h3> 
+        <p class="ldu-author">de M.J. DeMarco</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $11.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B06Sp9xHz" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+        <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/piense-y-hagase-rico.webp" alt="Piense y hágase rico"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Bestseller</span> 
+        </div> 
+
+        <h3>Piense y hágase rico</h3> 
+        <p class="ldu-author">de Napoleon Hill</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $9.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B05bdoh6e" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+        <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/si-lo-rees-lo-creas.webp" alt="Si lo crees, lo creas"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Imprescindible</span> 
+        </div> 
+
+        <h3>Si lo crees, lo creas</h3> 
+        <p class="ldu-author">de Brian Tracy</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $9.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B004KY4cX" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+            <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/padre-rico-padre-pobre.webp" alt="Padre Rico, Padre Pobre"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Imprescindible</span> 
+        </div> 
+
+        <h3>Padre Rico, Padre Pobre</h3> 
+        <p class="ldu-author">de Robert T. Kiyosaki</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $10.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B04Wte4gM" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+
+
+  </div> 
+</section>
 
 
 
 
 
-  <!--  Footer  -->
+
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 50px;"></div>
+
+<section class="ldu-books-heading">
+  <p class="ldu-books-eyebrow">INFLUENCIAS</p>
+  <h1>Libros de Mentalidad de Abundancia y Reprogramación</h1>
+
+</section>
+
+<section class="ldu-books"> 
+  <div class="ldu-books-track"> 
+
+
+
+
+            <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/el-secreto.webp" alt="El Secreto (The Secret)"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Imprescindible</span> 
+        </div> 
+
+        <h3>El Secreto (The Secret)</h3> 
+        <p class="ldu-author">de Byrne Rhonda</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $31,64 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B03uJzMkz" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+    
+            <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/ciencia-de-hacerse.webp" alt="La Ciencia de Hacerse Rico"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Imprescindible</span> 
+        </div> 
+
+        <h3>La Ciencia de Hacerse Rico</h3> 
+        <p class="ldu-author">de Wallace D. Wattles</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $0,99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B08x59jUi" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+
+          <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/visualización-creativa.webp" alt="Visualización creativa"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Imprescindible</span> 
+        </div> 
+
+        <h3>Visualización creativa</h3> 
+        <p class="ldu-author">de SHAKTI GAWAIN</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $13,81 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B05lWFzDp" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+        <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/trabajos-parapsicológicos.webp" alt="Trabajos Parapsicológicos para obtener amor, poder y dinero"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Imprescindible</span> 
+        </div> 
+
+        <h3>Trabajos Parapsicológicos para obtener amor, poder y dinero</h3> 
+        <p class="ldu-author">Jose M. Herrou Aragon</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $3.06 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B0j6vQpF0" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+
+        <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/vivir-con-abundancia.webp" alt="Vivir con abundancia"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Imprescindible</span> 
+        </div> 
+
+        <h3>Vivir con abundancia</h3> 
+        <p class="ldu-author">Sergio Fernández</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $9.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B0bLs1g9M" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+
+
+            <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/el-juego-de-la-vida.webp" alt="Vivir con abundancia"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Imprescindible</span> 
+        </div> 
+
+        <h3>EL JUEGO DE LA VIDA Y CÓMO JUGARLO</h3> 
+        <p class="ldu-author">de FLORENCE SCOVEL SHINN</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">Desde $0.99 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://link.amazon/B0jm6jL1z" target="_blank" rel="noopener noreferrer">
+            Ver en Amazon →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+
+      </div> 
+</section>
+
+
+
+
+
+
+
+   <!-- ESPACIO FINAL -->
+<div style="height: 50px;"></div>
+
+<section class="ldu-books-heading">
+  <p class="ldu-books-eyebrow">APRENDIZAJE Y CRECIMIENTO</p>
+  <h1>Lecturas Recomendadas</h1>
+
+</section>
+
+<section class="ldu-books"> 
+  <div class="ldu-books-track"> 
+
+
+        <!-- LIBRO --> 
+    <article class="ldu-book-card"> 
+      <div class="ldu-book-cover"> 
+        <img src="./assets/img/como-organizar-tu-dinero-aunque-ganes-poco.webp" alt="Cómo organizar tu dinero aunque ganes poco"> 
+      </div> 
+
+      <div class="ldu-book-details"> 
+        <div class="ldu-book-labels"> 
+          <span class="ldu-label ldu-format">Ebook</span> 
+          <span class="ldu-label ldu-delivery">Recomendado</span> 
+        </div> 
+
+        <h3>Cómo organizar tu dinero aunque ganes poco</h3> 
+        <p class="ldu-author">Diana Baquero</p> 
+
+        <div class="ldu-book-pricing"> 
+          <div class="ldu-price-row"> 
+            <span class="ldu-price">$10.00 USD</span> 
+          </div> 
+          <a class="ldu-btn-buy" href="https://go.hotmart.com/G105591082M" target="_blank" rel="noopener noreferrer">
+            Obtener en Hotmart →
+          </a>
+        </div> 
+      </div>
+    </article> 
+
+  </div> 
+</section>
+
+
+
+
+
+
+<div class="cm-biblioteca-texto">
+  <div class="cm-biblioteca-texto__contenido">
+    <p>
+      La biblioteca de Código Millonario reúne ebooks, guías y recursos educativos que amplían algunos de los temas tratados por este medio digital. Cada publicación aborda contenidos específicos sobre finanzas personales, negocios o construcción de patrimonio, con información que el lector puede consultar a su propio ritmo.
+    </p>
+    <p>
+      Los materiales están orientados a profundizar en la gestión del dinero, la organización de las finanzas personales, el análisis de oportunidades de negocio y las decisiones relacionadas con la construcción de patrimonio. Su contenido complementa la información y el análisis editorial publicados en Código Millonario.
+    </p>
+  </div>
+</div>
+
+<main class="ldu-main">
+  <section class="ldu-about">
+    <span class="ldu-eyebrow">LECTURAS PARA AMPLIAR TUS CONOCIMIENTOS</span>
+    <h2>Libros y recursos para comprender mejor el dinero y los negocios</h2>
+    <p>
+      Explora una selección de libros y recursos educativos sobre finanzas personales, emprendimiento, negocios y construcción de patrimonio. Encuentra nuevas perspectivas, amplía tus conocimientos y profundiza en los temas que influyen en las decisiones económicas de cada día.
+    </p>
+    <p class="ldu-about-note">
+      Algunos recursos de esta biblioteca incluyen enlaces externos a plataformas o librerías donde puedes consultar sus detalles y opciones de adquisición.
+    </p>
+  </section>
+</main>
+
 <div class="footer-here"></div>
-
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
-
-<!-- MENU COMPLETO -->
 <script src="./assets/menu.js"></script>
-
 
 </body>
 </html>
-
