@@ -23,25 +23,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-
-
-
-  
   <!-- Tailwind CSS CDN para utilidad layout fluida -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-    // Configuración Tailwind personalizada para paleta Shopify / Neutral
+    // Configuración Tailwind personalizada estilo limpio / neutral Código Millonario
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            shopifyBg: '#f6f6f7',
+            shopifyBg: '#ffffff',
             shopifyBorder: '#e1e3e5',
             shopifyText: '#202223',
             shopifySubtext: '#6d7175',
-            shopifyGreen: '#008060',
-            shopifyGreenHover: '#006e52'
+            shopifyGreen: '#202223',
+            shopifyGreenHover: '#000000'
           },
           fontFamily: {
             sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
@@ -52,9 +48,9 @@
   </script>
 
   <style>
-    /* Reset & Ajustes Preventivos de Menú/Footer */
+    /* Reset & Ajustes Preventivos */
     body {
-      background-color: #f6f6f7;
+      background-color: #ffffff;
       color: #202223;
       margin: 0;
       padding: 0;
@@ -63,7 +59,6 @@
       flex-direction: column;
     }
     
-    /* Prevenir que scripts externos colapsen el diseño principal */
     .app-wrapper {
       flex: 1 0 auto;
       width: 100%;
@@ -72,19 +67,19 @@
       padding: 2rem 1rem;
     }
 
-    /* Estilos sobrios de drag & drop */
+    /* Estilos de zonas de arrastre con líneas grises */
     .drop-zone {
-      border: 1px dashed #ababab;
+      border: 1px dashed #8c9196;
       transition: all 0.2s ease-in-out;
       background-color: #ffffff;
     }
 
     .drop-zone.dragover {
-      border-color: #008060;
-      background-color: #f1f8f5;
+      border-color: #202223;
+      background-color: #f6f6f7;
     }
 
-    /* Estilo de controles e inputs limpios tipo Shopify */
+    /* Estilo de controles e inputs sobrios */
     .custom-input, .custom-select {
       border: 1px solid #8c9196;
       border-radius: 4px;
@@ -97,11 +92,11 @@
     }
 
     .custom-input:focus, .custom-select:focus {
-      border-color: #008060;
-      box-shadow: 0 0 0 1px #008060;
+      border-color: #202223;
+      box-shadow: 0 0 0 1px #202223;
     }
 
-    /* Tarjeta/Contenedor de plataforma */
+    /* Tarjetas de plataforma con diseño minimalista neutro */
     .platform-card {
       border: 1px solid #e1e3e5;
       background: #ffffff;
@@ -115,11 +110,11 @@
     }
 
     .platform-card.active {
-      border-color: #008060;
-      background-color: #f0f7f5;
+      border-color: #202223;
+      background-color: #f6f6f7;
     }
 
-    /* Select estilizado dentro del botón de plataforma */
+    /* Select estilizado dentro de la tarjeta de plataforma */
     .preset-select {
       border: 1px solid #e1e3e5;
       background-color: #ffffff;
@@ -134,12 +129,12 @@
     }
 
     .platform-card.active .preset-select {
-      border-color: #008060;
+      border-color: #202223;
     }
 
-    /* Botón Acción Principal estilo Shopify */
+    /* Botones de acción profesional */
     .btn-primary {
-      background-color: #008060;
+      background-color: #202223;
       color: #ffffff;
       font-weight: 600;
       padding: 0.75rem 1.5rem;
@@ -148,7 +143,7 @@
     }
 
     .btn-primary:hover {
-      background-color: #006e52;
+      background-color: #000000;
     }
 
     .btn-secondary {
@@ -170,7 +165,6 @@
 <!-- ========================================== -->
 
 <style>
-  /* Contenedor principal de FAQs */
   .faq-section {
     width: 100%;
     max-width: 800px;
@@ -195,7 +189,6 @@
     gap: 12px;
   }
 
-  /* Elemento desplegable (Accordion) */
   .faq-item {
     background-color: #ffffff;
     border: 1px solid #e1e3e5;
@@ -205,33 +198,30 @@
   }
 
   .faq-item:hover {
-    border-color: #babfc3;
+    border-color: #8c9196;
   }
 
   .faq-item[open] {
-    border-color: #008060;
+    border-color: #202223;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   }
 
-  /* Cabecera / Pregunta */
   .faq-question {
     padding: 16px 20px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    list-style: none; /* Oculta la flecha por defecto */
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     user-select: none;
   }
 
-  /* Ocultar indicador nativo en Safari/WebKit */
   .faq-question::-webkit-details-marker {
     display: none;
   }
 
-  /* Icono personalizado de suma/flecha */
   .faq-question::after {
     content: "+";
     font-size: 18px;
@@ -242,10 +232,9 @@
 
   .faq-item[open] .faq-question::after {
     content: "−";
-    color: #008060;
+    color: #202223;
   }
 
-  /* Respuesta / Contenido */
   .faq-answer {
     padding: 0 20px 16px 20px;
     font-size: 14px;
@@ -262,7 +251,6 @@
     margin-bottom: 0;
   }
 
-  /* Ajuste para pantallas pequeñas */
   @media (max-width: 600px) {
     .faq-section {
       margin: 32px auto;
@@ -288,24 +276,22 @@
   <!-- MENU COMPLETO Real por JS -->
   <script src="../assets/menu.js"></script>
 
-
-     <!-- ESPACIO FINAL -->
-<div style="height: 150px;"></div>
-
+  <!-- ESPACIO FINAL -->
+  <div style="height: 150px;"></div>
 
   <!-- CONTENIDO PRINCIPAL DE LA HERRAMIENTA -->
   <main class="app-wrapper">
 
-<!-- Encabezado Estilo Shopify -->
-<header class="text-center mb-8 max-w-3xl mx-auto px-2">
-  <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-shopifyText mb-3">
-    Redimensionador y optimizador de imágenes
-  </h1>
-  <p class="text-shopifySubtext text-sm sm:text-base leading-relaxed">
-    Redimensiona y optimiza imágenes gratis para WhatsApp, Instagram, YouTube, TikTok y currículum. Ajusta las dimensiones y la calidad de tus fotos gratis, directamente en tu navegador y sin instalar programas.
-  </p>
-</header>
-<br>
+    <!-- Encabezado -->
+    <header class="text-center mb-8 max-w-3xl mx-auto px-2">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-shopifyText mb-3">
+        Redimensionador y optimizador de imágenes
+      </h1>
+      <p class="text-shopifySubtext text-sm sm:text-base leading-relaxed">
+        Redimensiona y optimiza imágenes gratis para WhatsApp, Instagram, YouTube, TikTok y currículum. Ajusta las dimensiones y la calidad de tus fotos gratis, directamente en tu navegador y sin instalar programas.
+      </p>
+    </header>
+    <br>
 
     <!-- Panel Contenedor Principal -->
     <div class="bg-white rounded-md border border-shopifyBorder shadow-sm p-4 sm:p-6 md:p-8">
@@ -317,15 +303,15 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
           </svg>
           <p class="text-base font-semibold text-shopifyText mb-1">Arrastra y suelta tu imagen aquí</p>
-          <p class="text-xs text-shopifySubtext mb-4">Soporta formatos JPG, PNG, WEBP (Hasta 15MB)</p>
+          <p class="text-xs text-shopifySubtext mb-4">Soporta formatos JPG, PNG, WEBP, AVIF (Hasta 15MB)</p>
           <label class="btn-primary cursor-pointer text-sm inline-block">
             Examinar archivos
-            <input type="file" id="fileInput" class="hidden" accept="image/jpeg, image/png, image/webp">
+            <input type="file" id="fileInput" class="hidden" accept="image/jpeg, image/png, image/webp, image/avif">
           </label>
         </div>
       </div>
 
-      <!-- Paso 2: Interfaz de Edición y Previsualización (Oculto inicialmente) -->
+      <!-- Paso 2: Interfaz de Edición y Previsualización -->
       <div id="editorSection" class="hidden flex flex-col lg:flex-row gap-8">
         
         <!-- Columna Izquierda: Opciones de Ajuste -->
@@ -334,7 +320,7 @@
           <!-- Botón de reset/cambiar imagen -->
           <div class="flex items-center justify-between border-b border-shopifyBorder pb-3">
             <span class="text-xs font-semibold text-shopifySubtext uppercase tracking-wider">Configuración</span>
-            <button id="btnChangeImage" class="text-xs text-shopifyGreen font-medium hover:underline flex items-center gap-1">
+            <button id="btnChangeImage" class="text-xs text-shopifyText font-semibold hover:underline flex items-center gap-1">
               ← Cambiar imagen
             </button>
           </div>
@@ -344,8 +330,14 @@
             <label class="block text-xs font-semibold text-shopifySubtext uppercase tracking-wider mb-2">Selecciona Plataforma y Formato</label>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="presetGrid">
               
+              <!-- Predeterminado (Original) -->
+              <div class="platform-card active flex flex-col justify-center cursor-pointer col-span-1 sm:col-span-2" data-platform="original" id="originalCard">
+                <div class="text-xs font-semibold text-shopifyText">Predeterminado</div>
+                <div class="text-[11px] text-shopifySubtext" id="originalDimensionsText">Mantiene las dimensiones originales de la imagen</div>
+              </div>
+
               <!-- WhatsApp -->
-              <div class="platform-card active" data-platform="whatsapp">
+              <div class="platform-card" data-platform="whatsapp">
                 <div class="text-xs font-semibold text-shopifyText mb-1 flex items-center gap-1.5">
                   <span>WhatsApp</span>
                 </div>
@@ -446,7 +438,7 @@
           </div>
 
           <!-- Dimensiones Manuales -->
-          <div class="bg-shopifyBg p-3 rounded border border-shopifyBorder">
+          <div class="bg-white p-3 rounded border border-shopifyBorder">
             <div class="grid grid-cols-2 gap-3 mb-2">
               <div>
                 <label class="block text-xs text-shopifySubtext mb-1">Ancho (px)</label>
@@ -458,7 +450,7 @@
               </div>
             </div>
             <label class="flex items-center gap-2 text-xs text-shopifyText cursor-pointer">
-              <input type="checkbox" id="keepAspectRatio" checked class="rounded accent-shopifyGreen">
+              <input type="checkbox" id="keepAspectRatio" checked class="rounded accent-gray-800">
               Mantener relación de aspecto
             </label>
           </div>
@@ -471,14 +463,15 @@
                 <option value="image/jpeg">JPG / JPEG</option>
                 <option value="image/png">PNG</option>
                 <option value="image/webp">WEBP</option>
+                <option value="image/avif">AVIF</option>
               </select>
             </div>
             
             <div id="qualityContainer">
               <label class="block text-xs font-semibold text-shopifySubtext uppercase tracking-wider mb-2">
-                Calidad: <span id="qualityVal">85</span>%
+                Peso / Calidad: <span id="qualityVal">85</span>%
               </label>
-              <input type="range" id="inputQuality" min="10" max="100" value="85" class="w-full accent-shopifyGreen mt-2">
+              <input type="range" id="inputQuality" min="10" max="100" value="85" class="w-full accent-gray-800 mt-2">
             </div>
           </div>
 
@@ -493,7 +486,7 @@
         </div>
 
         <!-- Columna Derecha: Vista Previa e Info de Tamaño -->
-        <div class="w-full lg:w-1/2 flex flex-col justify-between bg-shopifyBg p-4 rounded border border-shopifyBorder">
+        <div class="w-full lg:w-1/2 flex flex-col justify-between bg-white p-4 rounded border border-shopifyBorder">
           
           <div>
             <div class="flex justify-between items-center mb-3">
@@ -515,7 +508,7 @@
             </div>
             <div class="text-right">
               <span class="text-shopifySubtext block">Redimensionada (estimado):</span>
-              <span id="newSizeText" class="font-semibold text-shopifyGreen">Calculando...</span>
+              <span id="newSizeText" class="font-semibold text-shopifyText">Calculando...</span>
             </div>
           </div>
 
@@ -530,81 +523,75 @@
 
   </main>
 
+  <!-- ESPACIO FINAL -->
+  <div style="height: 100px;"></div>
 
-
-
-     <!-- ESPACIO FINAL -->
-<div style="height: 100px;"></div>
-
-
-<section class="faq-section">
-  <h2 class="faq-title">Preguntas Frecuentes</h2>
-  
-  <div class="faq-list">
+  <section class="faq-section">
+    <h2 class="faq-title">Preguntas Frecuentes</h2>
     
-    <!-- Pregunta 1 -->
-    <details class="faq-item">
-      <summary class="faq-question">¿Mis imágenes se suben a algún servidor?</summary>
-      <div class="faq-answer">
-        <p>No. El redimensionamiento y la optimización se realizan directamente en tu navegador mediante HTML5 Canvas. Las imágenes se procesan en tu dispositivo y no se envían a un servidor para realizar estas operaciones.</p>
-      </div>
-    </details>
+    <div class="faq-list">
+      
+      <!-- Pregunta 1 -->
+      <details class="faq-item">
+        <summary class="faq-question">¿Mis imágenes se suben a algún servidor?</summary>
+        <div class="faq-answer">
+          <p>No. El redimensionamiento y la optimización se realizan directamente en tu navegador mediante HTML5 Canvas. Las imágenes se procesan en tu dispositivo y no se envían a un servidor para realizar estas operaciones.</p>
+        </div>
+      </details>
 
-    <!-- Pregunta 2 -->
-    <details class="faq-item">
-      <summary class="faq-question">¿Cómo elijo las medidas para cada red social?</summary>
-      <div class="faq-answer">
-        <p>Selecciona la plataforma o el formato que necesitas (WhatsApp, Instagram, Facebook, YouTube, LinkedIn, TikTok o currículum). La herramienta aplicará las dimensiones predefinidas correspondientes para facilitar el ajuste de tus imágenes.</p>
-      </div>
-    </details>
+      <!-- Pregunta 2 -->
+      <details class="faq-item">
+        <summary class="faq-question">¿Cómo elijo las medidas para cada red social?</summary>
+        <div class="faq-answer">
+          <p>Selecciona la plataforma o el formato que necesitas (WhatsApp, Instagram, Facebook, YouTube, LinkedIn, TikTok o currículum). La herramienta aplicará las dimensiones predefinidas correspondientes para facilitar el ajuste de tus imágenes.</p>
+        </div>
+      </details>
 
-    <!-- Pregunta 5 -->
-    <details class="faq-item">
-      <summary class="faq-question">¿Cómo redimensionar una imagen online?</summary>
-      <div class="faq-answer">
-        <p>Con el redimensionador de imágenes de Código Millonario puedes cambiar el ancho y el alto de una imagen según tus necesidades. Puedes utilizar medidas predefinidas para diferentes plataformas o introducir dimensiones personalizadas en píxeles. Esta función te permite adaptar fotografías y gráficos para redes sociales, páginas web, publicaciones digitales y otros proyectos sin necesidad de instalar programas.</p>
-      </div>
-    </details>
+      <!-- Pregunta 3 -->
+      <details class="faq-item">
+        <summary class="faq-question">¿Cómo redimensionar una imagen online?</summary>
+        <div class="faq-answer">
+          <p>Con el redimensionador de imágenes de Código Millonario puedes cambiar el ancho y el alto de una imagen según tus necesidades. Puedes utilizar medidas predefinidas para diferentes plataformas o introducir dimensiones personalizadas en píxeles. Esta función te permite adaptar fotografías y gráficos para redes sociales, páginas web, publicaciones digitales y otros proyectos sin necesidad de instalar programas.</p>
+        </div>
+      </details>
 
-    <!-- Pregunta 3 -->
-    <details class="faq-item">
-      <summary class="faq-question">¿Perderán calidad mis fotos al cambiarles el tamaño?</summary>
-      <div class="faq-answer">
-        <p>El resultado depende de las dimensiones elegidas, el formato de salida y el nivel de compresión. La herramienta utiliza un método de suavizado para conservar una buena nitidez y permite ajustar la calidad antes de descargar la imagen.</p>
-      </div>
-    </details>
+      <!-- Pregunta 4 -->
+      <details class="faq-item">
+        <summary class="faq-question">¿Perderán calidad mis fotos al cambiarles el tamaño?</summary>
+        <div class="faq-answer">
+          <p>El resultado depende de las dimensiones elegidas, el formato de salida y el nivel de compresión. La herramienta utiliza un método de suavizado para conservar una buena nitidez y permite ajustar la calidad antes de descargar la imagen.</p>
+        </div>
+      </details>
 
-    <!-- Pregunta 4 -->
-    <details class="faq-item">
-      <summary class="faq-question">¿Qué formatos de imagen puedo subir y exportar?</summary>
-      <div class="faq-answer">
-        <p>Puedes cargar imágenes en los formatos JPG, PNG, WEBP, GIF y BMP, siempre que sean compatibles con tu navegador. Para descargar el resultado, puedes elegir entre <strong>JPG</strong>, <strong>PNG</strong> y <strong>WEBP</strong>.</p>
-      </div>
-    </details>
+      <!-- Pregunta 5 -->
+      <details class="faq-item">
+        <summary class="faq-question">¿Qué formatos de imagen puedo subir y exportar?</summary>
+        <div class="faq-answer">
+          <p>Puedes cargar imágenes en los formatos JPG, PNG, WEBP, AVIF, GIF y BMP, siempre que sean compatibles con tu navegador. Para descargar el resultado, puedes elegir entre <strong>JPG</strong>, <strong>PNG</strong>, <strong>WEBP</strong> y <strong>AVIF</strong>.</p>
+        </div>
+      </details>
 
-        <!-- Pregunta 5 -->
-    <details class="faq-item">
-      <summary class="faq-question">¿Cómo reducir el peso de una imagen sin perder demasiada calidad?</summary>
-      <div class="faq-answer">
-        <p>El optimizador de imágenes de Código Millonario te permite ajustar la calidad de salida y elegir el formato de descarga para reducir el peso del archivo. El resultado depende de la imagen original, el formato y el nivel de compresión seleccionado. Una calidad más baja suele generar archivos más pequeños, aunque también puede reducir la nitidez. Puedes probar diferentes ajustes hasta encontrar un equilibrio entre el tamaño del archivo y la calidad visual que necesitas.</p>
-      </div>
-    </details>
+      <!-- Pregunta 6 -->
+      <details class="faq-item">
+        <summary class="faq-question">¿Cómo reducir el peso de una imagen sin perder demasiada calidad?</summary>
+        <div class="faq-answer">
+          <p>El optimizador de imágenes de Código Millonario te permite ajustar la calidad de salida y elegir el formato de descarga para reducir el peso del archivo. El resultado depende de la imagen original, el formato y el nivel de compresión seleccionado. Una calidad más baja suele generar archivos más pequeños, aunque también puede reducir la nitidez. Puedes probar diferentes ajustes hasta encontrar un equilibrio entre el tamaño del archivo y la calidad visual que necesitas.</p>
+        </div>
+      </details>
 
-    <!-- Pregunta 5 -->
-    <details class="faq-item">
-      <summary class="faq-question">¿Es gratis usar este redimensionador de imágenes?</summary>
-      <div class="faq-answer">
-        <p>Sí. La herramienta es gratuita y no requiere registro ni instalación de programas. Puedes redimensionar y descargar imágenes sin marcas de agua, dentro de los límites técnicos establecidos por la herramienta.</p>
-      </div>
-    </details>
+      <!-- Pregunta 7 -->
+      <details class="faq-item">
+        <summary class="faq-question">¿Es gratis usar este redimensionador de imágenes?</summary>
+        <div class="faq-answer">
+          <p>Sí. La herramienta es gratuita y no requiere registro ni instalación de programas. Puedes redimensionar y descargar imágenes sin marcas de agua, dentro de los límites técnicos establecidos por la herramienta.</p>
+        </div>
+      </details>
 
-  </div>
-</section>
+    </div>
+  </section>
 
-
-     <!-- ESPACIO FINAL -->
-<div style="height: 200px;"></div>
-
+  <!-- ESPACIO FINAL -->
+  <div style="height: 200px;"></div>
 
   <!-- Footer Real por JS -->
   <div class="footer-here"></div>
@@ -629,7 +616,9 @@
       const qualityContainer = document.getElementById('qualityContainer');
       
       const platformCards = document.querySelectorAll('.platform-card');
+      const originalCard = document.getElementById('originalCard');
       const customCard = document.getElementById('customCard');
+      const originalDimensionsText = document.getElementById('originalDimensionsText');
 
       const previewImg = document.getElementById('previewImg');
       const originalSizeText = document.getElementById('originalSizeText');
@@ -677,7 +666,7 @@
       // Procesar archivo cargado
       function handleFile(file) {
         if (!file.type.match('image.*')) {
-          alert('Por favor selecciona un archivo de imagen válido (JPG, PNG, WEBP).');
+          alert('Por favor selecciona un archivo de imagen válido (JPG, PNG, WEBP, AVIF).');
           return;
         }
 
@@ -690,7 +679,16 @@
           loadedImage.onload = () => {
             aspectRatio = loadedImage.width / loadedImage.height;
             
-            // Cargar tamaño por defecto según la plataforma activa
+            // Texto descriptivo dimensiones originales
+            if (originalDimensionsText) {
+              originalDimensionsText.textContent = `Original (${loadedImage.width} x ${loadedImage.height} px)`;
+            }
+
+            // Seleccionar "Predeterminado" por defecto al entrar
+            platformCards.forEach(c => c.classList.remove('active'));
+            if (originalCard) originalCard.classList.add('active');
+
+            // Cargar tamaño predeterminado de la imagen cargada
             applyActivePlatformDimensions();
 
             uploadSection.classList.add('hidden');
@@ -703,12 +701,12 @@
         reader.readAsDataURL(file);
       }
 
-      // Aplicar dimensiones de la plataforma/card activa
+      // Aplicar dimensiones de la tarjeta activa
       function applyActivePlatformDimensions() {
         const activeCard = document.querySelector('.platform-card.active');
         if (!activeCard) return;
 
-        if (activeCard.dataset.platform === 'custom') {
+        if (activeCard.dataset.platform === 'original' || activeCard.dataset.platform === 'custom') {
           if (loadedImage) {
             inputWidth.value = loadedImage.width;
             inputHeight.value = loadedImage.height;
@@ -723,13 +721,11 @@
         }
       }
 
-      // Eventos para tarjetas de plataformas y sus selects integrados
+      // Eventos para tarjetas de plataformas y selects integrados
       platformCards.forEach(card => {
         const select = card.querySelector('.preset-select');
 
-        // Hacer clic en la tarjeta la activa
         card.addEventListener('click', (e) => {
-          // Si hace clic directo en el select, el evento change se encargará
           if (e.target.tagName === 'SELECT') return;
 
           platformCards.forEach(c => c.classList.remove('active'));
@@ -739,7 +735,6 @@
           updateCanvasAndPreview();
         });
 
-        // Cambio en el select desplegable
         if (select) {
           select.addEventListener('change', () => {
             platformCards.forEach(c => c.classList.remove('active'));
@@ -805,7 +800,6 @@
         canvas.width = targetW;
         canvas.height = targetH;
 
-        // Limpiar canvas (Soporte fondo blanco para JPG)
         if (format === 'image/jpeg') {
           ctx.fillStyle = '#FFFFFF';
           ctx.fillRect(0, 0, targetW, targetH);
@@ -813,19 +807,15 @@
           ctx.clearRect(0, 0, targetW, targetH);
         }
 
-        // Renderizado con suavizado optimizado
         ctx.imageSmoothingEnabled = true;
         ctx.imageSmoothingQuality = 'high';
         ctx.drawImage(loadedImage, 0, 0, targetW, targetH);
 
-        // Convertir a DataURL para la vista previa y tamaño
         const dataUrl = canvas.toDataURL(format, quality);
         previewImg.src = dataUrl;
 
-        // Detalles visuales
         fileDetails.textContent = `${targetW} x ${targetH} px`;
 
-        // Estimar peso final
         const head = `data:${format};base64,`;
         const sizeInBytes = Math.round((dataUrl.length - head.length) * 3 / 4);
         newSizeText.textContent = formatBytes(sizeInBytes);
@@ -836,7 +826,11 @@
         if (!loadedImage) return;
 
         const format = selectFormat.value;
-        const ext = format === 'image/jpeg' ? 'jpg' : format === 'image/png' ? 'png' : 'webp';
+        let ext = 'jpg';
+        if (format === 'image/png') ext = 'png';
+        if (format === 'image/webp') ext = 'webp';
+        if (format === 'image/avif') ext = 'avif';
+
         const targetW = parseInt(inputWidth.value) || 100;
         const targetH = parseInt(inputHeight.value) || 100;
         
