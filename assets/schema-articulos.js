@@ -108,4 +108,12 @@
   } catch (err) {
     console.error("Error crítico en schema-articulos.js:", err);
   }
+
+  
+  // Inyección automática de Google AdSense
+const adsScript = document.createElement("script");
+adsScript.async = true;
+adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5902891922827698";
+adsScript.crossOrigin = "anonymous";
+document.head.appendChild(adsScript);
 })();
