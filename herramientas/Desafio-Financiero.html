@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Juegos Financieros - Mito o Realidad</title>
+
+<!-- Favicon -->
+<link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
+
+    <!-- Canonical -->
+<link rel="canonical" href="https://codigomillonario.blog/herramientas/Desafio-Financiero.html">
+
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0826LEMPPY');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Plataforma de Juegos Financieros - Mito o Realidad",
+  "url": "https://codigomillonario.blog/herramientas/Desafio-Financiero.html",
+  "description": "Pon a prueba tus conocimientos sobre finanzas, dinero y negocios con juegos financieros interactivos. Distingue entre mitos y realidades y descubre cuánto sabes sobre educación financiera.",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "es",
+  "isAccessibleForFree": true,
+  "browserRequirements": "Se necesita un navegador web compatible con JavaScript.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Código Millonario",
+    "url": "https://codigomillonario.blog/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codigomillonario.blog/assets/img/codigo-millonario-medio-digital.png"
+    }
+  }
+}
+</script>
+
+
+  <!-- Tailwind CSS CDN para estilos rápidos y responsivos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Aislamiento de estilos y animaciones del juego */
+    .cf-game-root {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .cf-serif {
+      font-family: 'Lora', serif;
+    }
+    
+    @keyframes cf-float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
+    }
+    @keyframes cf-glow {
+      0%, 100% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.2); }
+      50% { box-shadow: 0 0 45px rgba(16, 185, 129, 0.5); }
+    }
+    .cf-animate-float {
+      animation: cf-float 4s ease-in-out infinite;
+    }
+    .cf-animate-glow {
+      animation: cf-glow 3s ease-in-out infinite;
+    }
+    
+    /* Transiciones suaves para tarjetas */
+    .cf-card-flip {
+      transition: transform 0.4s ease, opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+  <!-- ENTORNO DEL JUEGO (ENCAPSULADO PARA EVITAR CONFLICTOS CON MENU Y FOOTER) -->
+  <div class="cf-game-root max-w-4xl mx-auto px-4 py-8">
+
+    <!-- CABECERA PRINCIPAL Y NAVEGACIÓN -->
+    <header class="text-center mb-8">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-3">
+        ⚡ Academia de Educación Financiera
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        Desafío <span class="bg-gradient-to-r from-emerald-400 to-teal-200 bg-clip-text text-transparent">Financiero</span>
+      </h1>
+      <p class="text-slate-400 mt-2 text-sm sm:text-base">
+        Aprende a dominar tu dinero, desmonta mitos y consulta al oráculo.
+      </p>
+
+      <!-- BOTONES DE NAVEGACIÓN ENTRE JUEGOS -->
+      <div class="flex justify-center gap-3 mt-6">
+        <button id="cf-tab-myths" class="px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20">
+          🎮 Mito o Realidad
+        </button>
+        <button id="cf-tab-oracle" class="px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700">
+          🔮 Oráculo Financiero
+        </button>
+      </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN 1: JUEGO MITO O REALIDAD           -->
+    <!-- ========================================== -->
+    <section id="cf-section-myths" class="space-y-6">
+      
+      <!-- DASHBOARD DE ESTADÍSTICAS -->
+      <div class="grid grid-cols-3 gap-3 bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-4">
+        <div class="text-center">
+          <span class="text-xs text-slate-400 font-semibold block uppercase">Progreso</span>
+          <span id="cf-stat-progress" class="text-lg sm:text-xl font-black text-emerald-400">1 / 10</span>
+        </div>
+        <div class="text-center border-x border-slate-800">
+          <span class="text-xs text-slate-400 font-semibold block uppercase">Puntaje</span>
+          <span id="cf-stat-score" class="text-lg sm:text-xl font-black text-white">0</span>
+        </div>
+        <div class="text-center">
+          <span class="text-xs text-slate-400 font-semibold block uppercase">Racha 🔥</span>
+          <span id="cf-stat-streak" class="text-lg sm:text-xl font-black text-amber-400">x0</span>
+        </div>
+      </div>
+
+      <!-- BARRA DE TIEMPO -->
+      <div class="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-slate-800">
+        <div id="cf-timer-bar" class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-full transition-all duration-1000 ease-linear"></div>
+      </div>
+
+      <!-- TARJETA PRINCIPAL DEL PREGUNTADO -->
+      <div id="cf-question-card" class="cf-card-flip bg-gradient-to-b from-slate-900 to-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+        <div class="flex justify-between items-center mb-4">
+          <span id="cf-category-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-emerald-400 border border-emerald-500/20">
+            Categoría
+          </span>
+          <span id="cf-timer-text" class="text-xs font-bold text-slate-400">⏱️ 15s</span>
+        </div>
+
+        <!-- AFIRMACIÓN -->
+        <div class="min-h-[120px] flex items-center justify-center text-center my-4">
+          <h2 id="cf-statement" class="text-lg sm:text-2xl font-semibold text-slate-100 leading-relaxed">
+            Cargando afirmación financiera...
+          </h2>
+        </div>
+
+        <!-- BOTONES DE RESPUESTA -->
+        <div id="cf-actions" class="grid grid-cols-2 gap-4 mt-6">
+          <button id="cf-btn-true" onclick="checkAnswer(true)" class="py-4 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-2xl transition-all shadow-lg shadow-emerald-900/30 hover:scale-[1.02] active:scale-[0.98]">
+            VERDADERO
+          </button>
+          <button id="cf-btn-false" onclick="checkAnswer(false)" class="py-4 px-6 bg-rose-600 hover:bg-rose-500 text-white font-bold rounded-2xl transition-all shadow-lg shadow-rose-900/30 hover:scale-[1.02] active:scale-[0.98]">
+            FALSO
+          </button>
+        </div>
+
+        <!-- PANEL DE EXPLICACIÓN (OCULTO INICIALMENTE) -->
+        <div id="cf-explanation-panel" class="hidden mt-6 pt-6 border-t border-slate-800 text-center animate-fadeIn">
+          <div id="cf-result-badge" class="inline-block px-4 py-1.5 rounded-full text-sm font-extrabold mb-3"></div>
+          <p id="cf-explanation-text" class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6"></p>
+          <button onclick="nextQuestion()" class="w-full py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition border border-slate-700">
+            Siguiente Pregunta ➔
+          </button>
+        </div>
+      </div>
+
+      <!-- PANTALLA DE RESULTADOS FINALES -->
+      <div id="cf-results-screen" class="hidden bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center">
+        <div class="text-5xl mb-4">🏆</div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">¡Partida Completada!</h2>
+        <p class="text-slate-400 mb-6 text-sm">Este es el resumen de tu rendimiento financiero:</p>
+        
+        <div class="bg-slate-950/60 rounded-2xl p-6 border border-slate-800 max-w-sm mx-auto mb-6 space-y-3">
+          <div class="flex justify-between text-sm">
+            <span class="text-slate-400">Puntaje Final:</span>
+            <span id="cf-final-score" class="font-bold text-emerald-400">0 pts</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-slate-400">Aciertos:</span>
+            <span id="cf-final-accuracy" class="font-bold text-white">0 / 10</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-slate-400">Mejor Racha:</span>
+            <span id="cf-final-streak" class="font-bold text-amber-400">0</span>
+          </div>
+        </div>
+
+        <button onclick="initQuiz()" class="px-8 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold rounded-2xl shadow-lg shadow-emerald-500/20 transition">
+          🔄 Jugar de Nuevo
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN 2: ORÁCULO DE LA BOLA DE CRISTAL   -->
+    <!-- ========================================== -->
+    <section id="cf-section-oracle" class="hidden space-y-6">
+      <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 text-center relative overflow-hidden">
+        
+        <!-- BOLA DE CRISTAL MEJORADA -->
+        <div class="relative py-6">
+          <div id="cf-crystal-ball" class="cf-animate-float cf-animate-glow w-36 h-36 mx-auto rounded-full bg-gradient-to-br from-emerald-400 via-teal-600 to-slate-900 border-2 border-emerald-300/40 flex items-center justify-center text-5xl shadow-2xl cursor-pointer transition-transform active:scale-95" onclick="consultOracle()">
+            🔮
+          </div>
+        </div>
+
+        <!-- RESPUESTA DEL ORÁCULO CON TIPOGRAFÍA ELEGANTE -->
+        <div class="min-h-[100px] flex items-center justify-center px-4 my-4">
+          <p id="cf-oracle-text" class="cf-serif text-lg sm:text-2xl text-emerald-200 italic font-medium leading-relaxed">
+            "Haz clic en la bola de cristal para recibir un consejo financiero ancestral..."
+          </p>
+        </div>
+
+        <button id="cf-oracle-btn" onclick="consultOracle()" class="px-8 py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold rounded-2xl shadow-lg shadow-emerald-900/40 transition hover:scale-105 active:scale-95">
+          ✨ Recibir Sabiduría Financiera
+        </button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- SCRIPT CON LA LÓGICA Y LAS 200 PREGUNTAS ÚNICAS -->
+  <script>
+    (function() {
+      // 200 PREGUNTAS FINANCIERAS ÚNICAS SIN REPETIR
+      const questionBank = [
+        { statement: "Una tarjeta de crédito representa ingresos adicionales que puedes gastar libremente.", isTrue: false, category: "Crédito", explanation: "Falso. La tarjeta de crédito es un préstamo de corto plazo. Gastar dinero que no tienes genera deudas e intereses." },
+        { statement: "Tener un fondo de emergencia equivale a guardar dinero para imprevistos sin tocar tus inversiones.", isTrue: true, category: "Ahorro", explanation: "Verdadero. Un fondo de emergencia (3 a 6 meses de gastos) te protege de liquidez sin vender activos con pérdidas." },
+        { statement: "Comprar una casa siempre es una inversión garantizada que genera activos netos.", isTrue: false, category: "Bienes Raíces", explanation: "Falso. Una vivienda propia genera gastos constantes (mantenimiento, impuestos, intereses) y no da flujo de caja directo salvo que se rente." },
+        { statement: "La inflación reduce el poder adquisitivo del dinero guardado en efectivo con el paso del tiempo.", isTrue: true, category: "Macroeconomía", explanation: "Verdadero. Si la inflación es del 5% anual, tus ahorros bajo el colchón compran un 5% menos cada año." },
+        { statement: "El interés compuesto calcula ganancias únicamente sobre el capital depositado inicialmente.", isTrue: false, category: "Inversiones", explanation: "Falso. El interés compuesto genera rendimientos sobre el capital inicial MÁS los intereses acumulados previamente." },
+        { statement: "Invertir en un solo activo de alto rendimiento es más seguro que diversificar el portafolio.", isTrue: false, category: "Estrategia", explanation: "Falso. La diversificación reduce el riesgo al no depender del éxito o fracaso de una sola empresa o sector." },
+        { statement: "Pagar primero el saldo mínimo de una tarjeta de crédito evita que se generen intereses.", isTrue: false, category: "Deudas", explanation: "Falso. El pago mínimo solo evita mora o cargos por cobro, pero los intereses se siguen generando sobre el saldo restante." },
+        { statement: "Un activo es todo aquello que pone dinero en tu bolsillo de manera recurrente.", isTrue: true, category: "Finanzas Personales", explanation: "Verdadero. A diferencia de los pasivos que sacan dinero, un activo genera ingresos pasivos o retornos de capital." },
+        { statement: "Pedir prestado para adquirir activos productivos se considera deuda buena.", isTrue: true, category: "Apalancamiento", explanation: "Verdadero. Si el retorno del activo supera el costo del crédito, la deuda genera valor financiero positivo." },
+        { statement: "Para comenzar a invertir es indispensable contar con miles de dólares de capital inicial.", isTrue: false, category: "Mercados", explanation: "Falso. Hoy en día existen plataformas e instrumentos desde montos muy accesibles para empezar a invertir." },
+        { statement: "Las criptomonedas están respaldadas obligatoriamente por los bancos centrales de cada país.", isTrue: false, category: "Criptomonedas", explanation: "Falso. Son activos digitales descentralizados que no dependen de la emisión o control de entidades gubernamentales." },
+        { statement: "El costo de oportunidad representa aquello a lo que renuncias al tomar una decisión financiera.", isTrue: true, category: "Conceptos", explanation: "Verdadero. Cada peso gastado o invertido en una opción significa dejar ir otra alternativa posible." },
+        { statement: "Tener múltiples fuentes de ingreso disminuye la vulnerabilidad financiera ante imprevistos laborales.", isTrue: true, category: "Ingresos", explanation: "Verdadero. Depender de una sola fuente de ingresos pone en riesgo tu estabilidad si esta llega a desaparecer." },
+        { statement: "Un presupuesto base cero significa que cada dólar o peso ingresado tiene un propósito asignado.", isTrue: true, category: "Presupuesto", explanation: "Verdadero. Los ingresos menos los gastos e inversiones deben dar exactamente cero, controlando cada unidad monetaria." },
+        { statement: "Las acciones ordinarias te otorgan el derecho a poseer una fracción de propiedad de una empresa.", isTrue: true, category: "Acciones", explanation: "Verdadero. Al comprar una acción te conviertes en accionista minoritario de dicha compañía." },
+        { statement: "Los bonos del tesoro gubernamental se consideran instrumentos de renta variable de alto riesgo.", isTrue: false, category: "Renta Fija", explanation: "Falso. Son activos de renta fija respaldados por gobiernos, caracterizados por un nivel de riesgo relativamente bajo." },
+        { statement: "El análisis técnico en bolsa estudia los estados financieros y la salud interna de una empresa.", isTrue: false, category: "Trading", explanation: "Falso. El análisis técnico estudia gráficos, tendencias y volúmenes de mercado; los estados financieros corresponden al análisis fundamental." },
+        { statement: "Una acción con un rendimiento de dividendos extremadamente alto siempre es una compra segura.", isTrue: false, category: "Dividendos", explanation: "Falso. Un dividendo muy elevado puede ser reflejo de una caída en el valor de la acción o una trampa de valor." },
+        { statement: "El apalancamiento financiero permite operar con un volumen mayor al capital propio disponible.", isTrue: true, category: "Apalancamiento", explanation: "Verdadero. Utiliza fondos prestados para magnificar ganancias, aunque también incrementa proporcionalmente las pérdidas." },
+        { statement: "La diversificación geográfica protege tu portafolio frente a crisis económicas de un solo país.", isTrue: true, category: "Inversiones", explanation: "Verdadero. Al invertir en distintas regiones del mundo reduces la exposición a riesgos políticos y locales específicos." },
+        { statement: "Un pasivo es aquello que extrae dinero de tu bolsillo de forma constante.", isTrue: true, category: "Finanzas Personales", explanation: "Verdadero. Como deudas, automóviles de uso personal o bienes que generan gastos de mantenimiento continuos." },
+        { statement: "El interés simple calcula rendimientos sobre el principal y los intereses acumulados de periodos pasados.", isTrue: false, category: "Matemática Financiera", explanation: "Falso. El interés simple se calcula únicamente sobre el capital inicial en todos los periodos." },
+        { statement: "La regla del 50/30/20 divide los ingresos en necesidades, deseos y ahorro/inversión.", isTrue: true, category: "Presupuesto", explanation: "Verdadero. Es un método popular de gestión presupuestaria para mantener el equilibrio financiero." },
+        { statement: "Invertir en bienes raíces requiere obligatoriamente comprar propiedades físicas completas.", isTrue: false, category: "Bienes Raíces", explanation: "Falso. Se puede invertir en el sector inmobiliario a través de Fideicomisos de Inversión en Bienes Raíces (REITs) con montos bajos." },
+        { statement: "Un mercado alcista (bull market) se caracteriza por un optimismo generalizado y precios al alza.", isTrue: true, category: "Mercados", explanation: "Verdadero. Representa periodos prolongados donde los precios de los activos financieros suben de manera sostenida." },
+        { statement: "Un mercado bajista (bear market) implica caídas generalizadas de alza en los precios de los activos.", isTrue: false, category: "Mercados", explanation: "Falso/Trampa conceptual. En un mercado bajista los precios caen, no suben." },
+        { statement: "La diversificación elimina por completo el riesgo sistemático o de mercado global.", isTrue: false, category: "Riesgo", explanation: "Falso. Ninguna diversificación puede eliminar el riesgo sistémico global que afecta a toda la economía mundial." },
+        { statement: "El puntaje de crédito influye directamente en las tasas de interés que te ofrecen los bancos.", isTrue: true, category: "Crédito", explanation: "Verdadero. Un excelente historial crediticio demuestra bajo riesgo, permitiendo acceder a préstamos más económicos." },
+        { statement: "Comprar seguros de gastos médicos o de vida es una herramienta válida de gestión de riesgos financieros.", isTrue: true, category: "Seguros", explanation: "Verdadero. Trasladar riesgos catastróficos a una aseguradora protege tu patrimonio ante eventos imprevistos graves." },
+        { statement: "El dinero en efectivo guardado en casa es una inversión excelente para combatir la pérdida de valor adquisitivo.", isTrue: false, category: "Ahorro", explanation: "Falso. Pierde valor adquisitivo constantemente debido a la inflación acumulada." },
+        { statement: "Una hipoteca a tasa fija protege al deudor frente a incrementos futuros en las tasas de interés del mercado.", isTrue: true, category: "Deudas", explanation: "Verdadero. La cuota mensual principal se mantiene estable durante todo el plazo acordado del préstamo." },
+        { statement: "El trading diario (day trading) garantiza ganancias consistentes para cualquier principiante sin experiencia.", isTrue: false, category: "Trading", explanation: "Falso. La gran mayoría de los traders minoristas pierden dinero debido a la alta volatilidad y complejidad técnica." },
+        { statement: "Los fondos indexados replican el comportamiento de un índice bursátil completo como el S&P 500.", isTrue: true, category: "Fondos", explanation: "Verdadero. Permiten diversificar de forma automática comprando una pequeña porción de decenas o cientos de empresas." },
+        { statement: "La volatilidad de un activo financiero mide el grado de variación de su precio a lo largo del tiempo.", isTrue: true, category: "Inversiones", explanation: "Verdadero. A mayor volatilidad, mayores oscilaciones de precio y, por ende, mayor incertidumbre a corto plazo." },
+        { statement: "El análisis fundamental evalúa factores macroeconómicos, balances corporativos y perspectivas del sector.", isTrue: true, category: "Inversiones", explanation: "Verdadero. Busca determinar el valor intrínseco real de una compañía o activo financiero." },
+        { statement: "Las tarjetas de débito permiten gastar dinero prestado por la institución bancaria.", isTrue: false, category: "Banca", explanation: "Falso. La tarjeta de débito utiliza estrictamente los fondos disponibles en tu propia cuenta de cheques o ahorros." },
+        { statement: "Un fondo de inversión de gestión activa supera sistemáticamente al mercado en el 100% de los casos.", isTrue: false, category: "Fondos", explanation: "Falso. Estadísticamente, la mayoría de los fondos activos no logran superar a los índices pasivos a largo plazo tras comisiones." },
+        { statement: "El endeudamiento para consumo personal superfluo se considera una práctica financiera saludable.", isTrue: false, category: "Deudas", explanation: "Falso. Genera pasivos costosos que drenan ingresos futuros sin aportar valor económico o patrimonial." },
+        { statement: "La regla del 72 permite calcular de forma aproximada el tiempo necesario para duplicar una inversión.", isTrue: true, category: "Matemática Financiera", explanation: "Verdadero. Dividiendo 72 entre la tasa de interés anual estimada obtienes el número de años aproximado." },
+        { statement: "Los dividendos distribuidos por una empresa siempre están garantizados mes a mes de por vida.", isTrue: false, category: "Dividendos", explanation: "Falso. Las empresas pueden reducir o suspender el pago de dividendos si atraviesan dificultades financieras." },
+        { statement: "Tener un presupuesto detallado limita tu libertad y reduce tus posibilidades de disfrutar la vida.", isTrue: false, category: "Psicología Financiera", explanation: "Falso. Un presupuesto otorga control absoluto y libertad consciente para gastar en lo que realmente valoras." },
+        { statement: "El costo promedio en dólares (DCA) consiste en invertir una cantidad fija de dinero periódicamente.", isTrue: true, category: "Estrategia", explanation: "Verdadero. Ayuda a mitigar el impacto de la volatilidad comprando más unidades cuando baja el precio y menos cuando sube." },
+        { statement: "La liquidez se refiere a la facilidad con la que un activo puede convertirse en efectivo sin perder valor.", isTrue: true, category: "Finanzas", explanation: "Verdadero. El efectivo es el activo más líquido; un inmueble tiene baja liquidez a corto plazo." },
+        { statement: "Los bonos corporativos con calificación de grado de especulación (junk bonds) ofrecen menor riesgo que los bonos soberanos.", isTrue: false, category: "Renta Fija", explanation: "Falso. Tienen un riesgo de impago considerablemente mayor, por lo que ofrecen tasas de interés más altas para compensar." },
+        { statement: "El emprendimiento y creación de empresas exigen tolerancia al riesgo y planificación financiera rigurosa.", isTrue: true, category: "Negocios", explanation: "Verdadero. La gestión del flujo de caja es el factor determinante para la supervivencia inicial de un negocio." },
+        { statement: "Una burbuja financiera ocurre cuando el precio de los activos supera con creces su valor intrínseco fundamental.", isTrue: true, category: "Mercados", explanation: "Verdadero. Es impulsada por especulación masiva hasta que eventualmente los precios se desploman." },
+        { statement: "El flujo de caja libre de una empresa representa el efectivo disponible tras cubrir gastos operativos e inversiones.", isTrue: true, category: "Empresas", explanation: "Verdadero. Es un indicador clave de la salud financiera y la capacidad de generar valor real para los dueños." },
+        { statement: "Las deudas con tasas de interés elevadas deben ser liquidadas prioritariamente frente a inversiones de bajo rendimiento.", isTrue: true, category: "Deudas", explanation: "Verdadero. Pagar una deuda al 20% de interés equivale a obtener un rendimiento libre de riesgo del 20% al liquidarla." },
+        { statement: "La riqueza real de una persona se mide únicamente por los ingresos brutos mensuales que percibe.", isTrue: false, category: "Patrimonio", explanation: "Falso. Se mide por el patrimonio neto acumulado (activos menos pasivos) y su capacidad de subsistencia sin trabajar." },
+        { statement: "Los seguros de desempleo cubren de inmediato todas tus deudas sin importar las condiciones del contrato.", isTrue: false, category: "Seguros", explanation: "Falso. Tienen cláusulas estrictas, periodos de carencia y montos máximos establecidos en las pólizas." },
+        { statement: "El arbitraje financiero consiste en aprovechar diferencias de precio de un mismo activo en distintos mercados.", isTrue: true, category: "Mercados", explanation: "Verdadero. Permite obtener ganancias comprando barato en un mercado y vendiendo caro simultáneamente en otro." },
+        { statement: "Los fondos cotizados en bolsa (ETFs) se negocian en tiempo real de la misma forma que una acción individual.", isTrue: true, category: "Fondos", explanation: "Verdadero. Combinan la diversificación de un fondo con la flexibilidad operativa de comprar acciones durante la sesión bursátil." },
+        { statement: "La tasa de interés nominal ya incluye de forma directa el ajuste por la inflación acumulada del periodo.", isTrue: false, category: "Macroeconomía", explanation: "Falso. La tasa nominal no considera la inflación; la tasa real es la que descuenta el efecto inflacionario." },
+        { statement: "Un plan de jubilación privado complementario es innecesario si confías plenamente en la pensión estatal pública.", isTrue: false, category: "Retiro", explanation: "Falso. Los sistemas públicos enfrentan desafíos demográficos, por lo que contar con ahorro privado propio es altamente recomendable." },
+        { statement: "El crowdfunding inmobiliario permite participar en proyectos de construcción con aportes de capital reducidos.", isTrue: true, category: "Bienes Raíces", explanation: "Verdadero. Facilita la inversión colectiva fraccionada en proyectos que antes requerían grandes fortunas individuales." },
+        { statement: "Las opciones financieras otorgan la obligación ineludible de comprar un activo a un precio determinado.", isTrue: false, category: "Derivados", explanation: "Falso. Otorgan el derecho, mas no la obligación, de comprar o vender el activo subyacente." },
+        { statement: "Una empresa puede ser rentable en su cuenta de resultados pero quebrar por falta absoluta de flujo de caja.", isTrue: true, category: "Negocios", explanation: "Verdadero. Si los clientes no pagan a tiempo y hay obligaciones inmediatas de efectivo, la insolvencia liquida el negocio." },
+        { statement: "El costo de capital ponderado (WACC) mide el costo medio que paga una empresa para financiar sus operaciones.", isTrue: true, category: "Finanzas Corporativas", explanation: "Verdadero. Combina el costo de la deuda y del capital accionario en proporción a su estructura financiera." },
+        { statement: "Las comisiones de gestión elevadas en fondos de inversión no afectan el rendimiento a largo plazo de tu portafolio.", isTrue: false, category: "Inversiones", explanation: "Falso. Las comisiones altas erosionan significativamente el interés compuesto acumulado a lo largo de las décadas." },
+        { statement: "El dinero fiduciario (como el dólar o el euro) mantiene su valor debido al respaldo en oro físico en bóvedas.", isTrue: false, category: "Macroeconomía", explanation: "Falso. El dinero fiduciario no está respaldado por metales preciosos, sino por la confianza en el emisor y la ley del Estado." },
+        { statement: "El análisis de sensibilidad permite evaluar cómo cambian los resultados financieros ante modificaciones en variables clave.", isTrue: true, category: "Proyecciones", explanation: "Verdadero. Ayuda a medir riesgos frente a escenarios adversos de ventas, costos o tasas de interés." },
+        { statement: "Un inversor en valor (value investing) busca adquirir acciones que cotizan por debajo de su valor intrínseco.", isTrue: true, category: "Estrategia", explanation: "Verdadero. Filosofía popularizada por inversores como Warren Buffett basada en encontrar activos subestimados." },
+        { statement: "El leasing financiero es una alternativa de arrendamiento que permite la opción de compra del bien al final del plazo.", isTrue: true, category: "Financiación", explanation: "Verdadero. Muy utilizado por empresas para adquirir maquinaria o flotas vehiculares de forma escalonada." },
+        { statement: "La diversificación temporal implica realizar todas tus inversiones en un único día del año para optimizar resultados.", isTrue: false, category: "Estrategia", explanation: "Falso. La diversificación temporal se refiere a espaciar las entradas de capital en el tiempo para reducir el riesgo de timing." },
+        { statement: "Los impuestos sobre ganancias de capital se pagan únicamente cuando vendes el activo obteniendo una utilidad.", isTrue: true, category: "Impuestos", explanation: "Verdadero. Las ganancias no realizadas en papel no suelen tributar hasta que se materializa la venta." },
+        { statement: "Una carta de crédito bancaria es un documento que garantiza el pago seguro en operaciones de comercio internacional.", isTrue: true, category: "Comercio", explanation: "Verdadero. Ofrece seguridad tanto al comprador como al vendedor en transacciones transfronterizas complejas." },
+        { statement: "El capital de trabajo neto representa la diferencia entre los activos corrientes y los pasivos corrientes de una empresa.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Mide la capacidad operativa a corto plazo para responder a compromisos financieros inmediatos." },
+        { statement: "Las órdenes de venta stop-loss sirven para limitar automáticamente las pérdidas potenciales en una posición bursátil.", isTrue: true, category: "Trading", explanation: "Verdadero. Venden el activo si su precio cae hasta un nivel preestablecido para evitar daños mayores." },
+        { statement: "El análisis Dupont desglosa la rentabilidad sobre el capital propio (ROE) en tres componentes clave del negocio.", isTrue: true, category: "Finanzas", explanation: "Verdadero. Analiza margen de utilidad, rotación de activos y apalancamiento financiero de forma integrada." },
+        { statement: "Invertir en coleccionables (arte, relojes, autos clásicos) está libre de riesgos de liquidez y de mercado.", isTrue: false, category: "Activos Alternativos", explanation: "Falso. Son altamente ilíquidos y sus valoraciones dependen en gran medida de modas y nichos específicos." },
+        { statement: "El balance general de una empresa muestra su situación financiera en un periodo acumulado de doce meses.", isTrue: false, category: "Contabilidad", explanation: "Falso. El balance general es una fotografía estática de activos, pasivos y patrimonio en una fecha exacta." },
+        { statement: "Un plan de pensiones indexado reduce los costes operativos al no requerir analistas de selección activa de valores.", isTrue: true, category: "Retiro", explanation: "Verdadero. Al igual que los ETFs, replican índices con comisiones mínimas para maximizar el ahorro a largo plazo." },
+        { statement: "El riesgo de contraparte se refiere a la probabilidad de que la otra parte en un contrato financiero incumpla su pago.", isTrue: true, category: "Riesgo", explanation: "Verdadero. Es fundamental evaluarlo en derivados financieros, préstamos entre particulares o instituciones no reguladas." },
+        { statement: "La titulización de activos consiste en transformar préstamos ilíquidos en títulos negociables en el mercado de valores.", isTrue: true, category: "Banca", explanation: "Verdadero. Permite a las entidades financieras liberar capital y diversificar riesgos crediticios." },
+        { statement: "El apalancamiento operativo elevado significa que pequeños cambios en las ventas generan grandes impactos en el beneficio.", isTrue: true, category: "Empresas", explanation: "Verdadero. Ocurre cuando la estructura cuenta con costos fijos altos y costos variables bajos." },
+        { statement: "Las opciones de venta (puts) otorgan el derecho a vender un activo a un precio fijado con anterioridad.", isTrue: true, category: "Derivados", explanation: "Verdadero. Se utilizan frecuentemente para especular a la baja o como cobertura de protección en carteras bursátiles." },
+        { statement: "El ciclo de conversión de efectivo mide el tiempo que tarda una empresa en transformar su inventario en dinero líquido.", isTrue: true, category: "Gestión", explanation: "Verdadero. Cuanto más corto sea este ciclo, mayor eficiencia de capital operativo demostrará la compañía." },
+        { statement: "La banca de inversión se encarga exclusivamente de administrar las chequeras de ahorro de los ciudadanos comunes.", isTrue: false, category: "Banca", explanation: "Falso. La banca de inversión asesora fusiones, adquisiciones, emisiones de bonos y ofertas públicas de venta (OPV)." },
+        { statement: "El rendimiento esperado de un activo financiero se relaciona de forma directamente proporcional al riesgo asumido.", isTrue: true, category: "Inversiones", explanation: "Verdadero. A mayor rentabilidad potencial exigida, mayor es el nivel de riesgo inherente que se debe aceptar." },
+        { statement: "Las acciones preferentes otorgan siempre derecho a voto en las juntas directivas de las corporaciones.", isTrue: false, category: "Acciones", explanation: "Falso. Su principal ventaja es el cobro prioritario de dividendos frente a las ordinarias, pero habitualmente carecen de voto." },
+        { statement: "El ratio de endeudamiento compara el total de pasivos frente al patrimonio neto o los activos totales de la entidad.", isTrue: true, category: "Análisis", explanation: "Verdadero. Permite evaluar el nivel de dependencia de financiación externa ajena." },
+        { statement: "Una OPA (Oferta Pública de Adquisición) ocurre cuando una empresa busca comprar las acciones de otra compañía cotizada.", isTrue: true, category: "Mercados", explanation: "Verdadero. Puede ser de carácter amistoso u hostil dependiendo de la aceptación del consejo directivo objetivo." },
+        { statement: "El dinero electrónico en cuentas bancarias digitales carece de cualquier tipo de regulación o supervisión legal.", isTrue: false, category: "Regulación", explanation: "Falso. Las instituciones financieras digitales operan bajo estrictas normativas y licencias de los reguladores nacionales." },
+        { statement: "El fondo de maniobra positivo indica que los activos corrientes financian adecuadamente las obligaciones a corto plazo.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Aporta seguridad operativa frente a tensiones de liquidez imprevistas." },
+        { statement: "Los fondos de cobertura (hedge funds) están diseñados para inversores minoristas con capitales inferiores a cien dólares.", isTrue: false, category: "Fondos", explanation: "Falso. Están dirigidos a inversores institucionales o acreditados debido a su alta complejidad y requerimientos de capital." },
+        { statement: "El principio de escasez económica fundamenta que los recursos disponibles son limitados frente a necesidades ilimitadas.", isTrue: true, category: "Economía", explanation: "Verdadero. Es el principio básico que da origen a la ciencia económica y a la correcta asignación de presupuestos." },
+        { statement: "Una devaluación de la moneda local encarece automáticamente los productos importados del extranjero.", isTrue: true, category: "Macroeconomía", explanation: "Verdadero. Al perder valor la moneda nacional, se requiere una mayor cantidad de ella para adquirir bienes externos." },
+        { statement: "El test de idoneidad financiera evalúa si un producto de inversión se ajusta al perfil de riesgo del cliente.", isTrue: true, category: "Regulación", explanation: "Verdadero. Es un requisito legal obligatorio para proteger a los inversores minoristas frente a productos inadecuados." },
+        { statement: "Los bonos cupón cero realizan pagos de intereses periódicos trimestrales a la cuenta bancaria del inversor.", isTrue: false, category: "Renta Fija", explanation: "Falso. No reparten cupones periódicos; se emiten con descuento y pagan el valor nominal íntegro al vencimiento." },
+        { statement: "El análisis vertical de un estado financiero expresa cada partida como un porcentaje de una cifra base de referencia.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Permite estudiar la estructura interna de costos y activos de un ejercicio contable." },
+        { statement: "La titulización hipotecaria fue uno de los detonantes estructurales clave de la crisis financiera global de 2008.", isTrue: true, category: "Historia Financiera", explanation: "Verdadero. La proliferación de hipotecas de baja calidad agrupadas en títulos complejos generó un colapso sistémico." },
+        { statement: "El periodo de recuperación de la inversión (Payback) mide el tiempo exacto necesario para recuperar el desembolso inicial.", isTrue: true, category: "Proyectos", explanation: "Verdadero. Indicador sencillo pero útil para medir velocidad de retorno de liquidez, aunque ignora flujos posteriores." },
+        { statement: "Las marcas comerciales registradas y patentes se catalogan contablemente como activos intangibles de una empresa.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Aportan valor económico estratégico fundamental al patrimonio corporativo." },
+        { statement: "El encaje bancario obligatorio limita la cantidad de dinero que los bancos comerciales pueden prestar libremente.", isTrue: true, category: "Banca Central", explanation: "Verdadero. Es un porcentaje de los depósitos que las entidades deben retener en reservas líquidas por mandato legal." },
+        { statement: "Una prima de emisión de acciones representa el sobreprecio pagado por encima del valor nominal al ampliar capital.", isTrue: true, category: "Corporate", explanation: "Verdadero. Evita la dilución injusta del valor de los antiguos accionistas ante nuevas entradas de socios." },
+        { statement: "El mercado interbancario permite a las instituciones financieras prestarse liquidez a muy corto plazo entre sí.", isTrue: true, category: "Banca", explanation: "Verdadero. Es vital para equilibrar las reservas diarias de caja de los diferentes bancos del sistema." },
+        { statement: "La diversificación sectorial protege a una cartera si una industria específica sufre un revés regulatorio o tecnológico.", isTrue: true, category: "Estrategia", explanation: "Verdadero. Evita que la caída de un sector (por ejemplo, tecnología o energía) arruine la totalidad del patrimonio." },
+        { statement: "El flujo de caja de operaciones refleja el efectivo generado exclusivamente por la actividad económica principal del negocio.", isTrue: true, category: "Finanzas", explanation: "Verdadero. Es la métrica más pura para saber si el modelo de negocio comercial es autosostenible por sí mismo." },
+        { statement: "Las acciones de valor (value stocks) suelen cotizar a múltiplos bajos en relación con sus beneficios y dividendos.", isTrue: true, category: "Acciones", explanation: "Verdadero. Suelen pertenecer a industrias maduras y estables con precios considerados atractivos frente a su valor real." },
+        { statement: "El análisis horizontal compara los estados financieros de una empresa a lo largo de varios ejercicios consecutivos.", isTrue: true, category: "Análisis", explanation: "Verdadero. Permite identificar tendencias de crecimiento, estancamiento o retroceso temporal." },
+        { statement: "Una póliza de seguros de responsabilidad civil cubre los daños causados involuntariamente a terceras personas.", isTrue: true, category: "Seguros", explanation: "Verdadero. Protege el patrimonio personal frente a reclamaciones por perjuicios a terceros." },
+        { statement: "El tipo de interés real se calcula restando la tasa de inflación a la tasa de interés nominal de un préstamo o inversión.", isTrue: true, category: "Macroeconomía", explanation: "Verdadero. Refleja el incremento real del poder adquisitivo o costo efectivo descontando la subida de precios." },
+        { statement: "Las opciones de compra (calls) otorgan el derecho a comprar un activo subyacente a un precio fijado de antemano.", isTrue: true, category: "Derivados", explanation: "Verdadero. Instrumento financiero derivado muy utilizado en estrategias avanzadas de especulación alcista y cobertura." },
+        { statement: "El fondo de comercio (goodwill) surge cuando una empresa adquiere otra pagando un precio superior a su valor contable neto.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Representa valor intangible asociado a reputación, cartera de clientes, marca o sinergias estratégicas." },
+        { statement: "La tasa libre de riesgo se toma habitualmente como referencia usando bonos estatales de países con máxima solvencia.", isTrue: true, category: "Inversiones", explanation: "Verdadero. Sirve como base mínima para calcular la rentabilidad requerida ajustada por riesgo en cualquier proyecto." },
+        { statement: "El autofinanciamiento empresarial utiliza los beneficios retenidos y las reservas propias para crecer sin endeudarse.", isTrue: true, category: "Negocios", explanation: "Verdadero. Aporta autonomía financiera al no depender de créditos bancarios o ampliaciones externas." },
+        { statement: "Las letras del tesoro a corto plazo suelen emitirse con plazos inferiores a los doce meses de duración.", isTrue: true, category: "Renta Fija", explanation: "Verdadero. Son instrumentos de deuda pública altamente líquidos orientados a la gestión temporal de tesorería." },
+        { statement: "El apalancamiento financiero negativo destruye valor cuando el coste de la deuda supera la rentabilidad de los activos.", isTrue: true, category: "Finanzas", explanation: "Verdadero. Multiplica las pérdidas y acelera la insolvencia si el rendimiento obtenido es inferior al interés pagado." },
+        { statement: "Un test de estrés financiero simula escenarios macroeconómicos extremos para evaluar la resistencia de una entidad.", isTrue: true, category: "Gestión de Riesgo", explanation: "Verdadero. Utilizado por bancos y grandes corporaciones para prevenir quiebras ante crisis sistémicas." },
+        { statement: "La amortización contable de un activo fijo refleja la pérdida de valor experimentada por el uso y el paso del tiempo.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Distribuye el costo de adquisición del bien a lo largo de su vida útil estimada en los libros fiscales." },
+        { statement: "Los fondos cotizados apalancados replican de forma lineal y sin riesgo adicional el índice bursátil subyacente diario.", isTrue: false, category: "Fondos", explanation: "Falso. Utilizan derivados complejos para multiplicar movimientos diarios, acumulando desgaste temporal por volatilidad." },
+        { statement: "El cuadro de mando integral (Balanced Scorecard) combina métricas financieras con indicadores operativos estratégicos.", isTrue: true, category: "Gestión", explanation: "Verdadero. Permite a la gerencia supervisar el rendimiento global de la compañía de forma equilibrada." },
+        { statement: "Las cláusulas suelo en hipotecas de tasa variable garantizaban un tipo mínimo de interés a favor exclusivo de los bancos.", isTrue: true, category: "Banca", explanation: "Verdadero. Evitaban que la bajada de tipos de referencia redujera la cuota por debajo de un umbral determinado." },
+        { statement: "El valor temporal del dinero postula que un dólar recibido hoy vale más que el mismo dólar recibido en el futuro.", isTrue: true, category: "Finanzas", explanation: "Verdadero. Debido a su potencial capacidad de generar intereses y al efecto corrosivo de la inflación." },
+        { statement: "Las acciones de crecimiento (growth stocks) destacan por repartir dividendos masivos en lugar de reinvertir utilidades.", isTrue: false, category: "Acciones", explanation: "Falso. Suelen retener beneficios para invertirlos en expansión acelerada, ofreciendo dividendos bajos o nulos." },
+        { statement: "Un trust o fideicomiso de gestión patrimonial permite proteger activos legales y planificar sucesiones hereditarias.", isTrue: true, category: "Legal", explanation: "Verdadero. Facilita la administración de bienes bajo condiciones específicas establecidas por el fideicomitente." },
+        { statement: "La prima de riesgo de un país mide el sobreprecio que debe pagar su deuda soberana frente a economías de referencia.", isTrue: true, category: "Macroeconomía", explanation: "Verdadero. Refleja la percepción de inestabilidad política, fiscal o económica de dicha nación." },
+        { statement: "El cash flow operativo negativo sostenido durante varios años es un indicador de alerta temprana de quiebra empresarial.", isTrue: true, category: "Empresas", explanation: "Verdadero. Señala que el negocio consume más efectivo del que genera mediante sus operaciones cotidianas." },
+        { statement: "Los contratos de futuros financieros obligan a comprar o vender un activo en una fecha y precio acordados de antemano.", isTrue: true, category: "Derivados", explanation: "Verdadero. A diferencia de las opciones, los futuros representan un compromiso ineludible de ejecución al vencimiento." },
+        { statement: "La diversificación por clases de activos combina renta variable, renta fija, efectivo y bienes raíces en un portafolio.", isTrue: true, category: "Inversiones", explanation: "Verdadero. Es el pilar fundamental para optimizar la relación riesgo-rentabilidad a largo plazo." },
+        { statement: "El análisis de punto de equilibrio calcula el volumen de ventas necesario para cubrir la totalidad de costos fijos y variables.", isTrue: true, category: "Negocios", explanation: "Verdadero. A partir de ese punto exacto, la empresa comienza a generar beneficios netos positivos." },
+        { statement: "Las acciones fraccionadas permiten adquirir porciones inferiores a una acción completa de empresas de alto valor bursátil.", isTrue: true, category: "Mercados", explanation: "Verdadero. Facilitan la diversificación a pequeños inversores sin requerir el precio total de una acción entera." },
+        { statement: "El coeficiente Beta mide la volatilidad histórica de una acción en comparación con el mercado general en su conjunto.", isTrue: true, category: "Inversiones", explanation: "Verdadero. Un Beta superior a 1 indica mayor volatilidad que el índice de referencia; inferior a 1, menor volatilidad." },
+        { statement: "Un holding empresarial es una sociedad matriz que posee el control accionario de diversas compañías subsidiarias.", isTrue: true, category: "Corporate", explanation: "Verdadero. Permite centralizar la estrategia corporativa y optimizar la gestión fiscal de distintos negocios." },
+        { statement: "La refinanciación de deudas con tipos más bajos siempre reduce los costos totales sin importar las comisiones asociadas.", isTrue: false, category: "Deudas", explanation: "Falso. Se deben ponderar comisiones de cancelación anticipada, gastos notariales y nuevos plazos antes de concluir." },
+        { statement: "El ratio de cobertura de intereses mide la capacidad de una empresa para pagar los intereses de su deuda acumulada.", isTrue: true, category: "Finanzas", explanation: "Verdadero. Se calcula dividiendo las ganancias operativas (EBIT) entre los gastos financieros por intereses." },
+        { statement: "Las cuentas de ahorro de alto rendimiento ofrecen rentabilidades superiores vinculadas a tipos de interés oficiales de bancos.", isTrue: true, category: "Ahorro", explanation: "Verdadero. Permiten mantener liquidez protegida obteniendo un retorno superior frente a cuentas bancarias tradicionales." },
+        { statement: "El trading algorítmico ejecuta operaciones bursátiles automatizadas mediante complejos modelos matemáticos y de software.", isTrue: true, category: "Mercados", explanation: "Verdadero. Representa gran parte del volumen operado en los mercados financieros modernos a escala global." },
+        { statement: "Un plan de compensación basado en opciones sobre acciones alinea los intereses directivos con los de los accionistas.", isTrue: true, category: "Corporate", explanation: "Verdadero. Incentiva a la gerencia a incrementar el valor bursátil de la compañía a largo plazo." },
+        { statement: "El blanqueo de capitales utiliza circuitos financieros complejos para dar apariencia de legalidad a dinero de origen ilícito.", isTrue: true, category: "Regulación", explanation: "Verdadero. Los sistemas financieros globales aplican estrictas normativas antilavado (KYC y AML) para combatirlo." },
+        { statement: "La rentabilidad por dividendo se obtiene dividiendo el dividendo anual por acción entre el precio actual de cotización.", isTrue: true, category: "Dividendos", explanation: "Verdadero. Es una métrica porcentual estándar para evaluar el retorno directo por distribución de beneficios." },
+        { statement: "Un fondo monetario invierte en activos de deuda a muy corto plazo y bajísimo riesgo, buscando estabilidad de capital.", isTrue: true, category: "Fondos", explanation: "Verdadero. Son considerados refugios temporales de liquidez con rentabilidades modestas pero estables." },
+        { statement: "La contabilidad de caja registra los ingresos y gastos en el momento exacto en que el dinero físico entra o sale.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Difiere de la contabilidad de acumulación, que registra las operaciones al devengarse independientemente del pago." },
+        { statement: "El factoring permite a una empresa ceder sus facturas pendientes de cobro a un tercero para obtener liquidez inmediata.", isTrue: true, category: "Financiación", explanation: "Verdadero. Ayuda a superar tensiones de caja a cambio de una comisión o descuento financiero aplicado." },
+        { statement: "Las calificaciones crediticias emitidas por agencias evalúan la probabilidad estimada de impago de una emisión de deuda.", isTrue: true, category: "Riesgo", explanation: "Verdadero. Escalas como AAA, BBB o CCC orientan a los inversores sobre el nivel de seguridad del bono." },
+        { statement: "Una amortización anticipada parcial de una hipoteca permite reducir opcionalmente la cuota mensual o el plazo restante.", isTrue: true, category: "Deudas", explanation: "Verdadero. Disminuye significativamente el pago total de intereses acumulados a lo largo de la vida del crédito." },
+        { statement: "El índice de Sharpe evalúa el exceso de rentabilidad obtenido por unidad de riesgo total asumido en una inversión.", isTrue: true, category: "Inversiones", explanation: "Verdadero. Es un indicador clave para comparar la eficiencia de diferentes carteras o gestores financieros." },
+        { statement: "Los bonos verdes financian exclusivamente proyectos con impacto ambiental positivo y certificado sostenible.", isTrue: true, category: "Inversión Sostenible", explanation: "Verdadero. Su demanda ha crecido notablemente en el mercado de renta fija impulsada por criterios ESG." },
+        { statement: "Una ampliación de pago de dividendos en acciones (stock dividend) entrega títulos adicionales en lugar de efectivo.", isTrue: true, category: "Acciones", explanation: "Verdadero. Incrementa el número de acciones en circulación manteniendo proporcionalmente el valor global de la participación." },
+        { statement: "El riesgo de liquidez surge cuando no puedes vender un activo rápidamente sin incurrir en un descuento drástico de precio.", isTrue: true, category: "Riesgo", explanation: "Verdadero. Afecta especialmente a bienes raíces, obras de arte o acciones de baja capitalización bursátil." },
+        { statement: "El presupuesto de capital evalúa y selecciona inversiones a largo plazo en proyectos de expansión de una empresa.", isTrue: true, category: "Finanzas Corporativas", explanation: "Verdadero. Utiliza métricas como el Valor Actual Neto (VAN) y la Tasa Interna de Retorno (TIR)." },
+        { statement: "La ley de Gresham postula que el dinero malo tiende a expulsar de la circulación al dinero bueno.", isTrue: true, category: "Economía", explanation: "Verdadero. Fenómeno histórico monetario donde las monedas con menor contenido de metal noble desplazan a las valiosas." },
+        { statement: "Un fondo cotizado inverso (inverse ETF) está diseñado para obtener ganancias cuando el índice subyacente cae de valor.", isTrue: true, category: "Fondos", explanation: "Verdadero. Utiliza derivados complejos para apostar bajistamente de forma bursátil directa." },
+        { statement: "La contabilidad creativa utiliza resquicios legales normativos para presentar una imagen financiera más favorable.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Aunque suele rozar los límites éticos, busca optimizar la apariencia de los estados financieros sin violar leyes." },
+        { statement: "El arbitraje regulatorio aprovecha vacíos legales entre distintas jurisdicciones para minimizar cargas fiscales u obligaciones.", isTrue: true, category: "Finanzas", explanation: "Verdadero. Muy utilizado por corporaciones multinacionales para optimizar su estructura impositiva global." },
+        { statement: "Los seguros de amortización de préstamos garantizan la liquidación de la deuda pendiente en caso de fallecimiento.", isTrue: true, category: "Seguros", explanation: "Verdadero. Protege a los herederos y al titular frente a la ejecución de obligaciones crediticias graves." },
+        { statement: "El flujo de caja de financiación detalla los movimientos de efectivo relacionados con préstamos, emisión de acciones y dividendos.", isTrue: true, category: "Finanzas", explanation: "Verdadero. Completa el estado de flujos de efectivo junto con las actividades operativas y de inversión." },
+        { statement: "Las opciones exóticas poseen estructuras de pago y condiciones de ejercicio mucho más complejas que las opciones estándar.", isTrue: true, category: "Derivados", explanation: "Verdadero. Se negocian habitualmente en mercados extrabursátiles (OTC) entre instituciones financieras avanzadas." },
+        { statement: "El análisis de escenarios contrasta múltiples variables simultáneas para prever el impacto en la viabilidad de un negocio.", isTrue: true, category: "Planificación", explanation: "Verdadero. Permite diseñar planes de contingencia frente a entornos económicos volátiles o cambiantes." },
+        { statement: "La desintermediación financiera ocurre cuando los ahorradores e inversores interactúan directamente sin bancos mediadores.", isTrue: true, category: "Banca", explanation: "Verdadero. Impulsada fuertemente por plataformas fintech, plataformas P2P y tecnologías descentralizadas." },
+        { statement: "Un pagaré corporativo es un título de deuda a corto plazo emitido por una empresa para financiarse directamente.", isTrue: true, category: "Renta Fija", explanation: "Verdadero. Permite a grandes compañías obtener liquidez de inversores institucionales sin pasar por créditos bancarios." },
+        { statement: "El ratio de liquidez ácida (prueba del ácido) excluye los inventarios al medir la capacidad de pago a corto plazo.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Es un indicador de solvencia inmediata más exigente que el ratio corriente general." },
+        { statement: "Las acciones de recuperación (turnaround stocks) pertenecen a empresas en crisis que buscan reestructurar su modelo de negocio.", isTrue: true, category: "Inversiones", explanation: "Verdadero. Ofrecen un perfil especulativo de alto riesgo con potenciales retornos elevados si la reestructuración triunfa." },
+        { statement: "El impuesto sobre la renta corporativa grava los beneficios netos obtenidos por las sociedades mercantiles en un ejercicio.", isTrue: true, category: "Impuestos", explanation: "Verdadero. Es un tributo directo fundamental en las estructuras fiscales de la gran mayoría de países." },
+        { statement: "El coste de agencia surge por los posibles conflictos de intereses entre los accionistas de una empresa y sus directivos.", isTrue: true, category: "Corporate", explanation: "Verdadero. Requiere mecanismos de control y gobernanza corporativa para alinear metas comunes." },
+        { statement: "Una cuenta mancomunada o conjunta permite que varios titulares operen y dispongan de los fondos depositados.", isTrue: true, category: "Banca", explanation: "Verdadero. Requiere la definición previa de firmas solidarias o conjuntas para ejecutar transacciones." },
+        { statement: "El apalancamiento financiero óptimo maximiza el valor de la empresa minimizando su costo de capital ponderado.", isTrue: true, category: "Finanzas Corporativas", explanation: "Verdadero. Encuentra el equilibrio perfecto entre los beneficios fiscales de la deuda y el riesgo de insolvencia." },
+        { statement: "Los derivados financieros son instrumentos cuyo valor principal depende de la evolución de otro activo subyacente.", isTrue: true, category: "Derivados", explanation: "Verdadero. Incluyen futuros, opciones, swaps y contratos a término en los mercados globales." },
+        { statement: "El riesgo sistemático afecta exclusivamente a una empresa en particular debido a malas decisiones gerenciales internas.", isTrue: false, category: "Riesgo", explanation: "Falso. Ese es el riesgo no sistemático o específico; el riesgo sistemático afecta a todo el mercado en su conjunto." },
+        { statement: "Una OPI (Oferta Pública Inicial) representa el momento en que una empresa privada cotiza sus acciones en bolsa por primera vez.", isTrue: true, category: "Mercados", explanation: "Verdadero. Permite captar capital masivo del público general a cambio de abrir la propiedad accionaria." },
+        { statement: "El fondo de reserva legal de una sociedad anónima se nutre obligatoriamente de un porcentaje de los beneficios netos.", isTrue: true, category: "Legal", explanation: "Verdadero. Actúa como colchón protector frente a futuras pérdidas contables según la legislación mercantil." },
+        { statement: "Las plusvalías latentes corresponden a ganancias de valor en activos que aún no han sido vendidos en el mercado.", isTrue: true, category: "Inversiones", explanation: "Verdadero. Representan beneficios en papel que solo se materializan fiscal y financieramente al cerrar la posición." },
+        { statement: "El tipo de cambio flotante se determina libremente por la oferta y la demanda de divisas en el mercado internacional.", isTrue: true, category: "Macroeconomía", explanation: "Verdadero. A diferencia de los tipos de cambio fijos controlados mediante intervención directa de los bancos centrales." },
+        { statement: "Los seguros de caución garantizan el cumplimiento de obligaciones contractuales contraídas por una empresa ante un cliente.", isTrue: true, category: "Seguros", explanation: "Verdadero. Muy utilizados en licitaciones públicas y contratos de obra civil de gran envergadura." },
+        { statement: "El análisis fundamental técnico descarta por completo el estudio de balances para operar exclusivamente con medias móviles.", isTrue: false, category: "Trading", explanation: "Falso. El análisis técnico descarta los balances; el análisis fundamental es el que los estudia intensamente." },
+        { statement: "Una reestructuración de deuda busca modificar plazos, intereses o quitas para evitar la quiebra de un deudor insolvente.", isTrue: true, category: "Deudas", explanation: "Verdadero. Es un proceso de negociación indispensable entre acreedores y entidades en apuros financieros." },
+        { statement: "El multiplicador de capital mide cuántos activos totales respalda cada dólar o unidad de patrimonio neto aportado.", isTrue: true, category: "Finanzas", explanation: "Verdadero. Es un componente esencial dentro de la descomposición del modelo de análisis Dupont." },
+        { statement: "Los fondos de inversión solidarios destinan parte de sus comisiones o rendimientos a proyectos de carácter social o benéfico.", isTrue: true, category: "Fondos", explanation: "Verdadero. Combinan la rentabilidad financiera con la responsabilidad filantrópica e impacto comunitario." },
+        { statement: "El principio de prudencia contable obliga a registrar los beneficios solo cuando se realizan y las pérdidas al conocerse.", isTrue: true, category: "Contabilidad", explanation: "Verdadero. Es una norma fundamental de rigor para evitar sobrevalorar la realidad patrimonial de las empresas." },
+        { statement: "Una línea de crédito revolvente permite disponer y reponer fondos de forma flexible hasta un límite máximo autorizado.", isTrue: true, category: "Banca", explanation: "Verdadero. Aporta gran agilidad operativa para gestionar necesidades fluctuantes de capital de trabajo empresarial." }
+      ];
+
+      const oracleAnswers = [
+        "Ahorra con consistencia, pequeño saltamontes financiero.",
+        "No gastes hoy lo que tu yo del futuro agradecería tener.",
+        "Tu libertad financiera depende de tu disciplina diaria.",
+        "Si no entiendes en qué inviertes, mejor conserva tu dinero.",
+        "La paciencia y el tiempo son los activos más rentables del inversor.",
+        "Evita las cuotas eternas si buscas verdadera libertad.",
+        "Cada compra debe responder a un plan claro, no a un impulso pasajero.",
+        "El dinero dormido bajo el colchón pierde su valor por la inflación.",
+        "Gastar con conciencia es un superpoder que muy pocos practican.",
+        "No pongas todos tus huevos en la misma canasta de inversión."
+      ];
+
+      // ESTADOS Y VARIABLES DEL JUEGO
+      let currentQuestions = [];
+      let currentIndex = 0;
+      let score = 0;
+      let streak = 0;
+      let maxStreak = 0;
+      let correctAnswersCount = 0;
+      let timer = null;
+      let timeLeft = 15;
+      const TOTAL_QUESTIONS = 10;
+
+      // DOM Elements
+      const sectionMyths = document.getElementById("cf-section-myths");
+      const sectionOracle = document.getElementById("cf-section-oracle");
+      const tabMyths = document.getElementById("cf-tab-myths");
+      const tabOracle = document.getElementById("cf-tab-oracle");
+
+      const statProgress = document.getElementById("cf-stat-progress");
+      const statScore = document.getElementById("cf-stat-score");
+      const statStreak = document.getElementById("cf-stat-streak");
+      const timerBar = document.getElementById("cf-timer-bar");
+      const timerText = document.getElementById("cf-timer-text");
+
+      const questionCard = document.getElementById("cf-question-card");
+      const resultsScreen = document.getElementById("cf-results-screen");
+      const categoryBadge = document.getElementById("cf-category-badge");
+      const statementEl = document.getElementById("cf-statement");
+      const actionsEl = document.getElementById("cf-actions");
+      const explanationPanel = document.getElementById("cf-explanation-panel");
+      const resultBadge = document.getElementById("cf-result-badge");
+      const explanationText = document.getElementById("cf-explanation-text");
+
+      // NAVEGACIÓN ENTRE PESTAÑAS
+      tabMyths.addEventListener("click", () => {
+        sectionMyths.classList.remove("hidden");
+        sectionOracle.classList.add("hidden");
+        tabMyths.className = "px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20";
+        tabOracle.className = "px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700";
+      });
+
+      tabOracle.addEventListener("click", () => {
+        sectionOracle.classList.remove("hidden");
+        sectionMyths.classList.add("hidden");
+        tabOracle.className = "px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20";
+        tabMyths.className = "px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700";
+      });
+
+      // LÓGICA DEL JUEGO
+      function shuffleArray(arr) {
+        return [...arr].sort(() => Math.random() - 0.5);
+      }
+
+      window.initQuiz = function() {
+        currentQuestions = shuffleArray(questionBank).slice(0, TOTAL_QUESTIONS);
+        currentIndex = 0;
+        score = 0;
+        streak = 0;
+        maxStreak = 0;
+        correctAnswersCount = 0;
+
+        questionCard.classList.remove("hidden");
+        resultsScreen.classList.add("hidden");
+
+        updateStats();
+        loadQuestion();
+      };
+
+      function updateStats() {
+        statProgress.textContent = `${currentIndex + 1} / ${TOTAL_QUESTIONS}`;
+        statScore.textContent = score;
+        statStreak.textContent = `x${streak}`;
+      }
+
+      function startTimer() {
+        clearInterval(timer);
+        timeLeft = 15;
+        timerText.textContent = `⏱️ ${timeLeft}s`;
+        timerBar.style.width = "100%";
+
+        timer = setInterval(() => {
+          timeLeft--;
+          timerText.textContent = `⏱️ ${timeLeft}s`;
+          timerBar.style.width = `${(timeLeft / 15) * 100}%`;
+
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            window.checkAnswer(null);
+          }
+        }, 1000);
+      }
+
+      function loadQuestion() {
+        explanationPanel.classList.add("hidden");
+        actionsEl.classList.remove("hidden");
+
+        const q = currentQuestions[currentIndex];
+        categoryBadge.textContent = q.category;
+        statementEl.textContent = q.statement;
+
+        updateStats();
+        startTimer();
+      }
+
+      window.checkAnswer = function(userChoice) {
+        clearInterval(timer);
+        const q = currentQuestions[currentIndex];
+        const isCorrect = (userChoice === q.isTrue);
+
+        actionsEl.classList.add("hidden");
+        explanationPanel.classList.remove("hidden");
+
+        if (isCorrect) {
+          streak++;
+          if (streak > maxStreak) maxStreak = streak;
+          const pointsGained = 100 + (streak * 20);
+          score += pointsGained;
+          correctAnswersCount++;
+
+          resultBadge.textContent = "¡CORRECTO! 🎉";
+          resultBadge.className = "inline-block px-4 py-1.5 rounded-full text-sm font-extrabold mb-3 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40";
+        } else {
+          streak = 0;
+          resultBadge.textContent = userChoice === null ? "¡TIEMPO AGOTADO! ⏰" : "INCORRECTO ❌";
+          resultBadge.className = "inline-block px-4 py-1.5 rounded-full text-sm font-extrabold mb-3 bg-rose-500/20 text-rose-400 border border-rose-500/40";
+        }
+
+        explanationText.textContent = q.explanation;
+        updateStats();
+      };
+
+      window.nextQuestion = function() {
+        currentIndex++;
+        if (currentIndex < TOTAL_QUESTIONS) {
+          loadQuestion();
+        } else {
+          showFinalResults();
+        }
+      };
+
+      function showFinalResults() {
+        questionCard.classList.add("hidden");
+        resultsScreen.classList.remove("hidden");
+
+        document.getElementById("cf-final-score").textContent = `${score} pts`;
+        document.getElementById("cf-final-accuracy").textContent = `${correctAnswersCount} / ${TOTAL_QUESTIONS}`;
+        document.getElementById("cf-final-streak").textContent = `x${maxStreak}`;
+      }
+
+      // ORÁCULO
+      window.consultOracle = function() {
+        const oracleText = document.getElementById("cf-oracle-text");
+        const crystalBall = document.getElementById("cf-crystal-ball");
+
+        crystalBall.classList.add("scale-110");
+        setTimeout(() => crystalBall.classList.remove("scale-110"), 300);
+
+        const randomWisdom = oracleAnswers[Math.floor(Math.random() * oracleAnswers.length)];
+
+        oracleText.textContent = "";
+        let i = 0;
+        const speed = 30;
+
+        function type() {
+          if (i < randomWisdom.length) {
+            oracleText.textContent += randomWisdom.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          }
+        }
+        type();
+      };
+
+      initQuiz();
+    })();
+  </script>
+
+  <!-- INTEGRACIÓN CON TU MENÚ Y FOOTER EXTERNOS -->
+  <div class="footer-here"></div>
+  <script src="https://codigomillonario.blog/assets/footer.js"></script>
+  <script src="../assets/menu.js"></script>
+
+</body>
+</html>

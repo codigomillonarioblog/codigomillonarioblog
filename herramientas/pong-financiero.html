@@ -3,8 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pong Financiero: Juego de Educación Financiera | Código Millonario</title>
     <meta name="description" content="Juega al Pong Financiero de Código Millonario, una versión del clásico videojuego para divertirte mientras exploras los juegos y herramientas de educación financiera.">
+
+<!-- Favicon -->
+<link rel="icon" href="../assets/img/codigo-millonario-medio-digital.png" type="image/png">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://codigomillonario.blog/herramientas/pong-financiero.html">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0826LEMPPY');
+    </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Pong Financiero: Juego de Educación Financiera | Código Millonario",
+  "url": "https://codigomillonario.blog/herramientas/pong-financiero.html",
+  "description": "Juega al Pong Financiero de Código Millonario, una versión del clásico videojuego para divertirte mientras exploras los juegos y herramientas de educación financiera.",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "es",
+  "isAccessibleForFree": true,
+  "browserRequirements": "Se necesita un navegador web compatible con JavaScript.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Código Millonario",
+    "url": "https://codigomillonario.blog/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codigomillonario.blog/assets/img/codigo-millonario-medio-digital.png"
+    }
+  }
+}
+</script>
+
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -115,7 +156,14 @@
                     </div>
                 </div>
 
-
+                <div class="flex justify-between w-full max-w-[500px] mt-4 gap-4 sm:hidden">
+                    <button ontouchstart="moveLeft(true)" ontouchend="moveLeft(false)" onmousedown="moveLeft(true)" onmouseup="moveLeft(false)" class="flex-1 py-3 bg-gray-800 active:bg-amber-500 active:text-gray-950 text-white rounded-xl font-bold border border-gray-700 select-none">
+                        ◀ Izquierda
+                    </button>
+                    <button ontouchstart="moveRight(true)" ontouchend="moveRight(false)" onmousedown="moveRight(true)" onmouseup="moveRight(false)" class="flex-1 py-3 bg-gray-800 active:bg-amber-500 active:text-gray-950 text-white rounded-xl font-bold border border-gray-700 select-none">
+                        Derecha ▶
+                    </button>
+                </div>
             </div>
 
             <div id="gameover-screen" class="hidden flex flex-col items-center justify-center py-10 text-center space-y-4">
