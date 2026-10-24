@@ -45,36 +45,41 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5902891922827698"
      crossorigin="anonymous"></script>
 
- <!-- AQUÍ PEGAS EL CÓDIGO DE LA PORTADA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "NewsMediaOrganization",
-        "@id": "https://codigomillonario.blog/#organization",
-        "name": "Código Millonario",
-        "url": "https://codigomillonario.blog/",
-        "logo": "https://codigomillonario.blog/assets/img/codigo-millonario-medio-digital.png",
-        "sameAs": [
-          "https://www.instagram.com/codigomillonarioblog",
-          "https://www.tiktok.com/@codigomillonarioblog",
-          "https://x.com/codigomillonarioblog"
-        ],
-        "publishingPrinciples": "https://codigomillonario.blog/"
+
+<!-- IDENTIFICACION ANTE GOOGLE -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://codigomillonario.blog/#organization",
+      "name": "Código Millonario",
+      "url": "https://codigomillonario.blog/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://codigomillonario.blog/assets/img/codigo-millonario-medio-digital.png"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://codigomillonario.blog/#website",
-        "url": "https://codigomillonario.blog/",
-        "name": "Código Millonario",
-        "publisher": {
-          "@id": "https://codigomillonario.blog/#organization"
-        }
-      }
-    ]
-  }
-  </script>
+      "sameAs": [
+        "https://www.instagram.com/codigomillonarioblog",
+        "https://www.tiktok.com/@codigomillonarioblog",
+        "https://x.com/codigomillonarioblog"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://codigomillonario.blog/#website",
+      "url": "https://codigomillonario.blog/",
+      "name": "Código Millonario",
+      "description": "Medio digital especializado en educación financiera, construcción de patrimonio y negocios.",
+      "publisher": {
+        "@id": "https://codigomillonario.blog/#organization"
+      },
+      "inLanguage": "es"
+    }
+  ]
+}
+</script>
 
 </head>
 
