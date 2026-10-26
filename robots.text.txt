@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# Dirección del mapa del sitio
-Sitemap: https://codigomillonario.blog/sitemap.xml
