@@ -41,8 +41,8 @@
       tipo = "article";
     }
 
-    const organizacion = {
-      "@type": "Organization",
+const organizacion = {
+      "@type": "NewsMediaOrganization",
       "@id": MEDIO.url + "#organization",
       "name": MEDIO.nombre,
       "url": MEDIO.url,
@@ -50,7 +50,10 @@
         "@type": "ImageObject",
         "url": MEDIO.logo
       },
-      "sameAs": MEDIO.redes
+      "sameAs": MEDIO.redes,
+      "publishingPrinciples": MEDIO.url,
+      "correctionsPolicy": MEDIO.url,
+      "description": "Medio digital especializado en educación financiera, psicología del dinero y construcción de patrimonio a largo plazo."
     };
 
     const website = {
