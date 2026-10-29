@@ -1758,7 +1758,7 @@ img {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.7rem, 2.5vw, 2.3rem);
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 400; /* <--- Cambiado de 700 a 400 para que se vea delgado y clásico */
   color: #111;
   margin: 0 0 6px 0;
   letter-spacing: -0.5px;
@@ -1995,7 +1995,7 @@ img {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.7rem, 2.5vw, 2.3rem);
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 400; /* <--- Cambiado de 700 a 400 para que se vea delgado y clásico */
   color: #111;
   margin: 0 0 6px 0;
   letter-spacing: -0.5px;
@@ -2307,7 +2307,7 @@ img {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.7rem, 2.5vw, 2.3rem);
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 400; /* <--- Cambiado de 700 a 400 para que se vea delgado y clásico */
   color: #111;
   margin: 0 0 6px 0;
   letter-spacing: -0.5px;
@@ -2625,7 +2625,7 @@ img {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.7rem, 2.5vw, 2.3rem);
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 400; /* <--- Cambiado de 700 a 400 para que se vea delgado y clásico */
   color: #111;
   margin: 0 0 8px 0;
   letter-spacing: -0.5px;
