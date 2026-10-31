@@ -189,11 +189,16 @@ Estos son 8 pasos prácticos que pueden ayudarte a romper patrones financieros n
 
 
 
-<!-- TABLA DE CONTENIDOS -->
+
+
+
+
+
+<!-- TABLA DE CONTENIDOS ULTIMA -->
 <style>
 
 /* =========================
-   TOC CUADRADO MODERNO
+   TABLA DE CONTENIDOS
 ========================= */
 
 html{
@@ -206,234 +211,220 @@ html{
   scroll-margin-top:140px;
 }
 
-.cf-accordion{
-  margin-top:60px;
+/* CONTENEDOR */
+.cm-toc{
+  margin:50px 0 60px 0;
   font-family:'Inter',sans-serif;
 }
 
-/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
-.cf-accordion-inner{
-  max-width:80rem;
-  margin:0 auto;
-  padding:0 1.5rem;
-}
-
-/* CUADRO */
-.cf-accordion-item{
-  width:260px;
-  min-height:70px;
-
-  margin:0;
-
-  border:1px solid red;
-
-  border-radius:6px;
-
-  background:#fff;
-
-  overflow:hidden;
-
-  transition:width .35s ease;
-}
-
-/* EXPANSIÓN */
-.cf-accordion-item.is-open{
-  width:680px;
-}
-
-/* HEADER */
-.cf-accordion-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:18px 16px;
-
-  cursor:pointer;
-
-  font-size:17px;
-  font-weight:600;
-
+/* TÍTULO */
+.cm-toc-title{
+  font-size:18px;
+  font-weight:700;
   color:#111827;
-  background:#fff;
-
-  border-bottom:none;
-}
-
-/* ICONO */
-.cf-menu-icon{
-  width:30px;
-  height:30px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
-  border:1px solid red;
-  border-radius:6px;
-
-  gap:4px;
-  box-sizing:border-box;
-}
-
-.cf-menu-icon span{
-  height:2px;
-  width:16px;
-  background:red;
-  border-radius:2px;
-}
-
-/* CONTENT */
-.cf-accordion-content{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height .4s ease;
+  margin:0 0 18px 0;
 }
 
 /* LISTA */
-.toc-container{
-  padding:8px 14px 14px 14px;
-}
-
-/* LISTA */
-.toc-list{
+.cm-toc-list{
   list-style:none;
   margin:0;
   padding:0;
 }
 
-/* ITEMS ULTRA COMPACTOS */
-.toc-list li{
-  padding:6px 0;
-  margin:0;
-  border:none;
+/* ELEMENTOS */
+.cm-toc-list li{
+  margin:0 0 12px 0;
+  padding:0;
 }
 
-/* LINKS */
-.toc-list a{
+/* NUMERACIÓN */
+.cm-toc-number{
+  color:#000;
+  font-size:16px;
+  line-height:1.5;
+  font-weight:700;
+  flex-shrink:0;
+  margin-right:6px;
+}
+
+/* ENLACES */
+.cm-toc-list a{
+  color:#000;
+  font-size:16px;
+  line-height:1.5;
+  font-weight:700;
+
   text-decoration:none;
-  color:#374151;
 
-  font-size:14px;
-  line-height:1.35;
+  display:flex;
+  align-items:flex-start;
 
-  display:block;
-
-  transition:all .2s ease;
+  transition:text-decoration .2s ease;
 }
 
-/* HOVER AZUL */
-.toc-list a:hover{
-  color:blue;
-  transform:translateX(4px);
+/* TEXTO DEL ENLACE */
+.cm-toc-text{
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:2px;
 }
 
-/* MOBILE */
+/* AL PASAR EL MOUSE */
+.cm-toc-list a:hover{
+  color:#000;
+}
+
+.cm-toc-list a:hover .cm-toc-text{
+  text-decoration:none;
+}
+
+/* MÓVIL */
 @media (max-width:480px){
 
-  .cf-accordion-item{
-    width:88%;
+  .cm-toc{
+    margin:40px 0 50px 0;
   }
 
-  .cf-accordion-item.is-open{
-    width:100%;
+  .cm-toc-title{
+    font-size:17px;
+    margin-bottom:12px;
+  }
+
+  .cm-toc-list li{
+    margin-bottom:3px;
+  }
+
+  .cm-toc-number{
+    font-size:15px;
+    line-height:1.3;
+    margin-right:6px;
+  }
+
+  .cm-toc-list a{
+    font-size:15px;
+    line-height:1.3;
   }
 
 }
 
 </style>
 
-<!-- INTRO / CONTENEDOR EDITORIAL -->
-<main class="py-8">
 
-  <div class="cf-accordion-inner">
+<!-- CONTENIDO DE LA TABLA -->
 
-    <div class="cf-accordion">
+<div class="cm-toc">
 
-      <div class="cf-accordion-item">
-
-        <!-- HEADER -->
-        <div class="cf-accordion-header">
-
-          Tabla de contenidos
-
-          <div class="cf-menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-
-        <!-- CONTENT -->
-        <div class="cf-accordion-content">
-
-          <div class="toc-container">
-
-            <ul class="toc-list">
-    <li><a href="#titulo1">1. Por qué muchas personas nunca logran salir de la pobreza en Colombia</a></li>
-    <li><a href="#titulo2">2. La Cultura de las Apariencias Está Destruyendo las Finanzas de Muchos Colombianos</a></li>
-    <li><a href="#titulo3">3. Cómo dejar de ser pobre en Colombia: 8 pasos reales sin promesas falsas</a></li>
-    <li><a href="#titulo4">4. Evita negocios saturados y busca mercados con crecimiento</a></li>
-    <li><a href="#titulo5">5. Rompe la mentalidad que te mantiene estancado</a></li>
-    <li><a href="#titulo6">6. Deja de depender únicamente de un salario</a></li>
-    <li><a href="#titulo7">7. Aprende a usar el tiempo como una herramienta para crecer</a></li>
-    <li><a href="#titulo8">8. Aprende a controlar el dinero antes de ganar más</a></li>
-    <li><a href="#titulo9">9. Aléjate de entornos que frenan tu crecimiento</a></li>
-    <li><a href="#titulo10">10. Cuida tu energía para poder progresar</a></li>
-    <li><a href="#titulo11">11. Aprende a pensar a largo plazo</a></li>
-    <li><a href="#titulo12">12. La pobreza suele comenzar con hábitos que se repiten durante años</a></li>
-    <li><a href="#titulo13">13. La mayoría de personas nunca construye una verdadera libertad financiera</a></li>
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
+  <div class="cm-toc-title">
+    En este artículo
   </div>
+
+  <ul class="cm-toc-list">
+
+    <li>
+      <a href="#titulo1">
+        <span class="cm-toc-number">1. </span>
+        <span class="cm-toc-text">Por qué tantas personas siguen siendo pobres en Colombia</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo2">
+        <span class="cm-toc-number">2. </span>
+        <span class="cm-toc-text">La cultura de las apariencias y las finanzas</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo3">
+        <span class="cm-toc-number">3. </span>
+        <span class="cm-toc-text">Cómo dejar de ser pobre en Colombia</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo4">
+        <span class="cm-toc-number">4. </span>
+        <span class="cm-toc-text">Evita negocios saturados y busca oportunidades</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo5">
+        <span class="cm-toc-number">5. </span>
+        <span class="cm-toc-text">Rompe la mentalidad que te mantiene estancado</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo6">
+        <span class="cm-toc-number">6. </span>
+        <span class="cm-toc-text">Deja de depender de un solo salario</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo7">
+        <span class="cm-toc-number">7. </span>
+        <span class="cm-toc-text">Usa el tiempo para crecer</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo8">
+        <span class="cm-toc-number">8. </span>
+        <span class="cm-toc-text">Controla el dinero antes de ganar más</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo9">
+        <span class="cm-toc-number">9. </span>
+        <span class="cm-toc-text">Aléjate de entornos que frenan tu crecimiento</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo10">
+        <span class="cm-toc-number">10. </span>
+        <span class="cm-toc-text">Cuida tu energía para progresar</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo11">
+        <span class="cm-toc-number">11. </span>
+        <span class="cm-toc-text">Aprende a pensar a largo plazo</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo12">
+        <span class="cm-toc-number">12. </span>
+        <span class="cm-toc-text">Los hábitos que prolongan la pobreza</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo13">
+        <span class="cm-toc-number">13. </span>
+        <span class="cm-toc-text">Por qué pocos alcanzan la libertad financiera</span>
+      </a>
+    </li>
+
+  </ul>
+
+</div>
+
 
 <script>
 
 /* =========================
-   ACORDEÓN (igual)
+   SCROLL DE LA TABLA
 ========================= */
 
-document.querySelectorAll('.cf-accordion-header').forEach(header=>{
-  header.addEventListener('click',()=>{
+document.querySelectorAll('.cm-toc-list a').forEach(link=>{
 
-    const item = header.closest('.cf-accordion-item');
-    const content = item.querySelector('.cf-accordion-content');
-
-    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
-      if(other!==item){
-        other.querySelector('.cf-accordion-content').style.maxHeight=null;
-      }
-    });
-
-    item.classList.toggle('is-open');
-
-    if(content.style.maxHeight){
-      content.style.maxHeight=null;
-    }else{
-      content.style.maxHeight=content.scrollHeight+'px';
-    }
-
-  });
-});
-
-
-/* =========================
-   SCROLL HÍBRIDO (FIX MÓVIL + PC)
-========================= */
-
-const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
-
-document.querySelectorAll('.toc-list a').forEach(link=>{
   link.addEventListener('click', function(e){
 
     e.preventDefault();
@@ -444,47 +435,27 @@ document.querySelectorAll('.toc-list a').forEach(link=>{
     if(!target) return;
 
     const offset = 140;
-    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    const top =
+      target.getBoundingClientRect().top +
+      window.pageYOffset -
+      offset;
 
     history.pushState(null, null, '#' + id);
 
-    if(isMobile){
-      /* 🔥 MÓVIL: usa scroll nativo (más estable) */
-      window.scrollTo({
-        top: top,
-        behavior: 'smooth'
-      });
-    } else {
-      /* 💻 PC: animación más controlada */
-      const start = window.pageYOffset;
-      const distance = top - start;
-      const duration = 650;
-
-      let startTime = null;
-
-      function animate(time){
-        if(!startTime) startTime = time;
-
-        const progress = Math.min((time - startTime) / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 3);
-
-        window.scrollTo(0, start + distance * ease);
-
-        if(progress < 1){
-          requestAnimationFrame(animate);
-        }
-      }
-
-      requestAnimationFrame(animate);
-    }
+    window.scrollTo({
+      top: top,
+      behavior: 'smooth'
+    });
 
   });
+
 });
 
 </script>
 
 
-
+        
 
 
 
