@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <p style="font-size:16px; color:#555;">
          Puedes cancelar tu suscripción en cualquier momento.
          <br><br>
-          La información que envíes estará regida por el 
-          <a href="/informacion-legal#registro-newsletter" class="privacy-link">
-            Aviso de privacidad de nuestro sitio.
+          La información que envíes estará regida por la 
+          <a href="/privacidad.html" class="privacy-link">
+            Política de Privacidad
           </a>
-          Al enviar tu información, aceptas recibir contenido por correo electrónico.
+          de nuestro sitio. Al enviar tu información, aceptas recibir contenido por correo electrónico.
         </p>
 
         <button type="submit">ENVIAR</button>
@@ -62,18 +62,18 @@ document.addEventListener("DOMContentLoaded", function () {
           <li><a href="/herramientas.html">Calculadoras</a></li>
           <li><a href="/blog/inversiones/index.html">Guías de inversión</a></li>
           <li><a href="/blog/negocios/index.html">Emprendimiento</a></li>
-          <li><a href="/opiniones.html">Historias</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Información Legal</h4>
         <ul>
-          <li><a href="/informacion-legal#sobre-codigo-millonario">Sobre el Medio</a></li>
-          <li><a href="/informacion-legal#politica-privacidad">Política de Privacidad</a></li>
-          <li><a href="/informacion-legal#terminos-condiciones">Términos y Condiciones</a></li>
-          <li><a href="/informacion-legal#nuestra-filosofia">Nuestra filosofía</a></li>
-          <li><a href="/informacion-legal#aviso-legal">Aviso Legal</a></li>
+          <li><a href="/nuestro-equipo.html">Sobre el Medio</a></li>
+          <li><a href="/informacion-legal.html">Centro Legal</a></li>
+          <li><a href="/privacidad.html">Política de Privacidad</a></li>
+          <li><a href="/terminos.html">Términos y Condiciones</a></li>
+          <li><a href="/aviso-legal.html">Aviso Legal</a></li>
+          <li><a href="/politica-editorial.html">Política Editorial</a></li>
         </ul>
       </div>
 

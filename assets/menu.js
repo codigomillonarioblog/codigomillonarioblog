@@ -134,7 +134,6 @@
             EL MEDIO
           </button>
 
-
           <div class="cm-dropdown-menu">
 
             <a href="/index.html">
@@ -143,14 +142,6 @@
 
             <a href="/educacion-financiera.html">
               Contenidos
-            </a>
-
-            <a href="/informacion-legal.html">
-              Políticas
-            </a>
-
-            <a href="/opiniones.html">
-              Aportes
             </a>
 
             <a href="/contacto.html">
@@ -305,14 +296,6 @@
 
           <a href="/educacion-financiera.html">
             Contenidos
-          </a>
-
-          <a href="/informacion-legal.html">
-            Políticas
-          </a>
-
-          <a href="/opiniones.html">
-            Aportes
           </a>
 
           <a href="/contacto.html">
