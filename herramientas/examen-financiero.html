@@ -22,7 +22,6 @@
 <meta property="og:title" content="Examen Financiero - Casino Millonario">
 <meta property="og:description" content="Pon a prueba tus conocimientos sobre dinero, ahorro y decisiones financieras con el Examen Financiero de Casino Millonario.">
 <meta property="og:url" content="https://codigomillonario.blog/herramientas/examen-financiero.html">
-
 <meta property="og:image" content="https://codigomillonario.blog/assets/png/dinero-negocios-y-patrimonio.webp">
 <meta property="og:image:alt" content="Dinero, negocios y patrimonio | Código Millonario">
 
@@ -42,7 +41,7 @@
   gtag('config', 'G-0826LEMPPY');
 </script>
 
-<!-- Autoridad del medio -->
+<!-- Datos estructurados -->
 <script src="/assets/schema-articulos.js" defer></script>
 
     <!-- Google Fonts -->
@@ -71,7 +70,6 @@
             --neon-blue: #38bdf8;
         }
 
-        /* Reset y aislamiento total para evitar interferencias con el menú o footer externos */
         html, body {
             box-sizing: border-box;
             margin: 0;
@@ -87,7 +85,6 @@
             box-sizing: inherit;
         }
 
-        /* Contenedor principal de la herramienta con fondo de casino aislado */
         .casino-tool-wrapper {
             background-color: var(--bg-casino-dark);
             background-image: 
@@ -158,21 +155,17 @@
             animation: pulseRed 0.6s ease;
         }
     </style>
+
 </head>
 
-
-   <!-- ESPACIO FINAL -->
 <div style="height: 90px;"></div>
 
 <body>
 
-    <!-- MENÚ SUPERIOR (Inyectado por el script externo original sin romper estilos) -->
     <script src="../assets/menu.js"></script>
 
-    <!-- ENVOLTORIO AISLADO DEL JUEGO (Evita interferencia de fondos o espacios blancos) -->
     <div class="casino-tool-wrapper">
 
-        <!-- ENCABEZADO / TÍTULO -->
         <header class="text-center max-w-2xl mb-8 mt-4">
             <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 font-semibold border border-amber-500/20">
                VIP
@@ -185,11 +178,9 @@
             </p>
         </header>
 
-        <!-- CONTENEDOR PRINCIPAL DEL JUEGO -->
         <main class="w-full max-w-2xl">
             <div id="quizContainer" class="casino-card p-6 md:p-10 rounded-3xl relative">
                 
-                <!-- BARRA DE ESTADO (Progreso y Dinero en Juego) -->
                 <div class="flex justify-between items-center mb-6 pb-4 border-b border-slate-800 text-sm md:text-base">
                     <span id="questionIndicator" class="font-semibold text-slate-300">Pregunta 1/10</span>
                     <div class="flex items-center gap-2 bg-slate-900/80 px-4 py-2 rounded-2xl border border-slate-800">
@@ -198,12 +189,10 @@
                     </div>
                 </div>
 
-                <!-- CONTENEDOR DE PREGUNTAS Y OPCIONES -->
                 <div id="quizQuestions" class="mb-8">
-                    <!-- Se inyecta dinámicamente con JS -->
+
                 </div>
 
-                <!-- BOTONES DE ACCIÓN -->
                 <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                     <button id="nextQuestionBtn" class="w-full sm:w-auto casino-btn text-slate-950 font-bold px-8 py-3.5 rounded-full uppercase tracking-wider text-sm">
                         Siguiente Pregunta
@@ -215,12 +204,11 @@
             </div>
         </main>
 
-        <!-- MODAL DE RESULTADOS FINALES -->
         <div id="quizModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center hidden z-50 p-4">
             <div class="casino-card rounded-3xl p-8 max-w-md w-full relative shadow-2xl text-center border border-amber-500/30">
                 <h2 class="text-2xl font-bold font-['Montserrat'] gold-text mb-3">¡Examen Finalizado!</h2>
                 <div id="quizResult" class="text-slate-300 leading-relaxed text-base my-4 space-y-2">
-                    <!-- Resultados inyectados por JS -->
+
                 </div>
                 <button id="newQuiz" class="w-full mt-6 casino-btn text-slate-950 font-bold py-3.5 rounded-full uppercase tracking-wider text-sm">
                     Jugar de Nuevo
@@ -230,11 +218,8 @@
 
     </div>
 
-       <!-- ESPACIO FINAL -->
 <div style="height: 200px;"></div>
 
-
-    <!-- SCRIPT DE FUNCIONAMIENTO DEL JUEGO Y 300 PREGUNTAS -->
     <script>
         const questions = [
             { q: "¿Qué es un presupuesto?", a: ["Plan de gastos", "Ingresos futuros", "Dinero ahorrado", "Inversión en acciones"], correct: 0 },
@@ -647,7 +632,6 @@
         initQuiz();
     </script>
 
-    <!-- PIE DE PÁGINA (Inyectado por el script externo original de forma aislada) -->
     <div class="footer-here"></div>
     <script src="https://codigomillonario.blog/assets/footer.js"></script>
 

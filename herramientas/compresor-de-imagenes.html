@@ -39,20 +39,17 @@
     gtag('config', 'G-0826LEMPPY');
   </script>
 
-  <!-- Autoridad del medio -->
-  <script src="/assets/schema-articulos.js" defer></script>
+<!-- Datos estructurados -->
+<script src="/assets/schema-articulos.js" defer></script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Librería JSZip para descarga en lote -->
+  <!-- Librería JSZip -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
   <style>
-    /* ==========================
-       CONFIGURACIÓN GENERAL
-    ========================== */
 
     * {
       box-sizing: border-box;
@@ -90,10 +87,6 @@
       cursor: pointer;
     }
 
-    /* ==========================
-       CONTENEDOR PRINCIPAL
-    ========================== */
-
     .compressor {
       width: min(100% - 40px, 1050px);
       margin: 45px auto 60px;
@@ -115,10 +108,6 @@
       font-size: 14px;
       line-height: 1.6;
     }
-
-    /* ==========================
-       PESTAÑAS
-    ========================== */
 
     .tabs {
       display: flex;
@@ -145,10 +134,6 @@
       background: var(--panel);
       border-top: 2px solid var(--blue);
     }
-
-    /* ==========================
-       PANEL DE CONTROLES
-    ========================== */
 
     .controls {
       display: flex;
@@ -248,10 +233,6 @@
       background: #303030;
     }
 
-    /* ==========================
-       ÁREA DE TRABAJO
-    ========================== */
-
     .workspace {
       min-height: 330px;
       padding: 20px;
@@ -267,10 +248,6 @@
       align-items: center;
       gap: 18px;
     }
-
-    /* ==========================
-       TARJETA DE IMAGEN
-    ========================== */
 
     .image-card {
       width: 100%;
@@ -425,10 +402,6 @@
       border-color: var(--blue);
     }
 
-    /* ==========================
-       BOTÓN PARA AGREGAR ÚNICO
-    ========================== */
-
     .add-image {
       width: 150px;
       height: 150px;
@@ -465,10 +438,6 @@
     .add-image span:last-child {
       font-size: 14px;
     }
-
-    /* ==========================
-       BARRA INFERIOR FIJA
-    ========================== */
 
     .bottom-bar {
       position: fixed;
@@ -542,10 +511,6 @@
     .download-button:hover {
       background: var(--blue-hover);
     }
-
-    /* ==========================
-       SECCIÓN SEO Y FAQ INTERCALADA
-    ========================== */
 
     .seo-section {
       margin-top: 60px;
@@ -621,14 +586,9 @@
       line-height: 1.6;
     }
 
-    /* Input oculto de archivos */
     #file-input {
       display: none;
     }
-
-    /* ==========================
-       ADAPTACIÓN A MÓVILES
-    ========================== */
 
     @media (max-width: 700px) {
       .compressor {
@@ -791,19 +751,17 @@
       }
     }
   </style>
+
 </head>
 
 <body>
 
-  <!-- MENU COMPLETO Real por JS -->
   <script src="../assets/menu.js"></script>
 
-  <!-- ESPACIO FINAL -->
   <div style="height: 100px;"></div>
 
   <main class="compressor">
 
-    <!-- ENCABEZADO -->
     <header class="compressor-header">
       <h1>Compresor de imágenes potente</h1>
       <p>
@@ -811,7 +769,6 @@
       </p>
     </header>
 
-    <!-- PESTAÑAS DE NAVEGACIÓN DE MODOS -->
     <nav class="tabs" aria-label="Opciones de compresión">
       <button class="tab active" id="tab-slider" type="button">
         Control deslizante
@@ -822,10 +779,8 @@
       </button>
     </nav>
 
-    <!-- CONTROLES DE COMPRESIÓN -->
     <section class="controls">
 
-      <!-- MODO SLIDER -->
       <div id="mode-slider-controls" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; width: 100%;">
         <label class="control-label" for="compression">
           Nivel de compresión:
@@ -855,7 +810,6 @@
         </div>
       </div>
 
-      <!-- MODO TAMAÑO OBJETIVO (OCULTO POR DEFECTO) -->
       <div id="mode-size-controls" style="display: none; align-items: center; gap: 12px; flex-wrap: wrap; width: 100%;">
         <label class="control-label" for="target-size-val">
           Peso objetivo:
@@ -870,7 +824,6 @@
         </div>
       </div>
 
-      <!-- FORMATO GLOBAL DE CONVERSIÓN -->
       <div style="display: flex; align-items: center; gap: 8px;">
         <label class="control-label">Formato:</label>
         <select id="global-format" class="format-selector">
@@ -882,7 +835,6 @@
         </select>
       </div>
 
-      <!-- ACCIONES GLOBALES -->
       <div style="display: flex; gap: 8px; margin-left: auto;">
         <button class="btn" id="btn-compress-action" type="button">
           Comprimir
@@ -895,16 +847,12 @@
 
     </section>
 
-    <!-- ÁREA DE TRABAJO -->
     <section class="workspace">
 
-      <!-- INPUT OCULTO DE ARCHIVOS -->
       <input type="file" id="file-input" multiple accept="image/*">
 
-      <!-- GRID DE TARJETAS Y BOTÓN ÚNICO DE AGREGAR -->
       <div class="image-grid" id="image-grid">
 
-        <!-- BOTÓN PARA AGREGAR IMÁGENES (ÚNICO) -->
         <button class="add-image" id="btn-add-trigger" type="button">
           <span class="add-icon">+</span>
           <span>Agregar imágenes</span>
@@ -914,14 +862,11 @@
 
     </section>
 
-<!-- NAVEGACIÓN ENTRE HERRAMIENTAS DE IMAGEN - CÓDIGO MILONARIO -->
 <nav style="background: #191919; border-top: 1px solid #393939; border-bottom: 1px solid #393939; padding: 14px 20px; margin-top: 50px; font-family: Arial, Helvetica, sans-serif;">
   <div style="max-width: 1050px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center;">
 
-    <!-- Texto indicativo -->
     <span style="color: #a5a5a5; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Suite de Imagen:</span>
 
-    <!-- Listado profesional de herramientas de imagen interconectadas -->
     <div style="display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center;">
 
       <a href="https://codigomillonario.blog/herramientas/convertidor-de-imagenes.html" style="color: #a5a5a5; font-size: 13px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#087dcc'" onmouseout="this.style.color='#a5a5a5'">
@@ -948,6 +893,7 @@
 
     </div>
   </div>
+
 </nav>
 
 <style>
@@ -958,13 +904,10 @@
 }
 </style>
 
-
-
-    <!-- SECCIÓN TEXTOS SEO Y GUÍA DE USO -->
     <section class="seo-section">
       
       <div class="seo-grid">
-        <!-- Bloque 1: Guía de Uso -->
+
         <div class="seo-box">
           <h2>¿Cómo usar esta herramienta inteligente?</h2>
           <p class="mb-2">
@@ -978,7 +921,6 @@
           </p>
         </div>
 
-        <!-- Bloque 2: Compresión y Lote -->
         <div class="seo-box">
           <h2>Compresión avanzada y conversión en lote</h2>
           <p class="mb-2">
@@ -992,7 +934,6 @@
           </p>
         </div>
 
-        <!-- Bloque 3: Beneficios Web -->
         <div class="seo-box">
           <h2>Rendimiento y velocidad web</h2>
           <p>
@@ -1000,7 +941,6 @@
           </p>
         </div>
 
-        <!-- Bloque 4: Privacidad y Tecnología -->
         <div class="seo-box">
           <h2>Privacidad y procesamiento 100% local</h2>
           <p>
@@ -1009,7 +949,6 @@
         </div>
       </div>
 
-      <!-- PREGUNTAS FRECUENTES (FAQ) INTERCALADAS -->
       <div class="faq-container">
         <h2>Preguntas Frecuentes (FAQ)</h2>
         <div class="faq-grid">
@@ -1036,10 +975,8 @@
 
   </main>
 
-  <!-- BARRA INFERIOR FIJA -->
   <footer class="bottom-bar">
 
-    <!-- BOTÓN DE ELIMINAR A LA IZQUIERDA -->
     <div class="bottom-left">
       <button
         class="delete-button"
@@ -1065,7 +1002,6 @@
       </button>
     </div>
 
-    <!-- BOTONES PRINCIPALES ALINEADOS Y CENTRADOS -->
     <div class="bottom-right">
       <button class="select-button" id="btn-bottom-select" type="button">
         Seleccionar imágenes
@@ -1078,11 +1014,9 @@
 
   </footer>
 
-  <!-- Footer Real por JS -->
   <div class="footer-here"></div>
   <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-  <!-- LÓGICA COMPLETA DE LA HERRAMIENTA -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const state = {
@@ -1414,8 +1348,7 @@
             if (blob && blob.size > 0) {
               resolve(blob);
             } else {
-              // Si toBlob falla con el tipo especificado (ej. AVIF no soportado nativamente en canvas.toBlob), 
-              // se usa dataURL para forzar la creación del archivo binario con fallback.
+
               try {
                 const dataUrl = canvas.toDataURL(type, quality);
                 const blobData = dataURItoBlob(dataUrl, type);
@@ -1476,7 +1409,7 @@
         btnDownloadAll.disabled = true;
 
         try {
-          // 1. Asegurar que todas las imágenes hayan completado su procesamiento
+
           await Promise.all(state.files.map(item => {
             if (item.compressedBlob) {
               return Promise.resolve();
@@ -1494,7 +1427,6 @@
           const zip = new JSZip();
           const usedNames = new Set();
 
-          // 2. Empaquetar evitando duplicados de nombre que sobreescriban archivos en el ZIP
           state.files.forEach((item, index) => {
             if (item.compressedBlob) {
               const ext = getExtensionFromMime(item.targetFormat || item.compressedBlob.type);
@@ -1527,5 +1459,6 @@
       });
     });
   </script>
+  
 </body>
 </html>

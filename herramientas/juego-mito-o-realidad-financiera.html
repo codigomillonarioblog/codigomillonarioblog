@@ -22,7 +22,6 @@
 <meta property="og:title" content="Juego de Educación Financiera: Mito o Realidad | Código Millonario">
 <meta property="og:description" content="Pon a prueba tus conocimientos sobre ahorro, deudas, inversiones y mitos financieros con este juego interactivo.">
 <meta property="og:url" content="https://codigomillonario.blog/herramientas/juego-mito-o-realidad-financiera.html">
-
 <meta property="og:image" content="https://codigomillonario.blog/assets/png/dinero-negocios-y-patrimonio.webp">
 <meta property="og:image:alt" content="Dinero, negocios y patrimonio | Código Millonario">
 
@@ -42,34 +41,33 @@
   gtag('config', 'G-0826LEMPPY');
 </script>
 
-<!-- Autoridad del medio -->
+<!-- Datos estructurados -->
 <script src="/assets/schema-articulos.js" defer></script>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-
-
-    <!-- Tailwind CSS para diseño moderno y responsive -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts: Inter -->
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome para iconos -->
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Estilos generales y aislamiento del juego */
         .cm-game-wrapper {
             font-family: 'Inter', sans-serif;
             background-color: #0f172a;
             color: #f8fafc;
         }
-        /* Transiciones suaves para las tarjetas */
+
         .card-transition {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        /* Animación de entrada */
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -78,17 +76,15 @@
             animation: fadeIn 0.4s ease-out forwards;
         }
     </style>
+
 </head>
 
-   <!-- ESPACIO FINAL -->
 <div style="height: 150px;"></div>
 
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
 
-    <!-- CONTENEDOR AISLADO DEL JUEGO PARA EVITAR CONFLICTOS CON MENU/FOOTER EXTERNOS -->
     <div class="cm-game-wrapper w-full max-w-2xl mx-auto my-8 p-4 sm:p-6 rounded-3xl shadow-2xl border border-slate-800 bg-slate-900 relative overflow-hidden">
         
-        <!-- ENCABEZADO DEL JUEGO -->
         <div class="flex items-center justify-between mb-6 border-b border-slate-800 pb-4">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-lg">
@@ -106,12 +102,10 @@
             </div>
         </div>
 
-        <!-- BARRA DE PROGRESO -->
         <div class="w-full bg-slate-800 h-2 rounded-full mb-6 overflow-hidden">
             <div id="progress-bar" class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-0 transition-all duration-300"></div>
         </div>
 
-        <!-- PANTALLA DE INICIO -->
         <div id="start-screen" class="text-center py-8 px-2 animate-fade-in">
             <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-tr from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-3xl shadow-inner">
                 <i class="fa-solid fa-bolt"></i>
@@ -125,7 +119,6 @@
             </button>
         </div>
 
-        <!-- CONTENEDOR DE PREGUNTAS (Oculto inicialmente) -->
         <div id="game-screen" class="hidden animate-fade-in">
             <!-- Número de Pregunta -->
             <div class="flex justify-between items-center text-xs font-medium text-slate-400 mb-3 tracking-wider uppercase">
@@ -133,12 +126,10 @@
                 <span id="category-tag" class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700">Inversión</span>
             </div>
 
-            <!-- Tarjeta de Afirmación -->
             <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-6 sm:p-8 mb-6 shadow-inner text-center min-h-[140px] flex items-center justify-center">
                 <p id="statement-text" class="text-base sm:text-lg font-medium text-slate-100 leading-relaxed"></p>
             </div>
 
-            <!-- Botones de Respuesta (Verdadero / Falso) -->
             <div id="options-container" class="grid grid-cols-2 gap-4 mb-6">
                 <button onclick="checkAnswer(true)" class="group relative overflow-hidden py-4 px-6 rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 hover:border-emerald-500/50 hover:bg-slate-800 transition-all font-bold text-slate-200 flex flex-col items-center justify-center space-y-1 shadow-md cursor-pointer">
                     <span class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
@@ -155,10 +146,9 @@
                 </button>
             </div>
 
-            <!-- Panel de Explicación (Aparece al responder) -->
             <div id="feedback-panel" class="hidden rounded-2xl p-5 border animate-fade-in mb-4">
                 <div class="flex items-center space-x-2 font-bold mb-2 text-base" id="feedback-title">
-                    <!-- Icono y Resultado dinámico -->
+
                 </div>
                 <p id="feedback-text" class="text-sm text-slate-300 leading-relaxed mb-4"></p>
                 <button onclick="nextQuestion()" class="w-full py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl border border-slate-700 transition-all text-sm cursor-pointer flex items-center justify-center space-x-2">
@@ -168,7 +158,6 @@
             </div>
         </div>
 
-        <!-- PANTALLA DE RESULTADOS (Oculto inicialmente) -->
         <div id="results-screen" class="hidden text-center py-6 animate-fade-in">
             <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl">
                 <i class="fa-solid fa-award"></i>
@@ -189,11 +178,8 @@
 
     </div>
 
-
-    <!-- SCRIPT DE LÓGICA DEL JUEGO -->
     <script>
 
-        // Copia y pega este arreglo completo dentro de tu script en masterQuestions
         const masterQuestions = [
             {
                 statement: "Una tarjeta de crédito es una extensión de tus ingresos mensuales.",
@@ -869,7 +855,6 @@
         let answered = false;
         const QUESTIONS_PER_GAME = 8;
 
-        // Algoritmo Fisher-Yates para mezclar arrays
         function shuffleArray(array) {
             const shuffled = [...array];
             for (let i = shuffled.length - 1; i > 0; i--) {
@@ -883,7 +868,6 @@
             document.getElementById('start-screen').classList.add('hidden');
             document.getElementById('game-screen').classList.remove('hidden');
             
-            // Mezclar preguntas y seleccionar una muestra para esta partida
             activeQuestions = shuffleArray(masterQuestions).slice(0, QUESTIONS_PER_GAME);
             currentQuestionIndex = 0;
             score = 0;
@@ -895,16 +879,13 @@
             answered = false;
             const q = activeQuestions[currentQuestionIndex];
             
-            // Actualizar textos y etiquetas
             document.getElementById('question-number').innerText = `Pregunta ${currentQuestionIndex + 1} de ${activeQuestions.length}`;
             document.getElementById('category-tag').innerText = q.category;
             document.getElementById('statement-text').innerText = q.statement;
             
-            // Actualizar barra de progreso
             const progress = ((currentQuestionIndex) / activeQuestions.length) * 100;
             document.getElementById('progress-bar').style.width = `${progress}%`;
 
-            // Ocultar panel de retroalimentación y mostrar botones
             document.getElementById('feedback-panel').classList.add('hidden');
             document.getElementById('options-container').classList.remove('hidden');
         }
@@ -921,10 +902,8 @@
                 updateScoreDisplay();
             }
 
-            // Ocultar opciones de respuesta para dar paso a la explicación
             document.getElementById('options-container').classList.add('hidden');
 
-            // Configurar panel de retroalimentación
             const feedbackPanel = document.getElementById('feedback-panel');
             const feedbackTitle = document.getElementById('feedback-title');
             const feedbackText = document.getElementById('feedback-text');
@@ -956,7 +935,6 @@
             document.getElementById('results-screen').classList.remove('hidden');
             document.getElementById('final-score').innerText = `${score} / ${activeQuestions.length}`;
 
-            // Mensaje personalizado según desempeño
             let msg = "";
             const percentage = (score / activeQuestions.length) * 100;
             if (percentage === 100) {
@@ -968,7 +946,6 @@
             }
             document.getElementById('final-message').innerText = msg;
             
-            // Completar barra de progreso al 100%
             document.getElementById('progress-bar').style.width = '100%';
         }
 
@@ -982,19 +959,12 @@
         }
     </script>
 
-
-
-   <!-- ESPACIO FINAL -->
 <div style="height: 150px;"></div>
 
-
-<!-- Footer Real por JS -->
 <div class="footer-here"></div>
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-<!-- MENU COMPLETO Real por JS -->
 <script src="../assets/menu.js"></script>
-
 
 </body>
 </html>

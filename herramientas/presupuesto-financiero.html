@@ -40,14 +40,14 @@
       gtag('config', 'G-0826LEMPPY');
     </script>
 
-    <!-- Datos estructurados centralizados -->
+    <!-- Datos estructurados -->
     <script src="/assets/schema-articulos.js" defer></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     
-    <!-- Chart.js CDN para las gráficas dinámicas -->
+    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
@@ -79,7 +79,6 @@
             line-height: 1.5;
         }
 
-        /* Contenedor general */
         .cm-main-wrapper {
             width: 100%;
             max-width: 1140px;
@@ -87,7 +86,6 @@
             padding: 0 20px;
         }
 
-        /* Encabezado Principal */
         .cm-top-header {
             margin-bottom: 30px;
         }
@@ -112,7 +110,6 @@
             color: var(--cm-text);
         }
 
-        /* Barra de Controles */
         .cm-controls-card {
             background: var(--cm-card-bg);
             border: 1px solid var(--cm-border);
@@ -151,7 +148,6 @@
             width: 100%;
         }
 
-        /* Botones e Inputs */
         .cm-btn {
             background-color: var(--cm-primary);
             color: white;
@@ -208,7 +204,6 @@
             box-shadow: 0 0 0 1px var(--cm-primary);
         }
 
-        /* Tarjetas KPI */
         .cm-kpi-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -257,7 +252,6 @@
             margin-top: 5px;
         }
 
-        /* Gráficas */
         .cm-charts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -274,7 +268,6 @@
             height: 320px;
         }
 
-        /* Secciones, Formularios y Tablas estándar */
         .cm-section {
             background: var(--cm-card-bg);
             border: 1px solid var(--cm-border);
@@ -283,7 +276,6 @@
             margin-bottom: 30px;
         }
 
-        /* Modificador para quitar cuadros externos y centrar en PC en Mis Ingresos / Mis Gastos */
         @media (min-width: 769px) {
             .cm-section-unboxed {
                 background: transparent !important;
@@ -297,7 +289,6 @@
             }
         }
 
-        /* Formularios en PC: 5 columnas alineadas */
         .cm-form-grid {
             display: grid;
             grid-template-columns: 2fr 1.5fr 1.2fr 1.2fr 1.2fr;
@@ -306,7 +297,6 @@
             margin-bottom: 25px;
         }
 
-        /* En teléfonos móviles se mantiene en una sola columna fluida y con su caja normal */
         @media (max-width: 768px) {
             .cm-form-grid {
                 grid-template-columns: 1fr;
@@ -359,7 +349,6 @@
             background-color: var(--cm-gray-light);
         }
 
-        /* Alertas y FAQs */
         .cm-alert {
             background-color: #f6f6f7;
             border: 1px solid var(--cm-border);
@@ -423,20 +412,19 @@
             .cm-section { padding: 15px; }
         }
     </style>
+
 </head>
+
 <body>
 
-    <!-- Contenedor Principal -->
     <main class="cm-main-wrapper">
         
-        <!-- Encabezado y Título -->
         <header class="cm-top-header">
             <h1 class="cm-title">Presupuesto Financiero Personal</h1>
             <p class="cm-subtitle">Organiza tus ingresos, controla tus gastos y descubre cuánto dinero puedes ahorrar cada mes.</p>
             <p class="cm-description">Crea tu presupuesto mensual, registra tus movimientos de forma sencilla y compara en tiempo real tus resultados frente a lo planeado.</p>
         </header>
 
-        <!-- Controles Principales -->
         <section class="cm-controls-card">
             <div class="cm-toolbar">
                 <div class="cm-control-group">
@@ -489,7 +477,6 @@
             </div>
         </section>
 
-        <!-- Tarjetas KPI -->
         <div class="cm-kpi-grid">
             <div class="cm-kpi-card">
                 <div class="cm-kpi-title">Ingresos del Mes</div>
@@ -513,7 +500,6 @@
             </div>
         </div>
 
-        <!-- Gráficas -->
         <div class="cm-charts-grid">
             <div class="cm-chart-box">
                 <canvas id="cm-chart-ingresos-gastos"></canvas>
@@ -523,7 +509,6 @@
             </div>
         </div>
 
-        <!-- Módulo de Ingresos (Sin cuadro externo en PC) -->
         <section class="cm-section cm-section-unboxed">
             <h2 class="cm-section-title">Mis Ingresos</h2>
             <form id="cm-form-ingreso" class="cm-form-grid">
@@ -574,7 +559,6 @@
             </div>
         </section>
 
-        <!-- Módulo de Gastos (Sin cuadro externo en PC) -->
         <section class="cm-section cm-section-unboxed">
             <h2 class="cm-section-title">Mis Gastos</h2>
             <form id="cm-form-gasto" class="cm-form-grid">
@@ -630,7 +614,6 @@
             </div>
         </section>
 
-        <!-- Análisis Financiero -->
         <section class="cm-section">
             <h2 class="cm-section-title">Análisis de mi situación financiera</h2>
             <div id="cm-analisis-contenedor">
@@ -638,7 +621,6 @@
             </div>
         </section>
 
-        <!-- Preguntas Frecuentes -->
         <section class="cm-section">
             <h2 class="cm-section-title">Preguntas Frecuentes sobre Presupuestos</h2>
             <div class="cm-faq-item">
@@ -661,7 +643,6 @@
 
     </main>
 
-    <!-- Lógica JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const periodoInput = document.getElementById('cm-periodo-select');
@@ -939,11 +920,9 @@
         });
     </script>
 
-    <!-- Footer Real por JS -->
     <div class="footer-here"></div>
     <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-    <!-- MENU COMPLETO Real por JS -->
     <script src="../assets/menu.js"></script>
 
 </body>

@@ -40,18 +40,19 @@
       gtag('config', 'G-0826LEMPPY');
     </script>
 
-    <!-- Datos estructurados centralizados -->
+    <!-- Datos estructurados -->
     <script src="/assets/schema-articulos.js" defer></script>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
@@ -65,7 +66,6 @@
             color: #111827;
         }
 
-        /* Custom minimal scrollbar */
         ::-webkit-scrollbar {
             width: 5px;
             height: 5px;
@@ -81,7 +81,6 @@
             background: #9ca3af;
         }
 
-        /* Canvas workspace overlay styles */
         .workspace-canvas-wrapper {
             position: relative;
             background-color: #f3f4f6;
@@ -89,7 +88,6 @@
             background-size: 16px 16px;
         }
 
-        /* Active tool states - Minimal black/gray theme */
         .tool-btn.active {
             border-color: #111827;
             background-color: #111827;
@@ -115,15 +113,13 @@
 
         #maskCanvas {
             pointer-events: auto;
-            touch-action: none; /* Prevents scroll while painting on touch screens */
+            touch-action: none; 
         }
 
-        /* Custom range slider styling */
         input[type=range] {
             accent-color: #111827;
         }
 
-        /* Glassmorphism Magnifier / Touch Preview Bubble */
         #touch-magnifier {
             position: fixed;
             width: 110px;
@@ -137,7 +133,7 @@
             overflow: hidden;
             background-color: #ffffff;
             transform: translate(-50%, -100%);
-            margin-top: -30px; /* Offset above finger */
+            margin-top: -30px; 
         }
 
         #touch-magnifier canvas {
@@ -162,13 +158,6 @@
             z-index: 10;
         }
 
-
-
-
-
-
-
-/* Contenedor principal de la herramienta SEO adaptado a móvil */
 .seo-tool-wrapper {
     width: 100%;
     max-width: 1100px;
@@ -177,11 +166,10 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: #111827;
     background-color: #ffffff;
-    box-sizing: border-box; /* Vital para que el padding no rompa el ancho */
-    overflow-x: hidden;     /* Evita scroll horizontal accidental */
+    box-sizing: border-box; 
+    overflow-x: hidden;     
 }
 
-/* Cabecera optimizada */
 .tool-seo-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -191,12 +179,12 @@
 
 .tool-seo-header h2 {
     font-family: 'Georgia', serif;
-    font-size: 1.85rem; /* Tamaño optimizado para móviles (escala bien) */
+    font-size: 1.85rem; 
     font-weight: 700;
     line-height: 1.2;
     color: #1f2937;
     margin-bottom: 0.75rem;
-    word-wrap: break-word; /* Evita que palabras largas rompan la pantalla */
+    word-wrap: break-word; 
 }
 
 .tool-subtitle {
@@ -208,7 +196,6 @@
     box-sizing: border-box;
 }
 
-/* Contenido editorial inferior para SEO */
 .tool-editorial-content {
     margin-top: 3rem;
     padding-top: 2rem;
@@ -231,10 +218,9 @@
     margin-bottom: 1.25rem;
 }
 
-/* Cuadrícula de características - Corregida para móvil con minmax(0, 1fr) */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Reducido de 300px a 260px para celulares pequeños */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
     gap: 1rem;
     margin-top: 1.5rem;
     width: 100%;
@@ -246,7 +232,7 @@
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     padding: 1.25rem;
-    box-sizing: border-box; /* Evita desbordes internos */
+    box-sizing: border-box; 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -269,7 +255,6 @@
     line-height: 1.5;
 }
 
-/* Media Query adicional para celulares muy angostos (< 380px) */
 @media (max-width: 380px) {
     .seo-tool-wrapper {
         padding: 1rem 0.5rem;
@@ -278,19 +263,17 @@
         font-size: 1.5rem;
     }
     .features-grid {
-        grid-template-columns: 1fr; /* Una sola columna estricta en pantallas mini */
+        grid-template-columns: 1fr; 
     }
 }
     </style>
 
 </head>
 
-   <!-- ESPACIO FINAL -->
 <div style="height: 100px;"></div>
 
 <body class="bg-neutral-50 min-h-screen flex flex-col justify-between text-gray-900">
 
-    <!-- Header Navigation -->
     <header class="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2">
             <div>
@@ -300,7 +283,6 @@
                 <p class="text-xs text-gray-500 hidden sm:block">Animador de Zonas sobre Imagen Estática</p>
             </div>
 
-            <!-- Top Actions -->
             <div class="flex items-center space-x-2">
                 <button id="btn-sample-tesla" class="text-xs px-2.5 sm:px-3 py-1.5 border border-gray-300 rounded-lg hover:bg-gray-50 font-medium text-gray-700 flex items-center gap-1.5 transition">
                     <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gray-600"></i>
@@ -313,15 +295,13 @@
                 <input type="file" id="image-upload" accept="image/*" class="hidden">
             </div>
         </div>
+
     </header>
 
-    <!-- Main Workspace -->
     <div class="flex-1 flex flex-col lg:flex-row overflow-hidden max-w-7xl w-full mx-auto p-3 sm:p-4 gap-4">
         
-        <!-- Controls Sidebar -->
         <aside class="w-full lg:w-80 flex flex-col gap-4 shrink-0 order-2 lg:order-1">
             
-            <!-- Step 1: Selection & Brush Control -->
             <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4">
                 <div class="flex items-center justify-between border-b border-gray-100 pb-2.5">
                     <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-800 flex items-center gap-2">
@@ -335,7 +315,6 @@
                     Pinta únicamente la zona exacta que deseas mover. El área no pintada permanecerá totalmente inmóvil.
                 </p>
 
-                <!-- Tool Buttons -->
                 <div class="grid grid-cols-2 gap-2">
                     <button id="tool-brush" class="tool-btn active text-xs py-2 border border-gray-300 rounded-lg font-medium flex items-center justify-center gap-1.5 transition">
                         <i data-lucide="pencil" class="w-3.5 h-3.5"></i> Lápiz / Pincel
@@ -345,7 +324,6 @@
                     </button>
                 </div>
 
-                <!-- Pencil Thickness Control -->
                 <div class="space-y-2 pt-1 border-t border-gray-100">
                     <div class="flex justify-between items-center text-xs text-gray-700">
                         <span class="font-medium flex items-center gap-1.5">
@@ -361,7 +339,6 @@
                     </div>
                 </div>
 
-                <!-- Action Links -->
                 <div class="flex justify-between items-center text-xs pt-2 border-t border-gray-100">
                     <button id="btn-clear-mask" class="text-gray-600 hover:text-gray-900 font-medium flex items-center gap-1 px-1.5 py-1 rounded hover:bg-gray-100 transition">
                         <i data-lucide="trash-2" class="w-3.5 h-3.5 text-gray-500"></i> Limpiar Selección
@@ -373,7 +350,6 @@
                 </div>
             </div>
 
-            <!-- Step 2: Animation Settings -->
             <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4 flex-1">
                 <div class="flex items-center justify-between border-b border-gray-100 pb-2.5">
                     <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-800 flex items-center gap-2">
@@ -382,7 +358,6 @@
                     </h2>
                 </div>
 
-                <!-- Motion Types -->
                 <div class="space-y-1.5">
                     <label class="text-xs font-medium text-gray-700">Estilo de Movimiento</label>
                     <select id="motion-preset" class="w-full text-xs border border-gray-300 rounded-lg p-2.5 bg-white focus:ring-1 focus:ring-gray-900 focus:border-gray-900 font-medium text-gray-900">
@@ -393,7 +368,6 @@
                     </select>
                 </div>
 
-                <!-- Motion Intensity Slider -->
                 <div class="space-y-1.5">
                     <div class="flex justify-between text-xs text-gray-700">
                         <span class="font-medium">Intensidad</span>
@@ -402,7 +376,6 @@
                     <input type="range" id="motion-intensity" min="0.1" max="2.5" step="0.1" value="1.0" class="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                 </div>
 
-                <!-- Duration Selector -->
                 <div class="space-y-1.5 pt-2 border-t border-gray-100">
                     <label class="text-xs font-medium text-gray-700 flex items-center justify-between">
                         <span>Duración del Video (HD)</span>
@@ -419,10 +392,8 @@
             </div>
         </aside>
 
-        <!-- Main Display / Canvas Viewport -->
         <main class="flex-1 bg-white border border-gray-200 rounded-xl flex flex-col overflow-hidden shadow-sm order-1 lg:order-2">
             
-            <!-- Toolbar Header -->
             <div class="h-12 border-b border-gray-200 px-3 sm:px-4 flex items-center justify-between bg-white">
                 <div class="flex items-center space-x-2 text-xs text-gray-600">
                     <span id="canvas-status" class="flex items-center gap-1.5 font-medium text-gray-700 bg-gray-100 px-2.5 py-1 rounded border border-gray-200 text-[11px]">
@@ -433,7 +404,6 @@
                     <span id="canvas-dimensions" class="text-gray-500 text-[11px] hidden sm:inline">600 x 1066 px</span>
                 </div>
 
-                <!-- Playback Controls -->
                 <div class="flex items-center space-x-2">
                     <button id="btn-toggle-play" class="px-3 py-1.5 bg-gray-900 hover:bg-black text-white text-xs rounded-lg font-medium flex items-center gap-1.5 transition">
                         <i data-lucide="play" id="play-icon" class="w-3.5 h-3.5"></i>
@@ -445,20 +415,17 @@
                 </div>
             </div>
 
-            <!-- Canvas Container Viewport -->
             <div class="flex-1 workspace-canvas-wrapper flex items-center justify-center p-2 sm:p-4 min-h-[450px] sm:min-h-[480px] overflow-hidden relative" id="canvas-viewport">
                 
-                <!-- Scaled Canvas Frame -->
                 <div class="relative shadow-lg rounded border border-gray-300 bg-white" id="canvas-frame">
-                    <!-- Layer 1: Static Base Background -->
+
                     <canvas id="baseCanvas" class="block w-full h-full object-contain"></canvas>
-                    <!-- Layer 2: Strictly Animated Overlay -->
+
                     <canvas id="animCanvas" class="canvas-layer"></canvas>
-                    <!-- Layer 3: Interactive Drawing Selection -->
+
                     <canvas id="maskCanvas" class="canvas-layer cursor-crosshair"></canvas>
                 </div>
 
-                <!-- Processing Overlay -->
                 <div id="processing-overlay" class="absolute inset-0 bg-white/90 backdrop-blur-sm flex flex-col items-center justify-center hidden z-20 p-4 text-center">
                     <div class="w-10 h-10 border-2 border-gray-900 border-t-transparent rounded-full animate-spin"></div>
                     <p class="mt-4 font-semibold text-xs sm:text-sm text-gray-900" id="processing-text">Generando archivo de video HD...</p>
@@ -470,14 +437,12 @@
 
             </div>
 
-            <!-- Footer Actions Bar -->
             <div class="border-t border-gray-200 p-3 bg-white flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
                 <div class="flex items-center gap-2 text-gray-500 text-[11px] text-center sm:text-left">
                     <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gray-700 shrink-0"></i>
                     <span>Solo se moverá exactamente lo que hayas pintado con el lápiz.</span>
                 </div>
 
-                <!-- Export Button -->
                 <button id="btn-export-video" class="w-full sm:w-auto px-5 py-2 bg-gray-900 hover:bg-black text-white font-medium rounded-lg flex items-center justify-center gap-2 transition shadow-sm">
                     <i data-lucide="download" class="w-4 h-4"></i>
                     <span>Descargar Video MP4 (<span id="btn-dur-label">5s</span>)</span>
@@ -487,35 +452,28 @@
         </main>
     </div>
 
-    <!-- Floating Magnifier Element (Mobile Finger Offset Zoom) -->
     <div id="touch-magnifier">
         <canvas id="magCanvas" width="110" height="110"></canvas>
     </div>
 
-    <!-- Minimal Toast Notification -->
     <div id="toast" class="fixed bottom-4 right-4 bg-gray-900 text-white text-xs px-4 py-2.5 rounded-lg shadow-lg flex items-center space-x-2.5 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
         <i data-lucide="info" class="w-3.5 h-3.5 text-gray-300 shrink-0"></i>
         <span id="toast-message">Mensaje</span>
     </div>
 
-
-       <!-- ESPACIO FINAL -->
 <div style="height: 100px;"></div>
 
-
 <article class="seo-tool-wrapper">
-    <!-- Cabecera optimizada con jerarquía clara -->
+
     <header class="tool-seo-header">
         <h2>Animador de Fotos con IA Online: Dale Movimiento a tus Imágenes</h2>
         <p class="tool-subtitle">Transforma imágenes estáticas en videos animados seleccionando áreas precisas con el pincel inteligente. 100% gratis y sin registros.</p>
     </header>
 
-    <!-- Aquí va tu herramienta actual (Canvas, Sidebar, Controles) -->
     <div class="tool-interactive-container">
-        <!-- [Tu código actual de la app de animación] -->
+
     </div>
 
-    <!-- Sección de Texto SEO Informativo (Invisible al inicio si usas pestañas, o fluido al final) -->
     <section class="tool-editorial-content">
         <h2>¿Por qué usar nuestro animador de zonas estáticas?</h2>
         <p>En el marketing digital actual, el contenido en movimiento genera hasta un 300% más de interacción que una fotografía estática. Sin embargo, las herramientas de animación tradicionales suelen deformar toda la imagen o requieren costosas suscripciones profesionales. Esta utilidad resuelve este problema permitiéndote aplicar <strong>efectos cinemagraphs y micro-animaciones</strong> de forma localizada.</p>
@@ -535,26 +493,20 @@
             </div>
         </div>
     </section>
+
 </article>
 
-
-
-       <!-- ESPACIO FINAL -->
 <div style="height: 100px;"></div>
 
-    <!-- Main JavaScript Application Logic -->
     <script>
-        // Init Icons
-        lucide.createIcons();
 
-        // Sample Tesla Clean SVG
+lucide.createIcons();
+
         const TESLA_SAMPLE_SVG = `
         <svg xmlns="http://www.w3.org/2000/svg" width="600" height="1066" viewBox="0 0 600 1066">
             <rect width="600" height="1066" fill="#FFFFFF"/>
             <rect x="20" y="20" width="560" height="1026" fill="none" stroke="#E5E7EB" stroke-width="2"/>
-            
-
-            <!-- Text Content -->
+        
             <text x="50%" y="80" fill="#111827" font-family="Georgia, serif" font-size="22" font-weight="bold" text-anchor="middle">ANIMA UNA PARTE</text>
             <text x="50%" y="112" fill="#111827" font-family="Georgia, serif" font-size="22" font-weight="bold" text-anchor="middle">DE TU IMAGEN</text>
             <text x="50%" y="144" fill="#111827" font-family="Georgia, serif" font-size="22" font-weight="bold" text-anchor="middle">Y DEJA EL RESTO FIJO.</text>
@@ -567,8 +519,6 @@
             <text x="50%" y="980" fill="#374151" font-family="Georgia, serif" font-size="20" font-style="italic" text-anchor="middle">Mueve solo la zona que elijas.</text>
             <text x="50%" y="1010" fill="#374151" font-family="Georgia, serif" font-size="20" font-style="italic" text-anchor="middle">El resto permanece inmóvil.</text>
 
-
-            <!-- Tesla Illustration -->
             <g id="tesla-character" stroke="#111827" stroke-width="3" fill="none">
                 <!-- Head & Hair -->
                 <path d="M 440 280 C 420 280, 410 320, 410 350 C 410 390, 430 420, 450 420 C 480 420, 490 380, 490 340 C 490 300, 470 280, 440 280 Z" fill="#FFFFFF"/>
@@ -587,7 +537,6 @@
         </svg>
         `;
 
-        // Canvas References
         const baseCanvas = document.getElementById('baseCanvas');
         const animCanvas = document.getElementById('animCanvas');
         const maskCanvas = document.getElementById('maskCanvas');
@@ -596,26 +545,22 @@
         const ctxAnim = animCanvas.getContext('2d');
         const ctxMask = maskCanvas.getContext('2d');
 
-        // Offscreen Canvas for strict clipping
         const offCanvas = document.createElement('canvas');
         const ctxOff = offCanvas.getContext('2d');
 
-        // Magnifier elements
         const touchMagnifier = document.getElementById('touch-magnifier');
         const magCanvas = document.getElementById('magCanvas');
         const ctxMag = magCanvas.getContext('2d');
 
-        // State Variables
         let currentImage = new Image();
         let isDrawing = false;
-        let currentTool = 'brush'; // 'brush' or 'eraser'
+        let currentTool = 'brush'; 
         let brushSize = 25;
         let isPlaying = false;
         let animationFrameId = null;
         let animationTime = 0;
         let selectedDuration = 5;
 
-        // UI Controls
         const brushSizeInput = document.getElementById('brush-size');
         const brushSizeVal = document.getElementById('brush-size-val');
         const brushDot = document.getElementById('brush-dot');
@@ -632,14 +577,12 @@
         const processingOverlay = document.getElementById('processing-overlay');
         const exportProgress = document.getElementById('export-progress');
 
-        // Initial setup
         window.addEventListener('load', () => {
             loadSVGSample();
             setupEventListeners();
             window.addEventListener('resize', resizeCanvasViewports);
         });
 
-        // Load Default Sample Image
         function loadSVGSample() {
             const blob = new Blob([TESLA_SAMPLE_SVG], { type: 'image/svg+xml' });
             const url = URL.createObjectURL(blob);
@@ -653,7 +596,6 @@
             currentImage.src = url;
         }
 
-        // Initialize Canvases
         function initCanvasDimensions(width, height) {
             baseCanvas.width = width;
             baseCanvas.height = height;
@@ -683,16 +625,14 @@
             frame.style.height = `${baseCanvas.height * scale}px`;
         }
 
-        // Preselect head in sample
         function preselectTeslaHead() {
             ctxMask.clearRect(0, 0, maskCanvas.width, maskCanvas.height);
-            ctxMask.fillStyle = 'rgba(17, 24, 39, 0.35)'; // Charcoal subtle tint
+            ctxMask.fillStyle = 'rgba(17, 24, 39, 0.35)';
             ctxMask.beginPath();
             ctxMask.arc(450, 350, 55, 0, Math.PI * 2);
             ctxMask.fill();
         }
 
-        // Setup Event Listeners
         function setupEventListeners() {
             document.getElementById('image-upload').addEventListener('change', handleImageUpload);
             document.getElementById('btn-sample-tesla').addEventListener('click', loadSVGSample);
@@ -700,7 +640,6 @@
             toolBrushBtn.addEventListener('click', () => setTool('brush'));
             toolEraserBtn.addEventListener('click', () => setTool('eraser'));
 
-            // Pencil Thickness Control
             brushSizeInput.addEventListener('input', (e) => {
                 brushSize = parseInt(e.target.value);
                 brushSizeVal.textContent = `${brushSize} px`;
@@ -718,13 +657,11 @@
                 maskCanvas.style.opacity = e.target.checked ? "1" : "0";
             });
 
-            // Drawing Mouse Events
             maskCanvas.addEventListener('mousedown', startDrawing);
             maskCanvas.addEventListener('mousemove', draw);
             maskCanvas.addEventListener('mouseup', stopDrawing);
             maskCanvas.addEventListener('mouseleave', stopDrawing);
 
-            // Drawing Touch Events (Mobile)
             maskCanvas.addEventListener('touchstart', (e) => {
                 e.preventDefault();
                 const touch = e.touches[0];
@@ -749,16 +686,13 @@
                 hideMagnifier();
             });
 
-            // Playback
             btnTogglePlay.addEventListener('click', toggleAnimation);
             document.getElementById('btn-reset-view').addEventListener('click', resetAnimation);
 
-            // Motion Intensity
             motionIntensityInput.addEventListener('input', (e) => {
                 motionIntensityVal.textContent = `${parseFloat(e.target.value).toFixed(1)}x`;
             });
 
-            // Duration Buttons
             document.querySelectorAll('.dur-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     document.querySelectorAll('.dur-btn').forEach(b => {
@@ -772,37 +706,30 @@
                 });
             });
 
-            // Video Export
             document.getElementById('btn-export-video').addEventListener('click', recordAndDownloadVideo);
         }
 
-        // Touch Magnifier Logic (Floating Glass Bubble)
         function updateMagnifier(touch) {
             const pos = getCanvasPos(touch);
             
-            // Position magnifier bubble relative to viewport
             touchMagnifier.style.display = 'block';
             touchMagnifier.style.left = `${touch.clientX}px`;
             touchMagnifier.style.top = `${touch.clientY}px`;
 
-            // Clear magnifier canvas
             ctxMag.clearRect(0, 0, magCanvas.width, magCanvas.height);
 
-            // Render zoomed portion
             const zoomFactor = 1.8;
             const sourceW = magCanvas.width / zoomFactor;
             const sourceH = magCanvas.height / zoomFactor;
             const sourceX = pos.x - sourceW / 2;
             const sourceY = pos.y - sourceH / 2;
 
-            // Draw base image slice
             ctxMag.drawImage(
                 baseCanvas,
                 sourceX, sourceY, sourceW, sourceH,
                 0, 0, magCanvas.width, magCanvas.height
             );
 
-            // Overlay mask slice if mask is visible
             if (chkShowMask.checked) {
                 ctxMag.drawImage(
                     maskCanvas,
@@ -945,7 +872,6 @@
             return { x: w / 2, y: h / 2 };
         }
 
-        // STRICT ACCURATE MASKING ENGINE
         function renderAnimationFrame(t) {
             const w = animCanvas.width;
             const h = animCanvas.height;
@@ -972,10 +898,8 @@
                 dy = (Math.random() - 0.5) * 3 * intensity;
             }
 
-            // 1. Copy user mask to offscreen
             ctxOff.drawImage(maskCanvas, 0, 0);
 
-            // 2. Composite ONLY inside mask
             ctxOff.globalCompositeOperation = 'source-in';
             ctxOff.save();
             ctxOff.translate(center.x + dx, center.y + dy);
@@ -987,7 +911,6 @@
 
             ctxOff.globalCompositeOperation = 'source-over';
 
-            // 3. Render precise result onto animation canvas
             ctxAnim.drawImage(offCanvas, 0, 0);
         }
 
@@ -998,7 +921,6 @@
             animationFrameId = requestAnimationFrame(animateLoop);
         }
 
-        // VIDEO EXPORT FUNCTIONALITY
         async function recordAndDownloadVideo() {
             if (!isPlaying) startAnimation();
 
@@ -1078,12 +1000,9 @@
         }
     </script>
 
-
-<!-- Footer Real por JS -->
 <div class="footer-here"></div>
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-<!-- MENU COMPLETO Real por JS -->
 <script src="../assets/menu.js"></script>
 
 </body>

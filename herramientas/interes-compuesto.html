@@ -22,7 +22,6 @@
 <meta property="og:title" content="Calculadora de Interés Compuesto Gratis y Confiable | Código Millonario">
 <meta property="og:description" content="Proyecta el crecimiento de tu dinero con una calculadora gratuita de interés compuesto según tu capital, aportaciones, tasa y tiempo.">
 <meta property="og:url" content="https://codigomillonario.blog/herramientas/interes-compuesto.html">
-
 <meta property="og:image" content="https://codigomillonario.blog/assets/png/dinero-negocios-y-patrimonio.webp">
 <meta property="og:image:alt" content="Dinero, negocios y patrimonio | Código Millonario">
 
@@ -45,7 +44,7 @@
   gtag('config', 'G-0826LEMPPY');
 </script>
 
-<!-- Autoridad del medio -->
+<!-- Datos estructurados -->
 <script src="/assets/schema-articulos.js" defer></script>
 
 <!-- Google Fonts Poppins -->
@@ -58,23 +57,8 @@
 
 <body>
 
-
-
-
-
-
-
-
-
-   <!-- ESPACIO FINAL -->
 <div style="height: 200px;"></div>
 
-
-
-
-
-
-<!-- Carga de librerías necesarias para la gráfica -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
@@ -415,14 +399,11 @@
     let totalDeposited = initial;
     let accumulatedInterest = 0;
 
-    // Motor de cálculo riguroso basado en la frecuencia de capitalización seleccionada
     if (compoundFreq === 365) {
-      // Simulación diaria exacta (365 periodos por año)
+
       const totalDays = years * 365;
       const dailyRate = annualRate / 365;
       
-      // Contribución convertida a tasa exacta por día según su frecuencia
-      // Ej: Si es semanal (52), se multiplica por 52 y se divide entre 365 días del año
       const annualContributions = contribution * contribFreq;
       const dailyContribution = annualContributions / 365;
 
@@ -458,7 +439,7 @@
         }
       }
     } else if (compoundFreq === 12) {
-      // Simulación mensual exacta (12 periodos por año)
+
       const totalMonths = years * 12;
       const monthlyRate = annualRate / 12;
       const annualContributions = contribution * contribFreq;
@@ -496,7 +477,7 @@
         }
       }
     } else {
-      // Simulación anual exacta (1 periodo por año)
+
       const totalYears = years;
       const annualContributions = contribution * contribFreq;
 
@@ -592,25 +573,8 @@
   };
 </script>
 
-
-
-
-
-
-
-
-
-   <!-- ESPACIO FINAL -->
 <div style="height: 80px;"></div>
 
-
-
-
-
-
-
-
-<!-- CÓDIGO EDITORIAL INDEPENDIENTE - ESTILO WIKIPEDIA CLÁSICO -->
 <style>
   .wiki-container {
     max-width: 960px;
@@ -623,7 +587,6 @@
     font-size: 14.5px;
   }
 
-  /* Título principal idéntico a Wikipedia */
   .wiki-container h1 {
     font-family: 'Linux Libertine', Georgia, Times, serif;
     font-size: 28px;
@@ -640,7 +603,6 @@
     margin-bottom: 25px;
   }
 
-  /* Subtítulos de sección con la línea gris clásica de Wikipedia */
   .wiki-container h2 {
     font-family: 'Linux Libertine', Georgia, Times, serif;
     font-size: 20px;
@@ -673,7 +635,6 @@
     margin-bottom: 5px;
   }
 
-  /* Estilo de enlaces al clásico color azul Wikipedia */
   .wiki-container a {
     color: #0645ad;
     text-decoration: none;
@@ -683,7 +644,6 @@
     text-decoration: underline;
   }
 
-  /* Cajas de contenidos o notas estilo Wiki */
   .wiki-box {
     background: #f8f9fa;
     border: 1px solid #a2a9b1;
@@ -700,7 +660,6 @@
     color: #202122;
   }
 
-  /* Estructura en dos columnas */
   .wiki-grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -713,7 +672,6 @@
     }
   }
 
-  /* Tabla de resumen */
   .wiki-table-info {
     width: 100%;
     border-collapse: collapse;
@@ -814,32 +772,12 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
- <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
 
-
-
-
-  <!--  Footer  -->
 <div class="footer-here"></div>
-
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-<!-- MENU COMPLETO -->
 <script src="../assets/menu.js"></script>
-
-
 
 </body>
 </html>

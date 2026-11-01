@@ -40,9 +40,8 @@
       gtag('config', 'G-0826LEMPPY');
     </script>
 
-    <!-- Datos estructurados centralizados -->
-    <script src="/assets/schema-articulos.js" defer></script>
-
+<!-- Datos estructurados -->
+<script src="/assets/schema-articulos.js" defer></script>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -75,10 +74,11 @@
             box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.05);
         }
     </style>
+    
 </head>
+
 <body class="min-h-screen flex flex-col justify-between antialiased">
 
-       <!-- ESPACIO FINAL -->
 <div style="height: 100px;"></div>
 
     <div id="cm-game-wrapper" class="w-full max-w-4xl mx-auto px-4 py-6 flex-grow flex flex-col items-center justify-center">
@@ -175,7 +175,6 @@
         </div>
     </div>
 
-  <!-- ESPACIO FINAL -->
 <div style="height: 160px;"></div>
 
     <div class="footer-here"></div>
@@ -193,10 +192,8 @@
         let gameActive = false;
         let ballInPlay = false;
 
-        // Detector de Dispositivo móvil para aplicar velocidad suave adaptativa
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
 
-        // Configuración de velocidades: En móvil se aplica una escala más suave (aprox 45% de la velocidad de PC)
         const mobileFactor = isMobile ? 0.45 : 1.0;
 
         const speedConfigs = {
@@ -240,7 +237,7 @@
         };
 
         let playerPaddle = {
-            width: isMobile ? 110 : 100, // Paleta ligeramente más cómoda en móvil
+            width: isMobile ? 110 : 100, 
             height: 12,
             x: canvas.width / 2 - 50,
             y: canvas.height - 25,
@@ -419,7 +416,6 @@
                 if (aiPaddle.x < 0) aiPaddle.x = 0;
                 if (aiPaddle.x + aiPaddle.width > canvas.width) aiPaddle.x = canvas.width - aiPaddle.width;
 
-                // --- SUB-STEPPING (Antitunelamiento optimizado) ---
                 let subSteps = 6;
                 let subX = ball.speedX / subSteps;
                 let subY = ball.speedY / subSteps;

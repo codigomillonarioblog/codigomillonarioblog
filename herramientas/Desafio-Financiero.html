@@ -42,21 +42,17 @@
   gtag('config', 'G-0826LEMPPY');
 </script>
 
-<!-- Autoridad del medio -->
+<!-- Datos estructurados -->
 <script src="/assets/schema-articulos.js" defer></script>
 
-
-
-
-
-
-  <!-- Tailwind CSS CDN para estilos rápidos y responsivos -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
   
   <style>
-    /* Aislamiento de estilos y animaciones del juego */
+
     .cf-game-root {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
@@ -79,18 +75,17 @@
       animation: cf-glow 3s ease-in-out infinite;
     }
     
-    /* Transiciones suaves para tarjetas */
     .cf-card-flip {
       transition: transform 0.4s ease, opacity 0.3s ease;
     }
   </style>
+
 </head>
+
 <body class="bg-slate-950 text-slate-100 min-h-screen">
 
-  <!-- ENTORNO DEL JUEGO (ENCAPSULADO PARA EVITAR CONFLICTOS CON MENU Y FOOTER) -->
   <div class="cf-game-root max-w-4xl mx-auto px-4 py-8">
 
-    <!-- CABECERA PRINCIPAL Y NAVEGACIÓN -->
     <header class="text-center mb-8">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-3">
         ⚡ Academia de Educación Financiera
@@ -102,7 +97,6 @@
         Aprende a dominar tu dinero, desmonta mitos y consulta al oráculo.
       </p>
 
-      <!-- BOTONES DE NAVEGACIÓN ENTRE JUEGOS -->
       <div class="flex justify-center gap-3 mt-6">
         <button id="cf-tab-myths" class="px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20">
           🎮 Mito o Realidad
@@ -113,12 +107,8 @@
       </div>
     </header>
 
-    <!-- ========================================== -->
-    <!-- SECCIÓN 1: JUEGO MITO O REALIDAD           -->
-    <!-- ========================================== -->
     <section id="cf-section-myths" class="space-y-6">
       
-      <!-- DASHBOARD DE ESTADÍSTICAS -->
       <div class="grid grid-cols-3 gap-3 bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-4">
         <div class="text-center">
           <span class="text-xs text-slate-400 font-semibold block uppercase">Progreso</span>
@@ -134,12 +124,10 @@
         </div>
       </div>
 
-      <!-- BARRA DE TIEMPO -->
       <div class="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-slate-800">
         <div id="cf-timer-bar" class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-full transition-all duration-1000 ease-linear"></div>
       </div>
 
-      <!-- TARJETA PRINCIPAL DEL PREGUNTADO -->
       <div id="cf-question-card" class="cf-card-flip bg-gradient-to-b from-slate-900 to-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
         <div class="flex justify-between items-center mb-4">
           <span id="cf-category-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-emerald-400 border border-emerald-500/20">
@@ -148,14 +136,12 @@
           <span id="cf-timer-text" class="text-xs font-bold text-slate-400">⏱️ 15s</span>
         </div>
 
-        <!-- AFIRMACIÓN -->
         <div class="min-h-[120px] flex items-center justify-center text-center my-4">
           <h2 id="cf-statement" class="text-lg sm:text-2xl font-semibold text-slate-100 leading-relaxed">
             Cargando afirmación financiera...
           </h2>
         </div>
 
-        <!-- BOTONES DE RESPUESTA -->
         <div id="cf-actions" class="grid grid-cols-2 gap-4 mt-6">
           <button id="cf-btn-true" onclick="checkAnswer(true)" class="py-4 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-2xl transition-all shadow-lg shadow-emerald-900/30 hover:scale-[1.02] active:scale-[0.98]">
             VERDADERO
@@ -165,7 +151,6 @@
           </button>
         </div>
 
-        <!-- PANEL DE EXPLICACIÓN (OCULTO INICIALMENTE) -->
         <div id="cf-explanation-panel" class="hidden mt-6 pt-6 border-t border-slate-800 text-center animate-fadeIn">
           <div id="cf-result-badge" class="inline-block px-4 py-1.5 rounded-full text-sm font-extrabold mb-3"></div>
           <p id="cf-explanation-text" class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6"></p>
@@ -175,7 +160,6 @@
         </div>
       </div>
 
-      <!-- PANTALLA DE RESULTADOS FINALES -->
       <div id="cf-results-screen" class="hidden bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center">
         <div class="text-5xl mb-4">🏆</div>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">¡Partida Completada!</h2>
@@ -202,20 +186,15 @@
       </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SECCIÓN 2: ORÁCULO DE LA BOLA DE CRISTAL   -->
-    <!-- ========================================== -->
     <section id="cf-section-oracle" class="hidden space-y-6">
       <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 text-center relative overflow-hidden">
         
-        <!-- BOLA DE CRISTAL MEJORADA -->
         <div class="relative py-6">
           <div id="cf-crystal-ball" class="cf-animate-float cf-animate-glow w-36 h-36 mx-auto rounded-full bg-gradient-to-br from-emerald-400 via-teal-600 to-slate-900 border-2 border-emerald-300/40 flex items-center justify-center text-5xl shadow-2xl cursor-pointer transition-transform active:scale-95" onclick="consultOracle()">
             🔮
           </div>
         </div>
 
-        <!-- RESPUESTA DEL ORÁCULO CON TIPOGRAFÍA ELEGANTE -->
         <div class="min-h-[100px] flex items-center justify-center px-4 my-4">
           <p id="cf-oracle-text" class="cf-serif text-lg sm:text-2xl text-emerald-200 italic font-medium leading-relaxed">
             "Haz clic en la bola de cristal para recibir un consejo financiero ancestral..."
@@ -230,10 +209,9 @@
 
   </div>
 
-  <!-- SCRIPT CON LA LÓGICA Y LAS 200 PREGUNTAS ÚNICAS -->
   <script>
     (function() {
-      // 200 PREGUNTAS FINANCIERAS ÚNICAS SIN REPETIR
+
       const questionBank = [
         { statement: "Una tarjeta de crédito representa ingresos adicionales que puedes gastar libremente.", isTrue: false, category: "Crédito", explanation: "Falso. La tarjeta de crédito es un préstamo de corto plazo. Gastar dinero que no tienes genera deudas e intereses." },
         { statement: "Tener un fondo de emergencia equivale a guardar dinero para imprevistos sin tocar tus inversiones.", isTrue: true, category: "Ahorro", explanation: "Verdadero. Un fondo de emergencia (3 a 6 meses de gastos) te protege de liquidez sin vender activos con pérdidas." },
@@ -420,7 +398,6 @@
         "No pongas todos tus huevos en la misma canasta de inversión."
       ];
 
-      // ESTADOS Y VARIABLES DEL JUEGO
       let currentQuestions = [];
       let currentIndex = 0;
       let score = 0;
@@ -431,7 +408,6 @@
       let timeLeft = 15;
       const TOTAL_QUESTIONS = 10;
 
-      // DOM Elements
       const sectionMyths = document.getElementById("cf-section-myths");
       const sectionOracle = document.getElementById("cf-section-oracle");
       const tabMyths = document.getElementById("cf-tab-myths");
@@ -452,7 +428,6 @@
       const resultBadge = document.getElementById("cf-result-badge");
       const explanationText = document.getElementById("cf-explanation-text");
 
-      // NAVEGACIÓN ENTRE PESTAÑAS
       tabMyths.addEventListener("click", () => {
         sectionMyths.classList.remove("hidden");
         sectionOracle.classList.add("hidden");
@@ -467,7 +442,6 @@
         tabMyths.className = "px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700";
       });
 
-      // LÓGICA DEL JUEGO
       function shuffleArray(arr) {
         return [...arr].sort(() => Math.random() - 0.5);
       }
@@ -567,8 +541,6 @@
         document.getElementById("cf-final-accuracy").textContent = `${correctAnswersCount} / ${TOTAL_QUESTIONS}`;
         document.getElementById("cf-final-streak").textContent = `x${maxStreak}`;
       }
-
-      // ORÁCULO
       window.consultOracle = function() {
         const oracleText = document.getElementById("cf-oracle-text");
         const crystalBall = document.getElementById("cf-crystal-ball");
@@ -596,9 +568,9 @@
     })();
   </script>
 
-  <!-- INTEGRACIÓN CON TU MENÚ Y FOOTER EXTERNOS -->
   <div class="footer-here"></div>
   <script src="https://codigomillonario.blog/assets/footer.js"></script>
+  
   <script src="../assets/menu.js"></script>
 
 </body>

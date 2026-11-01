@@ -42,15 +42,12 @@
   gtag('config', 'G-0826LEMPPY');
 </script>
 
-<!-- Autoridad del medio -->
+<!-- Datos estructurados -->
 <script src="/assets/schema-articulos.js" defer></script>
-
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -83,7 +80,7 @@
             background-color: #ffffff;
             color: #111827;
         }
-        /* Estilos sutiles y bordes delgados */
+
         .thin-border {
             border: 1px solid #e5e7eb;
         }
@@ -101,7 +98,7 @@
             border-color: #9ca3af !important;
             box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.1);
         }
-        /* Ocultar flechas de inputs numéricos */
+
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -115,10 +112,6 @@
 
     </style>
 
-
-
-
-<!-- ESTILOS CSS PARA FAQ -->
 <style>
 
   .faq-container {
@@ -133,7 +126,6 @@
     padding-right: 5%;
   }
 
-  /* CENTRAR ÚNICAMENTE EL TÍTULO Y EL SUBTÍTULO */
   .faq-container > .faq-title,
   .faq-container > .faq-subtitle {
     width: 100%;
@@ -189,17 +181,14 @@
 
 </style>
 
-
 </head>
+
 <body class="bg-white min-h-screen flex flex-col justify-between antialiased">
 
-    <!-- MENU COMPLETO Real por JS -->
     <script src="../assets/menu.js"></script>
 
-        <!-- ESPACIO FINAL -->
     <div style="height: 100px;"></div>
 
-    <!-- Header Principal Elegante Estilo 'Medio Grande' -->
     <header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 thin-border-b">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
@@ -214,7 +203,7 @@
                  Calcula cuánto debes ajustar tus precios de venta para compensar la inflación y mantener el valor de tus ingresos.
                 </p>
             </div>
-            <!-- Seleccionar Moneda Global -->
+
             <div class="flex items-center gap-3 bg-gray-50 p-2.5 rounded-lg border border-gray-200 self-start md:self-center">
                 <i data-lucide="globe" class="w-5 h-5 text-gray-500"></i>
                 <label for="currencySelect" class="text-xs font-medium text-gray-600 uppercase">Moneda:</label>
@@ -235,11 +224,9 @@
         </div>
     </header>
 
-    <!-- Contenido Principal -->
     <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            <!-- PANEL DE ENTRADA DE DATOS (Izquierda 5 cols) -->
             <section class="lg:col-span-5 space-y-6">
                 <div class="pb-3 thin-border-b flex items-center justify-between">
                     <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
@@ -250,7 +237,7 @@
                 </div>
 
                 <div class="space-y-5">
-                    <!-- Campo: Costo del Producto/Servicio -->
+
                     <div>
                         <div class="flex justify-between items-center mb-1">
                             <label for="inputCost" class="text-xs font-semibold text-gray-700 uppercase tracking-wider">Costo Actual por Unidad</label>
@@ -262,7 +249,6 @@
                         </div>
                     </div>
 
-                    <!-- Campo: Precio de Venta Actual -->
                     <div>
                         <div class="flex justify-between items-center mb-1">
                             <label for="inputPrice" class="text-xs font-semibold text-gray-700 uppercase tracking-wider">Precio de Venta Actual</label>
@@ -275,7 +261,7 @@
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                        <!-- Tasa de Inflación Anual -->
+
                         <div>
                             <label for="inputInflation" class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Inflación Anual (%)</label>
                             <div class="relative flex items-center">
@@ -284,7 +270,6 @@
                             </div>
                         </div>
 
-                        <!-- Aumento Específico Insumos -->
                         <div>
                             <label for="inputCostIncrease" class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Aumento Insumos (%)</label>
                             <div class="relative flex items-center">
@@ -294,7 +279,6 @@
                         </div>
                     </div>
 
-                    <!-- Frecuencia / Periodo -->
                     <div>
                         <label for="selectHorizon" class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Horizonte de Ajuste</label>
                         <select id="selectHorizon" class="w-full px-3.5 py-2 bg-white border border-gray-300 rounded-md text-gray-800 text-sm font-medium focus:border-gray-500 transition-all cursor-pointer">
@@ -305,7 +289,6 @@
                     </div>
                 </div>
 
-                <!-- Resumen Rápido de Margen Actual -->
                 <div class="pt-4 thin-border-t">
                     <div class="flex justify-between items-center py-1.5">
                         <span class="text-xs font-medium text-gray-500 uppercase">Margen Ganancia Actual (Nominal):</span>
@@ -318,10 +301,8 @@
                 </div>
             </section>
 
-            <!-- PANEL DE RESULTADOS Y GRÁFICAS (Derecha 7 cols) -->
             <section class="lg:col-span-7 space-y-6">
                 
-                <!-- Tarjeta Principal: Precio Sugerido -->
                 <div class="p-6 bg-gray-50/50 rounded-xl thin-border">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 thin-border-b pb-4">
                         <div>
@@ -354,7 +335,6 @@
                     </div>
                 </div>
 
-                <!-- Métricas Impacto sin Ajustar -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="p-4 bg-white rounded-xl thin-border">
                         <div class="flex items-center justify-between mb-2">
@@ -375,7 +355,6 @@
                     </div>
                 </div>
 
-                <!-- Gráfica de Comparación Interactiva (Chart.js) -->
                 <div class="p-5 bg-white rounded-xl thin-border">
                     <div class="flex items-center justify-between mb-4 pb-2 thin-border-b">
                         <h4 class="text-xs font-bold text-gray-700 uppercase tracking-wider flex items-center gap-2">
@@ -393,10 +372,6 @@
         </div>
     </main>
 
-
-
-
-<!-- ESTRUCTURA HTML DE FAQ (PARA COLOCAR EN LA COLUMNA DERECHA) -->
 <div class="faq-container">
   <h2 class="faq-title">Preguntas Frecuentes</h2>
   <p class="faq-subtitle">Aclaraciones sobre el ajuste de precios por inflación.</p>
@@ -439,29 +414,22 @@
   </div>
 </div>
 
-
-        <!-- ESPACIO FINAL -->
     <div style="height: 100px;"></div>
 
-
-    <!-- Footer Real por JS -->
     <div class="footer-here"></div>
     <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-    <!-- JS de la Herramienta -->
     <script>
-        // Inicializar Lucide Icons
-        document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('DOMContentLoaded', () => {
             if (window.lucide) {
                 lucide.createIcons();
             }
         });
 
-        // Configuración Global y Variables
         let currentCurrency = '$';
         let priceChart = null;
 
-        // Elementos DOM
         const currencySelect = document.getElementById('currencySelect');
         const inputCost = document.getElementById('inputCost');
         const inputPrice = document.getElementById('inputPrice');
@@ -469,7 +437,6 @@
         const inputCostIncrease = document.getElementById('inputCostIncrease');
         const selectHorizon = document.getElementById('selectHorizon');
 
-        // Resultados Labels
         const labelCurrentMargin = document.getElementById('labelCurrentMargin');
         const labelCurrentProfit = document.getElementById('labelCurrentProfit');
         const resSuggestedPrice = document.getElementById('resSuggestedPrice');
@@ -480,27 +447,22 @@
         const resUnadjustedMargin = document.getElementById('resUnadjustedMargin');
         const resMarginDrop = document.getElementById('resMarginDrop');
         const resPurchasingPowerLoss = document.getElementById('resPurchasingPowerLoss');
-
-        // --- FUNCIONES DE FORMATEO (Formato de separador de miles por punto) ---
-        
-        // Formatea un string numérico ingresado por el usuario agregando puntos de millar
+       
         function formatInputNumber(value) {
-            // Eliminar todo lo que no sea número
+
             let clean = value.replace(/\D/g, '');
             if (!clean) return '';
-            // Formatear con puntos de miles
+
             return new Intl.NumberFormat('de-DE').format(clean);
         }
 
-        // Parsea el valor con puntos a un número flotante Javascript
         function parseFormattedNumber(value) {
             if (!value) return 0;
-            // Remover puntos
+
             let clean = value.toString().replace(/\./g, '');
             return parseFloat(clean) || 0;
         }
 
-        // Formatea números finales para mostrar con moneda
         function formatCurrency(number) {
             const formatted = new Intl.NumberFormat('de-DE', {
                 maximumFractionDigits: 0
@@ -512,7 +474,6 @@
             return (number).toFixed(1).replace('.', ',') + '%';
         }
 
-        // --- MANEJO DE EVENTOS EN INPUTS DE TEXTO ---
         [inputCost, inputPrice].forEach(input => {
             input.addEventListener('input', (e) => {
                 let cursorPosition = e.target.selectionStart;
@@ -521,7 +482,6 @@
                 let formatted = formatInputNumber(e.target.value);
                 e.target.value = formatted;
 
-                // Ajustar cursor
                 let newLength = formatted.length;
                 cursorPosition = cursorPosition + (newLength - originalLength);
                 e.target.setSelectionRange(cursorPosition, cursorPosition);
@@ -536,12 +496,11 @@
 
         currencySelect.addEventListener('change', (e) => {
             currentCurrency = e.target.value;
-            // Actualizar los símbolos visuales
+
             document.querySelectorAll('.currency-symbol').forEach(el => el.textContent = currentCurrency);
             calculateAll();
         });
 
-        // --- CÁLCULOS MATEMÁTICOS Y LÓGICA FINANCIERA ---
         function calculateAll() {
             const cost = parseFormattedNumber(inputCost.value);
             const price = parseFormattedNumber(inputPrice.value);
@@ -549,23 +508,18 @@
             const costIncreaseAnnual = parseFloat(inputCostIncrease.value) || 0;
             const months = parseInt(selectHorizon.value) || 12;
 
-            // Ajustar tasas por el período seleccionado
             const periodFactor = months / 12;
             const periodInflation = inflationAnnual * periodFactor;
             const periodCostIncrease = costIncreaseAnnual * periodFactor;
 
-            // 1. Margen Nominal Actual
             let currentProfit = price - cost;
             let currentMarginPercent = price > 0 ? (currentProfit / price) * 100 : 0;
 
             labelCurrentMargin.textContent = formatPercent(currentMarginPercent);
             labelCurrentProfit.textContent = formatCurrency(currentProfit);
 
-            // 2. Cálculo del Nuevo Costo proyectado con el aumento de insumos
             const newCost = cost * (1 + (periodCostIncrease / 100));
 
-            // 3. Nuevo Precio Sugerido para MANTENER exactamente el mismo margen real de ganancia
-            // Formula: Nuevo Precio = Nuevo Costo / (1 - Margen Deseado en decimal)
             let suggestedPrice = price;
             if (currentMarginPercent < 100) {
                 const targetMarginDecimal = currentMarginPercent / 100;
@@ -574,7 +528,6 @@
                 suggestedPrice = newCost * 1.5;
             }
 
-            // Si el precio sugerido no cubre al menos la inflación general del precio anterior
             const minInflationPrice = price * (1 + (periodInflation / 100));
             if (suggestedPrice < minInflationPrice) {
                 suggestedPrice = minInflationPrice;
@@ -583,19 +536,15 @@
             const priceIncreaseVal = suggestedPrice - price;
             const priceIncreasePercent = price > 0 ? (priceIncreaseVal / price) * 100 : 0;
 
-            // 4. Margen sin ajustar precio
             let unadjustedProfit = price - newCost;
             let unadjustedMarginPercent = price > 0 ? (unadjustedProfit / price) * 100 : 0;
             let marginDrop = currentMarginPercent - unadjustedMarginPercent;
 
-            // 5. Pérdida de Poder Adquisitivo de la ganancia
-            // Ajustamos la ganancia actual por la inflación general
             let realPurchasingPowerLoss = currentProfit - (currentProfit / (1 + (periodInflation / 100)));
             if (unadjustedProfit < currentProfit) {
                 realPurchasingPowerLoss += (currentProfit - unadjustedProfit);
             }
 
-            // Actualizar la interfaz
             resSuggestedPrice.textContent = formatCurrency(suggestedPrice);
             resPriceIncreasePercent.textContent = `+${formatPercent(priceIncreasePercent)} de incremento`;
             resPriceIncreaseVal.textContent = `+${formatCurrency(priceIncreaseVal)}`;
@@ -606,11 +555,9 @@
             resMarginDrop.textContent = `-${formatPercent(marginDrop)}`;
             resPurchasingPowerLoss.textContent = formatCurrency(realPurchasingPowerLoss);
 
-            // Actualizar Gráfica
             updateChart(price, suggestedPrice, cost, newCost, currentProfit, (suggestedPrice - newCost));
         }
 
-        // --- RENDERIZADO DE LA GRÁFICA INTERACTIVA ---
         function updateChart(currentPrice, suggestedPrice, currentCost, newCost, currentProfit, newProfit) {
             const ctx = document.getElementById('priceChart').getContext('2d');
 
@@ -688,10 +635,10 @@
             }
         }
 
-        // Ejecución Inicial
         window.onload = function() {
             calculateAll();
         };
     </script>
+    
 </body>
 </html>

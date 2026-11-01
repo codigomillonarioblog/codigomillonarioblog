@@ -40,7 +40,7 @@
       gtag('config', 'G-0826LEMPPY');
     </script>
 
-    <!-- Datos estructurados centralizados -->
+    <!-- Datos estructurados -->
     <script src="/assets/schema-articulos.js" defer></script>
 
 <!-- Google Fonts Poppins -->
@@ -48,9 +48,6 @@
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-
-
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -61,12 +58,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-
-
-
-
  <style>
-/* --- ESTILOS SECCIÓN PREGUNTAS FRECUENTES (FAQ) --- */
+
 .faq-section {
   padding: 80px 20px;
   background-color: #ffffff;
@@ -160,7 +153,6 @@
   transition: transform 0.25s ease;
 }
 
-/* Línea Horizontal */
 .faq-icon::before {
   top: 7px;
   left: 0;
@@ -168,7 +160,6 @@
   height: 2px;
 }
 
-/* Línea Vertical (Símbolo +) */
 .faq-icon::after {
   top: 0;
   left: 7px;
@@ -176,7 +167,6 @@
   height: 16px;
 }
 
-/* Transformación a menos (-) al abrir */
 .faq-item[open] .faq-icon::after {
   transform: rotate(90deg);
   opacity: 0;
@@ -210,14 +200,9 @@
   }
 }
 
-
-
-
-
-/* --- ESTILOS PARA EL BOTÓN CENTRADO --- */
 .tool-action-wrap {
   display: flex;
-  justify-content: center; /* Centra el botón horizontalmente en PC y móviles */
+  justify-content: center; 
   width: 100%;
   margin-top: 14px;
   text-align: center;
@@ -229,9 +214,9 @@
   justify-content: center;
   gap: 8px;
   padding: 8px 16px;
-  background-color: #f2f5f6; /* Fondo gris pálido sutil */
-  color: #102b55; /* Color azul marino corporativo */
-  border: 1px solid #e7eaee; /* Línea delgada acorde al estilo general */
+  background-color: #f2f5f6; 
+  color: #102b55; 
+  border: 1px solid #e7eaee; 
   border-radius: 6px;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 0.74rem;
@@ -241,11 +226,10 @@
 }
 
 .btn-complete-calc .btn-arrow {
-  stroke: #4f8fd2; /* Azul para la flecha */
+  stroke: #4f8fd2; 
   transition: transform 0.2s ease;
 }
 
-/* Efecto Hover */
 .btn-complete-calc:hover {
   background-color: #eaf0f2;
   border-color: #4f8fd2;
@@ -253,7 +237,7 @@
 }
 
 .btn-complete-calc:hover .btn-arrow {
-  transform: translateX(3px); /* Desplazamiento suave de la flecha */
+  transform: translateX(3px); 
 }
     </style>
 
@@ -286,13 +270,13 @@
             accent-color: #10b981;
         }
     </style>
+
 </head>
+
 <body class="bg-white text-gray-900 antialiased">
 
-    <!-- MENU COMPLETO Real por JS -->
     <script src="../assets/menu.js"></script>
 
-    <!-- SECCIÓN HERO DE LA PÁGINA -->
     <section class="hero-bg relative text-white isolation-auto">
         <div class="hero-shade absolute inset-0 -z-10"></div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-28 sm:pb-32">
@@ -310,7 +294,6 @@
             </div>
         </div>
 
-        <!-- TRES TARJETAS DE CARACTERÍSTICAS SOLICITADAS -->
         <div class="max-w-5xl mx-auto px-4 sm:px-6 relative -bottom-10 sm:-bottom-12">
             <div class="bg-white text-gray-900 rounded-xl shadow-xl border border-gray-100 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 p-4 sm:p-6 text-center">
                 <article class="p-4 space-y-1">
@@ -332,10 +315,8 @@
         </div>
     </section>
 
-    <!-- CONTENEDOR PRINCIPAL DE LOS 4 SIMULADORES FINANCIEROS -->
     <main id="simuladores-section" class="max-w-4xl mx-auto px-4 sm:px-6 pt-24 pb-16 space-y-20">
 
-<!-- Encabezado de la Sección de Simuladores -->
 <header class="text-center space-y-2">
     <span class="text-xs font-bold tracking-widest text-[#4f8fd2] uppercase">Calculadoras Financieras</span>
     <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Simuladores de Ahorro e Inversión</h2>
@@ -344,9 +325,6 @@
     </p>
 </header>
 
-        <!-- ========================================== -->
-        <!-- SIMULADOR 1: CDT -->
-        <!-- ========================================== -->
         <section id="cdt-simulator" class="space-y-8 pb-16 subtle-border-b">
             <div class="flex items-center justify-between">
                 <div>
@@ -388,9 +366,6 @@
             </div>
         </section>
 
-        <!-- ========================================== -->
-        <!-- SIMULADOR 2: INTERÉS COMPUESTO -->
-        <!-- ========================================== -->
         <section id="compound-simulator" class="space-y-8 pb-16 subtle-border-b">
             <div class="flex items-center justify-between">
                 <div>
@@ -435,7 +410,7 @@
             </div>
 
 <br>
-            <!-- Botón para Calculadora Más Completa -->
+
 <div class="tool-action-wrap">
   <a href="./interes-compuesto.html" class="btn-complete-calc">
     <span>Ver calculadora completa</span>
@@ -447,12 +422,6 @@
 </div>
         </section>
 
-
-
-
-        <!-- ========================================== -->
-        <!-- SIMULADOR 3: INVERSIÓN GENERAL & INFLACIÓN -->
-        <!-- ========================================== -->
         <section id="general-simulator" class="space-y-8 pb-16 subtle-border-b">
             <div class="flex items-center justify-between">
                 <div>
@@ -494,9 +463,6 @@
             </div>
         </section>
 
-        <!-- ========================================== -->
-        <!-- SIMULADOR 4: METAS FINANCIERAS -->
-        <!-- ========================================== -->
         <section id="goals-simulator" class="space-y-8 pb-12">
             <div class="flex items-center justify-between">
                 <div>
@@ -543,7 +509,6 @@
 
     </main>
 
-    <!-- RESTO DEL CONTENIDO INFORMATIVO -->
     <section class="bg-gray-50 py-16 border-t border-gray-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="relative">
@@ -568,13 +533,9 @@
     </p>
 </div>
 
-
         </div>
     </section>
 
-
-
-<!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
 <section class="faq-section">
   <div class="faq-container">
     <div class="faq-header">
@@ -584,8 +545,8 @@
     </div>
 
     <div class="faq-accordion">
-      <!-- Pregunta 1 -->
-      <details class="faq-item" open>
+
+        <details class="faq-item" open>
         <summary class="faq-question">
           <span>¿Los resultados de las calculadoras son exactos o garantizados?</span>
           <span class="faq-icon" aria-hidden="true"></span>
@@ -595,7 +556,6 @@
         </div>
       </details>
 
-      <!-- Pregunta 2 -->
       <details class="faq-item">
         <summary class="faq-question">
           <span>¿Cuál es la diferencia entre un CDT y el interés compuesto?</span>
@@ -606,7 +566,6 @@
         </div>
       </details>
 
-      <!-- Pregunta 3 -->
       <details class="faq-item">
         <summary class="faq-question">
           <span>¿Cómo afecta la inflación al rendimiento de una inversión?</span>
@@ -617,7 +576,6 @@
         </div>
       </details>
 
-      <!-- Pregunta 4 -->
       <details class="faq-item">
         <summary class="faq-question">
           <span>¿Se almacenan los datos que introduzco en las calculadoras?</span>
@@ -629,16 +587,12 @@
       </details>
     </div>
   </div>
+
 </section>
 
-
-
-
-    <!-- Footer Real por JS -->
     <div class="footer-here"></div>
     <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-    <!-- LÓGICA DE SIMULADORES Y GRÁFICAS -->
     <script>
         function formatCurrency(value) {
             return new Intl.NumberFormat('es-CO', {
@@ -942,5 +896,6 @@
             initGoals();
         };
     </script>
+
 </body>
 </html>

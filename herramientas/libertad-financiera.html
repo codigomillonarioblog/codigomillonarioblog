@@ -43,7 +43,7 @@
       gtag('config', 'G-0826LEMPPY');
     </script>
 
-    <!-- Datos estructurados centralizados -->
+    <!-- Datos estructurados -->
     <script src="/assets/schema-articulos.js" defer></script>
 
     <!-- Google Fonts -->
@@ -75,7 +75,6 @@
       .container { width: min(var(--content), calc(100% - 48px)); margin: 0 auto; }
       .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-      /* Cabecera visual de ayuda */
       .help-hero {
         min-height: 340px;
         display: flex;
@@ -90,9 +89,6 @@
       .hero-copy h1 { font-size: clamp(27px, 3vw, 38px); line-height: 1.1; margin: 0 0 8px; font-weight: 700; letter-spacing: -.8px; }
       .hero-copy p { max-width: 485px; margin: 0 0 20px; font-size: 13px; color: #f1eeee; }
 
-
-
-/* Temas populares */
 .popular-section{padding:42px 0 46px;background:#fff}
 .popular-section h2,.news-section>.container>h2,.connect-section h2{margin:0 0 24px;text-align:center;font-size:25px;line-height:1.2;font-weight:700;letter-spacing:-.5px}
 .topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:940px;margin:0 auto}
@@ -104,7 +100,6 @@
 .all-categories{display:block;width:max-content;margin:23px auto 0;font-size:12px;font-weight:700}
 .all-categories span{padding-left:5px;font-size:17px}
 
-/* Bloque amarillo de novedades */
 .news-section{padding:42px 0 46px;background:var(--yellow)}
 .news-section>.container>h2{margin-bottom:24px}
 .news-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:1040px;margin:0 auto}
@@ -119,7 +114,6 @@
 .news-card>p:not(.eyebrow){font-size:12px;line-height:1.5;margin:0 0 8px}
 .read-more{font-size:12px;font-weight:600}
 
-/* Ajustes para teléfonos */
 @media(max-width:640px){
   .popular-section{padding:32px 0 34px}
   .popular-section h2,.news-section>.container>h2,.connect-section h2{font-size:21px;margin-bottom:19px}
@@ -137,9 +131,6 @@
   .news-card>p:not(.eyebrow){font-size:11px;line-height:1.45}
 }
 
-
-
-      /* Artículos recientes y populares */
       .article-lists { padding: 56px 0 58px; background: #fff; }
       .list-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
       .article-box { border: 1px solid #999; border-radius: 15px; padding: 24px 27px 23px; min-height: 300px; }
@@ -154,7 +145,6 @@
       .issue-banner strong { font-size: 14px; }
       .issue-button { margin-left: auto; border: 1px solid #8f7100; padding: 8px 17px; font-size: 11px; font-weight: 700; }
 
-      /* Conecta con la comunidad */
       .connect-section { background: #211e1f; color: #fff; padding: 48px 0 52px; }
       .connect-section h2 { margin-bottom: 25px; }
       .connect-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 13px; }
@@ -164,7 +154,6 @@
       .live-card > span:first-child { position: relative; z-index: 2; max-width: 130px; }
       .coach-illustration { position: absolute; right: -3px; bottom: 0; width: 56%; height: 74%; background: url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=450&q=80") center / cover; border-radius: 55% 0 0 0; }
 
-      /* Promoción de contenido */
       .premium-section { background: var(--yellow); padding: 58px 0 62px; }
       .premium-layout { display: grid; grid-template-columns: 1.05fr 1.45fr 1fr 1fr; gap: 24px; align-items: start; }
       .premium-intro h2 { margin: 4px 0 17px; font-size: 28px; line-height: 1.25; letter-spacing: -.6px; }
@@ -239,10 +228,11 @@
         .promo p:not(.promo-label) { font-size: 10px; }
       }
     </style>
+
 </head>
+
 <body>
 
-    <!-- ESPACIO FINAL -->
   <div style="height: 60px;"></div>
 
   <main class="help-page">
@@ -258,10 +248,9 @@
       </div>
     </section>
 
-
-    <!-- CALCULADORA DE LIBERTAD FINANCIERA (UBICADA EXACTAMENTE DEBAJO DE POPULAR TOPICS) -->
     <div class="financial-freedom-calculator-container">
       <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+      
       <style>
         .financial-freedom-calculator-container {
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -447,7 +436,7 @@
       </style>
 
       <div class="ffc-grid">
-        <!-- COLUMNA IZQUIERDA -->
+
         <div>
           <div class="ffc-box">
             <div class="ffc-box-header">Configuración Global</div>
@@ -511,7 +500,6 @@
           </div>
         </div>
 
-        <!-- COLUMNA DERECHA -->
         <div>
           <div class="ffc-box">
             <div class="ffc-box-header">Estimaciones</div>
@@ -561,7 +549,6 @@
         </div>
       </div>
 
-      <!-- ACORDIONES INFERIORES -->
       <div class="ffc-accordions-grid">
         <div class="ffc-accordion-box" id="ffc_acc_exp">
           <div class="ffc-accordion-header">
@@ -606,20 +593,16 @@
         </div>
       </div>
 
-      <!-- BOTÓN CENTRAL -->
       <div class="ffc-btn-container">
         <button class="ffc-main-btn" id="ffc_calc_btn">Actualizar datos</button>
       </div>
 
-      <!-- RESULTADOS Y GRÁFICA -->
       <div class="ffc-results-wrapper">
         <div class="ffc-results-header">Resultados</div>
         <div class="ffc-results-body" id="ffc_results_content">
-          <!-- Contenido dinámico -->
         </div>
       </div>
 
-      <!-- NOTA EDITORIAL -->
       <div class="ffc-editorial-note">
         <strong>Nota editorial:</strong> Los resultados ofrecidos por esta herramienta son estimaciones orientativas basadas exclusivamente en los datos introducidos y en supuestos teóricos de rentabilidad e inflación. No constituyen asesoramiento financiero ni garantías de rentabilidad futura. La selección de moneda identifica únicamente la unidad de medida de los importes.
       </div>
@@ -931,7 +914,6 @@
       </script>
     </div>
 
-<!-- SECCIÓN DE TEMAS POPULARES -->
 <section class="popular-section">
   <div class="container">
     <h2>Información sobre la calculadora</h2>
@@ -970,7 +952,6 @@
   </div>
 </section>
 
-<!-- SECCIÓN DE NOVEDADES -->
 <section class="news-section">
   <div class="container">
     <h2>Factores que influyen en tu libertad financiera</h2>
@@ -1009,7 +990,6 @@
   </div>
 </section>
 
-<!-- INFORMACIÓN COMPLEMENTARIA DE LA CALCULADORA -->
 <section class="article-lists">
   <div class="container">
     <div class="list-grid">
@@ -1037,7 +1017,6 @@
   </div>
 </section>
 
-<!-- INFORMACIÓN SOBRE LA HERRAMIENTA -->
 <section class="connect-section">
   <div class="container">
     <h2>Utiliza la calculadora de libertad financiera</h2>
@@ -1051,7 +1030,6 @@
   </div>
 </section>
 
-<!-- INFORMACIÓN Y RECURSOS FINANCIEROS -->
 <section class="premium-section">
   <div class="container premium-layout">
     <div class="premium-intro">
@@ -1084,16 +1062,8 @@
 </section>
 </main>
 
+<div style="height: 100px;"></div>
 
-
-
-  <!-- ESPACIO FINAL -->
-  <div style="height: 100px;"></div>
-
-
-
-
-<!-- PREGUNTAS FRECUENTES -->
 <section class="cm-faq" aria-labelledby="cm-faq-title">
   <div class="cm-faq-container">
 
@@ -1161,10 +1131,8 @@
   </div>
 </section>
 
-
 <style>
 
-/* PREGUNTAS FRECUENTES */
 .cm-faq {
   padding: 40px 20px;
   background: #fff;
@@ -1276,14 +1244,11 @@
 
 </style>
 
-
-
-  <!-- ESPACIO FINAL -->
   <div style="height: 200px;"></div>
 
-  <!-- FOOTER Y MENÚ -->
   <div class="footer-here"></div>
   <script src="https://codigomillonario.blog/assets/footer.js"></script>
+
   <script src="../assets/menu.js"></script>
 
 </body>

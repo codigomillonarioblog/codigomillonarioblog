@@ -44,19 +44,16 @@
 <!-- Autoridad del medio -->
 <script src="/assets/schema-articulos.js" defer></script>
 
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-
-    <!-- Tailwind CSS (Estilos base y responsive) -->
+    <!-- Tailwind CSS  -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Chart.js para visualización de datos profesionales -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Google Font: Inter para tipografía limpia y profesional -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -69,7 +66,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Eliminar flechas en inputs de tipo número en Firefox/Chrome si se usan */
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -77,25 +73,20 @@
         }
 
         input[type=number] {
-        appearance: textfield;       /* Propiedad estándar moderna */
-        -moz-appearance: textfield;  /* Compatibilidad con Firefox antiguo */
+        appearance: textfield;       
+        -moz-appearance: textfield;  
         }
 
-        /* Enfoque accesible y sutil para inputs */
         .input-clean:focus {
             outline: none;
             border-color: #111827;
             box-shadow: 0 0 0 1px #111827;
         }
 
-        /* Transiciones suaves */
         .transition-all-fast {
             transition: all 0.2s ease-in-out;
         }
 
-
-
-         /* ESTILOS MINIMALISTAS FAQ */
         .faq-section {
         max-width: 900px;
         margin: 40px auto;
@@ -172,23 +163,17 @@
     }
 
     </style>
+
 </head>
 
-   <!-- ESPACIO FINAL -->
 <div style="height: 100px;"></div>
 
 <body class="bg-white min-h-screen flex flex-col justify-between text-gray-900">
 
-    <!-- MENU COMPLETO Real por JS (Inclusión solicitada sin conflictos) -->
     <script src="../assets/menu.js"></script>
 
-    <!-- CONTENEDOR PRINCIPAL DE LA HERRAMIENTA -->
     <main class="w-full max-w-6xl mx-auto px-4 py-8 md:py-12 flex-grow">
-
-
-
         
-        <!-- CABECERA DE LA HERRAMIENTA -->
         <header class="border-b border-gray-200 pb-6 mb-8 text-center md:text-left">
             <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 block mb-1">Código Millonario • Herramientas Financieras</span>
             <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900">Calculadora de Tarifa por Hora para Freelancers</h1>
@@ -197,14 +182,12 @@
             </p>
         </header>
 
-        <!-- Aclaración de divisa universal - Versión Compacta -->
 <div style="background-color: #f9fafb; border-left: 2px solid #0f172a; padding: 6px 10px; margin-bottom: 16px; font-size: 0.78rem; color: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.3;">
     <strong style="color: #111827;">Cifras universales:</strong> Ingresa los montos en tu moneda local (Pesos, Dólares, Euros, etc.). Los cálculos aplican para cualquier país.
 </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            <!-- SECCIÓN FORMULARIO (COLUMNA IZQUIERDA EN DESKTOP) -->
             <section class="lg:col-span-5 bg-white border border-gray-200 rounded-lg p-6 space-y-6">
                 <div class="border-b border-gray-200 pb-3">
                     <h2 class="text-base font-semibold text-gray-900 uppercase tracking-wide">1. Parámetros de Ingresos y Gastos</h2>
@@ -212,7 +195,6 @@
 
                 <form id="freelanceForm" onsubmit="return false;" class="space-y-4">
                     
-                    <!-- Gastos Fijos Mensuales -->
                     <div>
                         <label for="gastosMensuales" class="block text-xs font-medium text-gray-700 uppercase tracking-wider mb-1">
                             Gastos Fijos Mensuales ($)
@@ -224,7 +206,6 @@
                         <p class="text-[11px] text-gray-500 mt-1">Alquiler, servicios, software, alimentación, transporte, etc.</p>
                     </div>
 
-                    <!-- Ingreso Neto Deseado -->
                     <div>
                         <label for="ingresoDeseado" class="block text-xs font-medium text-gray-700 uppercase tracking-wider mb-1">
                             Ingreso Mensual Neto Deseado ($)
@@ -241,7 +222,7 @@
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- Semanas de descanso -->
+
                         <div>
                             <label for="semanasVacaciones" class="block text-xs font-medium text-gray-700 uppercase tracking-wider mb-1">
                                 Semanas Descanso / Año
@@ -250,7 +231,6 @@
                             <p class="text-[11px] text-gray-500 mt-1">Vacaciones, festivos o enfermedad.</p>
                         </div>
 
-                        <!-- Días laborales por semana -->
                         <div>
                             <label for="diasSemana" class="block text-xs font-medium text-gray-700 uppercase tracking-wider mb-1">
                                 Días Laborales / Semana
@@ -260,7 +240,6 @@
                         </div>
                     </div>
 
-                    <!-- Horas facturables diarias -->
                     <div>
                         <label for="horasDiarias" class="block text-xs font-medium text-gray-700 uppercase tracking-wider mb-1">
                             Horas Facturables / Día
@@ -273,7 +252,6 @@
                         <h2 class="text-base font-semibold text-gray-900 uppercase tracking-wide mb-3">3. Cobertura de Impuestos y Contingencia</h2>
                     </div>
 
-                    <!-- Margen adicional / Impuestos -->
                     <div>
                         <label for="margenImpuestos" class="block text-xs font-medium text-gray-700 uppercase tracking-wider mb-1">
                             Margen Impuestos & Ahorro (%)
@@ -287,13 +265,10 @@
                 </form>
             </section>
 
-            <!-- SECCIÓN RESULTADOS Y GRÁFICOS (COLUMNA DERECHA EN DESKTOP) -->
             <section class="lg:col-span-7 space-y-6">
                 
-                <!-- RESULTADOS PRINCIPALES DE TARIFAS -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     
-                    <!-- Tarifa Mínima -->
                     <div class="bg-white border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
                         <div>
                             <span class="text-xs font-medium uppercase tracking-wider text-gray-500 block">Tarifa Mínima por Hora</span>
@@ -304,7 +279,6 @@
                         </p>
                     </div>
 
-                    <!-- Tarifa Ideal Sugerida -->
                     <div class="bg-white border-2 border-gray-900 rounded-lg p-5 flex flex-col justify-between relative shadow-sm">
                         <span class="absolute top-3 right-3 text-[10px] font-semibold bg-gray-900 text-white px-2 py-0.5 rounded uppercase">Recomendada</span>
                         <div>
@@ -317,7 +291,6 @@
                     </div>
                 </div>
 
-                <!-- EQUIVALENCIAS DE COBRO -->
                 <div class="bg-white border border-gray-200 rounded-lg p-5">
                     <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Equivalencias de Cobro Recomendadas</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -332,7 +305,6 @@
                     </div>
                 </div>
 
-                <!-- DESGLOSE ANUAL EN TARJETAS DE MÉTRICAS -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div class="bg-white border border-gray-200 rounded-lg p-4">
                         <span class="text-[11px] font-medium uppercase tracking-wider text-gray-500 block">Horas Facturables / Año</span>
@@ -350,19 +322,16 @@
                     </div>
                 </div>
 
-                <!-- VISUALIZACIÓN GRÁFICA INTERACTIVA Y BARRA DE COMPOSICIÓN -->
                 <div class="bg-white border border-gray-200 rounded-lg p-5 space-y-6">
                     <div>
                         <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Composición de tu Hora de Trabajo Ideal</h3>
                         
-                        <!-- Barra visual de desglose por hora -->
                         <div class="w-full h-4 bg-gray-100 rounded-full overflow-hidden flex mt-3">
                             <div id="barGastos" class="bg-gray-400 h-full transition-all duration-300" style="width: 33%" title="Gastos"></div>
                             <div id="barGanancia" class="bg-gray-900 h-full transition-all duration-300" style="width: 47%" title="Ganancia Neta"></div>
                             <div id="barImpuestos" class="bg-gray-200 border-l border-gray-300 h-full transition-all duration-300" style="width: 20%" title="Impuestos y Margen"></div>
                         </div>
 
-                        <!-- Leyenda de la barra -->
                         <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-gray-600 mt-3">
                             <div class="flex items-center gap-1.5">
                                 <span class="w-2.5 h-2.5 rounded-full bg-gray-400 inline-block"></span>
@@ -390,9 +359,6 @@
             </section>
         </div>
 
-
-
-        <!-- ESTRUCTURA HTML DE PREGUNTAS FRECUENTES -->
 <section class="faq-section" aria-label="Preguntas Frecuentes">
     <h2 class="faq-title">Preguntas Frecuentes</h2>
 
@@ -445,7 +411,6 @@
     </div>
 </section>
 
-<!-- JAVASCRIPT PARA ACORDEÓN MINIMALISTA -->
 <script>
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
@@ -453,14 +418,12 @@
             const answer = faqItem.querySelector('.faq-answer');
             const isOpen = faqItem.classList.contains('active');
 
-            // Cierra otros items
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
                 item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
                 item.querySelector('.faq-answer').style.maxHeight = null;
             });
 
-            // Abre el actual si no estaba abierto
             if (!isOpen) {
                 faqItem.classList.add('active');
                 button.setAttribute('aria-expanded', 'true');
@@ -470,7 +433,6 @@
     });
 </script>
 
-<!-- SCHEMA JSON-LD PARA SEO DE GOOGLE (RICH SNIPPETS) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -512,22 +474,17 @@
 }
 </script>
 
-
     </main>
 
-       <!-- ESPACIO FINAL -->
 <div style="height: 100px;"></div>
 
-    <!-- FOOTER REAL POR JS (Inclusión solicitada sin conflictos) -->
     <div class="footer-here"></div>
     <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-    <!-- LÓGICA DE LA HERRAMIENTA EN UN ESPACIO DE NOMBRES IIFE PARA EVITAR COLISIONES -->
     <script>
         (function () {
             'use strict';
 
-            // Elementos DOM del Formulario
             const inputGastos = document.getElementById('gastosMensuales');
             const inputIngreso = document.getElementById('ingresoDeseado');
             const inputSemanasVac = document.getElementById('semanasVacaciones');
@@ -535,7 +492,6 @@
             const inputHorasDiarias = document.getElementById('horasDiarias');
             const inputMargenImpuestos = document.getElementById('margenImpuestos');
 
-            // Elementos DOM de Salida
             const txtTarifaMinima = document.getElementById('resTarifaMinima');
             const txtTarifaIdeal = document.getElementById('resTarifaIdeal');
             const txtTarifaDia = document.getElementById('resTarifaDia');
@@ -544,7 +500,6 @@
             const txtGastosAnuales = document.getElementById('resGastosAnuales');
             const txtFacturacionAnual = document.getElementById('resFacturacionAnual');
 
-            // Elementos visuales de la barra de proporción
             const barGastos = document.getElementById('barGastos');
             const barGanancia = document.getElementById('barGanancia');
             const barImpuestos = document.getElementById('barImpuestos');
@@ -554,22 +509,19 @@
 
             let chartInstance = null;
 
-            // Auxiliar para formatear números como moneda con separador de miles por punto (Formatos latinos/europeos)
             function formatCurrency(number) {
                 if (isNaN(number)) return '$0';
                 const rounded = Math.round(number);
                 return '$' + rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
             }
 
-            // Convierte strings formateados con puntos de miles a número puro sin perder precisión
             function parseFormattedNumber(value) {
                 if (!value) return 0;
-                // Elimina todos los puntos y caracteres no numéricos
+
                 const cleanValue = value.toString().replace(/\./g, '').replace(/[^0-9]/g, '');
                 return parseInt(cleanValue, 10) || 0;
             }
 
-            // Formatea dinámicamente el input visualmente mientras el usuario escribe
             function handleMoneyInput(event) {
                 const input = event.target;
                 const cursorPosition = input.selectionStart;
@@ -583,21 +535,19 @@
                     input.value = rawNumericValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
                 }
 
-                // Mantener posición relativa del cursor para mejor usabilidad
                 const newLength = input.value.length;
                 const newCursorPosition = cursorPosition + (newLength - originalLength);
                 try {
                     input.setSelectionRange(newCursorPosition, newCursorPosition);
                 } catch (e) {
-                    // Fallback para navegadores antiguos
+
                 }
 
                 calcularResultados();
             }
 
-            // Función principal de cálculo con fórmulas matemáticas exactas
             function calcularResultados() {
-                // Parseo de entradas
+
                 const gastosMensuales = parseFormattedNumber(inputGastos.value);
                 const ingresoNetoMensual = parseFormattedNumber(inputIngreso.value);
                 const semanasDescanso = Math.max(0, Math.min(50, parseFloat(inputSemanasVac.value) || 0));
@@ -605,7 +555,6 @@
                 const horasDiarias = Math.max(0.1, Math.min(24, parseFloat(inputHorasDiarias.value) || 1));
                 const porcentajeMargen = Math.max(0, Math.min(100, parseFloat(inputMargenImpuestos.value) || 0)) / 100;
 
-                // Fórmulas principales
                 const semanasTrabajablesAño = Math.max(1, 52 - semanasDescanso);
                 const horasFacturablesAño = semanasTrabajablesAño * diasSemana * horasDiarias;
 
@@ -613,18 +562,15 @@
                 const ingresoNetoAnual = ingresoNetoMensual * 12;
                 const necesidadBrutaSinMargen = gastosAnuales + ingresoNetoAnual;
 
-                // Aplicación de margen para contingencias e impuestos
                 const montoMargenImpuestosAnual = necesidadBrutaSinMargen * porcentajeMargen;
                 const facturacionAnualRequerida = necesidadBrutaSinMargen + montoMargenImpuestosAnual;
 
-                // Tarifas resultantes
                 const tarifaMinimaHora = horasFacturablesAño > 0 ? (necesidadBrutaSinMargen / horasFacturablesAño) : 0;
                 const tarifaIdealHora = horasFacturablesAño > 0 ? (facturacionAnualRequerida / horasFacturablesAño) : 0;
 
                 const tarifaDiaIdeal = tarifaIdealHora * horasDiarias;
                 const tarifaProyecto10h = tarifaIdealHora * 10;
 
-                // Renderizar resultados numéricos
                 txtTarifaMinima.textContent = formatCurrency(tarifaMinimaHora);
                 txtTarifaIdeal.textContent = formatCurrency(tarifaIdealHora);
                 txtTarifaDia.textContent = formatCurrency(tarifaDiaIdeal);
@@ -634,14 +580,11 @@
                 txtGastosAnuales.textContent = formatCurrency(gastosAnuales);
                 txtFacturacionAnual.textContent = formatCurrency(facturacionAnualRequerida);
 
-                // Actualizar Barra Proporcional de la Tarifa por Hora
                 actualizarBarraProporciones(gastosAnuales, ingresoNetoAnual, montoMargenImpuestosAnual, facturacionAnualRequerida);
 
-                // Actualizar o crear gráfico interactivo Chart.js
                 actualizarGrafico(gastosAnuales, ingresoNetoAnual, montoMargenImpuestosAnual);
             }
 
-            // Actualiza la barra de desglose visual por hora
             function actualizarBarraProporciones(gastos, ganancia, impuestos, total) {
                 if (total <= 0) {
                     barGastos.style.width = '0%';
@@ -655,7 +598,7 @@
 
                 const pctGastos = Math.round((gastos / total) * 100);
                 const pctGanancia = Math.round((ganancia / total) * 100);
-                const pctImpuestos = Math.max(0, 100 - pctGastos - pctGanancia); // Asegurar que sumen 100% exacto
+                const pctImpuestos = Math.max(0, 100 - pctGastos - pctGanancia);
 
                 barGastos.style.width = pctGastos + '%';
                 barGanancia.style.width = pctGanancia + '%';
@@ -666,7 +609,6 @@
                 lblPctImpuestos.textContent = pctImpuestos + '%';
             }
 
-            // Inicializa y/o actualiza el gráfico con tonos grises y neutros profesionales
             function actualizarGrafico(gastosAnuales, gananciaAnual, impuestosAnuales) {
                 const ctx = document.getElementById('chartDesgloseAnual').getContext('2d');
 
@@ -683,9 +625,9 @@
                             datasets: [{
                                 data: dataValues,
                                 backgroundColor: [
-                                    '#9CA3AF', // Gray-400
-                                    '#111827', // Gray-900
-                                    '#E5E7EB'  // Gray-200
+                                    '#9CA3AF', 
+                                    '#111827', 
+                                    '#E5E7EB' 
                                 ],
                                 borderColor: '#ffffff',
                                 borderWidth: 2,
@@ -725,23 +667,19 @@
                 }
             }
 
-            // Asignar Event Listeners a todos los inputs
             function initEventListeners() {
-                // Inputs monetarios con formato especial de punto
+
                 inputGastos.addEventListener('input', handleMoneyInput);
                 inputIngreso.addEventListener('input', handleMoneyInput);
 
-                // Inputs numéricos estándar
                 inputSemanasVac.addEventListener('input', calcularResultados);
                 inputDiasSemana.addEventListener('input', calcularResultados);
                 inputHorasDiarias.addEventListener('input', calcularResultados);
                 inputMargenImpuestos.addEventListener('input', calcularResultados);
 
-                // Forzar primer renderizado
                 calcularResultados();
             }
 
-            // Ejecutar cuando el DOM esté listo
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', initEventListeners);
             } else {
@@ -750,5 +688,6 @@
 
         })();
     </script>
+
 </body>
 </html>
