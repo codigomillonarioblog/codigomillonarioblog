@@ -49,60 +49,33 @@
 
     <!-- Datos estructurados centralizados -->
     <script src="/assets/schema-articulos.js" defer></script>
+
 </head>
 
 <body>
-<!-- TODO EL CONTENIDO DE LA PÁGINA AQUÍ -->
 
-
-
-
-
-
-
-
-
-
-<!-- ESPACIO ARRIBA -->
- <div style="height: 240px;"></div>
-
-<!-- popup Descargar Guia -->
-<script src="https://codigomillonario.blog/assets/popup.js"></script>
-
-
-<!-- ========================================= -->
-<!-- GOOGLE FONTS -->
-<!-- ========================================= -->
+<div style="height: 240px;"></div>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-
-<!-- =========================
-     HERO TITULO
-========================= -->
-
 <section class="hero-blog">
 
   <div class="hero-blog-content">
 
-    <!-- ETIQUETA -->
     <span class="hero-tag">
       CONTACTO
     </span>
 
-    <!-- TITULO -->
     <h1>
       Canal abierto para consultas y <br>
       mensajes directos
     </h1>
 
-    <!-- LINEA -->
     <span class="hero-line"></span>
 
-    <!-- SUBTITULO -->
     <p>
       Un canal abierto y accesible para que los usuarios puedan enviar sus consultas, dudas o mensajes
       directos de manera rápida y sencilla, asegurando una comunicación fluida y cercana.
@@ -113,10 +86,6 @@
 </section>
 
 <style>
-
-/* =========================
-   HERO BLOG
-========================= */
 
 .hero-blog{
 
@@ -131,14 +100,10 @@
     padding-right: 90px;
 }
 
-/* CONTENIDO */
-
 .hero-blog-content{
 
     max-width: 980px;
 }
-
-/* ETIQUETA */
 
 .hero-tag{
 
@@ -157,8 +122,6 @@
     margin-bottom: 18px;
 }
 
-/* TITULO */
-
 .hero-blog h1{
 
     font-family: 'Inter', sans-serif;
@@ -176,9 +139,6 @@
     margin-bottom: 24px;
 }
 
-
-/* SUBTITULO */
-
 .hero-blog p{
 
     font-family: 'Open Sans', sans-serif;
@@ -193,10 +153,6 @@
 
     margin-bottom: 0;
 }
-
-/* =========================
-   TABLETS
-========================= */
 
 @media (max-width: 1024px){
 
@@ -213,10 +169,6 @@
     }
 
 }
-
-/* =========================
-   TELEFONOS
-========================= */
 
 @media (max-width: 640px){
 
@@ -247,27 +199,17 @@
 
 </style>
 
-
-
-
-
-
-
 <section class="py-20"></section>
 
-
-<!-- FORMULARIO -->
 <main style="font-family: 'Poppins', sans-serif;">
   <section class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10 border border-stone-200">
 
     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6" novalidate>
       
-      <!-- Web3Forms required hidden inputs -->
       <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
       <input type="hidden" name="subject" value="Nuevo mensaje desde Código Millonario">
       <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
 
-      <!-- NOMBRE -->
       <div>
         <label class="block text-sm font-medium mb-2">Nombre</label>
         <input id="name" type="text" name="name" placeholder="Tu nombre completo"
@@ -278,7 +220,6 @@
         </p>
       </div>
 
-      <!-- CORREO -->
       <div>
         <label class="block text-sm font-medium mb-2">Correo electrónico</label>
         <input id="email" type="email" name="email" placeholder="Tu correo electrónico"
@@ -289,7 +230,6 @@
         </p>
       </div>
 
-      <!-- MENSAJE -->
       <div>
         <label class="block text-sm font-medium mb-2">Mensaje</label>
         <textarea id="message" rows="5" name="message" placeholder="Tu mensaje"
@@ -300,7 +240,6 @@
         </p>
       </div>
 
-      <!-- BOTÓN ENVIAR -->
       <button type="submit"
               class="w-full text-white py-3 rounded-xl font-semibold transition"
               style="background-color:#000000;"
@@ -333,7 +272,6 @@ function validateInput(input, error) {
   }
 }
 
-// Validación en tiempo real
 [nameInput, emailInput, messageInput].forEach(input => {
   input.addEventListener('input', () => {
     if(input === nameInput) validateInput(nameInput, nameError);
@@ -342,34 +280,24 @@ function validateInput(input, error) {
   });
 });
 
-// Validación al enviar
 form.addEventListener('submit', (e) => {
   const validName = validateInput(nameInput, nameError);
   const validEmail = validateInput(emailInput, emailError);
   const validMessage = validateInput(messageInput, messageError);
 
   if (!validName || !validEmail || !validMessage) {
-    e.preventDefault(); // Bloquea el envío si algún campo está vacío o inválido
+    e.preventDefault();
   }
 });
 </script>
 
 </main>
 
+<section class="py-40"></section>
 
-
-
-        <!-- ESPACIO FINAL -->
-    <section class="py-40"></section>
-
-
-
-  <!--  Footer  -->
 <div class="footer-here"></div>
-
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-<!-- MENU COMPLETO -->
 <script src="./assets/menu.js"></script>
 
 

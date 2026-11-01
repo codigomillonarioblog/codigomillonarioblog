@@ -53,14 +53,12 @@
 
     <!-- Datos estructurados centralizados -->
     <script src="/assets/schema-articulos.js" defer></script>
+
 </head>
 
 <body>
-<!-- TODO EL CONTENIDO DE LA PÁGINA AQUÍ -->
 
 <style>
-
-/* ===================== GRID DE TARJETAS CENTRADO ===================== */
 
 #articlesGrid {
     display: grid;
@@ -80,8 +78,6 @@
         padding: 0 12px;
     }
 }
-
-/* ===================== TARJETAS ===================== */
 
 .article {
     display: flex;
@@ -126,8 +122,6 @@
     color: inherit;
 }
 
-/* ===================== BLOQUE SUPERIOR ===================== */
-
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
@@ -135,8 +129,6 @@
     margin-bottom: 10px;
     text-align: left;
 }
-
-/* ===================== BADGES ===================== */
 
 .badge {
     font-size: 12px;
@@ -182,8 +174,6 @@
     justify-content: space-between;
 }
 
-/* ===================== TÍTULO ===================== */
-
 .article-title {
     font-family: 'Inter', sans-serif;
     font-size: 1.9rem;
@@ -202,8 +192,6 @@
     }
 }
 
-/* ===================== IMAGEN ===================== */
-
 .article-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -215,8 +203,6 @@
 .article-card:hover img {
     filter: brightness(1.10);
 }
-
-/* ===================== PAGINACIÓN ===================== */
 
 .pager-container {
     margin-top: 40px;
@@ -230,7 +216,6 @@
     color: #ffffff;
 }
 
-/* 🔥 TEXTO TOTAL RESULTADOS Y PÁGINA */
 .pager-container,
 .pager-container *,
 .pager-container .text-sm,
@@ -283,8 +268,6 @@
     pointer-events: none;
 }
 
-/* ===================== INPUTS PAGINACIÓN ===================== */
-
 .select-pages {
     border: 1px solid rgba(255,255,255,0.18);
     background: #111111;
@@ -303,8 +286,6 @@ input[type="number"].goto-page {
     background: #111111;
     color: #ffffff;
 }
-
-/* ===================== MOBILE PAGINATION ===================== */
 
 @media (max-width: 768px) {
 
@@ -390,15 +371,11 @@ input[type="number"].goto-page {
 
 }
 
-/* ===================== OCULTOS ===================== */
-
 .meta,
 .arrow-btn,
 .card-icon {
     display: none !important;
 }
-
-/* ===================== FONDO ===================== */
 
 body,
 html {
@@ -406,31 +383,14 @@ html {
 }
 
 </style>
-
-
-
-
-
-
-
-<!-- ===================================================== 
-     ESPACIO FINAL 
-===================================================== --> 
  
 <div style="height:240px;"></div> 
  
- 
 <link rel="stylesheet" href="./assets/css/secciones.css">
-
-
-
-<!-- SECCIÓN TIPO FINANCIAL TIMES -->
 
 <section class="ft-section">
 
-  <!-- CABECERA -->
-
-  <header class="ft-header">
+<header class="ft-header">
 
 <div class="ft-header-top">
 
@@ -444,11 +404,8 @@ html {
 
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
-
   <main class="ft-main">
 
-<!-- BLOQUE IZQUIERDO -->
 <article class="ft-lead">
 
   <p class="ft-category">FINANZAS PERSONALES</p>
@@ -466,15 +423,13 @@ html {
 
 </article>
 
-<!-- BLOQUE CENTRAL -->
 <article class="ft-feature">
 
   <div class="ft-feature-image">
 
     <img
       src="./assets/png/finanzas-personales-ahorro-dinero-estrategia.webp"
-      alt="Finanzas personales, ahorro y construcción de patrimonio."
-    >
+      alt="Finanzas personales, ahorro y construcción de patrimonio.">
 
   </div>
 
@@ -491,7 +446,6 @@ html {
 
 </article>
 
-<!-- COLUMNA DERECHA -->
 <aside class="ft-editors">
 
   <h2 class="ft-editors-heading">Conceptos esenciales</h2>
@@ -527,30 +481,12 @@ html {
   <div class="ft-bottom-line"></div>
 
 </section>
-
-
-<!-- ===================================================== 
-     ESPACIO FINAL 
-===================================================== --> 
  
 <div style="height:100px;"></div> 
 
-
-
-
-
-
-
-
-            <section class="mb-40" style=>
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- aquí siguen las tarjetas de artículos -->
+<section class="mb-40" style=>
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
   
-
-
-
-
-      <!-- PAGINACIÓN ARRIBA -->
       <div class="max-w-5xl mx-auto mb-6">
         <div class="pager-container">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -583,34 +519,23 @@ html {
         </div>
       </div>
 
-
-
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articlesGrid">
-        <!-- Ejemplo de artículos -->
 
-
-
-
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/mentalidad-de-exito/index.html" class="article-link">
       <div class="article-card">
 
-        <!-- IMAGEN -->
         <div style="position: relative;">
           <img src="./assets/png/el-exito-empieza-en-la-mente.webp" alt="">
         </div>
 
-        <!-- CATEGORÍA -->
         <div class="badge editorial">Selección Categorías</div>
 
-        <!-- TÍTULO -->
         <h2 class="article-title">
           El éxito no es Suerte: es Mentalidad, un Principio Fundamental
         </h2>
 
-        <!-- META -->
         <div class="badge badge-row">
           <span>Mentalidad de Éxito</span>
         </div>
@@ -620,7 +545,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/psicologia-del-dinero/index.html" class="article-link">
@@ -645,13 +569,11 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/mundo-millonario/index.html" class="article-link">
       <div class="article-card">
 
-        <!-- IMAGEN -->
         <div style="position: relative;">
           <img
             src="./assets/png/mundo-millonario-riqueza-y-patrimonio.webp"
@@ -659,17 +581,14 @@ html {
           >
         </div>
 
-        <!-- CATEGORÍA -->
         <div class="badge editorial">
           Mundo Millonario
         </div>
 
-        <!-- TÍTULO -->
         <h2 class="article-title">
         El mundo de los millonarios y las grandes fortunas
         </h2>
 
-        <!-- META -->
         <div class="badge badge-row">
           <span>Riqueza Patrimonial</span>
         </div>
@@ -679,7 +598,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/hechos-lujos-curiosidades/index.html" class="article-link">
@@ -704,7 +622,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/biografia-de-millonarios/index.html" class="article-link">
@@ -729,26 +646,21 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/ahorro/index.html" class="article-link">
       <div class="article-card">
 
-        <!-- IMAGEN -->
         <div style="position: relative;">
           <img src="./assets/png/finanzas-personales-inteligentes.webp" alt="">
         </div>
 
-        <!-- CATEGORÍA -->
         <div class="badge editorial">Selección Categorías</div>
 
-        <!-- TÍTULO -->
         <h2 class="article-title">
           Mentalidad y Hábitos para Ahorrar y Cumplir tus Objetivos
         </h2>
 
-        <!-- META -->
         <div class="badge badge-row">
           <span>Ahorro</span>
         </div>
@@ -758,7 +670,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/inversiones/index.html" class="article-link">
@@ -783,7 +694,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/servicios-financieros/index.html" class="article-link">
@@ -796,7 +706,7 @@ html {
         <div class="badge editorial">Selección Categorías</div>
 
         <h2 class="article-title">
-Análisis de bancos, tarjetas, préstamos y pagos digitales
+         Análisis de bancos, tarjetas, préstamos y pagos digitales
         </h2>
 
         <div class="badge badge-row">
@@ -808,7 +718,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/fundamentos-del-dinero/index.html" class="article-link">
@@ -833,7 +742,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/finanzas-personales/index.html" class="article-link">
@@ -858,26 +766,21 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/deudas/index.html" class="article-link">
       <div class="article-card">
 
-        <!-- IMAGEN -->
         <div style="position: relative;">
           <img src="./assets/png/eliminar-deudas-rapido.webp" alt="">
         </div>
 
-        <!-- CATEGORÍA -->
         <div class="badge editorial">Selección Categorías</div>
 
-        <!-- TÍTULO -->
         <h2 class="article-title">
           El Problema Silencioso de las Deudas que Nunca Desaparecen
         </h2>
 
-        <!-- META -->
         <div class="badge badge-row">
           <span>Deudas</span>
         </div>
@@ -887,7 +790,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/desarrollo-profesional/index.html" class="article-link">
@@ -912,7 +814,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./blog/negocios/index.html" class="article-link">
@@ -937,25 +838,9 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
   </article>
 </div>
 
-
-
-
-
-                      <!-- DUPLICA MÁS ARTÍCULOS PARA PRUEBAS -->
-
-
-
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-<!-- ================= FILOSOFÍA CÓDIGO MILLONARIO ================= -->
 
 <section class="cm-philosophy">
 
@@ -973,10 +858,7 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
 
 </section>
 
-
 <style>
-
-/* ================= FILOSOFÍA ================= */
 
 .cm-philosophy {
 
@@ -989,9 +871,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
     text-align: center;
 
 }
-
-
-/* ================= ETIQUETA ================= */
 
 .cm-philosophy-label {
 
@@ -1019,9 +898,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
 
 }
 
-
-/* ================= FRASE ================= */
-
 .cm-philosophy-quote {
 
     margin: 0;
@@ -1044,9 +920,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
 
 }
 
-
-/* ================= DESCRIPCIÓN ================= */
-
 .cm-philosophy-description {
 
     max-width: 600px;
@@ -1062,9 +935,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
     color: #57534e;
 
 }
-
-
-/* ================= LÍNEA ================= */
 
 .cm-philosophy::after {
 
@@ -1083,9 +953,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
     margin: 28px auto 0;
 
 }
-
-
-/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
@@ -1121,17 +988,7 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
 
 </style>
 
-
-
-
-<!-- ESPACIO ARRIBA -->
- <div style="height: 10px;"></div>
-
-
-
- 
-
-<!-- ===================================================== TÍTULO — PREGUNTAS FRECUENTES ===================================================== -->
+<div style="height: 10px;"></div>
 
 <div class="mm-faq-heading"><span>Preguntas frecuentes</span></div>
 
@@ -1142,16 +999,8 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
 @media(max-width:600px){.mm-faq-heading{margin:55px auto 24px;padding:0 20px}.mm-faq-heading span{font-size:1.5rem;letter-spacing:-.5px}}
 </style>
 
-
-
-
-
-
-<!-- ================= SEPARADOR ================= -->
 <section class="mb-16">
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
-
-    <!-- ================= ACORDEÓN ================= -->
 
    <style>
   .cf-accordion {
@@ -1163,21 +1012,19 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
   }
 
   .cf-accordion-item {
-    background: #ffffff; /* fondo blanco fijo */
-    border-radius: 14px;
+    background: #ffffff; 
     margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08); 
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     transform: translateY(0);
-    will-change: transform; /* optimiza animación */
+    will-change: transform;
     border: 1px solid rgba(0,0,0,0.03);
   }
 
-  /* Animación tipo card con sombra */
   .cf-accordion-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   }
 
   .cf-accordion-header {
@@ -1198,7 +1045,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
     background: #ffffff;
   }
 
-  /* ICONO */
   .cf-accordion-icon {
     width: 12px;
     height: 12px;
@@ -1222,7 +1068,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
     position: relative;
   }
 
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
   .cf-accordion-item.is-open .cf-accordion-content::before {
     content: "";
     display: block;
@@ -1240,9 +1085,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
   }
 </style>
 
-
-
-<!-- ================= SEPARADOR ================= -->
 <div class="cf-accordion-item">
 
   <h3 class="cf-accordion-header">
@@ -1276,8 +1118,6 @@ Análisis de bancos, tarjetas, préstamos y pagos digitales
       </div>
 
 
-
-<!-- ================= SEPARADOR ================= -->
 <div class="cf-accordion-item">
 
   <h3 class="cf-accordion-header">
@@ -1307,13 +1147,9 @@ Además, conocer conceptos como deuda, intereses, inflación, ahorro e inversió
 Las finanzas personales como una herramienta para comprender mejor el dinero, fortalecer la estabilidad económica y construir una base financiera sólida que permita tomar mejores decisiones a lo largo del tiempo.
 </p>
 
-        </div>
-      </div>
+</div>
+    </div>
 
-
-
-
-<!-- ================= SEPARADOR ================= -->
 <div class="cf-accordion-item">
 
   <h3 class="cf-accordion-header">
@@ -1347,11 +1183,9 @@ La educación financiera no depende únicamente del nivel de ingresos, sino de l
 La educación financiera como una herramienta para comprender el dinero, fortalecer las finanzas personales y desarrollar una visión de largo plazo orientada a la construcción de patrimonio.
 </p>
 
-        </div>
-      </div>
+</div>
+  </div>
 
-
-<!-- ================= SEPARADOR ================= -->
 <div class="cf-accordion-item">
 
   <h3 class="cf-accordion-header">
@@ -1391,16 +1225,9 @@ En Código Millonario entendemos la mejora financiera como un proceso progresivo
  </div>
 </section>
 
-
-
-
-
-
-<!-- ================= SEPARADOR ================= -->
 <section class="mb-16">
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
 
-<!-- ================= SEPARADOR ================= -->
 <div class="cf-accordion-item">
 
   <h3 class="cf-accordion-header">
@@ -1429,8 +1256,6 @@ La educación financiera no comienza cuando tienes mucho dinero; comienza cuando
 </div>
 </div>
 
-
-<!-- ================= SEPARADOR ================= -->
 <div class="cf-accordion-item">
 
   <h3 class="cf-accordion-header">
@@ -1459,9 +1284,6 @@ Si alguna vez has tenido dudas sobre cómo funciona realmente el dinero o por qu
 </div>
 </div>
 
-
-
-<!-- ================= SEPARADOR ================= -->
 <div class="cf-accordion-item">
 
   <h3 class="cf-accordion-header">
@@ -1490,9 +1312,6 @@ No se empieza con grandes cantidades de dinero, sino con conocimiento, planifica
 </div>
 </div>
 
-
-
-<!-- ================= SEPARADOR ================= -->
 <div class="cf-accordion-item">
 
   <h3 class="cf-accordion-header">
@@ -1554,21 +1373,11 @@ Encontrar tu camino financiero no significa tener todas las respuestas desde el 
 
  </div>
 </section>
-    <!-- ================= FIN ACORDEÓN ================= -->
-
- 
 
 </main>
 
-
-
-<!-- Espacio de 80px -->
 <div style="height: 150px;"></div>
 
-
-
-
-<!-- ================= SCRIP COMPAGINACION ================= -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const articles = Array.from(document.querySelectorAll('.article'));
@@ -1691,18 +1500,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<div style="height: 100px;"></div>
 
-
-
-<!-- ESPACIO ARRIBA -->
- <div style="height: 100px;"></div>
-
-  <!--  Footer  -->
 <div class="footer-here"></div>
-
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-<!-- MENU COMPLETO -->
 <script src="./assets/menu.js"></script>
 
 

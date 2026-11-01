@@ -54,19 +54,12 @@
 <!-- Autoridad del medio -->
 <script src="/assets/schema-articulos.js" defer></script>
 
-
-
-
-
 <style>
-/* =====================================
-   ESTILOS GENERALES Y LIBRERÍA CM
-===================================== */
 
 body {
   margin: 0;
   padding: 0;
-  padding-top: 0; /* Espacio superior eliminado */
+  padding-top: 0; 
   background-color: #ffffff;
   color: #171717;
   font-family: 'Inter', sans-serif;
@@ -93,8 +86,6 @@ body {
   box-sizing: border-box;
 }
 
-/* FILA DE TARJETAS (GRID) */
-
 .ldu-books-track {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 210px));
@@ -104,8 +95,6 @@ body {
   width: 100%;
   margin: 0 auto;
 }
-
-/* TARJETA DE LIBRO */
 
 .ldu-book-card {
   position: relative;
@@ -127,8 +116,6 @@ body {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* PORTADA DEL LIBRO (SOBREPUESTA) */
-
 .ldu-book-cover {
   position: relative;
   z-index: 2;
@@ -149,8 +136,6 @@ body {
   filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.12));
 }
 
-/* INFORMACIÓN DE LA TARJETA */
-
 .ldu-book-details {
   width: 100%;
   min-width: 0;
@@ -160,8 +145,6 @@ body {
   align-items: center;
   padding: 0 12px 16px;
 }
-
-/* ETIQUETAS */
 
 .ldu-book-labels {
   display: flex;
@@ -197,8 +180,6 @@ body {
   color: #ffffff;
 }
 
-/* TÍTULO DEL LIBRO (ALTURA FIJA 2 LÍNEAS PARA SIMETRÍA) */
-
 .ldu-book-details h3 {
   width: 100%;
   margin: 0 0 4px;
@@ -213,8 +194,6 @@ body {
   line-clamp: 2;
 }
 
-/* AUTOR */
-
 .ldu-author {
   width: 100%;
   margin: 0 0 12px;
@@ -225,8 +204,6 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
-/* PRECIOS Y CTA */
 
 .ldu-book-pricing {
   width: 100%;
@@ -249,8 +226,6 @@ body {
   font-size: 15px;
   font-weight: 700;
 }
-
-/* BOTÓN DE COMPRA (CTA PROFESIONAL) */
 
 .ldu-btn-buy {
   display: inline-flex;
@@ -275,8 +250,6 @@ body {
   transform: scale(0.98);
 }
 
-/* IMAGEN SUPERIOR (HERO) CON PUNTAS CUADRADAS */
-
 .ldu-books-hero {
   width: 100%;
   max-width: 1190px;
@@ -293,8 +266,6 @@ body {
   object-fit: cover;
   object-position: center;
 }
-
-/* ENCABEZADO DE LA SECCIÓN */
 
 .ldu-books-heading {
   width: 100%;
@@ -345,8 +316,6 @@ body {
   border-bottom-color: #171717;
 }
 
-/* SECCIÓN TEXTO EDITORIAL */
-
 .cm-biblioteca-texto {
   width: 100%;
   max-width: 900px;
@@ -371,8 +340,6 @@ body {
 .cm-biblioteca-texto p:last-child {
   margin-bottom: 0;
 }
-
-/* CIERRE EDITORIAL */
 
 .ldu-main {
   width: 100%;
@@ -423,10 +390,6 @@ body {
   color: #777;
 }
 
-/* =====================================
-   ADAPTACIÓN MÓVIL Y TABLET OPTIMIZADA
-===================================== */
-
 @media (max-width: 1050px) {
   .ldu-books-track {
     grid-template-columns: repeat(5, 175px);
@@ -441,7 +404,7 @@ body {
 
 @media (max-width: 600px) {
   body {
-    padding-top: 0; /* Espacio superior eliminado en móviles */
+    padding-top: 0;
   }
 
   .ldu-books-hero {
@@ -515,11 +478,6 @@ body {
   }
 }
 
-
-
-
-
-/* Variables y reseteo base */
 .cm-hero {
   width: 100%;
   max-width: 100%;
@@ -572,14 +530,10 @@ body {
 
 </head>
 
-
-<!-- ESPACIO FINAL -->
 <div class="h-[61px] md:h-[100px] bg-black md:bg-transparent"></div>
-
 
 <body>
 
-<!-- IMAGEN SUPERIOR DE LA SECCIÓN DE LIBROS -->
 <div class="ldu-books-hero">
   <img src="./assets/png/libreria-codigo-millonario.webp" alt="Biblioteca Digital Código Millonario">
 </div>
@@ -593,11 +547,7 @@ body {
   </nav>
 </section>
 
-
-
-   <!-- ESPACIO FINAL -->
 <div style="height: 30px;"></div>
-
 
 <header class="cm-hero">
   <span class="cm-tag">Herramientas</span>
@@ -608,14 +558,9 @@ body {
 </header>
 
 <section class="ldu-books"> 
+
   <div class="ldu-books-track"> 
 
-
-
-
-
-
-        <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/planificador-finanzas-personales.webp" alt="Planificador de Finanzas Personales & Control de Presupuesto"> 
@@ -640,7 +585,6 @@ body {
       </div>
     </article> 
     
-    <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/planner-financiero.webp" alt="Planner Financiero de Ideas de Negocio & ROI"> 
@@ -665,7 +609,6 @@ body {
       </div>
     </article> 
 
-    <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/planificador-financier.webp" alt="Planner Financiero de Ideas de Negocio & ROI"> 
@@ -690,17 +633,9 @@ body {
       </div>
     </article> 
 
-
-
-
-
-
   </div> 
 </section>
 
-
-
-   <!-- ESPACIO FINAL -->
 <div style="height: 50px;"></div>
 
 <section class="ldu-books-heading">
@@ -710,9 +645,9 @@ body {
 </section>
 
 <section class="ldu-books"> 
+
   <div class="ldu-books-track"> 
 
-        <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/Psicologia-del-Dinero.webp" alt="La psicología del dinero"> 
@@ -737,7 +672,6 @@ body {
       </div>
     </article> 
 
-        <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/la-via-rapida-millonario.webp" alt="La vía rápida del millonario"> 
@@ -762,7 +696,6 @@ body {
       </div>
     </article> 
 
-        <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/piense-y-hagase-rico.webp" alt="Piense y hágase rico"> 
@@ -787,7 +720,6 @@ body {
       </div>
     </article> 
 
-        <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/si-lo-rees-lo-creas.webp" alt="Si lo crees, lo creas"> 
@@ -812,8 +744,6 @@ body {
       </div>
     </article> 
 
-
-            <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/padre-rico-padre-pobre.webp" alt="Padre Rico, Padre Pobre"> 
@@ -838,8 +768,6 @@ body {
       </div>
     </article> 
 
-
-        <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/camino-hacia-la-riqueza.webp" alt="El camino hacia la riqueza en acción"> 
@@ -864,8 +792,6 @@ body {
       </div>
     </article> 
 
-
-            <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/trucos-de-los-ricos.webp" alt="Los trucos de los ricos"> 
@@ -890,18 +816,9 @@ body {
       </div>
     </article> 
 
-
-
   </div> 
 </section>
 
-
-
-
-
-
-
-   <!-- ESPACIO FINAL -->
 <div style="height: 50px;"></div>
 
 <section class="ldu-books-heading">
@@ -911,12 +828,9 @@ body {
 </section>
 
 <section class="ldu-books"> 
+
   <div class="ldu-books-track"> 
 
-
-
-
-            <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/el-secreto.webp" alt="El Secreto (The Secret)"> 
@@ -941,9 +855,7 @@ body {
       </div>
     </article> 
 
-    
-            <!-- LIBRO --> 
-    <article class="ldu-book-card"> 
+      <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/ciencia-de-hacerse.webp" alt="La Ciencia de Hacerse Rico"> 
       </div> 
@@ -967,9 +879,6 @@ body {
       </div>
     </article> 
 
-
-
-          <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/visualización-creativa.webp" alt="Visualización creativa"> 
@@ -994,8 +903,6 @@ body {
       </div>
     </article> 
 
-
-        <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/trabajos-parapsicológicos.webp" alt="Trabajos Parapsicológicos para obtener amor, poder y dinero"> 
@@ -1020,9 +927,6 @@ body {
       </div>
     </article> 
 
-
-
-        <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/vivir-con-abundancia.webp" alt="Vivir con abundancia"> 
@@ -1047,7 +951,6 @@ body {
       </div>
     </article> 
 
-            <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/el-juego-de-la-vida.webp" alt="Vivir con abundancia"> 
@@ -1072,8 +975,6 @@ body {
       </div>
     </article> 
 
-
-                <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/Mereces-ser-rico.webp" alt="Vivir con abundancia"> 
@@ -1098,17 +999,10 @@ body {
       </div>
     </article> 
 
-
       </div> 
+
 </section>
 
-
-
-
-
-
-
-   <!-- ESPACIO FINAL -->
 <div style="height: 50px;"></div>
 
 <section class="ldu-books-heading">
@@ -1118,10 +1012,9 @@ body {
 </section>
 
 <section class="ldu-books"> 
+
   <div class="ldu-books-track"> 
 
-
-            <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/pequeño-libro-para-invertir.webp" alt="CEl pequeño libro para invertir con sentido común"> 
@@ -1147,7 +1040,6 @@ body {
       </div>
     </article> 
 
-        <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/como-organizar-tu-dinero-aunque-ganes-poco.webp" alt="Cómo organizar tu dinero aunque ganes poco"> 
@@ -1173,8 +1065,6 @@ body {
       </div>
     </article> 
 
-
-            <!-- LIBRO --> 
     <article class="ldu-book-card"> 
       <div class="ldu-book-cover"> 
         <img src="./assets/img/hombre-mas-rico-Babilonia.webp" alt="El Hombre Más Rico de Babilonia"> 
@@ -1203,11 +1093,6 @@ body {
   </div> 
 </section>
 
-
-
-
-
-
 <div class="cm-biblioteca-texto">
   <div class="cm-biblioteca-texto__contenido">
     <p>
@@ -1232,9 +1117,9 @@ body {
   </section>
 </main>
 
-
 <div class="footer-here"></div>
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
+
 <script src="./assets/menu.js"></script>
 
 </body>

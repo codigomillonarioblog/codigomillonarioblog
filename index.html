@@ -63,12 +63,9 @@
 </head>
 
 <body>
-<!-- TODO EL CONTENIDO DE LA PÁGINA AQUÍ -->
 
-
-
-<!-- ESPACIO ARRIBA -->
-<div style="height: 65px; background-color: #222222; width: 100%; position: relative; z-index: 1;" class="espacio-arriba"></div>
+<div style="height: 65px; background-color: #222222; width: 100%; 
+position: relative; z-index: 1;" class="espacio-arriba"></div>
 
 <style>
   @media (max-width: 768px) {
@@ -78,12 +75,6 @@
   }
 </style>
 
-
-
-
-<!-- ========================================================= -->
-<!-- CINTILLO BURSÁTIL EN TIEMPO REAL (TRADINGVIEW) -->
-<!-- ========================================================= -->
 <div class="financial-ticker-wrapper">
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
@@ -126,9 +117,7 @@
 </div>
 
 <style>
-/* =========================================================
-   ESTILOS GENERALES (BASE / PC)
-========================================================= */
+
 .financial-ticker-wrapper {
   width: 100%;
   background-color: #111111;
@@ -142,7 +131,7 @@
   margin: 0 auto;
   height: 42px;
   display: flex;
-  align-items: center; /* Centra verticalmente el contenido en PC */
+  align-items: center;
 }
 
 .tradingview-widget-container__widget,
@@ -152,50 +141,28 @@
   display: block;
 }
 
-/* =========================================================
-   ADAPTACIÓN PARA TELÉFONOS / MÓVILES
-========================================================= */
 @media (max-width: 600px) {
   .financial-ticker-wrapper {
     margin-bottom: 10px;
   }
   
   .tradingview-widget-container {
-    height: 48px; /* Damos un poco más de respiro en móvil */
+    height: 48px; 
   }
 }
 </style>
 
-
-
-
-
-<!-- ESPACIO ARRIBA -->
 <div style="height: 100px;"></div>
 
-
-<!-- CSS PLATILLA --> 
 <link rel="stylesheet" href="./assets/css/portada.css">
 
-
-
-
-<!-- ========================================= -->
-<!-- GOOGLE FONTS -->
-<!-- ========================================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<!-- ========================================= -->
-<!-- PORTADA PRINCIPAL / ESTILO EDITORIAL -->
-<!-- ========================================= -->
 <section class="forbes-home">
   <div class="forbes-grid">
 
-    <!-- ========================================= -->
-    <!-- ENFOQUE DEL MEDIO -->
-    <!-- ========================================= -->
     <div class="forbes-intro">
       <h3 class="etiqueta-enfoque">
         ENFOQUE
@@ -206,14 +173,9 @@
       </p>
     </div>
 
-    <!-- LÍNEA SUPERIOR ÚNICA -->
     <div class="forbes-top-line"></div>
 
-    <!-- ========================================= -->
-    <!-- COLUMNA IZQUIERDA: CONCEPTOS EDITORIALES -->
-    <!-- ========================================= -->
     <aside class="editorial-column">
-
 
       <span class="editorial-label">
         Conceptos
@@ -246,12 +208,9 @@
       </div>
     </aside>
 
-    <!-- ========================================= -->
-    <!-- COLUMNA CENTRAL: NOTICIA PRINCIPAL & CARDS -->
-    <!-- ========================================= -->
     <main class="hero-main">
       <a href="./blog/mundo-millonario/como-hacerse-millonario-en-poco-tiempo.html">
-        <!-- IMAGEN PRINCIPAL -->
+
         <div class="hero-image">
           <picture>
             <source srcset="./assets/png/como-hacerse-millonario-en-poco-tiempo.webp" media="(max-width:768px)">
@@ -259,7 +218,6 @@
           </picture>
         </div>
 
-        <!-- CONTENIDO PRINCIPAL -->
         <div class="hero-content">
           <span class="hero-category">
            Libertad económica
@@ -273,9 +231,8 @@
         </div>
       </a>
 
-      <!-- ARTÍCULOS INFERIORES DEL CENTRO -->
       <div class="hero-bottom-cards">
-        <!-- CARD 1 -->
+
         <article class="side-article">
           <a href="./blog/mundo-millonario/que-es-codigo-millonario.html">
             <img src="./assets/png/codigo-millonario-medio-financiero-editorial.webp" alt="">
@@ -286,7 +243,6 @@
           </a>
         </article>
 
-        <!-- CARD 2 -->
         <article class="side-article">
           <a href="./blog/psicologia-del-dinero/3-cosas-millonarios-entienden-dinero.html">
             <img src="./assets/png/millonarios-entienden-sobre-el-dinero.webp" alt="">
@@ -297,17 +253,12 @@
           </a>
         </article>
 
-
-<!-- CARD 2 (Versión Texto Plano - Solo PC) -->
 <article class="side-article solo-desktop"></article>
 
-
       </div>
+
     </main>
 
-    <!-- ========================================= -->
-    <!-- COLUMNA DERECHA: LO MÁS LEÍDO -->
-    <!-- ========================================= -->
     <aside class="sidebar-news">
       <span class="editorial-label">
         Lo más leído
@@ -337,36 +288,16 @@
   </div>
 </section>
 
-
-
-
-<!-- =========================================================
-     SEPARADOR HECHOS Y CURIOSIDADES
-     AQUÍ COMIENZA LA SECCIÓN HECHOS Y CURIOSIDADES
-========================================================= -->
-
-    <!-- =====================================================
-         PIEZA PRINCIPAL · SOLO PC
-    ====================================================== -->
-
-
-
 <section class="cm-seccion-curiosidades">
-  <!-- Encabezado idéntico al estilo de Cultura y Vida -->
+
   <div class="cm-seccion-curiosidades__header">
     <h2 class="cm-seccion-curiosidades__titulo">Análisis</h2>
     <a href="./blog/biografia-de-millonarios/index.html" class="cm-seccion-curiosidades__ver-todo">VER TODO</a>
   </div>
 
-  <!-- Contenedor principal de la sección (conservando intacta su estructura interna) -->
   <div class="cm-home">
 
       <div class="cm-home-grid">
-
-
-          <!-- =================================================
-               HISTORIA PRINCIPAL · ANÁLISIS 1
-          ================================================= -->
 
           <a href="./blog/biografia-de-millonarios/como-hicieron-millonarios-fiebre-del-oro.html"
              class="cm-main-story">
@@ -406,26 +337,17 @@
 
                   <img
                       src="./assets/png/fiebre-del-oro-millonarios.webp"
-                      alt="J.K. Rowling y la construcción de su fortuna"
-                  >
+                      alt="J.K. Rowling y la construcción de su fortuna">
 
               </div>
 
           </a>
-
-
-          <!-- =================================================
-               FAST (SECCIÓN LATERAL)
-          ================================================= -->
 
           <aside class="cm-fast">
 
               <div class="cm-fast-header">
                   fast<span>CM</span>
               </div>
-
-
-              <!-- ANÁLISIS 2 -->
 
               <a href="./blog/biografia-de-millonarios/thomas-alva-edison-biografia.html"
                  class="cm-fast-item">
@@ -440,9 +362,6 @@
 
               </a>
 
-
-              <!-- ANÁLISIS 4 -->
-
               <a href="./blog/biografia-de-millonarios/fundador-de-kfc-construyo-su-fortuna.html"
                  class="cm-fast-item">
 
@@ -455,8 +374,6 @@
                   </span>
 
               </a>
-
-              <!-- ANÁLISIS 8 -->
 
               <a href="./blog/biografia-de-millonarios/jeff-bezos-ceo-amazon.html"
                  class="cm-fast-item">
@@ -471,18 +388,9 @@
 
               </a>
 
-
           </aside>
 
-
-          <!-- =================================================
-               3 NOTICIAS INFERIORES
-          ================================================= -->
-
           <section class="cm-lower-grid">
-
-
-              <!-- ANÁLISIS 9 -->
 
               <a href="./blog/biografia-de-millonarios/thomas-alva-edison-biografia.html"
                  class="cm-card">
@@ -492,8 +400,7 @@
                       <img
                           src="./assets/miniaturas/thomas-alva-edison-inventor.webp"
                           alt="Jack Ma y Alibaba"
-                          loading="lazy"
-                      >
+                          loading="lazy">
 
                   </div>
 
@@ -520,9 +427,6 @@
 
               </a>
 
-
-              <!-- ANÁLISIS 10 -->
-
               <a href="./blog/biografia-de-millonarios/como-carlos-slim-se-hizo-rico.html"
                  class="cm-card">
 
@@ -531,8 +435,7 @@
                       <img
                           src="./assets/miniaturas/carlos-slim-millonario-mexicano.webp"
                           alt="Carlos Slim y la construcción de riqueza"
-                          loading="lazy"
-                      >
+                          loading="lazy">
 
                   </div>
 
@@ -559,9 +462,6 @@
 
               </a>
 
-
-              <!-- ANÁLISIS 3 -->
-
               <a href="./blog/biografia-de-millonarios/oprah-winfrey-multimillonaria.html"
                  class="cm-card">
 
@@ -570,8 +470,7 @@
                       <img
                           src="./assets/miniaturas/riqueza-oprah-winfrey.webp"
                           alt="Oprah Winfrey"
-                          loading="lazy"
-                      >
+                          loading="lazy">
 
                   </div>
 
@@ -600,15 +499,7 @@
 
           </section>
 
-
-          <!-- =================================================
-               ARTÍCULOS PEQUEÑOS
-          ================================================= -->
-
           <section class="cm-small-row">
-
-
-              <!-- ANÁLISIS 5 -->
 
               <a href="./blog/biografia-de-millonarios/fundador-de-kfc-construyo-su-fortuna.html"
                  class="cm-small-card">
@@ -618,8 +509,7 @@
                       <img
                           src="./assets/miniaturas/kfc-origen-empresarial-financiero.webp"
                           alt="Coronel Sanders"
-                          loading="lazy"
-                      >
+                          loading="lazy">
 
                   </div>
 
@@ -641,12 +531,6 @@
 
               </a>
 
-
-
-
-
-              <!-- ANÁLISIS 7 -->
-
               <a href="./blog/biografia-de-millonarios/jack-ma-de-profesor-a-millonario-alibaba.html"
                  class="cm-small-card">
 
@@ -655,8 +539,7 @@
                       <img
                           src="./assets/miniaturas/jack-ma-de-profesor-a-multimillonario.webp"
                           alt="Jack Ma"
-                          loading="lazy"
-                      >
+                          loading="lazy">
 
                   </div>
 
@@ -678,37 +561,22 @@
 
               </a>
 
-
           </section>
-
 
       </div>
 
   </div>
 </section>
 
-
-<!-- =========================================================
-     SEPARADOR HECHOS Y CURIOSIDADES
-     AQUÍ COMIENZA LA SECCIÓN HECHOS Y CURIOSIDADES
-========================================================= -->
-
-    <!-- =====================================================
-         PIEZA PRINCIPAL · SOLO PC
-    ====================================================== -->
-
-
 <section class="cm-seccion-curiosidades">
-  <!-- Encabezado de la sección -->
+
   <div class="cm-seccion-curiosidades__header">
     <h2 class="cm-seccion-curiosidades__titulo">El financiero</h2>
     <a href="./blog/psicologia-del-dinero/index.html" class="cm-seccion-curiosidades__ver-todo">VER TODO</a>
   </div>
 
-  <!-- Contenedor principal de tarjetas -->
   <div class="cm-seccion-curiosidades__grid">
 
-    <!-- CURIOSIDAD DESTACADA (FEATURE) -->
     <article class="cm-seccion-curiosidades__item cm-seccion-curiosidades__item--feature">
       <a href="./blog/mundo-millonario/que-es-codigo-millonario.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -716,8 +584,8 @@
             src="./assets/png/codigo-millonario-medio-financiero-editorial.webp"
             alt="Código Millonario"
             loading="lazy"
-            class="cm-seccion-curiosidades__img"
-          >
+            class="cm-seccion-curiosidades__img">
+
         </div>
         <div class="cm-seccion-curiosidades__content">
           <span class="cm-seccion-curiosidades__label">Código·Millonario</span>
@@ -729,9 +597,6 @@
       </a>
     </article>
 
-    <!-- =====================================================
-         CURIOSIDAD 01
-    ====================================================== -->
     <article class="cm-seccion-curiosidades__item">
       <a href="./blog/inversiones/psicologia-de-las-inversiones.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -745,9 +610,6 @@
       </a>
     </article>
 
-    <!-- =====================================================
-         CURIOSIDAD 02
-    ====================================================== -->
     <article class="cm-seccion-curiosidades__item">
       <a href="./blog/psicologia-del-dinero/construir-riqueza-lleva-anos.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -761,9 +623,6 @@
       </a>
     </article>
 
-    <!-- =====================================================
-         CURIOSIDAD 03
-    ====================================================== -->
     <article class="cm-seccion-curiosidades__item">
       <a href="./blog/psicologia-del-dinero/proteger-dinero-construir-riqueza.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -777,9 +636,6 @@
       </a>
     </article>
 
-    <!-- =====================================================
-         CURIOSIDAD 04
-    ====================================================== -->
     <article class="cm-seccion-curiosidades__item">
       <a href="./blog/fundamentos-del-dinero/como-iniciar-en-las-finanzas-personales-desde-cero.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -796,24 +652,8 @@
   </div>
 </section>
 
-
-
-<!-- =========================================================
-     SEPARADOR EDITORIAL
-     AQUÍ COMIENZA LA SECCIÓN UNA PERSPECTIVA DE CÓDIGO MILLONARIO
-========================================================= -->
-
-<!-- =========================================================
-     SECCIÓN UNA PERSPECTIVA DE CÓDIGO MILLONARIO — EDITORIAL
-========================================================= -->
-
-
-
-
-<!-- CONTENEDOR PORTAL (3 COLUMNAS REUTILIZABLE) -->
 <div class="news-portal-container">
 
-  <!-- COLUMNA 1: Artículos con miniatura (Tomados de tu sección inferior) -->
   <div class="news-column" id="col-list">
     <div class="column-header">
       <h2>Finanzas & Ahorro</h2>
@@ -855,7 +695,6 @@
     </div>
   </div>
 
-  <!-- COLUMNA 2: Artículos Destacados (Tomados de tu Historia Principal y Oportunidades) -->
   <div class="news-column" id="col-featured">
     <div class="column-header">
       <h2>Desarrollo Profesional</h2>
@@ -881,7 +720,6 @@
     </div>
   </div>
 
-  <!-- COLUMNA 3: Más Leídas / Fast (Tomados de tu aside fastCM) -->
   <div class="news-column" id="col-top">
     <div class="column-header">
       <h2>fastCM (Más Leídas)</h2>
@@ -933,33 +771,15 @@
 
 </div>
 
-
-
-
-<!-- =========================================================
-     SEPARADOR HECHOS Y CURIOSIDADES
-     AQUÍ COMIENZA LA SECCIÓN HECHOS Y CURIOSIDADES
-========================================================= -->
-
-
-    <!-- =====================================================
-         PIEZA PRINCIPAL · SOLO PC
-    ====================================================== -->
-
-
-
 <section class="cm-seccion-curiosidades">
-  <!-- Encabezado de la sección -->
+
   <div class="cm-seccion-curiosidades__header">
     <h2 class="cm-seccion-curiosidades__titulo">Historias y Curiosidades</h2>
     <a href="./blog/hechos-lujos-curiosidades/index.html" class="cm-seccion-curiosidades__ver-todo">VER TODO</a>
   </div>
 
-  <!-- Contenedor principal de tarjetas -->
   <div class="cm-seccion-curiosidades__grid">
 
-
-    <!-- CURIOSIDAD DESTACADA (FEATURE) -->
     <article class="cm-seccion-curiosidades__item cm-seccion-curiosidades__item--feature">
       <a href="./blog/hechos-lujos-curiosidades/dato-desconocido-grandes-fortunas.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -967,9 +787,9 @@
             src="./assets/png/administrar-la-riqueza.webp"
             alt="Banana pegada a la pared"
             loading="lazy"
-            class="cm-seccion-curiosidades__img"
-          >
+            class="cm-seccion-curiosidades__img">
         </div>
+
         <div class="cm-seccion-curiosidades__content">
           <span class="cm-seccion-curiosidades__label">Riqueza heredada</span>
           <h3 class="cm-seccion-curiosidades__item-titulo">Por qué la riqueza no dura entre los millonarios herederos</h3>
@@ -980,7 +800,6 @@
       </a>
     </article>
 
-    <!-- CURIOSIDAD DESTACADA (FEATURE) -->
     <article class="cm-seccion-curiosidades__item cm-seccion-curiosidades__item--feature">
       <a href="./blog/hechos-lujos-curiosidades/formas-curiosas-del-dinero.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -988,9 +807,9 @@
             src="./assets/png/dinero-curiosidades-historicas.webp"
             alt="Banana pegada a la pared"
             loading="lazy"
-            class="cm-seccion-curiosidades__img"
-          >
+            class="cm-seccion-curiosidades__img">
         </div>
+
         <div class="cm-seccion-curiosidades__content">
           <span class="cm-seccion-curiosidades__label">Historia Financiera</span>
           <h3 class="cm-seccion-curiosidades__item-titulo">Las formas más curiosas que ha tenido el dinero a lo largo de la historia</h3>
@@ -1001,8 +820,6 @@
       </a>
     </article>
 
-
-    <!-- CURIOSIDAD DESTACADA (FEATURE) -->
     <article class="cm-seccion-curiosidades__item cm-seccion-curiosidades__item--feature">
       <a href="./blog/hechos-lujos-curiosidades/origen-de-grandes-fortunas.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -1010,9 +827,9 @@
             src="./assets/png/origen-de-las-grandes-fortunas-curiodidades.webp"
             alt="Banana pegada a la pared"
             loading="lazy"
-            class="cm-seccion-curiosidades__img"
-          >
+            class="cm-seccion-curiosidades__img">
         </div>
+
         <div class="cm-seccion-curiosidades__content">
           <span class="cm-seccion-curiosidades__label">Curiosidades Negocios</span>
           <h3 class="cm-seccion-curiosidades__item-titulo">El curioso origen de algunas de las grandes fortunas</h3>
@@ -1023,7 +840,6 @@
       </a>
     </article>
 
-    <!-- CURIOSIDAD DESTACADA (FEATURE) -->
     <article class="cm-seccion-curiosidades__item cm-seccion-curiosidades__item--feature">
       <a href="./blog/hechos-lujos-curiosidades/compras-absurdas-millonarios-subastas.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -1031,9 +847,9 @@
             src="./assets/png/banana-pegada-pared-subasta-arte.webp"
             alt="Banana pegada a la pared"
             loading="lazy"
-            class="cm-seccion-curiosidades__img"
-          >
+            class="cm-seccion-curiosidades__img">
         </div>
+
         <div class="cm-seccion-curiosidades__content">
           <span class="cm-seccion-curiosidades__label">cosas más absurdas</span>
           <h3 class="cm-seccion-curiosidades__item-titulo">Las 5 cosas más absurdas que millonarios han comprado en subastas</h3>
@@ -1044,7 +860,6 @@
       </a>
     </article>
 
-    <!-- CURIOSIDAD 01 -->
     <article class="cm-seccion-curiosidades__item">
       <a href="./blog/hechos-lujos-curiosidades/5-errores-financieros-costaron-fortunas.html" class="cm-seccion-curiosidades__link">
         <div class="cm-seccion-curiosidades__image-wrapper">
@@ -1061,59 +876,30 @@
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================================================
-     SEPARADOR EDITORIAL
-     AQUÍ COMIENZA LA SECCIÓN UNA PERSPECTIVA DE CÓDIGO MILLONARIO
-========================================================= -->
-
-<!-- =========================================================
-     SECCIÓN UNA PERSPECTIVA DE CÓDIGO MILLONARIO — EDITORIAL
-========================================================= -->
-
 <div style="height: 40px;"></div>
 
 <div class="seccion-label">
   EL MEDIO
 </div>
 
-
-<!-- ==========================================
-     BLOQUE ESTILO PORTADA DE DIARIO FINANCIERO
-========================================== -->
 <section class="cm-portada-diario">
 
-  <!-- ENCABEZADO DE SECCIÓN -->
   <header class="cm-portada-header">
     <span class="cm-portada-category">UNA PERSPECTIVA DE CÓDIGO MILLONARIO</span>
     <h2>El aprendizaje financiero es un proceso</h2>
     <p>La educación financiera no termina con un artículo. Se construye con tiempo, investigación, experiencia y una mirada más amplia sobre el dinero. Una estrategia que funciona para una persona no necesariamente producirá los mismos resultados en otra.</p>
   </header>
 
-  <!-- CUERPO PRINCIPAL (ESTILO 2 COLUMNAS: GRANDE IZQ + LISTA DER) -->
   <div class="cm-portada-layout">
 
-    <!-- COLUMNA IZQUIERDA: IMAGEN PRINCIPAL 16:9 CON TÍTULO INTEGRADO -->
     <div class="cm-portada-main-box">
       <figure class="cm-portada-image-wrapper">
         <img 
           src="./assets/png/crecimiento-financiero-realidad-vs-expectativa.webp" 
           alt="Persona estudiando y analizando información financiera para construir conocimiento y patrimonio." 
-          loading="lazy"
-        >
-        <!-- Tapa informativa superpuesta estilo gran periódico -->
-        <div class="cm-portada-overlay">
+          loading="lazy">
+
+          <div class="cm-portada-overlay">
           <span class="cm-portada-subtag">EDUCACIÓN FINANCIERA</span>
           <h3>Construir conocimiento también es construir patrimonio</h3>
           <p>En Código Millonario entendemos la educación financiera como un proceso continuo y analítico.</p>
@@ -1121,7 +907,6 @@
       </figure>
     </div>
 
-    <!-- COLUMNA DERECHA: INFORMACIONES SECUNDARIAS TIPO FEED NOTICIOSO -->
     <aside class="cm-portada-sidebar">
 
       <article class="cm-portada-side-item">
@@ -1148,50 +933,29 @@
 
 </section>
 
-
-
-
-
-
-
-<!-- =========================================================
-     SEPARADOR EDITORIAL
-     AQUÍ COMIENZA LA SECCIÓN LA MIRADA DE CÓDIGO MILLONARIO
-========================================================= -->
-
 <div style="height: 40px;"></div>
 
 <div class="seccion-label">
   FILOSOFÍA
 </div>
 
-
-
-
-<!-- ==========================================
-     BLOQUE ESTILO PORTADA DE DIARIO FINANCIERO (IDENTIDAD)
-========================================== -->
 <section class="cm-identidad-diario">
 
-  <!-- ENCABEZADO DE SECCIÓN -->
   <header class="cm-identidad-header">
     <span class="cm-identidad-category">LA MIRADA DE CÓDIGO MILLONARIO</span>
     <h2>Una forma diferente de hablar sobre dinero</h2>
     <p>Código Millonario analiza el dinero, los negocios y la construcción de patrimonio desde una perspectiva práctica, informativa y de largo plazo.</p>
   </header>
 
-  <!-- CUERPO PRINCIPAL (ESTILO 2 COLUMNAS) -->
   <div class="cm-identidad-layout">
 
-    <!-- COLUMNA IZQUIERDA: IMAGEN PRINCIPAL 16:9 CON TÍTULO INTEGRADO -->
     <div class="cm-identidad-main-box">
       <figure class="cm-identidad-image-wrapper">
         <img 
           src="./assets/png/negocios-y-educacion-financiera.webp" 
           alt="Código Millonario, medio digital especializado en educación financiera, patrimonio y negocios." 
-          loading="lazy"
-        >
-        <!-- Tapa informativa superpuesta estilo gran periódico -->
+          loading="lazy">
+
         <div class="cm-identidad-overlay">
           <span class="cm-identidad-subtag">MEDIO FINANCIERO</span>
           <h3>Información para entender mejor las decisiones que rodean al dinero.</h3>
@@ -1200,7 +964,6 @@
       </figure>
     </div>
 
-    <!-- COLUMNA DERECHA: PÁRRAFOS COMPLEMENTARIOS -->
     <aside class="cm-identidad-sidebar">
 
       <article class="cm-identidad-side-item">
@@ -1219,9 +982,6 @@
 
   </div>
 
-  <!-- =========================================================
-       FRANJA DE DATOS DEL MEDIO (COMPACTA Y PROFESIONAL)
-  ========================================================= -->
   <div class="cm-identidad-grid">
 
     <article class="cm-identidad-grid-item">
@@ -1252,54 +1012,29 @@
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
-<!-- =========================================================
-     SEPARADOR EDITORIAL
-     AQUÍ COMIENZA LA SECCIÓN LA MIRADA DE CÓDIGO MILLONARIO
-========================================================= -->
-
 <div style="height: 40px;"></div>
 
 <div class="seccion-label">
   MÉTODO EDITORIAL
 </div>
 
-
-
-
-<!-- ==========================================
-     BLOQUE ESTILO PORTADA DE DIARIO FINANCIERO (ANÁLISIS)
-========================================== -->
 <section class="cm-analisis-diario">
 
-  <!-- ENCABEZADO DE SECCIÓN -->
   <header class="cm-analisis-header">
     <span class="cm-analisis-category">MÉTODO EDITORIAL</span>
     <h2>Analizar antes de afirmar</h2>
     <p>En Código Millonario, el análisis es una parte central de nuestra forma de abordar el dinero, los negocios y las decisiones financieras.</p>
   </header>
 
-  <!-- CUERPO PRINCIPAL (ESTILO 2 COLUMNAS) -->
   <div class="cm-analisis-layout">
 
-    <!-- COLUMNA IZQUIERDA: IMAGEN PRINCIPAL 16:9 CON TÍTULO INTEGRADO -->
     <div class="cm-analisis-main-box">
       <figure class="cm-analisis-image-wrapper">
         <img 
           src="./assets/png/detectar-oportunidades-de-mercado.webp" 
           alt="Análisis financiero y editorial de información sobre dinero, negocios y patrimonio." 
-          loading="lazy"
-        >
-        <!-- Tapa informativa superpuesta estilo gran periódico -->
+          loading="lazy">
+
         <div class="cm-analisis-overlay">
           <span class="cm-analisis-subtag">CÓMO ABORDAMOS CADA TEMA</span>
           <h3>No todo lo que se dice sobre dinero puede presentarse como un hecho.</h3>
@@ -1308,7 +1043,6 @@
       </figure>
     </div>
 
-    <!-- COLUMNA DERECHA: PÁRRAFOS INFORMATIVOS COMPLEMENTARIOS -->
     <aside class="cm-analisis-sidebar">
 
       <article class="cm-analisis-side-item">
@@ -1333,9 +1067,6 @@
 
   </div>
 
-  <!-- =========================================================
-       NUESTRO MÉTODO (GRID DE 3 COLUMNAS)
-  ========================================================= -->
   <div class="cm-analisis-grid">
 
     <article class="cm-analisis-grid-item">
@@ -1360,37 +1091,14 @@
 
 </section>
 
-
-
-
-
-
-
-<!-- ESPACIO ARRIBA -->
-  <div style="height: 40px;"></div>
+<div style="height: 40px;"></div>
 
 <div class="seccion-label">
   ÁREAS DE ANÁLISIS
 </div>
 
-
-
-
-
-
-
-
-
-
-
-<!-- ==========================================
-     BLOQUE ESTILO PORTADA DE DIARIO FINANCIERO (ÁREAS DE ANÁLISIS)
-========================================== -->
 <section class="cm-areas-diario">
 
-  <!-- =========================================================
-       ENCABEZADO
-  ========================================================= -->
   <header class="cm-areas-header">
     <span class="cm-areas-category">SECCIÓN EDITORIAL</span>
     <h2>Los temas que analizamos en Código Millonario</h2>
@@ -1398,12 +1106,8 @@
     <p class="cm-areas-subtext">Ningún tema financiero existe de manera aislada. El dinero, las decisiones, los negocios y el patrimonio forman parte de una misma realidad.</p>
   </header>
 
-  <!-- =========================================================
-       GRID DE 3 ÁREAS (TEXTO PURO ESTILO PRENSA ECONÓMICA)
-  ========================================================= -->
   <div class="cm-areas-grid">
 
-    <!-- ITEM 1 -->
     <article class="cm-area-item">
       <span class="cm-area-tag">EDUCACIÓN FINANCIERA</span>
       <h3>Entender el dinero antes de intentar hacerlo crecer</h3>
@@ -1411,7 +1115,6 @@
       <p>El objetivo es explicar el funcionamiento del dinero desde situaciones cotidianas, evitando presentar las finanzas personales como un conjunto de fórmulas universales.</p>
     </article>
 
-    <!-- ITEM 2 -->
     <article class="cm-area-item">
       <span class="cm-area-tag">MENTALIDAD Y DECISIONES</span>
       <h3>La relación entre dinero, comportamiento y decisiones</h3>
@@ -1419,7 +1122,6 @@
       <p>Exploramos temas como disciplina, percepción del riesgo, hábitos, decisiones financieras y la perspectiva necesaria para pensar en horizontes de largo plazo.</p>
     </article>
 
-    <!-- ITEM 3 -->
     <article class="cm-area-item">
       <span class="cm-area-tag">PATRIMONIO Y NEGOCIOS</span>
       <h3>Cómo se construye valor más allá de los ingresos</h3>
@@ -1431,36 +1133,16 @@
 
 </section>
 
-
-
-
-
 <div style="height: 50px;"></div>
 
 <div class="seccion-label">
   Sobre Código Millonario
 </div>
 
-
-
-
-
-<!-- ==========================================
-SECCIÓN MENU FINAL
-========================================== -->
-
-<!-- ==========================================
-     BLOQUE EDITORIAL · ESTILO PERIÓDICO FINANCIERO CLÁSICO
-========================================== -->
-<!-- ANTES -->
-
-<!-- Déjala limpia de bordes -->
 <section class= "style =background-color: #fffefa; padding: 50px 0;">
  
-<!-- Reemplaza el div actual por este exacto -->
 <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px 0 20px;">
 
-<!-- Cabecera de Sección Estilo Diario -->
     <div style="text-align: center; margin-bottom: 40px; padding-bottom: 20px;">
       <span style="font-family: Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #25251f; text-transform: uppercase;">Sección Especial • Principios Editoriales</span>
 
@@ -1470,7 +1152,6 @@ SECCIÓN MENU FINAL
 
     <div class="newspaper-accordion">
 
-      <!-- ARTÍCULO 1 -->
       <div class="news-item">
         <button class="news-header">
           <span>¿Qué es Código Millonario?</span>
@@ -1486,7 +1167,6 @@ SECCIÓN MENU FINAL
         </div>
       </div>
 
-      <!-- ARTÍCULO 2 -->
       <div class="news-item">
         <button class="news-header">
           <span>¿Cuál es el objetivo de Código Millonario?</span>
@@ -1502,7 +1182,6 @@ SECCIÓN MENU FINAL
         </div>
       </div>
 
-      <!-- ARTÍCULO 3 -->
       <div class="news-item">
         <button class="news-header">
           <span>¿Por qué nació Código Millonario?</span>
@@ -1518,7 +1197,6 @@ SECCIÓN MENU FINAL
         </div>
       </div>
 
-      <!-- ARTÍCULO 4 -->
       <div class="news-item">
         <button class="news-header">
           <span>¿Cómo aborda Código Millonario las diferentes situaciones financieras?</span>
@@ -1533,7 +1211,6 @@ SECCIÓN MENU FINAL
         </div>
       </div>
 
-      <!-- ARTÍCULO 5 -->
       <div class="news-item">
         <button class="news-header">
           <span>¿Cómo aplicar lo aprendido en Código Millonario?</span>
@@ -1548,7 +1225,6 @@ SECCIÓN MENU FINAL
         </div>
       </div>
 
-      <!-- ARTÍCULO 6 -->
       <div class="news-item">
         <button class="news-header">
           <span>¿Cómo funciona realmente el dinero?</span>
@@ -1568,7 +1244,6 @@ SECCIÓN MENU FINAL
   </div>
 </section>
 
-<!-- SCRIPT DE INTERACCIÓN DEL PERIÓDICO -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const newsItems = document.querySelectorAll(".news-item");
@@ -1597,7 +1272,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<!-- SCHEMA JSON-LD PARA GOOGLE (FAQPage) - SEO INTACTO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1655,25 +1329,13 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 </script>
 
-
-
-
-
-
-
-       <!-- ESPACIADO -->
 <section class="py-12"></section>
 
-  <!--  Footer  -->
 <div class="footer-here"></div>
-
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-<!-- MENU COMPLETO -->
 <script src="./assets/menu.js"></script>
 
-
 </body>
-
 </html>
 
