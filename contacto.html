@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +35,9 @@
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0826LEMPPY"></script>
     <script>
@@ -44,8 +48,9 @@
     </script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Datos estructurados -->
     <script src="/assets/schema-articulos.js" defer></script>
@@ -54,203 +59,178 @@
 
 <body>
 
-<div style="height: 240px;"></div>
+<div style="height: 120px;"></div>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<main class="cm-contact-page">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <section class="hero-blog">
 
-<section class="hero-blog">
+    <div class="hero-blog-content">
 
-  <div class="hero-blog-content">
+      <span class="hero-tag">
+        CANAL ABIERTO
+      </span>
 
-    <span class="hero-tag">
-      CONTACTO
-    </span>
+      <h1>
+        Contacto y Comunicación Editorial
+      </h1>
 
-    <h1>
-      Canal abierto para consultas y <br>
-      mensajes directos
-    </h1>
+      <span class="hero-line"></span>
 
-    <span class="hero-line"></span>
+      <p>
+        Ponte en contacto con la redacción y la dirección editorial de Código Millonario. Atendemos consultas, propuestas de artículos, sugerencias o dudas sobre nuestras publicaciones.
+      </p>
 
-    <p>
-      Un canal abierto y accesible para que los usuarios puedan enviar sus consultas, dudas o mensajes
-      directos de manera rápida y sencilla, asegurando una comunicación fluida y cercana.
-    </p>
+    </div>
 
-  </div>
+  </section>
 
-</section>
+  <section class="mb-20 mt-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        
+        <div class="border border-stone-200 p-6 rounded-2xl bg-stone-50">
+          <h3 class="text-xs uppercase tracking-[0.2em] text-stone-500 font-bold mb-2">CORREO ELECTRÓNICO</h3>
+          <p class="text-stone-900 font-semibold text-base mb-1">codigomillonarioblog@gmail.com</p>
+          <p class="text-stone-600 text-sm">Respuesta habitual en 24 a 48 horas hábiles.</p>
+        </div>
+
+        <div class="border border-stone-200 p-6 rounded-2xl bg-stone-50">
+          <h3 class="text-xs uppercase tracking-[0.2em] text-stone-500 font-bold mb-2">LÍNEA EDITORIAL</h3>
+          <p class="text-stone-900 font-semibold text-base mb-1">Francisco Javier Urrego Zapata</p>
+          <p class="text-stone-600 text-sm">Director Editorial y Fundador.</p>
+        </div>
+
+        <div class="border border-stone-200 p-6 rounded-2xl bg-stone-50">
+          <h3 class="text-xs uppercase tracking-[0.2em] text-stone-500 font-bold mb-2">TRANSPARENCIA</h3>
+          <p class="text-stone-900 font-semibold text-base mb-1"><a href="/informacion-legal.html" class="underline hover:text-amber-700">Políticas Institucionales</a></p>
+          <p class="text-stone-600 text-sm">Consulta nuestros estándares de privacidad y uso.</p>
+        </div>
+
+      </div>
+
+      <div class="max-w-2xl mx-auto bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-stone-200">
+        
+        <h2 class="text-2xl font-bold text-stone-900 mb-6 text-center" style="font-family: Georgia, serif;">Envíanos un mensaje directo</h2>
+
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6" novalidate>
+          
+          <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+          <input type="hidden" name="subject" value="Nuevo mensaje desde el formulario de Contacto - Código Millonario">
+          <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+          <div>
+            <label class="block text-sm font-medium mb-2 text-stone-800">Nombre completo</label>
+            <input id="name" type="text" name="name" placeholder="Tu nombre completo"
+                   class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-stone-900 focus:ring-stone-900 text-stone-900"
+                   required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+">
+            <p id="nameError" class="hidden text-sm text-red-600 mt-2">
+              Debes ingresar un nombre válido (solo letras, mínimo 2 y máximo 50 caracteres).
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-2 text-stone-800">Correo electrónico</label>
+            <input id="email" type="email" name="email" placeholder="tu@correo.com"
+                   class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-stone-900 focus:ring-stone-900 text-stone-900"
+                   required minlength="6" maxlength="60">
+            <p id="emailError" class="hidden text-sm text-red-600 mt-2">
+              Debes ingresar un correo electrónico válido.
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-2 text-stone-800">Mensaje o consulta</label>
+            <textarea id="message" rows="5" name="message" placeholder="Escribe aquí tu consulta o comentario..."
+                      class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-stone-900 focus:ring-stone-900 text-stone-900"
+                      required minlength="10" maxlength="500"></textarea>
+            <p id="messageError" class="hidden text-sm text-red-600 mt-2">
+              El mensaje debe tener entre 10 y 500 caracteres.
+            </p>
+          </div>
+
+          <div class="text-xs text-stone-500 leading-relaxed">
+            Al enviar este mensaje, tu información estará protegida y tratada conforme a nuestra 
+            <a href="/privacidad.html" class="underline text-stone-800 font-semibold">Política de Privacidad</a>.
+          </div>
+
+          <button type="submit"
+                  class="w-full text-white py-3.5 rounded-xl font-semibold transition bg-stone-900 hover:bg-black">
+            Enviar mensaje
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 <style>
 
-.hero-blog{
-
-    width: 100%;
-
-    margin-top: 50px;
-
-    margin-bottom: 45px;
-
-    padding-left: 90px;
-
-    padding-right: 90px;
+.cm-contact-page {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 34px 90px;
+  color: #171717;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.hero-blog-content{
-
-    max-width: 980px;
+.hero-blog {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 45px;
 }
 
-.hero-tag{
-
-    display: inline-block;
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 0.78rem;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #8b7355;
-
-    margin-bottom: 18px;
+.hero-blog-content {
+  max-width: 980px;
 }
 
-.hero-blog h1{
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 3rem;
-
-    line-height: 1.05;
-
-    font-weight: 800;
-
-    color: #111111;
-
-    letter-spacing: -1.8px;
-
-    margin-bottom: 24px;
+.hero-tag {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8b7355;
+  margin-bottom: 18px;
 }
 
-.hero-blog p{
-
-    font-family: 'Open Sans', sans-serif;
-
-    font-size: 1.15rem;
-
-    line-height: 1.8;
-
-    color: #555555;
-
-    max-width: 760px;
-
-    margin-bottom: 0;
+.hero-blog h1 {
+  font-family: Georgia, serif !important;
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1.05;
+  font-weight: 400;
+  color: #111111;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+  margin-top: 0;
 }
 
-@media (max-width: 1024px){
-
-    .hero-blog{
-
-        padding-left: 40px;
-
-        padding-right: 40px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 3.2rem;
-    }
-
+.hero-line {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: 1px;
+  background: #d7dce2;
+  margin-bottom: 28px;
 }
 
-@media (max-width: 640px){
-
-    .hero-blog{
-
-        padding-left: 18px;
-
-        padding-right: 18px;
-
-        margin-top: 35px;
-    }
-
-    .hero-blog h1{
-
-        font-size: 2.2rem;
-
-        line-height: 1.05;
-    }
-
-    .hero-blog p{
-
-        font-size: 1rem;
-
-        line-height: 1.7;
-    }
-
+.hero-blog p {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #555555;
+  max-width: 760px;
+  margin-bottom: 0;
 }
 
 </style>
-
-<section class="py-20"></section>
-
-<main style="font-family: 'Poppins', sans-serif;">
-  <section class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-20 relative z-10 border border-stone-200">
-
-    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6" novalidate>
-      
-      <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
-      <input type="hidden" name="subject" value="Nuevo mensaje desde Código Millonario">
-      <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
-
-      <div>
-        <label class="block text-sm font-medium mb-2">Nombre</label>
-        <input id="name" type="text" name="name" placeholder="Tu nombre completo"
-               class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
-               required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+">
-        <p id="nameError" class="hidden text-sm text-red-600 mt-2">
-          Debes ingresar un nombre válido (solo letras, mínimo 2 y máximo 50 caracteres).
-        </p>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium mb-2">Correo electrónico</label>
-        <input id="email" type="email" name="email" placeholder="Tu correo electrónico"
-               class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
-               required minlength="6" maxlength="60">
-        <p id="emailError" class="hidden text-sm text-red-600 mt-2">
-          Debes ingresar un correo electrónico válido.
-        </p>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium mb-2">Mensaje</label>
-        <textarea id="message" rows="5" name="message" placeholder="Tu mensaje"
-                  class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:border-green-600 focus:ring-green-600"
-                  required minlength="10" maxlength="500"></textarea>
-        <p id="messageError" class="hidden text-sm text-red-600 mt-2">
-          El mensaje debe tener entre 10 y 500 caracteres.
-        </p>
-      </div>
-
-      <button type="submit"
-              class="w-full text-white py-3 rounded-xl font-semibold transition"
-              style="background-color:#000000;"
-              onmouseover="this.style.backgroundColor='#1a1a1a'"
-              onmouseout="this.style.backgroundColor='#000000'">
-        Enviar mensaje
-      </button>
-
-    </form>
-  </section>
-</main>
 
 <script>
 const form = document.getElementById('contactForm');
@@ -291,19 +271,10 @@ form.addEventListener('submit', (e) => {
 });
 </script>
 
-</main>
-
-<section class="py-40"></section>
-
 <div class="footer-here"></div>
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
-
 <script src="./assets/menu.js"></script>
-
-
-    <script>
-        lucide.createIcons();
-    </script>
+<script>lucide.createIcons();</script>
 
 </body>
 </html>
