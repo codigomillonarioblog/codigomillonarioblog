@@ -45,6 +45,10 @@
 <!-- Autoridad del medio -->
 <script src="/assets/schema-articulos.js" defer></script>
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -818,7 +822,7 @@
 <main>
   <!-- HERO & CONVERTER TOOL -->
   <section class="hero container">
-    <div class="eyebrow"><span class="eyebrow-dot"></span> CONVERTIDOR DE IMÁGENES ONLINE</div>
+
     <h1>Convertidor de <span>imágenes</span></h1>
     <p class="hero-text">
       Convierte imágenes JPG, PNG, WebP y AVIF online gratis desde tu navegador. 
@@ -846,17 +850,14 @@
         <div class="upload-icon">
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         </div>
-        <h3>Selecciona tus imágenes</h3>
         <p>Arrastra tus archivos aquí o <span>haz clic para buscarlos</span></p>
-        <small>Compatibles con JPG, PNG, WebP y AVIF · Selección múltiple</small>
       </label>
       <input type="file" id="fileInput" accept="image/png, image/jpeg, image/webp, image/avif, image/*" multiple hidden>
 
       <!-- Dynamic File List Container -->
       <div id="fileList" class="file-list"></div>
-
       <div class="converter-footer">
-        <span class="secure"><span>✓</span> Procesamiento 100% privado en tu navegador</span>
+        <span class="secure"><span></span></span>
         <div class="action-buttons">
           <button id="convertBtn" class="convert-button" disabled>
             Convertir imágenes <span>→</span>
@@ -869,10 +870,53 @@
       <p id="status" class="status" aria-live="polite"></p>
     </div>
 
-    <!-- ADSLOT BELOW TOOL -->
-    <div class="ad-banner-slot">
-      <span>Espacio publicitario</span>
+
+
+<!-- NAVEGACIÓN ENTRE HERRAMIENTAS DE IMAGEN - CÓDIGO MILONARIO -->
+<nav style="background: #ffffff; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 14px 20px; margin-top: 50px; font-family: Arial, Helvetica, sans-serif; max-width: 850px; margin-left: auto; margin-right: auto;">
+  <div style="max-width: 1050px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center;">
+
+    <!-- Texto indicativo -->
+    <span style="color: #555555; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Suite de Imagen:</span>
+
+    <!-- Listado profesional de herramientas de imagen interconectadas -->
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center;">
+
+      <a href="https://codigomillonario.blog/herramientas/redimensionador-optimizador-de-imagen.html" style="color: #444444; font-size: 13px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#444444'">
+        Redimensionador y Optimizador
+      </a>
+
+      <span class="cm-separador-imagen" style="color: #cccccc;">•</span>
+
+      <a href="https://codigomillonario.blog/herramientas/compresor-de-imagenes.html" style="color: #444444; font-size: 13px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#444444'">
+        Compresor de imágenes potente
+      </a>
+
+      <span class="cm-separador-imagen" style="color: #cccccc;">•</span>
+
+      <a href="https://codigomillonario.blog/herramientas/studio-ai-image-video.html" style="color: #444444; font-size: 13px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#444444'">
+        Animador de Imágenes
+      </a>
+
+      <span class="cm-separador-imagen" style="color: #cccccc;">•</span>
+
+      <a href="https://codigomillonario.blog/herramientas.html" style="color: #444444; font-size: 13px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#444444'">
+        Todas las herramientas
+      </a>
+
     </div>
+  </div>
+</nav>
+
+<style>
+@media (max-width: 767px) {
+  .cm-separador-imagen {
+    display: none !important;
+  }
+}
+</style>
+
+
 
     <div class="trust-row">
       <div><span>✓</span> 100% Gratuito</div>
@@ -887,7 +931,6 @@
       <div class="section-heading">
         <span class="eyebrow">TECNOLOGÍA DIRECTA</span>
         <h2>Optimización y conversión de imágenes</h2>
-        <p>Transforma tus archivos optimizando espacio y garantizando total compatibilidad web.</p>
       </div>
       <div class="feature-grid">
         <article class="feature-card">
