@@ -50,6 +50,7 @@
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <!-- Datos estructurados -->
 <script src="/assets/schema-articulos.js" defer></script>
@@ -74,6 +75,7 @@
       <a href="#valores">Nuestros principios</a>
       <a href="#direccion">Dirección editorial</a>
       <a href="#cobertura">Nuestra cobertura</a>
+      <a href="#transparencia-legal">Transparencia y políticas</a>
     </nav>
 
   </header>
@@ -325,11 +327,11 @@
 
           <div class="cm-ea-links">
 
-            <a href="informacion-legal.html#sobre-el-blog">
-              Sobre el medio
+            <a href="/informacion-legal.html">
+              Información legal
             </a>
 
-            <a href="informacion-legal.html#politica-editorial">
+            <a href="/politica-editorial.html">
               Política editorial
             </a>
 
@@ -409,6 +411,67 @@
             Hábitos, pensamiento estratégico y comportamientos relacionados con el dinero, los negocios y el patrimonio.
           </p>
 
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="transparencia-legal" class="cm-ea-section cm-ea-legal-trust">
+
+    <div class="cm-ea-section-title">
+
+      <h2>Transparencia y políticas</h2>
+
+      <h3>
+        Marco institucional y compromiso legal
+      </h3>
+
+    </div>
+
+    <div class="cm-ea-section-content">
+
+      <p>
+        Código Millonario opera bajo principios estrictos de transparencia, responsabilidad informativa y respeto por la privacidad de los usuarios. Para consultar las normativas completas que rigen el funcionamiento de este medio digital, se puede acceder a las siguientes secciones institucionales:
+      </p>
+
+      <div class="cm-ea-legal-grid">
+
+        <article>
+          <h4><a href="/informacion-legal.html">Información Legal</a></h4>
+          <p>
+            Centro institucional de políticas, estructura general del medio y deslinde de responsabilidades.
+          </p>
+        </article>
+
+        <article>
+          <h4><a href="/privacidad.html">Política de Privacidad</a></h4>
+          <p>
+            Tratamiento de datos personales, uso de cookies esenciales, políticas de seguridad y afiliados.
+          </p>
+        </article>
+
+        <article>
+          <h4><a href="/terminos.html">Términos y Condiciones</a></h4>
+          <p>
+            Normas de uso del sitio web, responsabilidad del usuario, condiciones de compras y propiedad intelectual.
+          </p>
+        </article>
+
+        <article>
+          <h4><a href="/aviso-legal.html">Aviso Legal</a></h4>
+          <p>
+            Descargo de responsabilidad sobre el carácter puramente informativo y educativo de las publicaciones.
+          </p>
+        </article>
+
+        <article>
+          <h4><a href="/politica-editorial.html">Política Editorial</a></h4>
+          <p>
+            Estándares de verificación, independencia editorial y requisitos para el envío de colaboraciones.
+          </p>
         </article>
 
       </div>
@@ -704,6 +767,50 @@
   color:#625e57;
 }
 
+.cm-ea-legal-grid{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+.cm-ea-legal-grid article{
+  padding:16px 20px;
+  border:1px solid #e2ded7;
+  background-color:#faf9f6;
+  border-radius:4px;
+  transition:all 0.2s ease;
+}
+
+.cm-ea-legal-grid article:hover{
+  border-color:#b5b0a6;
+  background-color:#ffffff;
+}
+
+.cm-ea-legal-grid h4{
+  margin:0 0 6px;
+  font-family:Georgia,serif;
+  font-size:20px;
+  font-weight:400;
+}
+
+.cm-ea-legal-grid h4 a{
+  color:#171717;
+  text-decoration:none;
+}
+
+.cm-ea-legal-grid h4 a:hover{
+  color:#8b7355;
+  text-decoration:underline;
+}
+
+.cm-ea-legal-grid p{
+  margin:0;
+  font-size:13px;
+  line-height:1.6;
+  color:#625e57;
+}
+
 .cm-ea-closing{
   padding:75px 0 25px;
   text-align:center;
@@ -896,8 +1003,6 @@
 
 </style>
 
-<div class="mt-80"></div>
-
 <div class="footer-here"></div>
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
@@ -905,4 +1010,3 @@
 
 </body>
 </html>
-
