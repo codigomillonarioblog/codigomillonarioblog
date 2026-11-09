@@ -62,13 +62,8 @@
 </head>
 
 <body>
-<!-- TODO EL CONTENIDO DE LA PÁGINA AQUÍ -->
-
-
 
 <style>
-
-/* ===================== GRID DE TARJETAS CENTRADO ===================== */
 
 #articlesGrid {
     display: grid;
@@ -88,8 +83,6 @@
         padding: 0 12px;
     }
 }
-
-/* ===================== TARJETAS ===================== */
 
 .article {
     display: flex;
@@ -134,8 +127,6 @@
     color: inherit;
 }
 
-/* ===================== BLOQUE SUPERIOR ===================== */
-
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
@@ -143,8 +134,6 @@
     margin-bottom: 10px;
     text-align: left;
 }
-
-/* ===================== BADGES ===================== */
 
 .badge {
     font-size: 12px;
@@ -190,8 +179,6 @@
     justify-content: space-between;
 }
 
-/* ===================== TÍTULO ===================== */
-
 .article-title {
     font-family: 'Inter', sans-serif;
     font-size: 1.9rem;
@@ -210,8 +197,6 @@
     }
 }
 
-/* ===================== IMAGEN ===================== */
-
 .article-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -223,8 +208,6 @@
 .article-card:hover img {
     filter: brightness(1.10);
 }
-
-/* ===================== PAGINACIÓN ===================== */
 
 .pager-container {
     margin-top: 40px;
@@ -238,7 +221,6 @@
     color: #ffffff;
 }
 
-/* 🔥 TEXTO TOTAL RESULTADOS Y PÁGINA */
 .pager-container,
 .pager-container *,
 .pager-container .text-sm,
@@ -291,8 +273,6 @@
     pointer-events: none;
 }
 
-/* ===================== INPUTS PAGINACIÓN ===================== */
-
 .select-pages {
     border: 1px solid rgba(255,255,255,0.18);
     background: #111111;
@@ -311,8 +291,6 @@ input[type="number"].goto-page {
     background: #111111;
     color: #ffffff;
 }
-
-/* ===================== MOBILE PAGINATION ===================== */
 
 @media (max-width: 768px) {
 
@@ -398,15 +376,11 @@ input[type="number"].goto-page {
 
 }
 
-/* ===================== OCULTOS ===================== */
-
 .meta,
 .arrow-btn,
 .card-icon {
     display: none !important;
 }
-
-/* ===================== FONDO ===================== */
 
 body,
 html {
@@ -414,133 +388,64 @@ html {
 }
 
 </style>
-
-
-
-
-<!-- ===================================================== 
-     ESPACIO FINAL 
-===================================================== --> 
  
-<div style="height:240px;"></div> 
- 
- 
-
-
+<div style="height:140px;"></div> 
 
 <link rel="stylesheet" href="../../assets/css/secciones.css">
 
+<main>
 
-<!-- SECCIÓN TIPO FINANCIAL TIMES -->
+<section class="cm-portada-diario">
 
-<section class="ft-section">
-
-  <!-- CABECERA -->
-
-  <header class="ft-header">
-
-<div class="ft-header-top">
-
-  <div class="ft-header-tools">
-
-  </div>
-
-  <div class="ft-logo">AHORRO</div>
-
-</div>
-
+  <header class="cm-portada-header">
+    <span class="cm-portada-category">AHORRO INTELIGENTE</span>
+    <h2>Cada peso que ahorras construye una vida más libre y estable</h2>
+    <p>Ahorrar no es limitarte. Es prepararte para avanzar con seguridad, tranquilidad y mejores oportunidades financieras en cualquier etapa de tu vida.</p>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <div class="cm-portada-layout">
 
-  <main class="ft-main">
+    <div class="cm-portada-main-box">
+      <figure class="cm-portada-image-wrapper">
+        <img 
+          src="../../assets/png/finanzas-personales-inteligentes.webp" 
+          alt="Ahorro inteligente, organización de ingresos y decisiones financieras para construir estabilidad y libertad económica." 
+          loading="lazy">
 
-<!-- BLOQUE IZQUIERDO -->
-<article class="ft-lead">
-
-  <p class="ft-category">AHORRO INTELIGENTE</p>
-
-  <h1>
-    Cada peso que ahorras construye una vida más libre y estable
-  </h1>
-
-  <p class="ft-summary">
-    Ahorrar no es limitarte. Es prepararte para avanzar con seguridad,
-    tranquilidad y mejores oportunidades financieras en cualquier etapa de tu vida.
-  </p>
-
-  <span class="ft-exclusive">AHORRO</span>
-
-</article>
-
-<!-- BLOQUE CENTRAL -->
-<article class="ft-feature">
-
-  <div class="ft-feature-image">
-
-    <img
-      src="../../assets/png/finanzas-personales-inteligentes.webp"
-      alt="Cómo ahorrar dinero con métodos y estrategias prácticas para organizar tus ingresos, reducir gastos innecesarios, crear un presupuesto mensual, establecer metas de ahorro y mejorar tus finanzas personales sin importar cuánto ganes."
-    >
-
-  </div>
-
-  <div class="ft-feature-content">
-
-    <p class="ft-feature-category">DISCIPLINA</p>
-
-    <h2>
-      <strong>Las decisiones difíciles.</strong>
-      Son las que sostienen tu futuro financiero
-    </h2>
-
-  </div>
-
-</article>
-
-<!-- COLUMNA DERECHA -->
-<aside class="ft-editors">
-
-  <h2 class="ft-editors-heading">Claves del ahorro</h2>
-
-  <article class="ft-editor-item">
-
-    <h3>
-      <span class="ft-quote-mark">“</span>
-      Tener un respaldo económico cambia tu tranquilidad
-    </h3>
-
-    <div class="ft-author">
-      <span>SEGURIDAD</span>
+        <div class="cm-portada-overlay">
+          <span class="cm-portada-subtag">AHORRO</span>
+          <h3>Las decisiones difíciles también sostienen tu futuro financiero</h3>
+          <p>La disciplina para administrar el dinero hoy puede abrir mejores oportunidades mañana.</p>
+        </div>
+      </figure>
     </div>
 
-  </article>
+    <aside class="cm-portada-sidebar">
 
-  <article class="ft-editor-item ft-editor-second">
+      <article class="cm-portada-side-item">
+        <span class="cm-portada-side-tag">SEGURIDAD</span>
+        <h4>Un respaldo económico cambia tu tranquilidad</h4>
+        <p>Contar con ahorros permite afrontar imprevistos y reducir la incertidumbre ante situaciones inesperadas.</p>
+      </article>
 
-    <h3>
-      <span class="ft-quote-mark">“</span>
-      Las pequeñas decisiones de hoy construyen la libertad del mañana
-    </h3>
+      <article class="cm-portada-side-item">
+        <span class="cm-portada-side-tag">DISCIPLINA</span>
+        <h4>Las decisiones difíciles protegen tu futuro</h4>
+        <p>Organizar los ingresos y reducir gastos innecesarios exige constancia, planificación y prioridades claras.</p>
+      </article>
 
-    <p class="ft-editor-author">FUTURO Y ESTABILIDAD</p>
+      <article class="cm-portada-side-item">
+        <span class="cm-portada-side-tag">FUTURO Y ESTABILIDAD</span>
+        <h4>Las pequeñas decisiones construyen libertad</h4>
+        <p>Los hábitos de ahorro de hoy pueden convertirse en oportunidades y mayor estabilidad financiera mañana.</p>
+      </article>
 
-  </article>
+    </aside>
 
-</aside>
-
-  </main>
-
-  <div class="ft-bottom-line"></div>
+  </div>
 
 </section>
 
-
-
-
-<!-- ===================================================== 
-     BLOQUE SEO: INTRODUCCIÓN GLOBAL A LAS FINANZAS Y AHORRO
-===================================================== -->
 <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 my-12">
   <div class="text-stone-700 leading-relaxed space-y-5 text-base md:text-lg" style="font-family: 'Open Sans', sans-serif;">
     <h2 class="text-2xl md:text-3xl font-bold text-stone-900 mb-4" style="font-family: 'Poppins', sans-serif;">
@@ -554,31 +459,12 @@ html {
     </p>
   </div>
 </section>
-
-
-
-
-
-<!-- ===================================================== 
-     ESPACIO FINAL 
-===================================================== --> 
  
 <div style="height:100px;"></div> 
  
- 
+<section class="mb-16">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-
-
-
-
-            <!-- ARTÍCULOS DE AHORRO -->
-                <section class="mb-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
-
-
-<!-- PAGINACIÓN ARRIBA -->
         <div class="max-w-5xl mx-auto mb-6">
             <div class="pager-container">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -611,16 +497,8 @@ html {
             </div>
         </div>
 
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articlesGrid">
 
-                        <!-- Repite tus artículos -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articlesGrid">
-
-
-
-
-
-
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./cuanto-deberiamos-tener-ahorrado-antes-de-tener-hijos.html" class="article-link">
@@ -641,7 +519,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./cuanto-se-debe-ahorrar-al-mes.html" class="article-link">
@@ -662,7 +539,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./como-hacer-una-plantilla-de-ahorro-en-canva.html" class="article-link">
@@ -683,7 +559,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ahorrar-2-millones-6-meses-colombia.html" class="article-link">
@@ -704,7 +579,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./plan-ahorro-500-mil-pesos-colombia.html" class="article-link">
@@ -725,7 +599,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./dificil-ahorrar-1-millon-colombia.html" class="article-link">
@@ -746,7 +619,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./1m-sin-ganar-mas.html" class="article-link">
@@ -767,7 +639,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ingresos-extra-prima.html" class="article-link">
@@ -788,7 +659,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ahorrar-para-una-moto-meta.html" class="article-link">
@@ -809,7 +679,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./vivienda-siendo-independiente.html" class="article-link">
@@ -830,7 +699,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./comprar-carro-en-colombia-errores-costosos.html" class="article-link">
@@ -851,21 +719,17 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./plantillas-ahorro-dinero-pdf-gratis.html" class="article-link">
       <div class="article-card">
 
-        <!-- IMAGEN -->
         <div style="position: relative;">
           <img src="../../assets/png/plantilla-ahorro-dinero-codigo-millonario.webp" alt="plantillas de ahorro de dinero en PDF gratis">
         </div>
 
-        <!-- CATEGORÍA -->
         <div class="badge editorial">Nota informativa</div>
 
-        <!-- TÍTULO -->
         <h2 class="article-title">
           Cómo ahorrar dinero con plantillas en PDF (descarga gratis y empieza hoy)
         </h2>
@@ -875,7 +739,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./cuanto-dinero-debes-tener-ahorrado-segun-tu-edad.html" class="article-link">
@@ -896,7 +759,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./nequi-daviplata-uala-comparacion.html" class="article-link">
@@ -917,7 +779,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./fondo-de-emergencia.html" class="article-link">
@@ -938,21 +799,17 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./cuenta-estudiantes-colombia.html" class="article-link">
       <div class="article-card">
 
-        <!-- IMAGEN -->
         <div style="position: relative;">
           <img src="../../assets/png/que-beneficios-tienen-cuentas-estudiantiles.webp" alt="cuentas de ahorro para estudiantes en Colombia">
         </div>
 
-        <!-- CATEGORÍA -->
         <div class="badge editorial">Nota informativa</div>
 
-        <!-- TÍTULO -->
         <h2 class="article-title">
           Cómo elegir una cuenta de ahorros siendo estudiante en Colombia
         </h2>
@@ -962,7 +819,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./como-empezar-a-ahorrar-dinero.html" class="article-link">
@@ -983,7 +839,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ahorrar-con-ingreso-bajo.html" class="article-link">
@@ -1004,7 +859,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./app-que-si-ahorra.html" class="article-link">
@@ -1025,8 +879,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ahorrar-sin-renunciar.html" class="article-link">
@@ -1047,7 +899,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./ahorrar-100-mil.html" class="article-link">
@@ -1068,7 +919,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./30-dias-cambia-finanzas-5-habitos.html" class="article-link">
@@ -1089,7 +939,6 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./presupuesto-mensual-facil.html" class="article-link">
@@ -1109,197 +958,419 @@ Cómo ahorrar $1 millón en Colombia sin aumentar ingresos (método comprobado)
     </a>
   </article>
 </div>
-        
-
-
-
-            <!-- DUPLICA MÁS ARTÍCULOS PARA PRUEBAS -->
 
         </div>
     </div>
 </section>
 
-
-
-
-
-<!-- ESPACIO ARRIBA -->
  <div style="height: 120px;"></div>
 
-<!-- CSS PLATILLA --> 
 <link rel="stylesheet" href="../../assets/css/portada.css">
 
 <div class="seccion-label">
   Preguntas frecuentes
 </div>
 
+<section style="background-color: #fffefa; padding: 50px 0;">
 
+  <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px 0 20px;">
 
+    <div style="text-align: center; margin-bottom: 40px; padding-bottom: 20px;">
 
+      <span style="font-family: Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #25251f; text-transform: uppercase;">
+        Sección Especial • Ahorro Inteligente
+      </span>
 
+      <h2 style="font-family: Georgia, serif; font-size: clamp(26px, 3vw, 36px); color: #25251f; margin: 8px 0 6px 0; font-weight: 400; letter-spacing: -0.5px;">
+        Ahorro Inteligente: Hábitos, Estrategias y Libertad Financiera
+      </h2>
 
-
-
-              <section class="mb-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
-
-    <!-- ================= ACORDEÓN ================= -->
-
-    <style>
-  .cf-accordion {
-    margin-top: 60px;
-  }
-
-  .cf-accordion * {
-    box-sizing: border-box;
-  }
-
-  .cf-accordion-item {
-    background: #ffffff; /* fondo blanco fijo */
-    border-radius: 14px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
-    transform: translateY(0);
-    will-change: transform; /* optimiza animación */
-    border: 1px solid rgba(0,0,0,0.03);
-  }
-
-  /* Animación tipo card con sombra */
-  .cf-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
-  }
-
-  .cf-accordion-header {
-    padding: 14px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000;
-    user-select: none;
-    background: #ffffff;
-    transition: none;
-  }
-
-  .cf-accordion-header:hover {
-    background: #ffffff;
-  }
-
-  /* ICONO */
-  .cf-accordion-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(45deg);
-    transform-origin: center;
-    transition: transform 0.35s ease;
-    margin-left: 12px;
-    flex-shrink: 0;
-  }
-
-  .cf-accordion-item.is-open .cf-accordion-icon {
-    transform: rotate(-135deg);
-  }
-
-  .cf-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: relative;
-  }
-
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
-  .cf-accordion-item.is-open .cf-accordion-content::before {
-    content: "";
-    display: block;
-    width: 88%;
-    margin: 0 auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .cf-accordion-content p {
-    padding: 18px 22px 22px;
-    margin: 0;
-    color: #000000;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-</style>
-
-
-    <div class="cf-accordion">
-
-      <div class="cf-accordion-item">
-        <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-         El poder del esfuerzo silencioso
-          <span class="cf-accordion-icon"></span>
-        </div>
-        <div class="cf-accordion-content">
-  
-            <p>
-        En la mayoría de acciones que tomas a favor de tu propósito, no siempre verás resultados inmediatos. Te pasa a ti, y le pasa a la mayoría que quiere lograr algo grande. A veces ahorrar parece lento, aburrido o incluso inútil; sin embargo, ese es el principio que sigue todo esfuerzo constante. Es ese proceso silencioso el que forma la base de cualquier crecimiento.
-     </p>
-
-      <p>
-        La mayoría solo se fija en los logros visibles, en el “aquí y ahora”. Pocos reconocen la disciplina oculta que hizo posibles esos resultados. Y es un tema del que casi nadie habla, porque no vende: es aburrido, es lento, es desesperante. Lo que vende es la emoción, no el cansancio ni el sacrificio.
+      <p style="font-family: Georgia, serif; font-style: italic; font-size: 14px; color: #55554e; margin: 0;">
+        Cómo administrar mejor el dinero de hoy para construir estabilidad y oportunidades mañana.
       </p>
-
-      <p>
-        El verdadero camino no necesariamente te hará infeliz, y el camino falso no necesariamente te dará felicidad. Pero sí existe una diferencia clara: uno construye y el otro destruye, aunque al principio no lo parezca.
-      </p>
-
-
-        </div>
-      </div>
 
     </div>
 
-    <script>
-    document.querySelectorAll('.cf-accordion').forEach(accordion => {
-  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.cf-accordion-item');
-      const content = item.querySelector('.cf-accordion-content');
+    <div class="newspaper-accordion">
 
-      // Solo afecta los items de ESTE acordeón
-      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+      <div class="news-item">
+        <button class="news-header">
+          <span>El poder del esfuerzo silencioso</span>
+          <span class="news-indicator"></span>
+        </button>
+
+        <div class="news-content">
+          <div class="news-content-inner">
+
+            <p>
+              En la mayoría de las acciones que tomas para mejorar tu situación financiera, no siempre verás resultados inmediatos. Ahorrar puede parecer lento, poco emocionante o incluso insignificante cuando las cantidades son pequeñas. Sin embargo, detrás de muchos patrimonios sólidos existe un proceso que rara vez recibe atención: la constancia de administrar bien el dinero durante años.
+            </p>
+
+            <p>
+              Cada peso que decides conservar en lugar de gastar representa una pequeña decisión a favor de tu futuro. Por separado puede parecer poco, pero cuando ese comportamiento se repite de manera constante, comienza a producir algo mucho más importante que una cantidad acumulada: estabilidad, capacidad de respuesta y mayor libertad para elegir.
+            </p>
+
+            <p>
+              La mayoría de las personas suele fijarse en los resultados visibles: una casa, un negocio, un vehículo o una cuenta bancaria con una cantidad considerable de dinero. Pocas veces se observa la disciplina que permitió construir esas condiciones. Detrás de muchos resultados financieros hay presupuestos, gastos controlados, compras aplazadas y decisiones que nunca llegaron a convertirse en una fotografía para mostrar.
+            </p>
+
+            <p>
+              El ahorro tiene una característica particular: exige renunciar a una parte del consumo presente para conservar recursos que podrán utilizarse más adelante. Por eso, muchas veces resulta difícil mantenerlo. El dinero disponible invita a gastar, mientras que los beneficios de ahorrar suelen encontrarse en un futuro que todavía no podemos ver.
+            </p>
+
+            <p>
+              Sin embargo, no todo esfuerzo silencioso termina necesariamente en una recompensa económica extraordinaria. Lo que sí puede producir es una posición financiera más sólida. Tener dinero reservado permite afrontar imprevistos, reducir la dependencia de préstamos y tomar decisiones sin que cada emergencia se convierta en una crisis.
+            </p>
+
+            <p>
+              El verdadero camino no siempre será el más cómodo, y gastar sin planificación tampoco garantiza una vida más feliz. Existe una diferencia importante entre utilizar el dinero para disfrutar el presente y comprometer continuamente los recursos que necesitarás mañana. Uno permite equilibrar la vida actual con el futuro; el otro puede terminar limitando tus posibilidades.
+            </p>
+
+            <p>
+              <strong>El ahorro inteligente no consiste en dejar de vivir para acumular dinero, sino en aprender a disfrutar lo que tienes sin comprometer innecesariamente lo que estás construyendo.</strong>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Por qué es importante ahorrar dinero?</span>
+          <span class="news-indicator"></span>
+        </button>
+
+        <div class="news-content">
+          <div class="news-content-inner">
+
+            <p>
+              Ahorrar dinero es una de las prácticas fundamentales para mantener unas finanzas personales saludables. Permite reservar una parte de los ingresos para atender necesidades futuras, afrontar situaciones inesperadas y financiar objetivos sin depender constantemente del crédito o de recursos prestados.
+            </p>
+
+            <p>
+              Su importancia va mucho más allá de acumular dinero en una cuenta bancaria. El ahorro proporciona margen de maniobra cuando aparecen gastos médicos, reparaciones, interrupciones laborales u otras circunstancias que no estaban contempladas en el presupuesto. En esos momentos, disponer de recursos propios puede marcar una diferencia considerable.
+            </p>
+
+            <p>
+              También permite planificar compras importantes sin comprometer todos los ingresos de un mismo mes. Una persona que ahorra para adquirir un vehículo, realizar estudios, iniciar un negocio o mejorar su vivienda puede organizar sus recursos con anticipación y reducir la necesidad de asumir deudas que superen su capacidad de pago.
+            </p>
+
+            <p>
+              Otro beneficio importante es la tranquilidad financiera. Saber que existe una reserva económica para responder ante determinadas situaciones reduce la incertidumbre y permite tomar decisiones con mayor margen de tiempo. No elimina todos los problemas, pero evita que cada imprevisto tenga que resolverse mediante préstamos o sacrificios económicos difíciles.
+            </p>
+
+            <p>
+              La capacidad de ahorro depende de diferentes factores, entre ellos el nivel de ingresos, los gastos esenciales, las responsabilidades familiares y el costo de vida. Por eso, no existe una cantidad universal que todas las personas deban ahorrar. Lo importante es establecer una cantidad realista y mantener el hábito de acuerdo con las posibilidades de cada situación.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Cómo organizar tus ingresos para ahorrar más dinero?</span>
+          <span class="news-indicator"></span>
+        </button>
+
+        <div class="news-content">
+          <div class="news-content-inner">
+
+            <p>
+              Organizar los ingresos es uno de los primeros pasos para desarrollar un sistema de ahorro que pueda mantenerse a largo plazo. Antes de decidir cuánto dinero reservar, es necesario comprender cuánto recibes, cuáles son tus gastos habituales y qué compromisos económicos debes atender durante cada periodo.
+            </p>
+
+            <p>
+              Un presupuesto personal permite visualizar el destino de los ingresos y reconocer qué parte del dinero se utiliza para necesidades básicas, obligaciones financieras, consumo cotidiano y otros gastos. Sin esta información, es difícil identificar cuánto puedes ahorrar realmente y por qué el dinero parece desaparecer antes de terminar el mes.
+            </p>
+
+            <p>
+              Una estrategia útil consiste en separar los gastos esenciales de aquellos que pueden reducirse, aplazarse o eliminarse. La vivienda, la alimentación, los servicios y el transporte suelen representar compromisos prioritarios, mientras que determinadas compras por impulso, suscripciones poco utilizadas y consumos ocasionales pueden revisarse.
+            </p>
+
+            <p>
+              También es conveniente establecer una cantidad de ahorro desde el momento en que recibes tus ingresos. Esperar hasta final de mes para guardar lo que sobra puede dificultar la formación del hábito, especialmente cuando existen numerosos gastos y decisiones de consumo durante ese periodo.
+            </p>
+
+            <p>
+              Cuando los ingresos son variables, la planificación requiere mayor atención. En estos casos, conviene elaborar el presupuesto tomando como referencia los ingresos más conservadores y evitar comprometer anticipadamente dinero que todavía no se ha recibido. Los meses con mejores resultados pueden aprovecharse para fortalecer las reservas.
+            </p>
+
+            <p>
+              Organizar el dinero no significa controlar cada gasto de manera obsesiva. Significa conocer tus posibilidades económicas, establecer prioridades y distribuir los recursos de forma que puedas atender tus responsabilidades actuales sin abandonar tus objetivos futuros.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Cómo reducir gastos sin afectar tu calidad de vida?</span>
+          <span class="news-indicator"></span>
+        </button>
+
+        <div class="news-content">
+          <div class="news-content-inner">
+
+            <p>
+              Reducir gastos no significa eliminar todo aquello que produce satisfacción o renunciar a las actividades que disfrutas. El objetivo del ahorro inteligente es identificar qué gastos aportan verdadero valor y cuáles consumen una parte importante de los ingresos sin ofrecer beneficios proporcionales.
+            </p>
+
+            <p>
+              Muchas veces, el problema no está en una compra grande, sino en la acumulación de pequeños desembolsos que pasan desapercibidos. Comidas fuera de casa, compras impulsivas, servicios que ya no utilizamos y gastos cotidianos sin planificación pueden representar cantidades considerables cuando se suman durante varios meses.
+            </p>
+
+            <p>
+              Una manera de mejorar el control de gastos consiste en registrar los movimientos de dinero durante un periodo determinado. Revisar los extractos bancarios, conservar los comprobantes y anotar los pagos en efectivo permite descubrir patrones de consumo que normalmente no se identifican con facilidad.
+            </p>
+
+            <p>
+              Después de conocer esos patrones, es posible establecer prioridades. Algunos gastos pueden eliminarse, otros pueden reducirse y determinados servicios pueden sustituirse por alternativas más económicas. La clave está en realizar ajustes que produzcan un ahorro real sin generar sacrificios innecesarios.
+            </p>
+
+            <p>
+              También es importante diferenciar entre una necesidad, un deseo y una compra motivada por el impulso del momento. No todas las compras innecesarias representan un problema, pero cuando se convierten en un comportamiento frecuente pueden desplazar recursos que serían más útiles para construir un fondo de emergencia o alcanzar otros objetivos.
+            </p>
+
+            <p>
+              Una buena administración del dinero no consiste en gastar lo mínimo posible, sino en conseguir que cada decisión de consumo tenga sentido dentro de tus prioridades financieras.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Cómo construir un fondo de emergencia sólido?</span>
+          <span class="news-indicator"></span>
+        </button>
+
+        <div class="news-content">
+          <div class="news-content-inner">
+
+            <p>
+              Un fondo de emergencia es una reserva de dinero destinada exclusivamente a afrontar situaciones inesperadas que pueden afectar la estabilidad económica. Su función principal es proporcionar recursos disponibles cuando aparecen gastos importantes o disminuyen los ingresos por circunstancias que no estaban previstas.
+            </p>
+
+            <p>
+              Entre las situaciones que pueden justificar su utilización se encuentran la pérdida del empleo, una reparación urgente de la vivienda, una avería del vehículo necesario para trabajar o determinados gastos médicos. Son acontecimientos que pueden alterar considerablemente un presupuesto y que requieren una respuesta económica inmediata.
+            </p>
+
+            <p>
+              Como referencia general, muchas estrategias financieras recomiendan acumular entre tres y seis meses de gastos esenciales. Sin embargo, la cantidad adecuada depende de la estabilidad laboral, las responsabilidades familiares, la regularidad de los ingresos y la facilidad para encontrar nuevas fuentes de dinero.
+            </p>
+
+            <p>
+              Una persona con ingresos variables, responsabilidades económicas importantes o pocas alternativas laborales puede necesitar una reserva mayor. Por el contrario, quienes cuentan con ingresos estables y menores compromisos podrían comenzar con una cantidad más reducida e incrementarla progresivamente.
+            </p>
+
+            <p>
+              No es necesario reunir todo el dinero de una sola vez. Una estrategia más realista consiste en establecer una primera meta alcanzable y aumentar la reserva mediante aportes periódicos. Incluso comenzar con una cantidad equivalente a algunas semanas de gastos esenciales puede representar un avance importante.
+            </p>
+
+            <p>
+              Este dinero debe mantenerse separado de los recursos destinados al consumo habitual y, preferiblemente, en un lugar seguro y de fácil disponibilidad. Un fondo de emergencia no debe confundirse con el capital destinado a inversiones de mayor riesgo ni utilizarse para financiar compras que pueden planificarse con anticipación.
+            </p>
+
+            <p>
+              La verdadera utilidad de esta reserva aparece cuando surge una dificultad y puedes responder sin comprometer inmediatamente tus ingresos futuros ni adquirir deudas innecesarias.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Cómo desarrollar disciplina para ahorrar constantemente?</span>
+          <span class="news-indicator"></span>
+        </button>
+
+        <div class="news-content">
+          <div class="news-content-inner">
+
+            <p>
+              La disciplina financiera es la capacidad de mantener decisiones económicas coherentes con los objetivos que se han establecido. En el caso del ahorro, significa reservar dinero de manera constante, controlar los gastos y evitar que las compras impulsivas terminen desplazando las prioridades.
+            </p>
+
+            <p>
+              Uno de los mayores desafíos consiste en mantener el hábito cuando los resultados parecen pequeños. Ahorrar una cantidad reducida puede generar la sensación de que el esfuerzo no está produciendo cambios importantes. Sin embargo, la continuidad permite acumular recursos y desarrollar una relación más organizada con el dinero.
+            </p>
+
+            <p>
+              Para fortalecer este comportamiento, conviene establecer metas específicas y medibles. Ahorrar para un fondo de emergencia, pagar una obligación pendiente o reunir el dinero necesario para una compra importante son objetivos que permiten identificar para qué se está reservando cada cantidad.
+            </p>
+
+            <p>
+              También puede resultar útil automatizar las transferencias hacia una cuenta destinada al ahorro, siempre que los ingresos y los compromisos económicos permitan hacerlo. De esta manera, el dinero se separa antes de que aparezcan otras decisiones de consumo.
+            </p>
+
+            <p>
+              La disciplina no exige mantener exactamente la misma cantidad de ahorro todos los meses. Si los ingresos disminuyen o aparecen gastos esenciales inesperados, es razonable ajustar los aportes. Lo importante es conservar el hábito dentro de las posibilidades reales y evitar interpretar cualquier interrupción como un fracaso definitivo.
+            </p>
+
+            <p>
+              Con el tiempo, ahorrar deja de ser una decisión aislada y se convierte en parte de la manera habitual de administrar los recursos. Esa transformación puede tener un impacto significativo en la estabilidad financiera.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Cómo construir estabilidad financiera mediante el ahorro a largo plazo?</span>
+          <span class="news-indicator"></span>
+        </button>
+
+        <div class="news-content">
+          <div class="news-content-inner">
+
+            <p>
+              El ahorro a largo plazo consiste en reservar recursos económicos con objetivos que van más allá de las necesidades inmediatas. Puede utilizarse para preparar la jubilación, adquirir una vivienda, financiar estudios, iniciar un negocio o construir una base económica que permita afrontar distintas etapas de la vida.
+            </p>
+
+            <p>
+              Su principal ventaja es que permite distribuir el esfuerzo financiero durante periodos prolongados. En lugar de intentar reunir una cantidad elevada en poco tiempo, una persona puede establecer aportes periódicos que se ajusten a sus ingresos y a sus responsabilidades.
+            </p>
+
+            <p>
+              Sin embargo, ahorrar durante muchos años también requiere considerar la inflación. Cuando los precios aumentan, el mismo dinero puede comprar menos bienes y servicios que antes. Por eso, conservar una cantidad de dinero durante periodos prolongados sin evaluar su pérdida de poder adquisitivo puede limitar su utilidad futura.
+            </p>
+
+            <p>
+              Es importante diferenciar entre el ahorro y la inversión. El ahorro prioriza la disponibilidad y la conservación de los recursos, mientras que la inversión busca obtener rendimientos y puede implicar distintos niveles de riesgo. Ambos pueden formar parte de una estrategia financiera, pero cumplen funciones diferentes.
+            </p>
+
+            <p>
+              Una planificación adecuada comienza por establecer objetivos, determinar cuándo se necesitará el dinero y elegir dónde mantenerlo según el plazo y la disponibilidad requerida. Los recursos destinados a emergencias, por ejemplo, necesitan mayor liquidez que aquellos reservados para objetivos de largo plazo.
+            </p>
+
+            <p>
+              Construir estabilidad financiera no depende exclusivamente de cuánto dinero se logra acumular, sino también de cómo se distribuyen los recursos, qué riesgos se asumen y qué tan preparados estamos para responder ante los cambios económicos.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Qué relación existe entre el ahorro y la libertad financiera?</span>
+          <span class="news-indicator"></span>
+        </button>
+
+        <div class="news-content">
+          <div class="news-content-inner">
+
+            <p>
+              La libertad financiera está relacionada con la capacidad de contar con recursos suficientes para tomar decisiones económicas sin depender constantemente de los ingresos inmediatos o de la necesidad de endeudarse para cubrir cualquier imprevisto.
+            </p>
+
+            <p>
+              El ahorro contribuye a construir esa capacidad porque permite acumular recursos, reducir la vulnerabilidad económica y preparar el terreno para objetivos de mayor alcance. Tener dinero reservado puede facilitar un cambio laboral, financiar una formación profesional o afrontar una etapa de menores ingresos.
+            </p>
+
+            <p>
+              No obstante, ahorrar por sí solo no garantiza alcanzar la libertad financiera. También influyen el nivel de ingresos, los gastos habituales, las deudas, la capacidad para generar nuevas fuentes de dinero y las decisiones relacionadas con la administración del patrimonio.
+            </p>
+
+            <p>
+              Una estrategia financiera equilibrada combina el control de gastos con el desarrollo de los ingresos y una planificación adecuada de los recursos. Cuando existe una diferencia favorable entre lo que se gana y lo que se gasta, es posible destinar una parte a reservas, objetivos personales y, cuando corresponda, inversiones.
+            </p>
+
+            <p>
+              La libertad financiera tampoco significa necesariamente dejar de trabajar o disponer de cantidades ilimitadas de dinero. Para muchas personas puede representar algo más concreto: tener suficiente estabilidad para elegir un empleo, cambiar de actividad, atender a su familia o enfrentar una dificultad sin que toda su economía dependa de la siguiente entrada de dinero.
+            </p>
+
+            <p>
+              En ese sentido, cada decisión de ahorro puede contribuir a ampliar las opciones disponibles y reducir la dependencia de circunstancias económicas inmediatas.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <button class="news-header">
+          <span>Guías prácticas de ahorro y finanzas personales para toda la vida</span>
+          <span class="news-indicator"></span>
+        </button>
+
+        <div class="news-content">
+          <div class="news-content-inner">
+
+            <p>
+              Bienvenido a la sección global de <strong>Ahorro Inteligente de Código Millonario</strong>. Aquí reunimos información, guías y recursos educativos para comprender mejor cómo administrar los ingresos, controlar los gastos y desarrollar hábitos de ahorro que puedan mantenerse en diferentes etapas de la vida.
+            </p>
+
+            <p>
+              El ahorro es una práctica que puede adaptarse a distintas realidades económicas. No importa si una persona recibe un salario fijo, trabaja de manera independiente, administra un negocio o tiene ingresos variables: comprender cómo se distribuye el dinero es fundamental para establecer prioridades y tomar mejores decisiones.
+            </p>
+
+            <p>
+              Nuestros contenidos abordan temas como la elaboración de presupuestos mensuales, la organización de ingresos, la reducción de gastos cotidianos, la creación de fondos de emergencia y la planificación de objetivos financieros. También exploramos cómo la inflación, el consumo y los hábitos personales pueden influir en la capacidad de conservar y hacer crecer el dinero.
+            </p>
+
+            <p>
+              El propósito es ofrecer metodologías claras y aplicables para que cada persona pueda evaluar su situación, identificar oportunidades de mejora y desarrollar una estrategia de ahorro acorde con sus posibilidades. No todas las personas necesitan ahorrar la misma cantidad ni seguir exactamente el mismo método.
+            </p>
+
+            <p>
+              También encontrarás información sobre la relación entre ahorro, inversión, estabilidad económica y construcción de patrimonio. Comprender las diferencias entre estos conceptos permite organizar mejor los recursos y evitar decisiones que puedan comprometer objetivos financieros importantes.
+            </p>
+
+            <p>
+              En Código Millonario creemos que administrar bien el dinero comienza mucho antes de alcanzar una gran cantidad de patrimonio. Empieza con las decisiones cotidianas, con la capacidad de establecer prioridades y con la disciplina necesaria para conservar una parte de los recursos que generamos.
+            </p>
+
+            <p>
+              <strong>Porque ahorrar no es limitarte a vivir con menos: es prepararte para tener más opciones, mayor tranquilidad y mejores oportunidades en el futuro.</strong>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const newsItems = document.querySelectorAll(".news-item");
+
+  newsItems.forEach(item => {
+    const header = item.querySelector(".news-header");
+
+    header.addEventListener("click", () => {
+      newsItems.forEach(i => {
+        if (i !== item) {
+          i.classList.remove("is-open");
+          i.querySelector(".news-content").style.maxHeight = null;
         }
       });
 
-      item.classList.toggle('is-open');
+      item.classList.toggle("is-open");
+      const content = item.querySelector(".news-content");
 
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
+      if (item.classList.contains("is-open")) {
+        content.style.maxHeight = content.scrollHeight + "px";
       } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.maxHeight = null;
       }
     });
   });
 });
-    </script>
+</script>
 
-
- </div>
-</section>
-    <!-- ================= FIN ACORDEÓN ================= -->
-
-
-
-</main>
-
-
-
-
-<!-- ================= SCRIP COMPAGINACION ================= -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const articles = Array.from(document.querySelectorAll('.article'));
@@ -1422,20 +1493,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-
-
-<!-- ESPACIO ARRIBA -->
  <div style="height: 120px;"></div>
 
-
-  <!--  Footer  -->
 <div class="footer-here"></div>
 
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-<!-- MENU COMPLETO -->
 <script src="../../assets/menu.js"></script>
-
 
     <script>
         lucide.createIcons();
