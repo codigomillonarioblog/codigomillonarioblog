@@ -57,15 +57,7 @@
 
 <body>
 
-<!-- TODO EL CONTENIDO DE LA PÁGINA AQUÍ -->
-
-
-
-
-
 <style>
-
-/* ===================== GRID DE TARJETAS CENTRADO ===================== */
 
 #articlesGrid {
     display: grid;
@@ -85,8 +77,6 @@
         padding: 0 12px;
     }
 }
-
-/* ===================== TARJETAS ===================== */
 
 .article {
     display: flex;
@@ -131,8 +121,6 @@
     color: inherit;
 }
 
-/* ===================== BLOQUE SUPERIOR ===================== */
-
 .text-content {
     min-height: 90px;
     border-bottom: 1px solid #e5e5e5;
@@ -140,8 +128,6 @@
     margin-bottom: 10px;
     text-align: left;
 }
-
-/* ===================== BADGES ===================== */
 
 .badge {
     font-size: 12px;
@@ -187,8 +173,6 @@
     justify-content: space-between;
 }
 
-/* ===================== TÍTULO ===================== */
-
 .article-title {
     font-family: 'Inter', sans-serif;
     font-size: 1.9rem;
@@ -207,8 +191,6 @@
     }
 }
 
-/* ===================== IMAGEN ===================== */
-
 .article-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -220,8 +202,6 @@
 .article-card:hover img {
     filter: brightness(1.10);
 }
-
-/* ===================== PAGINACIÓN ===================== */
 
 .pager-container {
     margin-top: 40px;
@@ -235,7 +215,6 @@
     color: #ffffff;
 }
 
-/* 🔥 TEXTO TOTAL RESULTADOS Y PÁGINA */
 .pager-container,
 .pager-container *,
 .pager-container .text-sm,
@@ -288,8 +267,6 @@
     pointer-events: none;
 }
 
-/* ===================== INPUTS PAGINACIÓN ===================== */
-
 .select-pages {
     border: 1px solid rgba(255,255,255,0.18);
     background: #111111;
@@ -308,8 +285,6 @@ input[type="number"].goto-page {
     background: #111111;
     color: #ffffff;
 }
-
-/* ===================== MOBILE PAGINATION ===================== */
 
 @media (max-width: 768px) {
 
@@ -395,15 +370,11 @@ input[type="number"].goto-page {
 
 }
 
-/* ===================== OCULTOS ===================== */
-
 .meta,
 .arrow-btn,
 .card-icon {
     display: none !important;
 }
-
-/* ===================== FONDO ===================== */
 
 body,
 html {
@@ -411,146 +382,69 @@ html {
 }
 
 </style>
-
-
-
-
-
-
-
-
-<!-- ===================================================== 
-     ESPACIO FINAL 
-===================================================== --> 
  
-<div style="height:240px;"></div> 
+<div style="height:110px;"></div> 
 
 <link rel="stylesheet" href="../../assets/css/secciones.css">
 
+<main>
 
-<!-- SECCIÓN TIPO FINANCIAL TIMES -->
+<section class="cm-portada-diario">
 
-<section class="ft-section">
-
-  <!-- CABECERA -->
-
-  <header class="ft-header">
-
-<div class="ft-header-top">
-
-  <div class="ft-header-tools">
-
-  </div>
-
-  <div class="ft-logo">MUNDO MILLONARIO</div>
-
-</div>
-
+  <header class="cm-portada-header">
+    <span class="cm-portada-category">GRANDES FORTUNAS Y PATRIMONIO</span>
+    <h2>El mundo detrás de las grandes fortunas</h2>
+    <p>Una mirada al origen de la riqueza, la evolución del patrimonio y las decisiones que ayudan a explicar cómo se construyen las grandes fortunas.</p>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <div class="cm-portada-layout">
 
-  <main class="ft-main">
+    <div class="cm-portada-main-box">
+      <figure class="cm-portada-image-wrapper">
+        <img 
+          src="../../assets/png/mundo-millonario-riqueza-y-patrimonio.webp" 
+          alt="Grandes fortunas, patrimonio y riqueza en el mundo financiero." 
+          loading="lazy">
 
-<!-- BLOQUE IZQUIERDO -->
-<article class="ft-lead">
-
-  <p class="ft-category">GRANDES FORTUNAS Y PATRIMONIO</p>
-
-  <h1>
-    El mundo detrás de las grandes fortunas
-  </h1>
-
-  <p class="ft-summary">
-    Una mirada al origen de la riqueza, la evolución del patrimonio
-    y las decisiones que ayudan a explicar cómo se construyen las grandes fortunas.
-  </p>
-
-  <span class="ft-exclusive">MUNDO MILLONARIO</span>
-
-</article>
-
-<!-- BLOQUE CENTRAL -->
-<article class="ft-feature">
-
-  <div class="ft-feature-image">
-
-    <img
-      src="../../assets/png/mundo-millonario-riqueza-y-patrimonio.webp"
-      alt="Grandes fortunas, patrimonio y riqueza en el mundo financiero."
-    >
-
-  </div>
-
-  <div class="ft-feature-content">
-
-    <p class="ft-feature-category">ORIGEN DE LA RIQUEZA</p>
-
-    <h2>
-      <strong>Las grandes fortunas tienen distintos orígenes.</strong>
-      Empresas, inversiones y decisiones que transforman el patrimonio
-    </h2>
-
-  </div>
-
-</article>
-
-<!-- COLUMNA DERECHA -->
-<aside class="ft-editors">
-
-  <h2 class="ft-editors-heading">Claves de la riqueza</h2>
-
-  <article class="ft-editor-item">
-
-    <h3>
-      <span class="ft-quote-mark">“</span>
-      El patrimonio neto revela más que los ingresos por sí solos
-    </h3>
-
-    <div class="ft-author">
-      <span>PATRIMONIO</span>
+        <div class="cm-portada-overlay">
+          <span class="cm-portada-subtag">ORIGEN DE LA RIQUEZA</span>
+          <h3>Las grandes fortunas tienen distintos orígenes</h3>
+          <p>Empresas, inversiones y decisiones que transforman el patrimonio y explican cómo se construyen algunas de las mayores riquezas del mundo.</p>
+        </div>
+      </figure>
     </div>
 
-  </article>
+    <aside class="cm-portada-sidebar">
 
-  <article class="ft-editor-item ft-editor-second">
+      <article class="cm-portada-side-item">
+        <span class="cm-portada-side-tag">PATRIMONIO</span>
+        <h4>El patrimonio neto revela más que los ingresos por sí solos</h4>
+        <p>La riqueza no se mide únicamente por lo que una persona gana, sino también por sus activos, sus deudas y el valor de lo que ha logrado acumular.</p>
+      </article>
 
-    <h3>
-      <span class="ft-quote-mark">“</span>
-      Las grandes fortunas también cambian con los mercados y las decisiones empresariales
-    </h3>
+      <article class="cm-portada-side-item">
+        <span class="cm-portada-side-tag">EVOLUCIÓN DE LA RIQUEZA</span>
+        <h4>Las grandes fortunas también cambian con los mercados y las decisiones empresariales</h4>
+        <p>El valor de los negocios, las inversiones y los movimientos económicos puede transformar el patrimonio de quienes concentran grandes riquezas.</p>
+      </article>
 
-    <p class="ft-editor-author">EVOLUCIÓN DE LA RIQUEZA</p>
+      <article class="cm-portada-side-item">
+        <span class="cm-portada-side-tag">GRANDES FORTUNAS</span>
+        <h4>Detrás de cada gran patrimonio existe una historia de decisiones</h4>
+        <p>Comprender cómo surgieron las grandes riquezas permite observar el papel de las empresas, las oportunidades y las estrategias que marcaron su crecimiento.</p>
+      </article>
 
-  </article>
+    </aside>
 
-</aside>
-
-  </main>
-
-  <div class="ft-bottom-line"></div>
+  </div>
 
 </section>
 
-<!-- ===================================================== 
-     ESPACIO FINAL 
-===================================================== --> 
- 
 <div style="height:100px;"></div> 
-
-
-
-
-
-
 
                 <section class="mb-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- aquí siguen las tarjetas de artículos -->
 
-
-
-            <!-- PAGINACIÓN ARRIBA -->
             <div class="max-w-5xl mx-auto mb-6">
                 <div class="pager-container">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -583,14 +477,8 @@ html {
                 </div>
             </div>
 
-
-
-
-            <!-- GRID DE ARTÍCULOS -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="articlesGrid">
 
-
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./como-hacerse-millonario-en-poco-tiempo.html" class="article-link">
@@ -611,7 +499,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./que-es-codigo-millonario.html" class="article-link">
@@ -632,7 +519,6 @@ html {
   </article>
 </div>
 
-<!-- ARTÍCULO -->
 <div class="article">
   <article>
     <a href="./12-diferencias-entre-ser-rico-y-ser-millonario.html" class="article-link">
@@ -653,365 +539,278 @@ html {
   </article>
 </div>
 
-
-
-
-
-
-  
-                <!-- Puedes duplicar más artículos aquí con la clase "article" -->
             </div>
         </div>
     </section>
 
-
-
-
-
-
-
-
-<!-- ESPACIO ARRIBA -->
 <div style="height: 120px;"></div>
 
-<!-- CSS PLATILLA --> 
 <link rel="stylesheet" href="../../assets/css/portada.css">
 
 <div class="seccion-label">
   Preguntas frecuentes
 </div>
 
+<section style="background-color: #fffefa; padding: 50px 0;">
 
+  <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px 0 20px;">
 
+    <div style="text-align: center; margin-bottom: 40px; padding-bottom: 20px;">
 
+      <span style="font-family: Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #25251f; text-transform: uppercase;">
+        Sección Especial • Grandes Fortunas y Patrimonio
+      </span>
 
+      <h2 style="font-family: Georgia, serif; font-size: clamp(26px, 3vw, 36px); color: #25251f; margin: 8px 0 6px 0; font-weight: 400; letter-spacing: -0.5px;">
+        Grandes Fortunas del Mundo: Cómo se Construye y Evoluciona la Riqueza
+      </h2>
 
+      <p style="font-family: Georgia, serif; font-style: italic; font-size: 14px; color: #55554e; margin: 0;">
+        El origen de los grandes patrimonios, las empresas que los impulsan y los factores que transforman su valor.
+      </p>
 
+    </div>
 
- <section class="mb-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="font-family: 'Open Sans', sans-serif;">
+    <div class="newspaper-accordion">
 
-    <!-- ================= ACORDEÓN ================= -->
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Qué se considera una gran fortuna y cómo se mide la riqueza?</span>
+          <span class="news-indicator"></span>
+        </button>
 
-    <style>
-  .cf-accordion {
-    margin-top: 60px;
-  }
+        <div class="news-content">
+          <div class="news-content-inner">
 
-  .cf-accordion * {
-    box-sizing: border-box;
-  }
+            <p>
+              No existe una cifra universal que determine cuándo una persona posee una gran fortuna. El concepto depende del país, el nivel de precios, la moneda y el contexto económico en el que se analice. Sin embargo, cuando se estudian las grandes riquezas, una de las medidas más utilizadas es el patrimonio neto.
+            </p>
 
-  .cf-accordion-item {
-    background: #ffffff; /* fondo blanco fijo */
-    border-radius: 14px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* sombra ligera */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
-    transform: translateY(0);
-    will-change: transform; /* optimiza animación */
-    border: 1px solid rgba(0,0,0,0.03);
-  }
+            <p>
+              El patrimonio neto representa la diferencia entre el valor de los activos de una persona y sus obligaciones financieras. Entre los activos pueden encontrarse empresas, participaciones empresariales, propiedades inmobiliarias, inversiones, efectivo y otros bienes con valor económico. Las deudas y compromisos pendientes se descuentan para obtener una aproximación de la riqueza neta.
+            </p>
 
-  /* Animación tipo card con sombra */
-  .cf-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* sombra un poco más marcada al pasar el mouse */
-  }
+            <p>
+              Esta distinción es importante porque los ingresos y la riqueza no representan lo mismo. Los ingresos muestran cuánto dinero recibe una persona durante un periodo determinado, mientras que el patrimonio refleja lo que ha acumulado después de considerar sus activos y obligaciones.
+            </p>
 
-  .cf-accordion-header {
-    padding: 14px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000;
-    user-select: none;
-    background: #ffffff;
-    transition: none;
-  }
+            <p>
+              Por ejemplo, un empresario puede recibir una remuneración relativamente moderada y, al mismo tiempo, poseer una participación importante en una compañía valorada en miles de millones. Su patrimonio puede ser considerable aunque no tenga esa misma cantidad disponible en una cuenta bancaria.
+            </p>
 
-  .cf-accordion-header:hover {
-    background: #ffffff;
-  }
+            <p>
+              También es necesario distinguir entre riqueza estimada y dinero disponible. Una parte importante de las grandes fortunas suele estar representada por activos que no pueden convertirse inmediatamente en efectivo sin venderlos o modificar la estructura de propiedad. Por eso, una valoración patrimonial no equivale necesariamente a dinero líquido.
+            </p>
 
-  /* ICONO */
-  .cf-accordion-icon {
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transform: rotate(45deg);
-    transform-origin: center;
-    transition: transform 0.35s ease;
-    margin-left: 12px;
-    flex-shrink: 0;
-  }
+          </div>
+        </div>
+      </div>
 
-  .cf-accordion-item.is-open .cf-accordion-icon {
-    transform: rotate(-135deg);
-  }
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿De dónde provienen las grandes fortunas del mundo?</span>
+          <span class="news-indicator"></span>
+        </button>
 
-  .cf-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: relative;
-  }
+        <div class="news-content">
+          <div class="news-content-inner">
 
-  /* LÍNEA DIVISORIA CORTA Y CENTRADA */
-  .cf-accordion-item.is-open .cf-accordion-content::before {
-    content: "";
-    display: block;
-    width: 88%;
-    margin: 0 auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
+            <p>
+              Las grandes fortunas pueden tener orígenes muy distintos. Algunas nacen de la creación de empresas que consiguen expandirse y dominar mercados; otras proceden de inversiones, actividades financieras, propiedad inmobiliaria, recursos naturales o herencias familiares. En muchos casos, el patrimonio se construye mediante una combinación de estas fuentes.
+            </p>
 
-  .cf-accordion-content p {
-    padding: 18px 22px 22px;
-    margin: 0;
-    color: #000000;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-</style>
+            <p>
+              La creación empresarial ha sido una vía importante para acumular grandes patrimonios. Cuando una compañía desarrolla productos o servicios con demanda, aumenta sus operaciones y consigue mantener una posición competitiva, su valor puede crecer con el tiempo. Los propietarios que conservan una participación significativa pueden beneficiarse de ese aumento de valor.
+            </p>
 
-    <div class="cf-accordion">
+            <p>
+              Las inversiones también pueden desempeñar un papel relevante. La propiedad de acciones, participaciones en empresas privadas, inmuebles y otros activos permite que una parte de la riqueza esté vinculada al desempeño de diferentes sectores económicos. Sin embargo, estos activos también están expuestos a pérdidas y variaciones de valoración.
+            </p>
 
-    <div class="cf-accordion-item">
+            <p>
+              Otra fuente de grandes patrimonios es la transmisión de riqueza entre generaciones. Algunas familias conservan empresas, propiedades y participaciones durante décadas, mientras otras transforman o amplían los bienes recibidos mediante nuevas inversiones y actividades empresariales.
+            </p>
 
-  <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-    ¿Qué se considera una gran fortuna?
-    <span class="cf-accordion-icon"></span>
-  </div>
+            <p>
+              Comprender el origen de una fortuna permite observar que la riqueza no siempre se construye de la misma manera. Detrás de cada patrimonio pueden existir historias de emprendimiento, expansión empresarial, inversión, herencia y decisiones económicas que se desarrollaron durante distintos periodos.
+            </p>
 
-  <div class="cf-accordion-content">
+          </div>
+        </div>
+      </div>
 
-    <p>
-      No existe una cifra universal que determine cuándo una persona puede considerarse
-      poseedora de una gran fortuna. El concepto depende del país, la moneda y de si se
-      habla de ingresos, patrimonio o riqueza neta. En términos financieros, el patrimonio
-      permite una aproximación más útil porque considera tanto los activos como las deudas.
-    </p>
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Cómo está compuesto el patrimonio de las personas más ricas?</span>
+          <span class="news-indicator"></span>
+        </button>
 
-    <p>
-      Por eso, tener ingresos elevados durante un determinado periodo no significa
-      necesariamente poseer una gran fortuna. Una persona puede ganar mucho dinero y,
-      al mismo tiempo, mantener un patrimonio relativamente reducido si sus gastos,
-      obligaciones o deudas también son elevados.
-    </p>
+        <div class="news-content">
+          <div class="news-content-inner">
 
-    <p>
-      Las grandes fortunas suelen estar vinculadas a la propiedad de empresas, activos
-      financieros, bienes raíces, participaciones en compañías o patrimonio familiar.
-      La composición de esa riqueza puede ser muy diferente de un caso a otro.
-    </p>
+            <p>
+              Las grandes fortunas no suelen estar representadas por una única cantidad de dinero. En muchos casos, se distribuyen entre diferentes tipos de activos cuyo valor depende de factores como el desempeño empresarial, las condiciones de los mercados, la ubicación de las propiedades y las decisiones de inversión.
+            </p>
 
-  </div>
+            <p>
+              Las participaciones en empresas pueden representar una parte importante del patrimonio de algunos empresarios. Si una persona conserva acciones o una participación relevante en una compañía, el valor de esa propiedad puede cambiar conforme evoluciona el negocio y las expectativas sobre sus resultados futuros.
+            </p>
 
-</div>
+            <p>
+              Los bienes raíces también forman parte de numerosos patrimonios. Edificios comerciales, terrenos, viviendas, hoteles y otras propiedades pueden generar ingresos por alquiler o aumentar de valor con el tiempo. No obstante, su rentabilidad depende de factores como los costos de mantenimiento, la financiación, la demanda y las condiciones del mercado inmobiliario.
+            </p>
 
+            <p>
+              Otros patrimonios incluyen inversiones financieras, efectivo, bonos, participaciones privadas y bienes de colección. La proporción de cada categoría varía considerablemente entre personas y familias. No existe una distribución única que pueda considerarse adecuada para todas las grandes fortunas.
+            </p>
 
-<div class="cf-accordion-item">
+            <p>
+              También importa conocer las obligaciones asociadas a esos activos. Una propiedad financiada, por ejemplo, no representa riqueza neta por su valor total si todavía existe una deuda pendiente. Por eso, analizar la composición de un patrimonio requiere observar tanto lo que se posee como las obligaciones que acompañan esos bienes.
+            </p>
 
-  <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-    ¿De dónde provienen las grandes fortunas?
-    <span class="cf-accordion-icon"></span>
-  </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="cf-accordion-content">
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Qué papel tienen las empresas en la creación de grandes fortunas?</span>
+          <span class="news-indicator"></span>
+        </button>
 
-    <p>
-      Las grandes fortunas pueden tener orígenes muy distintos. Algunas se construyen
-      mediante la creación y expansión de empresas, mientras que otras proceden de
-      inversiones, propiedad de activos, herencias o una combinación de varias fuentes.
-    </p>
+        <div class="news-content">
+          <div class="news-content-inner">
 
-    <p>
-      En muchos casos, la riqueza no aparece como consecuencia de una sola operación.
-      Puede acumularse durante décadas a medida que aumenta el valor de una empresa,
-      una cartera de activos o un patrimonio familiar.
-    </p>
+            <p>
+              La propiedad de empresas ha sido una de las fuentes más importantes de grandes patrimonios. Una compañía puede aumentar su valor cuando amplía sus operaciones, desarrolla productos competitivos, consigue nuevos clientes y genera expectativas de crecimiento. Cuando sus propietarios conservan una participación significativa, parte de ese valor puede reflejarse en su riqueza personal.
+            </p>
 
-    <p>
-      Analizar el origen de una fortuna permite distinguir entre los ingresos que genera
-      una persona y el patrimonio que realmente posee. Son conceptos relacionados, pero
-      no equivalentes.
-    </p>
+            <p>
+              La diferencia entre recibir un salario y ser propietario de una empresa ayuda a entender este fenómeno. Un ejecutivo puede obtener ingresos elevados por dirigir una organización, mientras que un accionista puede acumular riqueza a través del valor de su participación. Son formas distintas de relacionarse económicamente con una compañía.
+            </p>
 
-  </div>
+            <p>
+              El crecimiento empresarial también puede producirse mediante la expansión internacional, la incorporación de nuevas tecnologías, la adquisición de competidores o la entrada en mercados que antes no estaban atendidos. Estas decisiones pueden modificar la dimensión de una compañía y sus posibilidades de generar ingresos futuros.
+            </p>
 
-</div>
+            <p>
+              Sin embargo, el valor de una empresa no aumenta de manera automática. La competencia, los cambios en la demanda, los costos operativos, el endeudamiento y las decisiones de gestión pueden afectar sus resultados. Una compañía que alguna vez tuvo una valoración elevada también puede perder valor si sus perspectivas se deterioran.
+            </p>
 
+            <p>
+              Por eso, al estudiar una gran fortuna empresarial es necesario observar más que el nombre de su propietario. También importa conocer la historia de la compañía, su actividad económica, su posición en el mercado y la participación que esa persona mantiene en el negocio.
+            </p>
 
-<div class="cf-accordion-item">
+          </div>
+        </div>
+      </div>
 
-  <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-    ¿Cuál es la diferencia entre riqueza e ingresos?
-    <span class="cf-accordion-icon"></span>
-  </div>
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Por qué la riqueza está concentrada en determinados sectores y grupos económicos?</span>
+          <span class="news-indicator"></span>
+        </button>
 
-  <div class="cf-accordion-content">
+        <div class="news-content">
+          <div class="news-content-inner">
 
-    <p>
-      Los ingresos representan el dinero que una persona recibe durante un periodo,
-      ya sea por un salario, una actividad empresarial, inversiones u otras fuentes.
-      La riqueza, en cambio, está relacionada con el patrimonio acumulado después de
-      considerar los activos y las obligaciones financieras.
-    </p>
+            <p>
+              La distribución de la riqueza no es uniforme. En las economías modernas, una parte considerable del patrimonio puede concentrarse en personas, familias y grupos empresariales que poseen participaciones en compañías, propiedades y otros activos de gran valor. Comprender esta concentración exige observar cómo se distribuye la propiedad y cómo se acumula el capital.
+            </p>
 
-    <p>
-      Esta diferencia explica por qué una persona con ingresos muy altos no necesariamente
-      tiene un patrimonio elevado. Del mismo modo, alguien puede tener un patrimonio
-      importante y no recibir grandes ingresos mensuales.
-    </p>
+            <p>
+              Algunos sectores económicos permiten desarrollar empresas con capacidad de atender mercados muy amplios. La tecnología, las finanzas, la energía, la industria y el comercio internacional son ejemplos de actividades en las que determinadas compañías pueden alcanzar una dimensión considerable. Esto no significa que todas las empresas de esos sectores generen grandes fortunas, sino que algunas tienen posibilidades de expandirse a gran escala.
+            </p>
 
-    <p>
-      Observar únicamente cuánto dinero entra cada mes ofrece una visión incompleta de
-      la situación financiera de una persona. El patrimonio permite conocer otra parte
-      importante de la historia.
-    </p>
+            <p>
+              La propiedad de activos también influye en la acumulación patrimonial. Quienes poseen participaciones en negocios rentables, inmuebles u otros recursos valiosos pueden beneficiarse de los ingresos que generan y de posibles aumentos en su valoración. Con el paso del tiempo, esa propiedad puede convertirse en una parte importante de la riqueza familiar.
+            </p>
 
-  </div>
+            <p>
+              La concentración económica también está relacionada con factores como el acceso al capital, las oportunidades de inversión, la educación, las condiciones de los mercados y la transmisión de patrimonio entre generaciones. Estos elementos pueden influir en quiénes tienen posibilidades de adquirir activos y ampliar su participación en la economía.
+            </p>
 
-</div>
+            <p>
+              Estudiar la distribución de las grandes fortunas permite comprender mejor las relaciones entre propiedad, actividad empresarial y poder económico. También ayuda a distinguir entre la riqueza individual, el tamaño de las empresas y la influencia que determinados grupos pueden ejercer dentro de una economía.
+            </p>
 
+          </div>
+        </div>
+      </div>
 
-<div class="cf-accordion-item">
+      <div class="news-item">
+        <button class="news-header">
+          <span>¿Por qué las grandes fortunas cambian de valor con el tiempo?</span>
+          <span class="news-indicator"></span>
+        </button>
 
-  <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-    ¿Todas las personas millonarias tienen grandes ingresos?
-    <span class="cf-accordion-icon"></span>
-  </div>
+        <div class="news-content">
+          <div class="news-content-inner">
 
-  <div class="cf-accordion-content">
+            <p>
+              Una gran fortuna no representa una cantidad fija que permanece igual durante toda la vida de una persona. El valor de un patrimonio puede aumentar o disminuir como consecuencia de los mercados financieros, el desempeño de las empresas, los cambios en el sector inmobiliario y las decisiones que toman sus propietarios.
+            </p>
 
-    <p>
-      No necesariamente. Una persona puede haber acumulado un patrimonio considerable
-      a lo largo del tiempo y tener ingresos actuales mucho menores que durante las
-      etapas en las que construyó su fortuna.
-    </p>
+            <p>
+              Cuando una persona posee acciones de una compañía que cotiza en bolsa, las variaciones de su precio pueden modificar el valor estimado de su participación. Algo similar puede ocurrir con las empresas privadas, aunque en estos casos las valoraciones suelen depender de operaciones de inversión, transacciones empresariales y estimaciones financieras.
+            </p>
 
-    <p>
-      También ocurre lo contrario: determinados profesionales, empresarios o ejecutivos
-      pueden recibir ingresos muy elevados sin haber acumulado todavía un patrimonio
-      equivalente.
-    </p>
+            <p>
+              Los ciclos económicos también influyen. Durante periodos de crecimiento, algunas empresas pueden aumentar sus ingresos y recibir valoraciones más altas. En momentos de incertidumbre o contracción económica, los inversionistas pueden revisar sus expectativas y reducir el valor que están dispuestos a pagar por determinados activos.
+            </p>
 
-    <p>
-      Por eso, ingresos y patrimonio deben analizarse por separado cuando se estudia
-      la situación económica de una persona.
-    </p>
+            <p>
+              Las decisiones de los propietarios también pueden transformar una fortuna. Vender una participación empresarial, adquirir nuevos negocios, distribuir inversiones, asumir deudas o transmitir bienes a otros miembros de la familia modifica la composición del patrimonio y puede afectar su valor neto.
+            </p>
 
-  </div>
+            <p>
+              Por esta razón, las cifras publicadas sobre las personas más ricas del mundo deben interpretarse como estimaciones correspondientes a un momento determinado. Los rankings de grandes fortunas pueden cambiar de posición incluso sin que sus protagonistas hayan realizado una operación directa, simplemente porque los activos que poseen han variado de valor.
+            </p>
 
-</div>
+            <p>
+              Observar la evolución de una fortuna permite ir más allá de una cifra y comprender los acontecimientos económicos y empresariales que explican su crecimiento, sus retrocesos y las transformaciones de los grandes patrimonios.
+            </p>
 
+          </div>
+        </div>
+      </div>
 
-<div class="cf-accordion-item">
-
-  <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-    ¿Qué papel tienen las empresas en la creación de grandes fortunas?
-    <span class="cf-accordion-icon"></span>
-  </div>
-
-  <div class="cf-accordion-content">
-
-    <p>
-      La propiedad de empresas ha sido una de las fuentes de grandes patrimonios,
-      especialmente cuando una compañía aumenta significativamente su valor con el
-      paso del tiempo.
-    </p>
-
-    <p>
-      En estos casos, la riqueza de sus propietarios puede estar vinculada al valor de
-      sus participaciones y no necesariamente al dinero que reciben como salario.
-      El patrimonio puede cambiar conforme cambia también el valor de esos activos.
-    </p>
-
-    <p>
-      Por eso, estudiar una gran fortuna empresarial requiere observar tanto la historia
-      de la compañía como la participación que mantiene su propietario en ella.
-    </p>
+    </div>
 
   </div>
 
-</div>
+</section>
 
+</main>
 
-<div class="cf-accordion-item">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const newsItems = document.querySelectorAll(".news-item");
 
-  <div class="cf-accordion-header" style="font-family: 'Poppins', sans-serif;">
-    ¿Una gran fortuna permanece igual con el tiempo?
-    <span class="cf-accordion-icon"></span>
-  </div>
+  newsItems.forEach(item => {
+    const header = item.querySelector(".news-header");
 
-  <div class="cf-accordion-content">
-
-    <p>
-      No. El valor de un patrimonio puede cambiar por múltiples razones. Las empresas,
-      acciones, propiedades y otros activos pueden aumentar o disminuir de valor,
-      mientras que las decisiones financieras también pueden modificar la composición
-      de una fortuna.
-    </p>
-
-    <p>
-      En el caso de los grandes patrimonios empresariales, incluso una variación en el
-      valor de una compañía puede producir cambios importantes en la riqueza estimada
-      de sus principales accionistas.
-    </p>
-
-    <p>
-      Por eso, las cifras asociadas a las grandes fortunas deben entenderse como una
-      referencia que puede cambiar con el tiempo y no como una cantidad necesariamente
-      fija.
-    </p>
-
-  </div>
-
-</div>
-
-  </div>
-</div>
-    </section>
-
-
-    <script>
-    document.querySelectorAll('.cf-accordion').forEach(accordion => {
-  accordion.querySelectorAll('.cf-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.cf-accordion-item');
-      const content = item.querySelector('.cf-accordion-content');
-
-      // Solo afecta los items de ESTE acordeón
-      accordion.querySelectorAll('.cf-accordion-item').forEach(other => {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          other.querySelector('.cf-accordion-content').style.maxHeight = null;
+    header.addEventListener("click", () => {
+      newsItems.forEach(i => {
+        if (i !== item) {
+          i.classList.remove("is-open");
+          i.querySelector(".news-content").style.maxHeight = null;
         }
       });
 
-      item.classList.toggle('is-open');
+      item.classList.toggle("is-open");
+      const content = item.querySelector(".news-content");
 
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
+      if (item.classList.contains("is-open")) {
+        content.style.maxHeight = content.scrollHeight + "px";
       } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.maxHeight = null;
       }
     });
   });
 });
-    </script>
+</script>
 
-
-
-</main>
-
-<!-- ================= SCRIP COMPAGINACION ================= -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const articles = Array.from(document.querySelectorAll('.article'));
@@ -1134,26 +933,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-</body>
-</html>
-
-
-
-
-  <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-20"></section>
 
-
-
-  <!--  Footer  -->
 <div class="footer-here"></div>
 
 <script src="https://codigomillonario.blog/assets/footer.js"></script>
 
-<!-- MENU COMPLETO -->
 <script src="../../assets/menu.js"></script>
-
-
 
     <script>
         lucide.createIcons();
