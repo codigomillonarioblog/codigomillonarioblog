@@ -367,22 +367,6 @@
 
       <nav class="cm-secciones-links">
 
-        <a href="/blog/ahorro/index.html">
-          Construir Capital
-        </a>
-
-        <a href="/blog/inversiones/index.html">
-          Hacer Crecer el Dinero
-        </a>
-
-        <a href="/blog/negocios/index.html">
-          Crear Riqueza
-        </a>
-
-        <a href="/blog/psicologia-del-dinero/index.html">
-          La Mente y el Dinero
-        </a>
-
         <a href="/blog/servicios-financieros/index.html">
           El Sistema Financiero
         </a>
@@ -784,6 +768,10 @@
   padding-left: 44px;
 }
 
+.cm-secciones-links a:last-child::after {
+  display: none !important;
+}
+  
 @media (max-width: 850px) {
   .cm-secciones-menu {
     width: 85%;
