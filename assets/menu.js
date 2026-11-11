@@ -1,5 +1,5 @@
 /* =====================================================
-   CÓDIGO MILLONARIO · MENÚ CENTRALIZADO
+   CÓDIGO MILLONARIO · MENÚ CENTRALIZADO (DEFINITIVO)
    Archivo: /assets/menu.js
 ===================================================== */
 
@@ -346,9 +346,21 @@
       <div class="cm-secciones-logo">
 
         <img
-          src="/assets/img/logo-cm.png"
+          src="/assets/img/codigo-millonario-logo.png"
           alt="">
 
+      </div>
+
+
+      <!-- BOMBILLO DE LECTURA CENTRADO -->
+      <div class="cm-reading-controls">
+        <button type="button" id="cmBulbBtn" class="cm-control-icon-btn" aria-label="Cambiar modo de lectura" title="Cambiar modo de lectura">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18h6"/>
+            <path d="M10 22h4"/>
+            <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1.55.6 2.83 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/>
+          </svg>
+        </button>
       </div>
 
 
@@ -443,7 +455,7 @@
   height: 64px;
   margin: 0 auto;
   padding: 0 32px;
-  position: relative; /* Contenedor base de referencia absoluto para todo */
+  position: relative;
 }
 
 /* Logo independizado a la izquierda */
@@ -491,7 +503,7 @@
   }
 }
   
-/* Menú central totalmente independiente en coordenadas */
+/* Menú central */
 .cm-nav {
   display: flex;
   align-items: center;
@@ -579,7 +591,7 @@
   color: #ccc;
 }
 
-/* Controles de la derecha (lupa y hamburguesa) independizados y fijos a la derecha */
+/* Controles de la derecha */
 .cm-header-right {
   position: absolute;
   right: 32px;
@@ -717,10 +729,39 @@
   object-fit: contain;
 }
 
+/* --- BOMBILLO DE LECTURA CENTRADO --- */
+.cm-reading-controls {
+  margin-top: 75px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cm-control-icon-btn {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.cm-control-icon-btn:hover,
+.cm-control-icon-btn.cm-active {
+  opacity: 1;
+  color: #ffffff;
+}
+
 .cm-secciones-heading {
   display: flex;
   align-items: center;
-  margin-top: 78px;
+  margin-top: 14px;
   padding: 0 40px 14px 40px;
   flex-shrink: 0;
 }
@@ -771,7 +812,23 @@
 .cm-secciones-links a:last-child::after {
   display: none !important;
 }
-  
+
+/* =====================================================
+   MODOS DE LECTURA GLOBALES
+===================================================== */
+
+/* 1. MODO CREMA */
+body.theme-cream {
+  background-color: #f4ecd8 !important;
+  color: #2c221e !important;
+}
+
+/* 2. MODO VERDE SALVIA / PIEDRA SUAVE */
+body.theme-sage {
+  background-color: #eaf2ec !important;
+  color: #1c2822 !important;
+}
+
 @media (max-width: 850px) {
   .cm-secciones-menu {
     width: 85%;
@@ -953,7 +1010,7 @@
 
 
   /* =====================================================
-     MENÚ LATERAL · CATEGORÍAS (LUPA)
+     MENÚ LATERAL · CATEGORÍAS (LUPA + BOMBILLO CÍCLICO)
   ===================================================== */
 
   function initializeCategoriesMenu() {
@@ -966,6 +1023,43 @@
     const closeButton = document.getElementById('cmCloseMenu');
 
     if (!searchButton || !sideMenu || !overlay || !closeButton) return;
+
+    // Recuperar preferencia de tema al cargar
+    const bulbBtn = document.getElementById('cmBulbBtn');
+    const savedTheme = localStorage.getItem('cm_reader_theme');
+
+    if (savedTheme === 'cream') {
+      document.body.classList.add('theme-cream');
+      if (bulbBtn) bulbBtn.classList.add('cm-active');
+    } else if (savedTheme === 'sage') {
+      document.body.classList.add('theme-sage');
+      if (bulbBtn) bulbBtn.classList.add('cm-active');
+    }
+
+    // Lógica Cíclica del Bombillo (Normal ➔ Crema ➔ Verde Salvia ➔ Normal)
+    if (bulbBtn) {
+      bulbBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+
+        if (!document.body.classList.contains('theme-cream') && !document.body.classList.contains('theme-sage')) {
+          // Estado 1: Pasar a Crema
+          document.body.classList.add('theme-cream');
+          bulbBtn.classList.add('cm-active');
+          localStorage.setItem('cm_reader_theme', 'cream');
+        } else if (document.body.classList.contains('theme-cream')) {
+          // Estado 2: Pasar a Verde Salvia
+          document.body.classList.remove('theme-cream');
+          document.body.classList.add('theme-sage');
+          bulbBtn.classList.add('cm-active');
+          localStorage.setItem('cm_reader_theme', 'sage');
+        } else {
+          // Estado 3: Regresar a Blanco Natural / Original
+          document.body.classList.remove('theme-cream', 'theme-sage');
+          bulbBtn.classList.remove('cm-active');
+          localStorage.removeItem('cm_reader_theme');
+        }
+      });
+    }
 
     function closeCategoriesMenu() {
       sideMenu.classList.remove('cm-active');
