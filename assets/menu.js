@@ -341,13 +341,13 @@
       </button>
 
 
-      <!-- LOGO -->
+      <!-- LOGO / ICONO DEL MEDIO -->
 
       <div class="cm-secciones-logo">
 
         <img
-          src="/assets/img/codigo-millonario-logo.png"
-          alt="">
+          src="/assets/img/logo-cm.png"
+          alt="Código Millonario">
 
       </div>
 
