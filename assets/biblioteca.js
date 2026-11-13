@@ -11,7 +11,7 @@
         "https://codigomillonario.blog/biblioteca/paquete-6-plantillas-excel-para-negocios.html";
 
     const PRODUCTO_IMAGEN =
-        "https://codigomillonario.blog/assets/img/paquete-6-plantillas-excel-para-negocios.webp";
+        "https://codigomillonario.blog/assets/img/6-plantillas-excel-para-negocios.webp";
 
 
     /* =========================================================
