@@ -1,178 +1,206 @@
+
 (function () {
 
     "use strict";
 
-    /* =========================================================
-       CÓDIGO MILLONARIO · BIBLIOTECA CM
-       INSERCIÓN EXCLUSIVAMENTE MANUAL
-       ========================================================= */
+    /* =========================================
+       CÓDIGO MILLONARIO · RECURSO DESTACADO
+    ========================================= */
 
-    const BIBLIOTECA_URL =
-        "https://codigomillonario.blog/tienda.html#novedades";
+    const PRODUCTO_URL =
+        "https://codigomillonario.blog/biblioteca/paquete-6-plantillas-excel-para-negocios.html";
+
+    // Sustituir por la ruta real de la imagen del producto.
+    const PRODUCTO_IMAGEN =
+        "../../assets/img/paquete-6-plantillas-excel-para-negocios.webp";
 
 
-    /* =========================================================
+    /* =========================================
        ESTILOS
-       ========================================================= */
+    ========================================= */
 
-    if (!document.getElementById("cm-biblioteca-styles")) {
+    if (!document.getElementById("cm-recurso-styles")) {
 
         const style = document.createElement("style");
 
-        style.id = "cm-biblioteca-styles";
+        style.id = "cm-recurso-styles";
 
         style.textContent = `
 
-        .cm-biblioteca {
+        .cm-recurso {
+            max-width: 680px;
             margin: 68px 0 64px;
-            padding: 0;
-            max-width: 620px;
+            padding: 18px;
+            border: 1px solid #e5e2dc;
+            background: #fff;
+            box-sizing: border-box;
         }
 
-        .cm-biblioteca__line {
-            width: 38px;
-            height: 1px;
-            background: #b8b4ae;
+        .cm-recurso__label {
             margin: 0 0 14px;
-        }
-
-        .cm-biblioteca__label {
-            margin: 0 0 8px;
             font-family: Arial, sans-serif;
             font-size: 8px;
-            line-height: 1.3;
-            font-weight: 600;
-            letter-spacing: 1.7px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
             text-transform: uppercase;
             color: #8a8680;
         }
 
-        .cm-biblioteca__title {
+        .cm-recurso__contenido {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cm-recurso__imagen {
+            display: block;
+            width: 158px;
+            height: 120px;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .cm-recurso__texto {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cm-recurso__titulo {
             margin: 0 0 9px;
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 20px;
+            font-size: 19px;
             line-height: 1.3;
             font-weight: 600;
             color: #292929;
         }
 
-        .cm-biblioteca__text {
-            margin: 0 0 18px;
-            max-width: 570px;
+        .cm-recurso__descripcion {
+            margin: 0 0 14px;
             font-family: Georgia, "Times New Roman", serif;
             font-size: 12px;
             line-height: 1.6;
             color: #77736d;
         }
 
-        .cm-biblioteca__link {
+        .cm-recurso__enlace {
             display: inline-block;
-            padding: 9px 0;
+            padding: 7px 0;
+            border-bottom: 1px solid #292929;
             font-family: Arial, sans-serif;
             font-size: 9px;
-            line-height: 1.3;
-            font-weight: 600;
-            letter-spacing: 1.4px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
-            color: #292929;
             text-decoration: none;
-            border-bottom: 1px solid #292929;
-            transition: color .18s ease, border-color .18s ease;
+            color: #292929;
+            transition: color .2s ease;
         }
 
-        .cm-biblioteca__link:hover {
-            color: #77736d;
-            border-color: #77736d;
+        .cm-recurso__enlace:hover {
+            color: #8a713d;
         }
 
         @media (max-width: 600px) {
 
-            .cm-biblioteca {
+            .cm-recurso {
                 margin: 54px 0 50px;
+                padding: 14px;
             }
 
-            .cm-biblioteca__line {
-                width: 32px;
-                margin-bottom: 12px;
+            .cm-recurso__contenido {
+                gap: 13px;
+                align-items: flex-start;
             }
 
-            .cm-biblioteca__label {
-                font-size: 7.5px;
-                letter-spacing: 1.5px;
+            .cm-recurso__imagen {
+                width: 105px;
+                height: 105px;
             }
 
-            .cm-biblioteca__title {
-                font-size: 17px;
+            .cm-recurso__titulo {
+                font-size: 16px;
+                line-height: 1.25;
             }
 
-            .cm-biblioteca__text {
+            .cm-recurso__descripcion {
                 font-size: 10px;
-                line-height: 1.55;
+                line-height: 1.5;
+                margin-bottom: 10px;
             }
 
-            .cm-biblioteca__link {
+            .cm-recurso__enlace {
                 font-size: 8px;
-                letter-spacing: 1.3px;
+                letter-spacing: 1px;
             }
 
+            .cm-recurso__label {
+                font-size: 7.5px;
+            }
         }
 
         `;
 
         document.head.appendChild(style);
-
     }
 
 
-    /* =========================================================
-       INSERTAR SOLO EN EL CONTENEDOR DE ESTA PÁGINA
-       ========================================================= */
+    /* =========================================
+       INSERCIÓN MANUAL
+    ========================================= */
 
     const placeholder = document.querySelector(
         "[data-cm-biblioteca-slot]"
     );
 
-    if (!placeholder) {
-        return;
-    }
+    if (!placeholder) return;
 
-    // Evitar duplicados en el mismo contenedor.
-    if (placeholder.querySelector("[data-cm-biblioteca]")) {
+    if (placeholder.querySelector("[data-cm-recurso]")) {
         return;
     }
 
     const section = document.createElement("section");
 
-    section.className = "cm-biblioteca";
-    section.setAttribute("data-cm-biblioteca", "true");
+    section.className = "cm-recurso";
+    section.setAttribute("data-cm-recurso", "true");
 
     section.innerHTML = `
 
-        <div class="cm-biblioteca__line"></div>
-
-        <div class="cm-biblioteca__label">
-            Biblioteca CM
+        <div class="cm-recurso__label">
+            Biblioteca CM · Recurso destacado
         </div>
 
-        <h2 class="cm-biblioteca__title">
-            Recursos para profundizar
-        </h2>
+        <div class="cm-recurso__contenido">
 
-        <p class="cm-biblioteca__text">
-            Algunos temas tratados por Código Millonario
-            pueden requerir una exploración más profunda.
-            En nuestra biblioteca reunimos ebooks, guías
-            y otros recursos relacionados con el dinero,
-            los negocios y la construcción de patrimonio.
-        </p>
+            <img
+                src="${PRODUCTO_IMAGEN}"
+                class="cm-recurso__imagen"
+                alt="Paquete de seis plantillas de Excel editables para negocios"
+                loading="lazy"
+            >
 
-        <a
-            class="cm-biblioteca__link"
-            href="${BIBLIOTECA_URL}"
-            aria-label="Explorar la Biblioteca CM"
-        >
-            Explorar la Biblioteca CM →
-        </a>
+            <div class="cm-recurso__texto">
+
+                <h2 class="cm-recurso__titulo">
+                    Organiza tu negocio con 6 plantillas de Excel
+                </h2>
+
+                <p class="cm-recurso__descripcion">
+                    Una plantilla principal y cinco recursos adicionales
+                    para gestionar finanzas, ventas, inventario y flujo de caja.
+                </p>
+
+                <a
+                    class="cm-recurso__enlace"
+                    href="${PRODUCTO_URL}"
+                    aria-label="Conocer las seis plantillas de Excel"
+                >
+                    Conocer las plantillas →
+                </a>
+
+            </div>
+
+        </div>
 
     `;
 
