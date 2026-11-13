@@ -32,10 +32,8 @@
         .cm-producto-wrapper {
             position: relative;
             width: 100%;
-            max-width: 720px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 24px;
+            max-width: 650px;
+            margin: 42px auto 28px;
         }
 
         /* ================= TEXTO SUPERIOR ================= */
@@ -46,7 +44,7 @@
             left: 0;
 
             font-family: 'Inter', sans-serif;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.6px;
             text-transform: uppercase;
@@ -61,11 +59,11 @@
             position: relative;
 
             width: 100%;
-            max-width: 720px;
+            max-width: 650px;
             margin: 0;
 
             border: 1px solid #ddd;
-            background: #fff;
+            background: transparent;
             padding: 0;
             overflow: hidden;
 
@@ -73,7 +71,7 @@
             text-decoration: none;
             color: #000;
 
-            min-height: 140px;
+            min-height: 116px;
             transition: opacity 0.2s ease;
         }
 
@@ -91,14 +89,14 @@
             display: flex;
             width: 100%;
             align-items: flex-start;
-            padding: 10px 15px 50px 15px;
+            padding: 8px 12px 42px 12px;
         }
 
         /* ================= IMAGEN ================= */
 
         .cm-producto-img {
-            width: 200px;
-            height: 110px;
+            width: 165px;
+            height: 92px;
             object-fit: cover;
 
             position: absolute;
@@ -110,7 +108,7 @@
 
         .cm-producto-contenido {
             flex: 1;
-            padding-left: 210px;
+            padding-left: 175px;
             display: flex;
             flex-direction: column;
         }
@@ -118,7 +116,7 @@
         /* ================= TITULO ================= */
 
         .cm-producto-titulo h2 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             line-height: 1.3;
             margin: 0;
@@ -128,9 +126,10 @@
         /* ================= DESCRIPCIÓN ================= */
 
         .cm-producto-descripcion {
-            font-size: 13px;
+            font-size: 12px;
             color: #555;
             line-height: 1.4;
+            margin-top: 5px;
         }
 
         /* ================= BARRA INFERIOR ================= */
@@ -141,9 +140,9 @@
             width: 100%;
 
             border-top: 1px solid #ddd;
-            background: #fff;
+            background: transparent;
 
-            padding: 8px 15px;
+            padding: 6px 12px;
             box-sizing: border-box;
 
             display: flex;
@@ -153,7 +152,7 @@
 
         .cm-producto-boton-texto {
             font-family: 'Inter', sans-serif;
-            font-size: 12px;
+            font-size: 10px;
             font-weight: 600;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -161,19 +160,24 @@
         }
 
         .cm-producto-boton span {
-            background: #fff;
+            background: transparent;
             color: #000;
 
             border: 1px solid #ddd;
-            padding: 4px 10px;
+            padding: 3px 9px;
 
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
         }
 
         /* ================= MOBILE ================= */
 
         @media (max-width: 768px) {
+
+            .cm-producto-wrapper {
+                max-width: 100%;
+                margin: 38px 0 26px;
+            }
 
             .cm-producto-box:hover {
                 opacity: 1 !important;
@@ -201,6 +205,7 @@
                 max-width: 100%;
                 border: none;
                 border-bottom: 1px solid #ececec;
+                background: transparent;
                 padding: 10px 0 0 0;
             }
 
