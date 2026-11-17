@@ -11,7 +11,7 @@
         "https://codigomillonario.blog/biblioteca/paquete-6-plantillas-excel-para-negocios.html";
 
     const PRODUCTO_IMAGEN =
-        "https://codigomillonario.blog/assets/img/aquete-6-plantillas-excel-para-negocios.webp";
+        "https://codigomillonario.blog/assets/img/6-plantillas-excel-para-negocios.webp";
 
 
     /* =========================================================
@@ -32,7 +32,7 @@
             position: relative;
             width: 100%;
             max-width: 720px;
-            margin-top: 48px; /* Espaciado superior grande para separarlo de los textos anteriores */
+            margin-top: 48px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 24px;
@@ -53,11 +53,12 @@
             color: #333;
         }
 
-        /* ================= TARJETA ================= */
+        /* ================= TARJETA (PC: Diseño Horizontal 16:9) ================= */
 
         .cm-producto-box {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: stretch;
             position: relative;
 
             width: 100%;
@@ -65,7 +66,7 @@
             margin: 0;
 
             border: 1px solid #ddd;
-            background: transparent; /* Fondo transparente para usar el fondo natural de la página */
+            background: transparent;
             padding: 0;
             overflow: hidden;
 
@@ -73,7 +74,6 @@
             text-decoration: none;
             color: #000;
 
-            min-height: 140px;
             transition: opacity 0.2s ease;
         }
 
@@ -85,40 +85,43 @@
             }
         }
 
-        /* ================= MAIN ================= */
+        /* ================= IMAGEN (16:9 Izquierda) ================= */
 
-        .cm-producto-main {
-            display: flex;
-            width: 100%;
-            align-items: flex-start;
-            padding: 10px 15px 50px 15px;
+        .cm-producto-img-container {
+            flex: 0 0 42%;
+            max-width: 42%;
+            position: relative;
+            background: #000;
         }
-
-        /* ================= IMAGEN ================= */
 
         .cm-producto-img {
-            width: 200px;
-            height: 110px;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-
-            position: absolute;
-            top: 0;
-            left: 0;
+            display: block;
+            aspect-ratio: 16 / 9;
         }
 
-        /* ================= CONTENIDO ================= */
+        /* ================= CONTENIDO DERECHA ================= */
 
-        .cm-producto-contenido {
+        .cm-producto-right {
             flex: 1;
-            padding-left: 210px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            padding: 16px;
+        }
+
+        .cm-producto-contenido {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         /* ================= TITULO ================= */
 
         .cm-producto-titulo h2 {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: bold;
             line-height: 1.3;
             margin: 0;
@@ -131,29 +134,24 @@
             font-size: 13px;
             color: #555;
             line-height: 1.4;
+            margin: 0;
         }
 
         /* ================= BARRA INFERIOR ================= */
 
         .cm-producto-boton {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-
-            border-top: 1px solid #ddd;
-            background: transparent; /* Fondo transparente */
-
-            padding: 8px 15px;
-            box-sizing: border-box;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-top: 1px solid #ddd;
+            margin-top: 12px;
+            padding-top: 10px;
+            background: transparent;
         }
 
         .cm-producto-boton-texto {
             font-family: 'Inter', sans-serif;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -163,10 +161,8 @@
         .cm-producto-boton span {
             background: #fff;
             color: #000;
-
             border: 1px solid #ddd;
             padding: 4px 10px;
-
             font-size: 12px;
             font-weight: bold;
         }
@@ -179,8 +175,26 @@
                 opacity: 1 !important;
             }
 
-            .cm-producto-descripcion {
-                display: none;
+            .cm-producto-box {
+                flex-direction: column;
+                max-width: 100%;
+                border: none;
+                border-bottom: 1px solid #ececec;
+            }
+
+            .cm-producto-img-container {
+                flex: none;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .cm-producto-img {
+                aspect-ratio: 16 / 9;
+                height: auto;
+            }
+
+            .cm-producto-right {
+                padding: 12px 0 10px 0;
             }
 
             .cm-producto-label {
@@ -197,45 +211,22 @@
                 color: #333;
             }
 
-            .cm-producto-box {
-                max-width: 100%;
-                border: none;
-                border-bottom: 1px solid #ececec;
-                padding: 10px 0 0 0;
-            }
-
-            .cm-producto-main {
-                flex-direction: column;
-                padding: 0;
-            }
-
-            .cm-producto-img {
-                width: 100%;
-                height: 120px;
-                position: relative;
-            }
-
-            .cm-producto-contenido {
-                padding-left: 0;
+            .cm-producto-descripcion {
+                display: none;
             }
 
             .cm-producto-titulo h2 {
                 font-family: 'Inter', sans-serif;
-                font-size: 1.55rem;
+                font-size: 1.45rem;
                 font-weight: 800;
                 color: #111;
                 line-height: 1.15;
                 letter-spacing: -0.6px;
             }
 
-            .cm-producto-descripcion {
-                font-size: 13px;
-                color: #666;
-            }
-
             .cm-producto-boton {
                 position: relative;
-                margin-top: 6px;
+                margin-top: 8px;
                 padding-top: 8px;
                 border-top: 1px solid #ececec;
                 background: transparent;
@@ -284,14 +275,16 @@
 
         <a href="${PRODUCTO_URL}" class="cm-producto-box">
 
-            <img
-                src="${PRODUCTO_IMAGEN}"
-                class="cm-producto-img"
-                alt="Seis plantillas de Excel editables para organizar y gestionar un negocio"
-                loading="lazy"
-            >
+            <div class="cm-producto-img-container">
+                <img
+                    src="${PRODUCTO_IMAGEN}"
+                    class="cm-producto-img"
+                    alt="Seis plantillas de Excel editables para organizar y gestionar un negocio"
+                    loading="lazy"
+                >
+            </div>
 
-            <div class="cm-producto-main">
+            <div class="cm-producto-right">
 
                 <div class="cm-producto-contenido">
 
@@ -309,15 +302,15 @@
 
                 </div>
 
-            </div>
+                <div class="cm-producto-boton">
 
-            <div class="cm-producto-boton">
+                    <div class="cm-producto-boton-texto">
+                        Recurso de la Biblioteca:
+                    </div>
 
-                <div class="cm-producto-boton-texto">
-                    Recurso de la Biblioteca:
+                    <span>Ver</span>
+
                 </div>
-
-                <span>Ver</span>
 
             </div>
 
