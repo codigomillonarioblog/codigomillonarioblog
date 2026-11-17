@@ -13,7 +13,6 @@
     const PRODUCTO_IMAGEN =
         "https://codigomillonario.blog/assets/img/6-plantillas-excel-para-negocios.webp";
 
-
     /* =========================================================
        ESTILOS
     ========================================================= */
@@ -32,7 +31,7 @@
             position: relative;
             width: 100%;
             max-width: 720px;
-            margin-top: 48px;
+            margin-top: 80px; /* Espacio superior bien amplio para separarlo de los textos */
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 24px;
