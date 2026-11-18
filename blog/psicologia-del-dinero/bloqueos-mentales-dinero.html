@@ -73,8 +73,9 @@
 <link rel="stylesheet" href="../../assets/css/articles.css">
 
 <!-- CONTENEDOR --> 
+
 <main> 
-  <article class="max-w-5xl mx-auto px-6 md:px-8"> 
+<article class="max-w-5xl mx-auto px-6 md:px-8"> 
  
     <!-- ===================================================== 
          CABECERA DEL ARTÍCULO · ESTILO FORBES 
@@ -166,11 +167,15 @@ Estas personas no son menos inteligentes. Tampoco es porque se esfuercen menos q
 
 
 
-<!-- TABLA DE CONTENIDOS -->
+
+
+
+
+<!-- TABLA DE CONTENIDOS ULTIMA -->
 <style>
 
 /* =========================
-   TOC CUADRADO MODERNO
+   TABLA DE CONTENIDOS
 ========================= */
 
 html{
@@ -183,229 +188,179 @@ html{
   scroll-margin-top:140px;
 }
 
-.cf-accordion{
-  margin-top:60px;
+/* CONTENEDOR */
+.cm-toc{
+  margin:50px 0 60px 0;
   font-family:'Inter',sans-serif;
 }
 
-/* CONTENEDOR ALINEADO ESTILO EDITORIAL */
-.cf-accordion-inner{
-  max-width:80rem;
-  margin:0 auto;
-  padding:0 1.5rem;
-}
-
-/* CUADRO */
-.cf-accordion-item{
-  width:260px;
-  min-height:70px;
-
-  margin:0;
-
-  border:1px solid red;
-
-  border-radius:6px;
-
-  background:#fff;
-
-  overflow:hidden;
-
-  transition:width .35s ease;
-}
-
-/* EXPANSIÓN */
-.cf-accordion-item.is-open{
-  width:680px;
-}
-
-/* HEADER */
-.cf-accordion-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:18px 16px;
-
-  cursor:pointer;
-
-  font-size:17px;
-  font-weight:600;
-
+/* TÍTULO */
+.cm-toc-title{
+  font-size:18px;
+  font-weight:700;
   color:#111827;
-  background:#fff;
-
-  border-bottom:none;
-}
-
-/* ICONO */
-.cf-menu-icon{
-  width:30px;
-  height:30px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
-  border:1px solid red;
-  border-radius:6px;
-
-  gap:4px;
-  box-sizing:border-box;
-}
-
-.cf-menu-icon span{
-  height:2px;
-  width:16px;
-  background:red;
-  border-radius:2px;
-}
-
-/* CONTENT */
-.cf-accordion-content{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height .4s ease;
+  margin:0 0 18px 0;
 }
 
 /* LISTA */
-.toc-container{
-  padding:8px 14px 14px 14px;
-}
-
-/* LISTA */
-.toc-list{
+.cm-toc-list{
   list-style:none;
   margin:0;
   padding:0;
 }
 
-/* ITEMS ULTRA COMPACTOS */
-.toc-list li{
-  padding:6px 0;
-  margin:0;
-  border:none;
+/* ELEMENTOS */
+.cm-toc-list li{
+  margin:0 0 12px 0;
+  padding:0;
 }
 
-/* LINKS */
-.toc-list a{
+/* NUMERACIÓN */
+.cm-toc-number{
+  color:#000;
+  font-size:16px;
+  line-height:1.5;
+  font-weight:700;
+  flex-shrink:0;
+  margin-right:6px;
+}
+
+/* ENLACES */
+.cm-toc-list a{
+  color:#000;
+  font-size:16px;
+  line-height:1.5;
+  font-weight:700;
+
   text-decoration:none;
-  color:#374151;
 
-  font-size:14px;
-  line-height:1.35;
+  display:flex;
+  align-items:flex-start;
 
-  display:block;
-
-  transition:all .2s ease;
+  transition:text-decoration .2s ease;
 }
 
-/* HOVER AZUL */
-.toc-list a:hover{
-  color:blue;
-  transform:translateX(4px);
+/* TEXTO DEL ENLACE */
+.cm-toc-text{
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:2px;
 }
 
-/* MOBILE */
+/* AL PASAR EL MOUSE */
+.cm-toc-list a:hover{
+  color:#000;
+}
+
+.cm-toc-list a:hover .cm-toc-text{
+  text-decoration:none;
+}
+
+/* MÓVIL */
 @media (max-width:480px){
 
-  .cf-accordion-item{
-    width:88%;
+  .cm-toc{
+    margin:40px 0 50px 0;
   }
 
-  .cf-accordion-item.is-open{
-    width:100%;
+  .cm-toc-title{
+    font-size:17px;
+    margin-bottom:12px;
+  }
+
+  .cm-toc-list li{
+    margin-bottom:3px;
+  }
+
+  .cm-toc-number{
+    font-size:15px;
+    line-height:1.3;
+    margin-right:6px;
+  }
+
+  .cm-toc-list a{
+    font-size:15px;
+    line-height:1.3;
   }
 
 }
 
 </style>
 
-<!-- INTRO / CONTENEDOR EDITORIAL -->
-<main class="py-8">
 
-  <div class="cf-accordion-inner">
+<!-- CONTENIDO DE LA TABLA -->
 
-    <div class="cf-accordion">
+<div class="cm-toc">
 
-      <div class="cf-accordion-item">
-
-        <!-- HEADER -->
-        <div class="cf-accordion-header">
-
-          Tabla de contenidos
-
-          <div class="cf-menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-
-        <!-- CONTENT -->
-        <div class="cf-accordion-content">
-
-          <div class="toc-container">
-
-            <ul class="toc-list">
-    <li><a href="#titulo1">1. Los patrones mentales que sabotean tu progreso financiero</a></li>
-    <li><a href="#titulo2">2. Creer que el dinero siempre depende de factores externos</a></li>
-    <li><a href="#titulo3">3. Creer que trabajar más horas significa ganar más dinero</a></li>
-    <li><a href="#titulo4">4. Tenerle miedo al dinero y no admitirlo</a></li>
-    <li><a href="#titulo5">5. Sentir que no mereces ganar más que otros</a></li>
-    <li><a href="#titulo6">6. Conformarte para no generar incomodidad en otros</a></li>
-    <li><a href="#titulo7">7. Creer que tu forma de pensar no necesita cambiar</a></li>
-    <li><a href="#titulo8">8. Nadie llega lejos pensando igual todos los días</a></li>
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
+  <div class="cm-toc-title">
+    En este artículo
   </div>
+
+  <ul class="cm-toc-list">
+
+
+    <li>
+      <a href="#titulo2">
+        <span class="cm-toc-number">1. </span>
+        <span class="cm-toc-text">Creer que el dinero siempre depende de factores externos</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo3">
+        <span class="cm-toc-number">2. </span>
+        <span class="cm-toc-text">Creer que trabajar más horas significa ganar más dinero</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo4">
+        <span class="cm-toc-number">3. </span>
+        <span class="cm-toc-text">Tenerle miedo al dinero y no admitirlo</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo5">
+        <span class="cm-toc-number">4. </span>
+        <span class="cm-toc-text">Sentir que no mereces ganar más que otros</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo6">
+        <span class="cm-toc-number">5. </span>
+        <span class="cm-toc-text">Conformarte para no generar incomodidad en otros</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo7">
+        <span class="cm-toc-number">6. </span>
+        <span class="cm-toc-text">Creer que tu forma de pensar no necesita cambiar</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#titulo8">
+        <span class="cm-toc-number">7. </span>
+        <span class="cm-toc-text">Nadie llega lejos pensando igual todos los días</span>
+      </a>
+    </li>
+
+  </ul>
+
+</div>
+
 
 <script>
 
 /* =========================
-   ACORDEÓN (igual)
+   SCROLL DE LA TABLA
 ========================= */
 
-document.querySelectorAll('.cf-accordion-header').forEach(header=>{
-  header.addEventListener('click',()=>{
+document.querySelectorAll('.cm-toc-list a').forEach(link=>{
 
-    const item = header.closest('.cf-accordion-item');
-    const content = item.querySelector('.cf-accordion-content');
-
-    document.querySelectorAll('.cf-accordion-item').forEach(other=>{
-      if(other!==item){
-        other.querySelector('.cf-accordion-content').style.maxHeight=null;
-      }
-    });
-
-    item.classList.toggle('is-open');
-
-    if(content.style.maxHeight){
-      content.style.maxHeight=null;
-    }else{
-      content.style.maxHeight=content.scrollHeight+'px';
-    }
-
-  });
-});
-
-
-/* =========================
-   SCROLL HÍBRIDO (FIX MÓVIL + PC)
-========================= */
-
-const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
-
-document.querySelectorAll('.toc-list a').forEach(link=>{
   link.addEventListener('click', function(e){
 
     e.preventDefault();
@@ -416,46 +371,24 @@ document.querySelectorAll('.toc-list a').forEach(link=>{
     if(!target) return;
 
     const offset = 140;
-    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    const top =
+      target.getBoundingClientRect().top +
+      window.pageYOffset -
+      offset;
 
     history.pushState(null, null, '#' + id);
 
-    if(isMobile){
-      /* 🔥 MÓVIL: usa scroll nativo (más estable) */
-      window.scrollTo({
-        top: top,
-        behavior: 'smooth'
-      });
-    } else {
-      /* 💻 PC: animación más controlada */
-      const start = window.pageYOffset;
-      const distance = top - start;
-      const duration = 650;
-
-      let startTime = null;
-
-      function animate(time){
-        if(!startTime) startTime = time;
-
-        const progress = Math.min((time - startTime) / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 3);
-
-        window.scrollTo(0, start + distance * ease);
-
-        if(progress < 1){
-          requestAnimationFrame(animate);
-        }
-      }
-
-      requestAnimationFrame(animate);
-    }
+    window.scrollTo({
+      top: top,
+      behavior: 'smooth'
+    });
 
   });
+
 });
 
 </script>
-
-
 
 
 
@@ -899,6 +832,10 @@ Si todo sigue igual en tu cabeza, todo seguirá igual en tu bolsillo.
 
 
 
+
+
+
+
   <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-12"></section>
 
@@ -907,6 +844,7 @@ Si todo sigue igual en tu cabeza, todo seguirá igual en tu bolsillo.
 
 <script src="https://codigomillonario.blog/assets/share.js"></script>
 
+
 </article>
 </main>
 
@@ -914,274 +852,10 @@ Si todo sigue igual en tu cabeza, todo seguirá igual en tu bolsillo.
 
 
 
-<!-- ================= INTERLINK ================= -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
-
-<div class="interlink-container mx-auto my-16 max-w-3xl">
-
-  <div class="interlink-heading">
-    <span class="interlink-kicker">TE PUEDE INTERESAR</span>
-    <div class="interlink-line"></div>
-  </div>
-
-  <div class="interlink-tools">
-    <select id="articleSelect" class="select-pages"></select>
-
-    <div class="search-wrapper">
-      <input id="searchInput" type="text" class="goto-page" placeholder="Buscar artículo...">
-    </div>
-
-    <button id="goBtn" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
-      Ir
-    </button>
-
-    <a id="viewAllBtn" href="../psicologia-del-dinero/index.html" class="interlink-button" style="font-family:'Montserrat',sans-serif;">
-      Ver todos
-    </a>
-  </div>
-
-  <div class="interlink-total" style="font-family:'Montserrat',sans-serif;">
-    <span id="totalArticles">0</span> artículos
-  </div>
-</div>
-
-<section class="main-layout">
-  <aside class="sidebar">
-    <div id="interlinkGrid"></div>
-  </aside>
-</section>
-
-<style>
-.interlink-container{width:100%;padding:0;background:transparent;border:0;box-shadow:none;border-radius:0}
-
-.interlink-heading{display:flex;align-items:center;gap:18px;margin-bottom:24px}
-.interlink-kicker{flex-shrink:0;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.8px;color:#222;white-space:nowrap}
-.interlink-line{width:100%;height:1px;background:#1a1a1a}
-
-.interlink-tools{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-
-.select-pages,.goto-page{
-  height:36px;
-  border:0;
-  border-bottom:1px solid #cfcfcf;
-  border-radius:0;
-  padding:5px 8px;
-  background:transparent;
-  outline:0;
-  font-family:'Montserrat',sans-serif;
-  font-size:12px;
-  color:#444;
-  transition:border-color .2s ease
-}
-
-.select-pages,.goto-page{flex:1;min-width:0}
-.select-pages:focus,.goto-page:focus{border-bottom-color:#222}
-
-.interlink-button{
-  height:36px;
-  padding:0 13px;
-  border:1px solid #d0d0d0;
-  border-radius:0;
-  background:transparent;
-  color:#333;
-  cursor:pointer;
-  font-size:11px;
-  white-space:nowrap;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  transition:background .2s ease,color .2s ease,border-color .2s ease
-}
-
-.interlink-button:hover{background:#111;color:#fff;border-color:#111}
-
-.interlink-total{text-align:right;font-size:10px;color:#999;margin-bottom:0}
-
-.main-layout{width:100%;display:flex;justify-content:center;padding:0 20px}
-.sidebar{width:100%;max-width:700px}
-
-.news-item{
-  display:flex;
-  align-items:center;
-  gap:22px;
-  width:100%;
-  padding:22px 0;
-  border-top:1px solid #e6e6e6;
-  text-decoration:none;
-  color:inherit;
-  transition:opacity .2s ease
-}
-
-.news-item:last-child{border-bottom:1px solid #e6e6e6}
-.news-item:hover{opacity:.72}
-
-.news-thumb{width:175px;height:105px;flex-shrink:0;overflow:hidden}
-
-.news-thumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:transform .4s ease
-}
-
-.news-item:hover .news-thumb img{transform:scale(1.03)}
-
-.news-text{flex:1;min-width:0}
-
-.news-text h3{
-  font-family:'Inter',sans-serif;
-  font-size:clamp(20px,2.3vw,27px);
-  font-weight:700;
-  line-height:1.22;
-  letter-spacing:-.4px;
-  color:#181818;
-  margin:0 0 8px
-}
-
-.news-meta{
-  font-family:'Montserrat',sans-serif;
-  font-size:9px;
-  font-weight:500;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-  color:#999
-}
-
-@media(max-width:768px){
-  .interlink-container{margin-top:42px;margin-bottom:28px}
-  .interlink-heading{gap:12px;margin-bottom:20px}
-  .interlink-kicker{font-size:9px;letter-spacing:1.4px}
-
-  .interlink-tools{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:8px
-  }
-
-  .select-pages,.goto-page{width:100%}
-  .interlink-button{width:100%}
-  .interlink-total{margin-top:7px}
-
-  .news-item{
-    flex-direction:column;
-    align-items:stretch;
-    gap:13px;
-    padding:20px 0
-  }
-
-  .news-thumb{width:100%;height:190px}
-  .news-text h3{font-size:23px;line-height:1.2;margin-bottom:7px}
-}
-
-@media(max-width:420px){
-  .news-thumb{height:175px}
-  .news-text h3{font-size:21px}
-}
-</style>
-
-<script>
-const select=document.getElementById("articleSelect");
-const searchInput=document.getElementById("searchInput");
-const goBtn=document.getElementById("goBtn");
-const totalArticles=document.getElementById("totalArticles");
-const interlinkGrid=document.getElementById("interlinkGrid");
-const perPage=6;
-let allArticles=[];
-
-function truncate(text,maxLength=65){
-  return text.length>maxLength?text.slice(0,maxLength)+"...":text;
-}
-
-function shuffle(array){
-  return array.map(v=>({v,s:Math.random()})).sort((a,b)=>a.s-b.s).map(o=>o.v);
-}
-
-function renderSelect(list){
-  select.innerHTML="";
-
-  if(!list.length){
-    const opt=document.createElement("option");
-    opt.textContent="No se encontraron artículos";
-    opt.disabled=true;
-    select.appendChild(opt);
-    return;
-  }
-
-  list.slice(0,perPage).forEach(a=>{
-    const opt=document.createElement("option");
-    opt.value=a.url;
-    opt.textContent=truncate(a.title);
-    select.appendChild(opt);
-  });
-}
-
-function renderCards(list){
-  interlinkGrid.innerHTML="";
-
-  list.slice(0,perPage).forEach(a=>{
-    interlinkGrid.innerHTML+=`
-      <a href="${a.url}" class="news-item">
-        <div class="news-thumb">
-          <img src="${a.image}" alt="${a.title}">
-        </div>
-        <div class="news-text">
-          <h3>${a.title}</h3>
-          <div class="news-meta">${a.meta}</div>
-        </div>
-      </a>
-    `;
-  });
-}
-
-function renderAll(list){
-  totalArticles.textContent=list.length;
-  renderSelect(list);
-  renderCards(list);
-}
-
-goBtn.addEventListener("click",()=>{
-  if(select.value) window.location.href=select.value;
-});
-
-searchInput.addEventListener("input",()=>{
-  const q=searchInput.value.toLowerCase();
-  renderAll(allArticles.filter(a=>a.title.toLowerCase().includes(q)));
-});
-
-fetch("../psicologia-del-dinero/index.html")
-.then(r=>r.text())
-.then(html=>{
-  const parser=new DOMParser();
-  const doc=parser.parseFromString(html,"text/html");
-  const articles=doc.querySelectorAll(".article");
-
-  allArticles=shuffle(
-    Array.from(articles).map(article=>{
-      const link=article.querySelector("a.article-link");
-      const title=article.querySelector("h2.article-title");
-      const img=article.querySelector("img");
-      const meta=article.querySelector(".badge-row span");
-
-      return{
-        title:title?title.textContent.trim():"Sin título",
-        url:link?link.getAttribute("href"):"#",
-        image:img?img.getAttribute("src"):"./assets/png/default.png",
-        meta:meta?meta.textContent.trim():""
-      };
-    }).filter(a=>a.title.length>5)
-  );
-
-  renderAll(allArticles);
-})
-.catch(err=>console.error("Interlink error:",err));
-</script>
 
 
 
 
-   
   <!-- ESPACIO PEQUEÑO FINAL -->
 <section class="py-28"></section>
 
