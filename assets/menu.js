@@ -352,10 +352,10 @@
       </div>
 
 
-      <!-- BOMBILLO DE LECTURA CENTRADO -->
+      <!-- BOMBILLO DE LECTURA CENTRADO (Icono reducido) -->
       <div class="cm-reading-controls">
         <button type="button" id="cmBulbBtn" class="cm-control-icon-btn" aria-label="Cambiar modo de lectura" title="Cambiar modo de lectura">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 18h6"/>
             <path d="M10 22h4"/>
             <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1.55.6 2.83 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/>
@@ -369,7 +369,7 @@
       <div class="cm-secciones-heading">
 
         <span class="cm-secciones-heading-text">
-          EXPLORA NUESTRAS ÁREAS
+        NUESTRAS ÁREAS
         </span>
 
       </div>
@@ -758,12 +758,15 @@
   color: #ffffff;
 }
 
+/* TÍTULO CENTRADO (PC y móviles) */
 .cm-secciones-heading {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 14px;
   padding: 0 40px 14px 40px;
   flex-shrink: 0;
+  width: 100%;
 }
 
 .cm-secciones-heading-text {
@@ -774,6 +777,7 @@
   letter-spacing: .08em;
   line-height: 1;
   white-space: nowrap;
+  text-align: center;
 }
 
 .cm-secciones-links {
