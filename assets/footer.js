@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <span>Acepto los términos de protección de datos</span>
         </label>
 
-        <p style="font-size:16px; color:#555;">
+        <p style="font-size:16px; color:inherit; opacity: 0.8;">
          Puedes cancelar tu suscripción en cualquier momento.
          <br><br>
           La información que envíes estará regida por la 
@@ -180,8 +180,8 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 ========================= */
 
 .footer-newsletter {
-  background: #fff;
-  color: #000;
+  background: transparent; /* <--- CAMBIADO A TRANSPARENTE */
+  color: inherit;          /* <--- HEREDA EL COLOR DEL TEXTO SEGÚN EL TEMA */
   flex: 1;
   min-width: 280px;
   padding: 50px 40px;
@@ -226,7 +226,9 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 .footer-newsletter input {
   width: 100%;
   padding: 14px;
-  border: 1px solid #000;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
   border-radius: 6px;
   font-size: 14px;
 }
@@ -242,7 +244,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 .check-container input {
   width: 18px;
   height: 18px;
-  accent-color: #000;
+  accent-color: currentColor;
 }
 
 /* BOTÓN */
@@ -274,7 +276,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 }
 
 /* =========================
-   DERECHA
+   DERECHA (SE QUEDA NEGRO INTACTO)
 ========================= */
 
 .footer-info {
@@ -348,7 +350,7 @@ onclick="this.href+=encodeURIComponent(window.location.href)">
 .privacy-link {
   font-weight: 700;
   text-decoration: underline;
-  color: #000;
+  color: inherit;
 }
 
 /* =========================
