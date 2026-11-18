@@ -2,8 +2,6 @@
    SECCIÓN · PORTADA PRINCIPAL (DISEÑO EDITORIAL PROFESIONAL)
 ========================================================= */
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -1030,7 +1028,7 @@ img {
     border-left:1px solid #dcdcdc;
     border-bottom:1px solid #dcdcdc;
     padding:20px 0 20px 18px;
-    background-color: #fafafa;
+    background: transparent;
 }
 
 .cm-fast-header{
@@ -1862,7 +1860,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #fff;
+  background: transparent;
 }
 
 .cm-portada-side-item {
@@ -1941,7 +1939,6 @@ img {
 }
 
 
-
 /* =========================================================
    SECCIÓN · LA MIRADA DE CÓDIGO MILLONARIO — EDITORIAL
 ========================================================= */
@@ -1955,6 +1952,8 @@ img {
 /* =========================================================
    CONTENEDOR GENERAL (Ancho exacto 1100px)
 ========================================================= */
+
+
 .cm-identidad-diario {
   box-sizing: border-box;
   max-width: 1100px;
@@ -1995,7 +1994,7 @@ img {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.7rem, 2.5vw, 2.3rem);
   line-height: 1.1;
-  font-weight: 400; /* <--- Cambiado de 700 a 400 para que se vea delgado y clásico */
+  font-weight: 400;
   color: #111;
   margin: 0 0 6px 0;
   letter-spacing: -0.5px;
@@ -2098,7 +2097,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #fff;
+  background: transparent; /* <--- CAMBIADO DE #fff A TRANSPARENTE */
 }
 
 .cm-identidad-side-item {
@@ -2145,16 +2144,16 @@ img {
 .cm-identidad-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0; /* Sin espacio muerto, separado por bordes limpios */
+  gap: 0;
   margin-top: 28px;
-  background-color: #faf8f5; /* Fondo sutil de papel antiguo/noticioso */
+  background-color: transparent; /* <--- CAMBIADO DE #faf8f5 A TRANSPARENTE */
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
 
 .cm-identidad-grid-item {
   padding: 16px 18px;
-  border-right: 1px solid #e0dbd1; /* Línea divisoria vertical fina estilo prensa */
+  border-right: 1px solid #e0dbd1;
 }
 
 .cm-identidad-grid-item:last-child {
@@ -2202,12 +2201,12 @@ img {
   }
 
   .cm-identidad-grid-item:nth-child(2) {
-    border-right: none; /* Quita el borde derecho en la columna par para tablets */
+    border-right: none;
   }
 
   .cm-identidad-grid-item:nth-child(1),
   .cm-identidad-grid-item:nth-child(2) {
-    border-bottom: 1px solid #e0dbd1; /* Línea horizontal intermedia */
+    border-bottom: 1px solid #e0dbd1;
   }
 }
 
@@ -2251,8 +2250,6 @@ img {
   }
 }
 
-
-
 /* =========================================================
    SECCIÓN · MÉTODO EDITORIAL
 ========================================================= */
@@ -2267,6 +2264,8 @@ img {
 /* =========================================================
    CONTENEDOR GENERAL (Maneja el ancho exacto de 1100px y padding de tu portal)
 ========================================================= */
+
+
 .cm-analisis-diario {
   box-sizing: border-box;
   max-width: 1100px;
@@ -2299,7 +2298,7 @@ img {
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #004481; /* Color de etiqueta del portal */
+  color: #004481;
   margin-bottom: 6px;
 }
 
@@ -2307,7 +2306,7 @@ img {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.7rem, 2.5vw, 2.3rem);
   line-height: 1.1;
-  font-weight: 400; /* <--- Cambiado de 700 a 400 para que se vea delgado y clásico */
+  font-weight: 400;
   color: #111;
   margin: 0 0 6px 0;
   letter-spacing: -0.5px;
@@ -2411,7 +2410,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #fff;
+  background: transparent; /* <--- CAMBIADO DE #fff A TRANSPARENTE */
 }
 
 .cm-analisis-side-item {
@@ -2501,7 +2500,7 @@ img {
 .cm-analisis-footer-note {
   margin-top: 24px;
   padding: 16px 20px;
-  background-color: #faf9f6;
+  background-color: transparent; /* <--- CAMBIADO DE #faf9f6 A TRANSPARENTE */
   border-left: 3px solid #004481;
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
@@ -2575,7 +2574,6 @@ img {
 }
 
 
-
 /* =========================================================
     SECCIÓN Los temas que analizamos en Código Millonario — 
 ========================================================= */
@@ -2585,6 +2583,8 @@ img {
 /* =========================================================
    CONTENEDOR GENERAL (Ancho exacto de 1100px alineado a tu portal)
 ========================================================= */
+
+
 .cm-areas-diario {
   box-sizing: border-box;
   max-width: 1100px;
@@ -2625,7 +2625,7 @@ img {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.7rem, 2.5vw, 2.3rem);
   line-height: 1.1;
-  font-weight: 400; /* <--- Cambiado de 700 a 400 para que se vea delgado y clásico */
+  font-weight: 400;
   color: #111;
   margin: 0 0 8px 0;
   letter-spacing: -0.5px;
@@ -2651,8 +2651,8 @@ img {
 .cm-areas-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0; /* Sin espacios muertos, separado por bordes finos de prensa */
-  background-color: #faf8f5; /* Fondo sutil de papel antiguo/noticioso */
+  gap: 0;
+  background-color: transparent; /* <--- CAMBIADO DE #faf8f5 A TRANSPARENTE */
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
@@ -2745,10 +2745,6 @@ img {
 }
 
 
-
-
-
-
 /* =========================================================
     SECCIÓN MENU FINAL — 
 ========================================================= */
@@ -2772,9 +2768,9 @@ img {
       box-sizing: border-box;
     }
 
-    /* Cada bloque funciona como una columna o artículo desplegable */
+/* Cada bloque funciona como una columna o artículo desplegable */
     .newspaper-accordion .news-item {
-      background: #fffefa;
+      background: transparent; /* <--- CAMBIADO DE #fffefa A TRANSPARENTE */
       border-bottom: 1px solid #25251f; /* Línea de tinta tradicional de periódico */
       overflow: hidden;
       transition: background-color 0.2s ease;
@@ -2785,7 +2781,7 @@ img {
     }
 
     .newspaper-accordion .news-item:hover {
-      background-color: #f7f3e9; /* Suave tono de papel antiguo al pasar el cursor */
+      background-color: rgba(0, 0, 0, 0.03); /* <--- HOVER DINÁMICO ADAPTABLE A CUALQUIER TEMA */
     }
 
     /* Cabecera de la pregunta: Parece un titular de noticia */
@@ -2824,7 +2820,7 @@ img {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease-in-out;
-      background: #fffefa;
+      background: transparent; /* <--- CAMBIADO DE #fffefa A TRANSPARENTE */
     }
 
     .newspaper-accordion .news-content-inner {
@@ -2842,9 +2838,6 @@ img {
     .newspaper-accordion .news-content p:last-child {
       margin-bottom: 0;
     }
-
-
-
 
 /* =========================================================
    SECCIONES DIVISIONES
