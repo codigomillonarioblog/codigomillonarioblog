@@ -31,7 +31,7 @@
 
 
   /* =====================================================
-     HTML DEL MENÚ
+     HTML DEL MENÚ + NEWSLETTER MODAL
   ===================================================== */
 
   const menuHTML = `
@@ -160,6 +160,16 @@
       ================================================= -->
 
       <div class="cm-header-right">
+
+
+        <!-- BOTÓN NEWSLETTER · DESKTOP -->
+        <button
+          class="cm-newsletter-btn cm-nl-desktop"
+          type="button"
+          aria-haspopup="dialog"
+          aria-controls="cmNewsletterModal">
+          Newsletter
+        </button>
 
 
         <!-- =================================================
@@ -307,6 +317,18 @@
       </div>
 
 
+      <!-- NEWSLETTER CENTRADA AL FINAL DEL MENÚ MÓVIL -->
+      <div class="cm-mobile-newsletter-wrap">
+        <button
+          type="button"
+          class="cm-newsletter-btn cm-nl-mobile"
+          aria-haspopup="dialog"
+          aria-controls="cmNewsletterModal">
+          Newsletter
+        </button>
+      </div>
+
+
     </div>
 
 
@@ -421,11 +443,86 @@
 
   </header>
 
+
+  <!-- =====================================================
+       MODAL CENTRADO DE NEWSLETTER (BLANCO & NEGRO)
+  ===================================================== -->
+
+  <div
+    class="cm-nl-backdrop"
+    id="cmNewsletterModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cmNlTitle"
+    aria-hidden="true">
+
+    <div class="cm-nl-card">
+
+      <button
+        type="button"
+        class="cm-nl-close"
+        id="cmCloseNewsletter"
+        aria-label="Cerrar ventana de suscripción">
+        &times;
+      </button>
+
+      <span class="cm-nl-tag">CÓDIGO MILLONARIO</span>
+      <h2 class="cm-nl-title" id="cmNlTitle">Suscríbete a la Newsletter</h2>
+      <p class="cm-nl-desc">
+        Recibe directamente en tu correo análisis sobre finanzas, mentalidad, negocios y los contenidos destacados del medio.
+      </p>
+
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="cm-nl-form"
+        id="cmNewsletterForm">
+
+        <!-- CONFIG WEB3FORMS -->
+        <input type="hidden" name="access_key" value="5a8131dd-bd10-44c5-8731-b2a4c7fda29c">
+        <input type="hidden" name="subject" value="Nuevo SUSCRIPTOR - Código Millonario">
+        <input type="hidden" name="redirect" value="https://codigomillonario.blog/gracias.html">
+
+        <!-- IDENTIFICADOR -->
+        <input type="hidden" name="tipo" value="suscriptor">
+        <input type="hidden" name="from_name" value="Suscriptores Web">
+
+        <label for="cmNlEmail" class="cm-nl-label">Correo electrónico</label>
+        <input
+          type="email"
+          id="cmNlEmail"
+          name="email"
+          required
+          placeholder="tu@correo.com"
+          class="cm-nl-input">
+
+        <label class="cm-nl-terms">
+          <input
+            type="checkbox"
+            id="cmNlTerms"
+            name="acepta_terminos"
+            value="Sí"
+            required>
+          <span>
+            Acepto los <a href="/terminos.html">términos y condiciones</a> y la <a href="/privacidad.html">política de privacidad</a> para recibir correos de Código Millonario.
+          </span>
+        </label>
+
+        <button type="submit" class="cm-nl-submit">
+          Enviar
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
   `;
 
 
   /* =====================================================
-     CSS DEL MENÚ
+     CSS DEL MENÚ + NEWSLETTER MODAL
   ===================================================== */
 
   const menuCSS = `
@@ -599,9 +696,31 @@
   transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   z-index: 2;
   width: auto;
+}
+
+/* Botón Newsletter · Identidad Blanco & Negro */
+.cm-newsletter-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  padding: 7px 18px;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .16s ease, color .16s ease, border-color .16s ease;
+}
+
+.cm-newsletter-btn:hover {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+  color: #000000;
 }
 
 .cm-search {
@@ -860,7 +979,7 @@ body.theme-sage {
   .cm-logo {
     left: 20px;
     width: auto;
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 110px);
   }
   .cm-logo-title {
     font-size: 22px;
@@ -869,6 +988,10 @@ body.theme-sage {
   }
   .cm-header-right {
     right: 20px;
+    gap: 10px;
+  }
+  .cm-nl-desktop {
+    display: none;
   }
   .cm-nav {
     display: none;
@@ -884,7 +1007,7 @@ body.theme-sage {
     background: #000000;
     border-top: 1px solid #1f1f1f;
     border-bottom: 1px solid #292929;
-    padding: 66px 20px 10px;
+    padding: 66px 20px 26px;
     display: block;
     opacity: 0;
     visibility: hidden;
@@ -949,6 +1072,190 @@ body.theme-sage {
   .cm-mobile-section.cm-open .cm-mobile-title i {
     transform: rotate(180deg);
   }
+
+  /* Contenedor centrado al final del listado de secciones en móvil */
+  .cm-mobile-newsletter-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 22px;
+    width: 100%;
+  }
+
+  .cm-nl-mobile {
+    width: 100%;
+    max-width: 240px;
+    padding: 11px 24px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* =====================================================
+   MODAL CENTRADO DE NEWSLETTER · CUADRO BLANCO / LIGERO
+===================================================== */
+
+.cm-nl-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .14s ease, visibility .14s ease;
+}
+
+.cm-nl-backdrop.cm-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.cm-nl-card {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 0;
+  padding: 32px 28px 28px;
+  color: #0a0a0a;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.cm-nl-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: none;
+  color: #4a4a4a;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color .2s ease, background .2s ease;
+}
+
+.cm-nl-close:hover {
+  color: #000000;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.cm-nl-tag {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.cm-nl-title {
+  margin: 0 0 10px;
+  font-family: 'Inter', 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #000000;
+}
+
+.cm-nl-desc {
+  margin: 0 0 20px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #3a3a3a;
+}
+
+.cm-nl-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cm-nl-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: -8px;
+}
+
+.cm-nl-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #c9c9c9;
+  background: #f6f6f6;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s ease, background .2s ease;
+}
+
+.cm-nl-input::placeholder {
+  color: #777777;
+}
+
+.cm-nl-input:focus {
+  border-color: #000000;
+  background: #ffffff;
+}
+
+.cm-nl-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #2b2b2b;
+  cursor: pointer;
+}
+
+.cm-nl-terms input[type="checkbox"] {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: #000000;
+  cursor: pointer;
+}
+
+.cm-nl-terms a {
+  color: #000000;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.cm-nl-terms a:hover {
+  color: #444444;
+}
+
+.cm-nl-submit {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .2s ease;
+}
+
+.cm-nl-submit:hover {
+  background-color: #222222;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -957,7 +1264,9 @@ body.theme-sage {
   .cm-mobile-links,
   .cm-mobile-title i,
   .cm-secciones-menu,
-  .cm-secciones-overlay {
+  .cm-secciones-overlay,
+  .cm-nl-backdrop,
+  .cm-nl-card {
     transition: none;
   }
 }
@@ -1138,6 +1447,78 @@ body.theme-sage {
 
 
   /* =====================================================
+     MODAL DE NEWSLETTER
+  ===================================================== */
+
+  function initializeNewsletterModal() {
+    const modal = document.getElementById('cmNewsletterModal');
+    const closeBtn = document.getElementById('cmCloseNewsletter');
+    const emailInput = document.getElementById('cmNlEmail');
+    const triggers = document.querySelectorAll('.cm-newsletter-btn');
+
+    if (!modal || !triggers.length) return;
+
+    function openNewsletterModal() {
+      if (typeof window.closeCategoriasMenu === 'function') {
+        window.closeCategoriasMenu();
+      }
+      const header = document.querySelector('.cm-header');
+      if (header && header.classList.contains('cm-mobile-open')) {
+        header.classList.remove('cm-mobile-open');
+        const mobileBtn = header.querySelector('.cm-menu-mobile');
+        if (mobileBtn) {
+          mobileBtn.setAttribute('aria-expanded', 'false');
+          mobileBtn.setAttribute('aria-label', 'Abrir menú');
+          const icon = mobileBtn.querySelector('i');
+          if (icon) {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+          }
+        }
+      }
+
+      lockScroll();
+      modal.classList.add('cm-active');
+      modal.setAttribute('aria-hidden', 'false');
+
+      if (emailInput) {
+        emailInput.focus({ preventScroll: true });
+      }
+    }
+
+    function closeNewsletterModal() {
+      modal.classList.remove('cm-active');
+      modal.setAttribute('aria-hidden', 'true');
+      unlockScroll();
+    }
+
+    triggers.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openNewsletterModal();
+      });
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeNewsletterModal);
+    }
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        closeNewsletterModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('cm-active')) {
+        closeNewsletterModal();
+      }
+    });
+  }
+
+
+  /* =====================================================
      FUNCIONES MENÚ MOBILE (HAMBURGUESA)
   ===================================================== */
 
@@ -1268,6 +1649,7 @@ body.theme-sage {
     insertStyles();
     insertMenu();
     initializeCategoriesMenu();
+    initializeNewsletterModal();
     initializeMenu();
   }
 
